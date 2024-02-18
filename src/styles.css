@@ -1,0 +1,74 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+html, 
+body { 
+   height: 100%;
+   margin: 0; 
+   font-family: Roboto, "Helvetica Neue", sans-serif; 
+   font-size: x-small;
+   background-color: darkolivegreen;
+}
+
+table {
+   background-color: darkgreen;
+   /*width: min-content;*/
+   /*margin: 2em;*/
+   /*margin: 2rem;*/
+   color: black;
+}
+
+th { 
+   font-weight: bold;
+   /*font-size: 120%;*/
+}
+
+.scrollbar 
+{
+   height:auto;
+   overflow-y:auto;
+   background-color: cadetblue;
+   font-size:xx-small;
+   color:aquamarine;
+}
+
+.title
+{
+   text-align: center;
+   padding   : 1px;
+   background-color:darkslategrey;
+   color:aquamarine;
+}
+
+.subtitle
+{
+   text-align: center;
+   padding   : .5em;
+   background-color:darkslategrey;
+   color:aquamarine;
+   vertical-align:middle;
+}
+
+.footer
+{
+   text-align: center;
+   padding   : 1px;
+   background-color:darkslategrey;
+   color:aquamarine;
+}
+
+.searchStatus
+{
+   width: 100%;   
+}
+
+a:link
+{
+  color:#fff;  
+}
+
+a:visited
+{
+  color:#ccc;  
+}
+
+

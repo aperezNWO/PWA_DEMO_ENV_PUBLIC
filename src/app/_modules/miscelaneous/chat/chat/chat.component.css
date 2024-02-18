@@ -1,0 +1,42 @@
+table {
+    width:400px;
+    height:auto;
+    border: 2px solid black; 
+}
+
+thead td {
+    color: bisque;
+}
+
+td {
+   border: 1px dashed #ccc; 
+   text-align: left; 
+}
+
+.form-group {
+    background-color: #ccc;
+    width:300px;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+  }
+  
+  label {
+    width      :  150px;
+    margin-left:  5px; /* Add spacing between label and input */
+    margin-left:  5px; /* Add spacing between label and input */
+  }
+
+  input[type="text"]
+  {
+    width: 10px;
+  }
+
+  input,
+  textarea,
+  select {
+    /* Adjust width and other styles as needed */
+    flex: 1; /* Grow input fields to fill remaining space */
+  }
+  
+  

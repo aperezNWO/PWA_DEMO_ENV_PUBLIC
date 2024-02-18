@@ -1,0 +1,40 @@
+<h1>[TIC-TAC-TOE BOARD]</h1>
+<hr>
+<span *ngIf="this.showBoard"  class="board" align="center">
+    <div class="board-row" *ngFor="let i of [0, 1, 2]">
+      <app-square
+        *ngFor="let j of [0, 1, 2]"
+        [value]="ticTacToeEngine.squares[i * 3 + j]"
+        (clickEvent)="makeMove(i * 3 + j)"
+      ></app-square>
+    </div>
+</span>
+<!--LISTADO INICIO -->
+<hr>
+<div id="SourceListDiv" align="left">
+    <span id="tituloSource">{{this.tituloSource}}</span>
+    <label for="_SourceList"></label>
+    &nbsp;&nbsp;
+    <select id="_SourceList"
+            name="_SourceList"
+            #_SourceList
+            (change)="this._tituloSourceChanged()"
+            [disabled]="(this.IsNewGame == false)">
+            <option *ngFor="let _SourceName of __SourceList" 
+                    [value]   ="_SourceName._index"
+                    [selected]="_SourceName._selected">{{_SourceName._value}}
+            </option>
+    </select>
+</div>
+<!--LISTADO FIN    -->
+<!--BOTONES INICIO -->
+<hr>
+<input type="button" value="[NUEVO]"   (click)="this.newGame();"   [disabled]="(this.IsNewGame == true)">
+<input type="button" value="[INICIAR]" (click)="this.startGame();" [disabled]="(this.IsNewGame == false)">
+<!--BOTONES FIN    -->
+<hr>
+<!--STATUS / INICIO -->
+<div align="left">
+  <div *ngIf="this.ticTacToeEngine.message" class="alert alert-secondary" role="alert"><b>{{ this.ticTacToeEngine.message }}</b></div>
+</div>
+<!-- STATUS / FIN   -->

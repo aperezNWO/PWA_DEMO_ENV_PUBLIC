@@ -1,0 +1,21 @@
+<div align="center">
+  <h1>[OCR]</h1>
+  <hr />
+  <!-- CANVAS INICIO   -->
+  <ngx-signature-pad #signature [options]="options" (beginSign)="onBeginSign()" (endSign)="onEndSign()">
+  </ngx-signature-pad>
+  <!-- CANVAS FIN      -->
+  <!-- BOTONES INICIO   -->
+  <hr />
+  <br>
+  <input type="button" value="{{this.statusButton}}" (click)="this.saveSignature()"
+    [disabled]="(this.statusButton=='..parsing..')">
+  <input type="button" value="[Clear Signature]" (click)="this.clearSignature()">
+  <br>
+  <br>
+  <hr />
+  <!-- BOTONES FIN      -->
+  <span style="padding:10px; width:100px;height:10px;background-color: azure;">{{this.status}}</span>
+  <hr />
+  <a routerLink="/Miscelaneous">[Volver al Menú]</a>
+</div>

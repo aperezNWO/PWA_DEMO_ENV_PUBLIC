@@ -1,0 +1,52 @@
+<h1>[HANOI TOWER BOARD]</h1>
+<hr/>
+<!--RODS / INICIO -->
+<div class="game-container" align="left">
+    <table width="100%">
+        <thead>
+            <td align="center">A</td>
+            <td align="center">B</td>
+            <td align="center">C</td>
+        </thead>
+        <tr>
+            <td width="33%" align="center"><app-tower [tower]="towerA"></app-tower></td>
+            <td width="33%" align="center"><app-tower [tower]="towerB"></app-tower></td>
+            <td width="33%" align="center"><app-tower [tower]="towerC"></app-tower></td>
+        </tr>
+        <tfoot></tfoot>        
+    </table>
+</div>
+<!--RODS / FIN    -->
+<!--STATUS / INICIO -->
+<hr/>
+<div align="left" class="steps-container">
+    <div align="left" class="steps-content" *ngFor="let step of this.steps">
+        <span>{{step}}</span>
+    </div>
+</div>
+<!-- STATUS / FIN   -->
+<hr/>
+    <div id="diskAmtListDiv" align="left">
+        <label for="diskAmtList">{{this.tituloDiskAmtList}}</label>
+        &nbsp;&nbsp;
+        <select id="diskAmtList"
+                name="diskAmtList"
+                #__diskAmtList>
+                <option *ngFor="let _diskItem of this._diskAmtList" 
+                        [value]   ="_diskItem._index"
+                        [selected]="_diskItem._selected">{{_diskItem._value}}
+                </option>
+        </select>
+    </div>
+<!-- BUTTONS / INICIO -->
+<hr/>
+<div align="left">
+    <input type="button" id="btnNewGame"   value="[NEW GAME]"    (click)="this.newGame();"   [disabled]="(this._startGame==false)">
+    |
+    <input type="button" id="btnStartGame" value="[START GAME]"  (click)="this.startGame();" [disabled]="(this._startGame==true)">
+</div>
+<!-- BUTTONS / FIN    -->
+<hr />
+<a routerLink="/GamesWeb">[Volver al Menú]</a>  
+  
+

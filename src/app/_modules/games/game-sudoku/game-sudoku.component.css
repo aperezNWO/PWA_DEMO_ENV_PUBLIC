@@ -1,0 +1,78 @@
+.sudoku-board {
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+  height: auto;
+  border: 1px solid black;
+}
+
+.sudoku-cell_bright {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 20px;
+  background-color: #ffffff;
+}
+
+.sudoku-cell_dark {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 20px;
+  background-color: #cccccc;
+}
+
+.fileUpload {
+  padding: 1em;
+  background-color: #cccccc;
+}
+
+
+a, a:visited, a:hover, a:active {
+  color: #007bff; 
+}
+
+
+table {
+  width:400px;
+  height:auto;
+  border: 2px solid black; 
+}
+
+thead td {
+  color: bisque;
+}
+
+td {
+ border: 1px dashed #ccc; 
+ text-align: left; 
+}
+
+.form-group {
+  background-color: #ccc;
+  width:300px;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+}
+
+label {
+  width      :  150px;
+  margin-left:  5px; /* Add spacing between label and input */
+  margin-left:  5px; /* Add spacing between label and input */
+}
+
+input[type="text"]
+{
+  width: 10px;
+}
+
+input,
+textarea,
+select {
+  /* Adjust width and other styles as needed */
+  flex: 1; /* Grow input fields to fill remaining space */
+}
+

@@ -1,0 +1,42 @@
+<header class="">
+    <div class="">
+      <nav class="navbar navbar-expand-lg subtitle">
+        <!--menu toggle - WORKS ON MOBILE VERSION-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse"     
+          data-target="#navbarItems" aria-controls="navbarItems"                
+          aria-expanded="false" aria-label="Toggle navigation" 
+          (click)="this._NavbarCollapsed = !this._NavbarCollapsed">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--fin menu toogle -->
+        <!-- inicio brand -->
+        <a class="navbar-brand" href="#">
+          <div class="subtitle" (click)="this._navbarCollapsed = true;">
+            {{this._appBrand}}
+          </div>
+        </a>
+        <!-- fin brand -->
+        <!-- menu items inicio -->
+        <div class="collapse navbar-collapse subtitle" id="navbarItems" #navbarItems
+            [ngbCollapse]="this._NavbarCollapsed" align="left">
+            <ul class="navbar-nav" *ngFor="let page of pages">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/{{page.url}}" (click)="this._navbarCollapsed = true;"><div align="left">{{page.text}}</div></a>
+                </li>
+            </ul>
+        </div>
+        <!-- menu items fin  -->
+      </nav>
+    </div>
+</header>
+<hr/>
+<div class="main-container" role="main">
+    <router-outlet></router-outlet>
+</div>
+<hr/>
+<footer>
+<div class="footer">
+    <h5>Application Name    : {{this._appBrand + ' -- ' + this._appEnv }}</h5>
+    <h5>Application Version : {{this._appVersion}}</h5>
+</div>
+</footer>

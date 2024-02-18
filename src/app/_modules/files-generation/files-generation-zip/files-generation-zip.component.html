@@ -1,0 +1,63 @@
+
+<div align="center" style="padding-top:10px;">
+    <h4>{{pageTitle}}</h4>
+</div>
+<div id="content-body">
+<!-- FILE UPLODAD ANGULAR -->          
+        <hr />     
+        <div class="row" align="left">
+            <div class="col-12">
+                <label class="btn btn-default p-0">
+                <input type="file" (change)="selectFile($event)"/>
+                </label>
+            </div>
+        </div>    
+        <hr>       
+        <div class="row" align="left">
+            <div class="col-12">
+                <button class="btn btn-success btn-sm"  [disabled]="!selectedFiles" (click)="upload()">
+                    [Cargar Archivo]
+                </button>
+            </div>
+        </div>
+        <!--STATUS / INICIO -->
+        <hr>
+        <div *ngIf="currentFile" class="progress my-3">
+            <div
+                class="progress-bar progress-bar-info progress-bar-striped"
+                role="progressbar"
+                attr.aria-valuenow="{{ progress }}"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                [ngStyle]="{ width: progress + '%' }"
+            >
+            {{ progress }}%
+            </div>
+        </div>
+        <!-- STATUS / FIN   -->
+        <div class="row" align="left" [hidden]="!(progress == 100)" >
+            <div class="col-12">
+                <button class="btn btn-success btn-sm" id="GetZIP" type="button" title="[GENERAR ZIP]" value="[GENERAR ZIP]" 
+                (click)="this.SetZip()"
+                [hidden]="(this.downloadLink != '')">
+                    [GENERAR ZIP]
+                </button>  
+                &nbsp;
+                <!-- DOWNLOAD ZIP / FIN    -->
+                <a [href]="this.downloadLink" class="btn btn-success btn-sm" id="DownloadFile"
+                [hidden]="(this.downloadLink == '')">
+                    [DESCARGAR ZIP]
+                </a>
+                <!-- DOWNLOAD ZIP / INICIO -->
+                &nbsp;
+                <button class="btn btn-success btn-sm" id="NewZIP" type="button" title="[NUEVO ZIP]" value="[NUEVO ZIP]" 
+                (click) ="this.NewZip()"
+                [hidden]="(this.downloadLink == '')">
+                    [NUEVO ZIP]
+                </button>  
+            </div>
+        </div>
+        <hr>
+        <div *ngIf="message" class="alert alert-secondary" role="alert">{{ message }}</div>
+</div>
+<a routerLink="/FilesGenerationWeb">Volver al Menú</a>   

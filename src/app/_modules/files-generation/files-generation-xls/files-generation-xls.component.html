@@ -1,0 +1,159 @@
+<div align="center" style="padding-top:10px;">
+  <h4>{{pageTitle}}</h4>
+</div>
+<mat-tab-group>
+  <mat-tab label="[CONSULTA_1 (TEMPLATE DRIVEN)]">
+    <div align="center" style="padding-top:10px;">
+          <div id="LangListDiv">
+              <label for="LangList">{{this.tituloListadoLenguajes}}</label>
+              <select   id="LanguageList"
+                        name="LanguajeList"
+                        style="width:auto;"
+                        #_languajeList>
+                        <option *ngFor="let _languageName of __languajeList" 
+                              [value]   ="_languageName._index"
+                              [selected]="_languageName._selected">{{_languageName._value}}
+                        </option>
+              </select>
+          </div>
+      <hr/>          
+      <div class="mat-elevation-z8">
+          <!-- INIT SEARCH PANEL -->
+          <div class="searchPanel">
+          <form (ngSubmit)="td_onSubmit()" #td_searchForm="ngForm">
+              <!-- [_] P_ROW_NUM -->
+              <div class="form-group">
+                <label for="P_ROW_NUM" style="width:100px;"># registros : </label>
+                <input class="form-control" 
+                        id="P_ROW_NUM"
+                        type="number"
+                        required
+                        [(ngModel)]="td_model.P_ROW_NUM" 
+                        name="P_ROW_NUM"
+                        #P_ROW_NUM="ngModel">
+              </div>
+              <!-- [_] P_FECHA_INICIO -->
+              <div class="form-group">
+                <label for="P_FECHA_INICIO" style="width:100px;">Fecha Inicio : </label>
+                <input class="form-control" 
+                        id="P_FECHA_INICIO"
+                        type="date"
+                        required
+                        [(ngModel)]="td_model.P_FECHA_INICIO" 
+                        name="P_FECHA_INICIO"
+                        #P_FECHA_INICIO="ngModel">
+              </div>
+              <!-- [_] P_FECHA_FIN -->
+              <div class="form-group">
+                <label for="P_FECHA_FIN" style="width:100px;">Fecha Fin : </label>
+                <input class="form-control" 
+                        id="P_FECHA_FIN"
+                        type="date"
+                        required
+                        [(ngModel)]="td_model.P_FECHA_FIN" 
+                        name="P_FECHA_FIN"
+                        #P_FECHA_FIN="ngModel">
+              </div>
+              <hr>
+              <!-- INICIO PANEL DE BOTONES    -->
+              <div align="right">
+                <button class="button" type="submit" [disabled]="(this.td_buttonCaption != '[Buscar]')">{{this.td_buttonCaption}}</button>
+                <button class="button" type="button" (click)="td_newSearch()">[Nueva]</button>
+              </div>
+              <!-- FIN    PANEL DE BOTONES    -->
+              <!-- INICIO MENSAJES DE VALIDACION -->
+              <div align="left">
+                <ul *ngIf="((!this.td_valid_form()) && (this.td_formSubmit))">
+                  <p>Favor revise los datos del formulario</p>
+                  <li *ngIf="((this.td_model.P_ROW_NUM       == '0') || (this.td_model.P_ROW_NUM       == '') || (this.td_model.P_ROW_NUM  == null))" class="alert alert-danger">
+                    Favor seleccione el campo 'Número de Filas'
+                  </li>
+                  <li *ngIf="((this.td_model.P_FECHA_INICIO  == '')  || (this.td_model.P_FECHA_INICIO  == null))"                                     class="alert alert-danger">
+                    Favor seleccione el campo 'Fecha de Inicio'
+                  </li>
+                  <li *ngIf="((this.td_model.P_FECHA_FIN     == '')  || (this.td_model.P_FECHA_FIN     == null))"                                     class="alert alert-danger">
+                    Favor seleccione el campo 'Fecha Final'
+                  </li> 
+                </ul>
+              </div>
+              <!-- FIN    MENSAJES VALIDACION      -->
+              <!-- INICIO STATUS BUSQUEDA -->
+              <div align="center">
+                <span id="td_status" name="td_searchStatus" id="td_searchStatus" class="searchStatus"  style="width:100%;">{{this.td_textStatus}}</span>
+              </div>
+              <hr>
+              <!-- FIN    STATUS BUSQUEDA -->
+              <!-- INICIO DESCARGA EXCEL       -->
+              <div id="td_divdescargaexcel" style="display: block;" align="right">
+                <br>
+                <button class="button" type="button" (click)="td_GenerarInformeXLSValidate()" [disabled]="(this.td_buttonCaption_xls != '[Generar Excel]')">{{this.td_buttonCaption_xls}}</button>
+                <br>
+                <br>
+                <a [href]="this.td_ExcelDownloadLink" id="DownloadFile">{{this.td_textStatus_xls}}</a>
+              </div>
+              <!-- FIN DESCARGA EXCEL          -->
+              <hr>  
+          </form> 
+          </div>
+          <!-- END SEARCH PANEL -->
+          <!-- INIT DATAGRID -->
+          <table  mat-table  [dataSource]="td_dataSource"  class="mat-elevation-z8" aria-label="td_paginator">
+            <ng-container matColumnDef="id_Column">
+              <th mat-header-cell *matHeaderCellDef>id_Column</th>
+              <td mat-cell *matCellDef="let element">{{ element.id_Column}}</td>
+            </ng-container>
+            <ng-container matColumnDef="pageName">
+              <th mat-header-cell *matHeaderCellDef>pageName</th>
+              <td mat-cell *matCellDef="let element">{{ element.pageName }}</td>
+            </ng-container>
+            <ng-container matColumnDef="accessDate">
+              <th mat-header-cell *matHeaderCellDef>accessDate</th>
+              <td mat-cell *matCellDef="let element">{{ element.accessDate | date: 'dd/MM/yyyy HH:mm a' }}</td>
+            </ng-container>
+            <ng-container matColumnDef="ipValue">
+              <th mat-header-cell *matHeaderCellDef>ipValue</th>
+              <td mat-cell *matCellDef="let element">{{ element.ipValue }}</td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="rf_displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: rf_displayedColumns"></tr>
+          </table>
+          <!-- END DATAGRID -->
+          <!-- INIT PAGINATOR -->
+          <hr>
+          <mat-paginator #td_paginator="matPaginator"
+              class="demo-paginator" 
+              [length]=""
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="td_paginator"></mat-paginator>
+          <!-- END  PAGINATOR -->  
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="[CONSULTA_3 (ESTADISTICAS)]">
+    <div align="center" style="padding-top:10px;">
+        <h5>[CONSULTA_3 (ESTADISTICAS)]</h5>
+        <!-- PANEL GRAFICO / INICIO  -->
+        <div id="divPieChart_pdf" #divPieChart_XLS class="chart-container" style="display: block; box-sizing: border-box; height: 400px; width: 800px;padding:5px;" height="400" width="800">
+              <canvas  id="canvas_xls" #canvas_xls style="background-color:bisque;padding:10px 10px 10px 10px;">{{ this.pieChartVar }}</canvas>
+        </div>
+        <!-- PANEL GRAFICO / FIN     -->
+        <!-- GENERAR PDF / INICIO    -->
+        <hr />
+        <div id="divdescargapdf" style="display: block" align="right">
+            <input id="GetPDF" type="button" title="[GENERAR PDF]" value="[GENERAR PDF]" (click)="GetPDF()" [disabled]="(this.pdf_message == '[...Generando PDF...]')">           
+        </div>
+        <!-- GENERAR PDF / FIN    -->
+        <hr />
+        <!-- STATUS / INICIO -->
+        <div align="left">
+          <div *ngIf="this.pdf_message" class="alert alert-secondary" role="alert">{{ this.pdf_message }}</div>
+        </div>
+        <!-- STATUS / FIN   -->
+     </div>
+  </mat-tab>
+</mat-tab-group>    
+<hr>
+<a routerLink="/FilesGenerationWeb">Volver al Menú</a>   
+
+

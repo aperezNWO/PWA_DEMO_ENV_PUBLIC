@@ -1,0 +1,143 @@
+<div align="center" style="padding-top:10px;">
+  <h4>{{pageTitle}}</h4>
+</div>
+<mat-tab-group>
+  <mat-tab label="[CONSULTA_1 (LISTADO)]">
+    <div align="center" style="padding-top:10px;">
+      <div id="LangListDiv" align="center">
+      <label for="LangList">{{this.tituloListadoLenguajes}}</label>
+      <select   id="LanguageList"
+                name="LanguajeList"
+                style="width:auto;"
+                #_languajeList>
+                <option *ngFor="let _languageName of __languajeList" 
+                      [value]   ="_languageName._index"
+                      [selected]="_languageName._selected">{{_languageName._value}}
+               </option>
+      </select>
+     </div>
+     <hr/>  
+      <div class="mat-elevation-z8">
+          <div class="searchPanel">
+            <form [formGroup]="rf_searchForm" (ngSubmit)="rf_onSubmit()">
+              <!--P_ROW_NUM-->
+              <div>
+                <label for="_P_ROW_NUM">
+                  # de Registros :
+                </label>
+                <input id="_P_ROW_NUM" type="text" formControlName="_P_ROW_NUM">
+              </div>
+              <!--P_FECHA_INICIO-->
+              <div>
+                <label for="_P_FECHA_INICIO">
+                  Fecha Inicial :
+                </label>
+                <input id="_P_FECHA_INICIO" type="date" formControlName="_P_FECHA_INICIO">
+              </div>
+              <!--P_FECHA_FIN-->
+              <div>
+                <label for="_P_FECHA_FIN">
+                  Fecha Final :
+                </label>
+                <input id="_P_FECHA_FIN" type="date" formControlName="_P_FECHA_FIN">
+              </div>
+              <!-- INICIO BUTTONS PANEL        -->
+              <hr>
+              <div align="right">
+                <button class="button" type="submit" [disabled]="(this.rf_buttonCaption != '[Buscar]')">{{this.rf_buttonCaption}}</button>
+                <button class="button" type="button" (click)="this.rf_newSearch()">[Nueva]</button>
+              </div>
+              <!-- FIN BUTTONS PANEL                     -->
+              <!-- INICIO MENSAJES VALIDACION (REACTIVE) -->
+              <div align="left">
+                <ul *ngIf="(this.rf_searchForm.invalid)" class="alert alert-danger">
+                      <p>Favor revise los datos del formulario</p>
+                      <li *ngIf="((this.rf_searchForm.value['_P_ROW_NUM'] == null) ||  (this.rf_searchForm.value['_P_ROW_NUM'] == '') || (this.rf_searchForm.value['_P_ROW_NUM'] == '0'))" class="alert alert-danger">
+                        El campo '# de Registros' es requerido.
+                      </li>
+                      <li *ngIf="(((this.rf_searchForm.value['_P_FECHA_INICIO'] == null)  || (this.rf_searchForm.value['_P_FECHA_INICIO'] == '') ) )" class="alert alert-danger">
+                        El campo 'Fecha Inicial' es requerido.
+                      </li>
+                      <li *ngIf="(((this.rf_searchForm.value['_P_FECHA_FIN'] == null)     || (this.rf_searchForm.value['_P_FECHA_FIN'] == '') ) )" class="alert alert-danger">
+                        El campo 'Fecha Final ' es requerido.
+                      </li>
+                </ul>
+              </div>
+              <!-- FIN MENSAJES DE VALIDACION (REACTIVE)-->
+              <!-- INICIO STATUS BUSQUEDA      -->
+              <br/>
+              <div align="center">
+                <span id="status" name="searchStatus" class="searchStatus" id="searchStatus">{{this.rf_textStatus}}</span>
+              </div>
+              <!-- FIN    STATUS BUSQUEDA      -->
+              <!-- INICIO DESCARGA EXCEL       -->
+              <hr>
+              <div id="divdescargacsv" style="display: block;" align="right">
+                <br>
+                <button class="button" type="button" (click)="SetCSVLink()" [disabled]="(this.rf_buttonCaption_csv != '[Generar CSV]')">{{this.rf_buttonCaption_csv}}</button>
+                <br>
+                <br>
+                <!-- ENLACE DESCARGA / INICIO -->
+                <div *ngIf="this.downloadLink" style="display: block;" align="right">
+                  <a [href]="this.downloadLink" id="DownloadFile" target="_blank">{{ this.downloadCaption }}</a>
+                </div> 
+                <!-- ENLACE DESCARGA FIN      -->
+                <hr>  
+              </div>
+            </form>
+          </div>
+              <div class="mat-elevation-z8">
+                <table  mat-table  [dataSource]="csv_dataSource"  class="mat-elevation-z8" aria-label="rf_paginator">
+                    <ng-container matColumnDef="id_Column">
+                      <th mat-header-cell *matHeaderCellDef>id_Column</th>
+                      <td mat-cell *matCellDef="let element">{{ element.id_Column}}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="ciudad">
+                      <th mat-header-cell *matHeaderCellDef>ciudad</th>
+                      <td mat-cell *matCellDef="let element">{{ element.ciudad }}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="nombreCompleto">
+                        <th mat-header-cell *matHeaderCellDef>nombreCompleto</th>
+                        <td mat-cell *matCellDef="let element">{{ element.nombreCompleto }}</td>
+                      </ng-container>
+                    <tr mat-header-row *matHeaderRowDef="this.csv_displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: this.csv_displayedColumns"></tr>
+                  </table>
+                  <!-- PAGINADOR / INICIO -->
+                  <hr>
+                  <mat-paginator #csv_paginator="matPaginator"
+                      class="demo-paginator" 
+                      [length]=""
+                      [pageSize]="5"
+                      [pageSizeOptions]="[5, 10, 25, 100]"
+                      aria-label="csv_paginator"></mat-paginator>
+                  <!-- PAGINADOR / FIN    -->                  
+              </div>
+      </div>
+    </div>        
+  </mat-tab>
+  <mat-tab label="[CONSULTA_2 (ESTADISTICAS)]">
+      <div align="center" style="padding-top:10px;">
+          <h5>[CONSULTA_2 (ESTADISTICAS)]</h5>
+          <!-- PANEL GRAFICO / INICIO  -->
+          <div id="divPieChart_CSV" #divPieChart_CSV class="chart-container" style="display: block; box-sizing: border-box; height: 400px; width: 400px;padding:5px;" height="400" width="400">
+              <canvas  id="canvas_csv" #canvas_csv style="background-color:bisque;padding:10px 10px 10px 10px;">{{ this.pieChartVar }}</canvas>
+          </div>
+          <!-- PANEL GRAFICO / FIN     -->
+          <!-- GENERAR PDF / INICIO    -->
+          <hr />
+          <div id="divdescargapdf" style="display: block" align="right">
+              <input id="GetPDF" type="button" title="[GENERAR PDF]" value="[GENERAR PDF]" (click)="GetPDF()" [disabled]="(this.pdf_message == '[...Generando PDF...]')">           
+          </div>
+          <hr />
+          <!-- GENERAR PDF / FIN    -->
+          <!-- STATUS / INICIO -->
+          <div align="left">
+            <div *ngIf="this.pdf_message" class="alert alert-secondary" role="alert">{{ this.pdf_message }}</div>
+          </div>
+          <!-- STATUS / FIN   -->
+      </div>
+  </mat-tab>               
+</mat-tab-group>
+<hr>
+<a routerLink="/FilesGenerationWeb">Volver al Menú</a>   
