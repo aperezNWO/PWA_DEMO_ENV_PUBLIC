@@ -1,70 +1,63 @@
-.mat-column-ID_LOG {
+.mat-column-id_Column {
     flex: none;
     width: 100px;
-    padding: 1rem;
+    font-size: x-small;
   }
 
-.mat-column-DATE_TIME {
+.mat-column-pageName {
   flex: none;
   width: 100px;
-  padding: 1rem;
+  font-size: x-small;
 }
 
-.mat-column-TEXT_1_WEB {
+.mat-column-accessDate {
   flex: none;
   width: 100px;
-  padding: 1rem;
+  font-size: x-small;
 }
 
-.mat-column-TEXT_2_WEB {
+.mat-column-ipValue {
   flex: none;
   width: 100px;
-  padding: 1rem;
+  font-size: x-small;
 }
     
-form {
-  width: 40%;
-  margin: 0 auto;
-  background-color: cadetblue;
-  padding:1em;
+.mdc-list-item__content
+{
+   color:bisque;  
+   font-size: x-small; 
 }
 
-label,
-select,
-input {
-  /* In order to define widths */
-  display: inline-block;
+
+.form-group {
+  background-color: #ccc;
+  width:300px;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
 }
 
 label {
-  width: 30%;
-  /* Positions the label text beside the input */
-  text-align: right;
+  width      :  150px;
+  margin-left:  5px; /* Add spacing between label and input */
+  margin-left:  5px; /* Add spacing between label and input */
 }
 
-label+input {
-  width: 30%;
-  /* Large margin-right to force the next element to the new-line
-           and margin-left to create a gutter between the label and input */
-  margin: 0 30% 0 4%;
-}
-
-label+select {
-  width: 32%;
-  /* Large margin-right to force the next element to the new-line
-           and margin-left to create a gutter between the label and input */
-  margin: 0 32% 0 4%;
-}
-
-/* Only the submit button is matched by this selector,
-       but to be sure you could use an id or class for that button */
-input+input {
-  float: right;
-}
-
-.mdc-list-item__content
+input[type="text"]
 {
-   color:bisque;   
+  width: 10px;
+}
+
+
+input,
+textarea,
+select {
+  /* Adjust width and other styles as needed */
+  flex: 1; /* Grow input fields to fill remaining space */
+}
+
+a, a:visited, a:hover, a:active {
+  color: #007bff; 
 }
 
 

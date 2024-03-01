@@ -1,13 +1,11 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild   } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild   } from '@angular/core';
 import { FormBuilder, Validators                       } from '@angular/forms';
 import { MatTableDataSource                            } from '@angular/material/table';
 import { MatPaginator                                  } from '@angular/material/paginator';
 import { Observable                                    } from 'rxjs';
-import { Chart, registerables                          } from 'chart.js';
 import { MCSDService                                   } from '../../../_services/mcsd.service';
 import { CustomErrorHandler                            } from '../../../app.module';
 import { PersonEntity, SearchCriteria, _languageName   } from '../../../_models/entityInfo.model';
-import { PdfService                                    } from 'src/app/_engines/pdf.engine';
 //
 @Component({
   selector: 'app-files-generation-csv',
@@ -37,19 +35,8 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
     //
     @ViewChild("csv_paginator" ,{read:MatPaginator}) csv_paginator!:  MatPaginator;
     //--------------------------------------------------------------------------
-    // PROPIEDADES - ESTADISTICA
-    //--------------------------------------------------------------------------
-    //
-    @ViewChild('canvas_csv') canvas_csv             : any;
-    //
-    @ViewChild('divPieChart_CSV') divPieChart_CSV   : any;
-    //
-    public pieChartVar                              : any;
-    //--------------------------------------------------------------------------
     // PROPIEADES - REACTIVE FORMS
     //--------------------------------------------------------------------------
-    //
-    pdf_message                        : string = '';
     //
     rf_textStatus                      : string = "";
     //
@@ -72,7 +59,7 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
                                             ,"");
     //
     public __languajeList                              : any;
-    protected tituloListadoLenguajes                   : string = "Seleccione Backend";
+    protected tituloListadoLenguajes                   : string = "[Backend]:";
     //
     @ViewChild("rf_paginator" ,{read:MatPaginator}) rf_paginator!:  MatPaginator;
     @ViewChild('_languajeList')    _languajeList                 : any;
@@ -86,15 +73,11 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
     // EVENT HANDLERS FORMIULARIO 
     //--------------------------------------------------------------------------
     //
-    constructor(public mcsdService: MCSDService, public formBuilder: FormBuilder, public customErrorHandler : CustomErrorHandler, public pdfService : PdfService,) {
-      //
-      Chart.register(...registerables);
+    constructor(public mcsdService: MCSDService, public formBuilder: FormBuilder, public customErrorHandler : CustomErrorHandler) {
       //
     }
     //
     ngOnInit(): void {
-        //
-        this.SetChart();
         //
         this.rf_newSearch();
         //
@@ -244,132 +227,6 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
         }
         //
         csv_link.subscribe(csv_link_observer);
-    }
-    //
-    SetChart():void
-    {
-        //
-        console.log(FilesGenerationCSVComponent.PageTitle + " - [SET CHART]");
-        //
-        const statLabels          : string[]          = [];
-        const statData            : Number[]          = [];
-        const statBackgroundColor : string[]          = [];
-        //
-        let csv_informeLogRemoto!                 : Observable<string>;
-        csv_informeLogRemoto                      = this.mcsdService.getInformeRemotoCSV_STAT();
-        //
-        const csv_observer = {
-          next: (csv_data: string)     => { 
-            //
-            console.log(FilesGenerationCSVComponent.PageTitle + " - [SET CSV DATA] - Return Values : [" + csv_data + "]");
-            //
-            let jsondata     = JSON.parse(csv_data);
-            //
-            let recordNumber = jsondata.length;
-            //
-            console.log('ESTADISTICA - (return): ' + recordNumber);
-            //
-            jsondata.forEach((element: JSON, index : number) => {
-              //
-              console.log(index + " " + JSON.stringify(element));
-              //
-              console.log("[CSV DEMO] - SET CHART - RESULT : index [" + index + "] value={"
-                    + jsondata[index]["id_Column"]
-              + "-" + jsondata[index]["ciudad"] + "}");
-              //
-              statLabels.push(jsondata[index]["ciudad"]);
-              statData.push(Number(jsondata[index]["id_Column"]));
-              //
-              let randomNumber_1 = Math.floor(Math.random() * 100);
-              let randomNumber_2 = Math.floor(Math.random() * 100);
-              let randomNumber_3 = Math.floor(Math.random() * 100);
-              //
-              console.log('RANDOM NUMBERS : [' + randomNumber_1 + ',' + randomNumber_2 + ',' + randomNumber_3 + ']')
-              //
-              let rgbStr = 'rgb('
-                  + (Number(jsondata[index]["id_Column"]) + randomNumber_1) + ','
-                  + (Number(jsondata[index]["id_Column"]) + randomNumber_2) + ','
-                  + (Number(jsondata[index]["id_Column"]) + randomNumber_3) + ')';
-              //
-              console.log('RGB : ' + rgbStr);
-              //
-              statBackgroundColor.push(rgbStr);
-            });      
-          },
-          error           : (err: Error)      => {
-            //
-            console.log(FilesGenerationCSVComponent.PageTitle + " - [SET CSV DATA] - Error : [" + err.message + "]");
-          },
-          complete        : ()                => {
-            //
-            console.log(FilesGenerationCSVComponent.PageTitle + " - [SET CSV DATA] - [Search end]");
-            //
-            const data = {
-              labels: statLabels,
-              datasets: [{
-                  label: 'CIUDADES',
-                  data: statData,
-                  backgroundColor: statBackgroundColor,
-                  hoverOffset: 4
-              }]
-            };
-            //
-            let context = this.canvas_csv.nativeElement.getContext('2d');
-            //
-            this.pieChartVar = new Chart(context, {
-                  type: 'pie',
-                  data: data,
-                  options: {
-                      responsive: true,
-                      plugins: {
-                          legend: {
-                              position: 'bottom',
-                          },
-                          title: {
-                              display: true,
-                              text: 'CIUDADES'
-                          }
-                      }
-                  }
-              });
-            },
-      };
-      //
-      csv_informeLogRemoto.subscribe(csv_observer);
-    }   
-    //--------------------------------------------------------------------------
-    // METODOS - PDF
-    //--------------------------------------------------------------------------
-    //
-    GetPDF():void
-    {
-        //
-        this.pdf_message = '[...Generando PDF...]'
-        //
-        let fileName         : string     = "PIE CHART";
-        let fileName_output  : string     = '';
-        //
-        this.pdfService._GetPDF(
-          this.pageTitle,
-          this.canvas_csv,
-          this.divPieChart_CSV,
-          fileName,
-        ).subscribe(
-        {
-            next: (fileName: string) =>{
-                //
-                fileName_output = fileName;
-            },
-            error: (error: Error) => {
-                //
-                this.pdf_message   = 'ha ocurrido un error : ' + error.message;
-            },
-            complete: () => {
-                //
-                this.pdf_message   = `Se ha generado el archivo [${fileName_output}]`;
-            }
-          }
-        );
     }
     //--------------------------------------------------------------------------
     // METODOS REACTIVE FORMS 

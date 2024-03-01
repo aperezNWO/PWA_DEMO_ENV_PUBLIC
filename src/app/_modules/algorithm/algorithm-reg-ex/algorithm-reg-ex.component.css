@@ -1,55 +1,38 @@
     /*------------------------------------------------*/
-    /* ESTILOS FORMULARIO                             */
+    /* ESTILO PARA FORMJLARIO                         */
     /*------------------------------------------------*/
-
-    fieldset {
-        padding: 1em;
-        /*font: 80%/1 sans-serif;*/
+    .form-group {
+        width:350px;
+        margin-bottom: 1em;
+        display: flex;
+        align-items: center;
+        background-color: #ccc;
     }
-
+  
     label {
-        width: 40%;
-        margin-right: 0.5em;
-        padding-top: 0.2em;
-        text-align: right;
-        font-size: xx-small;
+        width      :  150px;
+        margin-left:  5px; /* Add spacing between label and input */
+        margin-left:  5px; /* Add spacing between label and input */
     }
-    .fieldSetRegex {
-        width:50%;
+    
+    input[type="text"]
+    {
+        width: 10px;
     }
-    /*------------------------------------------------*/
-    /* ESTILOS STATUS DE OPERACION                    */
-    /*------------------------------------------------*/
-    .modalStatus {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 99; /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+    input,
+    textarea,
+    select {
+        /* Adjust width and other styles as needed */
+        flex: 1; /* Grow input fields to fill remaining space */
     }
-
-    .modalStatus-content {
-        text-align: center;
-        background-color: #fefefe;
-        margin: 15% auto; /* 15% from the top and centered */
-        padding: 1em;
-        border: 1px solid #888;
-        width: 100%; /* Could be more or less, depending on screen size */
-        color: black;
-    }
-
     /*------------------------------------------------*/
     /* ESTILO PARA AREA DE XML                        */
     /*------------------------------------------------*/
     #global 
     {
+        width         : 350px;
         height        : 100px;
-        width         : 100%;
         border        : 1px solid #ddd;
         background    : #cccccc;
         color         : #0000ff;
@@ -59,3 +42,6 @@
     {
         height: auto;
     }
+
+   
+    

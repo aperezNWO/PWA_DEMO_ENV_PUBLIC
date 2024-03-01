@@ -276,7 +276,15 @@
 
 -- [_] MISCELANEOUS.
 
+     -- [x] bootstrap menu plegar en entrada a modulo.
      -- [_] Angular Topics.
-     -- [_] boottrrap menu plagar en entrada a modulo.
+     -- [_] Renovar https somme.com.
+     
+-- [_] CRUD.
+
+       -- [_] oAuth.
+       -- [_] Linkedon Job Alerts "Angular".
+       -- [_] List of previous job alerts ".NET".
+       -- [_] UIX FIX.
 
 ////////////////////////////////////////////////////////////////////////////////

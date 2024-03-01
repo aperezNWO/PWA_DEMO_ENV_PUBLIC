@@ -26,7 +26,7 @@ export class AlgorithmRegExComponent implements OnInit, AfterViewInit {
     protected lblStatus              : string = "";
     protected pattern                : string = "";
     public    __languajeList         : any;
-    public    tituloListadoLenguajes : string = "Seleccione Backend";
+    public    tituloListadoLenguajes : string = "BACKEND";
     //
     @ViewChild('mensajes')        mensajes       : any;
     @ViewChild('tagSearch')       tagSearch      : any;

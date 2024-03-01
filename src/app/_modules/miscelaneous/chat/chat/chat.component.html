@@ -1,4 +1,4 @@
-<h1>[CHAT]</h1>
+<div align="center"><h1>[CHAT]</h1></div>
 <hr/>
 <div id="divMessageInput" align="left">
 <form #messageinputform="ngForm" (ngSubmit)="submitForm(messageinputform);">
@@ -20,7 +20,7 @@
 <h4>[MESSAGES]</h4>
 <!-- MESSAGES / INICIO -->
 <div id="divMessageOutput">
-        <table class="message-data" *ngFor="let message of this.parentData">
+        <table class="message-data" *ngFor="let message of this.parentData.reverse()">
         <tr>
            <td>
                 <span>
@@ -32,6 +32,6 @@
 </div>
 <!-- MESSAGES / FIN    -->
 <hr>
-<a routerLink="/Miscelaneous">[Volver al Menú]</a>  
+<div align="right"><a routerLink="/Miscelaneous">[Volver al Menú]</a></div>
   
 

@@ -1,11 +1,13 @@
 <div class="content">
-    <div class="content-body">
-        <p>{{this.pageTitle}}</p>
-        <p>Ver referencia&nbsp;<a href="javascript: void window.open('https://en.wikipedia.org/wiki/Bubble_sort')">[BUBBLE SORT]</a></p>
-        <p>Ver referencia&nbsp;<a href="javascript: void window.open('https://en.wikipedia.org/wiki/Quicksort')">[QUICK SORT]</a></p>
-        <p>Ver referencia&nbsp;<a href="javascript: void window.open('https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle')">[FISHER/YATES SHUFFLE]</a></p>
-    </div>
+    <!-- ENCABEZADO / INICIO -->
+    <div align="center"><H1>{{this.pageTitle}}</H1></div>
     <hr>
+    <p>Ver referencia&nbsp;<a href="javascript: void window.open('https://en.wikipedia.org/wiki/Bubble_sort')">[BUBBLE SORT]</a></p>
+    <p>Ver referencia&nbsp;<a href="javascript: void window.open('https://en.wikipedia.org/wiki/Quicksort')">[QUICK SORT]</a></p>
+    <p>Ver referencia&nbsp;<a href="javascript: void window.open('https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle')">[FISHER/YATES SHUFFLE]</a></p>
+    <!-- ENCABEZADO / FIN   -->
+    <hr>
+    <!--  BOARD / INICIO   -->
     <p>Listado a Ordenar</p>
         <div id="mensajes_1" #mensajes_1 class="mensajes">
         </div>
@@ -16,47 +18,52 @@
     <div id="mensajes" #mensajes style="visibility: hidden;height:0px;">
     </div>
     <hr>
-    <div>
+    <div align="center">
         <canvas id="c_canvas" #c_canvas width="250px" height="250px"></canvas>
     </div>
+    <!--  BOARD / FIN      -->
     <hr>
-    <div>
-        <span id="lblstatus">{{this.lblStatus}}</span>
-    </div>
+    <!--  INICIO FOMULARIO -->
+    <form>
+        <div class="form-group" align="left" id="LangListDiv">
+            <label for="LangList"><span id="tituloListadoLenguajes">{{this.tituloListadoLenguajes}}</span></label>
+            &nbsp;<select   id="LanguageList"
+                            name="LanguajeList"
+                            #_languajeList>
+                            <option *ngFor="let _languageName of __languajeList" 
+                            [value]="_languageName._index"
+                            [selected]="_languageName._selected">{{_languageName._value}}</option>
+            </select>
+        </div>
+            <div class="form-group" align="left">
+                <label for="SortAlgorithmList">[ALGORITMO] : </label> 
+                <select id="SortAlgorithmList" #SortAlgorithmList
+                [disabled]="!((this.GetSortLabel != '[...ordenando...]') && (this.GetSortLabel != '[...ordenado...]'))">
+                    <option value="0">[SELECCIONE_OPCION]</option>
+                    <option value="1">BUBBLE SORT</option>
+                    <option value="2">QUICK SORT</option>
+                </select>
+            </div>
+            <hr>
+            <!--STATUS / INICIO   -->
+            <div  *ngIf="this.lblStatus" class="form-group alert alert-secondary" align="center" role="alert">
+                {{ this.lblStatus }}
+            </div>
+            <!-- STATUS / FIN      -->
+            <hr />
+            <!-- BOTONES / INICIO  -->
+            <div class="form-group" align="left" >
+                <input id="NewSort" type="button" title="[REINICIAR]" value="[REINICIAR]" 
+                (click)="this.GetNewSort()" 
+                [disabled]=" !(this.lblStatus == '[SE ORDENO CORRECTAMENTE EL LISTADO]')  ">
+                |
+                <input id="GetSort" type="button" title="[ORDENAR]" value={{this.GetSortLabel}} 
+                (click)="this.GetSort()"
+                [disabled]=" !( (this.GetSortLabel != '[...ordenando...]') && (this.GetSortLabel != '[...ordenado...]') )">
+            </div>
+            <!-- BOTONES / FIN     -->
+    </form>
+    <!-- FIN FORMULARIO    -->
     <hr>
-    <div>
-        ALGORITMO :
-        <select id="SortAlgorithmList" #SortAlgorithmList
-        [disabled]="!((this.GetSortLabel != '[...ordenando...]') && (this.GetSortLabel != '[...ordenado...]'))">
-            <option value="0">[SELECCIONE_OPCION]</option>
-            <option value="1">BUBBLE SORT</option>
-            <option value="2">QUICK SORT</option>
-        </select>
-    </div>
-    <hr>
-    <div id="LangListDiv">
-        <span id="tituloListadoLenguajes">{{this.tituloListadoLenguajes}}</span>
-        <br>
-        <label for="LangList"></label>
-        <br>
-        &nbsp;<select   id="LanguageList"
-                        name="LanguajeList"
-                        #_languajeList>
-                        <option *ngFor="let _languageName of __languajeList" 
-                        [value]="_languageName._index"
-                        [selected]="_languageName._selected">{{_languageName._value}}</option>
-        </select>
-    </div>
-    <hr />
-    <div>
-        <input id="NewSort" type="button" title="[REINICIAR]" value="[REINICIAR]" 
-        (click)="this.GetNewSort()" 
-        [disabled]=" !(this.lblStatus == '[SE ORDENO CORRECTAMENTE EL LISTADO]')  ">
-        |
-        <input id="GetSort" type="button" title="[ORDENAR]" value={{this.GetSortLabel}} 
-        (click)="this.GetSort()"
-        [disabled]=" !( (this.GetSortLabel != '[...ordenando...]') && (this.GetSortLabel != '[...ordenado...]') )">
-    </div>
-    <hr>
-    <a routerLink="/AlgorithmWeb">Volver al Menú</a>
+    <div align="right"><a routerLink="/AlgorithmWeb">Volver al Menú</a></div>
 </div>

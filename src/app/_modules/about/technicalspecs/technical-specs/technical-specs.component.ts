@@ -34,9 +34,20 @@ export class TechnicalSpecsComponent {
       //
       return this.__baseUrlNodeJs;
     }
+    public get _baseUrlNodeJsOcr(): string {
+      //
+      return this.__baseUrlNodeJsOcr;
+    }
+    //
+    public get _baseUrlNodeJsChat(): string
+    {
+      return this.__baseUrlNodeJsChat;
+    }
     //
     protected __baseUrlNetCore        : string = '';
     protected __baseUrlNodeJs         : string = '';
+    protected __baseUrlNodeJsChat     : string = '';
+    protected __baseUrlNodeJsOcr      : string = '';
     //
     ////////////////////////////////////////////////////////////////  
     // METODOS - [EVENT HANDLERS]
@@ -54,10 +65,13 @@ export class TechnicalSpecsComponent {
     ) 
     {
       ////
-      this._appBrand        = this._configService.getConfigValue('appBrand');
-      this._appVersion      = this._configService.getConfigValue('appVersion');
-      this.__baseUrlNetCore = this._configService.getConfigValue('baseUrlNetCore');
-      this.__baseUrlNodeJs  = this._configService.getConfigValue('baseUrlNodeJs');
+      this._appBrand           = this._configService.getConfigValue('appBrand');
+      this._appVersion         = this._configService.getConfigValue('appVersion');
+      this.__baseUrlNetCore    = this._configService.getConfigValue('baseUrlNetCore');
+      this.__baseUrlNodeJs     = this._configService.getConfigValue('baseUrlNodeJs');
+      this.__baseUrlNodeJsChat = this._configService.getConfigValue('baseUrlNodeJsChat');
+      this.__baseUrlNodeJsOcr  = this._configService.getConfigValue('baseUrlNodeJsOcr');
+
       //
       console.log("baseUrlNetCore : " + this.__baseUrlNetCore);
       console.log("baseUrlNodeJs  : " + this.__baseUrlNodeJs);

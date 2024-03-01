@@ -1,17 +1,25 @@
     <div class="content">
-        <div class="content-body">
-            <div align="center" style="padding-top:10px;">
-                <h4>{{this.pageTitle}}</h4>
-            </div>
-            <p>Ver referencia&nbsp;<a href="javascript: void window.open('https://en.wikipedia.org/wiki/Dijkstra\'s_algorithm')">[Algoritmo Dijkstra]</a></p>
-            <p>Ver referencia&nbsp;<a href="javascript: void window.open('https://www.npmjs.com/package/jspdf')">[jsPDF]</a></p>
+        <!-- ENCABEZADO INICIO   -->
+        <div align="center">
+            <h1>{{this.pageTitle}}</h1>
         </div>
+        <hr>    
+        <p>Ver referencia&nbsp;<a href="javascript: void window.open('https://en.wikipedia.org/wiki/Dijkstra\'s_algorithm')">[Algoritmo Dijkstra]</a></p>
+        <p>Ver referencia&nbsp;<a href="javascript: void window.open('https://www.npmjs.com/package/jspdf')">[jsPDF]</a></p>
+         <!-- ENCABEZADO FIN    -->
         <hr />
-        <div id="LangListDiv">
-            <span id="tituloListadoLenguajes">{{this.tituloListadoLenguajes}}</span>
-            <br>
-            <label for="LangList"></label>
-            <br>
+        <!-- PANEL GRAFICO / INICIO -->
+        <div align="center">
+            <div id="divCanvas_Pdf" #divCanvas_Pdf style="display: block; box-sizing: border-box; height: 255px; width: 255px;padding:5px;" height="255" width="255">
+                <canvas id="c_canvas" #c_canvas width="250px" height="250px">
+                </canvas>
+            </div>
+        </div>
+        <!-- PANEL GRAFICO / FIN     -->
+        <hr />
+        <!-- SELECCIONAR LENGUAJE -->
+        <div class="form-group" align="left" id="LangListDiv">
+            <label for="LangList"><span id="tituloListadoLenguajes">{{this.tituloListadoLenguajes}}</span></label>
             &nbsp;<select   id="LanguageList"
                             name="LanguajeList"
                             #_languajeList >
@@ -19,32 +27,9 @@
                             [value]="_languageName._index"
                             [selected]="_languageName._selected">{{_languageName._value}}</option>
             </select>
-
-        </div>
-        <hr />
-        <div id="listTitle" [hidden]="((this.PointListHidden.length == 0) && (this.MatrixListHidden.length == 0))">
-            <span id="tituloListadoDistancias">{{this.tituloListadoDistancias}}</span>
-            <br>
-            <label for="DistanceList"></label>
-            <br>
-            &nbsp;<select   id="DistanceList"
-                            name="DistanceList"
-                            #_distanceList
-                            (change)="this._distanceListChange()">
-                            <option *ngFor="let _vertexSize of __distanceList" [value]="_vertexSize._index">{{_vertexSize._value}}</option>
-            </select>
-        </div>
-        <div>
-            <!-- PANEL GRAFICO / INICIO -->
-            <div id="divCanvas_Pdf" #divCanvas_Pdf style="display: block; box-sizing: border-box; height: 255px; width: 255px;padding:5px;" height="255" width="255">
-                <canvas id="c_canvas" #c_canvas width="250px" height="250px">
-                </canvas>
-            </div>
-            <!-- PANEL GRAFICO / FIN     -->
-        </div>
-        <hr />
-        <!-- P_DATA_SOURCE_ID        -->
-        <P>
+       </div>
+        <!-- CANTIDA DE PUNTOS       -->
+        <div class="form-group" align="left">
             <label for="_vertexSizeList">Cantidad de Puntos:</label>
             <select     id="_vertexSizeList"
                         name="_vertexSizeList"
@@ -52,38 +37,49 @@
                         (change)="this._vertexSizeListChange();">                    
             <option *ngFor="let _vertexSize of __vertexSizeList" [value]="_vertexSize._index">{{_vertexSize._value}}</option>
             </select>
-        </P>
-        <hr />
-        <p>
+        </div>
+        <!-- PUNTO DE ORIGEN        -->
+        <div class="form-group" align="left">
             <label for="_sourcePointList">Punto de Origen:</label>
             <select     id="_sourcePointList"
                         name="_sourcePointList"
                         #_sourcePointList>                    
             <option *ngFor="let _vertexSize of __sourcePointList" [value]="_vertexSize._index">{{_vertexSize._value}}</option>
             </select>
-        </p>
-        <!--STATUS / INICIO -->
-        <hr/>
-        <div align="left">
-            <div *ngIf="this.pdf_message" class="alert alert-secondary" role="alert">{{ this.pdf_message }}</div>
         </div>
-        <!-- STATUS / FIN   -->
+        <div class="form-group" align="left" id="listTitle" *ngIf="!((this.PointListHidden.length == 0) && (this.MatrixListHidden.length == 0))">
+            <label for="DistanceList"><span id="tituloListadoDistancias">{{this.tituloListadoDistancias}}</span></label>
+            &nbsp;<select   id="DistanceList"
+                            name="DistanceList"
+                            #_distanceList
+                            (change)="this._distanceListChange()">
+                            <option *ngFor="let _vertexSize of __distanceList" [value]="_vertexSize._index">{{_vertexSize._value}}</option>
+            </select>
+        </div>
+        <hr/>
+        <!--STATUS / INICIO -->
+        <div *ngIf="this.status_message" class="alert alert-secondary" role="alert" align="center" >
+            {{ this.status_message }}
+        </div>
+        <!-- STATUS / FIN     -->
         <hr />
-        <div>
+        <!-- BOTONES / INICIO -->
+        <div class="form-group" align="right">
             <input id="GetGraph" type="button" title="[GENERAR]"   value="[GENERAR]"   (click)="this._GetGraph()" 
             [disabled]="!((this.PointListHidden.length == 0) && (this.MatrixListHidden.length == 0))">
             |
             <input id="NewGraph" type="button" title="[REINICIAR]" value="[REINICIAR]" (click)="this._ResetControls()"
             [disabled]="((this.PointListHidden.length == 0) && (this.MatrixListHidden.length == 0))">
-        </div>
-        <hr />
+            <hr />
             <input id="GetPDF" type="button" title="[GENERAR PDF]" value="[GENERAR PDF]" (click)="this._GetPDF()"
             [disabled]="  ( (this.PointListHidden.length  == 0) 
                          && (this.MatrixListHidden.length == 0))
                          || (this.selectedIndex           == 0)">
+        </div>
+        <!-- BOTONES / FIN    -->                 
     </div>
     <hr />
-    <a routerLink="/AlgorithmWeb">Volver al Menú</a>
+    <div align="right"><a routerLink="/AlgorithmWeb">Volver al Menú</a></div>
 
 
 

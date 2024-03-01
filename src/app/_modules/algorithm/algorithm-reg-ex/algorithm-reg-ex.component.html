@@ -1,19 +1,29 @@
-<div class="content">
-        <div class="content-body">
-            <p>{{this.pageTitle}}</p>
-            <p>Ver referencia&nbsp;<a href="javascript: void window.open('https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex?view=net-5.0')">[Clase "RegEx"]</a></p>
-        </div>
+    <div class="content-body">
+        <div align="center"><h1>{{this.pageTitle}}</h1></div>
         <hr>
-        <p>Contenido a Buscar</p>
+        <p>Ver referencia&nbsp;<a href="javascript: void window.open('https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex?view=net-5.0')">[Clase "RegEx"]</a></p>
+        <hr>
+        <p>[CONTENIDO A BUSCAR]</p>
         <div id="XmlContent">
             <div id="global">
                 <div id="mensajes" #mensajes>
                 </div>
             </div>
         </div>
-        <div>
-            <fieldset>
-                <legend></legend>
+        <hr>
+        <form>
+            <div class="form-group" align="left">
+                <label for="LangList"><span id="tituloListadoLenguajes">{{this.tituloListadoLenguajes}}</span></label>
+                <select         id="LanguageList"
+                                name="LanguajeList"
+                                #_languajeList
+                                class="fieldSetRegex">
+                    <option *ngFor="let _languageName of __languajeList" 
+                    [value]="_languageName._index"
+                    [selected]="_languageName._selected">{{_languageName._value}}</option>
+                </select>
+            </div>
+            <div class="form-group" align="left">
                 <label for="tagSearch">ELEMENTO A BUSCAR : </label>
                 <select id="tagSearch" #tagSearch class="fieldSetRegex">
                     <option value="0">[SELECCIONE_OPCION]</option>
@@ -24,39 +34,28 @@
                     <option value="price">price</option>
                     <option value="year">year</option>
                 </select>
-                <br>
+            </div>
+            <div class="form-group" align="left">
                 <label for="textSearch">CONTENIDO : </label>
                 <input type="text" id="textSearch"  #textSearch  class="fieldSetRegex" value="">
-                <br>
+            </div>
+            <div class="form-group" align="left">       
                 <label for="regExSearch">EXPRESION REGULAR : </label>
                 <input type="text" id="regExSearch" #regExSearch class="fieldSetRegex" value="{{this.pattern}}" style="background-color:#cccccc;" readonly="readonly">
-                <br>
-            </fieldset>
-        </div>
+            </div>
+            <!--STATUS / INICIO   -->
+            <div *ngIf="this.lblStatus" class="form-group alert alert-secondary" align="center" role="alert">
+                    {{ this.lblStatus }}
+            </div>
+            <!-- STATUS / FIN     -->
+            <!-- BOTONES / INICIO -->
+            <div class="form-group" align="left">
+                <input id="GetRegex"  type="button" title="[BUSCAR]"    value="[BUSCAR]"    (click)="this.GetRegex()">
+                |
+                <input id="newSearch" type="button" title="[REINICIAR]" value="[REINICIAR]" (click)="this._GetXMLData()">
+            </div>
+            <!-- BOTONES / FIN   -->
+        </form>
         <hr>
-        <div>
-            <span id="lblstatus">{{this.lblStatus}}</span>
-        </div>
-        <hr>
-        <div id="LangListDiv">
-            <span id="tituloListadoLenguajes">{{this.tituloListadoLenguajes}}</span>
-            <br>
-            <label for="LangList"></label>
-            <br>
-            &nbsp;<select   id="LanguageList"
-                            name="LanguajeList"
-                            #_languajeList>
-                            <option *ngFor="let _languageName of __languajeList" 
-                            [value]="_languageName._index"
-                            [selected]="_languageName._selected">{{_languageName._value}}</option>
-            </select>
-        </div>
-        <hr>
-        <div>
-            <input id="GetRegex"  type="button" title="[BUSCAR]"    value="[BUSCAR]"    (click)="this.GetRegex()">
-            |
-            <input id="newSearch" type="button" title="[REINICIAR]" value="[REINICIAR]" (click)="this._GetXMLData()">
-        </div>
-        <hr>
-        <a routerLink="/AlgorithmWeb">Volver al Menú</a>
+        <div align="right"><a routerLink="/AlgorithmWeb">[Volver al Menú]</a></div>
 </div>

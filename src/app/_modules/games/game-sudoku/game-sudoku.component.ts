@@ -48,7 +48,7 @@ export class SudokuComponent implements OnInit, AfterViewInit {
   downloadLink     : string = '';
   //
   rf_searchForm   = this.formBuilder.group({
-    _fileUpload   : ["", Validators.required],
+    //_fileUpload   : ["", Validators.required],
   });
   pageTitle       : string = '[SUDOKU]';
   //
@@ -74,8 +74,8 @@ export class SudokuComponent implements OnInit, AfterViewInit {
     //
     this.__generateSourceList = new Array();
     this.__generateSourceList.push(new ListItem(0, '(SELECCIONE OPCION..)', false));
-    this.__generateSourceList.push(new ListItem(1, '[Desde Archivo]'      , false));
-    this.__generateSourceList.push(new ListItem(2, '[Desde Backend]'      , true));
+    this.__generateSourceList.push(new ListItem(1, '[Archivo]'      , false));
+    this.__generateSourceList.push(new ListItem(2, '[Backend]'      , true));
   }
   //
   public _cppSourceDivHiddenChanged(): void {

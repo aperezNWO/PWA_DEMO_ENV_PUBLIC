@@ -47,8 +47,14 @@ export class MCSDService implements OnInit {
       this.__baseUrlNodeJs = value;
     }
     //
+    public set _baseUrlNodeJsOcr(value: string) {
+      //
+      this.__baseUrlNodeJsOcr = value;
+    }
+    //
     protected __baseUrlNetCore        : string = '';
     protected __baseUrlNodeJs         : string = '';
+    protected __baseUrlNodeJsOcr      : string = '';
     //
     ////////////////////////////////////////////////////////////////  
     // METODOS - [EVENT HANDLERS]
@@ -63,12 +69,13 @@ export class MCSDService implements OnInit {
       //
       console.log("Calling MCSDService constructor...");
       //
-      this.__baseUrlNetCore = this._configService.getConfigValue('baseUrlNetCore');
-      this.__baseUrlNodeJs  = this._configService.getConfigValue('baseUrlNodeJs');
+      this.__baseUrlNetCore    = this._configService.getConfigValue('baseUrlNetCore');
+      this.__baseUrlNodeJs     = this._configService.getConfigValue('baseUrlNodeJs');
+      this.__baseUrlNodeJsOcr  = this._configService.getConfigValue('baseUrlNodeJsOcr');
       //
-      console.log("baseUrlNetCore : " + this.__baseUrlNetCore);
-      console.log("baseUrlNodeJs  : " + this.__baseUrlNodeJs);
-      
+      console.log("baseUrlNetCore    : " + this.__baseUrlNetCore);
+      console.log("baseUrlNodeJs     : " + this.__baseUrlNodeJs);
+      console.log("baseUrlNodeJsOcr  : " + this.__baseUrlNodeJsOcr);
     }
     ////////////////////////////////////////////////////////////////  
     // METODOS - [COMUNES]
@@ -178,7 +185,7 @@ export class MCSDService implements OnInit {
     //
     getLogRemotoNodeJS(_searchCriteria : SearchCriteria) : Observable<string>{
       //
-      let p_url       : string = `https://jh6mc8-4000.csb.app/generarinformejson`;
+      let p_url       : string = `${this._configService.getConfigValue('baseUrlNodeJs')}generarinformejson`;
       //
       let nodeJsOutput: Observable<string> = this.http.get<string>(
         p_url,
@@ -482,7 +489,7 @@ export class MCSDService implements OnInit {
       //
       return sudokuSolved;
     }
-         //-------------------------------------------------------------
+  //-------------------------------------------------------------
   // FILE UPLODAD METHODS
   //-------------------------------------------------------------
   uploadSudoku(file: File): Observable<HttpEvent<any>> {
@@ -504,7 +511,11 @@ export class MCSDService implements OnInit {
   }
   //
   uploadBase64Image(base64Image: string) {
-    let url = 'https://cqxd3m-3000.csb.app/upload'
+    //
+    let url = this._configService.getConfigValue('baseUrlNodeJsOcr');
+    //
+    console.log('Sending ocr to url : ' + url);
+    //
     return this.http.post(url, { base64Image });
   }
 }

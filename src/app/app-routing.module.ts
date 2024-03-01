@@ -21,6 +21,7 @@ import { GameWebComponent                } from './_modules/games/game-web/game-
 import { HanoiTowersComponent            } from './_modules/games/game-hanoi/game-hanoi.component';
 import { OcrComponent                    } from './_modules/miscelaneous/ocr/ocr.component';
 import { ChatComponent                   } from './_modules/miscelaneous/chat/chat/chat.component';
+import { ChartComponent                  } from './_modules/miscelaneous/chart/chart.component';
 import { MiscelaneousComponent           } from './_modules/miscelaneous/miscelaneous/miscelaneous.component';
 //
 const routes: Routes = [
@@ -44,6 +45,7 @@ const routes: Routes = [
   {  path: 'GamesHanoi'            , component: HanoiTowersComponent                  },
   {  path: 'GamesWeb'              , component: GameWebComponent                      },
   {  path: 'Chat'                  , component: ChatComponent                         },
+  {  path: 'Chart'                 , component: ChartComponent                        },
   {  path: 'Ocr'                   , component: OcrComponent                          },
   {  path: 'Miscelaneous'          , component: MiscelaneousComponent                 },
   {  path: '**'                    , component: PageNotFoundComponent                 },

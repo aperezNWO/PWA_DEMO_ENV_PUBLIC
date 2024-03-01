@@ -16,7 +16,7 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
     // PROPIEDADES
     ////////////////////////////////////////////////////////////////////////
     public static get PageTitle()      : string {
-      return '[ - ORDENAMIENTO]';
+      return '[ALGORITMOS - ORDENAMIENTO]';
     }
     ////////////////////////////////////////////////////////////////////////
     // VARIABLES
@@ -24,7 +24,7 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
     private   rectSize                                    : number = 10;
     readonly  pageTitle                                   : string = AlgorithmSortComponent.PageTitle;
     public    lblStatus                                   : string = "[STATUS]";
-    public    tituloListadoLenguajes                      : string = "Seleccione Backend";
+    public    tituloListadoLenguajes                      : string = "[BACKEND] : ";
     public    context                                     : any;
     @ViewChild('c_canvas') c_canvas                       : any;
     @ViewChild('mensajes') mensajes                       : any;

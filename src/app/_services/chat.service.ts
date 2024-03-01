@@ -1,8 +1,10 @@
 // chat.service.ts
 import { Injectable          } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
+import { _ConfigService      } from './-config.service';
 import { of                  } from 'rxjs';
 import io from 'socket.io-client';
+
 //
 @Injectable({ providedIn: 'root' })
 export class ChatService {
@@ -11,9 +13,13 @@ export class ChatService {
   onNewMessage = new Subject<any>();
 
   //
-  constructor() {
+  constructor(configService : _ConfigService) {
     //
-    this.socket = io('https://2ylppr-3000.csb.app', {
+    let url =  configService.getConfigValue("baseUrlNodeJsChat");
+    //
+    console.log("Setting chat from url : " + url);
+    //
+    this.socket = io(url , {
       //
       extraHeaders: {
         "Access-Control-Allow-Origin": "*"

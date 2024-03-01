@@ -6,9 +6,7 @@ import { LogEntry,SearchCriteria, _languageName        } from '../../../_models/
 import { MCSDService                                   } from '../../../_services/mcsd.service';
 import { CustomErrorHandler                            } from '../../../app.component';
 import { UtilManager                                   } from 'src/app/_engines/util.engine';
-import { PdfService                                    } from 'src/app/_engines/pdf.engine';
 import { Observable                                    } from 'rxjs';
-import { Chart, registerables                          } from 'chart.js';
 //
 @Component({
   selector     : 'app-files-generation-xls',
@@ -27,8 +25,6 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
     //--------------------------------------------------------------------------
     // PROPIEADES - REACTIVE FORMS
     //--------------------------------------------------------------------------
-    //
-    pdf_message                        : string = '';
     //
     rf_textStatus                      : string = "";
     //
@@ -93,22 +89,11 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
     @ViewChild('_languajeList')    _languajeList       : any;
     //
     public __languajeList                              : any;
-    protected tituloListadoLenguajes                   : string = "Seleccione Backend";
-    //--------------------------------------------------------------------------
-    // PROPIEDADES - ESTADISTICA
-    //--------------------------------------------------------------------------
-    //
-    @ViewChild('canvas_xls')      canvas_xls     : any;
-    //
-    @ViewChild('divPieChart_XLS') divPieChart_xls : any;
-    //
-    public pieChartVar                            : any;
+    protected tituloListadoLenguajes                   : string = "[Backend] :";
     //--------------------------------------------------------------------------
     // EVENT HANDLERS FORMIULARIO 
     //--------------------------------------------------------------------------
-    constructor(private mcsdService: MCSDService, private formBuilder: FormBuilder, private customErrorHandler : CustomErrorHandler, public pdfService: PdfService) {
-      //
-      Chart.register(...registerables);
+    constructor(private mcsdService: MCSDService, private formBuilder: FormBuilder, private customErrorHandler : CustomErrorHandler) {
       //
     }
     //
@@ -118,8 +103,6 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
         //
         this.rf_newSearch();
         this.td_newSearch();
-        //
-        this.SetChart();
     }
     //
     ngAfterViewInit():void {
@@ -554,123 +537,6 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
       //
       td_excelFileName.subscribe(xlsObserver);
     }
-    //--------------------------------------------------------------------------
-    // METODOS - ESTADISTICAS
-    //--------------------------------------------------------------------------
-    //
-    SetChart():void {
-      //
-      console.log(FilesGenerationXLSComponent.PageTitle + " - [SET CHART]");
-      //
-      const statLabels          : string[]          = [];
-      const statData            : Number[]          = [];
-      const statBackgroundColor : string[]          = [];
-      // 
-      let td_informeLogStat!                 : Observable<string>;
-      td_informeLogStat                      = this.mcsdService.getLogStatPOST();
-      //
-      const td_observer = {
-        next: (td_logEntry: string)     => { 
-          //
-          let jsondata     = JSON.parse(JSON.stringify(td_logEntry));
-          //
-          let recordNumber = jsondata.length;
-          //
-          console.log('ESTADISTICA - (return): ' + recordNumber);
-          //
-          jsondata.forEach((element: JSON, index : number) => {
-              //
-              console.log(index + " " + JSON.stringify(element));
-              //
-              console.log("[SI-SPAE-WEB] - GET STAT - RESULT : index [" + index + "] value={"
-              + jsondata[index]["pageName"]
-              + "," + jsondata[index]["ipValue"] + "}");
-                //
-                statLabels.push(jsondata[index]["pageName"] + " - " + jsondata[index]["ipValue"]);
-                statData.push(Number(jsondata[index]["ipValue"]));
-                statBackgroundColor.push('rgb('
-                    + (Number(jsondata[index]["ipValue"]) / 4) + ','
-                    + (Number(jsondata[index]["ipValue"]) / 3) + ','
-                    + (Number(jsondata[index]["ipValue"]) / 2) + ')');
-          });
-        },
-        error           : (err: Error)      => {
-          //
-          console.error('ESTADISTICA- (ERROR) : ' + JSON.stringify(err.message));
-          //
-        },
-        complete        : ()                => {
-          //
-          console.log('ESTADISTICA -  (SEARCH END)');
-          //
-          const data = {
-            labels              : statLabels,
-            datasets            : [{
-                label           : 'CONTEO DE SESIONES',
-                data            : statData,
-                backgroundColor : statBackgroundColor,
-                hoverOffset     : 4
-            }]
-          };
-          //
-          let context = this.canvas_xls.nativeElement.getContext('2d');
-          //
-          this.pieChartVar = new Chart(context, 
-          {
-                type    : 'bar',
-                data    : data,
-                options : {
-                    responsive: true,
-                    plugins   : {
-                            legend      : {
-                                position: 'top',
-                            },
-                            title       : {
-                                display : true,
-                                text    : 'CONTEO DE SESIONES'
-                              }
-                          }
-                }
-          });
-        },
-      };
-      //
-      td_informeLogStat.subscribe(td_observer);
-    }   
-    //--------------------------------------------------------------------------
-    // METODOS - PDF
-    //--------------------------------------------------------------------------
-    //
-    //
-    GetPDF():void
-    {
-        //
-        let fileName        = 'BAR CHART';
-        let fileName_Output = '';
-        //
-        this.pdfService._GetPDF(
-          this.pageTitle,
-          this.canvas_xls,
-          this.divPieChart_xls,
-          fileName,
-        ).subscribe(
-        {
-            next: (fileName:string) =>{
-                //
-                fileName_Output = fileName
-            },
-            error: (error : Error) => {
-                //
-                this.pdf_message   = 'ha ocurrido un error : ' + error.message;
-            },
-            complete: () => {
-                //
-                this.pdf_message   = `Se ha generado el archivo [${fileName_Output}]`;
-            }
-          }
-        );
-    }
-
 }
 
 

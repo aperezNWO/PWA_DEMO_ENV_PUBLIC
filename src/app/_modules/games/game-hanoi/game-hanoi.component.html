@@ -1,7 +1,7 @@
-<h1>[HANOI TOWER BOARD]</h1>
+<div align="center"><h1>[HANOI TOWER BOARD]</h1></div>
 <hr/>
-<!--RODS / INICIO -->
-<div class="game-container" align="left">
+<!--BOARD - RODS / INICIO -->
+<div class="game-container" align="center">
     <table width="100%">
         <thead>
             <td align="center">A</td>
@@ -16,16 +16,18 @@
         <tfoot></tfoot>        
     </table>
 </div>
-<!--RODS / FIN    -->
-<!--STATUS / INICIO -->
+<!--BOARD - RODS / FIN    -->
 <hr/>
-<div align="left" class="steps-container">
-    <div align="left" class="steps-content" *ngFor="let step of this.steps">
-        <span>{{step}}</span>
+<form>
+    <!--STATUS / INICIO -->
+    <div align="left" class="steps-container">
+        <div align="left" class="steps-content" *ngFor="let step of this.steps">
+            <span>{{step}}</span>
+        </div>
     </div>
-</div>
-<!-- STATUS / FIN   -->
-<hr/>
+    <!-- STATUS / FIN   -->
+    <hr/>
+    <!-- LISTADO CANTIDAD DISCOS / INICO -->
     <div id="diskAmtListDiv" align="left">
         <label for="diskAmtList">{{this.tituloDiskAmtList}}</label>
         &nbsp;&nbsp;
@@ -38,15 +40,17 @@
                 </option>
         </select>
     </div>
-<!-- BUTTONS / INICIO -->
-<hr/>
-<div align="left">
-    <input type="button" id="btnNewGame"   value="[NEW GAME]"    (click)="this.newGame();"   [disabled]="(this._startGame==false)">
-    |
-    <input type="button" id="btnStartGame" value="[START GAME]"  (click)="this.startGame();" [disabled]="(this._startGame==true)">
-</div>
-<!-- BUTTONS / FIN    -->
+    <!-- LISTADO CANTIDAD DISCOS / FIN -->    
+    <!-- BUTTONS / INICIO -->
+    <hr/>
+    <div align="left">
+        <input type="button" id="btnNewGame"   value="[NUEVO]"    (click)="this.newGame();"   [disabled]="(this._startGame==false)">
+        |
+        <input type="button" id="btnStartGame" value="[INICIAR]"  (click)="this.startGame();" [disabled]="(this._startGame==true)">
+    </div>
+    <!-- BUTTONS / FIN    -->
+</form>
 <hr />
-<a routerLink="/GamesWeb">[Volver al Menú]</a>  
+<div align="right"><a routerLink="/GamesWeb">[Volver al Menú]</a></div>
   
 

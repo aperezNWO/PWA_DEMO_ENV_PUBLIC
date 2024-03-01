@@ -21,7 +21,7 @@ export class HanoiTowersComponent {
   protected _diskAmt             : number     = 0;
   protected _timeoutId           : any;
   protected _diskAmtList         : any;
-  protected tituloDiskAmtList    : string          = "Cantidad de Discos";
+  protected tituloDiskAmtList    : string          = "[Nro. Discos]";
   @ViewChild('__diskAmtList') __diskAmtList: any;
   //
   constructor(){

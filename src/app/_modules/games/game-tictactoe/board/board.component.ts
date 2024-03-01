@@ -32,8 +32,8 @@ export class BoardComponent implements OnInit, AfterViewInit {
     //
     this.__SourceList = new Array();
     this.__SourceList.push(new ListItem(0, '(SELECCIONE OPCION..)'   , false));
-    this.__SourceList.push(new ListItem(this.ticTacToeEngine.COMPUTER, '[INICIA MAQUINA]'     , true));
-    this.__SourceList.push(new ListItem(this.ticTacToeEngine.HUMAN   , '[INICIA JUGADOR]'     , false));
+    this.__SourceList.push(new ListItem(this.ticTacToeEngine.COMPUTER, '[MAQUINA]'     , true));
+    this.__SourceList.push(new ListItem(this.ticTacToeEngine.HUMAN   , '[JUGADOR]'     , false));
     //
     this.ticTacToeEngine.initialise();
   }

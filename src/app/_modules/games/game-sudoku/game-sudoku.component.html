@@ -1,4 +1,4 @@
-<h1>SUDOKU BOARD</h1>
+<div align="center"><h1>SUDOKU BOARD</h1></div>
 <!-- TABLERO / INICIO -->    
 <hr/>
 <!-- TABLERO / INICIO           --> 
@@ -9,7 +9,7 @@
     <td *ngFor="let cell of col; let cellIndex = index">
         <div [className]="( 
                             ( (cellIndex>=3) && (cellIndex<=5) ) && ((rowIndex>= 0) && (rowIndex <  3)   ) ||
-                            !( (cellIndex>=3) && (cellIndex<=5) ) && ((rowIndex>= 3) && (rowIndex <= 5)   ) ||
+                           !( (cellIndex>=3) && (cellIndex<=5) ) && ((rowIndex>= 3) && (rowIndex <= 5)   ) ||
                             ( (cellIndex>=3) && (cellIndex<=5) ) && ((rowIndex>  5) && (rowIndex <= 8)   ) 
                         ) ?('sudoku-cell_bright'):('sudoku-cell_dark')">{{ cell }}</div>
     </td>
@@ -17,33 +17,12 @@
 </tbody>
 </table>
 </div>
-<!-- TABLERO / FIN              --> 
-<!-- LISTADO LENGUAJE / INICIO  -->    
-<hr/>
-    <div id="LangListDiv" align="left">
-        <span id="tituloListadoLenguajes">{{this.tituloListadoLenguajes}}</span>
-        <label for="LanguajeList"></label>
-        &nbsp;&nbsp;
-        <select id="LanguageList"
-                name="LanguajeList"
-                #_languajeList
-                (change)="this._cppSourceDivHiddenChanged()">
-                <option *ngFor="let _languageName of __languajeList" 
-                        [value]   ="_languageName._index"
-                        [selected]="_languageName._selected">{{_languageName._value}}
-                </option>
-        </select>
-        &nbsp;&nbsp;
-        <span id="cppSoureDiv" [hidden]="this._cppSourceDivHidden">
-            <a href="javascript: void window.open('https://github.com/aperezNWO/CppBuilder01/blob/master/Project2/Sudoku.cpp')">[View Source]</a>
-        </span>
-</div>
-<!-- GENERERAR DESDE ... / INICIO -->
-<hr/>
-    <div id="SourceListDiv" align="left">
-        <span id="tituloListadoLenguajes">{{this.tituloGenerarDesde}}</span>
-        <label for="SourceList"></label>
-        &nbsp;&nbsp;
+<!-- TABLERO / FIN      --> 
+<hr />
+<form [formGroup]="rf_searchForm" (ngSubmit)="this._SolveSudoku()">
+    <!-- GENERERAR DESDE ... / INICIO -->
+    <div  class="form-group" id="SourceListDiv" align="left">
+        <label for="SourceList"><span id="tituloListadoLenguajes">{{this.tituloGenerarDesde}}</span></label>
         <select id="SourceList"
                 name="SourceList"
                 #_SourceList
@@ -54,43 +33,60 @@
                 </option>
         </select>
     </div>
-<!-- GENERERAR DESDE ... / FIN    -->
-<!-- LISTADO LENGUAJE    / FIN -->    
-<hr>
-<form [formGroup]="rf_searchForm" (ngSubmit)="this._SolveSudoku()">
-    <div class="fileUpload" align="left" [hidden]="this._fileUploadDivHidden">
-        <a href="./assets/sudoku.txt" target="_blank" download="sudoku.txt">[Download Template]</a>
-        <hr>
-        <!-- FILE UPLOAD / INICIO -->
-        <div class="col-12">
-                <label class="btn btn-default p-0">
-                    <input type="file" name="_fileUpload" #_fileUpload (change)="selectFile($event)" formControlName="_fileUpload"/>
-                </label>
-                |
-                <button id="resetFile" type="reset">[RESET]</button>
-        </div>
-        <hr>       
-        <!-- FILE UPLOAD / FIN    -->
-        <!-- PROGRESS    / INICIO -->
-        <div *ngIf="currentFile" class="progress my-3">
-            <div
-                class="progress-bar progress-bar-info progress-bar-striped"
-                role="progressbar"
-                attr.aria-valuenow="{{ progress }}"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                [ngStyle]="{ width: progress + '%' }"
-            >
-            {{ progress }}%
-            </div>
-        </div>
-        <!-- PROGRESS    / FIN  -->
+    <!-- GENERERAR DESDE ... / FIN    -->
+    <!-- LISTADO LENGUAJE / INICIO  -->    
+    <div  class="form-group" id="LangListDiv" align="left">
+        <label for="LanguajeList"><span id="tituloListadoLenguajes">{{this.tituloListadoLenguajes}}</span></label>
+        <select id="LanguageList"
+                name="LanguajeList"
+                #_languajeList
+                (change)="this._cppSourceDivHiddenChanged()">
+                <option *ngFor="let _languageName of __languajeList" 
+                        [value]   ="_languageName._index"
+                        [selected]="_languageName._selected">{{_languageName._value}}
+                </option>
+        </select>
     </div>
-    <!--STATUS / INICIO -->
+    <hr>
+    <!-- listado lenguaje / fin       --> 
+    <!-- FILE UPLOAD         / INICIO -->
+    <form>
+        <div class="fileUpload" align="left" [hidden]="this._fileUploadDivHidden">
+            <a href="./assets/sudoku.txt" target="_blank" download="sudoku.txt">[Download Template]</a>
+            <hr>
+            <!-- FILE UPLOAD / INICIO -->
+            <div class="col-12">
+                    <label class="btn btn-default p-0">
+                        <input type="file" name="_fileUpload" #_fileUpload (change)="selectFile($event)" formControlName="_fileUpload"/>
+                    </label>
+                    |
+                    <button id="resetFile" type="reset">[RESET]</button>
+            </div>
+            <hr>       
+            <!-- FILE UPLOAD / FIN    -->
+            <!-- PROGRESS    / INICIO -->
+            <div *ngIf="currentFile" class="progress my-3">
+                <div
+                    class="progress-bar progress-bar-info progress-bar-striped"
+                    role="progressbar"
+                    attr.aria-valuenow="{{ progress }}"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    [ngStyle]="{ width: progress + '%' }"
+                >
+                {{ progress }}%
+                </div>
+            </div>
+            <!-- PROGRESS    / FIN  -->
+        </div>
+    </form>
+    <!-- FILE UPLOAD / FIN            -->
+    <hr>
+    <!--STATUS / INICIO               -->
     <div align="left">
         <div *ngIf="message" class="alert alert-secondary" role="alert">{{ message }}</div>
     </div>
-    <!-- STATUS / FIN   -->
+    <!-- STATUS / FIN     -->
     <!-- BUTTONS / INICIO -->
     <hr/>
     <div align="left">
@@ -103,28 +99,13 @@
                     (this.btnGenerateCaption == '[...generando...]')   ||
                     (this.sudokuSolved       == true)">
     </div>
+    <!-- BUTTONS / FIN        -->
+    <!-- GENERAR PDF / INICIO -->
+    <hr/>   
+    <div *ngIf="(this.board.length>0)" align="left">
+        <input type="button" name="btnGeneratePdf" value="[GENERAR PDF]" (click)="this._GetPdf()" [disabled]="(this.message == '[...Generando PDF...]')">
+    </div>
+    <!-- GENERAR PDF / FIN    -->
 </form>
-<hr/>
-<div *ngIf="(this.board.length>0)" align="left">
-    <input type="button" name="btnGeneratePdf" value="[GENERAR PDF]" (click)="this._GetPdf()" [disabled]="(this.message == '[...Generando PDF...]')">
-</div>
-<!--- BUTTONS / FIN -->
 <hr />
-<!--
-<form #messageinputform="ngForm" (ngSubmit)="submitForm(messageinputform);">
-    <div class="form-group">        
-    <label for="txtName">Your Name:</label>
-    <input type="text" #_txtName  id="txtName" name="txtName" maxlength="10" ngModel required>
-    </div>
-    <div class="form-group">        
-    <label for="txtMessage">Your Message :</label>
-    <input type="text" #_txtMessage id="txtMessage" name="txtMessage"  maxlength="25" ngModel required>
-    </div>
-    <div class="form-group" align="left" *ngIf="(messageinputform.valid==false) && (messageinputform.submitted)">
-            Pleae enter all fields
-    </div>
-    <input type="submit" value="[SEND MESSAGE]">
-</form>
--->
-<hr />
-<a routerLink="/GamesWeb">[Volver al Menú]</a>    
+<div align="right"><a routerLink="/GamesWeb">[Volver al Menú]</a></div>

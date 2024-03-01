@@ -44,6 +44,7 @@ import { HanoiTowersComponent            } from './_modules/games/game-hanoi/gam
 import { TowerComponent                  } from './_modules/games/game-hanoi/tower/tower.component';
 import { OcrComponent                    } from './_modules/miscelaneous/ocr/ocr.component';
 import { ChatComponent                   } from './_modules/miscelaneous/chat/chat/chat.component';
+import { ChartComponent                  } from './_modules/miscelaneous/chart/chart.component';
 import { MiscelaneousComponent           } from './_modules/miscelaneous/miscelaneous/miscelaneous.component';
 import { UnitTestingComponent            } from './_modules/_unitttesting/unit-testing.component';
 import { AppRoutingModule                } from './app-routing.module';
@@ -52,8 +53,6 @@ import { MCSDService                     } from './_services/mcsd.service';
 import { _ConfigService                  } from './_services/-config.service';
 import { finalize, tap                   } from 'rxjs';
 import { NgxSignaturePadModule           } from '@eve-sama/ngx-signature-pad';
-
-
 //
 const routes : Routes = [
  
@@ -135,6 +134,7 @@ export class CustomErrorHandler implements ErrorHandler {
         GameWebComponent,
         OcrComponent,
         ChatComponent,
+        ChartComponent,
         MiscelaneousComponent,
         NavComponent,
         PageNotFoundComponent,

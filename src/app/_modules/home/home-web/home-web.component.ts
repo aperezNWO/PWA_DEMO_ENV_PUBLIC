@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild            } from '@angular/core';
 import { CustomErrorHandler   } from '../../../app.module';
 import { MCSDService          } from '../../../_services/mcsd.service';
 import { _ConfigService       } from 'src/app/_services/-config.service';
-import { NavComponent } from '../nav/nav.component';
+import { NavComponent         } from '../nav/nav.component';
 //
 @Component({
   selector    : 'app-home-web',
@@ -32,5 +32,6 @@ export class HomeWebComponent implements OnInit {
   //
   ngOnInit(): void {
     //
+    this.nav._NavbarCollapsed = true;
   }
 }

@@ -192,13 +192,12 @@ export class environment {
    Go to your GitHub repository settings, navigate to the GitHub Pages section, 
    and set the source branch to the one you used for deployment (e.g., gh-pages). GitHub will provide you with a URL where your Angular application will be hosted.
 
--- Remember, this method will make your Angular application available at a URL like 
-   https://username.github.io/repository-name. 
+-- Remember, this method will make your Angular application available at a URL like https://username.github.io/repository-name. 
 
-   npm run deploy-and-publish
+   npm run build-and-deploy
 
    This URL will be accessible publicly,  providing a permanent link to your deployed application.
-   https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/
+   https://apereznwo.github.io/AngularMCSD_Public/
 
 -- (confirmation) Configure GitHub Actions:    
 
@@ -211,7 +210,7 @@ export class environment {
 npm install @eve-sama/ngx-signature-pad --force 
 
 /////////////////////////////////////////////////////////////////
-// PWA
+// PWD
 /////////////////////////////////////////////////////////////////
 -- [_] npm update --force 
 -- [_] npm install @angular/pwa 
