@@ -1,5 +1,5 @@
 import { Component, OnInit, VERSION    } from '@angular/core';
-import { Router                        } from '@angular/router';
+import { ActivatedRoute, Router        } from '@angular/router';
 import { Title                         } from '@angular/platform-browser';
 import { CustomErrorHandler            } from './app.module';
 import { HomeWebComponent              } from './_modules/home/home-web/home-web.component';
@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
     public readonly _title                                       : string | undefined  = "";
     public readonly _appBrand                                    : string | undefined  = "";
     public readonly _appVersion                                  : string | undefined  = "";
+                    redirectPage                                 : string | null       = null;
     //
     private  navbarCollapsed                                     : boolean = true;
     //
@@ -35,7 +36,8 @@ export class AppComponent implements OnInit {
     }
     //-----------------------------------------------------------------------------------------------------
     constructor(
-                private router              : Router, 
+                private router              : Router,
+                public  route               : ActivatedRoute,  
                 private _customErrorHandler : CustomErrorHandler, 
                 private mcsdService         : MCSDService, 
                 private _configService      : _ConfigService,
@@ -80,7 +82,32 @@ export class AppComponent implements OnInit {
       //
       this.titleService.setTitle(title);
       //
-      router.navigateByUrl("/Home");
+      this.route.queryParams.subscribe(params => {
+        //
+        this.redirectPage = params['redirectPage'] ? params['redirectPage'] : "" ;
+        //
+        if (this.redirectPage !== undefined)
+        {
+          //
+          console.log("Redirecting To Page : "  +  this.redirectPage );
+          //
+          switch (this.redirectPage)
+          {
+            case "AlgorithmDijkstra":
+                // 
+                this.router.navigateByUrl('/AlgorithmDijkstra');
+            break;
+            //default : 
+                //
+            //    this.router.navigateByUrl("/Home");
+            //break;
+          };
+          
+        } else {
+          //
+          this.router.navigateByUrl("/Home");
+        }
+      });
     }   
     //-----------------------------------------------------------------------------------------------------
     ngOnInit() {
