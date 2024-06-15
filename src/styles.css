@@ -1,16 +1,39 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
+/*@import '~bootstrap/dist/css/bootstrap.min.css';*/
+
+:root {
+   --dark-theme-bg: #04101d;
+   /*--dark-theme-bg: #343a40;*/
+   --dark-theme-text: #1378dd;
+   /*--dark-theme-text: #f8f9fa;*/
+   --dark-theme-accent: #007bff;
+   --dark-theme-bg-sub: #052547;
+}
+ 
+ .dark-theme {
+   background-color: var(--dark-theme-bg);
+   color: var(--dark-theme-text);
+ }
+ 
+ .dark-theme .btn-primary {
+   background-color: var(--dark-theme-accent);
+   border-color: var(--dark-theme-accent);
+ }
+
 html, 
 body { 
    height: 100%;
    margin: 0; 
    font-family: Roboto, "Helvetica Neue", sans-serif; 
    font-size: x-small;
-   background-color: darkolivegreen;
+   /*background-color: darkolivegreen;*/
+   background-color: var(--dark-theme-bg);
+   color: var(--dark-theme-text);
 }
 
 table {
-   background-color: darkgreen;
+   /*background-color: darkgreen;*/
    /*width: min-content;*/
    /*margin: 2em;*/
    /*margin: 2rem;*/
@@ -35,7 +58,7 @@ th {
 {
    text-align: center;
    padding   : 1px;
-   background-color:darkslategrey;
+   background-color:  var(--dark-theme-bg-sub);/*darkslategrey;*/
    color:aquamarine;
 }
 
@@ -43,7 +66,7 @@ th {
 {
    text-align: center;
    padding   : .5em;
-   background-color:darkslategrey;
+   background-color:  var(--dark-theme-bg-sub);/*darkslategrey;*/
    color:aquamarine;
    vertical-align:middle;
 }
@@ -52,7 +75,7 @@ th {
 {
    text-align: center;
    padding   : 1px;
-   background-color:darkslategrey;
+   background-color:  var(--dark-theme-bg-sub);/*darkslategrey;*/
    color:aquamarine;
 }
 
