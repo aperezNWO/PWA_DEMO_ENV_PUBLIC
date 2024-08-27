@@ -76,7 +76,13 @@
         <!-- FIN    MENSAJES VALIDACION      -->
         <!-- INICIO STATUS BUSQUEDA -->
         <div class="form-group" align="center">
-          <span id="td_status" name="td_searchStatus" id="td_searchStatus" class="searchStatus"  style="width:100%;">{{this.td_textStatus}}</span>
+          @if (this._loading | async) {
+            <span id="loadingStatus" name="loadingStatus" class="searchStatus">[Cargando...]</span>
+          } 
+          @else 
+          {
+            <span id="td_status" name="td_searchStatus" id="td_searchStatus" class="searchStatus"  style="width:100%;">{{this.td_textStatus}}</span>
+          }
         </div>
         <!-- FIN    STATUS BUSQUEDA -->
         <!-- INICIO DESCARGA EXCEL       -->

@@ -64,7 +64,13 @@
     <!-- FIN MENSAJES DE VALIDACION (REACTIVE)-->
     <!-- INICIO STATUS BUSQUEDA      -->
     <div class="form-group" align="center">
-      <span id="status" name="searchStatus" class="searchStatus" id="searchStatus">{{this.rf_textStatus}}</span>
+      @if (this._loading | async) {
+        <span id="loadingStatus" name="loadingStatus" class="searchStatus">[Cargando...]</span>
+      } 
+      @else 
+      {
+        <span id="searchStatus"  name="searchStatus" class="searchStatus" >{{this.rf_textStatus}}</span>
+      }
     </div>
     <!-- FIN    / STATUS BUSQUEDA      -->
     <!-- INICIO / DESCARGA EXCEL       -->

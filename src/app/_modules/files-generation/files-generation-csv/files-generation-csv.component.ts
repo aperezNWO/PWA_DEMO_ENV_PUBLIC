@@ -2,7 +2,7 @@ import { AfterViewInit, Component, OnInit, ViewChild   } from '@angular/core';
 import { FormBuilder, Validators                       } from '@angular/forms';
 import { MatTableDataSource                            } from '@angular/material/table';
 import { MatPaginator                                  } from '@angular/material/paginator';
-import { Observable                                    } from 'rxjs';
+import { BehaviorSubject, delay, Observable, tap       } from 'rxjs';
 import { MCSDService                                   } from '../../../_services/mcsd.service';
 import { CustomErrorHandler                            } from '../../../app.module';
 import { PersonEntity, SearchCriteria, _languageName   } from '../../../_models/entityInfo.model';
@@ -69,6 +69,8 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
       _P_FECHA_INICIO     : ["2023-01-01"  , Validators.required],
       _P_FECHA_FIN        : ["2022-12-31"  , Validators.required],
     });
+    //
+    public _loading               = new BehaviorSubject<boolean>(false);
     //--------------------------------------------------------------------------
     // EVENT HANDLERS FORMIULARIO 
     //--------------------------------------------------------------------------
@@ -145,7 +147,13 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
                   },
                 }
                 //
-                csv_informeLogRemoto.subscribe(csv_observer);
+                csv_informeLogRemoto
+                .pipe(
+                  tap(() => this._loading!.next(true)),
+                  delay(1000),
+                  tap(() => this._loading!.next(false)),
+                )
+                .subscribe(csv_observer);
             break;
             case 2: // NODE.JS
                 //
@@ -185,7 +193,13 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
                   },
                 };      
                 //
-                csv_informeLogRemoto_NodeJS.subscribe(csv_observer_node_js);
+                csv_informeLogRemoto_NodeJS
+                .pipe(
+                  tap(() => this._loading!.next(true)),
+                  delay(1000),
+                  tap(() => this._loading!.next(false)),
+                )
+                .subscribe(csv_observer_node_js);
             break;          
         };
     } 
@@ -226,7 +240,13 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
           },
         }
         //
-        csv_link.subscribe(csv_link_observer);
+        csv_link
+        .pipe(
+          tap(() => this._loading!.next(true)),
+          delay(1000),
+          tap(() => this._loading!.next(false)),
+        )
+        .subscribe(csv_link_observer);
     }
     //--------------------------------------------------------------------------
     // METODOS REACTIVE FORMS 

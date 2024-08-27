@@ -6,7 +6,7 @@ import { LogEntry,SearchCriteria, _languageName        } from '../../../_models/
 import { MCSDService                                   } from '../../../_services/mcsd.service';
 import { CustomErrorHandler                            } from '../../../app.component';
 import { UtilManager                                   } from 'src/app/_engines/util.engine';
-import { Observable                                    } from 'rxjs';
+import { BehaviorSubject, delay, Observable, tap                                    } from 'rxjs';
 //
 @Component({
   selector     : 'app-files-generation-xls',
@@ -90,6 +90,8 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
     //
     public __languajeList                              : any;
     protected tituloListadoLenguajes                   : string = "[Backend] :";
+    //
+    public _loading               = new BehaviorSubject<boolean>(false);
     //--------------------------------------------------------------------------
     // EVENT HANDLERS FORMIULARIO 
     //--------------------------------------------------------------------------
@@ -265,7 +267,13 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
         },
       };
       //
-      rf_informeLogRemoto.subscribe(logSearchObserver);
+      rf_informeLogRemoto
+      .pipe(
+        tap(() => this._loading!.next(true)),
+        delay(1000),
+        tap(() => this._loading!.next(false)),
+      )
+      .subscribe(logSearchObserver);
     }
     //
     rf_GenerarInformeXLSValidate():void{
@@ -317,7 +325,13 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
         },
       };
       //
-      rf_excelFileName.subscribe(xlsObserver);
+      rf_excelFileName
+        .pipe(
+          tap(() => this._loading!.next(true)),
+          delay(1000),
+          tap(() => this._loading!.next(false)),
+        )
+      .subscribe(xlsObserver);
     }
     //--------------------------------------------------------------------------
     // METODOS REACTIVE FORMS 
@@ -434,7 +448,13 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
                 },
               }; 
               //
-              td_informeLogRemoto.subscribe(td_observer);
+              td_informeLogRemoto
+              .pipe(
+                tap(() => this._loading!.next(true)),
+                delay(1000),
+                tap(() => this._loading!.next(false)),
+              )
+              .subscribe(td_observer);
           break;
         case 2: // NODE.JS
               //
@@ -479,7 +499,13 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
                 },
               }; 
               //
-              td_informeLogRemoto_NodeJs.subscribe(td_observer_node_js);
+              td_informeLogRemoto_NodeJs
+              .pipe(
+                tap(() => this._loading!.next(true)),
+                delay(1000),
+                tap(() => this._loading!.next(false)),
+              )
+              .subscribe(td_observer_node_js);
           break;
         default:
           return;
@@ -535,7 +561,13 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
         },
       };
       //
-      td_excelFileName.subscribe(xlsObserver);
+      td_excelFileName
+      .pipe(
+        tap(() => this._loading!.next(true)),
+        delay(1000),
+        tap(() => this._loading!.next(false)),
+      )
+      .subscribe(xlsObserver);
     }
 }
 

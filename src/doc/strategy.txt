@@ -287,4 +287,11 @@
        -- [_] List of previous job alerts ".NET".
        -- [_] UIX FIX.
 
+-- [_] OBSERVABLE.
+
+       -- [_] https://v17.angular.io/guide/observables.
+       -- [_] "Loading component" (from ngbgrid).
+       -- [_] Curruculum entry.
+
+
 ////////////////////////////////////////////////////////////////////////////////
