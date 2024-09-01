@@ -42,6 +42,7 @@ import { SquareComponent                 } from './_modules/games/game-tictactoe
 import { GameWebComponent                } from './_modules/games/game-web/game-web.component';
 import { HanoiTowersComponent            } from './_modules/games/game-hanoi/game-hanoi.component';
 import { TowerComponent                  } from './_modules/games/game-hanoi/tower/tower.component';
+import { GameHanoiAutoComponent          } from './_modules/games/game-hanoi-auto/game-hanoi-auto.component';
 import { OcrComponent                    } from './_modules/miscelaneous/ocr/ocr.component';
 import { ChatComponent                   } from './_modules/miscelaneous/chat/chat/chat.component';
 import { ChartComponent                  } from './_modules/miscelaneous/chart/chart.component';
@@ -131,6 +132,7 @@ export class CustomErrorHandler implements ErrorHandler {
         SudokuComponent,
         GameTictactoeComponent,
         HanoiTowersComponent,
+        GameHanoiAutoComponent,
         GameWebComponent,
         OcrComponent,
         ChatComponent,

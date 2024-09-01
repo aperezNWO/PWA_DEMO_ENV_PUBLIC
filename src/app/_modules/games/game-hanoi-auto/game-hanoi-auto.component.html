@@ -1,0 +1,24 @@
+<h4>[HANOI- AUTO]</h4>
+<br>
+<div class="game-container">
+    <div *ngFor="let tower of hanoiEngine.towers$ | async; let i = index" class="tower">
+      <h2>Tower {{ i + 1 }}</h2>
+      <div class="disks-container">
+        <div *ngFor="let disk of tower" class="disk" [style.width.px]="disk.size * 20">
+          {{ disk.size }}
+        </div>
+      </div>
+    </div>
+</div>
+<hr>
+<div align="center">
+  <p>Moves: {{ hanoiEngine.moves$ | async }}</p>
+  <button (click)="hanoiEngine.manual_resetGame()" [disabled]="!(this.hanoiEngine._checkWinCondition())">Reset Game</button>
+  |
+  <button (click)="hanoiEngine.auto_startGame()" [disabled]="((this.hanoiEngine._steps.length > 0))">Start Game</button> 
+</div>
+<hr />
+<hr />
+<div align="right">
+    <a routerLink="/GamesWeb">[Volver al Menú]</a>
+</div>

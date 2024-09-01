@@ -19,6 +19,7 @@ import { SudokuComponent                 } from './_modules/games/game-sudoku/ga
 import { GameTictactoeComponent          } from './_modules/games/game-tictactoe/game-tictactoe.component';
 import { GameWebComponent                } from './_modules/games/game-web/game-web.component';
 import { HanoiTowersComponent            } from './_modules/games/game-hanoi/game-hanoi.component';
+import { GameHanoiAutoComponent          } from './_modules/games/game-hanoi-auto/game-hanoi-auto.component';
 import { OcrComponent                    } from './_modules/miscelaneous/ocr/ocr.component';
 import { ChatComponent                   } from './_modules/miscelaneous/chat/chat/chat.component';
 import { ChartComponent                  } from './_modules/miscelaneous/chart/chart.component';
@@ -43,6 +44,7 @@ const routes: Routes = [
   {  path: 'GamesSudoku'           , component: SudokuComponent                       },
   {  path: 'GamesTicTacToe'        , component: GameTictactoeComponent                },
   {  path: 'GamesHanoi'            , component: HanoiTowersComponent                  },
+  {  path: 'GamesHanoiAuto'        , component: GameHanoiAutoComponent                },
   {  path: 'GamesWeb'              , component: GameWebComponent                      },
   {  path: 'Chat'                  , component: ChatComponent                         },
   {  path: 'Chart'                 , component: ChartComponent                        },

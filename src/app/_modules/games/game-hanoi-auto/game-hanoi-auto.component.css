@@ -1,0 +1,23 @@
+
+.game-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  .tower {
+    text-align: center;
+  }
+  .disks-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 100px;
+  }
+  .disk {
+    height: 20px;
+    background-color: #007bff;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }

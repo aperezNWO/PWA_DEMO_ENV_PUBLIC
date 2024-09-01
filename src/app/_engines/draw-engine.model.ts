@@ -1,4 +1,4 @@
-import { SortInfo } from "./entityInfo.model";
+import { SortInfo } from "../_models/entityInfo.model";
 
 export class DrawEngine
 {
