@@ -1,7 +1,7 @@
 {
     "appBrand"           : "[PWA DEMO]",
     "appEnv"             : "[ENV_PUBLIC]",
-    "appVersion"         : "1.2.42",
+    "appVersion"         : "1.2.43",
     "baseUrlNetCore"     : "https://angularwebapidemo.somee.com/",
     "baseUrlNodeJs"      : "https://tmvqhs-4000.csb.app/",
     "baseUrlNodeJsChat"  : "https://d57kw2-3000.csb.app/",
