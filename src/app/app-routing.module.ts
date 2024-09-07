@@ -3,6 +3,7 @@ import { RouterModule, Routes            } from '@angular/router';
 import { HomeWebComponent                } from './_modules/home/home-web/home-web.component';
 import { PageNotFoundComponent           } from './_modules/home/page-not-found/page-not-found.component';
 import { ContactComponent                } from './_modules/about/contact/contact.component';
+import { ContactFormComponent            } from './_modules/about/contact-form/contact-form.component';
 import { AAboutWebComponent              } from './_modules/about/a-about-web/a-about-web.component';
 import { TopicsComponent                 } from './_modules/about/topics/topics.component';
 import { TechnicalSpecsComponent         } from './_modules/about/technicalspecs/technical-specs/technical-specs.component';
@@ -30,6 +31,7 @@ const routes: Routes = [
   {  path: ''                      , component: HomeWebComponent                      },
   {  path: 'AAboutWeb'             , component: AAboutWebComponent                    },
   {  path: 'Contact'               , component: ContactComponent                      },
+  {  path: 'ContactForm'           , component: ContactFormComponent                  },
   {  path: 'TechnicalSpecs'        , component: TechnicalSpecsComponent               },
   {  path: 'Topics'                , component: TopicsComponent                       },
   {  path: 'AlgorithmWeb'          , component: AlgorithmWebComponent                 },

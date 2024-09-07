@@ -25,6 +25,7 @@ import { NavComponent                    } from './_modules/home/nav/nav.compone
 import { ContactComponent                } from './_modules/about/contact/contact.component';
 import { AAboutWebComponent              } from './_modules/about/a-about-web/a-about-web.component';
 import { TopicsComponent                 } from './_modules/about/topics/topics.component';
+import { ContactFormComponent            } from './_modules/about/contact-form/contact-form.component';
 import { TechnicalSpecsComponent         } from './_modules/about/technicalspecs/technical-specs/technical-specs.component';
 import { FilesGenerationWebComponent     } from './_modules/files-generation/files-generation-web/files-generation-web.component';
 import { FilesGenerationXLSComponent     } from './_modules/files-generation/files-generation-xls/files-generation-xls.component';
@@ -117,6 +118,7 @@ export class CustomErrorHandler implements ErrorHandler {
         AppComponent,
         HomeWebComponent,
         ContactComponent,
+        ContactFormComponent,
         AAboutWebComponent,
         AlgorithmWebComponent,
         AlgorithmRegExComponent,
