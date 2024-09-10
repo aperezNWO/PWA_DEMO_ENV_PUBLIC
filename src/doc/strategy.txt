@@ -152,6 +152,11 @@
 -- STRATEGY - dev
 =====================================================================
 
+
+-- [x] CORREGIR UIX.
+
+       -- [x] uncontrasted font colors.
+
 -- [x] [CPP DEMO]
 
     -- [x] performance benchmark [c# / typescript / c++].
@@ -297,8 +302,10 @@
 
 -- [_] PWA / SPA.
 
--- [_] CORREGIR UIX.
+-- [_] ngb grids.
 
-        -- [_] uncontrasted font colors.
+-- [_] modules / engines.
+
+
 
 ////////////////////////////////////////////////////////////////////////////////
