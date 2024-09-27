@@ -117,8 +117,8 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
           new _languageName(0, '(SELECCIONE OPCION..)', false),
         );
         //
-        this.__languajeList.push(new _languageName(1, '(.Net Core)'   , true  ));
-        this.__languajeList.push(new _languageName(2, '(Node.js)'     , false ));
+        this.__languajeList.push(new _languageName(1, '(.Net Core / C#)'         , true  ));
+        this.__languajeList.push(new _languageName(2, '(SprinbgBoot / Java)'     , false ));
     }
     //--------------------------------------------------------------------------
     // METODOS COMUNES 
