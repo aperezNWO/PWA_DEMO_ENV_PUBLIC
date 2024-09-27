@@ -6,7 +6,7 @@ import { LogEntry,SearchCriteria, _languageName        } from '../../../_models/
 import { MCSDService                                   } from '../../../_services/mcsd.service';
 import { CustomErrorHandler                            } from '../../../app.component';
 import { UtilManager                                   } from 'src/app/_engines/util.engine';
-import { BehaviorSubject, delay, Observable, tap                                    } from 'rxjs';
+import { BehaviorSubject, delay, Observable, tap       } from 'rxjs';
 //
 @Component({
   selector     : 'app-files-generation-xls',
@@ -40,7 +40,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
     //
     rf_dataSource                      = new MatTableDataSource<LogEntry>();
     // 
-    rf_displayedColumns                : string[] = ['id_column', 'pageName', 'accessDate', 'ipValue'];
+    rf_displayedColumns                : string[] = ['id_Column', 'pageName', 'accessDate', 'ipValue'];
     //
     rf_model                           = new SearchCriteria( "1"
                                             ,"1"
@@ -117,8 +117,9 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
           new _languageName(0, '(SELECCIONE OPCION..)', false),
         );
         //
-        this.__languajeList.push(new _languageName(1, '(.Net Core / C#)'         , true  ));
-        this.__languajeList.push(new _languageName(2, '(SprinbgBoot / Java)'     , false ));
+        this.__languajeList.push(new _languageName(1, '(.Net Core   / C#)'             , true  ));
+        this.__languajeList.push(new _languageName(2, '(Node.js     / JavaScript)'     , false ));
+        this.__languajeList.push(new _languageName(2, '(SprinbgBoot / Java)'           , false ));
     }
     //--------------------------------------------------------------------------
     // METODOS COMUNES 
@@ -414,6 +415,8 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
                   //
                   console.log('TEMPLATE DRIVEN - RETURN VALUES (Record Count): ' + td_logEntry.length);
                   //
+                  //console.log('TEMPLATE DRIVEN - RETURN VALUES '                 + td_logEntry);
+                  //
                   this.td_dataSource           = new MatTableDataSource<LogEntry>(td_logEntry);
                   this.td_dataSource.paginator = this.td_paginator;
                   //
@@ -454,17 +457,16 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
               const td_observer_node_js = {
                 next: (td_logEntry_node_js: string)     => { 
                   //
-                  console.log('TEMPLATE DRIVEN - NODE.JS - RETURN VALUES  : ' + td_logEntry_node_js);
-                  //
                   let td_logEntry_node_js_json = JSON.parse(td_logEntry_node_js)['recordsets'][0];
-                  //
-                  console.log('TEMPLATE DRIVEN - NODE.JS - RETURN VALUE   : ' + td_logEntry_node_js_json);
                   //
                   this.td_dataSource           = new MatTableDataSource<LogEntry>(td_logEntry_node_js_json);
                   this.td_dataSource.paginator = this.td_paginator;
                   //
                   this.td_textStatus           = "Se encontraron [" + td_logEntry_node_js_json.length + "] registros ";
                   this.td_formSubmit           = false;
+                  //
+                  console.log('TEMPLATE DRIVEN - NODE.JS - RETURN VALUE (count)   : ' + td_logEntry_node_js_json.length);
+ 
                 },
                 error           : (err: Error)      => {
                   //
@@ -486,6 +488,54 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
               //
               td_informeLogRemoto_NodeJs
               .subscribe(td_observer_node_js);
+          break;
+        case 3: // SPRINGBOOT / JAVA
+              //
+              this.td_buttonCaption = "[Favor espere...]";
+              //
+              this.td_textStatus    = "";
+              // 
+              let td_informeLogRemoto_SprinbBootJava!   : Observable<string>;
+              // 
+              td_informeLogRemoto_SprinbBootJava        = this.mcsdService.getLogRemotoSprinbBootJava(td_searchCriteria);
+              //
+              const td_observer_sprinbbootjava = {
+                next: (td_logEntry_sprinbboot_java: string)     => { 
+                  //
+                  console.log('TEMPLATE DRIVEN - SPRINGBOOT / JAVA - RETURN VALUES  : ' + td_logEntry_sprinbboot_java);
+                  //
+                  //let td_logEntry_node_js_json = JSON.parse(td_logEntry_node_js)['recordsets'][0];
+                  //
+                  let td_logEntry_springboot_java_json   = JSON.parse(td_logEntry_sprinbboot_java);
+                  //
+                  console.log('TEMPLATE DRIVEN - NODE.JS - RETURN VALUE   : ' + td_logEntry_springboot_java_json);
+                  //
+                  this.td_dataSource           = new MatTableDataSource<LogEntry>(td_logEntry_springboot_java_json);
+                  this.td_dataSource.paginator = this.td_paginator;
+                  //
+                  this.td_textStatus           = "Se encontraron [" + td_logEntry_springboot_java_json.length + "] registros ";
+                  this.td_formSubmit           = false;
+                },
+                error           : (err: Error)      => {
+                  //
+                  console.error('TEMPLATE DRIVEN - sprigboot/Java - (ERROR) : ' + JSON.stringify(err.message));
+                  //
+                  this.td_textStatus           = "Ha ocurrido un error. Favor intente de nuevo";
+                  this.td_formSubmit           = false;
+                  this.td_buttonCaption        = "[Buscar]";
+                  //
+                },
+                complete        : ()                => {
+                  //
+                  console.log('TEMPLATE DRIVEN - sprinbboot/java -  (SEARCH END)');
+                  //
+                  this.td_formSubmit           = false;
+                  this.td_buttonCaption        = "[Buscar]";
+                },
+              }; 
+              //
+              td_informeLogRemoto_SprinbBootJava
+              .subscribe(td_observer_sprinbbootjava);
           break;
         default:
           return;

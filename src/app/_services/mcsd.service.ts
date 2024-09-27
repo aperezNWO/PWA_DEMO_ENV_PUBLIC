@@ -185,8 +185,7 @@ export class MCSDService implements OnInit {
     //
     getLogRemotoNodeJS(_searchCriteria : SearchCriteria) : Observable<string>{
       //
-      //let p_url       : string = `${this._configService.getConfigValue('baseUrlNodeJs')}generarinformejson`;
-      let p_url       : string = `https://pgpf9r-8080.csb.app/getAllLogs`;
+      let p_url       : string = `${this._configService.getConfigValue('baseUrlNodeJs')}generarinformejson`;
       //
       let nodeJsOutput: Observable<string> = this.http.get<string>(
         p_url,
@@ -194,6 +193,20 @@ export class MCSDService implements OnInit {
       );
       //
       console.log('getLogRemotoNodeJS : ' + p_url);
+      //
+      return nodeJsOutput;
+    }
+    //
+    getLogRemotoSprinbBootJava(_searchCriteria : SearchCriteria) : Observable<string>{
+      //
+      let p_url       : string = `${this._configService.getConfigValue('baseUrlSpringBootJava')}getAllLogs`;
+      //
+      let nodeJsOutput: Observable<string> = this.http.get<string>(
+        p_url,
+        this.HTTPOptions_JSON,
+      );
+      //
+      console.log('getLogRemotoSprinbBootJava ' + p_url);
       //
       return nodeJsOutput;
     }
