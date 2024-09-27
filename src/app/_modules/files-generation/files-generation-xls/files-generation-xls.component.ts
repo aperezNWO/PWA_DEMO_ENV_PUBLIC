@@ -119,7 +119,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
         //
         this.__languajeList.push(new _languageName(1, '(.Net Core   / C#)'             , true  ));
         this.__languajeList.push(new _languageName(2, '(Node.js     / JavaScript)'     , false ));
-        this.__languajeList.push(new _languageName(2, '(SprinbgBoot / Java)'           , false ));
+        this.__languajeList.push(new _languageName(2, '(SpringBoot  / Java)'           , false ));
     }
     //--------------------------------------------------------------------------
     // METODOS COMUNES 
