@@ -40,7 +40,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
     //
     rf_dataSource                      = new MatTableDataSource<LogEntry>();
     // 
-    rf_displayedColumns                : string[] = ['id_Column', 'pageName', 'accessDate', 'ipValue'];
+    rf_displayedColumns                : string[] = ['id_column', 'pageName', 'accessDate', 'ipValue'];
     //
     rf_model                           = new SearchCriteria( "1"
                                             ,"1"
@@ -268,11 +268,6 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
       };
       //
       rf_informeLogRemoto
-      .pipe(
-        tap(() => this._loading!.next(true)),
-        delay(1000),
-        tap(() => this._loading!.next(false)),
-      )
       .subscribe(logSearchObserver);
     }
     //
@@ -326,11 +321,6 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
       };
       //
       rf_excelFileName
-        .pipe(
-          tap(() => this._loading!.next(true)),
-          delay(1000),
-          tap(() => this._loading!.next(false)),
-        )
       .subscribe(xlsObserver);
     }
     //--------------------------------------------------------------------------
@@ -449,11 +439,6 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
               }; 
               //
               td_informeLogRemoto
-              .pipe(
-                tap(() => this._loading!.next(true)),
-                delay(1000),
-                tap(() => this._loading!.next(false)),
-              )
               .subscribe(td_observer);
           break;
         case 2: // NODE.JS
@@ -500,11 +485,6 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
               }; 
               //
               td_informeLogRemoto_NodeJs
-              .pipe(
-                tap(() => this._loading!.next(true)),
-                delay(1000),
-                tap(() => this._loading!.next(false)),
-              )
               .subscribe(td_observer_node_js);
           break;
         default:
@@ -562,11 +542,6 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
       };
       //
       td_excelFileName
-      .pipe(
-        tap(() => this._loading!.next(true)),
-        delay(1000),
-        tap(() => this._loading!.next(false)),
-      )
       .subscribe(xlsObserver);
     }
 }

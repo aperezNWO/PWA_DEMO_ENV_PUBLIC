@@ -148,11 +148,6 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
                 }
                 //
                 csv_informeLogRemoto
-                .pipe(
-                  tap(() => this._loading!.next(true)),
-                  delay(1000),
-                  tap(() => this._loading!.next(false)),
-                )
                 .subscribe(csv_observer);
             break;
             case 2: // NODE.JS
@@ -194,11 +189,6 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
                 };      
                 //
                 csv_informeLogRemoto_NodeJS
-                .pipe(
-                  tap(() => this._loading!.next(true)),
-                  delay(1000),
-                  tap(() => this._loading!.next(false)),
-                )
                 .subscribe(csv_observer_node_js);
             break;          
         };
@@ -241,11 +231,6 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
         }
         //
         csv_link
-        .pipe(
-          tap(() => this._loading!.next(true)),
-          delay(1000),
-          tap(() => this._loading!.next(false)),
-        )
         .subscribe(csv_link_observer);
     }
     //--------------------------------------------------------------------------

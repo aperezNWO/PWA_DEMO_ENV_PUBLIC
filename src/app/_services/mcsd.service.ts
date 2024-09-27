@@ -185,7 +185,8 @@ export class MCSDService implements OnInit {
     //
     getLogRemotoNodeJS(_searchCriteria : SearchCriteria) : Observable<string>{
       //
-      let p_url       : string = `${this._configService.getConfigValue('baseUrlNodeJs')}generarinformejson`;
+      //let p_url       : string = `${this._configService.getConfigValue('baseUrlNodeJs')}generarinformejson`;
+      let p_url       : string = `https://pgpf9r-8080.csb.app/getAllLogs`;
       //
       let nodeJsOutput: Observable<string> = this.http.get<string>(
         p_url,
