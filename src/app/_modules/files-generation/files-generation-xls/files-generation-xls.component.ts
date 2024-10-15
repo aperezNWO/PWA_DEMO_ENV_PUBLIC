@@ -504,11 +504,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
                   //
                   console.log('TEMPLATE DRIVEN - SPRINGBOOT / JAVA - RETURN VALUES  : ' + td_logEntry_sprinbboot_java);
                   //
-                  //let td_logEntry_node_js_json = JSON.parse(td_logEntry_node_js)['recordsets'][0];
-                  //
                   let td_logEntry_springboot_java_json   = JSON.parse(td_logEntry_sprinbboot_java);
-                  //
-                  console.log('TEMPLATE DRIVEN - NODE.JS - RETURN VALUE   : ' + td_logEntry_springboot_java_json);
                   //
                   this.td_dataSource           = new MatTableDataSource<LogEntry>(td_logEntry_springboot_java_json);
                   this.td_dataSource.paginator = this.td_paginator;
