@@ -211,6 +211,20 @@ export class MCSDService implements OnInit {
       return nodeJsOutput;
     }
     //
+    getPersonsSprinbBootJava() : Observable<string>{
+      //
+      let p_url       : string = `${this._configService.getConfigValue('baseUrlSpringBootJava')}getAllPersons`;
+      //
+      let nodeJsOutput: Observable<string> = this.http.get<string>(
+        p_url,
+        this.HTTPOptions_JSON,
+      );
+      //
+      console.log('getPersonsSprinbBootJava ' + p_url);
+      //
+      return nodeJsOutput;
+    }
+    //
     getInformeExcel(_searchCriteria : SearchCriteria){
         //
         let p_url  = this._baseUrlNetCore + 'demos/generarinformexls';

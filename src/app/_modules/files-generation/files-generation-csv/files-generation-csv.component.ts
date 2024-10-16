@@ -46,7 +46,7 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
     //
     rf_buttonCaption_csv               : string  = "";
     //
-    rf_dataSource                      = new MatTableDataSource<PersonEntity>();
+    //rf_dataSource                      = new MatTableDataSource<PersonEntity>();
     // 
     rf_displayedColumns                : string[] = ['id_Column', 'ciudad', 'nombreCompleto'];
     //
@@ -61,7 +61,7 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
     public __languajeList                              : any;
     protected tituloListadoLenguajes                   : string = "[Backend]:";
     //
-    @ViewChild("rf_paginator" ,{read:MatPaginator}) rf_paginator!:  MatPaginator;
+    // @ViewChild("rf_paginator" ,{read:MatPaginator}) rf_paginator!:  MatPaginator;
     @ViewChild('_languajeList')    _languajeList                 : any;
     //
     rf_searchForm   = this.formBuilder.group({
@@ -97,8 +97,9 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
           new _languageName(0, '(SELECCIONE OPCION..)', false),
         );
         //
-        this.__languajeList.push(new _languageName(1, '(.Net Core)'      , true));
-        this.__languajeList.push(new _languageName(2, '(Node.js)'        , false));
+        this.__languajeList.push(new _languageName(1, '(.Net Core   / C#)'             , true));
+        this.__languajeList.push(new _languageName(2, '(Node.js     / JavaScript)'     , false));
+        this.__languajeList.push(new _languageName(2, '(SpringBoot  / Java)'           , false ));
     }
     //
     SetCSVData():void
@@ -191,7 +192,49 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
                 csv_informeLogRemoto_NodeJS
                 .subscribe(csv_observer_node_js);
             break;          
-        };
+            case 3: // SPRINGBOOT / JAVA
+                // 
+                let td_informeLogRemoto_SprinbBootJava!   : Observable<string>;
+                td_informeLogRemoto_SprinbBootJava        = this.mcsdService.getPersonsSprinbBootJava();
+                //
+                const td_observer_sprinbbootjava = {
+                  next: (td_persons_sprinbboot_java: string)     => { 
+                    //
+                    console.log('TEMPLATE DRIVEN - SPRINGBOOT / JAVA - RETURN VALUES  : ' + td_persons_sprinbboot_java);
+                    //
+                    let td_persons_springboot_java_json   = JSON.parse(td_persons_sprinbboot_java);
+                    //
+                    this.rf_textStatus            = "Se encontraron [" + td_persons_springboot_java_json.length + "] registros ";
+                    this.rf_formSubmit            = false;
+                    //
+                    this.csv_dataSource           = new MatTableDataSource<PersonEntity>(td_persons_springboot_java_json);
+                    this.csv_dataSource.paginator = this.csv_paginator;
+
+                  },
+                  error           : (err: Error)      => {
+                    //
+                    console.error('TEMPLATE DRIVEN - sprigboot/Java - (ERROR) : ' + JSON.stringify(err.message));
+                    //
+                    this.rf_textStatus           = "Ha ocurrido un error. Favor intente de nuevo";
+                    this.rf_formSubmit           = false;
+                    this.rf_buttonCaption        = "[Buscar]";
+                    //
+                  },
+                  complete        : ()                => {
+                    //
+                    console.log('TEMPLATE DRIVEN - sprinbboot/java -  (SEARCH END)');
+                    //
+                    this.rf_formSubmit           = false;
+                    this.rf_buttonCaption        = "[Buscar]";
+                  },
+                }; 
+                //
+                td_informeLogRemoto_SprinbBootJava
+                .subscribe(td_observer_sprinbbootjava);
+            break;
+          default:
+            return;
+       };
     } 
     //
     SetCSVLink()
@@ -242,8 +285,8 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
         //
         console.warn("(NEW SEARCH RF)");
         //
-        this.rf_dataSource           = new MatTableDataSource<PersonEntity>();
-        this.rf_dataSource.paginator = this.rf_paginator;
+        //this.rf_dataSource           = new MatTableDataSource<PersonEntity>();
+        //this.rf_dataSource.paginator = this.rf_paginator;
         //
         this.rf_searchForm   = this.formBuilder.group({
           //_P_DATA_SOURCE_ID   : ["1"           , Validators.required],
@@ -271,7 +314,9 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
         //
         this.downloadLink           = "";
         //
-        this.csv_dataSource           = new MatTableDataSource<PersonEntity>();
+        this.csv_dataSource            = new MatTableDataSource<PersonEntity>();
+        //
+        this.csv_dataSource.paginator  = this.csv_paginator
     }
     //
     rf_onSubmit() 
