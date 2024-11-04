@@ -207,19 +207,26 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
             break;
         }
         //
-        let data               : any;
-        //
         const randomVertexObserver   = {
             //
             next: (randomVertexInfo: string)     => { 
                 //
-                console.warn(AlgorithmDijkstraComponent.PageTitle + ' - [GETTING VERTEX VALUES]  - RETURN VALUE : ' + randomVertexInfo);
+                const regex_1 = /&#x25A0;/g;
                 //
-                data = randomVertexInfo;
+                const regex_2 = /&#x2261;/g;
+                //
+                let data_1    = randomVertexInfo;
+                //
+                let data_2    = data_1.replace(regex_1, "■");
+                //
+                let data_3    = data_2.replace(regex_2, "≡");
+                //
+                console.warn(AlgorithmDijkstraComponent.PageTitle + ' - [GETTING VERTEX VALUES]  - RETURN VALUE : ' + data_3);
                 //------------------------------------------------------------
                 // OBTENER PUNTOS
                 //------------------------------------------------------------
-                let dataArray = data.split("■");
+                //
+                let dataArray = data_3.split("■");
                 //
                 var pointsString = dataArray[0];
                 //

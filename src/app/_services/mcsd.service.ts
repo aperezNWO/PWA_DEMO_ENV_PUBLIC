@@ -13,6 +13,12 @@ export class MCSDService implements OnInit {
     ////////////////////////////////////////////////////////////////  
     // CAMPOS
     ////////////////////////////////////////////////////////////////  
+    //
+    public HTTPOptions_Text_Plain = {
+      headers: new HttpHeaders(),
+      'responseType'  : 'text' as 'json'
+    };
+     //
     public HTTPOptions_Text = {
       headers: new HttpHeaders({
         'Accept':'application/text'
@@ -361,10 +367,10 @@ export class MCSDService implements OnInit {
     }
     //
     getRandomVertexSpringBoot(vertexSize : Number,sourcePoint : Number): Observable<string> {
-      //
+         //
       let p_url    = `${this._baseUrlSpringBoot}GenerateRandomVertex_SpringBoot`;
       //
-      let dijkstraData : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
+      let dijkstraData : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text_Plain);
       //
       return dijkstraData; 
     }
