@@ -54,11 +54,13 @@ export class AppComponent implements OnInit {
       let __baseUrlNetCore    = this._configService.getConfigValue('baseUrlNetCore');
       let __baseUrlNodeJs     = this._configService.getConfigValue('baseUrlNodeJs');
       let __baseUrlNodeJsOcr  = this._configService.getConfigValue('baseUrlNodeJsOcr');
+      let __baseUrlSpringBoot = this._configService.getConfigValue('baseUrlSpringBootJava');
       //
       this.mcsdService._baseUrlNetCore    = __baseUrlNetCore;
       this.mcsdService._baseUrlNodeJs     = __baseUrlNodeJs;
       this.mcsdService._baseUrlNodeJs     = __baseUrlNodeJs;
       this.mcsdService._baseUrlNodeJsOcr  = __baseUrlNodeJsOcr;
+      this.mcsdService._baseUrlSpringBoot = __baseUrlSpringBoot;
       //
       //////////////////////////////////////////////////////
       // CACHE PARA XML

@@ -52,9 +52,20 @@ export class MCSDService implements OnInit {
       this.__baseUrlNodeJsOcr = value;
     }
     //
+    public set _baseUrlSpringBoot(value: string) {
+      //
+      this.__baserUrlSpringBoot = value;
+    }
+    //
+    public get _baseUrlSpringBoot():string {
+      //
+      return this.__baserUrlSpringBoot;
+    }
+    //
     protected __baseUrlNetCore        : string = '';
     protected __baseUrlNodeJs         : string = '';
     protected __baseUrlNodeJsOcr      : string = '';
+    protected __baserUrlSpringBoot    : string = '';
     //
     ////////////////////////////////////////////////////////////////  
     // METODOS - [EVENT HANDLERS]
@@ -69,13 +80,15 @@ export class MCSDService implements OnInit {
       //
       console.log("Calling MCSDService constructor...");
       //
-      this.__baseUrlNetCore    = this._configService.getConfigValue('baseUrlNetCore');
-      this.__baseUrlNodeJs     = this._configService.getConfigValue('baseUrlNodeJs');
-      this.__baseUrlNodeJsOcr  = this._configService.getConfigValue('baseUrlNodeJsOcr');
+      this.__baseUrlNetCore      = this._configService.getConfigValue('baseUrlNetCore');
+      this.__baseUrlNodeJs       = this._configService.getConfigValue('baseUrlNodeJs');
+      this.__baseUrlNodeJsOcr    = this._configService.getConfigValue('baseUrlNodeJsOcr');
+      this.__baserUrlSpringBoot  = this._configService.getConfigValue('baseUrlSpringBootJava');
       //
-      console.log("baseUrlNetCore    : " + this.__baseUrlNetCore);
-      console.log("baseUrlNodeJs     : " + this.__baseUrlNodeJs);
-      console.log("baseUrlNodeJsOcr  : " + this.__baseUrlNodeJsOcr);
+      console.log("baseUrlNetCore         : " + this.__baseUrlNetCore);
+      console.log("baseUrlNodeJs          : " + this.__baseUrlNodeJs);
+      console.log("baseUrlNodeJsOcr       : " + this.__baseUrlNodeJsOcr);
+      console.log("baseUrlSpringBootJava  : " + this.__baserUrlSpringBoot);
     }
     ////////////////////////////////////////////////////////////////  
     // METODOS - [COMUNES]
@@ -346,6 +359,16 @@ export class MCSDService implements OnInit {
       //
       return dijkstraData; 
     }
+    //
+    getRandomVertexSpringBoot(vertexSize : Number,sourcePoint : Number): Observable<string> {
+      //
+      let p_url    = `${this._baseUrlSpringBoot}GenerateRandomVertex_SpringBoot`;
+      //
+      let dijkstraData : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
+      //
+      return dijkstraData; 
+    }
+    
     ////////////////////////////////////////////////////////////////  
     // METODOS - [ALGORITMOS - ORDENAMIENTO]
     ////////////////////////////////////////////////////////////////     
