@@ -308,4 +308,6 @@
 
 -- [_] spring boot menu entry.
 
+-- [_] MENSAJE DE ESPERA EN BOTON DE ALGORITMO DE DISTANCIA CORTA.
+
 ////////////////////////////////////////////////////////////////////////////////
