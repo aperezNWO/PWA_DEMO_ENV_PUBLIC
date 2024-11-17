@@ -277,6 +277,10 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
             error: (err: Error) => {
                 //
                 console.error(AlgorithmDijkstraComponent.PageTitle + ' - [GETTING VERTEX VALUES] - [error] : ' + err.message);
+                //
+                this._ResetControls();
+                //
+                this.status_message = '[Ha ocurrido un error favor intente de nuevo]'
             },       
             complete: ()        => {
                 //
