@@ -52,6 +52,8 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
   // 
   public selectedIndex          : number  = 0;
   public selectedIndexLanguage  : number  = 0;
+  //
+  public getGraphIdle           : boolean = false;
   ////////////////////////////////////////////////////////////////
   // EVENT HANDLERS //////////////////////////////////////////////  
   ////////////////////////////////////////////////////////////////
@@ -160,6 +162,8 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
       //
       console.log(AlgorithmDijkstraComponent.PageTitle + " - [Resetting controls]");
       //
+      this.getGraphIdle            = false;
+      //
       this.tituloListadoDistancias = "";
       //[x]
       this.DrawListItems();
@@ -182,6 +186,7 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
         //
         let _vertexSize         : number = Number.parseInt(this._vertexSizeList.nativeElement.value);
         let _sourcePoint        : number = Number.parseInt(this._sourcePointList.nativeElement.value);
+        this.getGraphIdle                = true;
         //
         console.log(AlgorithmDijkstraComponent.PageTitle + " - [vertex size : " + _vertexSize  + "]");
         //
@@ -276,7 +281,6 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
             complete: ()        => {
                 //
                 console.warn(AlgorithmDijkstraComponent.PageTitle + ' - [GETTING VERTEX VALUES] - [Observer got a complete notification]');
-                //
             },
         };
         //

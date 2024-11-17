@@ -66,7 +66,7 @@
         <!-- BOTONES / INICIO -->
         <div class="form-group" align="right">
             <input id="GetGraph" type="button" title="[GENERAR]"   value="[GENERAR]"   (click)="this._GetGraph()" 
-            [disabled]="!((this.PointListHidden.length == 0) && (this.MatrixListHidden.length == 0))">
+            [disabled]="(this.getGraphIdle == true)">
             |
             <input id="NewGraph" type="button" title="[REINICIAR]" value="[REINICIAR]" (click)="this._ResetControls()"
             [disabled]="((this.PointListHidden.length == 0) && (this.MatrixListHidden.length == 0))">
