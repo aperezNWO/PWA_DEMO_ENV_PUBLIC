@@ -1,12 +1,13 @@
 {
     "appBrand"               : "[PWA DEMO]",
     "appEnv"                 : "[ENV_PUBLIC]",
-    "appVersion"             : "1.2.51",
+    "appVersion"             : "1.2.52",
     "baseUrlNetCore"         : "https://angularwebapidemo.somee.com/",
     "baseUrlNodeJs"          : "https://tmvqhs-4000.csb.app/",
     "baseUrlNodeJsChat"      : "https://d57kw2-3000.csb.app/",
     "baseUrlNodeJsOcr"       : "https://rjts8s-3000.csb.app/upload",
+    "baseUrlSpringBootJava"   : "https://gww3r7-8080.csb.app/",
     "baseUrlSpringBootJava_"  : "https://2kzn7f-8080.csb.app/",
-    "baseUrlSpringBootJava"   : "http://localhost:8080/"
+    "baseUrlSpringBootJava__" : "http://localhost:8080/"
 }
   
