@@ -5,7 +5,8 @@
     "baseUrlNetCore"         : "https://angularwebapidemo.somee.com/",
     "baseUrlNodeJs"          : "https://tmvqhs-4000.csb.app/",
     "baseUrlNodeJsChat"      : "https://d57kw2-3000.csb.app/",
-    "baseUrlNodeJsOcr"       : "https://rjts8s-3000.csb.app/upload",
+    "baseUrlNodeJsOcr_"       : "https://rjts8s-3000.csb.app/upload",
+    "baseUrlNodeJsOcr"        : "https://zdsjg8-3000.csb.app/upload",
     "baseUrlSpringBootJava"   : "https://gww3r7-8080.csb.app/",
     "baseUrlSpringBootJava_"  : "https://2kzn7f-8080.csb.app/",
     "baseUrlSpringBootJava__" : "http://localhost:8080/"
