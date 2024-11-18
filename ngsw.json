@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1731898863272,
+  "timestamp": 1731968124362,
   "index": "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/index.html",
   "assetGroups": [
     {
@@ -48,7 +48,7 @@
   "hashTable": {
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/484.8cdd85cefc5a3b51.js": "5917412f8e7d284347e02b3e88949a4901e355de",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/896.4519226224848d4d.js": "b78fb0b014bc156bc77299cc45560d056ef29bac",
-    "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/config.json": "370526b68dd7fdb0d9eb7ec1619c899476d10644",
+    "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/config.json": "c4eb4f893ed5574cdeee3c36d8231bde83fab634",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/icons/icon-128x128.png": "f912963bdc6d5a38d8f1dd0afbaab2ce8d657acb",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/icons/icon-144x144.png": "b155fd5f2fd5d2ea7760721063003c4cd95fd783",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/icons/icon-152x152.png": "eae6e0f0c8afb8aaae339e2a569b43e9238e5e6c",
