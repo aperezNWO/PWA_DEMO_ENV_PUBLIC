@@ -306,8 +306,12 @@
 
 -- [_] modules / engines.
 
--- [_] spring boot menu entry.
+-- [x] spring boot menu entry.
 
--- [_] MENSAJE DE ESPERA EN BOTON DE ALGORITMO DE DISTANCIA CORTA.
+-- [x] MENSAJE DE ESPERA EN BOTON DE ALGORITMO DE DISTANCIA CORTA.
+
+-- [_] OPEN CV / c++ builder.
+
+-- [_] OCR PHOTO CAPTURE.
 
 ////////////////////////////////////////////////////////////////////////////////
