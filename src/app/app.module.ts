@@ -48,6 +48,7 @@ import { OcrComponent                    } from './_modules/miscelaneous/ocr/ocr
 import { ChatComponent                   } from './_modules/miscelaneous/chat/chat/chat.component';
 import { ChartComponent                  } from './_modules/miscelaneous/chart/chart.component';
 import { MiscelaneousComponent           } from './_modules/miscelaneous/miscelaneous/miscelaneous.component';
+import { OcrPhotoCaptureComponent        } from './_modules/miscelaneous/ocr-photo-capture/ocr-photo-capture.component';
 import { UnitTestingComponent            } from './_modules/_unitttesting/unit-testing.component';
 import { AppRoutingModule                } from './app-routing.module';
 import { LogType                         } from './_models/entityInfo.model';
@@ -137,6 +138,7 @@ export class CustomErrorHandler implements ErrorHandler {
         GameHanoiAutoComponent,
         GameWebComponent,
         OcrComponent,
+        OcrPhotoCaptureComponent,
         ChatComponent,
         ChartComponent,
         MiscelaneousComponent,
