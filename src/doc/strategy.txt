@@ -310,8 +310,26 @@
 
 -- [x] MENSAJE DE ESPERA EN BOTON DE ALGORITMO DE DISTANCIA CORTA.
 
--- [_] OPEN CV / c++ builder.
+-- [X] OCR PHOTO CAPTURE.
 
--- [_] OCR PHOTO CAPTURE.
+-- [_] https://opencv.org/
 
+-- [_] https://www.tensorflow.org/?hl=es-419
+
+-- [_] COMPUTER VISION.
+
+        -- [_] OPEN CV / JAVASCRIPT.   
+
+        -- [_] OPEN CV / c++ builder.
+
+        -- [_] TENSORFLOW / JAVASCRIPT.   
+
+-- [_] MACHINE LEARNING.
+
+        -- [_] OPEN CV / JAVASCRIPT.   
+
+        -- [_] OPEN CV / c++ builder.
+
+        -- [_] TENSORFLOW / JAVASCRIPT.  
+        
 ////////////////////////////////////////////////////////////////////////////////

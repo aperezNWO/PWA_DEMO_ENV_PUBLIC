@@ -1,5 +1,5 @@
 <div class="content" align="center">
-    <h1>[OCR / PHOTO-CAPTURE]</h1>
+    <h1>[OCR / COMPUTER VISION]</h1>
     <div id="canvasContainer" [hidden]="this.hiddenCanvasContainer">
         <hr/>
         <!-- CANVAS INICIO   -->
@@ -49,6 +49,17 @@
                       <option *ngFor="let _sourceName of __sourceList" 
                       [value]="_sourceName._index"
                       [selected]="_sourceName._selected">{{_sourceName._value}}</option>
+      </select>
+    </div>      
+    <div class="form-group" align="left" id="EngineListDiv">
+      <label for="engineList"><span id="titleEngines">{{this.titleEngineList}}</span></label>
+      &nbsp;<select   id="engineList"
+                      name="engineList"
+                      #_engineList 
+                      (change)="this.selectionChangeEngines()">
+                      <option *ngFor="let _engineName of __engineList" 
+                      [value]="_engineName._index"
+                      [selected]="_engineName._selected">{{_engineName._value}}</option>
       </select>
     </div>
     <!-- FORMULARIO FIN -->

@@ -21,7 +21,6 @@ import { GameTictactoeComponent          } from './_modules/games/game-tictactoe
 import { GameWebComponent                } from './_modules/games/game-web/game-web.component';
 import { HanoiTowersComponent            } from './_modules/games/game-hanoi/game-hanoi.component';
 import { GameHanoiAutoComponent          } from './_modules/games/game-hanoi-auto/game-hanoi-auto.component';
-import { OcrComponent                    } from './_modules/miscelaneous/ocr/ocr.component';
 import { ChatComponent                   } from './_modules/miscelaneous/chat/chat/chat.component';
 import { ChartComponent                  } from './_modules/miscelaneous/chart/chart.component';
 import { OcrPhotoCaptureComponent        } from './_modules/miscelaneous/ocr-photo-capture/ocr-photo-capture.component';
@@ -52,7 +51,6 @@ const routes: Routes = [
   {  path: 'Chat'                  , component: ChatComponent                         },
   {  path: 'Chart'                 , component: ChartComponent                        },
   {  path: 'OcrPhotoCapture'       , component: OcrPhotoCaptureComponent              },
-  {  path: 'Ocr'                   , component: OcrComponent                          },
   {  path: 'Miscelaneous'          , component: MiscelaneousComponent                 },
   {  path: '**'                    , component: PageNotFoundComponent                 },
 ];
