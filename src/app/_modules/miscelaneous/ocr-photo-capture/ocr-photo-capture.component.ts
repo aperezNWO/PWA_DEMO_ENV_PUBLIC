@@ -160,14 +160,18 @@ export class OcrPhotoCaptureComponent implements AfterViewInit , OnInit {
     //
     this.mcsdService.uploadBase64Image(base64ImageString).subscribe(
       (response) => {
+        //
         console.log('Image uploaded successfully:', response);
         this.status = JSON.parse(JSON.stringify(response))['message'];
+        //
+        const utterance = new SpeechSynthesisUtterance(this.status);
+        speechSynthesis.speak(utterance);        
+        //
         this.statusButton            = '[save]';
         this.statusButtonSaveImage   = '[save image]';
         this.captureButtonStatus     = '[start capture]';
         this.captureButtonDisabled   = false;
         this.saveImageButtonDisabled = true;
-
       },
       (error) => {
         //
