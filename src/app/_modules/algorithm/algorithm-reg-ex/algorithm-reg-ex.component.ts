@@ -91,11 +91,17 @@ export class AlgorithmRegExComponent implements OnInit, AfterViewInit {
                 //
                 this.lblStatus = "[REINICIO EXITOSO]"
                 //
+                const utterance = new SpeechSynthesisUtterance( this.lblStatus );
+                speechSynthesis.speak(utterance); 
+                //
                 this.pattern   = "";
             },
             error: (err: Error) => {
                 //
-                this.lblStatus = "[HA OCURRIDO UN ERROR]"
+                this.lblStatus = "[HA OCURRIDO UN ERROR]";
+                //
+                const utterance = new SpeechSynthesisUtterance( this.lblStatus );
+                speechSynthesis.speak(utterance); 
                 //
                 this.pattern   = "";
                 //
@@ -192,6 +198,9 @@ export class AlgorithmRegExComponent implements OnInit, AfterViewInit {
                     //this.regExSearch.nativeElement.text   = pattern;
                     //
                     this.lblStatus = 'SE ENCONTRARON (' + matchAmt + ') COINCIDENCIAS';
+                    //
+                    const utterance = new SpeechSynthesisUtterance( this.lblStatus );
+                    speechSynthesis.speak(utterance); 
                 }
             },
             error: (err: Error) => {

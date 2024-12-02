@@ -102,6 +102,9 @@ export class FilesGenerationPDFComponent {
                   this.message         = '[Se cargó correctamente el archivo]';
                   //
                   this.downloadCaption = '[DESCARGAR PDF]'
+                  //
+                  const utterance = new SpeechSynthesisUtterance( this.message  );
+                  speechSynthesis.speak(utterance);  
                 }
             } 
             else 
@@ -122,6 +125,9 @@ export class FilesGenerationPDFComponent {
           this.message  = '[Ha ocurrido un error]';
           //
           console.error('[GENERATE PDF FILE] - Error :' + err);
+          //
+          const utterance = new SpeechSynthesisUtterance( this.message  );
+          speechSynthesis.speak(utterance);  
         },
         complete        : ()                => {
           //

@@ -99,6 +99,9 @@ export class FilesGenerationZIPComponent {
               this.message = 'Could not upload the file!';
             }
             //
+            const utterance = new SpeechSynthesisUtterance( this.message  );
+            speechSynthesis.speak(utterance);  
+            //
             this.currentFile = undefined;
           }
         });
@@ -132,6 +135,9 @@ export class FilesGenerationZIPComponent {
             console.log('[Download link] : ' + this.downloadLink);
             //
             this.message = "[SE GENERO CORRECTAMENTE ARCHIVO ZIP]";
+            //
+            const utterance = new SpeechSynthesisUtterance( this.message  );
+            speechSynthesis.speak(utterance);  
           },
           error: (err: Error) => {
             //

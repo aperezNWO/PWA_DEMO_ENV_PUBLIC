@@ -247,6 +247,8 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
           this.rf_dataSource.paginator = this.rf_paginator;
           //
           // los botones se configuran en el evento "complete()".
+          const utterance = new SpeechSynthesisUtterance( this.rf_textStatus   );
+          speechSynthesis.speak(utterance);  
         },
         error: (err: Error) => {
           //
@@ -257,6 +259,9 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
           this.rf_buttonCaption     = "[Buscar]";
           //
           this.rf_formSubmit        = false;
+          //
+          const utterance = new SpeechSynthesisUtterance( this.rf_textStatus   );
+          speechSynthesis.speak(utterance);  
         },       
         complete: ()        => {
           //
@@ -291,6 +296,9 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
       //
       this.rf_textStatus_xls                  = "[Generando por favor espere...]";
       //
+      const utterance = new SpeechSynthesisUtterance( this.rf_textStatus_xls   );
+      speechSynthesis.speak(utterance);   
+      //
       const xlsObserver                       = {
         //
         next: (_excelFileName: string) => { 
@@ -312,6 +320,9 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
           this.rf_buttonCaption_xls  = "[Ha ocurrido un error]";
           //
           this.rf_textStatus_xls     = "[Ha ocurrido un error]";
+          //
+          const utterance = new SpeechSynthesisUtterance( this.rf_textStatus_xls   );
+          speechSynthesis.speak(utterance);  
         },
         complete: () => {
           //
@@ -422,6 +433,9 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
                   //
                   this.td_textStatus           = "Se encontraron [" + td_logEntry.length + "] registros ";
                   this.td_formSubmit           = false;
+                  //
+                  const utterance = new SpeechSynthesisUtterance( this.td_textStatus_xls  );
+                  speechSynthesis.speak(utterance);  
                 },
                 error           : (err: Error)      => {
                   //
@@ -466,7 +480,9 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
                   this.td_formSubmit           = false;
                   //
                   console.log('TEMPLATE DRIVEN - NODE.JS - RETURN VALUE (count)   : ' + td_logEntry_node_js_json.length);
- 
+                  //
+                  const utterance = new SpeechSynthesisUtterance( this.td_textStatus_xls  );
+                  speechSynthesis.speak(utterance);  
                 },
                 error           : (err: Error)      => {
                   //
@@ -476,6 +492,8 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
                   this.td_formSubmit           = false;
                   this.td_buttonCaption        = "[Buscar]";
                   //
+                  const utterance = new SpeechSynthesisUtterance( this.td_textStatus_xls  );
+                  speechSynthesis.speak(utterance);  
                 },
                 complete        : ()                => {
                   //
@@ -511,6 +529,9 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
                   //
                   this.td_textStatus           = "Se encontraron [" + td_logEntry_springboot_java_json.length + "] registros ";
                   this.td_formSubmit           = false;
+                  //
+                  const utterance = new SpeechSynthesisUtterance( this.td_textStatus_xls  );
+                  speechSynthesis.speak(utterance);  
                 },
                 error           : (err: Error)      => {
                   //
@@ -520,6 +541,8 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
                   this.td_formSubmit           = false;
                   this.td_buttonCaption        = "[Buscar]";
                   //
+                  const utterance = new SpeechSynthesisUtterance( this.td_textStatus_xls  );
+                  speechSynthesis.speak(utterance);  
                 },
                 complete        : ()                => {
                   //
@@ -557,6 +580,9 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
       //
       this.td_textStatus_xls                  = "[Generando por favor espere...]";
       //
+      const utterance = new SpeechSynthesisUtterance( this.td_textStatus_xls  );
+      speechSynthesis.speak(utterance);  
+      //
       const xlsObserver                       = {
         //
         next: (_excelFileName: string) => { 
@@ -578,6 +604,9 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
           this.td_buttonCaption_xls  = "[Ha ocurrido un error]";
           //
           this.td_textStatus_xls     = "[Ha ocurrido un error]";
+          //
+          const utterance = new SpeechSynthesisUtterance( this.td_textStatus_xls  );
+          speechSynthesis.speak(utterance);  
         },
         complete: () => {
           //

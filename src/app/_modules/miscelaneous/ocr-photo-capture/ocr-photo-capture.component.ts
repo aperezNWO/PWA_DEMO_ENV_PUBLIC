@@ -164,14 +164,14 @@ export class OcrPhotoCaptureComponent implements AfterViewInit , OnInit {
         console.log('Image uploaded successfully:', response);
         this.status = JSON.parse(JSON.stringify(response))['message'];
         //
-        const utterance = new SpeechSynthesisUtterance(this.status);
-        speechSynthesis.speak(utterance);        
-        //
         this.statusButton            = '[save]';
         this.statusButtonSaveImage   = '[save image]';
         this.captureButtonStatus     = '[start capture]';
         this.captureButtonDisabled   = false;
         this.saveImageButtonDisabled = true;
+        //
+        const utterance = new SpeechSynthesisUtterance(this.status);
+        speechSynthesis.speak(utterance);     
       },
       (error) => {
         //

@@ -225,10 +225,13 @@ export class TicTacToeEngine
           this.message = "[EMPATE]";
           this.winner  = null;
       }
-		  else
-		  {
+	  else
+	  {
   			this.declareWinner(this.whoseTurn);
-	  	}
+	  }
+      //
+      const utterance = new SpeechSynthesisUtterance( this.message  );
+      speechSynthesis.speak(utterance);    
       //
       return true;
     } 

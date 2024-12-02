@@ -131,6 +131,9 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
                     //
                     this.csv_dataSource           = new MatTableDataSource<PersonEntity>(jsondata);
                     this.csv_dataSource.paginator = this.csv_paginator;
+                    //
+                    const utterance = new SpeechSynthesisUtterance( this.rf_textStatus );
+                    speechSynthesis.speak(utterance);  
                   },
                   error           : (err: Error)      => {
                     //
@@ -139,6 +142,9 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
                     this.rf_textStatus    = "[Ha ocurrido un error]";
                     //
                     this.rf_buttonCaption = "[Buscar]";
+                    //
+                    const utterance = new SpeechSynthesisUtterance( this.rf_textStatus );
+                    speechSynthesis.speak(utterance);  
                   },
                   complete        : ()                => {
                     //
@@ -171,7 +177,9 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
                     //
                     this.csv_dataSource           = new MatTableDataSource<PersonEntity>(csv_data_node_js_json);
                     this.csv_dataSource.paginator = this.csv_paginator;
-
+                    //
+                    const utterance = new SpeechSynthesisUtterance( this.rf_textStatus );
+                    speechSynthesis.speak(utterance);     
                   },
                   error           : (err: Error)      => {
                     //
@@ -180,6 +188,9 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
                     this.rf_textStatus    = "[Ha ocurrido un error]";
                     //
                     this.rf_buttonCaption = "[Buscar]";
+                    //
+                    const utterance = new SpeechSynthesisUtterance( this.rf_textStatus );
+                    speechSynthesis.speak(utterance);  
                   },
                   complete        : ()                => {
                     //
@@ -209,7 +220,9 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
                     //
                     this.csv_dataSource           = new MatTableDataSource<PersonEntity>(td_persons_springboot_java_json);
                     this.csv_dataSource.paginator = this.csv_paginator;
-
+                    //
+                    const utterance = new SpeechSynthesisUtterance( this.rf_textStatus );
+                    speechSynthesis.speak(utterance);  
                   },
                   error           : (err: Error)      => {
                     //
@@ -219,6 +232,8 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
                     this.rf_formSubmit           = false;
                     this.rf_buttonCaption        = "[Buscar]";
                     //
+                    const utterance = new SpeechSynthesisUtterance( this.rf_textStatus );
+                    speechSynthesis.speak(utterance);  
                   },
                   complete        : ()                => {
                     //

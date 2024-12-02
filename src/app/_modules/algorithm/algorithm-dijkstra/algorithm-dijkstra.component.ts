@@ -272,6 +272,9 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
                 //
                 this.status_message              = "[Se generó correctamente el gráfico]";
                 //
+                const utterance = new SpeechSynthesisUtterance( this.status_message);
+                speechSynthesis.speak(utterance); 
+                //
                 this.DrawDistanceList(false,vertexString);
             },
             error: (err: Error) => {
@@ -281,6 +284,9 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
                 this._ResetControls();
                 //
                 this.status_message = '[Ha ocurrido un error favor intente de nuevo]'
+                //
+                const utterance = new SpeechSynthesisUtterance( this.status_message);
+                speechSynthesis.speak(utterance); 
             },       
             complete: ()        => {
                 //

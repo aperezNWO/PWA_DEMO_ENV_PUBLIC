@@ -147,6 +147,11 @@ export class SudokuComponent implements OnInit, AfterViewInit {
               }
               this.board.push(row);
             }
+            //
+            this.message            =  "[Se generó correctamente]";
+            //
+            const utterance = new SpeechSynthesisUtterance( this.message  );
+            speechSynthesis.speak(utterance);  
           },
           error: (err: Error) => {
             //
@@ -154,15 +159,18 @@ export class SudokuComponent implements OnInit, AfterViewInit {
               '[SUDOKU - GENERATE] - (ERROR) : ' + JSON.stringify(err.message),
             );
             //
-            this.btnGenerateCaption = '[GENERAR]';
+            this.btnGenerateCaption = '[GENERAR]';            
+            //
+            this.message            =  "[Ha ocurrido un error]";
+            //
+            const utterance = new SpeechSynthesisUtterance( this.message  );
+            speechSynthesis.speak(utterance);  
           },
           complete: () => {
             //
             console.log('[SUDOKU - GENERATE] -  (COMPLETE)');
             //
             this.btnGenerateCaption = '[GENERAR]';
-            //
-            this.message            =  "[Se generó correctamente]";
           },
         };
         //
@@ -231,6 +239,11 @@ export class SudokuComponent implements OnInit, AfterViewInit {
                 this.board.push(row);
               }
             }
+            //
+            this.message          = "[Se generó correctamente]";
+            //
+            const utterance = new SpeechSynthesisUtterance( this.message  );
+            speechSynthesis.speak(utterance);  
           },
           error: (err: any) => {
             //
@@ -251,14 +264,15 @@ export class SudokuComponent implements OnInit, AfterViewInit {
             this.currentFile = undefined;
             //
             this.btnGenerateCaption = '[GENERAR]';
+            //
+            const utterance = new SpeechSynthesisUtterance( this.message  );
+            speechSynthesis.speak(utterance);  
           },
           complete: () => {
             //
             console.log('[SUDOKU - GENERATE  FROM FILE] -  (COMPLETE)');
             //
             this.btnGenerateCaption = '[GENERAR]';
-            //
-            this.message          = "[Se generó correctamente]";
             //
             this.selectedFiles = undefined;
             //
@@ -352,6 +366,9 @@ export class SudokuComponent implements OnInit, AfterViewInit {
         );
         //
         this.message = "[Ha ocurrido un error]";
+        //
+        const utterance = new SpeechSynthesisUtterance( this.message  );
+        speechSynthesis.speak(utterance);  
       },
       complete: () => {
         //

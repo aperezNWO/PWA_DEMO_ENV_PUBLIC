@@ -165,6 +165,9 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
                 //
                 this.lblStatus  = "[ha ocurrido un error]";
                 //
+                const utterance = new SpeechSynthesisUtterance( this.lblStatus );
+                speechSynthesis.speak(utterance);  
+                //
                 return false;
             },       
             complete: ()        => {
@@ -228,6 +231,9 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
                 console.error(AlgorithmSortComponent.PageTitle + ' - [GETTING NEW SORT] - [error] : ' + err.message);
                 //
                 this.lblStatus  = "[ha ocurrido un error]";
+                //
+                const utterance = new SpeechSynthesisUtterance( this.lblStatus );
+                speechSynthesis.speak(utterance);  
             },       
             complete: ()        => {
                 //
@@ -291,6 +297,9 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
             this.GetSortLabel     = "[...ordenado...]";
             //
             console.log('SORT_BENCHMARK . SORTED ARRAY : ' + _sortedArrayDecoded);
+            //
+            const utterance = new SpeechSynthesisUtterance( this.lblStatus );
+            speechSynthesis.speak(utterance); 
             //
             return;
         }
