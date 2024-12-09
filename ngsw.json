@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1733706910989,
+  "timestamp": 1733708056382,
   "index": "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/index.html",
   "assetGroups": [
     {
@@ -15,7 +15,7 @@
         "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/896.4519226224848d4d.js",
         "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/favicon.ico",
         "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/index.html",
-        "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/main.7952a2f2c93f678a.js",
+        "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/main.c4f489379d27e767.js",
         "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/manifest.webmanifest",
         "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/polyfills.77586c43fe67260d.js",
         "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/runtime.6e18956a09ef4bed.js",
@@ -64,8 +64,8 @@
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/images/mic_on.gif": "48778af047c17ee65a307eb0517907af8b333e89",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/images/speaker_on.gif": "52d373e9a336356e1f15b3a84d3b3cb611ab2ee0",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/index.html": "3861090988d68db49247ab7fccfec153a074092c",
-    "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/main.7952a2f2c93f678a.js": "e1b01c183dc3ab5dbf06505895f1b1f3fceea019",
+    "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/index.html": "5509ad0af71cf170b8ad72096a36966224f5d333",
+    "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/main.c4f489379d27e767.js": "60fe43f48c316f0b2d2bd12d4cd3f2ae69c71f8f",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/manifest.webmanifest": "4c4fda145c554fe9a7ed086f63fa914267022e67",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/polyfills.77586c43fe67260d.js": "9e2a9f992517e511f5c0d93f45b293a46678cb36",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/runtime.6e18956a09ef4bed.js": "8c77a60df282c9aa55bb61a253f6e5d16f6f5cf0",
