@@ -24,6 +24,7 @@ import { ChatComponent                   } from './_modules/miscelaneous/chat/ch
 import { ChartComponent                  } from './_modules/miscelaneous/chart/chart.component';
 import { OcrPhotoCaptureComponent        } from './_modules/miscelaneous/ocr-photo-capture/ocr-photo-capture.component';
 import { MiscelaneousComponent           } from './_modules/miscelaneous/miscelaneous/miscelaneous.component';
+import { IndexComponent                  } from './_modules/home/index/index.component';
 export interface _Route extends Route
 {
     caption : string;
@@ -32,6 +33,7 @@ export interface _Route extends Route
 //
 export const routes: _Route[] = [
   {  path: 'Home'                  , component: HomeWebComponent                    , caption: 'Home'                            },
+  {  path: 'Home'                  , component: IndexComponent                      , caption: 'Index'                           },
   {  path: ''                      , component: HomeWebComponent                    , caption: ''                                },
   {  path: 'AAboutWeb'             , component: AAboutWebComponent                  , caption: 'About- Main Page'                },
   {  path: 'Contact'               , component: ContactComponent                    , caption: 'Contact - Main Page'             },
