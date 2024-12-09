@@ -1,5 +1,5 @@
-import { NgModule             } from '@angular/core';
-import { RouterModule, Routes            } from '@angular/router';
+import { NgModule                        } from '@angular/core';
+import { Route, RouterModule             } from '@angular/router';
 import { HomeWebComponent                } from './_modules/home/home-web/home-web.component';
 import { PageNotFoundComponent           } from './_modules/home/page-not-found/page-not-found.component';
 import { ContactComponent                } from './_modules/about/contact/contact.component';
@@ -19,40 +19,43 @@ import { AlgorithmSortComponent          } from './_modules/algorithm/algorithm-
 import { SudokuComponent                 } from './_modules/games/game-sudoku/game-sudoku.component';
 import { GameTictactoeComponent          } from './_modules/games/game-tictactoe/game-tictactoe.component';
 import { GameWebComponent                } from './_modules/games/game-web/game-web.component';
-import { HanoiTowersComponent            } from './_modules/games/game-hanoi/game-hanoi.component';
 import { GameHanoiAutoComponent          } from './_modules/games/game-hanoi-auto/game-hanoi-auto.component';
 import { ChatComponent                   } from './_modules/miscelaneous/chat/chat/chat.component';
 import { ChartComponent                  } from './_modules/miscelaneous/chart/chart.component';
 import { OcrPhotoCaptureComponent        } from './_modules/miscelaneous/ocr-photo-capture/ocr-photo-capture.component';
 import { MiscelaneousComponent           } from './_modules/miscelaneous/miscelaneous/miscelaneous.component';
+export interface _Route extends Route
+{
+    caption : string;
+}
+
 //
-const routes: Routes = [
-  {  path: 'Home'                  , component: HomeWebComponent                      },
-  {  path: ''                      , component: HomeWebComponent                      },
-  {  path: 'AAboutWeb'             , component: AAboutWebComponent                    },
-  {  path: 'Contact'               , component: ContactComponent                      },
-  {  path: 'ContactForm'           , component: ContactFormComponent                  },
-  {  path: 'TechnicalSpecs'        , component: TechnicalSpecsComponent               },
-  {  path: 'Topics'                , component: TopicsComponent                       },
-  {  path: 'AlgorithmWeb'          , component: AlgorithmWebComponent                 },
-  {  path: 'AlgorithmRegEx'        , component: AlgorithmRegExComponent               },
-  {  path: 'AlgorithmSort'         , component: AlgorithmSortComponent                },
-  {  path: 'AlgorithmDijkstra'     , component: AlgorithmDijkstraComponent            },
-  {  path: 'FilesGenerationWeb'    , component: FilesGenerationWebComponent           },
-  {  path: 'FilesGenerationXLS'    , component: FilesGenerationXLSComponent           },
-  {  path: 'FilesGenerationCSV'    , component: FilesGenerationCSVComponent           },
-  {  path: 'FilesGenerationPDF'    , component: FilesGenerationPDFComponent           },
-  {  path: 'FilesGenerationZIP'    , component: FilesGenerationZIPComponent           },         
-  {  path: 'GamesSudoku'           , component: SudokuComponent                       },
-  {  path: 'GamesTicTacToe'        , component: GameTictactoeComponent                },
-  {  path: 'GamesHanoi'            , component: HanoiTowersComponent                  },
-  {  path: 'GamesHanoiAuto'        , component: GameHanoiAutoComponent                },
-  {  path: 'GamesWeb'              , component: GameWebComponent                      },
-  {  path: 'Chat'                  , component: ChatComponent                         },
-  {  path: 'Chart'                 , component: ChartComponent                        },
-  {  path: 'OcrPhotoCapture'       , component: OcrPhotoCaptureComponent              },
-  {  path: 'Miscelaneous'          , component: MiscelaneousComponent                 },
-  {  path: '**'                    , component: PageNotFoundComponent                 },
+export const routes: _Route[] = [
+  {  path: 'Home'                  , component: HomeWebComponent                    , caption: 'Home'                            },
+  {  path: ''                      , component: HomeWebComponent                    , caption: ''                                },
+  {  path: 'AAboutWeb'             , component: AAboutWebComponent                  , caption: 'About- Main Page'                },
+  {  path: 'Contact'               , component: ContactComponent                    , caption: 'Contact - Main Page'             },
+  {  path: 'ContactForm'           , component: ContactFormComponent                , caption: 'Contact Form'                    },
+  {  path: 'TechnicalSpecs'        , component: TechnicalSpecsComponent             , caption: 'Technical Specifications'        },
+  {  path: 'Topics'                , component: TopicsComponent                     , caption: 'Topics - Main Page'              },
+  {  path: 'AlgorithmWeb'          , component: AlgorithmWebComponent               , caption: 'Algoritmos - Main Page'          },
+  {  path: 'AlgorithmRegEx'        , component: AlgorithmRegExComponent             , caption: 'Algoritmos - Regular Expression' },
+  {  path: 'AlgorithmSort'         , component: AlgorithmSortComponent              , caption: 'Algoritmos - Sort'               },
+  {  path: 'AlgorithmDijkstra'     , component: AlgorithmDijkstraComponent          , caption: 'Algoritmos - Dijkstra'           },
+  {  path: 'FilesGenerationWeb'    , component: FilesGenerationWebComponent         , caption: 'File Generatin  - Main Page'     },
+  {  path: 'FilesGenerationXLS'    , component: FilesGenerationXLSComponent         , caption: 'File Generation - XLS'           },
+  {  path: 'FilesGenerationCSV'    , component: FilesGenerationCSVComponent         , caption: 'File Generation - CSV'           },
+  {  path: 'FilesGenerationPDF'    , component: FilesGenerationPDFComponent         , caption: 'File Generation - PDF'           },
+  {  path: 'FilesGenerationZIP'    , component: FilesGenerationZIPComponent         , caption: 'File Generation - ZIP    '       },      
+  {  path: 'GamesSudoku'           , component: SudokuComponent                     , caption: 'Games  - Sudoku'                 },
+  {  path: 'GamesTicTacToe'        , component: GameTictactoeComponent              , caption: 'Games  - TicTacToe'              },
+  {  path: 'GamesHanoiAuto'        , component: GameHanoiAutoComponent              , caption: 'Games  - Hanoi'                  },
+  {  path: 'GamesWeb'              , component: GameWebComponent                    , caption: 'Gammes - Main Page'              },
+  {  path: 'Chat'                  , component: ChatComponent                       , caption: 'Chat Demo'                       },
+  {  path: 'Chart'                 , component: ChartComponent                      , caption: 'Chart Demo'                      },
+  {  path: 'OcrPhotoCapture'       , component: OcrPhotoCaptureComponent            , caption: 'Ocr Photo Capture'               },
+  {  path: 'Miscelaneous'          , component: MiscelaneousComponent               , caption: 'Miscelaneous - Main Page'        },
+  {  path: '**'                    , component: PageNotFoundComponent               , caption: '' },
 ];
 
 @NgModule({
