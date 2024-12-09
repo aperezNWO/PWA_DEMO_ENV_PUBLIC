@@ -33,7 +33,7 @@ export interface _Route extends Route
 //
 export const routes: _Route[] = [
   {  path: 'Home'                  , component: HomeWebComponent                    , caption: 'Home'                            },
-  {  path: 'Home'                  , component: IndexComponent                      , caption: 'Index'                           },
+  {  path: 'Index'                 , component: IndexComponent                      , caption: 'Index'                           },
   {  path: ''                      , component: HomeWebComponent                    , caption: ''                                },
   {  path: 'AAboutWeb'             , component: AAboutWebComponent                  , caption: 'About- Main Page'                },
   {  path: 'Contact'               , component: ContactComponent                    , caption: 'Contact - Main Page'             },

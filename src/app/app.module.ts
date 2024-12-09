@@ -1,6 +1,6 @@
 import { Injectable, NgModule                       } from '@angular/core';
 import { APP_INITIALIZER,ErrorHandler, isDevMode    } from '@angular/core';
-import { DatePipe                        } from '@angular/common';
+import { DatePipe, DecimalPipe                        } from '@angular/common';
 import { ServiceWorkerModule             } from '@angular/service-worker';
 import { FormsModule                     } from '@angular/forms';
 import { MatListModule                   } from '@angular/material/list';
@@ -55,6 +55,7 @@ import { MCSDService                     } from './_services/mcsd.service';
 import { _ConfigService                  } from './_services/-config.service';
 import { finalize, tap                   } from 'rxjs';
 import { NgxSignaturePadModule           } from '@eve-sama/ngx-signature-pad';
+import { IndexComponent } from './_modules/home/index/index.component';
 //
 const routes : Routes = [
  
@@ -143,6 +144,7 @@ export class CustomErrorHandler implements ErrorHandler {
         NavComponent,
         PageNotFoundComponent,
         TopicsComponent,
+        IndexComponent,
     ],
     exports: [RouterModule],
     providers: [
@@ -158,7 +160,7 @@ export class CustomErrorHandler implements ErrorHandler {
             multi     : true
           }
         ],
-        DatePipe,
+        DatePipe,DecimalPipe
     ],
     bootstrap: [AppComponent],
     imports: [
