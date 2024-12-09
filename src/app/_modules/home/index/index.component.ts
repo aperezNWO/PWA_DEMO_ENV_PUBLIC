@@ -1,8 +1,6 @@
 import { Component, PipeTransform, QueryList, ViewChildren } from '@angular/core';
 import { Directive, EventEmitter, Input, Output            } from '@angular/core';
 import { DecimalPipe                                       } from '@angular/common';
-import { SiteRole                                          } from '../../../_models/common/common';
-import { AuthService                                       } from '../../../_services/_config/auth.service';
 import { _Route, routes                                    } from '../../../app-routing.module';
 import { BehaviorSubject, debounceTime, delay, Observable, of, Subject, switchMap, tap } from 'rxjs';
 
@@ -70,7 +68,7 @@ export class IndexComponent {
   //
   @ViewChildren(BaseSortableHeader) headers: QueryList<BaseSortableHeader> | undefined;
   //
-  public ConfigRoleString: string = SiteRole.RoleConfig.toString();
+  //public ConfigRoleString: string = SiteRole.RoleConfig.toString();
   //
   public _loading = new BehaviorSubject<boolean>(true);
   public _total   = new BehaviorSubject<number>(0);
@@ -97,7 +95,7 @@ export class IndexComponent {
   //
   constructor(
     private pipe: DecimalPipe,
-    public _authService: AuthService,
+    //public _authService: AuthService,
   ) 
   {
     //

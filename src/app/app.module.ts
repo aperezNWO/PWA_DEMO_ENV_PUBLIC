@@ -55,7 +55,7 @@ import { MCSDService                     } from './_services/mcsd.service';
 import { _ConfigService                  } from './_services/-config.service';
 import { finalize, tap                   } from 'rxjs';
 import { NgxSignaturePadModule           } from '@eve-sama/ngx-signature-pad';
-import { IndexComponent } from './_modules/home/index/index.component';
+import { IndexComponent                  } from './_modules/home/index/index.component';
 //
 const routes : Routes = [
  
