@@ -31,7 +31,7 @@ interface _SearchState {
 //
 function matches(netcoreConfigPagelist: _Route, term: string, pipe: PipeTransform) {
     return (
-      netcoreConfigPagelist.path?.toLowerCase().includes(term?.toLowerCase())        
+      netcoreConfigPagelist.caption?.toLowerCase().includes(term?.toLowerCase())        
     );
 }
 
