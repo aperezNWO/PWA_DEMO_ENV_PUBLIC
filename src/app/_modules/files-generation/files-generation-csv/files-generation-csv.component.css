@@ -51,3 +51,37 @@ select {
 a, a:visited, a:hover, a:active {
   color: #007bff; 
 }
+
+
+/* Dark theme styles for the table */
+
+.dark-theme-table {
+  width: 100%;
+  background-color: #1e1e1e;
+  color : #1378dd;
+  /*color: #ffffff;*/
+}
+
+.dark-theme-table .mat-header-cell {
+  background-color: #2c2c2c;
+  /*color: #ffffff;*/
+  color : #1378dd;
+  font-weight: bold;
+}
+
+.dark-theme-table .mat-row {
+  background-color: #1e1e1e;
+  color : #1378dd;
+  /*color: #e0e0e0;*/
+}
+
+.dark-theme-table .mat-row:hover {
+  background-color: #2a2a2a;
+  color : #1378dd;
+}
+
+.dark-theme-table .mat-cell {
+  border-bottom-color: #404040;
+    color : #1378dd;
+  /*color: #e0e0e0;*/
+}

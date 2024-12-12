@@ -95,31 +95,31 @@
       <hr>       
       <div class="mat-elevation-z8">
           <!-- INIT DATAGRID -->
-          <table  mat-table  [dataSource]="td_dataSource"  class="mat-elevation-z8" aria-label="td_paginator">
+          <table  mat-table  [dataSource]="td_dataSource"  class="mat-elevation-z8 dark-theme-table" aria-label="td_paginator">
             <ng-container matColumnDef="id_Column">
-              <th mat-header-cell *matHeaderCellDef>id_Column</th>
-              <td mat-cell *matCellDef="let element">{{ element.id_Column}}</td>
+              <th class= "mat-header-cell" mat-header-cell *matHeaderCellDef>id_Column</th>
+              <td class="mat-cell"         mat-cell *matCellDef="let element">{{ element.id_Column}}</td>
             </ng-container>
             <ng-container matColumnDef="pageName">
-              <th mat-header-cell *matHeaderCellDef>pageName</th>
-              <td mat-cell *matCellDef="let element">{{ element.pageName }}</td>
+              <th class="mat-header-cell" mat-header-cell *matHeaderCellDef>pageName</th>
+              <td class="mat-cell"         mat-cell *matCellDef="let element">{{ element.pageName }}</td>
             </ng-container>
             <ng-container matColumnDef="accessDate">
-              <th mat-header-cell *matHeaderCellDef>accessDate</th>
-              <td mat-cell *matCellDef="let element">{{ element.accessDate | date: 'dd/MM/yyyy HH:mm a' }}</td>
+              <th class="mat-header-cell" mat-header-cell *matHeaderCellDef>accessDate</th>
+              <td class="mat-cell"         mat-cell        *matCellDef="let element">{{ element.accessDate | date: 'dd/MM/yyyy HH:mm a' }}</td>
             </ng-container>
             <ng-container matColumnDef="ipValue">
-              <th mat-header-cell *matHeaderCellDef>ipValue</th>
-              <td mat-cell *matCellDef="let element">{{ element.ipValue }}</td>
+              <th class="mat-header-cell" mat-header-cell *matHeaderCellDef>ipValue</th>
+              <td class="mat-cell"         mat-cell        *matCellDef="let element">{{ element.ipValue }}</td>
             </ng-container>
-            <tr mat-header-row *matHeaderRowDef="rf_displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: rf_displayedColumns"></tr>
+            <tr class="mat-header-row" mat-header-row *matHeaderRowDef="rf_displayedColumns"></tr>
+            <tr class="mat-row"        mat-row        *matRowDef="let row; columns: rf_displayedColumns"></tr>
           </table>
           <!-- END DATAGRID -->
           <!-- INIT PAGINATOR -->
           <hr>
           <mat-paginator #td_paginator="matPaginator"
-              class="demo-paginator" 
+              class="demo-paginator dark-theme-table mat-option"
               [length]=""
               [pageSize]="10"
               [pageSizeOptions]="[5, 10, 25, 100]"

@@ -331,5 +331,13 @@
         -- [_] OPEN CV / c++ builder.
 
         -- [_] TENSORFLOW / JAVASCRIPT.  
+
+-- [_] revisión general.
+
+-- [_] speech service.
+
+-- [_] material grid theme.
+
+-- [_] revisar funcionalidad zip.
         
 ////////////////////////////////////////////////////////////////////////////////

@@ -1,7 +1,5 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
-/*@import '~bootstrap/dist/css/bootstrap.min.css';*/
-
 :root {
    --dark-theme-bg: #04101d;
    /*--dark-theme-bg: #343a40;*/
@@ -93,5 +91,3 @@ a:visited
 {
   color:#ccc;  
 }
-
-

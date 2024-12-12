@@ -434,7 +434,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
                   this.td_textStatus           = "Se encontraron [" + td_logEntry.length + "] registros ";
                   this.td_formSubmit           = false;
                   //
-                  const utterance = new SpeechSynthesisUtterance( this.td_textStatus_xls  );
+                  const utterance = new SpeechSynthesisUtterance( this.td_textStatus  );
                   speechSynthesis.speak(utterance);  
                 },
                 error           : (err: Error)      => {

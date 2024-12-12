@@ -85,26 +85,26 @@
   <hr>  
   <!-- TABLE  / INICIO -->
   <div class="mat-elevation-z8" align="center">
-    <table  mat-table  [dataSource]="csv_dataSource"  class="mat-elevation-z8" aria-label="rf_paginator">
+    <table  mat-table  [dataSource]="csv_dataSource"  class="mat-elevation-z8  dark-theme-table" aria-label="rf_paginator">
         <ng-container matColumnDef="id_Column">
-          <th mat-header-cell *matHeaderCellDef>id_Column</th>
-          <td mat-cell *matCellDef="let element">{{ element.id_Column}}</td>
+          <th class="mat-header-cell" mat-header-cell mat-header-cell *matHeaderCellDef>id_Column</th>
+          <td class="mat-cell"        mat-cell *matCellDef="let element">{{ element.id_Column}}</td>
         </ng-container>
         <ng-container matColumnDef="ciudad">
-          <th mat-header-cell *matHeaderCellDef>ciudad</th>
-          <td mat-cell *matCellDef="let element">{{ element.ciudad }}</td>
+          <th class="mat-header-cell" mat-header-cell *matHeaderCellDef>ciudad</th>
+          <td class="mat-cell"        mat-cell *matCellDef="let element">{{ element.ciudad }}</td>
         </ng-container>
         <ng-container matColumnDef="nombreCompleto">
-            <th mat-header-cell *matHeaderCellDef>nombreCompleto</th>
-            <td mat-cell *matCellDef="let element">{{ element.nombreCompleto }}</td>
+            <th class="mat-header-cell" mat-header-cell *matHeaderCellDef>nombreCompleto</th>
+            <td class="mat-cell"        mat-cell *matCellDef="let element">{{ element.nombreCompleto }}</td>
           </ng-container>
-        <tr mat-header-row *matHeaderRowDef="this.csv_displayedColumns"></tr>
+        <tr class="mat-header-row" mat-header-row *matHeaderRowDef="this.csv_displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: this.csv_displayedColumns"></tr>
     </table>
       <!-- PAGINADOR / INICIO -->
       <hr>
       <mat-paginator #csv_paginator="matPaginator"
-          class="demo-paginator" 
+          class="demo-paginator dark-theme-table" 
           [length]=""
           [pageSize]="5"
           [pageSizeOptions]="[5, 10, 25, 100]"
