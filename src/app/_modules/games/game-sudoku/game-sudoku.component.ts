@@ -210,6 +210,11 @@ export class SudokuComponent implements OnInit, AfterViewInit {
               this.progress = Math.round((100 * event.loaded) / event.total);
             } else if (event instanceof HttpResponse) {
               //
+              this.message          = "[Se generó correctamente]";
+              //
+              const utterance = new SpeechSynthesisUtterance( this.message  );
+              speechSynthesis.speak(utterance);  
+              //
               console.log('RESPONSE : ' + event.body);
               //
               let  jsondata  = event.body;
@@ -239,11 +244,6 @@ export class SudokuComponent implements OnInit, AfterViewInit {
                 this.board.push(row);
               }
             }
-            //
-            this.message          = "[Se generó correctamente]";
-            //
-            const utterance = new SpeechSynthesisUtterance( this.message  );
-            speechSynthesis.speak(utterance);  
           },
           error: (err: any) => {
             //
@@ -285,6 +285,9 @@ export class SudokuComponent implements OnInit, AfterViewInit {
     {
         //
         this.message          = "[Favor seleccione archivo...]";
+        //
+        const utterance = new SpeechSynthesisUtterance( this.message  );
+        speechSynthesis.speak(utterance); 
     }
   }
   //
@@ -325,9 +328,7 @@ export class SudokuComponent implements OnInit, AfterViewInit {
         solveSudoku = this.algorithmService._SolveSudoku(this._sudokuGenerated);
         break;
       case 2: // Typescript
-        solveSudoku = this.algorithmService._SolveSudoku_NodeJS(
-          this._sudokuGenerated,
-        );
+        solveSudoku = this.algorithmService._SolveSudoku_NodeJS(this._sudokuGenerated);
         break;
       default:
         return;
@@ -335,6 +336,11 @@ export class SudokuComponent implements OnInit, AfterViewInit {
     //
     const solveSudokuObserver = {
       next: (jsondata: string) => {
+        //
+        this.message = "[Se resolvió correctamente]";
+        //
+        const utterance = new SpeechSynthesisUtterance( this.message  );
+        speechSynthesis.speak(utterance); 
         //
         console.log('[SUDOKU - SOLVE] - (return): ' + jsondata);
         //
@@ -375,8 +381,6 @@ export class SudokuComponent implements OnInit, AfterViewInit {
         console.log('[SUDOKU - SOLVE] -  (COMPLETE)');
         //
         this.btnSolveCaption = '[RESOLVER]';
-        //
-        this.message = "[Se resolvió correctamente]";
         //
         this.selectedFiles = undefined;
         //

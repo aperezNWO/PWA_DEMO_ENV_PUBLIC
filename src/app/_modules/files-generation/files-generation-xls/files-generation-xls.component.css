@@ -1,6 +1,6 @@
 .mat-column-id_Column {
     flex: none;
-    width: 100px;
+    width: 50px;
     font-size: x-small;
   }
 
@@ -12,13 +12,13 @@
 
 .mat-column-accessDate {
   flex: none;
-  width: 100px;
+  width: 150px;
   font-size: x-small;
 }
 
 .mat-column-ipValue {
   flex: none;
-  width: 100px;
+  width: 80;
   font-size: x-small;
 }
     

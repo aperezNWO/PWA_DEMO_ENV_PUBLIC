@@ -445,6 +445,8 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
                   this.td_formSubmit           = false;
                   this.td_buttonCaption        = "[Buscar]";
                   //
+                  const utterance = new SpeechSynthesisUtterance( this.td_textStatus  );
+                  speechSynthesis.speak(utterance);  
                 },
                 complete        : ()                => {
                   //
@@ -481,7 +483,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
                   //
                   console.log('TEMPLATE DRIVEN - NODE.JS - RETURN VALUE (count)   : ' + td_logEntry_node_js_json.length);
                   //
-                  const utterance = new SpeechSynthesisUtterance( this.td_textStatus_xls  );
+                  const utterance = new SpeechSynthesisUtterance( this.td_textStatus  );
                   speechSynthesis.speak(utterance);  
                 },
                 error           : (err: Error)      => {
@@ -492,7 +494,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
                   this.td_formSubmit           = false;
                   this.td_buttonCaption        = "[Buscar]";
                   //
-                  const utterance = new SpeechSynthesisUtterance( this.td_textStatus_xls  );
+                  const utterance = new SpeechSynthesisUtterance( this.td_textStatus  );
                   speechSynthesis.speak(utterance);  
                 },
                 complete        : ()                => {
@@ -530,7 +532,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
                   this.td_textStatus           = "Se encontraron [" + td_logEntry_springboot_java_json.length + "] registros ";
                   this.td_formSubmit           = false;
                   //
-                  const utterance = new SpeechSynthesisUtterance( this.td_textStatus_xls  );
+                  const utterance = new SpeechSynthesisUtterance( this.td_textStatus  );
                   speechSynthesis.speak(utterance);  
                 },
                 error           : (err: Error)      => {

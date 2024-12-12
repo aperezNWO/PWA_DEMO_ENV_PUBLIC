@@ -332,12 +332,12 @@
 
         -- [_] TENSORFLOW / JAVASCRIPT.  
 
--- [_] revisión general.
-
 -- [_] speech service.
 
--- [_] material grid theme.
+-- [x] material grid theme.
 
--- [_] revisar funcionalidad zip.
-        
+-- [x] revisar funcionalidad zip.
+
+-- [>] revisión general.
+
 ////////////////////////////////////////////////////////////////////////////////

@@ -68,8 +68,6 @@ export class IndexComponent {
   //
   @ViewChildren(BaseSortableHeader) headers: QueryList<BaseSortableHeader> | undefined;
   //
-  //public ConfigRoleString: string = SiteRole.RoleConfig.toString();
-  //
   public _loading = new BehaviorSubject<boolean>(true);
   public _total   = new BehaviorSubject<number>(0);
   public _search$ = new Subject<void>();
