@@ -19,7 +19,6 @@ import { HTTP_INTERCEPTORS               } from '@angular/common/http';
 import { RouterModule, Routes            } from '@angular/router';
 import { HashLocationStrategy            } from '@angular/common';
 import { LocationStrategy                } from '@angular/common';
-import { NgbModule                       } from '@ng-bootstrap/ng-bootstrap'
 import { AppComponent                    } from './app.component';
 import { HomeWebComponent                } from './_modules/home/home-web/home-web.component';
 import { PageNotFoundComponent           } from './_modules/home/page-not-found/page-not-found.component';
@@ -43,25 +42,21 @@ import { GameTictactoeComponent          } from './_modules/games/game-tictactoe
 import { BoardComponent                  } from './_modules/games/game-tictactoe/board/board.component';
 import { SquareComponent                 } from './_modules/games/game-tictactoe/square/square.component';
 import { GameWebComponent                } from './_modules/games/game-web/game-web.component';
-import { HanoiTowersComponent            } from './_modules/games/game-hanoi/game-hanoi.component';
-import { TowerComponent                  } from './_modules/games/game-hanoi/tower/tower.component';
 import { GameHanoiAutoComponent          } from './_modules/games/game-hanoi-auto/game-hanoi-auto.component';
 import { ChatComponent                   } from './_modules/miscelaneous/chat/chat/chat.component';
 import { ChartComponent                  } from './_modules/miscelaneous/chart/chart.component';
 import { MiscelaneousComponent           } from './_modules/miscelaneous/miscelaneous/miscelaneous.component';
 import { OcrPhotoCaptureComponent        } from './_modules/miscelaneous/ocr-photo-capture/ocr-photo-capture.component';
 import { UnitTestingComponent            } from './_modules/_unitttesting/unit-testing.component';
-import { AppRoutingModule                } from './app-routing.module';
 import { LogType                         } from './_models/entityInfo.model';
 import { MCSDService                     } from './_services/mcsd.service';
 import { _ConfigService                  } from './_services/-config.service';
+import { AppRoutingModule                } from './app-routing.module';
 import { finalize, tap                   } from 'rxjs';
 import { NgxSignaturePadModule           } from '@eve-sama/ngx-signature-pad';
-import { IndexComponent                  } from './_modules/home/index/index.component';
-//
-const routes : Routes = [
- 
-];
+import { NgbHighlight, NgbModule                } from '@ng-bootstrap/ng-bootstrap';
+import { NgbPaginationModule, NgbAlertModule    } from '@ng-bootstrap/ng-bootstrap';
+import { IndexComponent                         } from './_modules/home/index/index.component';
 //
 export function initialize(_configService: _ConfigService) {
   // 
@@ -136,7 +131,6 @@ export class CustomErrorHandler implements ErrorHandler {
         UnitTestingComponent,
         SudokuComponent,
         GameTictactoeComponent,
-        HanoiTowersComponent,
         GameHanoiAutoComponent,
         GameWebComponent,
         OcrPhotoCaptureComponent,
@@ -179,10 +173,12 @@ export class CustomErrorHandler implements ErrorHandler {
         MatTabsModule,
         MatFormFieldModule,
         NgbModule,
+        NgbHighlight,
+        NgbPaginationModule, 
+        NgbAlertModule,     
         NgxSignaturePadModule,
         BoardComponent,
         SquareComponent,
-        TowerComponent,
         AppRoutingModule,
         //RouterModule,
         //RouterModule.forRoot(routes, { useHash: true }),

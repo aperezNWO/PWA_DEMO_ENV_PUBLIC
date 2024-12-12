@@ -33,9 +33,9 @@
     <!--BOTONES INICIO -->
     <hr>
     <div class="form-group" align="center">
-      <input type="button" value="[NUEVO]"   (click)="this.newGame();"   [disabled]="(this.IsNewGame == true)">
+      <input class="btn btn-primary"   type="button" value="[NUEVO]"   (click)="this.newGame();"   [disabled]="(this.IsNewGame == true)">
       |
-      <input type="button" value="[INICIAR]" (click)="this.startGame();" [disabled]="(this.IsNewGame == false)">
+      <input class="btn btn-success"   type="button" value="[INICIAR]" (click)="this.startGame();" [disabled]="(this.IsNewGame == false)">
     </div>
     <!--BOTONES FIN    -->
     <hr>

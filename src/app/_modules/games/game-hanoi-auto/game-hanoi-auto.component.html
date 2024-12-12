@@ -13,9 +13,9 @@
 <hr>
 <div align="center">
   <p>Moves: {{ hanoiEngine.moves$ | async }}</p>
-  <button (click)="hanoiEngine.manual_resetGame()" [disabled]="!(this.hanoiEngine._checkWinCondition())">Reset Game</button>
+  <button class="btn btn-primary"   (click)="hanoiEngine.manual_resetGame()" [disabled]="!(this.hanoiEngine._checkWinCondition())">Reset Game</button>
   |
-  <button (click)="hanoiEngine.auto_startGame()" [disabled]="((this.hanoiEngine._steps.length > 0))">Start Game</button> 
+  <button class="btn btn-success"   (click)="hanoiEngine.auto_startGame()" [disabled]="((this.hanoiEngine._steps.length > 0))">Start Game</button> 
 </div>
 <hr />
 <hr />

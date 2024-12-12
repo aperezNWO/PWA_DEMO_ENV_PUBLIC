@@ -39,12 +39,12 @@
     </div>
     <!-- INICIO BUTTONS PANEL        -->
     <div class="form-group" align="right" style="display: block;" >
-      <button class="button" type="submit" [disabled]="(this.rf_buttonCaption != '[Buscar]')">{{this.rf_buttonCaption}}</button>
+      <button class="btn btn-primary"     type="submit" [disabled]="(this.rf_buttonCaption != '[Buscar]')">{{this.rf_buttonCaption}}</button>
       |
-      <button class="button" type="button" (click)="this.rf_newSearch()">[Nueva]</button>
+      <button class="btn btn-primary"     type="button" (click)="this.rf_newSearch()">[Nueva]</button>
       |
-      <button class="button" type="button" (click)="SetCSVLink()" [disabled]="(this.rf_buttonCaption_csv != '[Generar CSV]')">{{this.rf_buttonCaption_csv}}</button>
-     </div>
+      <button class="btn btn-success"     ype="button" (click)="SetCSVLink()" [disabled]="(this.rf_buttonCaption_csv != '[Generar CSV]')">{{this.rf_buttonCaption_csv}}</button>
+     </div> 
     <!-- FIN BUTTONS PANEL                     -->
     <!-- INICIO MENSAJES VALIDACION (REACTIVE) -->
     <div *ngIf="(this.rf_searchForm.invalid)" class="form-group" align="right">

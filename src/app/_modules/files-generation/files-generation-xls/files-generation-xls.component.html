@@ -51,11 +51,11 @@
         </div>
         <!-- INICIO PANEL DE BOTONES    -->
         <div class="form-group" align="right" style="display: block;">
-          <button class="button" type="submit" [disabled]="(this.td_buttonCaption != '[Buscar]')">{{this.td_buttonCaption}}</button>
+          <button class="btn btn-primary"    type="submit" [disabled]="(this.td_buttonCaption != '[Buscar]')">{{this.td_buttonCaption}}</button>
           |
-          <button class="button" type="button" (click)="td_newSearch()">[Nueva]</button>
+          <button class="btn btn-primary"    type="button" (click)="td_newSearch()">[Nueva]</button>
           |
-          <button class="button" type="button" (click)="td_GenerarInformeXLSValidate()" [disabled]="(this.td_buttonCaption_xls != '[Generar Excel]')">{{this.td_buttonCaption_xls}}</button>
+          <button class="btn btn-success"    type="button" (click)="td_GenerarInformeXLSValidate()" [disabled]="(this.td_buttonCaption_xls != '[Generar Excel]')">{{this.td_buttonCaption_xls}}</button>
         </div>
         <!-- FIN    PANEL DE BOTONES    -->
         <!-- INICIO MENSAJES DE VALIDACION -->

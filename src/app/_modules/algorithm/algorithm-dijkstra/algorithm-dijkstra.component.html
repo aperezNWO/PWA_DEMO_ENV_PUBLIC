@@ -65,13 +65,13 @@
         <hr />
         <!-- BOTONES / INICIO -->
         <div class="form-group" align="right">
-            <input id="GetGraph" type="button" title="[GENERAR]"   value="[GENERAR]"   (click)="this._GetGraph()" 
+            <input class="btn btn-primary"    id="GetGraph" type="button" title="[GENERAR]"   value="[GENERAR]"   (click)="this._GetGraph()" 
             [disabled]="(this.getGraphIdle == true)">
             |
-            <input id="NewGraph" type="button" title="[REINICIAR]" value="[REINICIAR]" (click)="this._ResetControls()"
+            <input class="btn btn-secondary"  id="NewGraph" type="button" title="[REINICIAR]" value="[REINICIAR]" (click)="this._ResetControls()"
             [disabled]="((this.PointListHidden.length == 0) && (this.MatrixListHidden.length == 0))">
-            <hr />
-            <input id="GetPDF" type="button" title="[GENERAR PDF]" value="[GENERAR PDF]" (click)="this._GetPDF()"
+            |
+            <input class="btn btn-success"    id="GetPDF" type="button" title="[GENERAR PDF]" value="[GENERAR PDF]" (click)="this._GetPDF()"
             [disabled]="  ( (this.PointListHidden.length  == 0) 
                          && (this.MatrixListHidden.length == 0))
                          || (this.selectedIndex           == 0)">

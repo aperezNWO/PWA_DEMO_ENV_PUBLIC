@@ -13,7 +13,7 @@
         <div class="form-group" align="left" *ngIf="(messageinputform.valid==false) && (messageinputform.submitted)">
                 Pleae enter all fields
         </div>
-        <input type="submit" value="[SEND MESSAGE]">
+        <input type="submit" class="btn btn-primary" value="[SEND MESSAGE]">
 </form>
 </div>
 <hr>
@@ -23,7 +23,7 @@
         <table class="message-data" *ngFor="let message of this.parentData.reverse()">
         <tr>
            <td>
-                <span>
+                <span class="alert alet-secondary">
                         {{message}}           
                 </span>
           </td>

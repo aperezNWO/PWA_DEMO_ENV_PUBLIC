@@ -90,11 +90,11 @@
     <!-- BUTTONS / INICIO -->
     <hr/>
     <div align="left">
-        <input id="GetSudoku"   type="button" [value]="this.btnGenerateCaption"   (click)="this._GetSudoku()"
+        <input class="btn btn-primary" id="GetSudoku"   type="button" [value]="this.btnGenerateCaption"   (click)="this._GetSudoku()"
         [disabled]="(this.btnGenerateCaption == '[...generando...]') ||
                     (this.btnSolveCaption    == '[...resolviendo...]')">
         |
-        <input id="SolveSudoku" type="submit" [value]="this.btnSolveCaption" 
+        <input class="btn btn-success" id="SolveSudoku" type="submit" [value]="this.btnSolveCaption" 
         [disabled]="(this.btnSolveCaption    == '[...resolviendo...]') ||
                     (this.btnGenerateCaption == '[...generando...]')   ||
                     (this.sudokuSolved       == true)">
@@ -103,7 +103,7 @@
     <!-- GENERAR PDF / INICIO -->
     <hr/>   
     <div *ngIf="(this.board.length>0)" align="left">
-        <input type="button" name="btnGeneratePdf" value="[GENERAR PDF]" (click)="this._GetPdf()" [disabled]="(this.message == '[...Generando PDF...]')">
+        <input class="btn btn-secondary" type="button" name="btnGeneratePdf" value="[GENERAR PDF]" (click)="this._GetPdf()" [disabled]="(this.message == '[...Generando PDF...]')">
     </div>
     <!-- GENERAR PDF / FIN    -->
 </form>
