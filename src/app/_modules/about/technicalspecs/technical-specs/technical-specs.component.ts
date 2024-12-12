@@ -44,10 +44,17 @@ export class TechnicalSpecsComponent {
       return this.__baseUrlNodeJsChat;
     }
     //
+    public get _baseUrlSpringBootJava(): string
+    {
+      return this.__baseUrlSprinbBootJava;
+    }
+    //
     protected __baseUrlNetCore        : string = '';
     protected __baseUrlNodeJs         : string = '';
     protected __baseUrlNodeJsChat     : string = '';
     protected __baseUrlNodeJsOcr      : string = '';
+    protected __baseUrlSprinbBootJava : string = '';
+
     //
     ////////////////////////////////////////////////////////////////  
     // METODOS - [EVENT HANDLERS]
@@ -65,12 +72,13 @@ export class TechnicalSpecsComponent {
     ) 
     {
       ////
-      this._appBrand           = this._configService.getConfigValue('appBrand');
-      this._appVersion         = this._configService.getConfigValue('appVersion');
-      this.__baseUrlNetCore    = this._configService.getConfigValue('baseUrlNetCore');
-      this.__baseUrlNodeJs     = this._configService.getConfigValue('baseUrlNodeJs');
-      this.__baseUrlNodeJsChat = this._configService.getConfigValue('baseUrlNodeJsChat');
-      this.__baseUrlNodeJsOcr  = this._configService.getConfigValue('baseUrlNodeJsOcr');
+      this._appBrand                = this._configService.getConfigValue('appBrand');
+      this._appVersion              = this._configService.getConfigValue('appVersion');
+      this.__baseUrlNetCore         = this._configService.getConfigValue('baseUrlNetCore');
+      this.__baseUrlNodeJs          = this._configService.getConfigValue('baseUrlNodeJs');
+      this.__baseUrlNodeJsChat      = this._configService.getConfigValue('baseUrlNodeJsChat');
+      this.__baseUrlNodeJsOcr       = this._configService.getConfigValue('baseUrlNodeJsOcr');
+      this.__baseUrlSprinbBootJava  = this._configService.getConfigValue('baseUrlSpringBootJava');
 
       //
       console.log("baseUrlNetCore : " + this.__baseUrlNetCore);
