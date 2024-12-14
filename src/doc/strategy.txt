@@ -338,8 +338,28 @@
 
 -- [x] revisar funcionalidad zip.
 
+-- [>] read config from database.
+
 -- [>] revisión general.
 
--- [>] read config from database.
+        -- [_] sudoku button.
+        
+        -- [_] main page menu.
+
+                -- [_] hover animation.
+
+        -- [_] techical specs revision.
+        
+        -- [_] navigation menu display error.
+
+        -- [_] borrar texto mcsd.
+
+        -- [_] menu items.
+
+                -- [_] computer vision.
+
+                -- [_] amigo secreto.
+
+        -- [_] routers caption text correction.
 
 ////////////////////////////////////////////////////////////////////////////////
