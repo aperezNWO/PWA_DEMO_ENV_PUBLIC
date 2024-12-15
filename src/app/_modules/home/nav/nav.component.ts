@@ -52,10 +52,6 @@ export class NavComponent {
       'text': '[GENERAR ARCHIVOS]',
     },
     {
-      'url' : '/Index', 
-      'text': '[INDEX]',
-    }, 
-    {
       'url' : '/AAboutWeb', 
       'text': '[ACERCA DE]',
     },    

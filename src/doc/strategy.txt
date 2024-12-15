@@ -379,6 +379,14 @@
 
                -- [_] swagger links.
 
+               -- [_] ngb grid.
+
         -- [_] navigation menu display error.
+
+        -- [_] replace topics with index.
+
+                -- [_] router fields : id, source code, topic, feature. 
+
+                -- [_] master detail field. 
 
 ////////////////////////////////////////////////////////////////////////////////
