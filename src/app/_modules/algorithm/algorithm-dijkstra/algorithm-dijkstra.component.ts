@@ -3,7 +3,7 @@ import { Observable                                  } from 'rxjs';
 import { _languageName, _vertexSize                  } from 'src/app/_models/entityInfo.model';
 import { PdfService                                  } from 'src/app/_engines/pdf.engine';
 import { UtilManager                                 } from 'src/app/_engines/util.engine';
-import { MCSDService                                 } from '../../../_services/mcsd.service';
+import { BackendService                                 } from '../../../_services/backend.service';
 import { CustomErrorHandler                          } from '../../../app.module';
 //
 @Component({
@@ -57,10 +57,10 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
   ////////////////////////////////////////////////////////////////
   // EVENT HANDLERS //////////////////////////////////////////////  
   ////////////////////////////////////////////////////////////////
-  constructor(public mcsdService: MCSDService, public customErrorHandler: CustomErrorHandler, public pdfService : PdfService)
+  constructor(public backendService: BackendService, public customErrorHandler: CustomErrorHandler, public pdfService : PdfService)
   {
      //
-     mcsdService.SetLog(this.pageTitle,"PAGE_DIJKSTRA_DEMO");
+     backendService.SetLog(this.pageTitle,"PAGE_DIJKSTRA_DEMO");
   }
   //
   ngOnInit(): void {
@@ -202,13 +202,13 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
                   return;
             break;
             case 1 :  // c#
-              randomVertexInfo       = this.mcsdService.getRandomVertex(_vertexSize,_sourcePoint);
+              randomVertexInfo       = this.backendService.getRandomVertex(_vertexSize,_sourcePoint);
             break;
             case 2:   // c++
-              randomVertexInfo       = this.mcsdService.getRandomVertexCpp(_vertexSize,_sourcePoint);
+              randomVertexInfo       = this.backendService.getRandomVertexCpp(_vertexSize,_sourcePoint);
             break;
             case 3:   // springboot
-              randomVertexInfo       = this.mcsdService.getRandomVertexSpringBoot(_vertexSize,_sourcePoint);
+              randomVertexInfo       = this.backendService.getRandomVertexSpringBoot(_vertexSize,_sourcePoint);
             break;
         }
         //

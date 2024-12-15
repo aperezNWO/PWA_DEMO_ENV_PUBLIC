@@ -1,7 +1,7 @@
 import { Component, OnInit                   } from '@angular/core';
 import { HttpEventType, HttpResponse         } from '@angular/common/http';
 import { Observable                          } from 'rxjs';
-import { MCSDService                         } from '../../../_services/mcsd.service';
+import { BackendService                         } from '../../../_services/backend.service';
 import { CustomErrorHandler                  } from '../../../app.module';
 import { UtilManager                         } from 'src/app/_engines/util.engine';
 //
@@ -37,11 +37,11 @@ export class FilesGenerationZIPComponent {
   //--------------------------------------------------------------------------
   // EVENT HANDLERS / CONSTRUCTORS  
   //--------------------------------------------------------------------------
-  constructor(private mcsdService: MCSDService, customErrorHandler: CustomErrorHandler) {
+  constructor(private backendService: BackendService, customErrorHandler: CustomErrorHandler) {
     //
     console.log(this.pageTitle + " - [INGRESO]");
     //
-    mcsdService.SetLog(this.pageTitle,"PAGE_ZIP_DEMO");
+    backendService.SetLog(this.pageTitle,"PAGE_ZIP_DEMO");
   }
   //--------------------------------------------------------------------------
   // METODOS COMUNES
@@ -67,7 +67,7 @@ export class FilesGenerationZIPComponent {
         //
         this.currentFile = file;
         //
-        this.mcsdService.upload(this.currentFile).subscribe({
+        this.backendService.upload(this.currentFile).subscribe({
           next: (event: any) => {
             if (event.type === HttpEventType.UploadProgress) 
             {
@@ -119,13 +119,13 @@ export class FilesGenerationZIPComponent {
       //
       let fileName!         : Observable<string>; 
       //
-      fileName              = this.mcsdService.SetZip(uploadedFileName);
+      fileName              = this.backendService.SetZip(uploadedFileName);
       //
       const setZipObserver  = {
            //
            next: (p_zipFile: string) => { 
             //
-            let downloadLink_1 = (this.mcsdService._baseUrlNetCore + p_zipFile);
+            let downloadLink_1 = (this.backendService._baseUrlNetCore + p_zipFile);
             //
             while (downloadLink_1.indexOf("\"") > -1) 
                 downloadLink_1 = downloadLink_1.replace("\"", "");

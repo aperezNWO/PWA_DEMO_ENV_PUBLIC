@@ -6,7 +6,7 @@ import { _environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 
-export class _ConfigService {
+export class ConfigService {
   constructor(protected http: HttpClient) {}
   // ONLY HAPPENS ONCE ON APPMODULE LOADING
   loadConfig() {

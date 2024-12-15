@@ -1,7 +1,7 @@
 // chat.service.ts
 import { Injectable          } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { _ConfigService      } from './-config.service';
+import { ConfigService      } from './config.service';
 import { of                  } from 'rxjs';
 import io from 'socket.io-client';
 
@@ -13,7 +13,7 @@ export class ChatService {
   onNewMessage = new Subject<any>();
 
   //
-  constructor(configService : _ConfigService) {
+  constructor(configService : ConfigService) {
     //
     let url =  configService.getConfigValue("baseUrlNodeJsChat");
     //

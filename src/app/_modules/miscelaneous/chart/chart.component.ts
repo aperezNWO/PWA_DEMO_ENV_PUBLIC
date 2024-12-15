@@ -3,7 +3,7 @@ import { FormBuilder } from '@angular/forms';
 import { Chart, registerables } from 'chart.js';
 import { Observable } from 'rxjs';
 import { PdfService } from 'src/app/_engines/pdf.engine';
-import { MCSDService } from 'src/app/_services/mcsd.service';
+import { BackendService } from 'src/app/_services/backend.service';
 import { CustomErrorHandler } from 'src/app/app.component';
 import { FilesGenerationCSVComponent } from '../../files-generation/files-generation-csv/files-generation-csv.component';
 
@@ -41,7 +41,7 @@ export class ChartComponent implements OnInit  {
     //--------------------------------------------------------------------------
     // EVENT HANDLERS FORMIULARIO 
     //--------------------------------------------------------------------------
-    constructor(private mcsdService: MCSDService, private formBuilder: FormBuilder, private customErrorHandler : CustomErrorHandler, public pdfService: PdfService) {
+    constructor(private backendService: BackendService, private formBuilder: FormBuilder, private customErrorHandler : CustomErrorHandler, public pdfService: PdfService) {
       //
       Chart.register(...registerables);
     }
@@ -66,7 +66,7 @@ export class ChartComponent implements OnInit  {
         const statBackgroundColor : string[]          = [];
         //
         let csv_informeLogRemoto!                 : Observable<string>;
-        csv_informeLogRemoto                      = this.mcsdService.getInformeRemotoCSV_STAT();
+        csv_informeLogRemoto                      = this.backendService.getInformeRemotoCSV_STAT();
         //
         const csv_observer = {
           next: (csv_data: string)     => { 
@@ -160,7 +160,7 @@ export class ChartComponent implements OnInit  {
       const statBackgroundColor : string[]          = [];
       // 
       let td_informeLogStat!                 : Observable<string>;
-      td_informeLogStat                      = this.mcsdService.getLogStatPOST();
+      td_informeLogStat                      = this.backendService.getLogStatPOST();
       //
       const td_observer = {
         next: (td_logEntry: string)     => { 

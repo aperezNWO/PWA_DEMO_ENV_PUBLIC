@@ -1,8 +1,8 @@
 import { Component, VERSION                } from '@angular/core';
 import { CustomErrorHandler                } from 'src/app/app.module';
 import { HttpClient                        } from '@angular/common/http';
-import { MCSDService                       } from '../../../../_services/mcsd.service';
-import { _ConfigService                    } from 'src/app/_services/-config.service';
+import { BackendService                       } from '../../../../_services/backend.service';
+import { ConfigService                    } from 'src/app/_services/config.service';
 import { Observable                        } from 'rxjs';
 //
 @Component({
@@ -66,8 +66,8 @@ export class TechnicalSpecsComponent {
     //
     constructor(
           public http               : HttpClient, 
-          public _configService     : _ConfigService,
-          private mcsdService       : MCSDService, 
+          public _configService     : ConfigService,
+          private backendService       : BackendService, 
           private customErrorHandler: CustomErrorHandler
     ) 
     {
@@ -86,14 +86,14 @@ export class TechnicalSpecsComponent {
       //
       console.log(this.pageTitle + "- [INGRESO]");
       //
-      mcsdService.SetLog(this.pageTitle,"PAGE_TECH_SPECS");
+      backendService.SetLog(this.pageTitle,"PAGE_TECH_SPECS");
       //
       this._GetWebApiAppVersion();
     }
     //
     private _GetWebApiAppVersion() {
       //
-      let appVersion : Observable<string> = this.mcsdService._GetWebApiAppVersion();
+      let appVersion : Observable<string> = this.backendService._GetWebApiAppVersion();
       //
       const appVersionObserver = {
         next: (jsondata: string)     => { 

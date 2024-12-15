@@ -3,13 +3,13 @@ import { HttpClient, HttpEvent, HttpHandler, HttpHeaders         } from '@angula
 import { HttpRequest, HttpResponse  , HttpInterceptor            } from '@angular/common/http';
 import { Observable                                              } from 'rxjs';
 import { LogEntry, LogType, SearchCriteria                       } from '../_models/entityInfo.model';
-import { _ConfigService                                          } from './-config.service';
+import { ConfigService                                           } from './config.service';
 //
 @Injectable({
   providedIn: 'root'
 })
 //
-export class MCSDService implements OnInit {
+export class BackendService implements OnInit {
     ////////////////////////////////////////////////////////////////  
     // CAMPOS
     ////////////////////////////////////////////////////////////////  
@@ -82,7 +82,7 @@ export class MCSDService implements OnInit {
       console.log("Calling MCSDService initialization...");
       //
     }
-    constructor(public http: HttpClient, public _configService : _ConfigService) {
+    constructor(public http: HttpClient, public _configService : ConfigService) {
       //
       console.log("Calling MCSDService constructor...");
       //

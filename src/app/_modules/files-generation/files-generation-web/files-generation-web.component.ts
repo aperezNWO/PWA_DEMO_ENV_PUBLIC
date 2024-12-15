@@ -1,5 +1,5 @@
 import { Component          } from '@angular/core';
-import { MCSDService        } from '../../../_services/mcsd.service';
+import { BackendService        } from '../../../_services/backend.service';
 import { CustomErrorHandler } from '../../../app.module';
 //
 @Component({
@@ -16,11 +16,11 @@ export class FilesGenerationWebComponent {
   //
   readonly  pageTitle      : string = FilesGenerationWebComponent.PageTitle;
   //
-  constructor(mcsdService : MCSDService, customErrorHandler : CustomErrorHandler)
+  constructor(backendService : BackendService, customErrorHandler : CustomErrorHandler)
   {
     //
     console.log(this.pageTitle + " - [INGRESO]");
     //
-    mcsdService.SetLog(this.pageTitle,"PAGE_FILE_GENERATION_INDEX");
+    backendService.SetLog(this.pageTitle,"PAGE_FILE_GENERATION_INDEX");
   }
 }

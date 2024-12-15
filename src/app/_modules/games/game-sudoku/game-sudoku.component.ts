@@ -3,7 +3,7 @@ import { ViewChild, AfterViewInit     } from '@angular/core';
 import { FormBuilder, NgForm, Validators      } from '@angular/forms';
 import { HttpEventType, HttpResponse  } from '@angular/common/http';
 import { Observable                   } from 'rxjs';
-import { MCSDService                  } from 'src/app/_services/mcsd.service';
+import { BackendService                  } from 'src/app/_services/backend.service';
 import { PdfService                   } from 'src/app/_engines/pdf.engine';
 import { ListItem                     } from 'src/app/_models/entityInfo.model';
 //
@@ -52,7 +52,7 @@ export class SudokuComponent implements OnInit, AfterViewInit {
   });
   pageTitle       : string = '[SUDOKU]';
   //
-  constructor(private algorithmService: MCSDService,private formBuilder: FormBuilder, public pdfEngine: PdfService) {
+  constructor(private algorithmService: BackendService,private formBuilder: FormBuilder, public pdfEngine: PdfService) {
     //
     console.log('[SUDOKU - INGRESO]');
   }

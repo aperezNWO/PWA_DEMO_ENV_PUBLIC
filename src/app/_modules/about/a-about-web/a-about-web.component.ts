@@ -1,6 +1,6 @@
 import { Component          } from '@angular/core';
 import { CustomErrorHandler } from '../../../app.module';
-import { MCSDService        } from '../../../_services/mcsd.service';
+import { BackendService        } from '../../../_services/backend.service';
 //
 @Component({
   selector: 'app-a-about-web',
@@ -16,11 +16,11 @@ export class AAboutWebComponent {
   //
   readonly pageTitle : string = AAboutWebComponent.PageTitle;
   //
-  constructor(private mcsdServiCe: MCSDService, private customErrorHandler: CustomErrorHandler)
+  constructor(private backendServiCe: BackendService, private customErrorHandler: CustomErrorHandler)
   {
       //
       console.log(this.pageTitle + "- [INGRESO]");
       //
-      mcsdServiCe.SetLog(this.pageTitle,"PAGE_ABOUT");
+      backendServiCe.SetLog(this.pageTitle,"PAGE_ABOUT");
   }
 }

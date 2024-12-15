@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { MCSDService                                 } from '../../../_services/mcsd.service';
+import { BackendService                                 } from '../../../_services/backend.service';
 import { CustomErrorHandler                          } from '../../../app.module';
 import { Observable                                  } from 'rxjs';
 import { _languageName                               } from 'src/app/_models/entityInfo.model';
@@ -34,10 +34,10 @@ export class AlgorithmRegExComponent implements OnInit, AfterViewInit {
     @ViewChild('regExSearch')     regExSearch    : any;
     @ViewChild('_languajeList')   _languajeList  : any;
     //
-    constructor(private mcsdService:MCSDService, private customErrorHandler : CustomErrorHandler)
+    constructor(private backendService:BackendService, private customErrorHandler : CustomErrorHandler)
     {
         //
-        mcsdService.SetLog(this.pageTitle,"PAGE_REGEX_DEMO");
+        backendService.SetLog(this.pageTitle,"PAGE_REGEX_DEMO");
     }
     //
     ngOnInit(): void {
@@ -69,7 +69,7 @@ export class AlgorithmRegExComponent implements OnInit, AfterViewInit {
         //
         let xmlInfo!  : Observable<string>;
         //
-        xmlInfo       = this.mcsdService._GetXmlData();
+        xmlInfo       = this.backendService._GetXmlData();
         //
         this.lblStatus = "[..CARGANDO POR FAVOR ESPERERE...]"
         //
@@ -151,11 +151,11 @@ export class AlgorithmRegExComponent implements OnInit, AfterViewInit {
             break;
             case 1 : // C#
                 //
-                regExInfo       = this.mcsdService._RegExEval(tagSearchIndex,textSearchValue);
+                regExInfo       = this.backendService._RegExEval(tagSearchIndex,textSearchValue);
             break;
             case 2: // C++
                 //
-                regExInfo       = this.mcsdService._RegExEval_CPP(tagSearchIndex,textSearchValue);
+                regExInfo       = this.backendService._RegExEval_CPP(tagSearchIndex,textSearchValue);
             break;
         }
         //

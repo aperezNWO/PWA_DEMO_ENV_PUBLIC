@@ -1,8 +1,8 @@
 import { Component, OnInit, VERSION    } from '@angular/core';
 import { Title                         } from '@angular/platform-browser';
 import { CustomErrorHandler            } from 'src/app/app.component';
-import { MCSDService                   } from 'src/app/_services/mcsd.service';
-import { _ConfigService                } from 'src/app/_services/-config.service';
+import { BackendService                   } from 'src/app/_services/backend.service';
+import { ConfigService                } from 'src/app/_services/config.service';
 //
 @Component({
   selector: 'app-nav',
@@ -63,8 +63,8 @@ export class NavComponent {
     //-----------------------------------------------------------------------------------------------------
     constructor(
                 private _customErrorHandler : CustomErrorHandler, 
-                private mcsdService         : MCSDService, 
-                private _configService      : _ConfigService,
+                private backendService         : BackendService, 
+                private _configService      : ConfigService,
                 private titleService        : Title
                ) 
     {
@@ -89,22 +89,22 @@ export class NavComponent {
       let __baseUrlNetCore = this._configService.getConfigValue('baseUrlNetCore');
       let __baseUrlNodeJs  = this._configService.getConfigValue('baseUrlNodeJs');
       //
-      this.mcsdService._baseUrlNetCore = __baseUrlNetCore;
-      this.mcsdService._baseUrlNodeJs  = __baseUrlNodeJs;
+      this.backendService._baseUrlNetCore = __baseUrlNetCore;
+      this.backendService._baseUrlNodeJs  = __baseUrlNodeJs;
       //
       //////////////////////////////////////////////////////
       // CACHE PARA XML
       ///////////////////////////////////////////////////////
       //
-      this.mcsdService._SetXmlDataToCache(__baseUrlNetCore);
+      this.backendService._SetXmlDataToCache(__baseUrlNetCore);
       ///////////////////////////////////////////////////////
       // CACHE PARA PIE CHART
       ///////////////////////////////////////////////////////
-      this.mcsdService._SetSTATPieCache(__baseUrlNetCore);
+      this.backendService._SetSTATPieCache(__baseUrlNetCore);
       ///////////////////////////////////////////////////////
       // CACHE PARA BARCHART
       ///////////////////////////////////////////////////////
-      this.mcsdService._SetSTATBarCache(__baseUrlNetCore);
+      this.backendService._SetSTATBarCache(__baseUrlNetCore);
       //
       let title : string = `${this._appBrand} -- ${this._appEnv} -- ${this._appVersion}`;
       //

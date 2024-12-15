@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild            } from '@angular/core';
 import { CustomErrorHandler   } from '../../../app.module';
-import { MCSDService          } from '../../../_services/mcsd.service';
-import { _ConfigService       } from 'src/app/_services/-config.service';
+import { BackendService          } from '../../../_services/backend.service';
+import { ConfigService       } from 'src/app/_services/config.service';
 import { NavComponent         } from '../nav/nav.component';
 //
 @Component({
@@ -36,15 +36,15 @@ export class HomeWebComponent implements OnInit {
         }
       ];
   //
-  constructor(mcsdService : MCSDService, private _configService: _ConfigService, customErrorHandler : CustomErrorHandler)
+  constructor(backendService : BackendService, private _configService: ConfigService, customErrorHandler : CustomErrorHandler)
   {
       //
       console.log(this.pageTitle + " - [INGRESO]") ;
       //
-      if (mcsdService._baseUrlNetCore != null)
+      if (backendService._baseUrlNetCore != null)
       {
         //
-        mcsdService.SetLog(this.pageTitle,"PAGE_ANGULAR_DEMO_INDEX");
+        backendService.SetLog(this.pageTitle,"PAGE_ANGULAR_DEMO_INDEX");
       }
       //
       this._appBrand  = this._configService.getConfigValue('appBrand');;

@@ -1,6 +1,6 @@
 import { Component          } from '@angular/core';
 import { CustomErrorHandler } from '../../../app.module';
-import { MCSDService        } from '../../../_services/mcsd.service';
+import { BackendService        } from '../../../_services/backend.service';
 
 @Component({
   selector: 'app-contact',
@@ -16,11 +16,11 @@ export class ContactComponent {
   //
   readonly pageTitle : string = ContactComponent.PageTitle;
   //
-  constructor(private mcsdServiCe: MCSDService, private customErrorHandler: CustomErrorHandler)
+  constructor(private backendService: BackendService, private customErrorHandler: CustomErrorHandler)
   {
       //
       console.log(this.pageTitle + "- [INGRESO]");
       //
-      mcsdServiCe.SetLog(this.pageTitle,"PAGE_CONTACT");
+      backendService.SetLog(this.pageTitle,"PAGE_CONTACT");
   }
 }

@@ -3,7 +3,7 @@ import { FormBuilder, Validators                       } from '@angular/forms';
 import { MatTableDataSource                            } from '@angular/material/table';
 import { MatPaginator                                  } from '@angular/material/paginator';
 import { LogEntry,SearchCriteria, _languageName        } from '../../../_models/entityInfo.model';
-import { MCSDService                                   } from '../../../_services/mcsd.service';
+import { BackendService                                   } from '../../../_services/backend.service';
 import { CustomErrorHandler                            } from '../../../app.component';
 import { UtilManager                                   } from 'src/app/_engines/util.engine';
 import { BehaviorSubject, delay, Observable, tap       } from 'rxjs';
@@ -95,7 +95,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
     //--------------------------------------------------------------------------
     // EVENT HANDLERS FORMIULARIO 
     //--------------------------------------------------------------------------
-    constructor(private mcsdService: MCSDService, private formBuilder: FormBuilder, private customErrorHandler : CustomErrorHandler) {
+    constructor(private backendService: BackendService, private formBuilder: FormBuilder, private customErrorHandler : CustomErrorHandler) {
       //
     }
     //
@@ -231,7 +231,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
       //
       let rf_informeLogRemoto!  : Observable<LogEntry[]>;
       //
-      rf_informeLogRemoto       = this.mcsdService.getLogRemoto(_searchCriteria);
+      rf_informeLogRemoto       = this.backendService.getLogRemoto(_searchCriteria);
       //
       const logSearchObserver   = {
         //
@@ -288,7 +288,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
       //
       let rf_excelFileName!                   : Observable<string>;
       //
-      rf_excelFileName                        = this.mcsdService.getInformeExcel(this.rf_model);
+      rf_excelFileName                        = this.backendService.getInformeExcel(this.rf_model);
       //
       this.rf_ExcelDownloadLink               = "#";
       //
@@ -307,7 +307,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
           //
           let urlFile                = UtilManager.DebugHostingContent(_excelFileName);
           //
-          this.rf_ExcelDownloadLink  = `${this.mcsdService._baseUrlNetCore}/wwwroot/xlsx/${urlFile}`;
+          this.rf_ExcelDownloadLink  = `${this.backendService._baseUrlNetCore}/wwwroot/xlsx/${urlFile}`;
           //
           this.rf_textStatus_xls     = "[Descargar Excel]";
         },
@@ -419,7 +419,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
               // 
               let td_informeLogRemoto!                 : Observable<LogEntry[]>;
               //      
-              td_informeLogRemoto                      = this.mcsdService.getLogRemoto(td_searchCriteria);
+              td_informeLogRemoto                      = this.backendService.getLogRemoto(td_searchCriteria);
               //
               const td_observer = {
                 next: (td_logEntry: LogEntry[])     => { 
@@ -468,7 +468,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
               // 
               let td_informeLogRemoto_NodeJs!   : Observable<string>;
               // 
-              td_informeLogRemoto_NodeJs        = this.mcsdService.getLogRemotoNodeJS(td_searchCriteria);
+              td_informeLogRemoto_NodeJs        = this.backendService.getLogRemotoNodeJS(td_searchCriteria);
               //
               const td_observer_node_js = {
                 next: (td_logEntry_node_js: string)     => { 
@@ -517,7 +517,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
               // 
               let td_informeLogRemoto_SprinbBootJava!   : Observable<string>;
               // 
-              td_informeLogRemoto_SprinbBootJava        = this.mcsdService.getLogRemotoSprinbBootJava(td_searchCriteria);
+              td_informeLogRemoto_SprinbBootJava        = this.backendService.getLogRemotoSprinbBootJava(td_searchCriteria);
               //
               const td_observer_sprinbbootjava = {
                 next: (td_logEntry_sprinbboot_java: string)     => { 
@@ -574,7 +574,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
       //
       let td_excelFileName!                   : Observable<string>;
       //
-      td_excelFileName                        = this.mcsdService.getInformeExcel(this.rf_model);
+      td_excelFileName                        = this.backendService.getInformeExcel(this.rf_model);
       //
       this.td_ExcelDownloadLink               = "#";
       //
@@ -593,7 +593,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
           //
           let urlFile                = UtilManager.DebugHostingContent(_excelFileName); 
           //
-          this.td_ExcelDownloadLink  = `${this.mcsdService._baseUrlNetCore}/wwwroot/xlsx/${urlFile}`;
+          this.td_ExcelDownloadLink  = `${this.backendService._baseUrlNetCore}/wwwroot/xlsx/${urlFile}`;
           //
           this.td_textStatus_xls     = "[Descargar Excel]";
         },

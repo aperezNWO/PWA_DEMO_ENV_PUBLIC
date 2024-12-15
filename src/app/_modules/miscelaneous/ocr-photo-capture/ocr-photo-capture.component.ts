@@ -1,5 +1,5 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild,Renderer2    } from '@angular/core';
-import { MCSDService              } from 'src/app/_services/mcsd.service';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild    } from '@angular/core';
+import { BackendService           } from 'src/app/_services/backend.service';
 import { NgxSignaturePadComponent } from '@eve-sama/ngx-signature-pad/lib/ngx-signature-pad.component';
 import { NgxSignatureOptions      } from '@eve-sama/ngx-signature-pad/lib/types/ngx-signature-pad';
 import { _languageName            } from 'src/app/_models/entityInfo.model';
@@ -51,7 +51,7 @@ export class OcrPhotoCaptureComponent implements AfterViewInit , OnInit {
   selectedIndexEngines    : number  = 0;
   
   //
-  constructor(public mcsdService : MCSDService)
+  constructor(public backendService : BackendService)
   {
       //
   }
@@ -75,7 +75,7 @@ export class OcrPhotoCaptureComponent implements AfterViewInit , OnInit {
     this.__engineList = new Array();
     this.__engineList.push( new _languageName(0,"(SELECCIONE OPCION..)"                        ,false));        
     this.__engineList.push( new _languageName(1,"(OCR / TESSERACT - javascript)"               ,true));        
-    //this.__engineList.push( new _languageName(2,"(COMPUTER VISION / OPENCV - javascript) "     ,false));        
+    //this.__engineList.push( new _languageName(2,"(COMPUTER VISION / OPENCV - javascript) "   ,false));        
     //this.__sourceList.push( new _languageName(2,"(COMPUTER VISION / TENSORFLOW)"  ,false));        
     //-----------------------------------------------------------------------------
   }
@@ -158,7 +158,7 @@ export class OcrPhotoCaptureComponent implements AfterViewInit , OnInit {
     this.saveImageButtonDisabled = true;
 
     //
-    this.mcsdService.uploadBase64Image(base64ImageString).subscribe(
+    this.backendService.uploadBase64Image(base64ImageString).subscribe(
       (response) => {
         //
         console.log('Image uploaded successfully:', response);

@@ -6,14 +6,12 @@
 
         -- [_] LOCAL_IIS.
         -- [_] WebApi.
-        -- [_] mcsd.
         -- [_] angulardemo.
 
 -- [>] SOURCE github.com        
 
         -- [_] PUBLIC SOURCES.                        
                 -- [x] [mcsdWebApíTFS] (tff)      -->  (github) "mcsd_public".
-                -- [x] [AngularMCSD]   (github)   -->  (github) "AngularMCSD_public".
                 -- [>] Update sources.
 
 -- [>] HOSTING  
@@ -98,18 +96,7 @@
 -- ERRORS
 =====================================================================
 
-   -- [x]  Access to XMLHttpRequest at 'https://mcsd.somee.com/demos/GetConsultaLogStatGet' 
-           from origin 'https://mcsdbackup.somee.com' has been blocked by CORS policy:
-           No 'Access-Control-Allow-Origin' header is present on the requested resource.
-
-   -- [x]  Access to XMLHttpRequest at 'https://mcsd.somee.com/demos/GenerarInformeCSVJsonSTAT' 
-           from origin 'https://mcsdbackup.somee.com' has been blocked by CORS policy: 
-           No 'Access-Control-Allow-Origin' header is present on the requested resource.
-
-   -- [_]  index.js:489 [webpack-dev-server] WARNING
-           E:\pablo.perez\dev\AngularMCSD\AngularMCSD\src\app\_modules\files-generation\files-generation-xls\files-generation-xls.component.ts depends on 'html2canvas'. 
-           CommonJS or AMD dependencies can cause optimization bailouts.
-           For more info see: https://angular.io/guide/build#configuring-commonjs-dependencies
+-- [_]
 
 =====================================================================
 -- OBSERVACIONES / REDES SOCIALES
@@ -310,6 +297,8 @@
 
 -- [x] material grid theme.
 
+-- [x] delete word mcsd.
+
 -- [_] SSR.
 
 -- [_] PWA / SPA.
@@ -341,6 +330,22 @@
         -- [_] OPEN CV / c++ builder.
 
         -- [_] TENSORFLOW / JAVASCRIPT.  
+        
+-- [_] TOPICS.        
+
+        -- [_] index aditional fields.
+
+        -- [_] ngb grid.
+
+                -- [_] voice search.
+
+        -- [_] angular - topics.
+
+                        -- [_] route attribute.
+
+        -- [_] angular - features.
+
+                        -- [_] route attribute.        
 
 -- [_] speech service.
 
@@ -370,6 +375,10 @@
 
                -- [_] iterate from DATABASE.
 
+               -- [_] swagger links.
+
         -- [_] navigation menu display error.
+
+
 
 ////////////////////////////////////////////////////////////////////////////////

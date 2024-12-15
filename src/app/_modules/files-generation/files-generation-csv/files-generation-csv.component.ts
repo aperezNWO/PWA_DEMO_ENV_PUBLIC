@@ -3,7 +3,7 @@ import { FormBuilder, Validators                       } from '@angular/forms';
 import { MatTableDataSource                            } from '@angular/material/table';
 import { MatPaginator                                  } from '@angular/material/paginator';
 import { BehaviorSubject, delay, Observable, tap       } from 'rxjs';
-import { MCSDService                                   } from '../../../_services/mcsd.service';
+import { BackendService                                   } from '../../../_services/backend.service';
 import { CustomErrorHandler                            } from '../../../app.module';
 import { PersonEntity, SearchCriteria, _languageName   } from '../../../_models/entityInfo.model';
 //
@@ -75,7 +75,7 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
     // EVENT HANDLERS FORMIULARIO 
     //--------------------------------------------------------------------------
     //
-    constructor(public mcsdService: MCSDService, public formBuilder: FormBuilder, public customErrorHandler : CustomErrorHandler) {
+    constructor(public backendService: BackendService, public formBuilder: FormBuilder, public customErrorHandler : CustomErrorHandler) {
       //
     }
     //
@@ -114,7 +114,7 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
             case 1: // (.NET CORE)
                 //
                 let csv_informeLogRemoto!                 : Observable<string>;
-                csv_informeLogRemoto                      = this.mcsdService.getInformeRemotoCSV();
+                csv_informeLogRemoto                      = this.backendService.getInformeRemotoCSV();
                 //
                 const csv_observer = {
                   next: (csv_data: string)     => { 
@@ -160,7 +160,7 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
             case 2: // NODE.JS
                 //
                 let csv_informeLogRemoto_NodeJS!                 : Observable<string>;
-                csv_informeLogRemoto_NodeJS                      = this.mcsdService.getInformeRemotoCSV_NodeJS();
+                csv_informeLogRemoto_NodeJS                      = this.backendService.getInformeRemotoCSV_NodeJS();
                 //
                 const csv_observer_node_js = {
                   next: (csv_data_node_js: string)     => { 
@@ -206,7 +206,7 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
             case 3: // SPRINGBOOT / JAVA
                 // 
                 let td_informeLogRemoto_SprinbBootJava!   : Observable<string>;
-                td_informeLogRemoto_SprinbBootJava        = this.mcsdService.getPersonsSprinbBootJava();
+                td_informeLogRemoto_SprinbBootJava        = this.backendService.getPersonsSprinbBootJava();
                 //
                 const td_observer_sprinbbootjava = {
                   next: (td_persons_sprinbboot_java: string)     => { 
@@ -258,12 +258,12 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
         console.log(FilesGenerationCSVComponent.PageTitle + " - [SET CSV Link]");
         //
         let csv_link!                 : Observable<string>;
-        csv_link                      = this.mcsdService.getCSVLink();
+        csv_link                      = this.backendService.getCSVLink();
         //
         const csv_link_observer = {
           next: (p_csv_link: string)          => { 
             //
-            let fileUrl        = this.mcsdService._baseUrlNetCore + p_csv_link;
+            let fileUrl        = this.backendService._baseUrlNetCore + p_csv_link;
             //
             let downloadLink_1 = fileUrl;
             //

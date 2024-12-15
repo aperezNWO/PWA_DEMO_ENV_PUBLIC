@@ -1,5 +1,5 @@
 import { Component, ViewChild        } from '@angular/core';
-import { MCSDService                 } from '../../../_services/mcsd.service';
+import { BackendService                 } from '../../../_services/backend.service';
 import { CustomErrorHandler          } from '../../../app.module';
 import { HttpEventType, HttpResponse } from '@angular/common/http';
 import { UtilManager                 } from 'src/app/_engines/util.engine';
@@ -31,12 +31,12 @@ export class FilesGenerationPDFComponent {
   ////////////////////////////////////////////////////////////////
   // EVENT HANDLERS
   ////////////////////////////////////////////////////////////////
-  constructor(private mcsdService: MCSDService, customErrorHandler : CustomErrorHandler)
+  constructor(private backendService: BackendService, customErrorHandler : CustomErrorHandler)
   {
     //
     console.log(FilesGenerationPDFComponent.PageTitle + "- [INGRESO]");
     //
-    mcsdService.SetLog(this.pageTitle,"PAGE_PDF_DEMO");
+    backendService.SetLog(this.pageTitle,"PAGE_PDF_DEMO");
   }  
   //
   public onNewPdf()
@@ -64,7 +64,7 @@ export class FilesGenerationPDFComponent {
       //
       let _subjectName : string = this.subjectName.nativeElement.value;
       //
-      this.GetPDFUrl            = this.mcsdService.GetPDF(_subjectName);
+      this.GetPDFUrl            = this.backendService.GetPDF(_subjectName);
       //
       const pdf_observer = {
         next: (event : any)     => 
@@ -80,7 +80,7 @@ export class FilesGenerationPDFComponent {
               if (resultArray.length > 0) {
                   //
                   this.pdfFileName   = resultArray[1];
-                  var fileUrl        = this.mcsdService._baseUrlNetCore + '/wwwroot/output/uploadedfiles/pdf/' + this.pdfFileName;
+                  var fileUrl        = this.backendService._baseUrlNetCore + '/wwwroot/output/uploadedfiles/pdf/' + this.pdfFileName;
                   var fileLocalPath  = resultArray[2];
                   var imagePath      = resultArray[3];
                   //

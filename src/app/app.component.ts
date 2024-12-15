@@ -6,8 +6,8 @@ import { HomeWebComponent              } from './_modules/home/home-web/home-web
 import { AlgorithmWebComponent         } from './_modules/algorithm/algorithm-web/algorithm-web.component';
 import { FilesGenerationWebComponent   } from './_modules/files-generation/files-generation-web/files-generation-web.component';
 import { AAboutWebComponent            } from './_modules/about/a-about-web/a-about-web.component';
-import { MCSDService                   } from './_services/mcsd.service';
-import { _ConfigService                } from './_services/-config.service';
+import { BackendService                   } from './_services/backend.service';
+import { ConfigService                } from './_services/config.service';
 //
 @Component({
   selector    : 'app-root',
@@ -39,8 +39,8 @@ export class AppComponent implements OnInit {
                 private router              : Router,
                 public  route               : ActivatedRoute,  
                 private _customErrorHandler : CustomErrorHandler, 
-                private mcsdService         : MCSDService, 
-                private _configService      : _ConfigService,
+                private backendService         : BackendService, 
+                private _configService      : ConfigService,
                 private titleService        : Title
                ) 
     {
@@ -56,25 +56,25 @@ export class AppComponent implements OnInit {
       let __baseUrlNodeJsOcr  = this._configService.getConfigValue('baseUrlNodeJsOcr');
       let __baseUrlSpringBoot = this._configService.getConfigValue('baseUrlSpringBootJava');
       //
-      this.mcsdService._baseUrlNetCore    = __baseUrlNetCore;
-      this.mcsdService._baseUrlNodeJs     = __baseUrlNodeJs;
-      this.mcsdService._baseUrlNodeJs     = __baseUrlNodeJs;
-      this.mcsdService._baseUrlNodeJsOcr  = __baseUrlNodeJsOcr;
-      this.mcsdService._baseUrlSpringBoot = __baseUrlSpringBoot;
+      this.backendService._baseUrlNetCore    = __baseUrlNetCore;
+      this.backendService._baseUrlNodeJs     = __baseUrlNodeJs;
+      this.backendService._baseUrlNodeJs     = __baseUrlNodeJs;
+      this.backendService._baseUrlNodeJsOcr  = __baseUrlNodeJsOcr;
+      this.backendService._baseUrlSpringBoot = __baseUrlSpringBoot;
       //
       //////////////////////////////////////////////////////
       // CACHE PARA XML
       ///////////////////////////////////////////////////////
       //
-      this.mcsdService._SetXmlDataToCache(__baseUrlNetCore);
+      this.backendService._SetXmlDataToCache(__baseUrlNetCore);
       ///////////////////////////////////////////////////////
       // CACHE PARA PIE CHART
       ///////////////////////////////////////////////////////
-      this.mcsdService._SetSTATPieCache(__baseUrlNetCore);
+      this.backendService._SetSTATPieCache(__baseUrlNetCore);
       ///////////////////////////////////////////////////////
       // CACHE PARA BARCHART
       ///////////////////////////////////////////////////////
-      this.mcsdService._SetSTATBarCache(__baseUrlNetCore);
+      this.backendService._SetSTATBarCache(__baseUrlNetCore);
       //
       let title : string = `${this._appBrand} - ${this._appVersion}`;
       //

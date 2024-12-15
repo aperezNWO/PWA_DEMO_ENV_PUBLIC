@@ -49,8 +49,8 @@ import { MiscelaneousComponent           } from './_modules/miscelaneous/miscela
 import { OcrPhotoCaptureComponent        } from './_modules/miscelaneous/ocr-photo-capture/ocr-photo-capture.component';
 import { UnitTestingComponent            } from './_modules/_unitttesting/unit-testing.component';
 import { LogType                         } from './_models/entityInfo.model';
-import { MCSDService                     } from './_services/mcsd.service';
-import { _ConfigService                  } from './_services/-config.service';
+import { BackendService                     } from './_services/backend.service';
+import { ConfigService                  } from './_services/config.service';
 import { AppRoutingModule                } from './app-routing.module';
 import { finalize, tap                   } from 'rxjs';
 import { NgxSignaturePadModule           } from '@eve-sama/ngx-signature-pad';
@@ -58,7 +58,7 @@ import { NgbHighlight, NgbModule                } from '@ng-bootstrap/ng-bootstr
 import { NgbPaginationModule, NgbAlertModule    } from '@ng-bootstrap/ng-bootstrap';
 import { IndexComponent                         } from './_modules/home/index/index.component';
 //
-export function initialize(_configService: _ConfigService) {
+export function initialize(_configService: ConfigService) {
   // 
   return () => _configService.loadConfig();
 }
@@ -98,7 +98,7 @@ export class LoggingInterceptor implements HttpInterceptor {
 //
 export class CustomErrorHandler implements ErrorHandler {
     //
-    constructor(public mcsdService : MCSDService) { } 
+    constructor(public backendService : BackendService) { } 
     //
     handleError(_error: Error): void 
     { 
@@ -107,7 +107,7 @@ export class CustomErrorHandler implements ErrorHandler {
       //
       let logType : LogType = LogType.Error
       //
-      this.mcsdService.SetLog("[CUSTOM ERROR HANDLING]",_error.message,logType);
+      this.backendService.SetLog("[CUSTOM ERROR HANDLING]",_error.message,logType);
     } 
 }
 //
@@ -148,11 +148,11 @@ export class CustomErrorHandler implements ErrorHandler {
         {  provide: LocationStrategy, useClass: HashLocationStrategy },
         {  provide: ErrorHandler, useClass: CustomErrorHandler },
         [
-          _ConfigService,
+          ConfigService,
           {
             provide   : APP_INITIALIZER,
             useFactory: initialize,
-            deps      : [_ConfigService,MCSDService,HttpClient],
+            deps      : [ConfigService,BackendService,HttpClient],
             multi     : true
           }
         ],
@@ -195,7 +195,7 @@ export class AppModule {
     //-----------------------------------------------------------------------------------------------------
     constructor(public customErrorHandler : CustomErrorHandler, 
                 public loggingInterceptor : LoggingInterceptor,
-                public mcsdService        : MCSDService,) 
+                public backendService     : BackendService,) 
     {
       //
     }
