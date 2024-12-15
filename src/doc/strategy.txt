@@ -298,13 +298,9 @@
        -- [_] "Loading component" (from ngbgrid).
        -- [_] Curruculum entry.
 
--- [_] SSR.
+-- [x] ngb grids.
 
--- [_] PWA / SPA.
-
--- [_] ngb grids.
-
--- [_] modules / engines.
+////////////////////////////////////////////////////////////////////////////////
 
 -- [x] spring boot menu entry.
 
@@ -312,11 +308,25 @@
 
 -- [X] OCR PHOTO CAPTURE.
 
--- [_] https://opencv.org/
+-- [x] material grid theme.
 
--- [_] https://www.tensorflow.org/?hl=es-419
+-- [_] SSR.
 
--- [_] COMPUTER VISION.
+-- [_] PWA / SPA.
+
+-- [_] modules / engines.
+
+-- [_] CONTACT FORM.
+
+        -- [_] oAuth.
+
+-- [_] computer vision
+
+       -- [_] https://opencv.org/
+
+       -- [_] https://www.tensorflow.org/?hl=es-419
+
+-       -- [_] COMPUTER VISION.
 
         -- [_] OPEN CV / JAVASCRIPT.   
 
@@ -334,32 +344,32 @@
 
 -- [_] speech service.
 
--- [x] material grid theme.
+-- [_] read config from database.
 
--- [x] revisar funcionalidad zip.
+-- [_] revisión general.
 
--- [>] read config from database.
-
--- [>] revisión general.
-
-        -- [_] sudoku button.
+        -- [x] sudoku button.
         
+        -- [x] routers caption text correction.
+
+        -- [X] menu items.
+
+                -- [X] computer vision.
+
+                -- [X] amigo secreto.
+
         -- [_] main page menu.
+
+                -- [_] menu items.
 
                 -- [_] hover animation.
 
         -- [_] techical specs revision.
-        
+
+               -- [_] iterate from list.
+
+               -- [_] iterate from DATABASE.
+
         -- [_] navigation menu display error.
-
-        -- [_] borrar texto mcsd.
-
-        -- [_] menu items.
-
-                -- [_] computer vision.
-
-                -- [_] amigo secreto.
-
-        -- [_] routers caption text correction.
 
 ////////////////////////////////////////////////////////////////////////////////

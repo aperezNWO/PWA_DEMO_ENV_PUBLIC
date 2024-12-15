@@ -16,6 +16,26 @@ export class HomeWebComponent implements OnInit {
   static PageTitle            : string             = '[HOME]';
   @ViewChild('nav') nav!      : NavComponent;
   //
+      //
+      pages =[
+        {
+          'url': '/Miscelaneous', 
+          'text': '[MISCELANEOUS]',
+        },  
+        {
+          'url': '/GamesWeb', 
+          'text': '[GAMES]',
+        },    
+        {
+          'url': '/AlgorithmWeb',
+          'text': '[ALGORITMOS]',
+        },
+        {
+          'url': '/FilesGenerationWeb', 
+          'text': '[GENERAR ARCHIVOS]',
+        }
+      ];
+  //
   constructor(mcsdService : MCSDService, private _configService: _ConfigService, customErrorHandler : CustomErrorHandler)
   {
       //

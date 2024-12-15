@@ -1,1 +1,9 @@
-<div align="center"><h4>Welcome to {{this._appBrand}}!</h4></div>
+<div align="center">
+    <h4>Welcome to {{this._appBrand}}!</h4>
+    <hr>
+    <span *ngFor="let page of pages">
+        <span *ngIf="page" style="padding:5px;">
+            <a routerLink="/{{page.url}}"><span align="left">{{page.text}}</span></a>
+        </span>
+    </span>
+</div>

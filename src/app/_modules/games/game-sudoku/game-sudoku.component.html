@@ -98,14 +98,15 @@
         [disabled]="(this.btnSolveCaption    == '[...resolviendo...]') ||
                     (this.btnGenerateCaption == '[...generando...]')   ||
                     (this.sudokuSolved       == true)">
+        <!-- GENERAR PDF / INICIO -->
+        <span *ngIf="(this.board.length>0)" align="left">
+            |
+            <input class="btn btn-secondary" type="button" name="btnGeneratePdf" value="[GENERAR PDF]" (click)="this._GetPdf()" [disabled]="(this.message == '[...Generando PDF...]')">
+        </span>
+        <!-- GENERAR PDF / FIN    -->
     </div>
     <!-- BUTTONS / FIN        -->
-    <!-- GENERAR PDF / INICIO -->
-    <hr/>   
-    <div *ngIf="(this.board.length>0)" align="left">
-        <input class="btn btn-secondary" type="button" name="btnGeneratePdf" value="[GENERAR PDF]" (click)="this._GetPdf()" [disabled]="(this.message == '[...Generando PDF...]')">
-    </div>
-    <!-- GENERAR PDF / FIN    -->
+
 </form>
 <hr />
 <div align="right"><a routerLink="/GamesWeb">[Volver al Menú]</a></div>
