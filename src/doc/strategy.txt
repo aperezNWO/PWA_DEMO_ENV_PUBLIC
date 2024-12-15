@@ -299,6 +299,8 @@
 
 -- [x] delete word mcsd.
 
+-- [_] hosting files cleanup service.
+
 -- [_] SSR.
 
 -- [_] PWA / SPA.
@@ -378,7 +380,5 @@
                -- [_] swagger links.
 
         -- [_] navigation menu display error.
-
-
 
 ////////////////////////////////////////////////////////////////////////////////
