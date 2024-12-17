@@ -299,10 +299,6 @@
 
 -- [x] delete word mcsd.
 
--- [_] django python backend.
-
-        -- [_] https://code.visualstudio.com/docs/python/tutorial-fastapi
-
 -- [_] hosting files cleanup service.
 
 -- [_] SSR.
@@ -369,12 +365,6 @@
 
                 -- [X] amigo secreto.
 
-        -- [_] main page menu.
-
-                -- [_] menu items.
-
-                -- [_] hover animation.
-
         -- [_] techical specs revision.
 
                -- [_] iterate from list.
@@ -397,6 +387,20 @@
 
                 -- [_] master detail field. 
 
+        -- [_] main page menu.
+
+                -- [_] menu items.
+
+                -- [_] hover animation.
+
+                -- [_] programming languages links to index.
+
 -- [_] download csv / xls /pdf file as zip.
+
+-- [_] django python backend.
+
+        -- [_] https://code.visualstudio.com/docs/python/tutorial-fastapi
+
+-- [_] opencv.js basic shape recognition.
 
 ////////////////////////////////////////////////////////////////////////////////
