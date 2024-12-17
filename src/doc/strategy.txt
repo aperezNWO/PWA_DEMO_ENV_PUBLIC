@@ -299,6 +299,10 @@
 
 -- [x] delete word mcsd.
 
+-- [_] django python backend.
+
+        -- [_] https://code.visualstudio.com/docs/python/tutorial-fastapi
+
 -- [_] hosting files cleanup service.
 
 -- [_] SSR.
@@ -381,6 +385,8 @@
 
                -- [_] ngb grid.
 
+               -- [_] ngb grid hover detail.
+
         -- [_] navigation menu display error.
 
         -- [_] replace topics with index.
@@ -390,5 +396,7 @@
                 -- [_] router from external file. 
 
                 -- [_] master detail field. 
+
+-- [_] download csv / xls /pdf file as zip.
 
 ////////////////////////////////////////////////////////////////////////////////
