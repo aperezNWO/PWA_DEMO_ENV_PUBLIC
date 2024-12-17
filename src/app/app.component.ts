@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {
                 private router              : Router,
                 public  route               : ActivatedRoute,  
                 private _customErrorHandler : CustomErrorHandler, 
-                private backendService         : BackendService, 
+                private backendService      : BackendService, 
                 private _configService      : ConfigService,
                 private titleService        : Title
                ) 

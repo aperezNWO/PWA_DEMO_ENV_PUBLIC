@@ -13,12 +13,13 @@
 				[(ngModel)]="searchTerm"
 			/>
 		</div>
+		<!---
 		<span class="col-sm-auto">
 			<button (click)="startListening()" [disabled]="this.isListening">   <img [src]="this.ListeningButtonIconOn"></button>
 			<button (click)="stopListening()"  [disabled]="!this.isListening">  <img [src]="this.ListeningButtonIconOff"></button>
 			<button (click)="speakText()"      [disabled]="this.isListening">   <img [src]="this.SpeakerIcon"></button>
 			<button (click)="clearText()"                                   >   <img [src]="this.ClearIcon" alt="new search"></button>
-		</span>
+		</span>-->
 		@if (loading | async) {
 			<span class="col col-form-label">[Cargando...]</span>
 		}
@@ -32,12 +33,14 @@
 	<table class="table table-striped table-dark">
 		<thead>
 			<tr>
+				<th scope="col" sortable="id"              >#</th>
 				<th scope="col" sortable="path"            >[Pagina]</th>
 			</tr>
 		</thead>
 		<tbody>
 			@for (featurePage of _Pagelist | async; track featurePage.path) {
-					<tr *ngIf="(featurePage.path != '')">
+					<tr *ngIf="!((featurePage.path == '') && (featurePage.caption == ''))">
+						<th scope="row">{{ featurePage.id }}</th>
 						<td>
 							<a [routerLink]="'/' + featurePage.path">
 								<ngb-highlight [result]="featurePage.caption" [term]="searchTerm" />

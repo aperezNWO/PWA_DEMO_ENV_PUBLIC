@@ -27,38 +27,38 @@ import { MiscelaneousComponent           } from './_modules/miscelaneous/miscela
 import { IndexComponent                  } from './_modules/home/index/index.component';
 export interface _Route extends Route
 {
+    id      : number;
     caption : string;
 }
 
 //
 export const routes: _Route[] = [
-  {  path: 'Home'                  , component: HomeWebComponent                    , caption: ' Home'                                        },
-  {  path: 'Index'                 , component: IndexComponent                      , caption: ' Index'                                       },
-  {  path: ''                      , component: HomeWebComponent                    , caption: ''                                             },
-  {  path: 'AAboutWeb'             , component: AAboutWebComponent                  , caption: ' About- Main Page'                            },
-  {  path: 'Contact'               , component: ContactComponent                    , caption: ' Contact - Main Page'                         },
-  {  path: 'ContactForm'           , component: ContactFormComponent                , caption: ' Contact Form'                                },
-  {  path: 'TechnicalSpecs'        , component: TechnicalSpecsComponent             , caption: ' Technical Specifications'                    },
-  {  path: 'Topics'                , component: TopicsComponent                     , caption: ' Topics - Main Page'                          },
-  {  path: 'AlgorithmWeb'          , component: AlgorithmWebComponent               , caption: ' Algoritmos - Main Page'                      },
-  {  path: 'AlgorithmRegEx'        , component: AlgorithmRegExComponent             , caption: ' Algoritmos - Regular Expression'             },
-  {  path: 'AlgorithmSort'         , component: AlgorithmSortComponent              , caption: ' Algoritmos - Sort'                           },
-  {  path: 'AlgorithmDijkstra'     , component: AlgorithmDijkstraComponent          , caption: ' Algoritmos - Dijkstra - distancia más corta' },
-  {  path: 'FilesGenerationWeb'    , component: FilesGenerationWebComponent         , caption: ' File Generatin  - Main Page'                 },
-  {  path: 'FilesGenerationXLS'    , component: FilesGenerationXLSComponent         , caption: ' File Generation - XLS'                       },
-  {  path: 'FilesGenerationCSV'    , component: FilesGenerationCSVComponent         , caption: ' File Generation - CSV'                       },
-  {  path: 'FilesGenerationPDF'    , component: FilesGenerationPDFComponent         , caption: ' File Generation - PDF'                       },
-  {  path: 'FilesGenerationZIP'    , component: FilesGenerationZIPComponent         , caption: ' File Generation - ZIP    '                   },
-  {  path: 'GamesSudoku'           , component: SudokuComponent                     , caption: ' Games  - Sudoku'                             },
-  {  path: 'GamesTicTacToe'        , component: GameTictactoeComponent              , caption: ' Games  - TicTacToe'                          },
-  {  path: 'GamesHanoiAuto'        , component: GameHanoiAutoComponent              , caption: ' Games  - Hanoi'                              },
-  {  path: 'GamesWeb'              , component: GameWebComponent                    , caption: ' Games  - Main Page'                          },
-  {  path: 'Chat'                  , component: ChatComponent                       , caption: ' Chat Demo'                                   },
-  {  path: 'Chart'                 , component: ChartComponent                      , caption: ' Chart Demo'                                  },
-  {  path: 'OcrPhotoCapture'       , component: OcrPhotoCaptureComponent            , caption: ' Ocr Photo Capture'                           },
-  {  path: 'Miscelaneous'          , component: MiscelaneousComponent               , caption: ' Miscelaneous - Main Page'                    },
-  {  path: '**'                    , component: PageNotFoundComponent               , caption: ''                                             },
-
+  {  id: 0,  path: 'Home'                  , component: HomeWebComponent                    , caption: ' Home'                                        },
+  {  id: 0,  path: 'Index'                 , component: IndexComponent                      , caption: ' Index'                                       },
+  {  id: 0,  path:  ''                     , component: HomeWebComponent                    , caption: ''                                             },
+  {  id: 0,  path: 'AAboutWeb'             , component: AAboutWebComponent                  , caption: ' About- Main Page'                            },
+  {  id: 0,  path: 'Contact'               , component: ContactComponent                    , caption: ' Contact - Main Page'                         },
+  {  id: 0,  path: 'ContactForm'           , component: ContactFormComponent                , caption: ' Contact Form'                                },
+  {  id: 0,  path: 'TechnicalSpecs'        , component: TechnicalSpecsComponent             , caption: ' Technical Specifications'                    },
+  {  id: 0,  path: 'Topics'                , component: TopicsComponent                     , caption: ' Topics - Main Page'                          },
+  {  id: 0,  path: 'AlgorithmWeb'          , component: AlgorithmWebComponent               , caption: ' Algoritmos - Main Page'                      },
+  {  id: 0,  path: 'AlgorithmRegEx'        , component: AlgorithmRegExComponent             , caption: ' Algoritmos - Regular Expression'             },
+  {  id: 0,  path: 'AlgorithmSort'         , component: AlgorithmSortComponent              , caption: ' Algoritmos - Sort'                           },
+  {  id: 0,  path: 'AlgorithmDijkstra'     , component: AlgorithmDijkstraComponent          , caption: ' Algoritmos - Dijkstra - distancia más corta' },
+  {  id: 0,  path: 'FilesGenerationWeb'    , component: FilesGenerationWebComponent         , caption: ' File Generatin  - Main Page'                 },
+  {  id: 0,  path: 'FilesGenerationXLS'    , component: FilesGenerationXLSComponent         , caption: ' File Generation - XLS'                       },
+  {  id: 0,  path: 'FilesGenerationCSV'    , component: FilesGenerationCSVComponent         , caption: ' File Generation - CSV'                       },
+  {  id: 0,  path: 'FilesGenerationPDF'    , component: FilesGenerationPDFComponent         , caption: ' File Generation - PDF'                       },
+  {  id: 0,  path: 'FilesGenerationZIP'    , component: FilesGenerationZIPComponent         , caption: ' File Generation - ZIP    '                   },
+  {  id: 0,  path: 'GamesSudoku'           , component: SudokuComponent                     , caption: ' Games  - Sudoku'                             },
+  {  id: 0,  path: 'GamesTicTacToe'        , component: GameTictactoeComponent              , caption: ' Games  - TicTacToe'                          },
+  {  id: 0,  path: 'GamesHanoiAuto'        , component: GameHanoiAutoComponent              , caption: ' Games  - Hanoi'                              },
+  {  id: 0,  path: 'GamesWeb'              , component: GameWebComponent                    , caption: ' Games  - Main Page'                          },
+  {  id: 0,  path: 'Chat'                  , component: ChatComponent                       , caption: ' Chat Demo'                                   },
+  {  id: 0,  path: 'Chart'                 , component: ChartComponent                      , caption: ' Chart Demo'                                  },
+  {  id: 0,  path: 'OcrPhotoCapture'       , component: OcrPhotoCaptureComponent            , caption: ' Ocr Photo Capture'                           },
+  {  id: 0,  path: 'Miscelaneous'          , component: MiscelaneousComponent               , caption: ' Miscelaneous - Main Page'                    },
+  {  id: 0,  path: '**'                    , component: PageNotFoundComponent               , caption: ''                                             },
 ];
 
 @NgModule({
@@ -66,5 +66,17 @@ export const routes: _Route[] = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {
-    //
+
+    constructor()
+    {
+        //
+        let index : number = 0;
+        //
+        routes.forEach(element => {
+            if (((element.path == '') && (element.caption == ''))==false)
+            {
+              element.id = ++index;
+            }
+        });    
+    }
 }

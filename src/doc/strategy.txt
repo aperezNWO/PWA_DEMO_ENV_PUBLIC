@@ -387,6 +387,8 @@
 
                 -- [_] router fields : id, source code, topic, feature. 
 
+                -- [_] router from external file. 
+
                 -- [_] master detail field. 
 
 ////////////////////////////////////////////////////////////////////////////////

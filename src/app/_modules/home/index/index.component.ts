@@ -3,31 +3,31 @@ import { Directive, EventEmitter, Input, Output            } from '@angular/core
 import { DecimalPipe                                       } from '@angular/common';
 import { _Route, routes                                    } from '../../../app-routing.module';
 import { BehaviorSubject, debounceTime, delay, Observable, of, Subject, switchMap, tap } from 'rxjs';
-
 //
-type _SortColumn = keyof _Route | '';
+type SortDirection = 'asc' | 'desc' | '';
 //
-interface _BaseSortEvent {
-  column: _SortColumn;
-  direction: _SortDirection;
-}
+type SortColumn = keyof _Route | '';
 //
-interface _BaseSearchResult {
-  searchPages : _Route[];
-  total       : number;
-}   
-
-type _SortDirection = 'asc' | 'desc' | '';
 //
-const pagerotate: { [key: string]: _SortDirection } = { asc: 'desc', desc: '', '': 'asc' };
+const pagerotate: { [key: string]: SortDirection } = { asc: 'desc', desc: '', '': 'asc' };
 //
-interface _SearchState {
+interface SearchState {
       page          : number;
       pageSize      : number;
       searchTerm    : string;
-      sortColumn    : _SortColumn;
-      sortDirection : _SortDirection;
+      sortColumn    : SortColumn;
+      sortDirection : SortDirection;
 }
+//
+interface BaseSortEvent {
+  column   : SortColumn;
+  direction: SortDirection;
+}
+//
+interface BaseSearchResult {
+  searchPages : _Route[];
+  total       : number;
+}   
 //
 function matches(netcoreConfigPagelist: _Route, term: string, pipe: PipeTransform) {
     return (
@@ -37,20 +37,20 @@ function matches(netcoreConfigPagelist: _Route, term: string, pipe: PipeTransfor
 
 //
 @Directive({
-  selector: 'th[_sortevent]',
+  selector: 'th[sortevent]',
   host: {
-    '[class.asc]': '_direction === "asc"',
-    '[class.desc]': '_direction === "desc"',
-    '(click)': '_rotatePage()',
+    '[class.asc]' : 'direction === "asc"',
+    '[class.desc]': 'direction === "desc"',
+    '(click)'     : 'rotatePage()',
   },
 })
 class BaseSortableHeader {
   //
-  @Input() sortable: _SortColumn = '';
-  @Input() direction: _SortDirection = '';
-  @Output() sortevent = new EventEmitter<_BaseSortEvent>();
+  @Input() sortable   : SortColumn    = '';
+  @Input() direction  : SortDirection = '';
+  @Output() sortevent = new EventEmitter<BaseSortEvent>();
   //
-  _rotatePage() {
+  rotatePage() {
     this.direction = pagerotate[this.direction];
     this.sortevent.emit({
        column   : this.sortable,
@@ -74,7 +74,7 @@ export class IndexComponent {
   //
   public _Pagelist = new BehaviorSubject<_Route[]>([]);
   //
-  public _state: _SearchState = {
+  public _state: SearchState = {
     page: 1,
     pageSize: 10,
     searchTerm: '',
@@ -145,11 +145,11 @@ export class IndexComponent {
     }
   }
   //
-  private _search(): Observable<_BaseSearchResult> {
+  private _search(): Observable<BaseSearchResult> {
     //
     let _searchPages: any;
     let _total: any;
-    let _searchResult: _BaseSearchResult = { searchPages: _searchPages, total: _total };
+    let _searchResult: BaseSearchResult = { searchPages: _searchPages, total: _total };
 
     // 0. get state
     const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
@@ -214,20 +214,20 @@ export class IndexComponent {
     this._set({ searchTerm });
   }
   //
-  set sortColumn(sortColumn: _SortColumn) {
+  set sortColumn(sortColumn: SortColumn) {
     this._set({ sortColumn });
   }
   //
-  set sortDirection(sortDirection: _SortDirection) {
+  set sortDirection(sortDirection: SortDirection) {
     this._set({ sortDirection });
   }
   //
-  private _set(patch: Partial<_SearchState>) {
+  private _set(patch: Partial<SearchState>) {
     Object.assign(this._state, patch);
     this._search$.next();
   }
   //
-  onSort({ column, direction }: _BaseSortEvent) {
+  onSort({ column, direction }: BaseSortEvent) {
     // resetting other headers
     this.headers?.forEach((header) => {
       if (header.sortable !== column) {

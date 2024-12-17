@@ -49,8 +49,8 @@ import { MiscelaneousComponent           } from './_modules/miscelaneous/miscela
 import { OcrPhotoCaptureComponent        } from './_modules/miscelaneous/ocr-photo-capture/ocr-photo-capture.component';
 import { UnitTestingComponent            } from './_modules/_unitttesting/unit-testing.component';
 import { LogType                         } from './_models/entityInfo.model';
-import { BackendService                     } from './_services/backend.service';
-import { ConfigService                  } from './_services/config.service';
+import { BackendService                  } from './_services/backend.service';
+import { ConfigService                   } from './_services/config.service';
 import { AppRoutingModule                } from './app-routing.module';
 import { finalize, tap                   } from 'rxjs';
 import { NgxSignaturePadModule           } from '@eve-sama/ngx-signature-pad';
