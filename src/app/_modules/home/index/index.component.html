@@ -13,13 +13,12 @@
 				[(ngModel)]="searchTerm"
 			/>
 		</div>
-		<!---
 		<span class="col-sm-auto">
 			<button (click)="startListening()" [disabled]="this.isListening">   <img [src]="this.ListeningButtonIconOn"></button>
 			<button (click)="stopListening()"  [disabled]="!this.isListening">  <img [src]="this.ListeningButtonIconOff"></button>
 			<button (click)="speakText()"      [disabled]="this.isListening">   <img [src]="this.SpeakerIcon"></button>
 			<button (click)="clearText()"                                   >   <img [src]="this.ClearIcon" alt="new search"></button>
-		</span>-->
+		</span>
 		@if (loading | async) {
 			<span class="col col-form-label">[Cargando...]</span>
 		}
