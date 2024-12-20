@@ -3,7 +3,7 @@ import { FormBuilder } from '@angular/forms';
 import { Chart, registerables } from 'chart.js';
 import { Observable } from 'rxjs';
 import { PdfService } from 'src/app/_engines/pdf.engine';
-import { BackendService } from 'src/app/_services/backend.service';
+import { BackendService } from 'src/app/_services/BackendService/backend.service';
 import { CustomErrorHandler } from 'src/app/app.component';
 import { FilesGenerationCSVComponent } from '../../files-generation/files-generation-csv/files-generation-csv.component';
 

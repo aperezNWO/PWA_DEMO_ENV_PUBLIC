@@ -6,8 +6,8 @@ import { HomeWebComponent              } from './_modules/home/home-web/home-web
 import { AlgorithmWebComponent         } from './_modules/algorithm/algorithm-web/algorithm-web.component';
 import { FilesGenerationWebComponent   } from './_modules/files-generation/files-generation-web/files-generation-web.component';
 import { AAboutWebComponent            } from './_modules/about/a-about-web/a-about-web.component';
-import { BackendService                   } from './_services/backend.service';
-import { ConfigService                } from './_services/config.service';
+import { BackendService                   } from './_services/BackendService/backend.service';
+import { ConfigService                } from './_services/ConfigService/config.service';
 //
 @Component({
   selector    : 'app-root',

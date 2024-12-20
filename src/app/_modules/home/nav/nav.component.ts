@@ -1,8 +1,8 @@
 import { Component, OnInit, VERSION    } from '@angular/core';
 import { Title                         } from '@angular/platform-browser';
 import { CustomErrorHandler            } from 'src/app/app.component';
-import { BackendService                   } from 'src/app/_services/backend.service';
-import { ConfigService                } from 'src/app/_services/config.service';
+import { BackendService                   } from 'src/app/_services/BackendService/backend.service';
+import { ConfigService                } from 'src/app/_services/ConfigService/config.service';
 //
 @Component({
   selector: 'app-nav',

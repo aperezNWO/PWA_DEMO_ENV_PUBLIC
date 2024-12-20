@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { BackendService                                 } from '../../../_services/backend.service';
+import { BackendService                                 } from '../../../_services/BackendService/backend.service';
 import { CustomErrorHandler                          } from '../../../app.module';
 import { Observable                                  } from 'rxjs';
 import { _languageName                               } from 'src/app/_models/entityInfo.model';

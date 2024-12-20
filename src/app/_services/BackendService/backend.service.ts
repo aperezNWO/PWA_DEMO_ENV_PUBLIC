@@ -2,8 +2,8 @@ import { Injectable, OnInit                                      } from '@angula
 import { HttpClient, HttpEvent, HttpHandler, HttpHeaders         } from '@angular/common/http';
 import { HttpRequest, HttpResponse  , HttpInterceptor            } from '@angular/common/http';
 import { Observable                                              } from 'rxjs';
-import { LogEntry, LogType, SearchCriteria                       } from '../_models/entityInfo.model';
-import { ConfigService                                           } from './config.service';
+import { LogEntry, LogType, SearchCriteria                       } from '../../_models/entityInfo.model';
+import { ConfigService                                           } from '../ConfigService/config.service';
 //
 @Injectable({
   providedIn: 'root'

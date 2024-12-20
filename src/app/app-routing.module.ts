@@ -25,6 +25,7 @@ import { ChartComponent                  } from './_modules/miscelaneous/chart/c
 import { OcrPhotoCaptureComponent        } from './_modules/miscelaneous/ocr-photo-capture/ocr-photo-capture.component';
 import { MiscelaneousComponent           } from './_modules/miscelaneous/miscelaneous/miscelaneous.component';
 import { IndexComponent                  } from './_modules/home/index/index.component';
+import { ComputerVisionComponent } from './_modules/miscelaneous/computer-vision/computer-vision.component';
 export interface _Route extends Route
 {
     id      : number;
@@ -54,9 +55,10 @@ export const routes: _Route[] = [
   {  id: 0,  path: 'GamesTicTacToe'        , component: GameTictactoeComponent              , caption: ' Games  - TicTacToe'                          },
   {  id: 0,  path: 'GamesHanoiAuto'        , component: GameHanoiAutoComponent              , caption: ' Games  - Hanoi'                              },
   {  id: 0,  path: 'GamesWeb'              , component: GameWebComponent                    , caption: ' Games  - Main Page'                          },
-  {  id: 0,  path: 'Chat'                  , component: ChatComponent                       , caption: ' Chat Demo'                                   },
-  {  id: 0,  path: 'Chart'                 , component: ChartComponent                      , caption: ' Chart Demo'                                  },
-  {  id: 0,  path: 'OcrPhotoCapture'       , component: OcrPhotoCaptureComponent            , caption: ' Ocr Photo Capture'                           },
+  {  id: 0,  path: 'Chat'                  , component: ChatComponent                       , caption: ' Miscelaneous - Chat Demo'                                   },
+  {  id: 0,  path: 'Chart'                 , component: ChartComponent                      , caption: ' Miscelaneous - Chart Demo'                                  },
+  {  id: 0,  path: 'OcrPhotoCapture'       , component: OcrPhotoCaptureComponent            , caption: ' Miscelaneous - Ocr Photo Capture'                           },
+  {  id: 0,  path: 'ComputerVision'        , component: ComputerVisionComponent             , caption: ' Miscelaneous - Computer Vision'                           },
   {  id: 0,  path: 'Miscelaneous'          , component: MiscelaneousComponent               , caption: ' Miscelaneous - Main Page'                    },
   {  id: 0,  path: '**'                    , component: PageNotFoundComponent               , caption: ''                                             },
 ];

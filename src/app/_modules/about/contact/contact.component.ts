@@ -1,6 +1,6 @@
 import { Component          } from '@angular/core';
 import { CustomErrorHandler } from '../../../app.module';
-import { BackendService        } from '../../../_services/backend.service';
+import { BackendService        } from '../../../_services/BackendService/backend.service';
 
 @Component({
   selector: 'app-contact',

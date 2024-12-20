@@ -1,8 +1,8 @@
 import { Component, VERSION                } from '@angular/core';
 import { CustomErrorHandler                } from 'src/app/app.module';
 import { HttpClient                        } from '@angular/common/http';
-import { BackendService                       } from '../../../../_services/backend.service';
-import { ConfigService                    } from 'src/app/_services/config.service';
+import { BackendService                       } from '../../../../_services/BackendService/backend.service';
+import { ConfigService                    } from 'src/app/_services/ConfigService/config.service';
 import { Observable                        } from 'rxjs';
 //
 @Component({

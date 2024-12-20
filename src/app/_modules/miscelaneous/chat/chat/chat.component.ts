@@ -2,7 +2,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { DatePipe                     } from '@angular/common';
 import { NgForm                       } from '@angular/forms';
-import { ChatService                  } from 'src/app/_services/chat.service';
+import { ChatService                  } from 'src/app/_services/ChatService/chat.service';
 //
 @Component({
   selector: 'app-chat',

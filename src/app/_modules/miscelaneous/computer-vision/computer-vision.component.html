@@ -1,0 +1,76 @@
+<div class="content" align="center">
+    <h1>[MISCELANEOUS - CV]</h1>
+   <!-- [hidden]="this.hiddenCanvasContainer"-->
+    <div id="canvasContainer" [hidden]="this.hiddenCanvasContainer">
+        <hr/>
+        <!-- CANVAS INICIO   -->
+        <ngx-signature-pad
+          #signature
+          [options]="options"
+          (beginSign)="onBeginSign()"
+          (endSign)="onEndSign()">
+        </ngx-signature-pad>
+        <!-- CANVAS FIN      -->
+        <!-- BOTONES INICIO   -->
+        <hr/>
+        <input type="button" value="{{this.statusButton}}" (click)="this.saveSignature()" [disabled]="(this.statusButton=='..parsing..')">
+        |
+        <button (click)="this.clearSignature()">Clear Signature</button>
+        <br>
+        <!-- BOTONES FIN      -->
+    </div> 
+    <!--[hidden]="this.hiddenCameraContainer"-->
+    <div id ="cameraContainer" [hidden]="this.hiddenCameraContainer">
+       <hr>
+       <!--[hidden]="this.cameraContainerHidden"-->
+       <div class="camera-container" [hidden]="this.cameraContainerHidden">
+            <video #video autoplay [style]="this.videoStyle"></video>
+            <canvas #canvas hidden ></canvas>
+       </div>
+       <!--[hidden]="this.capturedImageHidden"-->
+       <img [src]="capturedImage" *ngIf="capturedImage"  alt="Captured Photo" [hidden]="this.capturedImageHidden"/>
+       <hr />
+        <!-- BOTONES INICIO -->
+        <button (click)="capturePhoto()" [disabled]="(this.captureButtonDisabled)">{{this.captureButtonStatus}}</button>
+        |
+        <button (click)="saveImage()" [disabled]="(this.saveImageButtonDisabled)">{{this.statusButtonSaveImage}}</button>
+        |
+        <button (click)="flipCamera()">Flip Camera</button>
+        <!-- BOTONES FIN    -->
+    </div>
+    <hr>
+    <!-- STATUS INICIO -->
+    <span style="padding:2px; width:100px;height:10px;background-color: azure;">{{this.status}}</span>
+    <hr />
+    <!-- STATUS FIN        -->
+    <!-- FORMULARIO INICIO -->
+    <div class="form-group" align="left" id="SourceListDiv">
+      <label for="sourceList"><span id="tituloListadoLenguajes">{{this.tituloListadOrigen}}</span></label>
+      &nbsp;<select   id="sourceList"
+                      name="sourceList"
+                      #_sourceList 
+                      (change)="this.selectionChange()">
+                      <option *ngFor="let _sourceName of __sourceList" 
+                      [value]="_sourceName._index"
+                      [selected]="_sourceName._selected">{{_sourceName._value}}</option>
+      </select>
+    </div>      
+    <div class="form-group" align="left" id="EngineListDiv">
+      <label for="engineList"><span id="titleEngines">{{this.titleEngineList}}</span></label>
+      &nbsp;<select   id="engineList"
+                      name="engineList"
+                      #_engineList 
+                      (change)="this.selectionChangeEngines()">
+                      <option *ngFor="let _engineName of __engineList" 
+                      [value]="_engineName._index"
+                      [selected]="_engineName._selected">{{_engineName._value}}</option>
+      </select>
+    </div>
+    <!-- FORMULARIO FIN -->
+    <div align="right">
+        <a routerLink="/Miscelaneous">[Volver al Menu]</a>      
+    </div>  
+  </div>
+  
+  
+

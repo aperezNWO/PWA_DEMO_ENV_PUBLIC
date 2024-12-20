@@ -1,5 +1,5 @@
 import { Component          } from '@angular/core';
-import { BackendService        } from '../../../_services/backend.service';
+import { BackendService        } from '../../../_services/BackendService/backend.service';
 import { CustomErrorHandler } from '../../../app.module';
 //
 @Component({

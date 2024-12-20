@@ -1,7 +1,7 @@
 // chat.service.ts
 import { Injectable          } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { ConfigService      } from './config.service';
+import { ConfigService      } from '../ConfigService/config.service';
 import { of                  } from 'rxjs';
 import io from 'socket.io-client';
 
