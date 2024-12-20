@@ -12,7 +12,14 @@
         <!-- inicio brand -->
         <a class="navbar-brand" href="#">
           <div class="subtitle" (click)="this._navbarCollapsed = true;">
-            {{this._appBrand}}
+            <a routerLink="/">
+              <img
+              [src]="'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/800px-Angular_full_color_logo.svg.png'"
+              [alt]="'Angular Logo'"
+              class="me-1"
+              style="width: 25px"
+              />
+          </a>
           </div>
         </a>
         <!-- fin brand -->

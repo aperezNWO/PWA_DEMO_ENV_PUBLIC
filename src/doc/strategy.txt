@@ -389,11 +389,15 @@
 
         -- [_] main page menu.
 
+                -- [_] PWA_DEMO / ANGULAR LINK.
+
                 -- [_] menu items.
 
                 -- [_] hover animation.
 
                 -- [_] programming languages links to index.
+
+                        -- [_] query url.
 
 -- [_] download csv / xls /pdf file as zip.
 
@@ -402,5 +406,9 @@
         -- [_] https://code.visualstudio.com/docs/python/tutorial-fastapi
 
 -- [_] opencv.js basic shape recognition.
+
+-- [_] miscelaneous file genration - chart.
+
+-- [_] dynamic title from page _Route.caption.
 
 ////////////////////////////////////////////////////////////////////////////////

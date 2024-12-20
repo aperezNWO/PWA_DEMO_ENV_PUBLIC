@@ -21,11 +21,11 @@ import { GameTictactoeComponent          } from './_modules/games/game-tictactoe
 import { GameWebComponent                } from './_modules/games/game-web/game-web.component';
 import { GameHanoiAutoComponent          } from './_modules/games/game-hanoi-auto/game-hanoi-auto.component';
 import { ChatComponent                   } from './_modules/miscelaneous/chat/chat/chat.component';
-import { ChartComponent                  } from './_modules/miscelaneous/chart/chart.component';
 import { OcrPhotoCaptureComponent        } from './_modules/miscelaneous/ocr-photo-capture/ocr-photo-capture.component';
 import { MiscelaneousComponent           } from './_modules/miscelaneous/miscelaneous/miscelaneous.component';
 import { IndexComponent                  } from './_modules/home/index/index.component';
 import { ComputerVisionComponent } from './_modules/miscelaneous/computer-vision/computer-vision.component';
+import { ChartComponent } from './_modules/files-generation/chart/chart.component';
 export interface _Route extends Route
 {
     id      : number;

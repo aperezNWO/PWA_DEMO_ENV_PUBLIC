@@ -33,6 +33,7 @@ import { FilesGenerationXLSComponent     } from './_modules/files-generation/fil
 import { FilesGenerationCSVComponent     } from './_modules/files-generation/files-generation-csv/files-generation-csv.component';
 import { FilesGenerationPDFComponent     } from './_modules/files-generation/files-generation-pdf/files-generation-pdf.component';
 import { FilesGenerationZIPComponent     } from './_modules/files-generation/files-generation-zip/files-generation-zip.component';
+import { ChartComponent                  } from './_modules/files-generation/chart/chart.component';
 import { AlgorithmDijkstraComponent      } from './_modules/algorithm/algorithm-dijkstra/algorithm-dijkstra.component';
 import { AlgorithmWebComponent           } from './_modules/algorithm/algorithm-web/algorithm-web.component';
 import { AlgorithmRegExComponent         } from './_modules/algorithm/algorithm-reg-ex/algorithm-reg-ex.component';
@@ -43,8 +44,8 @@ import { BoardComponent                  } from './_modules/games/game-tictactoe
 import { SquareComponent                 } from './_modules/games/game-tictactoe/square/square.component';
 import { GameWebComponent                } from './_modules/games/game-web/game-web.component';
 import { GameHanoiAutoComponent          } from './_modules/games/game-hanoi-auto/game-hanoi-auto.component';
+import { ComputerVisionComponent         } from './_modules/miscelaneous/computer-vision/computer-vision.component';
 import { ChatComponent                   } from './_modules/miscelaneous/chat/chat/chat.component';
-import { ChartComponent                  } from './_modules/miscelaneous/chart/chart.component';
 import { MiscelaneousComponent           } from './_modules/miscelaneous/miscelaneous/miscelaneous.component';
 import { OcrPhotoCaptureComponent        } from './_modules/miscelaneous/ocr-photo-capture/ocr-photo-capture.component';
 import { UnitTestingComponent            } from './_modules/_unitttesting/unit-testing.component';
@@ -57,7 +58,6 @@ import { NgxSignaturePadModule           } from '@eve-sama/ngx-signature-pad';
 import { NgbHighlight, NgbModule                } from '@ng-bootstrap/ng-bootstrap';
 import { NgbPaginationModule, NgbAlertModule    } from '@ng-bootstrap/ng-bootstrap';
 import { IndexComponent                         } from './_modules/home/index/index.component';
-import { ComputerVisionComponent } from './_modules/miscelaneous/computer-vision/computer-vision.component';
 //
 export function initialize(_configService: ConfigService) {
   // 
