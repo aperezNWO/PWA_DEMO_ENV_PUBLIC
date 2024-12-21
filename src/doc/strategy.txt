@@ -399,16 +399,68 @@
 
                         -- [_] query url.
 
--- [_] download csv / xls /pdf file as zip.
-
--- [_] django python backend.
-
-        -- [_] https://code.visualstudio.com/docs/python/tutorial-fastapi
-
 -- [_] opencv.js basic shape recognition.
 
 -- [_] miscelaneous file genration - chart.
 
 -- [_] dynamic title from page _Route.caption.
 
+-- [_] fancy home background.
+
+-- [_] home menu items.
+
+        -- [_] programming languages / backend.
+
+        -- [_] uix libraries.
+
+               -- [_] 2d / 3d.
+
+               -- [_] material.
+
+               -- [_] ng bootstrap.
+               
+        -- [_] export  libraries
+
+               -- [_] epp plus.
+
+               -- [_] jsPdf / iTextSharp.
+
+               -- [_] char js.
+
+        -- [_] miscelaneous
+
+               -- [_] math parsing.
+
+               -- [_] ngb pad.
+ 
+        -- [_] computer visions / machine learning
+
+                -- [_] tesseract.
+
+                -- [_] tensorflow.
+   
+                -- [_] opencv.
+                
+    -- [_] scm.            
+
+        -- [_] AI_PROMPTS.
+
+        -- [_] AI_DEV.
+
+        -- [_] DEV_ENVS.
+
+        -- [_] HOSTINGS.
+
+        -- [_] DB.
+
+-- [_] download csv / xls /pdf file as zip.
+
+-- [_] django python backend.
+
+        -- [_] https://code.visualstudio.com/docs/python/tutorial-fastapi
+
+-- [_] complete header references.
+
+-- [_] ngb pad instructions.
+               
 ////////////////////////////////////////////////////////////////////////////////
