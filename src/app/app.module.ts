@@ -58,6 +58,7 @@ import { NgxSignaturePadModule           } from '@eve-sama/ngx-signature-pad';
 import { NgbHighlight, NgbModule                } from '@ng-bootstrap/ng-bootstrap';
 import { NgbPaginationModule, NgbAlertModule    } from '@ng-bootstrap/ng-bootstrap';
 import { IndexComponent                         } from './_modules/home/index/index.component';
+import { FireworksComponent                     } from './_modules/home/fireworks/fireworks.component';
 //
 export function initialize(_configService: ConfigService) {
   // 
@@ -143,6 +144,7 @@ export class CustomErrorHandler implements ErrorHandler {
         TopicsComponent,
         IndexComponent,
         ComputerVisionComponent,
+        FireworksComponent,
     ],
     exports: [RouterModule],
     providers: [
