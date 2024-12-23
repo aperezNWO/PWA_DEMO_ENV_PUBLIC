@@ -1,6 +1,47 @@
 <div align="center" class="animate">
     <h4>Welcome to {{this._appBrand}}!</h4>
     <hr>
+    <a routerLink="/">
+        <img
+        [src]="'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/800px-Angular_full_color_logo.svg.png'"
+        [alt]="'Angular Logo'"
+        class="me-1"
+        style="width: 50px"
+        />
+    </a>
+    <a routerLink="/">
+        <img
+        [src]="'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1024px-Node.js_logo.svg.png'"
+        [alt]="'NodeJs Logo'"
+        class="me-1"
+        style="width: 50px"
+        />
+    </a>
+    <a routerLink="/">
+        <img
+        [src]="'https://upload.wikimedia.org/wikipedia/commons/d/d2/C_Sharp_Logo_2023.svg'"
+        [alt]="'C# Logo'"
+        class="me-1"
+        style="width: 50px"
+        />
+    </a>
+    <a routerLink="/">
+        <img
+        [src]="'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/306px-ISO_C%2B%2B_Logo.svg.png'"
+        [alt]="'C++ Logo'"
+        class="me-1"
+        style="width: 50px"
+        />
+    </a>
+    <a routerLink="/">
+        <img
+        [src]="'https://vmware.gallerycdn.vsassets.io/extensions/vmware/vscode-spring-boot/1.59.2024110900/1731113263936/Microsoft.VisualStudio.Services.Icons.Default'"
+        [alt]="'SPRING BOOT Logo'"
+        class="me-1"
+        style="width: 50px"
+        />
+    </a>
+    <hr>
     <span *ngFor="let page of pages">
         <span *ngIf="page" style="padding:5px;">
             <a routerLink="/{{page.url}}"><span align="left">{{page.text}}</span></a>

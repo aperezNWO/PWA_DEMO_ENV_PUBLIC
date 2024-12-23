@@ -3,14 +3,8 @@ import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-fireworks',
-  template: `
-    <canvas #canvas></canvas>
-  `,
-  styles: [
-    `
- 
-    `,
-  ],
+  templateUrl : './fireworks.component.html',
+  styleUrls   : ['./fireworks.component.css']
 })
 export class FireworksComponent implements AfterViewInit {
   @ViewChild('canvas') canvas: ElementRef | undefined;
