@@ -445,6 +445,8 @@
                 
     -- [_] scm.            
 
+        -- [_] ngb grid component.
+
         -- [_] AI_PROMPTS.
 
         -- [_] AI_DEV.
@@ -463,6 +465,6 @@
 
 -- [_] complete header references.
 
--- [_] ngb pad instructions.
+-- [x] ngb pad instructions.
                
 ////////////////////////////////////////////////////////////////////////////////
