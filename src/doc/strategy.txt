@@ -299,6 +299,10 @@
 
 -- [x] delete word mcsd.
 
+-- [x] opencv.js basic shape recognition.
+
+-- [x] miscelaneous file genration - chart.
+
 -- [_] hosting files cleanup service.
 
 -- [_] SSR.
@@ -401,13 +405,11 @@
 
                         -- [_] query url.
 
--- [_] opencv.js basic shape recognition.
-
--- [_] miscelaneous file genration - chart.
-
 -- [_] dynamic title from page _Route.caption.
 
 -- [_] fancy home background.
+
+        -- [_] corregir fireworks.
 
 -- [_] home menu items.
 
