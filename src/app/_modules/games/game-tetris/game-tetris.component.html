@@ -1,0 +1,35 @@
+<div align="center">
+    <h1>[GAMES - TETRIS]</h1>
+    <hr>
+    <div class="game-container" [class.game-over]="gameOver">
+    <div class="game-board">
+      <div *ngFor="let row of displayBoard; let i = index" class="row">
+        <div *ngFor="let cell of row; let j = index" 
+             class="cell" 
+             [class.filled]="cell" 
+             [style.backgroundColor]="cell">
+        </div>
+      </div>
+    </div>
+    <div class="controls">
+      <div class="score">Score: {{score}}</div>
+      <button (click)="startGame()" *ngIf="!isPlaying || gameOver">
+        {{gameOver ? 'Play Again' : 'Start Game'}}
+      </button>
+      
+      <div class="mobile-controls" *ngIf="isMobile">
+        <button (click)="moveLeft()" style="font-size: x-large;">&larr;</button>
+        <button (click)="moveRight()"style="font-size: x-large;">&rarr;</button>
+        <button (click)="rotate()">Rotate</button>
+        <button (click)="drop()">Drop</button>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <button (click)="restart()">[RESTART]</button>
+  <hr />
+</div>  
+<hr />
+<div align="right"><a routerLink="/GamesWeb">[Volver al Menú]</a></div>
+
+

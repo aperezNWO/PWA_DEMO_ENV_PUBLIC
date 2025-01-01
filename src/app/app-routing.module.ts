@@ -24,8 +24,13 @@ import { ChatComponent                   } from './_modules/miscelaneous/chat/ch
 import { OcrPhotoCaptureComponent        } from './_modules/miscelaneous/ocr-photo-capture/ocr-photo-capture.component';
 import { MiscelaneousComponent           } from './_modules/miscelaneous/miscelaneous/miscelaneous.component';
 import { IndexComponent                  } from './_modules/home/index/index.component';
-import { ComputerVisionComponent } from './_modules/miscelaneous/computer-vision/computer-vision.component';
-import { ChartComponent } from './_modules/files-generation/chart/chart.component';
+import { ComputerVisionComponent         } from './_modules/miscelaneous/computer-vision/computer-vision.component';
+import { ChartComponent                  } from './_modules/files-generation/chart/chart.component';
+import { GameHanoi3dComponent            } from './_modules/games/game-hanoi3d/game-hanoi3d.component';
+import { MathParsingComponent            } from './_modules/miscelaneous/math-parsing/math-parsing.component';
+import { GameTetrisComponent             } from './_modules/games/game-tetris/game-tetris.component';
+import { AlgorithmCollisionComponent     } from './_modules/algorithm/algorithm-collision/algorithm-collision.component';
+
 export interface _Route extends Route
 {
     id      : number;
@@ -45,7 +50,8 @@ export const routes: _Route[] = [
   {  id: 0,  path: 'AlgorithmWeb'          , component: AlgorithmWebComponent               , caption: ' Algoritmos - Main Page'                      },
   {  id: 0,  path: 'AlgorithmRegEx'        , component: AlgorithmRegExComponent             , caption: ' Algoritmos - Regular Expression'             },
   {  id: 0,  path: 'AlgorithmSort'         , component: AlgorithmSortComponent              , caption: ' Algoritmos - Sort'                           },
-  {  id: 0,  path: 'AlgorithmDijkstra'     , component: AlgorithmDijkstraComponent          , caption: ' Algoritmos - Dijkstra - distancia más corta' },
+  {  id: 0,  path: 'AlgorithmDijkstra'     , component: AlgorithmDijkstraComponent          , caption: ' Algoritmos - Dijkstra  - distancia más corta' },
+  {  id: 0,  path: 'AlgorithmCollision'    , component: AlgorithmCollisionComponent         , caption: ' Algoritmos - Collision - Demo' },
   {  id: 0,  path: 'FilesGenerationWeb'    , component: FilesGenerationWebComponent         , caption: ' File Generatin  - Main Page'                 },
   {  id: 0,  path: 'FilesGenerationXLS'    , component: FilesGenerationXLSComponent         , caption: ' File Generation - XLS'                       },
   {  id: 0,  path: 'FilesGenerationCSV'    , component: FilesGenerationCSVComponent         , caption: ' File Generation - CSV'                       },
@@ -55,10 +61,13 @@ export const routes: _Route[] = [
   {  id: 0,  path: 'GamesSudoku'           , component: SudokuComponent                     , caption: ' Games  - Sudoku'                             },
   {  id: 0,  path: 'GamesTicTacToe'        , component: GameTictactoeComponent              , caption: ' Games  - TicTacToe'                          },
   {  id: 0,  path: 'GamesHanoiAuto'        , component: GameHanoiAutoComponent              , caption: ' Games  - Hanoi'                              },
-  {  id: 0,  path: 'GamesWeb'              , component: GameWebComponent                    , caption: ' Games  - Main Page'                          },
+  {  id: 0,  path: 'GamesHanoi3d'          , component: GameHanoi3dComponent                , caption: ' Games  - Hanoi 3d'                           },
+  {  id: 0,  path: 'GamesTetris'           , component: GameTetrisComponent                 , caption: ' Games  - Hanoi 3d'                           },
+  {  id: 0,  path: 'GamesWeb'              , component: GameWebComponent                    , caption: ' Games  - Tetris'                             },
   {  id: 0,  path: 'Chat'                  , component: ChatComponent                       , caption: ' Miscelaneous - Chat Demo'                    },
   {  id: 0,  path: 'OcrPhotoCapture'       , component: OcrPhotoCaptureComponent            , caption: ' Miscelaneous - Ocr Photo Capture'            },
   {  id: 0,  path: 'ComputerVision'        , component: ComputerVisionComponent             , caption: ' Miscelaneous - Computer Vision'              },
+  {  id: 0,  path: 'MathParsing'           , component: MathParsingComponent                , caption: ' Miscelaneous - Math Parsing'                 },
   {  id: 0,  path: 'Miscelaneous'          , component: MiscelaneousComponent               , caption: ' Miscelaneous - Main Page'                    },
   {  id: 0,  path: '**'                    , component: PageNotFoundComponent               , caption: ''                                             },
 ];

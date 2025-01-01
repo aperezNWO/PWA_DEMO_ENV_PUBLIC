@@ -59,6 +59,10 @@ import { NgbHighlight, NgbModule                } from '@ng-bootstrap/ng-bootstr
 import { NgbPaginationModule, NgbAlertModule    } from '@ng-bootstrap/ng-bootstrap';
 import { IndexComponent                         } from './_modules/home/index/index.component';
 import { FireworksComponent                     } from './_modules/home/fireworks/fireworks.component';
+import { GameHanoi3dComponent                   } from './_modules/games/game-hanoi3d/game-hanoi3d.component';
+import { MathParsingComponent                   } from './_modules/miscelaneous/math-parsing/math-parsing.component';
+import { GameTetrisComponent                    } from './_modules/games/game-tetris/game-tetris.component';
+import { AlgorithmCollisionComponent            } from './_modules/algorithm/algorithm-collision/algorithm-collision.component';
 //
 export function initialize(_configService: ConfigService) {
   // 
@@ -124,6 +128,7 @@ export class CustomErrorHandler implements ErrorHandler {
         AlgorithmRegExComponent,
         AlgorithmSortComponent,
         AlgorithmDijkstraComponent,
+        AlgorithmCollisionComponent,
         FilesGenerationWebComponent,
         FilesGenerationXLSComponent,
         FilesGenerationCSVComponent,
@@ -145,6 +150,10 @@ export class CustomErrorHandler implements ErrorHandler {
         IndexComponent,
         ComputerVisionComponent,
         FireworksComponent,
+        GameHanoi3dComponent,
+        MathParsingComponent,
+        GameTetrisComponent,
+
     ],
     exports: [RouterModule],
     providers: [

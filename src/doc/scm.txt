@@ -236,3 +236,5 @@ npm install @eve-sama/ngx-signature-pad --force
 
 /////////////////////////////////////////////////////////////////
 
+Could not find a declaration file for module 'three/examples/jsm/controls/OrbitControls'. 'c:/Users/pablo.perez/dev/_Angular/BaseLine/PWA_DEMO_ENV_PUBLIC/node_modules/three/examples/jsm/controls/OrbitControls.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/three` if it exists or add a new declaration (.d.ts) file containing `declare module 'three/examples/jsm/controls/OrbitControls';`

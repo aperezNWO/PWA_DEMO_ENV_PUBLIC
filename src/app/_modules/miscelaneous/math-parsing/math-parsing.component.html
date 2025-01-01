@@ -1,0 +1,76 @@
+
+<div align="center">
+    <div class="container mx-auto p-6">
+        <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow">
+          <h2 class="text-2xl font-bold mb-4">Math Expression Parser</h2>
+          <hr>
+          <!-- Expression Input -->
+          <div class="mb-4">
+            <label class="block text-sm font-medium mb-2">Enter Expression:</label>
+            <input 
+              [(ngModel)]="expression"
+              (keyup.enter)="evaluate()"
+              class="w-full p-2 border rounded"
+              placeholder="e.g., 2 * sin(45 deg)"
+            >
+          </div>
+    
+          <!-- Variables Input -->
+          <div class="mb-4">
+            <label class="block text-sm font-medium mb-2">Variables (JSON format):</label>
+            <input 
+              [(ngModel)]="variables"
+              (keyup.enter)="evaluate()"
+              class="w-full p-2 border rounded"
+              placeholder='e.g., {"x": 10, "y": 5}'
+              value='{"x": 10, "y": 5}'
+            >
+          </div>
+    
+          <!-- Buttons -->
+          <div class="flex gap-2 mb-4" style="color : blueviolet;">
+            <button 
+              (click)="evaluate()"
+              class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+              style="background-color: #cccccc; "
+            >
+              Calculate
+            </button>
+            <button 
+              (click)="clear()"
+              class="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
+              style="background-color: #cccccc; "
+            >
+              Clear
+            </button>
+          </div>
+    
+          <!-- Result -->
+          <div *ngIf="result !== null" 
+               class="p-4 rounded"
+               [ngClass]="{'bg-green-100': !error, 'bg-red-100': error}">
+            <strong>Result:</strong> {{result}}
+          </div>
+    
+          <!-- Examples -->
+          <div class="mt-6">
+            <h3 class="font-bold mb-2">Example Expressions:</h3>
+            <div class="grid gap-2">
+              <button 
+                *ngFor="let example of examples"
+                (click)="tryExample(example)"
+                class="text-left p-2 hover:bg-gray-100 rounded">
+                {{example.expression}}
+                <span *ngIf="example.variables" class="text-sm text-gray-500">
+                  (with {{example.variables}})
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <hr />
+    <!-- FORMULARIO FIN -->
+    <div align="right">
+        <a routerLink="/Miscelaneous">[Volver al Menu]</a>      
+    </div>  
