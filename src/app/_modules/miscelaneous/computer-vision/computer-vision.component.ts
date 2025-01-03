@@ -119,7 +119,7 @@ export class ComputerVisionComponent implements AfterViewInit , OnInit {
   //
   saveSignature():void {
      //
-     console.log("Saving signature...");
+     console.log("Saving signature..., option : " + this.selectedIndexEngines);
      //
      this.selectionChangeEngines();
      //   
@@ -145,43 +145,6 @@ export class ComputerVisionComponent implements AfterViewInit , OnInit {
      //
      this.statusButton = "[save]";
   }
-  /*
-  uploadImage(base64ImageString : string):void {
-    // Replace 'yourBase64ImageString' with the actual base64 image string
-    //const base64ImageString = 'yourBase64ImageString';
-    this.statusButton          = '..parsing..';
-    this.statusButtonSaveImage = '..parsing..';
-
-    //this.capturedImageHidden     = false;
-    this.captureButtonDisabled   = true;
-    this.saveImageButtonDisabled = true;
-
-    //
-    this.backendService.uploadBase64Image(base64ImageString).subscribe(
-      (response) => {
-        //
-        console.log('Image uploaded successfully:', response);
-        this.status = JSON.parse(JSON.stringify(response))['message'];
-        //
-        const utterance = new SpeechSynthesisUtterance(this.status);
-        speechSynthesis.speak(utterance);
-        //
-        this.statusButton            = '[save]';
-        this.statusButtonSaveImage   = '[save image]';
-        this.captureButtonStatus     = '[start capture]';
-        this.captureButtonDisabled   = false;
-      },
-      (error) => {
-        //
-        console.error('Error uploading image:', error);
-        //
-        this.status = error;
-        //
-        this.statusButton = '[save]';
-      }
-    );
-  }
-  */
   ////////////////////////////////////////////////////
   
   async startCamera(): Promise<void> {
@@ -282,8 +245,10 @@ export class ComputerVisionComponent implements AfterViewInit , OnInit {
   }
   ///////////////////////////////////////////////////////
   detectShapes(capturedImage : string): void {
+
     const img = new Image();
     img.onload = () => {
+          console.log("loasing  shape detection service ...")
           //
           const shapes        = this.shapeDetectionService.detectShapes(img);
           this.detectedShapes = shapes;

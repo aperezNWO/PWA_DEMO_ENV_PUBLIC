@@ -13,6 +13,8 @@ export class ShapeDetectionService {
   detectShapes(image: HTMLImageElement): string[] {
     const shapes: string[] = [];
 
+    console.log('cv is loaded ... ' + cv.getBuildInformation) 
+
     // Ensure OpenCV.js is loaded
     if (cv.getBuildInformation) {
       // Create a Mat from the image
