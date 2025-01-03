@@ -4,7 +4,7 @@ import { NgxSignaturePadComponent } from '@eve-sama/ngx-signature-pad/lib/ngx-si
 import { NgxSignatureOptions      } from '@eve-sama/ngx-signature-pad/lib/types/ngx-signature-pad';
 import { _languageName            } from 'src/app/_models/entityInfo.model';
 import { ShapeDetectionService    } from 'src/app/_services/ShapeDetection/shape-detection.service';
-
+declare var cv: any; // Declare cv as a global variable
 @Component({
   selector: 'computer-vision',
   templateUrl: './computer-vision.component.html',
@@ -52,22 +52,35 @@ export class ComputerVisionComponent implements AfterViewInit , OnInit {
   selectedIndexEngines    : number  = 0;
   ////////////////////////////////////////////////////////////////
   detectedShapes: string[] = [];
-  //imageURL: string | ArrayBuffer | null = null;
   //
   constructor(public shapeDetectionService : ShapeDetectionService)
   {
-      //
+
   }
   //
   ngOnInit(): void {
+
+    //
+    ///this.loadOpenCv();
     //-----------------------------------------------------------------------------
     this.hiddenCanvasContainer = false;
     this.hiddenCameraContainer = true;
     //
     this.startCamera();
   }
-  //  
-  
+  /*
+    //  
+    loadOpenCv() {
+      const script = document.createElement('script');
+      script.src = 'assets/opencv.js'; // Path to your local opencv.js
+      script.async = true;
+      script.onload = () => {
+        console.log('OpenCV.js loaded');
+      };
+      document.body.appendChild(script);
+    }
+  */
+
   ngAfterViewInit() {
     //-----------------------------------------------------------------------------
     this.__sourceList = new Array();
@@ -248,18 +261,22 @@ export class ComputerVisionComponent implements AfterViewInit , OnInit {
 
     const img = new Image();
     img.onload = () => {
-          console.log("loasing  shape detection service ...")
-          //
-          const shapes        = this.shapeDetectionService.detectShapes(img);
-          this.detectedShapes = shapes;
-          //
-          this.status     = this.detectedShapes.toString();
-          //
-          const utterance = new SpeechSynthesisUtterance(this.status);
-          speechSynthesis.speak(utterance);
+      console.log("loading  shape detection service ...")
+      //
+      const shapes        = this.shapeDetectionService.detectShapes(img);
+      this.detectedShapes = shapes;
+      //
+      this.status     = this.detectedShapes.toString();
+      //
+      const utterance = new SpeechSynthesisUtterance(this.status);
+      speechSynthesis.speak(utterance);
+
     };
     img.src = capturedImage;
   }
+
+
+
 
 }
 

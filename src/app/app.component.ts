@@ -2,12 +2,9 @@ import { Component, OnInit, VERSION    } from '@angular/core';
 import { ActivatedRoute, Router        } from '@angular/router';
 import { Title                         } from '@angular/platform-browser';
 import { CustomErrorHandler            } from './app.module';
-import { HomeWebComponent              } from './_modules/home/home-web/home-web.component';
-import { AlgorithmWebComponent         } from './_modules/algorithm/algorithm-web/algorithm-web.component';
-import { FilesGenerationWebComponent   } from './_modules/files-generation/files-generation-web/files-generation-web.component';
-import { AAboutWebComponent            } from './_modules/about/a-about-web/a-about-web.component';
-import { BackendService                   } from './_services/BackendService/backend.service';
-import { ConfigService                } from './_services/ConfigService/config.service';
+import { BackendService                } from './_services/BackendService/backend.service';
+import { ConfigService                 } from './_services/ConfigService/config.service';
+
 //
 @Component({
   selector    : 'app-root',
@@ -113,12 +110,13 @@ export class AppComponent implements OnInit {
     }   
     //-----------------------------------------------------------------------------------------------------
     ngOnInit() {
-        //
+
     }
     //
     getValueFromConfig(key: string) {
       return this._configService.getConfigValue(key);
     }
+
   }   
 //-----------------------------------------------------------------------------------------------------
 export { CustomErrorHandler };

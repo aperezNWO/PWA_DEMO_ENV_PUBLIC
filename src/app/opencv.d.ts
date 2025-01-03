@@ -1,3 +1,0 @@
-declare var cv: any;
-
-
