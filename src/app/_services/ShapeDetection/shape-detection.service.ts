@@ -8,9 +8,21 @@ export class ShapeDetectionService {
   constructor() { 
 
     console.log ('cv global variable : ' + cv);
+
+    if (cv.getBuildInformation) {
+      console.log("OpenCV.js is ready.");
+      console.log(cv.getBuildInformation());
+
+    } else {
+      console.error("cv.getBuildInformation is not available.");
+    }
+
   }
 
   detectShapes(image: HTMLImageElement): string[] {
+
+
+
     const shapes: string[] = [];
 
     console.log('cv is loaded ... ' + cv.getBuildInformation) 
