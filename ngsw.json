@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1735872901397,
+  "timestamp": 1735873540627,
   "index": "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/index.html",
   "assetGroups": [
     {
@@ -53,7 +53,7 @@
   "hashTable": {
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/484.8cdd85cefc5a3b51.js": "5917412f8e7d284347e02b3e88949a4901e355de",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/896.4519226224848d4d.js": "b78fb0b014bc156bc77299cc45560d056ef29bac",
-    "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/config.json": "fe8b4c90f7d154681b41dfe8218ab3b4b3668e24",
+    "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/config.json": "308a06d9c72da0e4661ddbc1dbd51da6ace80765",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/icons/icon-128x128.png": "f912963bdc6d5a38d8f1dd0afbaab2ce8d657acb",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/icons/icon-144x144.png": "b155fd5f2fd5d2ea7760721063003c4cd95fd783",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/icons/icon-152x152.png": "eae6e0f0c8afb8aaae339e2a569b43e9238e5e6c",
@@ -68,7 +68,7 @@
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/images/speaker_on.gif": "52d373e9a336356e1f15b3a84d3b3cb611ab2ee0",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/sudoku.txt": "a11677cdf143c6ab92080e8a4247c50083c14e71",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/index.html": "394509d07fcef0ed52e6488f7dfd15664a139f35",
+    "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/index.html": "0a998e67ab35a488117a4c63d245002174002e04",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/main.e8091f22568c7c7a.js": "86005d18ac26e4c41cc27561202c559f422a90f2",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/manifest.webmanifest": "4c4fda145c554fe9a7ed086f63fa914267022e67",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/polyfills.77586c43fe67260d.js": "9e2a9f992517e511f5c0d93f45b293a46678cb36",
