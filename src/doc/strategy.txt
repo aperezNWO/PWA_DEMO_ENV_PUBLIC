@@ -445,7 +445,9 @@
    
                 -- [_] opencv.
                 
-    -- [_] scm.            
+    -- [_] scm             
+
+        -- [_] row detail grid.
 
         -- [_] ngb grid component.
 
