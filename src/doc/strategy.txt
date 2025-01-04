@@ -303,6 +303,8 @@
 
 -- [x] miscelaneous file genration - chart.
 
+-- [x] ngb pad instructions.
+
 -- [_] hosting files cleanup service.
 
 -- [_] SSR.
@@ -469,6 +471,9 @@
 
 -- [_] complete header references.
 
--- [x] ngb pad instructions.
+-- [_] CORRECT HANOI 3D POSITION.
+
+-- [_] tesseract.
+
                
 ////////////////////////////////////////////////////////////////////////////////
