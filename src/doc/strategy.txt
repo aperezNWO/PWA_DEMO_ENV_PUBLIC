@@ -469,7 +469,7 @@
 
 -- [_] CORRECT HANOI 3D POSITION.
 
--- [_] tesseract.
+-- [_] tenserflow.
 
 -- [_] join chart / xls / csv.
                
