@@ -465,10 +465,6 @@
 
 -- [_] download csv / xls /pdf file as zip.
 
--- [_] django python backend.
-
-        -- [_] https://code.visualstudio.com/docs/python/tutorial-fastapi
-
 -- [_] complete header references.
 
 -- [_] CORRECT HANOI 3D POSITION.
@@ -477,4 +473,8 @@
 
 -- [_] join chart / xls / csv.
                
+-- [_] django python backend.
+
+        -- [_] https://code.visualstudio.com/docs/python/tutorial-django
+
 ////////////////////////////////////////////////////////////////////////////////
