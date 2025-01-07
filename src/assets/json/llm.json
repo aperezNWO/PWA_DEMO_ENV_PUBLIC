@@ -1,0 +1,34 @@
+[
+    {
+        "url": "https://gemini.google.com/",
+        "name": "Google Gemini"
+    },
+    {
+        "url": "https://chatgpt.com/",
+        "name": "Chat GTP"
+    },
+    {
+        "url": "https://claude.ai/new",
+        "name": "Arthropic - Claude"
+    },
+    {
+        "url": "https://groq.com/",
+        "name": "Groq"
+    },
+    {
+        "url": "https://pi.ai/talk",
+        "name": "Inflection - PI"
+    },
+    {
+        "url" : "https://www.meta.ai/",
+        "name" : "Meta - A.I."
+    },
+    {
+        "url" : "https://venice.ai/",
+        "name" : "Venice"
+    },
+    {
+        "url" : "https://x.com/i/grok?focus=1",
+        "name" : "xAI"
+    }
+    ] 

@@ -23,10 +23,8 @@ import { AppComponent                    } from './app.component';
 import { HomeWebComponent                } from './_modules/home/home-web/home-web.component';
 import { PageNotFoundComponent           } from './_modules/home/page-not-found/page-not-found.component';
 import { NavComponent                    } from './_modules/home/nav/nav.component';
-import { ContactComponent                } from './_modules/about/contact/contact.component';
 import { AAboutWebComponent              } from './_modules/about/a-about-web/a-about-web.component';
 import { TopicsComponent                 } from './_modules/about/topics/topics.component';
-import { ContactFormComponent            } from './_modules/about/contact-form/contact-form.component';
 import { TechnicalSpecsComponent         } from './_modules/about/technicalspecs/technical-specs/technical-specs.component';
 import { FilesGenerationWebComponent     } from './_modules/files-generation/files-generation-web/files-generation-web.component';
 import { FilesGenerationXLSComponent     } from './_modules/files-generation/files-generation-xls/files-generation-xls.component';
@@ -63,8 +61,14 @@ import { GameHanoi3dComponent                   } from './_modules/games/game-ha
 import { MathParsingComponent                   } from './_modules/miscelaneous/math-parsing/math-parsing.component';
 import { GameTetrisComponent                    } from './_modules/games/game-tetris/game-tetris.component';
 import { AlgorithmCollisionComponent            } from './_modules/algorithm/algorithm-collision/algorithm-collision.component';
+import { SCMComponent                           } from './_modules/about/scm/scm.component';
+import { LLMListComponent                       } from './_modules/about/llmlist/llmlist.component';
 //
 export function initialize(_configService: ConfigService) {
+    //
+    _configService.loadLLMList();
+    //
+    _configService.loadSCMList();
   // 
   return () => _configService.loadConfig();
 }
@@ -121,8 +125,8 @@ export class CustomErrorHandler implements ErrorHandler {
     declarations: [
         AppComponent,
         HomeWebComponent,
-        ContactComponent,
-        ContactFormComponent,
+        SCMComponent,
+        LLMListComponent,
         AAboutWebComponent,
         AlgorithmWebComponent,
         AlgorithmRegExComponent,

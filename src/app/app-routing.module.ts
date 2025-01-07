@@ -2,9 +2,9 @@ import { NgModule                        } from '@angular/core';
 import { Route, RouterModule             } from '@angular/router';
 import { HomeWebComponent                } from './_modules/home/home-web/home-web.component';
 import { PageNotFoundComponent           } from './_modules/home/page-not-found/page-not-found.component';
-import { ContactComponent                } from './_modules/about/contact/contact.component';
-import { ContactFormComponent            } from './_modules/about/contact-form/contact-form.component';
 import { AAboutWebComponent              } from './_modules/about/a-about-web/a-about-web.component';
+import { SCMComponent                    } from './_modules/about/scm/scm.component';
+import { LLMListComponent                } from './_modules/about/llmlist/llmlist.component';
 import { TopicsComponent                 } from './_modules/about/topics/topics.component';
 import { TechnicalSpecsComponent         } from './_modules/about/technicalspecs/technical-specs/technical-specs.component';
 import { FilesGenerationWebComponent     } from './_modules/files-generation/files-generation-web/files-generation-web.component';
@@ -43,8 +43,8 @@ export const routes: _Route[] = [
   {  id: 0,  path: 'Index'                 , component: IndexComponent                      , caption: ' Index'                                       },
   {  id: 0,  path:  ''                     , component: HomeWebComponent                    , caption: ''                                             },
   {  id: 0,  path: 'AAboutWeb'             , component: AAboutWebComponent                  , caption: ' About- Main Page'                            },
-  {  id: 0,  path: 'Contact'               , component: ContactComponent                    , caption: ' Contact - Main Page'                         },
-  {  id: 0,  path: 'ContactForm'           , component: ContactFormComponent                , caption: ' Contact Form'                                },
+  {  id: 0,  path: 'SCM'                   , component: SCMComponent                        , caption: ' About- SCM'                                  },
+  {  id: 0,  path: 'LLMList'               , component: LLMListComponent                    , caption: ' About- LLM List'                             },
   {  id: 0,  path: 'TechnicalSpecs'        , component: TechnicalSpecsComponent             , caption: ' Technical Specifications'                    },
   {  id: 0,  path: 'Topics'                , component: TopicsComponent                     , caption: ' Topics - Main Page'                          },
   {  id: 0,  path: 'AlgorithmWeb'          , component: AlgorithmWebComponent               , caption: ' Algoritmos - Main Page'                      },
