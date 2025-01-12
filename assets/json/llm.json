@@ -30,5 +30,9 @@
     {
         "url" : "https://x.com/i/grok?focus=1",
         "name" : "xAI"
+    },
+    {
+        "url" : "https://copilot.microsoft.com/",
+        "name" : "Microsoft Copilot"
     }
     ] 
