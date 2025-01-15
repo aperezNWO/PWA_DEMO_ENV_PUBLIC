@@ -63,14 +63,23 @@ import { GameTetrisComponent                    } from './_modules/games/game-te
 import { AlgorithmCollisionComponent            } from './_modules/algorithm/algorithm-collision/algorithm-collision.component';
 import { SCMComponent                           } from './_modules/about/scm/scm.component';
 import { LLMListComponent                       } from './_modules/about/llmlist/llmlist.component';
+import { CurriculumComponent                    } from './_modules/about/curriculum/curriculum.component';
 //
 export function initialize(_configService: ConfigService) {
-    //
-    _configService.loadLLMList();
-    //
-    _configService.loadSCMList();
+  //
+  _configService.loadJsonist().then(()=> {
+      //
+      _configService.loadPagesInfoData();
+      //
+      _configService.loadUsersData();
+      //
+      _configService.loadLLMList();
+      //
+      _configService.loadSCMList();
+  });
   // 
-  return () => _configService.loadConfig();
+  return () =>  _configService.loadConfig();
+
 }
 //
 @Injectable({
@@ -157,7 +166,7 @@ export class CustomErrorHandler implements ErrorHandler {
         GameHanoi3dComponent,
         MathParsingComponent,
         GameTetrisComponent,
-
+        CurriculumComponent
     ],
     exports: [RouterModule],
     providers: [

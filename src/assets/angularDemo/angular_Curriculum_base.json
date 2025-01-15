@@ -1,0 +1,79 @@
+[
+	{
+		"id"               : 1,
+        "done"             : true,
+        "name"             : "Formularios basados en plantillas",
+        "description"      : "Formularios basados en plantillas",
+        "field_1"          : "Angular",
+        "field_2"          : "v17, Template Forms",
+        "field_3"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationCSV",
+        "field_4"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/files-generation/files-generation-csv/files-generation-csv.component.html",
+        "field_5"          : "https://v17.angular.io/guide/forms"
+    },
+    {
+		"id"               : 2,
+        "done"             : true,
+        "name"             : "Fomularios Reactivos",
+        "description"      : "Fomularios Reactivos",
+        "field_1"          : "Angular",
+        "field_2"          : "v17, Reactive Forms, Responsive",
+        "field_3"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationCSV",
+        "field_4"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PROD/blob/master/src/app/_modules/files-generation/files-generation-csv/files-generation-csv.component.html",
+        "field_5"          : "https://v17.angular.io/guide/reactive-forms"       
+    },
+    {
+		"id"               : 3,
+        "done"             : true,
+        "name"             : "Servicios.",
+        "description"      : "Llamadas a backends",
+        "field_1"          : "Angular",
+        "field_2"          : "v17, Services, HttpClient, REST API, RESTful, Injection Dependency",
+        "field_3"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationCSV",
+        "field_4"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PROD/blob/master/src/app/_services/mcsd.service.ts",
+        "field_5"          : "https://v17.angular.io/guide/architecture-services"   
+    },
+    {
+		"id"               : 4,
+        "done"             : true,
+        "name"             : "Injección de Dependencia",
+        "description"      : "Injección de Dependencia",
+        "field_1"          : "Angular",
+        "field_2"          : "v17, Constructor, Injection Dependency",
+        "field_3"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationCSV",
+        "field_4"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PROD/blob/master/src/app/_services/mcsd.service.ts",
+        "field_5"          : "https://v17.angular.io/guide/dependency-injection"   
+    },  
+    {
+		"id"               : 5,
+        "done"             : true,
+        "name"             : "Pipes",
+        "description"      : "Formato de fechas, numero y moneda",
+        "field_1"          : "Angular",
+        "field_2"          : "v17, Pipes, Date, Currency, Formatting",
+        "field_3"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/Chat",
+        "field_4"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PROD/blob/master/src/app/_modules/miscelaneous/chat/chat/chat.component.ts",
+        "field_5"          : "https://v17.angular.io/guide/pipes-overview"   
+    },
+    {
+		"id"               : 6,
+        "done"             : true,
+        "name"             : "Directives",
+        "description"      : "Directives",
+        "field_1"          : "Angular",
+        "field_2"          : "v17, Directives",
+        "field_3"          : "https://apereznwo.github.io/NG_BOOTSTRAP_DEMO_ENV_TEST/TableSampleComponent",
+        "field_4"          : "https://github.com/aperezNWO/NG_BOOTSTRAP_DEMO_ENV_TEST/blob/main/src/app/_services/sortable.directive.ts",
+        "field_5"          : "https://v17.angular.io/guide/directive-composition-api"   
+    },
+    {
+		"id"               : 7,
+        "done"             : true,
+        "name"             : "Observables",
+        "description"      : "Observables",
+        "field_1"          : "Angular",
+        "field_2"          : "v17, Observables",
+        "field_3"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/GamesHanoiAuto",
+        "field_4"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_engines/hanoi-engine.ts",
+        "field_5"          : "https://v17.angular.io/guide/observables"   
+    }      
+]

@@ -1,0 +1,30 @@
+[
+    {
+      "userId"     : 1,
+      "fullName"   : "Admin",
+      "userName"   : "Admin",
+      "pwd"        : "Admin",
+      "userRoles"  : "1"
+    },
+    {
+      "userId"     : 2,
+      "fullName"   : "Marketing",
+      "userName"   : "Marketing",
+      "pwd"        : "Marketing",
+      "userRoles"  : "2"
+    },
+    {
+      "userId"     : 3,
+      "fullName"   : "Config",
+      "userName"   : "Config",
+      "pwd"        : "Config",
+      "userRoles"  : "3"
+    },
+    {
+      "userId"     : 4,
+      "fullName"   : "Education",
+      "userName"   : "Education",
+      "pwd"        : "Education",
+      "userRoles"  : "4"
+    }
+]

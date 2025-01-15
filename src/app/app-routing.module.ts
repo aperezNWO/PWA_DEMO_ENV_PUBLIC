@@ -30,6 +30,7 @@ import { GameHanoi3dComponent            } from './_modules/games/game-hanoi3d/g
 import { MathParsingComponent            } from './_modules/miscelaneous/math-parsing/math-parsing.component';
 import { GameTetrisComponent             } from './_modules/games/game-tetris/game-tetris.component';
 import { AlgorithmCollisionComponent     } from './_modules/algorithm/algorithm-collision/algorithm-collision.component';
+import { CurriculumComponent } from './_modules/about/curriculum/curriculum.component';
 
 export interface _Route extends Route
 {
@@ -42,11 +43,12 @@ export const routes: _Route[] = [
   {  id: 0,  path: 'Home'                  , component: HomeWebComponent                    , caption: ' Home'                                        },
   {  id: 0,  path: 'Index'                 , component: IndexComponent                      , caption: ' Index'                                       },
   {  id: 0,  path:  ''                     , component: HomeWebComponent                    , caption: ''                                             },
-  {  id: 0,  path: 'AAboutWeb'             , component: AAboutWebComponent                  , caption: ' About- Main Page'                            },
-  {  id: 0,  path: 'SCM'                   , component: SCMComponent                        , caption: ' About- SCM'                                  },
-  {  id: 0,  path: 'LLMList'               , component: LLMListComponent                    , caption: ' About- LLM List'                             },
-  {  id: 0,  path: 'TechnicalSpecs'        , component: TechnicalSpecsComponent             , caption: ' Technical Specifications'                    },
-  {  id: 0,  path: 'Topics'                , component: TopicsComponent                     , caption: ' Topics - Main Page'                          },
+  {  id: 0,  path: 'AAboutWeb'             , component: AAboutWebComponent                  , caption: ' About  - Main Page'                            },
+  {  id: 0,  path: 'SCM'                   , component: SCMComponent                        , caption: ' About  - SCM'                                  },
+  {  id: 0,  path: 'LLMList'               , component: LLMListComponent                    , caption: ' About  - LLM List'                             },
+  {  id: 0,  path: 'TechnicalSpecs'        , component: TechnicalSpecsComponent             , caption: ' About  - Technical Specifications'                    },
+  {  id: 0,  path: 'Topics'                , component: TopicsComponent                     , caption: ' About  - Topics'                          },
+  {  id: 0,  path: 'Curriculum'            , component: CurriculumComponent                 , caption: ' About  - Curriculum'                          },
   {  id: 0,  path: 'AlgorithmWeb'          , component: AlgorithmWebComponent               , caption: ' Algoritmos - Main Page'                      },
   {  id: 0,  path: 'AlgorithmRegEx'        , component: AlgorithmRegExComponent             , caption: ' Algoritmos - Regular Expression'             },
   {  id: 0,  path: 'AlgorithmSort'         , component: AlgorithmSortComponent              , caption: ' Algoritmos - Sort'                           },
