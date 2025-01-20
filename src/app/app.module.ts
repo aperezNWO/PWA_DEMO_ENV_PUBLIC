@@ -64,6 +64,7 @@ import { AlgorithmCollisionComponent            } from './_modules/algorithm/alg
 import { SCMComponent                           } from './_modules/about/scm/scm.component';
 import { LLMListComponent                       } from './_modules/about/llmlist/llmlist.component';
 import { CurriculumComponent                    } from './_modules/about/curriculum/curriculum.component';
+import { FeaturePagesComponent                  } from './_modules/about/feature-pages/feature-pages.component';
 //
 export function initialize(_configService: ConfigService) {
   //
@@ -166,7 +167,8 @@ export class CustomErrorHandler implements ErrorHandler {
         GameHanoi3dComponent,
         MathParsingComponent,
         GameTetrisComponent,
-        CurriculumComponent
+        CurriculumComponent,
+        FeaturePagesComponent
     ],
     exports: [RouterModule],
     providers: [

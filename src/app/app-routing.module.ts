@@ -30,7 +30,8 @@ import { GameHanoi3dComponent            } from './_modules/games/game-hanoi3d/g
 import { MathParsingComponent            } from './_modules/miscelaneous/math-parsing/math-parsing.component';
 import { GameTetrisComponent             } from './_modules/games/game-tetris/game-tetris.component';
 import { AlgorithmCollisionComponent     } from './_modules/algorithm/algorithm-collision/algorithm-collision.component';
-import { CurriculumComponent } from './_modules/about/curriculum/curriculum.component';
+import { CurriculumComponent             } from './_modules/about/curriculum/curriculum.component';
+import { FeaturePagesComponent           } from './_modules/about/feature-pages/feature-pages.component';
 
 export interface _Route extends Route
 {
@@ -49,6 +50,7 @@ export const routes: _Route[] = [
   {  id: 0,  path: 'TechnicalSpecs'        , component: TechnicalSpecsComponent             , caption: ' About  - Technical Specifications'                    },
   {  id: 0,  path: 'Topics'                , component: TopicsComponent                     , caption: ' About  - Topics'                          },
   {  id: 0,  path: 'Curriculum'            , component: CurriculumComponent                 , caption: ' About  - Curriculum'                          },
+  {  id: 0,  path: 'Features'              , component: FeaturePagesComponent               , caption: ' About  - Features'                          },
   {  id: 0,  path: 'AlgorithmWeb'          , component: AlgorithmWebComponent               , caption: ' Algoritmos - Main Page'                      },
   {  id: 0,  path: 'AlgorithmRegEx'        , component: AlgorithmRegExComponent             , caption: ' Algoritmos - Regular Expression'             },
   {  id: 0,  path: 'AlgorithmSort'         , component: AlgorithmSortComponent              , caption: ' Algoritmos - Sort'                           },
