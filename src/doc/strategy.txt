@@ -495,8 +495,6 @@
 
       -- [_] java.      
 
--- [_] angular pensum.
-
 -- [_] scmlist, llmlist to new ngbgrid schema.
 
 -- [_] merghe math demo with collision demo.
@@ -521,6 +519,9 @@
  
         -- [_] Microsoft Forms.
         
- -- [_] Agular / Features.       
+ -- [x] Agular / Features.       
+
+ -- [x] angular pensum.
+
                
 ////////////////////////////////////////////////////////////////////////////////
