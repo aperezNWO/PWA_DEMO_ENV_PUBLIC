@@ -305,6 +305,60 @@
 
 -- [x] ngb pad instructions.
 
+-- [x] Agular / Features.       
+
+-- [x] angular pensum.
+
+-- [_] home menu items.
+
+        -- [_] programming languages / backend.
+
+        -- [_] uix libraries.
+
+               -- [_] 2d / 3d.
+
+               -- [_] material.
+
+               -- [_] ng bootstrap.
+               
+        -- [_] export  libraries
+
+               -- [_] epp plus.
+
+               -- [_] jsPdf / iTextSharp.
+
+               -- [_] char js.
+
+        -- [_] miscelaneous
+
+               -- [_] math parsing.
+
+               -- [_] ngb pad.
+ 
+        -- [_] computer visions / machine learning
+
+                -- [_] tesseract.
+
+                -- [_] tensorflow.
+   
+                -- [_] opencv.
+                
+    -- [_] scm             
+
+        -- [_] row detail grid.
+
+        -- [_] ngb grid component.
+
+        -- [_] AI_PROMPTS.
+
+        -- [_] AI_DEV.
+
+        -- [_] DEV_ENVS.
+
+        -- [_] HOSTINGS.
+
+        -- [_] DB.
+
 -- [_] hosting files cleanup service.
 
 -- [_] SSR.
@@ -413,56 +467,6 @@
 
         -- [_] corregir fireworks.
 
--- [_] home menu items.
-
-        -- [_] programming languages / backend.
-
-        -- [_] uix libraries.
-
-               -- [_] 2d / 3d.
-
-               -- [_] material.
-
-               -- [_] ng bootstrap.
-               
-        -- [_] export  libraries
-
-               -- [_] epp plus.
-
-               -- [_] jsPdf / iTextSharp.
-
-               -- [_] char js.
-
-        -- [_] miscelaneous
-
-               -- [_] math parsing.
-
-               -- [_] ngb pad.
- 
-        -- [_] computer visions / machine learning
-
-                -- [_] tesseract.
-
-                -- [_] tensorflow.
-   
-                -- [_] opencv.
-                
-    -- [_] scm             
-
-        -- [_] row detail grid.
-
-        -- [_] ngb grid component.
-
-        -- [_] AI_PROMPTS.
-
-        -- [_] AI_DEV.
-
-        -- [_] DEV_ENVS.
-
-        -- [_] HOSTINGS.
-
-        -- [_] DB.
-
 -- [_] download csv / xls /pdf file as zip.
 
 -- [_] complete header references.
@@ -519,9 +523,5 @@
  
         -- [_] Microsoft Forms.
         
- -- [x] Agular / Features.       
-
- -- [x] angular pensum.
-
                
 ////////////////////////////////////////////////////////////////////////////////
