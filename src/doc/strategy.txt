@@ -475,30 +475,6 @@
 
 -- [_] join chart / xls / csv.
                
--- [_] django python backend.
-
-        -- [_] https://code.visualstudio.com/docs/python/tutorial-django
-
--- [_] tensorflow.
-
-      -- [_] tensorflow.js typescript.
-
-      -- [_] python.
-
-      -- [_] c++.
-
-      -- [_] java.
-
--- [_] opencv.
-
-      -- [_] opencv.js typescript.
-
-      -- [_] python.
-
-      -- [_] c++.
-
-      -- [_] java.      
-
 -- [_] scmlist, llmlist to new ngbgrid schema.
 
 -- [_] merghe math demo with collision demo.
@@ -522,6 +498,33 @@
         -- [_] isolated url / ENV_LANDING.
  
         -- [_] Microsoft Forms.
-        
+
+-- [_] opencv.
+
+      -- [_] opencv.js typescript.
+
+      -- [_] python.
+
+      -- [_] c++.
+
+      -- [_] java.      
+
+-- [_] tensorflow.
+
+      -- [_] django python backend.
+
+              -- [_] https://code.visualstudio.com/docs/python/tutorial-django
+
+      -- [_]  https://www.freecodecamp.org/learn/machine-learning-with-python/#machine-learning-with-python-projects
+      
+
+      -- [_] tensorflow.js typescript.
+
+      -- [_] python.
+
+      -- [_] c++.
+
+      -- [_] java.
+  
                
 ////////////////////////////////////////////////////////////////////////////////
