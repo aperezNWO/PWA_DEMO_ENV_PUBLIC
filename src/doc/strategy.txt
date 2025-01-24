@@ -517,7 +517,6 @@
 
       -- [_]  https://www.freecodecamp.org/learn/machine-learning-with-python/#machine-learning-with-python-projects
       
-
       -- [_] tensorflow.js typescript.
 
       -- [_] python.
@@ -526,5 +525,16 @@
 
       -- [_] java.
   
+
+-- [_] sites destination.
+
+        -- [_] env_landing -> marketing.
+
+        -- [_] env_public  -> programming demo.
+
+        -- [_] env_dev     -> tensorflow.
+
+        -- [_] env_prod    -> contact form.
+
                
 ////////////////////////////////////////////////////////////////////////////////
