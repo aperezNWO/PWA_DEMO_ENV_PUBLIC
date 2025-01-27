@@ -100,6 +100,7 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
         this.__languajeList.push(new _languageName(1, '(.Net Core   / C#)'             , true));
         this.__languajeList.push(new _languageName(2, '(Node.js     / JavaScript)'     , false));
         this.__languajeList.push(new _languageName(2, '(SpringBoot  / Java)'           , false ));
+        this.__languajeList.push(new _languageName(2, '(Django      / Python)'         , false ));
     }
     //
     SetCSVData():void
@@ -247,7 +248,51 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
                 td_informeLogRemoto_SprinbBootJava
                 .subscribe(td_observer_sprinbbootjava);
             break;
-          default:
+            case 3: // DJANGO / PYTHON
+                // 
+                let td_Persons_DjangoPython!   : Observable<string>;
+                td_Persons_DjangoPython        = this.backendService.getPersonsDjangoPython();
+                //
+                const td_observer_pythondjango = {
+                  next: (td_persons_python_django: string)     => { 
+                    //
+                    console.log('TEMPLATE DRIVEN - PYTHON / DJANGO - RETURN VALUES  : ' + td_persons_python_django);
+                    //
+                    let td_persons_django_pytnon_json   = JSON.parse(td_persons_python_django);
+                    //
+                    this.rf_textStatus            = "Se encontraron [" + td_persons_django_pytnon_json.length + "] registros ";
+                    this.rf_formSubmit            = false;
+                    //
+                    this.csv_dataSource           = new MatTableDataSource<PersonEntity>(td_persons_django_pytnon_json);
+                    this.csv_dataSource.paginator = this.csv_paginator;
+                    //
+                    const utterance = new SpeechSynthesisUtterance( this.rf_textStatus );
+                    speechSynthesis.speak(utterance);  
+                  },
+                  error           : (err: Error)      => {
+                    //
+                    console.error('TEMPLATE DRIVEN - python/django - (ERROR) : ' + JSON.stringify(err.message));
+                    //
+                    this.rf_textStatus           = "Ha ocurrido un error. Favor intente de nuevo";
+                    this.rf_formSubmit           = false;
+                    this.rf_buttonCaption        = "[Buscar]";
+                    //
+                    const utterance = new SpeechSynthesisUtterance( this.rf_textStatus );
+                    speechSynthesis.speak(utterance);  
+                  },
+                  complete        : ()                => {
+                    //
+                    console.log('TEMPLATE DRIVEN - python/django -  (SEARCH END)');
+                    //
+                    this.rf_formSubmit           = false;
+                    this.rf_buttonCaption        = "[Buscar]";
+                  },
+                }; 
+                //
+                td_Persons_DjangoPython
+                .subscribe(td_observer_pythondjango);
+            break;
+            default:
             return;
        };
     } 

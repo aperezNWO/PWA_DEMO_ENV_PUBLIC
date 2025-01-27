@@ -279,6 +279,21 @@ export class BackendService implements OnInit {
         return excelFileName; 
     }
     //
+    
+    getPersonsDjangoPython() : Observable<string>{
+      //
+      let p_url       : string = `${this._configService.getConfigValue('baseUrlDjangoPython')}getAllPersons?format=json`;
+      //
+      let djantoPythonOutput: Observable<string> = this.http.get<string>(
+        p_url,
+        this.HTTPOptions_JSON,
+      );
+      //
+      console.log('getLogRemotoSprinbBootJava ' + p_url);
+      //
+      return djantoPythonOutput;
+    }
+    //
     getLogStatPOST() {
       //
       let url    = `${this._baseUrlNetCore}demos/GetConsultaLogStatPost`;
