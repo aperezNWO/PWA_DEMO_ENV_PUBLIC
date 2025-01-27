@@ -247,7 +247,7 @@ export class BackendService implements OnInit {
     
     getLogRemotoDjangoPython(_searchCriteria : SearchCriteria) : Observable<string>{
       //
-      let p_url       : string = `${this._configService.getConfigValue('baseUrlDjangoPython')}getAllLogs`;
+      let p_url       : string = `${this._configService.getConfigValue('baseUrlDjangoPython')}getAllLogs?format=json`;
       //
       let djantoPythonOutput: Observable<string> = this.http.get<string>(
         p_url,
