@@ -68,10 +68,21 @@ export class BackendService implements OnInit {
       return this.__baserUrlSpringBoot;
     }
     //
+    public set _baseUrlDjangoPython(value: string) {
+    //
+    this.__baseUrlDjangoPython = value;
+    }
+    //
+    public get _baseUrlDjangoPython():string {
+      //
+      return this.__baseUrlDjangoPython;
+    }
+      //
     protected __baseUrlNetCore        : string = '';
     protected __baseUrlNodeJs         : string = '';
     protected __baseUrlNodeJsOcr      : string = '';
     protected __baserUrlSpringBoot    : string = '';
+    protected __baseUrlDjangoPython    : string = '';
     //
     ////////////////////////////////////////////////////////////////  
     // METODOS - [EVENT HANDLERS]
