@@ -3,7 +3,7 @@ import { FormBuilder, Validators                       } from '@angular/forms';
 import { MatTableDataSource                            } from '@angular/material/table';
 import { MatPaginator                                  } from '@angular/material/paginator';
 import { LogEntry,SearchCriteria, _languageName        } from '../../../_models/entityInfo.model';
-import { BackendService                                   } from '../../../_services/BackendService/backend.service';
+import { BackendService                                } from '../../../_services/BackendService/backend.service';
 import { CustomErrorHandler                            } from '../../../app.component';
 import { UtilManager                                   } from 'src/app/_engines/util.engine';
 import { BehaviorSubject, delay, Observable, tap       } from 'rxjs';
@@ -120,6 +120,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
         this.__languajeList.push(new _languageName(1, '(.Net Core   / C#)'             , true  ));
         this.__languajeList.push(new _languageName(2, '(Node.js     / JavaScript)'     , false ));
         this.__languajeList.push(new _languageName(2, '(SpringBoot  / Java)'           , false ));
+        this.__languajeList.push(new _languageName(2, '(Django      / Pytnon)'         , false ));
     }
     //--------------------------------------------------------------------------
     // METODOS COMUNES 
@@ -558,6 +559,55 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
               td_informeLogRemoto_SprinbBootJava
               .subscribe(td_observer_sprinbbootjava);
           break;
+        case 4: // DJANGO     / PYTHON
+          //
+          this.td_buttonCaption = "[Favor espere...]";
+          //
+          this.td_textStatus    = "";
+          // 
+          let td_informeLogRemoto_PythonDjango!   : Observable<string>;
+          // 
+          td_informeLogRemoto_PythonDjango        = this.backendService.getLogRemotoDjangoPython(td_searchCriteria);
+          //
+          const td_observer_pythondjango = {
+            next: (td_logEntry_python_django: string)     => { 
+              //
+              console.log('TEMPLATE DRIVEN - PYTHON / DJANGO - RETURN VALUES  : ' + td_logEntry_python_django);
+              //
+              let td_logEntry_python_django_json   = JSON.parse(td_logEntry_python_django);
+              //
+              this.td_dataSource           = new MatTableDataSource<LogEntry>(td_logEntry_python_django_json);
+              this.td_dataSource.paginator = this.td_paginator;
+              //
+              this.td_textStatus           = "Se encontraron [" + td_logEntry_python_django_json.length + "] registros ";
+              this.td_formSubmit           = false;
+              //
+              const utterance = new SpeechSynthesisUtterance( this.td_textStatus  );
+              speechSynthesis.speak(utterance);  
+            },
+            error           : (err: Error)      => {
+              //
+              console.error('TEMPLATE DRIVEN - python/django - (ERROR) : ' + JSON.stringify(err.message));
+              //
+              this.td_textStatus           = "Ha ocurrido un error. Favor intente de nuevo";
+              this.td_formSubmit           = false;
+              this.td_buttonCaption        = "[Buscar]";
+              //
+              const utterance = new SpeechSynthesisUtterance( this.td_textStatus_xls  );
+              speechSynthesis.speak(utterance);  
+            },
+            complete        : ()                => {
+              //
+              console.log('TEMPLATE DRIVEN - sprinbboot/java -  (SEARCH END)');
+              //
+              this.td_formSubmit           = false;
+              this.td_buttonCaption        = "[Buscar]";
+            },
+          }; 
+          //
+          td_informeLogRemoto_PythonDjango
+          .subscribe(td_observer_pythondjango);
+      break;
         default:
           return;
       }

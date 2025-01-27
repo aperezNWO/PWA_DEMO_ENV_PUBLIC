@@ -244,6 +244,21 @@ export class BackendService implements OnInit {
       return nodeJsOutput;
     }
     //
+    
+    getLogRemotoDjangoPython(_searchCriteria : SearchCriteria) : Observable<string>{
+      //
+      let p_url       : string = `${this._configService.getConfigValue('baseUrlDjangoPython')}getAllLogs`;
+      //
+      let djantoPythonOutput: Observable<string> = this.http.get<string>(
+        p_url,
+        this.HTTPOptions_JSON,
+      );
+      //
+      console.log('getLogRemotoSprinbBootJava ' + p_url);
+      //
+      return djantoPythonOutput;
+    }
+    //
     getInformeExcel(_searchCriteria : SearchCriteria){
         //
         let p_url  = this._baseUrlNetCore + 'demos/generarinformexls';
