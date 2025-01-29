@@ -483,22 +483,6 @@
 
 -- [_] ngbgrid with voice search.
 
--- [_] contact form.
-
-        -- [_] dynamic form.
-
-        -- [_] oAuth.
-
-        -- [_] email notification.
-
-        -- [_] log entry.
-
-        -- [_] llm secure tips.
-         
-        -- [_] isolated url / ENV_LANDING.
- 
-        -- [_] Microsoft Forms.
-
 -- [_] opencv.
 
       -- [_] opencv.js typescript.
@@ -536,6 +520,9 @@
 
         -- [_] env_prod    -> contact form.
 
+                -- [_]  https://developers.facebook.com/apps
+
+        -- [_] fb account "adam heispaupt" -> Dev / OAutn Accont.
 
 -- [_] djanto setup windows  : listado xls / csv
         https://codesandbox.io/p/github/aperezNWO/django_setup_windows/main
@@ -543,5 +530,25 @@
 
 -- [_] djanto setup linux    : freecode camp curso de ciencia de datos.
         https://codesandbox.io/p/github/aperezNWO/django_setup_linux/main
+
+-- [_] contact form.
+
+        -- [_] https://developers.facebook.com/apps/creation/
+
+        -- [_]  https://developers.facebook.com/apps
+
+        -- [_] dynamic form.
+
+        -- [_] oAuth.
+
+        -- [_] email notification.
+
+        -- [_] log entry.
+
+        -- [_] llm secure tips.
+         
+        -- [_] isolated url / ENV_LANDING.
+ 
+        -- [_] Microsoft Forms.
 
 ////////////////////////////////////////////////////////////////////////////////
