@@ -34,5 +34,9 @@
     {
         "url" : "https://copilot.microsoft.com/",
         "name" : "Microsoft Copilot"
+    },
+    {
+        "url" : "https://www.deepseek.com/",
+        "name" : "Deep Seek"
     }
     ] 

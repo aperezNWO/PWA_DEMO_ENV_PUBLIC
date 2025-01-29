@@ -536,5 +536,12 @@
 
         -- [_] env_prod    -> contact form.
 
-               
+
+-- [_] djanto setup windows  : listado xls / csv
+        https://codesandbox.io/p/github/aperezNWO/django_setup_windows/main
+
+
+-- [_] djanto setup linux    : freecode camp curso de ciencia de datos.
+        https://codesandbox.io/p/github/aperezNWO/django_setup_linux/main
+
 ////////////////////////////////////////////////////////////////////////////////
