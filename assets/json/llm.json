@@ -38,5 +38,9 @@
     {
         "url" : "https://www.deepseek.com/",
         "name" : "Deep Seek"
+    },
+    {
+        "url"  : "https://chat.qwenlm.ai/",
+        "name" : "Qwen"
     }
     ] 

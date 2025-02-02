@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1738121597788,
+  "timestamp": 1738464239748,
   "index": "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/index.html",
   "assetGroups": [
     {
@@ -79,7 +79,7 @@
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/images/mic_off.gif": "58fb904614ab65925c51edf315b70c46d6687410",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/images/mic_on.gif": "48778af047c17ee65a307eb0517907af8b333e89",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/images/speaker_on.gif": "52d373e9a336356e1f15b3a84d3b3cb611ab2ee0",
-    "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/json/llm.json": "f24b78289f3d4d2de66b6dec631182b37b8c3940",
+    "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/json/llm.json": "542f4742aa96a49cbe71961ba2360921f8619035",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/json/scm.json": "993bcc9f89ab5d829632df1a24bfc6a72fb0f1a2",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/opencv.js": "8462bd311b721a2206185194a5e2e462626483d1",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/sudoku.txt": "a11677cdf143c6ab92080e8a4247c50083c14e71",
