@@ -561,7 +561,7 @@
 
 -- [_]  Add current contact form.        
 
--- [_]  programming samples : .        
+-- [_]  programming samples / DEMOS :      
 
         -- [_]  by features.        
 
