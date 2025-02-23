@@ -70,7 +70,7 @@ export class ConfigService {
     return this.http.get('./assets/json/angular_Curriculum_base.json').toPromise()
       .then((data: any) => {
           //
-          console.log("loading curruculum..." + JSON.stringify(data));
+          //console.log("loading curruculum..." + JSON.stringify(data));
           //
           _environment.LLMList = data; // Assign loaded data to environment variable
       })
@@ -83,7 +83,7 @@ export class ConfigService {
     return this.http.get('./assets/json/scm.json').toPromise()
       .then((data: any) => {
           //
-          console.log("loading scm list..." + JSON.stringify(data));
+          //console.log("loading scm list..." + JSON.stringify(data));
           //
           _environment.scmList = data; // Assign loaded data to environment variable
       })
@@ -98,7 +98,7 @@ export class ConfigService {
     return this.http.get('./assets/json/llm.json').toPromise()
       .then((data: any) => {
           //
-          console.log("loading LLM List..." + JSON.stringify(data));
+          //console.log("loading LLM List..." + JSON.stringify(data));
           //
           _environment.LLMList = data; // Assign loaded data to environment variable
       })
@@ -111,7 +111,7 @@ export class ConfigService {
     return this.http.get('./assets/config/_config.json').toPromise()
       .then((data: any) => {
           //
-          console.log("loading configuration...");
+          //console.log("loading configuration...");
           //
           _environment.externalConfig = data; // Assign loaded data to environment variable
       })
@@ -124,9 +124,9 @@ export class ConfigService {
     //
     let jsonData : string = JSON.parse(JSON.stringify(_environment.externalConfig))[key];
     //
-    console.log(jsonData);
+    //console.log(jsonData);
     //
-    console.log('Reading config : ' + key + ', value :' + jsonData)
+    //console.log('Reading config : ' + key + ', value :' + jsonData)
     //
     return jsonData;
   }

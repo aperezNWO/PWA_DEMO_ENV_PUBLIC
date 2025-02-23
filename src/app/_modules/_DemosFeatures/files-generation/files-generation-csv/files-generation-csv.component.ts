@@ -3,9 +3,9 @@ import { FormBuilder, Validators                       } from '@angular/forms';
 import { MatTableDataSource                            } from '@angular/material/table';
 import { MatPaginator                                  } from '@angular/material/paginator';
 import { BehaviorSubject, delay, Observable, tap       } from 'rxjs';
-import { BackendService                                   } from '../../../_services/BackendService/backend.service';
-import { CustomErrorHandler                            } from '../../../app.module';
-import { PersonEntity, SearchCriteria, _languageName   } from '../../../_models/entityInfo.model';
+import { PersonEntity, SearchCriteria, _languageName } from 'src/app/_models/entityInfo.model';
+import { BackendService } from 'src/app/_services/BackendService/backend.service';
+import { CustomErrorHandler } from 'src/app/app.component';
 //
 @Component({
   selector: 'app-files-generation-csv',

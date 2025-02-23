@@ -3,9 +3,8 @@ import { Observable                                  } from 'rxjs';
 import { _languageName, _vertexSize                  } from 'src/app/_models/entityInfo.model';
 import { PdfService                                  } from 'src/app/_engines/pdf.engine';
 import { UtilManager                                 } from 'src/app/_engines/util.engine';
-import { BackendService                                 } from '../../../_services/BackendService/backend.service';
-import { CustomErrorHandler                          } from '../../../app.module';
-//
+import { BackendService } from 'src/app/_services/BackendService/backend.service';
+import { CustomErrorHandler } from 'src/app/app.component';
 @Component({
   selector       : 'app-algorithm-dijkstra',
   templateUrl    : './algorithm-dijkstra.component.html',

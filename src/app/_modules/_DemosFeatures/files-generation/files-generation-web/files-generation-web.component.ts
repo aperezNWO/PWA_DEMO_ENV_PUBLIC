@@ -1,6 +1,6 @@
 import { Component          } from '@angular/core';
-import { BackendService        } from '../../../_services/BackendService/backend.service';
-import { CustomErrorHandler } from '../../../app.module';
+import { BackendService } from 'src/app/_services/BackendService/backend.service';
+import { CustomErrorHandler } from 'src/app/app.component';
 //
 @Component({
   selector: 'app-files-generation-web',

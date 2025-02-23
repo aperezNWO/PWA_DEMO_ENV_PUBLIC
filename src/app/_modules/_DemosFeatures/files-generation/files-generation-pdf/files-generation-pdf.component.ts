@@ -1,8 +1,8 @@
 import { Component, ViewChild        } from '@angular/core';
-import { BackendService                 } from '../../../_services/BackendService/backend.service';
-import { CustomErrorHandler          } from '../../../app.module';
 import { HttpEventType, HttpResponse } from '@angular/common/http';
 import { UtilManager                 } from 'src/app/_engines/util.engine';
+import { BackendService } from 'src/app/_services/BackendService/backend.service';
+import { CustomErrorHandler } from 'src/app/app.component';
 
 
 @Component({

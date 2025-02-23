@@ -1,9 +1,9 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { BackendService                                 } from '../../../_services/BackendService/backend.service';
-import { CustomErrorHandler                          } from '../../../app.module';
 import { Observable                                  } from 'rxjs';
 import { _languageName                               } from 'src/app/_models/entityInfo.model';
 import { UtilManager                                 } from 'src/app/_engines/util.engine';
+import { BackendService } from 'src/app/_services/BackendService/backend.service';
+import { CustomErrorHandler } from 'src/app/app.component';
 
 //
 @Component({

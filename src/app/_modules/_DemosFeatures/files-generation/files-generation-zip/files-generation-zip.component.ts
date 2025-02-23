@@ -1,9 +1,9 @@
 import { Component, OnInit                   } from '@angular/core';
 import { HttpEventType, HttpResponse         } from '@angular/common/http';
 import { Observable                          } from 'rxjs';
-import { BackendService                         } from '../../../_services/BackendService/backend.service';
-import { CustomErrorHandler                  } from '../../../app.module';
 import { UtilManager                         } from 'src/app/_engines/util.engine';
+import { BackendService } from 'src/app/_services/BackendService/backend.service';
+import { CustomErrorHandler } from 'src/app/app.component';
 //
 @Component({
   selector: 'app-files-generation-zip',
