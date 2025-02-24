@@ -32,6 +32,7 @@ import { MathParsingComponent } from './_modules/_DemosFeatures/miscelaneous/mat
 import { MiscelaneousComponent } from './_modules/_DemosFeatures/miscelaneous/miscelaneous/miscelaneous.component';
 import { OcrPhotoCaptureComponent } from './_modules/_DemosFeatures/miscelaneous/ocr-photo-capture/ocr-photo-capture.component';
 import { IndexComponent } from './_modules/home/index/index.component';
+import { ContactformComponent } from './_modules/about/contactform/contactform.component';
 
 export interface _Route extends Route
 {
@@ -44,18 +45,19 @@ export const routes: _Route[] = [
   {  id: 0,  path: 'Home'                  , component: HomeWebComponent                    , caption: ' Home'                                        },
   {  id: 0,  path: 'Index'                 , component: IndexComponent                      , caption: ' Index'                                       },
   {  id: 0,  path:  ''                     , component: HomeWebComponent                    , caption: ''                                             },
-  {  id: 0,  path: 'AAboutWeb'             , component: AAboutWebComponent                  , caption: ' About  - Main Page'                            },
-  {  id: 0,  path: 'SCM'                   , component: SCMComponent                        , caption: ' About  - SCM'                                  },
-  {  id: 0,  path: 'LLMList'               , component: LLMListComponent                    , caption: ' About  - LLM List'                             },
-  {  id: 0,  path: 'TechnicalSpecs'        , component: TechnicalSpecsComponent             , caption: ' About  - Technical Specifications'                    },
-  {  id: 0,  path: 'Topics'                , component: TopicsComponent                     , caption: ' About  - Topics'                          },
-  {  id: 0,  path: 'Curriculum'            , component: CurriculumComponent                 , caption: ' About  - Curriculum'                          },
-  {  id: 0,  path: 'Features'              , component: FeaturePagesComponent               , caption: ' About  - Features'                          },
+  {  id: 0,  path: 'AAboutWeb'             , component: AAboutWebComponent                  , caption: ' About  - Main Page'                          },
+  {  id: 0,  path: 'SCM'                   , component: SCMComponent                        , caption: ' About  - SCM'                                },
+  {  id: 0,  path: 'LLMList'               , component: LLMListComponent                    , caption: ' About  - LLM List'                           },
+  {  id: 0,  path: 'TechnicalSpecs'        , component: TechnicalSpecsComponent             , caption: ' About  - Technical Specifications'           },
+  {  id: 0,  path: 'Topics'                , component: TopicsComponent                     , caption: ' About  - Topics'                             },
+  {  id: 0,  path: 'Curriculum'            , component: CurriculumComponent                 , caption: ' About  - Curriculum'                         },
+  {  id: 0,  path: 'Features'              , component: FeaturePagesComponent               , caption: ' About  - Features'                           },
+  {  id: 0,  path: 'ContactForm'           , component: ContactformComponent                , caption: ' About  - Contact Form'                       },
   {  id: 0,  path: 'AlgorithmWeb'          , component: AlgorithmWebComponent               , caption: ' Algoritmos - Main Page'                      },
   {  id: 0,  path: 'AlgorithmRegEx'        , component: AlgorithmRegExComponent             , caption: ' Algoritmos - Regular Expression'             },
   {  id: 0,  path: 'AlgorithmSort'         , component: AlgorithmSortComponent              , caption: ' Algoritmos - Sort'                           },
-  {  id: 0,  path: 'AlgorithmDijkstra'     , component: AlgorithmDijkstraComponent          , caption: ' Algoritmos - Dijkstra  - distancia más corta' },
-  {  id: 0,  path: 'AlgorithmCollision'    , component: AlgorithmCollisionComponent         , caption: ' Algoritmos - Collision - Demo' },
+  {  id: 0,  path: 'AlgorithmDijkstra'     , component: AlgorithmDijkstraComponent          , caption: ' Algoritmos - Dijkstra  - distancia más corta'},
+  {  id: 0,  path: 'AlgorithmCollision'    , component: AlgorithmCollisionComponent         , caption: ' Algoritmos - Collision - Demo'               },
   {  id: 0,  path: 'FilesGenerationWeb'    , component: FilesGenerationWebComponent         , caption: ' File Generatin  - Main Page'                 },
   {  id: 0,  path: 'FilesGenerationXLS'    , component: FilesGenerationXLSComponent         , caption: ' File Generation - XLS'                       },
   {  id: 0,  path: 'FilesGenerationCSV'    , component: FilesGenerationCSVComponent         , caption: ' File Generation - CSV'                       },

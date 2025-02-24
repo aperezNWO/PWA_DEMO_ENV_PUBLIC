@@ -65,6 +65,7 @@ import { MathParsingComponent } from './_modules/_DemosFeatures/miscelaneous/mat
 import { MiscelaneousComponent } from './_modules/_DemosFeatures/miscelaneous/miscelaneous/miscelaneous.component';
 import { OcrPhotoCaptureComponent } from './_modules/_DemosFeatures/miscelaneous/ocr-photo-capture/ocr-photo-capture.component';
 import { TechnicalSpecsComponent } from './_modules/about/technicalspecs/technical-specs/technical-specs.component';
+import { ContactformComponent } from './_modules/about/contactform/contactform.component';
 //
 export function initialize(_configService: ConfigService) {
   //
@@ -168,7 +169,8 @@ export class CustomErrorHandler implements ErrorHandler {
         MathParsingComponent,
         GameTetrisComponent,
         CurriculumComponent,
-        FeaturePagesComponent
+        FeaturePagesComponent,
+        ContactformComponent
     ],
     exports: [RouterModule],
     providers: [
