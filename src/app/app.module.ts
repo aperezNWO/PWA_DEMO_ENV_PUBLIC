@@ -34,38 +34,40 @@ import { NgxSignaturePadModule           } from '@eve-sama/ngx-signature-pad';
 import { NgbHighlight, NgbModule                } from '@ng-bootstrap/ng-bootstrap';
 import { NgbPaginationModule, NgbAlertModule    } from '@ng-bootstrap/ng-bootstrap';
 import { IndexComponent                         } from './_modules/home/index/index.component';
-import { FireworksComponent                     } from './_modules/home/fireworks/fireworks.component';
 import { SCMComponent                           } from './_modules/about/scm/scm.component';
 import { LLMListComponent                       } from './_modules/about/llmlist/llmlist.component';
-import { CurriculumComponent } from './_modules/_DemosCurriculum/curriculum/curriculum.component';
-import { TopicsComponent } from './_modules/_DemosCurriculum/topics/topics.component';
-import { AlgorithmCollisionComponent } from './_modules/_DemosFeatures/algorithm/algorithm-collision/algorithm-collision.component';
-import { AlgorithmDijkstraComponent } from './_modules/_DemosFeatures/algorithm/algorithm-dijkstra/algorithm-dijkstra.component';
-import { AlgorithmRegExComponent } from './_modules/_DemosFeatures/algorithm/algorithm-reg-ex/algorithm-reg-ex.component';
-import { AlgorithmSortComponent } from './_modules/_DemosFeatures/algorithm/algorithm-sort/algorithm-sort.component';
-import { AlgorithmWebComponent } from './_modules/_DemosFeatures/algorithm/algorithm-web/algorithm-web.component';
-import { FeaturePagesComponent } from './_modules/_DemosFeatures/feature-pages/feature-pages.component';
-import { ChartComponent } from './_modules/_DemosFeatures/files-generation/chart/chart.component';
-import { FilesGenerationCSVComponent } from './_modules/_DemosFeatures/files-generation/files-generation-csv/files-generation-csv.component';
-import { FilesGenerationPDFComponent } from './_modules/_DemosFeatures/files-generation/files-generation-pdf/files-generation-pdf.component';
-import { FilesGenerationWebComponent } from './_modules/_DemosFeatures/files-generation/files-generation-web/files-generation-web.component';
-import { FilesGenerationXLSComponent } from './_modules/_DemosFeatures/files-generation/files-generation-xls/files-generation-xls.component';
-import { FilesGenerationZIPComponent } from './_modules/_DemosFeatures/files-generation/files-generation-zip/files-generation-zip.component';
-import { GameHanoiAutoComponent } from './_modules/_DemosFeatures/games/game-hanoi-auto/game-hanoi-auto.component';
-import { GameHanoi3dComponent } from './_modules/_DemosFeatures/games/game-hanoi3d/game-hanoi3d.component';
-import { SudokuComponent } from './_modules/_DemosFeatures/games/game-sudoku/game-sudoku.component';
-import { GameTetrisComponent } from './_modules/_DemosFeatures/games/game-tetris/game-tetris.component';
-import { BoardComponent } from './_modules/_DemosFeatures/games/game-tictactoe/board/board.component';
-import { GameTictactoeComponent } from './_modules/_DemosFeatures/games/game-tictactoe/game-tictactoe.component';
-import { SquareComponent } from './_modules/_DemosFeatures/games/game-tictactoe/square/square.component';
-import { GameWebComponent } from './_modules/_DemosFeatures/games/game-web/game-web.component';
-import { ChatComponent } from './_modules/_DemosFeatures/miscelaneous/chat/chat/chat.component';
-import { ComputerVisionComponent } from './_modules/_DemosFeatures/miscelaneous/computer-vision/computer-vision.component';
-import { MathParsingComponent } from './_modules/_DemosFeatures/miscelaneous/math-parsing/math-parsing.component';
-import { MiscelaneousComponent } from './_modules/_DemosFeatures/miscelaneous/miscelaneous/miscelaneous.component';
-import { OcrPhotoCaptureComponent } from './_modules/_DemosFeatures/miscelaneous/ocr-photo-capture/ocr-photo-capture.component';
-import { TechnicalSpecsComponent } from './_modules/about/technicalspecs/technical-specs/technical-specs.component';
+
+import { DemosWebComponent } from './_modules/_Demos/DemosWeb/demos-web/demos-web.component';
+import { CurriculumComponent } from './_modules/_Demos/_DemosCurriculum/curriculum/curriculum.component';
+import { TopicsComponent } from './_modules/_Demos/_DemosCurriculum/topics/topics.component';
+import { DemosFeaturesWebComponent } from './_modules/_Demos/_DemosFeatures/_demos-features-web/demos-features-web.component';
+import { AlgorithmCollisionComponent } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-collision/algorithm-collision.component';
+import { AlgorithmDijkstraComponent } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-dijkstra/algorithm-dijkstra.component';
+import { AlgorithmRegExComponent } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-reg-ex/algorithm-reg-ex.component';
+import { AlgorithmSortComponent } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-sort/algorithm-sort.component';
+import { AlgorithmWebComponent } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-web/algorithm-web.component';
+import { FeaturePagesComponent } from './_modules/_Demos/_DemosFeatures/_feature-pages/feature-pages.component';
+import { ChartComponent } from './_modules/_Demos/_DemosFeatures/files-generation/chart/chart.component';
+import { FilesGenerationCSVComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-csv/files-generation-csv.component';
+import { FilesGenerationPDFComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-pdf/files-generation-pdf.component';
+import { FilesGenerationWebComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-web/files-generation-web.component';
+import { FilesGenerationXLSComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-xls/files-generation-xls.component';
+import { FilesGenerationZIPComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-zip/files-generation-zip.component';
+import { GameHanoiAutoComponent } from './_modules/_Demos/_DemosFeatures/games/game-hanoi-auto/game-hanoi-auto.component';
+import { GameHanoi3dComponent } from './_modules/_Demos/_DemosFeatures/games/game-hanoi3d/game-hanoi3d.component';
+import { SudokuComponent } from './_modules/_Demos/_DemosFeatures/games/game-sudoku/game-sudoku.component';
+import { GameTetrisComponent } from './_modules/_Demos/_DemosFeatures/games/game-tetris/game-tetris.component';
+import { BoardComponent } from './_modules/_Demos/_DemosFeatures/games/game-tictactoe/board/board.component';
+import { GameTictactoeComponent } from './_modules/_Demos/_DemosFeatures/games/game-tictactoe/game-tictactoe.component';
+import { SquareComponent } from './_modules/_Demos/_DemosFeatures/games/game-tictactoe/square/square.component';
+import { GameWebComponent } from './_modules/_Demos/_DemosFeatures/games/game-web/game-web.component';
+import { ChatComponent } from './_modules/_Demos/_DemosFeatures/miscelaneous/chat/chat/chat.component';
+import { ComputerVisionComponent } from './_modules/_Demos/_DemosFeatures/miscelaneous/computer-vision/computer-vision.component';
+import { MathParsingComponent } from './_modules/_Demos/_DemosFeatures/miscelaneous/math-parsing/math-parsing.component';
+import { MiscelaneousComponent } from './_modules/_Demos/_DemosFeatures/miscelaneous/miscelaneous/miscelaneous.component';
+import { OcrPhotoCaptureComponent } from './_modules/_Demos/_DemosFeatures/miscelaneous/ocr-photo-capture/ocr-photo-capture.component';
 import { ContactformComponent } from './_modules/about/contactform/contactform.component';
+import { TechnicalSpecsComponent } from './_modules/about/technicalspecs/technical-specs/technical-specs.component';
 //
 export function initialize(_configService: ConfigService) {
   //
@@ -164,13 +166,14 @@ export class CustomErrorHandler implements ErrorHandler {
         TopicsComponent,
         IndexComponent,
         ComputerVisionComponent,
-        FireworksComponent,
         GameHanoi3dComponent,
         MathParsingComponent,
         GameTetrisComponent,
         CurriculumComponent,
         FeaturePagesComponent,
-        ContactformComponent
+        ContactformComponent,
+        DemosFeaturesWebComponent,
+        DemosWebComponent
     ],
     exports: [RouterModule],
     providers: [

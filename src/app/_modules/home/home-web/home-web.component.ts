@@ -19,21 +19,17 @@ export class HomeWebComponent implements OnInit {
       //
       pages =[
         {
-          'url': '/Miscelaneous', 
-          'text': '[MISCELANEOUS]',
+          'url': '/DemosFeaturesWeb', 
+          'text': '[CARACTERISTICAS]',
         },  
         {
-          'url': '/GamesWeb', 
-          'text': '[GAMES]',
+          'url': '/DemosLanguagesWeb', 
+          'text': '[LENGUAJES]',
         },    
         {
-          'url': '/AlgorithmWeb',
-          'text': '[ALGORITMOS]',
+          'url': '/Curriculum',
+          'text': '[CURRICULUM]',
         },
-        {
-          'url': '/FilesGenerationWeb', 
-          'text': '[GENERAR ARCHIVOS]',
-        }
       ];
   //
   constructor(backendService : BackendService, private _configService: ConfigService, customErrorHandler : CustomErrorHandler)

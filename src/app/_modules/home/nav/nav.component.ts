@@ -36,21 +36,9 @@ export class NavComponent {
       'text': '[HOME]',
     },
     {
-      'url': '/Miscelaneous', 
-      'text': '[MISCELANEOUS]',
+      'url': '/DemosWeb', 
+      'text': '[DEMOS]',
     },  
-    {
-      'url': '/GamesWeb', 
-      'text': '[GAMES]',
-    },    
-    {
-      'url': '/AlgorithmWeb',
-      'text': '[ALGORITMOS]',
-    },
-    {
-      'url': '/FilesGenerationWeb', 
-      'text': '[GENERAR ARCHIVOS]',
-    },
     {
       'url' : '/AAboutWeb', 
       'text': '[ACERCA DE]',
