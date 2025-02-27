@@ -114,36 +114,6 @@ export class IndexComponent {
     //
     this._search$.next();
   }
-  InitializeSpeechRecognition():void {
-    // Initialize the SpeechRecognition object
-    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-    if (SpeechRecognition) {
-      this.recognition = new SpeechRecognition();
-      this.recognition.lang = 'es-CO'; // Set language
-      this.recognition.interimResults = false; // Only final results
-      this.recognition.maxAlternatives = 1;
-
-      // Event handlers
-      this.recognition.onresult = (event: any) => {
-        //
-        this.transcript = event.results[0][0].transcript;
-        console.log('Transcript:', this.transcript);
-      };
-
-      this.recognition.onerror = (event: any) => {
-        this.error = event.error;
-        this.isListening = false;
-        console.error('Error:', this.error);
-      };
-
-      this.recognition.onend = () => {
-        //
-        console.log('Recognition ended.');
-      };
-    } else {
-      alert('Speech Recognition API is not supported in your browser.');
-    }
-  }
   //
   private _search(): Observable<BaseSearchResult> {
     //
@@ -154,7 +124,7 @@ export class IndexComponent {
     // 0. get state
     const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
 
-    //
+    // 1. get data
     _searchPages   = routes;
 
     // 2. filter
@@ -239,6 +209,37 @@ export class IndexComponent {
     this.sortDirection = direction;
   }
   //////////////////////////////////////////////////////////
+  InitializeSpeechRecognition():void {
+    // Initialize the SpeechRecognition object
+    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    if (SpeechRecognition) {
+      this.recognition = new SpeechRecognition();
+      this.recognition.lang = 'es-CO'; // Set language
+      this.recognition.interimResults = false; // Only final results
+      this.recognition.maxAlternatives = 1;
+
+      // Event handlers
+      this.recognition.onresult = (event: any) => {
+        //
+        this.transcript = event.results[0][0].transcript;
+        console.log('Transcript:', this.transcript);
+      };
+
+      this.recognition.onerror = (event: any) => {
+        this.error = event.error;
+        this.isListening = false;
+        console.error('Error:', this.error);
+      };
+
+      this.recognition.onend = () => {
+        //
+        console.log('Recognition ended.');
+      };
+    } else {
+      alert('Speech Recognition API is not supported in your browser.');
+    }
+  }
+  //
   startListening() {
     //
     if (this.recognition) {

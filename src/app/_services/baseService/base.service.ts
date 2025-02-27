@@ -2,7 +2,8 @@ import { DecimalPipe } from "@angular/common";
 import { Injectable } from "@angular/core";
 import { BehaviorSubject, Subject, tap, debounceTime, switchMap, delay, Observable, of } from "rxjs";
 import { _SortColumn } from "src/app/_headers/BaseSortableHeader.directive";
-import { _BaseModel, _SearchState, _BaseSearchResult, matches, _SortDirection, sort } from "src/app/_models/common/common";
+import { _SearchState, _BaseSearchResult, matches, _SortDirection, sort } from "src/app/_models/common/common";
+import { _BaseModel } from "src/app/_models/entityInfo.model";
 
 @Injectable({
   providedIn: 'root'

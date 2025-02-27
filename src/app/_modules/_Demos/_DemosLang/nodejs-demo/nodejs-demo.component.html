@@ -10,14 +10,19 @@
 				type="text"
 				class="form-control"
 				name="searchTerm"
-				[(ngModel)]="_service.searchTerm"
+				[(ngModel)]="this.searchTerm"
 			/>
 		</div>
-		@if (_service.loading | async) {
+		<span class="col-sm-auto">
+			<button (click)="startListening()" [disabled]="this.isListening">   <img [src]="this.ListeningButtonIconOn"></button>
+			<button (click)="stopListening()"  [disabled]="!this.isListening">  <img [src]="this.ListeningButtonIconOff"></button>
+			<button (click)="speakText()"      [disabled]="this.isListening">   <img [src]="this.SpeakerIcon"></button>
+			<button (click)="clearText()"                                   >   <img [src]="this.ClearIcon" alt="new search"></button>
+		</span>
+		@if (this.loading | async) {
 			<span class="col col-form-label">[Cargando...]</span>
 		}
 	</div>
-
 	<table class="table table-striped table-dark">
 		<thead>
 			<tr>
@@ -32,7 +37,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			@for (featurePage of PagesList | async; track featurePage.id) {
+			@for (featurePage of this._Pagelist| async; track featurePage.id) {
 				<tr>
 					<th scope="row">{{ featurePage.id }}</th>
 					<td>
@@ -40,7 +45,7 @@
 					</td>
 					<td>
 						<a [href]="featurePage.field_2" target="_blank">
-							<ngb-highlight [result]="featurePage.name" [term]="_service.searchTerm" />
+							<ngb-highlight [result]="featurePage.name" [term]="this.searchTerm" />
 						</a>
 					</td>
 					<td>
@@ -58,8 +63,8 @@
 							[Tema]
 						</a>
 					</td>
-					<td><ngb-highlight [result]="featurePage.field_1"               [term]="_service.searchTerm" /></td>
-					<td><ngb-highlight [result]="featurePage.description"           [term]="_service.searchTerm" /></td>
+					<td><ngb-highlight [result]="featurePage.field_1"               [term]="this.searchTerm" /></td>
+					<td><ngb-highlight [result]="featurePage.description"           [term]="this.searchTerm" /></td>
 				</tr>
 			} @empty {
 				<tr>
@@ -70,10 +75,10 @@
 	</table>
 
 	<div class="d-flex justify-content-between p-2">
-		<ngb-pagination [collectionSize]="(total | async)!" [(page)]="_service.page" [pageSize]="_service.pageSize">
+		<ngb-pagination [collectionSize]="(total | async)!" [(page)]="this.page" [pageSize]="this.pageSize">
 		</ngb-pagination>
 
-		<select class="form-select" style="width: auto" name="pageSize" [(ngModel)]="_service.pageSize">
+		<select class="form-select" style="width: auto" name="pageSize" [(ngModel)]="this.pageSize">
 			<option [ngValue]="2">2 items por Pagina</option>
 			<option [ngValue]="4">4 items por Pagina</option>
 			<option [ngValue]="6">6 items por Pagina</option>

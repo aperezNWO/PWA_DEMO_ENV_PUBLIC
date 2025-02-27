@@ -1,6 +1,7 @@
 import { PipeTransform                        } from "@angular/core";
 import { _environment                         } from "../../../environments/environment";
 import { _SortColumn } from "src/app/_headers/BaseSortableHeader.directive";
+import { _BaseModel } from "../entityInfo.model";
 
 //
 export enum SiteRole
@@ -51,23 +52,7 @@ export const pagerotate: { [key: string]: _SortDirection } = { asc: 'desc', desc
 //
 export const compare = (v1: string | number | boolean, v2: string | number | boolean) => (v1 < v2 ? -1 : v1 > v2 ? 1 : 0);
 //
-export interface _BaseModel 
-{
-    id               : number;
-    done             : boolean;
-    name             : string;
-    description      : string;
-    field_1          : string;
-    field_2          : string;
-    field_3          : string;
-    field_4          : string;
-    field_5          : string;
-    field_6          : string;
-    field_7          : string;
-    field_8          : string;
-    field_9          : string;
-    field_10         : string;
-}
+
 
 export interface _BaseSearchResult {
     searchPages : _BaseModel[];

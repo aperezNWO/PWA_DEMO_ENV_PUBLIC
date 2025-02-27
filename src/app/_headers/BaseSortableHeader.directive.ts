@@ -1,5 +1,6 @@
 import { Directive, Input, Output, EventEmitter } from "@angular/core";
-import { _BaseModel, _SortDirection, pagerotate } from "../_models/common/common";
+import { _SortDirection, pagerotate } from "../_models/common/common";
+import { _BaseModel } from "../_models/entityInfo.model";
 
 //
 export type _SortColumn               = keyof _BaseModel      | '';
