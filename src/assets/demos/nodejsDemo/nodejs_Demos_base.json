@@ -1,0 +1,57 @@
+[
+	{
+		"id"               : 1,
+        "done"             : true,
+        "name"             : "OCR DEMO",
+        "description"      : "OCR DEMO",
+        "field_6"          : "Nodejs",
+        "field_1"          : "NodeJs, codesandbox, OCR, Tesseract",
+        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/OcrPhotoCapture",
+        "field_3"          : "https://github.com/aperezNWO/cs_nodejs_ocr_/blob/main/index.js",
+        "field_4"          : "https://github.com/tesseract-ocr/tesseract"   
+    },
+    {
+		"id"               : 2,
+        "done"             : true,
+        "name"             : "CHAT DEMO",
+        "description"      : "CHAT DEMO",
+        "field_6"          : "Nodejs",
+        "field_1"          : "NodeJs, codesandbox, Chat, Socket.io",
+        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/Chat",
+        "field_3"          : "https://github.com/aperezNWO/cs_node_js_test_chat/blob/main/index.js",
+        "field_4"          : "https://socket.io/"   
+    },
+    {
+		"id"               : 3,
+        "done"             : true,
+        "name"             : "CSV DEMO",
+        "description"      : "CSV DEMO",
+        "field_6"          : "Nodejs",
+        "field_1"          : "NodeJs, codesandbox, ms sql server",
+        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationCSV",
+        "field_3"          : "https://github.com/aperezNWO/CS_NodeJs/blob/main/modules/database.js",
+        "field_4"          : "https://www.npmjs.com/package/mssql"   
+    },
+    {
+		"id"               : 4,
+        "done"             : true,
+        "name"             : "XLS DEMO",
+        "description"      : "XLS DEMO",
+        "field_6"          : "Nodejs",
+        "field_1"          : "NodeJs, codesandbox, ms sql server",
+        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationXLS",
+        "field_3"          : "https://github.com/aperezNWO/CS_NodeJs/blob/main/modules/database.js",
+        "field_4"          : "https://www.npmjs.com/package/mssql"   
+    },
+    {
+		"id"               : 5,
+        "done"             : true,
+        "name"             : "SUDOKU GAME",
+        "description"      : "SUDOKU GAME",
+        "field_6"          : "Nodejs",
+        "field_1"          : "NodeJs, SUDOKU",
+        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/GamesSudoku",
+        "field_3"          : "https://github.com/aperezNWO/CS_NodeJs/blob/main/modules/sudoku.js",
+        "field_4"          : "https://www.geeksforgeeks.org/sudoku-backtracking-7/"   
+    }
+]	

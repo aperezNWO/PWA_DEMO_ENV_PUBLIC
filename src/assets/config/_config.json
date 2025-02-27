@@ -1,7 +1,7 @@
 {
     "appBrand"                : "[ANGULAR DEMO]",
     "appEnv"                  : "[ENV_PUBLIC]",
-    "appVersion"              : "1.4.4",
+    "appVersion"              : "1.4.5",
     "baseUrlNetCore"          : "https://angularwebapidemo.somee.com/",
     "baseUrlNodeJs_"          : "http://localhost:8080/",
     "baseUrlNodeJs"           : "https://9rfn3t-4000.csb.app/",

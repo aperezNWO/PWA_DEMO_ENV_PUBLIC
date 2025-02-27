@@ -9,23 +9,23 @@ export class DemosLangWebComponent {
       //
       pages = [
         {
-          'url': '/Features',
+          'url': '/AngularDemo',
           'text': '[ANGULAR DEMO]',
         },
         {
-          'url': '/',
+          'url': '/CppDemo',
           'text': '[CPP DEMO]',
         },
         {
-          'url': '/',
-          'text': '[NODE.JS DEMO]',
-        },
-        {
-          'url': '/',
+          'url': '/NetCoreDemo',
           'text': '[.NET CORE DEMO]',
         },
         {
-          'url': '/',
+          'url': '/NodeJsDemo',
+          'text': '[NODE.JS DEMO]',
+        },
+        {
+          'url': '/SpringBootDemo',
           'text': '[SPRING BOOT DEMO]',
         },
         {

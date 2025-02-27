@@ -1,47 +1,31 @@
 
 [
     { 
+        "f_Name"            : "ANGULAR_EDU",
+        "p_Path"            : "./assets/demos/angularDemo/angular_Curriculum_base.json"
+    },
+    { 
         "f_Name"            : "ANGULAR_DEMO",
-        "p_Path"            : "./assets/angularDemo/angular_Demos_base.json"
+        "p_Path"            : "./assets/demos/angularDemo/angular_Demos_base.json"
     },
     { 
         "f_Name"            : "CPP_DEMO",
-        "p_Path"            : "./assets/cppDemo/cpp_Demos_base.json"
+        "p_Path"            : "./assets/demos/cppDemo/cpp_Demos_base.json"
     },
     { 
         "f_Name"            : "NETCORE_DEMO",
-        "p_Path"            : "./assets/netCoreDemo/netcore_demos_base.json"
+        "p_Path"            : "./assets/demos/netCoreDemo/netcore_demos_base.json"
     },
     { 
         "f_Name"            : "NODEJS_DEMO",
-        "p_Path"            : "./assets/nodejsDemo/nodejs_Demos_base.json"
-    },
-    { 
-        "f_Name"            : "MARKETING_DEMO",
-        "p_Path"            : "./assets/marketing/marketing_base.json"
-    },
-    { 
-        "f_Name"            : "NODEJS_CONFIG",
-        "p_Path"            : "./assets/nodejsDemo/nodejs_Config_base.json"
+        "p_Path"            : "./assets/demos/nodejsDemo/nodejs_Demos_base.json"
     },
     { 
         "f_Name"            : "NETCORE_CONFIG",
-        "p_Path"            : "./assets/netCoreDemo/netcore_config_base.json"
-    },
-    { 
-        "f_Name"            : "ANGULAR_CONFIG",
-        "p_Path"            : "./assets/angularDemo/angular_Config_base.json"
-    },
-    { 
-        "f_Name"            : "ANGULAR_EDU",
-        "p_Path"            : "./assets/angularDemo/angular_Curriculum_base.json"
+        "p_Path"            : "./assets/demos/netCoreDemo/netcore_config_base.json"
     },
     { 
         "f_Name"            : "SPRING_BOOT_DEMO",
-        "p_Path"            : "./assets/springBootDemo/springBoot_Demos_base.json"
-    },
-    { 
-        "f_Name"            : "SPRING_BOOT_CONFIG",
-        "p_Path"            : "./assets/springBootDemo/springBoot_Config_base.json"
+        "p_Path"            : "./assets/demos/springBootDemo/springBoot_Demos_base.json"
     }
 ] 

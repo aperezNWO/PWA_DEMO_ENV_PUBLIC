@@ -14,7 +14,7 @@ import { AlgorithmDijkstraComponent } from './_modules/_Demos/_DemosFeatures/alg
 import { AlgorithmRegExComponent } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-reg-ex/algorithm-reg-ex.component';
 import { AlgorithmSortComponent } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-sort/algorithm-sort.component';
 import { AlgorithmWebComponent } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-web/algorithm-web.component';
-import { FeaturePagesComponent } from './_modules/_Demos/_DemosLang/_feature-pages/feature-pages.component';
+import { FeaturePagesComponent } from './_modules/_Demos/_DemosLang/angular-demo/feature-pages.component';
 import { ChartComponent } from './_modules/_Demos/_DemosFeatures/files-generation/chart/chart.component';
 import { FilesGenerationCSVComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-csv/files-generation-csv.component';
 import { FilesGenerationPDFComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-pdf/files-generation-pdf.component';
@@ -36,7 +36,11 @@ import { DemosWebComponent } from './_modules/_Demos/DemosWeb/demos-web/demos-we
 import { ContactformComponent } from './_modules/about/contactform/contactform.component';
 import { IndexComponent } from './_modules/home/index/index.component';
 import { DemosCurriculumWebComponent } from './_modules/_Demos/_DemosCurriculum/_demos-curriculum-web/demos-curriculum-web.component';
-import { DemosLangWebComponent } from './_modules/_Demos/_DemosLang/demos-lang-web/demos-lang-web.component';
+import { DemosLangWebComponent } from './_modules/_Demos/_DemosLang/_demos-lang-web/demos-lang-web.component';
+import { CppDemoComponent } from './_modules/_Demos/_DemosLang/cpp-demo/cpp-demo.component';
+import { NetcoredemoComponent } from './_modules/_Demos/_DemosLang/netcoredemo/netcoredemo.component';
+import { NodejsDemoComponent } from './_modules/_Demos/_DemosLang/nodejs-demo/nodejs-demo.component';
+import { SpringBootDemoComponent } from './_modules/_Demos/_DemosLang/spring-boot-demo/spring-boot-demo.component';
 
 export interface _Route extends Route
 {
@@ -83,7 +87,11 @@ export const routes: _Route[] = [
   {  id: 0,  path: 'Curriculum'            , component: CurriculumComponent                 , caption: ' Curriculum - Angular'                        },
   {  id: 0,  path: 'DemosCurriculumWeb'    , component: DemosCurriculumWebComponent         , caption: ' Curriculum - Main Page'                      },
   {  id: 0,  path: 'DemosLanguageWeb'      , component: DemosLangWebComponent               , caption: ' Demos / Language - Main Page'                },
-  {  id: 0,  path: 'FeaturePagesComponent' , component: FeaturePagesComponent               , caption: ' Demos / Language - Angular'                  },
+  {  id: 0,  path: 'AngularDemo'           , component: FeaturePagesComponent               , caption: ' Demos / Language - Angular'                  },
+  {  id: 0,  path: 'CppDemo'               , component: CppDemoComponent                    , caption: ' Demos / Language - C++'                      },
+  {  id: 0,  path: 'NetCoreDemo'           , component: NetcoredemoComponent                , caption: ' Demos / Language - C#'                       },
+  {  id: 0,  path: 'NodeJsDemo'            , component: NodejsDemoComponent                 , caption: ' Demos / Language - Node.js'                  },
+  {  id: 0,  path: 'SpringBootDemo'        , component: SpringBootDemoComponent             , caption: ' Demos / Language - SpringBoot'               },
   {  id: 0,  path: '**'                    , component: PageNotFoundComponent               , caption: ''                                             },
 ];
 
