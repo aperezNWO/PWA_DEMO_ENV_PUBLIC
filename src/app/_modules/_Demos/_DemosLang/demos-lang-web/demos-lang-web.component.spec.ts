@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FeaturePagesComponent } from './feature-pages.component';
+import { DemosLangWebComponent } from './demos-lang-web.component';
 
-describe('FeaturePagesComponent', () => {
-  let component: FeaturePagesComponent;
-  let fixture: ComponentFixture<FeaturePagesComponent>;
+describe('DemosLangWebComponent', () => {
+  let component: DemosLangWebComponent;
+  let fixture: ComponentFixture<DemosLangWebComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FeaturePagesComponent]
+      imports: [DemosLangWebComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(FeaturePagesComponent);
+    fixture = TestBed.createComponent(DemosLangWebComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

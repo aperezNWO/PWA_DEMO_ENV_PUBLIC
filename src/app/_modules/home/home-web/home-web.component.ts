@@ -23,11 +23,11 @@ export class HomeWebComponent implements OnInit {
           'text': '[CARACTERISTICAS]',
         },  
         {
-          'url': '/DemosLanguagesWeb', 
+          'url': '/DemosLanguageWeb', 
           'text': '[LENGUAJES]',
         },    
         {
-          'url': '/Curriculum',
+          'url': '/DemosCurriculumWeb',
           'text': '[CURRICULUM]',
         },
       ];

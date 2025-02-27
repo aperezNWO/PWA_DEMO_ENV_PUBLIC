@@ -1,0 +1,14 @@
+
+<div align="center">
+    <h4><b>[DEMOS / LANGUAGE]</b></h4>
+    <hr>
+    <ul class="navbar-nav" *ngFor="let page of pages">
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/{{page.url}}"><div align="left">{{page.text}}</div></a>
+        </li>
+    </ul>
+</div>
+<hr>
+<div align="right">
+    <a routerLink="/DemosWeb">[Volver al Inicio]</a>
+</div>

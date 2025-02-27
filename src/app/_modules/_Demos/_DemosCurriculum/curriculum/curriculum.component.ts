@@ -1,18 +1,3 @@
-/*
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-curriculum',
-  standalone: true,
-  imports: [],
-  templateUrl: './curriculum.component.html',
-  styleUrl: './curriculum.component.css'
-})
-export class CurriculumComponent {
-
-}
-*/
-
 import { Component, Injectable } from "@angular/core";
 import { BaseComponent } from "src/app/_components/basecomponent";
 import { ENV_LIST_ANGULAR_EDU } from "src/app/_models/common/common";

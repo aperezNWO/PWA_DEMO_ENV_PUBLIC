@@ -14,7 +14,7 @@ import { AlgorithmDijkstraComponent } from './_modules/_Demos/_DemosFeatures/alg
 import { AlgorithmRegExComponent } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-reg-ex/algorithm-reg-ex.component';
 import { AlgorithmSortComponent } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-sort/algorithm-sort.component';
 import { AlgorithmWebComponent } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-web/algorithm-web.component';
-import { FeaturePagesComponent } from './_modules/_Demos/_DemosFeatures/_feature-pages/feature-pages.component';
+import { FeaturePagesComponent } from './_modules/_Demos/_DemosLang/_feature-pages/feature-pages.component';
 import { ChartComponent } from './_modules/_Demos/_DemosFeatures/files-generation/chart/chart.component';
 import { FilesGenerationCSVComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-csv/files-generation-csv.component';
 import { FilesGenerationPDFComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-pdf/files-generation-pdf.component';
@@ -35,6 +35,8 @@ import { OcrPhotoCaptureComponent } from './_modules/_Demos/_DemosFeatures/misce
 import { DemosWebComponent } from './_modules/_Demos/DemosWeb/demos-web/demos-web.component';
 import { ContactformComponent } from './_modules/about/contactform/contactform.component';
 import { IndexComponent } from './_modules/home/index/index.component';
+import { DemosCurriculumWebComponent } from './_modules/_Demos/_DemosCurriculum/_demos-curriculum-web/demos-curriculum-web.component';
+import { DemosLangWebComponent } from './_modules/_Demos/_DemosLang/demos-lang-web/demos-lang-web.component';
 
 export interface _Route extends Route
 {
@@ -52,7 +54,6 @@ export const routes: _Route[] = [
   {  id: 0,  path: 'LLMList'               , component: LLMListComponent                    , caption: ' About  - LLM List'                           },
   {  id: 0,  path: 'TechnicalSpecs'        , component: TechnicalSpecsComponent             , caption: ' About  - Technical Specifications'           },
   {  id: 0,  path: 'Topics'                , component: TopicsComponent                     , caption: ' About  - Topics'                             },
-  {  id: 0,  path: 'Curriculum'            , component: CurriculumComponent                 , caption: ' About  - Curriculum'                         },
   {  id: 0,  path: 'Features'              , component: FeaturePagesComponent               , caption: ' About  - Features'                           },
   {  id: 0,  path: 'ContactForm'           , component: ContactformComponent                , caption: ' About  - Contact Form'                       },
   {  id: 0,  path: 'AlgorithmWeb'          , component: AlgorithmWebComponent               , caption: ' Algoritmos - Main Page'                      },
@@ -79,12 +80,15 @@ export const routes: _Route[] = [
   {  id: 0,  path: 'Miscelaneous'          , component: MiscelaneousComponent               , caption: ' Miscelaneous - Main Page'                    },
   {  id: 0,  path: 'DemosFeaturesWeb'      , component: DemosFeaturesWebComponent           , caption: ' Demos / Features - Main Page'                },
   {  id: 0,  path: 'DemosWeb'              , component: DemosWebComponent                   , caption: ' Demos            - Main Page'                },
+  {  id: 0,  path: 'Curriculum'            , component: CurriculumComponent                 , caption: ' Curriculum - Angular'                        },
+  {  id: 0,  path: 'DemosCurriculumWeb'    , component: DemosCurriculumWebComponent         , caption: ' Curriculum - Main Page'                      },
+  {  id: 0,  path: 'DemosLanguageWeb'      , component: DemosLangWebComponent               , caption: ' Demos / Language - Main Page'                },
+  {  id: 0,  path: 'FeaturePagesComponent' , component: FeaturePagesComponent               , caption: ' Demos / Language - Angular'                  },
   {  id: 0,  path: '**'                    , component: PageNotFoundComponent               , caption: ''                                             },
-
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes)], 
   exports: [RouterModule]
 })
 export class AppRoutingModule {
