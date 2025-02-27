@@ -1,0 +1,46 @@
+[
+	{
+		"id"               : 1,
+        "done"             : true,
+        "name"             : "Sudoku Game",
+        "description"      : "Sudoku Game",
+        "field_3"          : "CppBuilder",
+        "field_2"          : "Sudoku Game",
+        "field_1"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/GamesSudoku",
+        "field_4"          : "https://github.com/aperezNWO/CppBuilder01/blob/master/Project3/Sudoku.cpp",
+        "field_5"          : "https://www.geeksforgeeks.org/program-sudoku-generator/"   
+    },
+    {
+		"id"               : 2,
+        "done"             : true,
+        "name"             : "Sort Algorithm",
+        "description"      : "Sort Algorithm",
+        "field_3"          : "CppBuilder",
+        "field_2"          : "Sort Algorithm, Bubble Sort, Quick Sort",
+        "field_1"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/AlgorithmSort",
+        "field_4"          : "https://github.com/aperezNWO/CppBuilder01/blob/master/Project2/SortBenchMark.cpp",
+        "field_5"          : "https://en.wikipedia.org/wiki/Quicksort"   
+    },
+    {
+		"id"               : 3,
+        "done"             : true,
+        "name"             : "Shortest Path Algorithm",
+        "description"      : "Shortest Path Algorithm",
+        "field_3"          : "CppBuilder",
+        "field_2"          : "Shortest Path, Graph, Dijkstra",
+        "field_1"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/AlgorithmDijkstra",
+        "field_4"          : "https://github.com/aperezNWO/CppBuilder01/blob/master/Project2/Dijkstra.cpp",
+        "field_5"          : "https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/"   
+    },
+    {
+		"id"               : 4,
+        "done"             : true,
+        "name"             : "Regex Demo",
+        "description"      : "Regex Demo",
+        "field_3"          : "CppBuilder",
+        "field_2"          : "Regular Expressions",
+        "field_1"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/AlgorithmRegEx",
+        "field_4"          : "https://github.com/aperezNWO/CppBuilder01/blob/master/Project1/RegExManager.cpp",
+        "field_5"          : "https://en.cppreference.com/w/cpp/regex/regex_search"   
+    }
+]	

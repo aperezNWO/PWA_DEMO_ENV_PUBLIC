@@ -452,7 +452,7 @@
         "field_4"     : "[Hosting]",
         "field_5"     : "https://codesandbox.io/p/github/aperezNWO/django_setup_windows/main",
         "field_6"     : "[End Point]",
-        "field_7"     : "https://vjtyrs-8000.csb.app/getAllPersons?format=json"
+        "field_7"     : "https://n96q4t-8000.csb.app/getAllPersons?format=json"
     },
     {
         "id"          : 37,
@@ -465,6 +465,6 @@
         "field_4"     : "[Hosting]",
         "field_5"     : "https://codesandbox.io/p/github/aperezNWO/django_setup_windows/main",
         "field_6"     : "[End Point]",
-        "field_7"     : "https://vjtyrs-8000.csb.app/getAllLogs?format=json"
+        "field_7"     : "https://n96q4t-8000.csb.app/getAllLogs?format=json"
     }
 ]
