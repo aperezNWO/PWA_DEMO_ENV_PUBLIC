@@ -114,24 +114,7 @@ export class NodejsDemoComponent  {
   {
     //
     this.GetData();
-    //
-    this.InitializeSpeechRecognition();
-    //
-    this._search$
-      .pipe(
-        tap(() => this._loading!.next(true)),
-        debounceTime(200),
-        switchMap(() => this._search()),
-        delay(200),
-        tap(() => this._loading!.next(false)),
-      )
-      .subscribe((result) => {
-        this._Pagelist!.next(result.searchPages);
-        this._total!.next(result.total);
-      });
-    //
-    this._search$.next();
-  }
+   }
   //
   private GetData():void{
     // 1. get data 
@@ -141,7 +124,24 @@ export class NodejsDemoComponent  {
     this.__configService.loadJsonData(pageSetting.p_Path,
                                 this._environmentList).then(() => {
         //
-        console.log ("getting data : " + JSON.stringify(this._environmentList))
+        console.log ("getting data : " + JSON.stringify(this._environmentList));
+        //
+        this._search$
+        .pipe(
+          tap(() => this._loading!.next(true)),
+          debounceTime(200),
+          switchMap(() => this._search()),
+          delay(200),
+          tap(() => this._loading!.next(false)),
+        )
+        .subscribe((result) => {
+          this._Pagelist!.next(result.searchPages);
+          this._total!.next(result.total);
+        });
+        //
+        this._search$.next();
+        //
+        this.InitializeSpeechRecognition();
     });
   }
   //
