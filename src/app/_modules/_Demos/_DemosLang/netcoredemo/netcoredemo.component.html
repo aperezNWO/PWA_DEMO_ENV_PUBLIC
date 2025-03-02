@@ -28,11 +28,10 @@
 		<thead>
 			<tr>
 				<th scope="col" sortable="id"          >#</th>
-				<th scope="col" sortable="done"        >(hecho)</th>
 				<th scope="col" sortable="name"        >Nombre</th>
 				<th scope="col" sortable="field_2"     >Demo</th>
-				<th scope="col" sortable="field_3"     	>Repo</th>
-				<th scope="col" sortable="field_4"     >Backend</th>
+				<th scope="col" sortable="field_3"     >Repo</th>
+				<th scope="col" sortable="field_4"     >EndPoint</th>
 				<th scope="col" sortable="field_1"     >P. Clave</th>
 				<th scope="col" sortable="description" >Descripción</th>
 			</tr>
@@ -41,9 +40,6 @@
 			@for (netcoreDemoPage of this._Pagelist | async; track netcoreDemoPage.id) {
 				<tr>
 					<th scope="row">{{ netcoreDemoPage.id }}</th>
-					<td>
-						<input type="checkbox" name="done" id="done" value="done" [checked]="netcoreDemoPage.done" readonly>
-					</td>
 					<td>
 						<a [href]="netcoreDemoPage.field_2" target="_blank">
 							<ngb-highlight [result]="netcoreDemoPage.name" [term]="this.searchTerm" />
@@ -61,7 +57,7 @@
 					</td>
 					<td>
 						<a ngb-highlight [href]="netcoreDemoPage.field_4" target="_blank">
-							[Backend]
+							[EndPoint]
 						</a>
 					</td>
 					<td><ngb-highlight [result]="netcoreDemoPage.field_1"               [term]="this.searchTerm" /></td>

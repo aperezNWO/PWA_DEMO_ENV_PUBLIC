@@ -89,7 +89,7 @@ export class IndexComponent {
     ListeningButtonIconOn : string  = './assets/images/mic_on.gif';
     ListeningButtonIconOff: string  = './assets/images/mic_off.gif';
     SpeakerIcon           : string  = './assets/images/speaker_on.gif';
-    ClearIcon             : string  = './assets/images/clearForm.gif';
+    ClearFormIcon         : string  = './assets/images/clearForm.gif';
   //
   constructor(
     private pipe: DecimalPipe,

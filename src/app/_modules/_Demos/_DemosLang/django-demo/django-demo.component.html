@@ -28,11 +28,11 @@
 		<thead>
 			<tr>
 				<th scope="col" sortable="id"              >#</th>
-				<th scope="col" sortable="done"            >(hecho)</th>
 				<th scope="col" sortable="name"            >Nombre</th>
 				<th scope="col" sortable="field_2"         >Demo</th>
 				<th scope="col" sortable="field_3"         >Repo</th>
 				<th scope="col" sortable="field_4"         >EndPoint</th>
+				<th scope="col" sortable="field_6"         >Tema</th>
 				<th scope="col" sortable="field_1"         >P. Clave</th>
 				<th scope="col" sortable="description"     >Descripción</th>
 			</tr>
@@ -42,10 +42,7 @@
 				<tr>
 					<th scope="row">{{ featurePage.id }}</th>
 					<td>
-						<input type="checkbox" name="done" id="done" value="done" [checked]="featurePage.done" readonly>
-					</td>
-					<td>
-						<a [href]="featurePage.field_2" target="_blank">
+						<a [href]="featurePage.field_2">
 							<ngb-highlight [result]="featurePage.name" [term]="this.searchTerm" />
 						</a>
 					</td>
@@ -62,6 +59,11 @@
 					<td>
 						<a ngb-highlight [href]="featurePage.field_4" target="_blank">
 							[EndPoint]
+						</a>
+					</td>
+					<td>
+						<a ngb-highlight [href]="featurePage.field_6" target="_blank">
+							[Tema]
 						</a>
 					</td>
 					<td><ngb-highlight [result]="featurePage.field_1"               [term]="this.searchTerm" /></td>

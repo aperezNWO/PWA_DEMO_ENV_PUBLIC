@@ -577,4 +577,16 @@
 
 -- [_] demos with query params.  
 
+-- [_] name column witout link _blank.  
+
+-- [_] delete [done] column, replace with [endPoint] column.  
+
+-- [_] add [tema] column.  
+
+-- [_] Precargar Imagenes Portada.  
+
+-- [_] recorrido correctivo por aplicstivo.  
+
+        -- [_] Error en Index / Games.  
+
 ////////////////////////////////////////////////////////////////////////////////
