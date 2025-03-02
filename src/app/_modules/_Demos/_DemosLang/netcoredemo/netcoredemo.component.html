@@ -32,6 +32,7 @@
 				<th scope="col" sortable="field_2"     >Demo</th>
 				<th scope="col" sortable="field_3"     >Repo</th>
 				<th scope="col" sortable="field_4"     >EndPoint</th>
+				<th scope="col" sortable="field_5"     >Tema</th>
 				<th scope="col" sortable="field_1"     >P. Clave</th>
 				<th scope="col" sortable="description" >Descripción</th>
 			</tr>
@@ -58,6 +59,11 @@
 					<td>
 						<a ngb-highlight [href]="netcoreDemoPage.field_4" target="_blank">
 							[EndPoint]
+						</a>
+					</td>
+					<td>
+						<a ngb-highlight [href]="netcoreDemoPage.field_5" target="_blank">
+							[Tema]
 						</a>
 					</td>
 					<td><ngb-highlight [result]="netcoreDemoPage.field_1"               [term]="this.searchTerm" /></td>
