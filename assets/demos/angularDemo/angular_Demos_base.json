@@ -7,7 +7,7 @@
         "field_6"          : "Angular",
         "field_1"          : "v17, Json, Config, HttpClient, Environment",
         "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/",
-        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_services/-config.service.ts",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_services/ConfigService/config.service.ts",
         "field_4"          : "https://angular.dev/guide/http/setup"   
     },
     {
@@ -141,5 +141,16 @@
         "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/GamesHanoiAuto",
         "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_engines/hanoi-engine.ts",
         "field_4"          : "https://en.wikipedia.org/wiki/Tower_of_Hanoi"  
+    },
+    {
+		"id"               : 14,
+        "done"             : true,
+        "name"             : "COMPUTER VISION DEMO",
+        "description"      : "COMPUTER VISION DEMO",
+        "field_6"          : "Angular",
+        "field_1"          : "V17, Computer Vision, Tensorflow",
+        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/ComputerVision",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_services/ShapeDetection/shape-detection.service.ts",
+        "field_4"          : "https://www.tensorflow.org/js?hl=es"
     }
 ]       

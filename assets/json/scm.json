@@ -338,6 +338,19 @@
         "field_7"     : "https://9rfn3t-4000.csb.app/generarinformejson"
     },
     {
+        "id"          : 27,
+        "done"        : true,
+        "name"        : "[NODE.JS - COMPUTER VISION DEMO]",
+        "description" : "ENV_ONLINE_HOSTING",
+        "field_1"     : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/ComputerVision",
+        "field_2"     : "[Repo]",
+        "field_3"     : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_services/ShapeDetection/shape-detection.service.ts",
+        "field_4"     : "[Hosting]",
+        "field_5"     : "#",
+        "field_6"     : "[End Point]",
+        "field_7"     : "#"
+    },
+    {
         "id"          : 28,
         "done"        : true,
         "name"        : "[.NET CORE - SWAGGER]",
