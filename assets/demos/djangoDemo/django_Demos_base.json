@@ -2,7 +2,7 @@
    {
 		"id"               : 1,
         "done"             : true,
-        "name"             : "[DJANGO / PYTHON - SQL QUERY DEMO - CSV]",
+        "name"             : "[SQL QUERY DEMO - CSV]",
         "description"      : "Listado desde MS SQL Server - CSV",
         "field_1"          : "Django, Python, REST Service, MS SQL SERVER",
         "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationCSV/",
@@ -13,7 +13,7 @@
     {
 		"id"               : 2,
         "done"             : true,
-        "name"             : "[DJANGO / PYTHON - SQL QUERY DEMO - XLS]",
+        "name"             : "[SQL QUERY DEMO - XLS]",
         "description"      : "Listado desde MS SQL Server - XLS",
         "field_1"          : "Django, Python, REST Service, MS SQL SERVER",
         "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationXLS/",
