@@ -1,0 +1,93 @@
+<div align="left">
+    <h1>[ANGULAR DEMOS]</h1>
+<hr>
+<form>
+    <div class="mb-3 row">
+		<label for="table-complete-search" class="col-xs-3 col-sm-auto col-form-label">Busqueda de Texto Completo:</label>
+		<div class="col-xs-3 col-sm-auto">
+			<input
+				id="table-complete-search"
+				type="text"
+				class="form-control"
+				name="searchTerm"
+				[(ngModel)]="this.searchTerm"
+			/>
+		</div>
+		<span class="col-sm-auto">
+			<button (click)="startListening()" [disabled]="this.isListening">   <img [src]="this.ListeningButtonIconOn"></button>
+			<button (click)="stopListening()"  [disabled]="!this.isListening">  <img [src]="this.ListeningButtonIconOff"></button>
+			<button (click)="speakText()"      [disabled]="this.isListening">   <img [src]="this.SpeakerIcon"></button>
+			<button (click)="clearText()"                                   >   <img [src]="this.ClearIcon" alt="new search"></button>
+		</span>
+		@if (this.loading | async) {
+			<span class="col col-form-label">[Cargando...]</span>
+		}
+	</div>
+
+	<table class="table table-striped table-dark">
+		<thead>
+			<tr>
+				<th scope="col" sortable="id"              >#</th>
+				<th scope="col" sortable="done"            >(hecho)</th>
+				<th scope="col" sortable="name"            >Nombre</th>
+				<th scope="col" sortable="field_2"         >Demo</th>
+				<th scope="col" sortable="field_3"         >Repo</th>
+				<th scope="col" sortable="field_4"         >EndPoint</th>
+				<th scope="col" sortable="field_1"         >P. Clave</th>
+				<th scope="col" sortable="description"     >Descripción</th>
+			</tr>
+		</thead>
+		<tbody>
+			@for (featurePage of this._Pagelist | async; track featurePage.id) {
+				<tr>
+					<th scope="row">{{ featurePage.id }}</th>
+					<td>
+						<input type="checkbox" name="done" id="done" value="done" [checked]="featurePage.done" readonly>
+					</td>
+					<td>
+						<a [href]="featurePage.field_2" target="_blank">
+							<ngb-highlight [result]="featurePage.name" [term]="this.searchTerm" />
+						</a>
+					</td>
+					<td>
+						<a ngb-highlight [href]="featurePage.field_2" target="_blank">
+							[Demo]
+						</a>
+					</td>
+					<td>
+						<a ngb-highlight [href]="featurePage.field_3" target="_blank">
+							[Repo]
+						</a>
+					</td>
+					<td>
+						<a ngb-highlight [href]="featurePage.field_4" target="_blank">
+							[EndPoint]
+						</a>
+					</td>
+					<td><ngb-highlight [result]="featurePage.field_1"               [term]="this.searchTerm" /></td>
+					<td><ngb-highlight [result]="featurePage.description"           [term]="this.searchTerm" /></td>
+				</tr>
+			} @empty {
+				<tr>
+					<td colspan="4" style="text-align: center">[NO SE ENCONTRARON DATOS]</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+
+	<div class="d-flex justify-content-between p-2">
+		<ngb-pagination [collectionSize]="(total | async)!" [(page)]="this.page" [pageSize]="this.pageSize">
+		</ngb-pagination>
+
+		<select class="form-select" style="width: auto" name="pageSize" [(ngModel)]="this.pageSize">
+			<option [ngValue]="2">2 items por Pagina</option>
+			<option [ngValue]="4">4 items por Pagina</option>
+			<option [ngValue]="6">6 items por Pagina</option>
+		</select>
+	</div>
+</form>
+<hr>
+</div>
+<div align="right">
+   <a routerLink="/DemosLanguageWeb">[Volver al Menu]</a>
+</div>

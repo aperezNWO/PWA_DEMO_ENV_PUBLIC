@@ -105,24 +105,21 @@ export function matches(netcoreConfigPagelist: _BaseModel, term: string, pipe: P
 	);
 }
 
-export const ENV_LIST_ANGULAR_DEMO      = 'ANGULAR_DEMO';
+export const ENV_LIST_ANGULAR_EDU        = 'ANGULAR_EDU';
 
-export const ENV_LIST_CPP_DEMO          = 'CPP_DEMO';
+export const ENV_LIST_ANGULAR_DEMO       = 'ANGULAR_DEMO';
 
-export const ENV_LIST_NETCORE_DEMO      = 'NETCORE_DEMO';
+export const ENV_LIST_CPP_DEMO           = 'CPP_DEMO';
 
-export const ENV_LIST_NODEJS_DEMO       = 'NODEJS_DEMO';
+export const ENV_LIST_NETCORE_DEMO       = 'NETCORE_DEMO';
 
-export const ENV_LIST_SPRING_BOOT_DEMO  = 'SPRING_BOOT_DEMO';
+export const ENV_LIST_NODEJS_DEMO        = 'NODEJS_DEMO';
 
-export const ENV_LIST_MARKETING_DEMO    = 'MARKETING_DEMO';
+export const ENV_LIST_SPRING_BOOT_DEMO   = 'SPRING_BOOT_DEMO';
 
-export const ENV_LIST_NODEJS_CONFIG     = 'NODEJS_CONFIG';
+export const ENV_LIST_DJANGO_PYTHON_DEMO = 'DJANGO_PYTHON_DEMO';
 
-export const ENV_LIST_NETCORE_CONFIG    = 'NETCORE_CONFIG';
 
-export const ENV_LIST_ANGULAR_CONFIG    = 'ANGULAR_CONFIG';
 
-export const ENV_LIST_SPRING_BOOT_CONFIG  = 'SPRING_BOOT_CONFIG';
 
-export const ENV_LIST_ANGULAR_EDU         = 'ANGULAR_EDU';
+

@@ -29,7 +29,7 @@ export class DemosLangWebComponent {
           'text': '[SPRING BOOT DEMO]',
         },
         {
-          'url': '/',
+          'url': '/DjangoDemo',
           'text': '[PYTHON / DJANGO]',
         }
       ]

@@ -1,10 +1,3 @@
-/*
-import { Component } from '@angular/core';
-
-
-}
-*/
-
 import { Component, Injectable } from "@angular/core";
 import { BaseComponent } from "src/app/_components/basecomponent";
 import { ENV_LIST_ANGULAR_DEMO } from "src/app/_models/common/common";

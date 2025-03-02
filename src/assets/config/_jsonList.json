@@ -27,5 +27,9 @@
     { 
         "f_Name"            : "SPRING_BOOT_DEMO",
         "p_Path"            : "./assets/demos/springBootDemo/springBoot_Demos_base.json"
+    },
+    { 
+        "f_Name"            : "DJANGO_PYTHON_DEMO",
+        "p_Path"            : "./assets/demos/djangoDemo/django_Demos_base.json"
     }
 ] 
