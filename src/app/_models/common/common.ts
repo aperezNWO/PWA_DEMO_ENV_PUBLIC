@@ -1,7 +1,10 @@
 import { PipeTransform                        } from "@angular/core";
 import { _environment                         } from "../../../environments/environment";
-import { _SortColumn } from "src/app/_headers/BaseSortableHeader.directive";
-import { _BaseModel } from "../entityInfo.model";
+import { _BaseModel                           } from "./entityInfo.model";
+
+
+//
+export type _SortColumn               = keyof _BaseModel      | '';
 
 //
 export enum SiteRole

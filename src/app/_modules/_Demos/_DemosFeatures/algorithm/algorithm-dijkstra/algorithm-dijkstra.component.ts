@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { Observable                                  } from 'rxjs';
-import { _languageName, _vertexSize                  } from 'src/app/_models/entityInfo.model';
+import { _languageName, _vertexSize                  } from 'src/app/_models/common/entityInfo.model';
 import { PdfService                                  } from 'src/app/_engines/pdf.engine';
 import { UtilManager                                 } from 'src/app/_engines/util.engine';
 import { BackendService } from 'src/app/_services/BackendService/backend.service';

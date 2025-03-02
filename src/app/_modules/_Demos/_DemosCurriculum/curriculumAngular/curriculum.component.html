@@ -10,10 +10,16 @@
 				type="text"
 				class="form-control"
 				name="searchTerm"
-				[(ngModel)]="_service.searchTerm"
+				[(ngModel)]="this.searchTerm"
 			/>
 		</div>
-		@if (_service.loading | async) {
+		<span class="col-sm-auto">
+			<button (click)="startListening()" [disabled]="this.isListening">   <img class="imgSearch" [src]="this.ListeningButtonIconOn"></button>
+			<button (click)="stopListening()"  [disabled]="!this.isListening">  <img class="imgSearch" [src]="this.ListeningButtonIconOff"></button>
+			<button (click)="speakText()"      [disabled]="this.isListening">   <img class="imgSearch" [src]="this.SpeakerIcon"></button>
+			<button (click)="clearText()"                                   >   <img class="imgSearch" [src]="this.ClearIcon" alt="new search"></button>
+		</span>
+		@if (this.loading | async) {
 			<span class="col col-form-label">[Cargando...]</span>
 		}
 	</div>
@@ -32,7 +38,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			@for (curriculumPage of PagesList | async; track curriculumPage.id) {
+			@for (curriculumPage of this._Pagelist| async; track curriculumPage.id) {
 				<tr>
 					<th scope="row">{{ curriculumPage.id }}</th>
 					<td>
@@ -40,7 +46,7 @@
 					</td>
 					<td>
 						<a [href]="curriculumPage.field_3" target="_blank">
-							<ngb-highlight [result]="curriculumPage.name" [term]="_service.searchTerm" />
+							<ngb-highlight [result]="curriculumPage.name" [term]="this.searchTerm" />
 						</a>
 					</td>
 					<td>
@@ -58,8 +64,8 @@
 							[Tema]
 						</a>
 					</td>
-					<td><ngb-highlight [result]="curriculumPage.field_2"               [term]="_service.searchTerm" /></td>
-					<td><ngb-highlight [result]="curriculumPage.description"           [term]="_service.searchTerm" /></td>
+					<td><ngb-highlight [result]="curriculumPage.field_2"               [term]="this.searchTerm" /></td>
+					<td><ngb-highlight [result]="curriculumPage.description"           [term]="this.searchTerm" /></td>
 				</tr>
 			} @empty {
 				<tr>
@@ -70,10 +76,10 @@
 	</table>
 
 	<div class="d-flex justify-content-between p-2">
-		<ngb-pagination [collectionSize]="(total | async)!" [(page)]="_service.page" [pageSize]="_service.pageSize">
+		<ngb-pagination [collectionSize]="(total | async)!" [(page)]="this.page" [pageSize]="this.pageSize">
 		</ngb-pagination>
 
-		<select class="form-select" style="width: auto" name="pageSize" [(ngModel)]="_service.pageSize">
+		<select class="form-select" style="width: auto" name="pageSize" [(ngModel)]="this.pageSize">
 			<option [ngValue]="2">2 items por Pagina</option>
 			<option [ngValue]="4">4 items por Pagina</option>
 			<option [ngValue]="6">6 items por Pagina</option>

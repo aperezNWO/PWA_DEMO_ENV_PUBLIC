@@ -4,7 +4,7 @@ import { MatTableDataSource                            } from '@angular/material
 import { MatPaginator                                  } from '@angular/material/paginator';
 import { UtilManager                                   } from 'src/app/_engines/util.engine';
 import { BehaviorSubject, delay, Observable, tap       } from 'rxjs';
-import { LogEntry, SearchCriteria, _languageName } from 'src/app/_models/entityInfo.model';
+import { LogEntry, SearchCriteria, _languageName } from 'src/app/_models/common/entityInfo.model';
 import { BackendService } from 'src/app/_services/BackendService/backend.service';
 import { CustomErrorHandler } from 'src/app/app.component';
 //

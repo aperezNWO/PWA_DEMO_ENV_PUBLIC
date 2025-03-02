@@ -1,9 +1,9 @@
+/*
 import { Directive, Input, Output, EventEmitter } from "@angular/core";
 import { _SortDirection, pagerotate } from "../_models/common/common";
 import { _BaseModel } from "../_models/entityInfo.model";
 
-//
-export type _SortColumn               = keyof _BaseModel      | '';
+
 //
 export interface _BaseSortEvent {
 	_column   :  _SortColumn;
@@ -32,3 +32,4 @@ export class BaseSortableHeader {
                 });
   }
 }
+*/

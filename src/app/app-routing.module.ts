@@ -6,7 +6,7 @@ import { AAboutWebComponent              } from './_modules/about/a-about-web/a-
 import { SCMComponent                    } from './_modules/about/scm/scm.component';
 import { LLMListComponent                } from './_modules/about/llmlist/llmlist.component';
 import { TechnicalSpecsComponent         } from './_modules/about/technicalspecs/technical-specs/technical-specs.component';
-import { CurriculumComponent } from './_modules/_Demos/_DemosCurriculum/curriculum/curriculum.component';
+import { CurriculumComponent } from './_modules/_Demos/_DemosCurriculum/curriculumAngular/curriculum.component';
 import { TopicsComponent } from './_modules/_Demos/_DemosCurriculum/topics/topics.component';
 import { DemosFeaturesWebComponent } from './_modules/_Demos/_DemosFeatures/_demos-features-web/demos-features-web.component';
 import { AlgorithmCollisionComponent } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-collision/algorithm-collision.component';

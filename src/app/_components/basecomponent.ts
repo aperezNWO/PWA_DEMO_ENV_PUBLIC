@@ -1,12 +1,12 @@
+/*
 import { Injectable, ViewChildren, QueryList, Inject } from "@angular/core";
 import { Observable, of } from "rxjs";
 import { _environment } from "src/environments/environment";
 import { SiteRole } from "../_models/common/common";
 import { AuthService } from "../_services/authService/auth.service";
 import { ConfigService } from "../_services/ConfigService/config.service";
-import { BaseSortableHeader, _BaseSortEvent } from "../_headers/BaseSortableHeader.directive";
 import { BaseService } from "../_services/baseService/base.service";
-import { _BaseModel } from "../_models/entityInfo.model";
+import { _BaseModel } from "../_models/common/entityInfo.model";
 
 
 @Injectable({
@@ -61,3 +61,4 @@ export class BaseComponent
         this.__service.sortDirection = _direction;
     }
 }
+*/    

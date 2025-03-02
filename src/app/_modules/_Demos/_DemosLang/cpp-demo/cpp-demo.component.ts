@@ -4,7 +4,7 @@ import { DecimalPipe                                       } from '@angular/comm
 import { BehaviorSubject, debounceTime, delay, Observable, of, Subject, switchMap, tap } from 'rxjs';
 import { _environment } from 'src/environments/environment';
 import { ConfigService } from 'src/app/_services/ConfigService/config.service';
-import { _BaseModel } from 'src/app/_models/entityInfo.model';
+import { _BaseModel } from 'src/app/_models/common/entityInfo.model';
 import { ENV_LIST_CPP_DEMO } from 'src/app/_models/common/common';
 //
 type _SortDirection = 'asc' | 'desc' | '';

@@ -2,7 +2,7 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild    } from '@ang
 import { BackendService           } from 'src/app/_services/BackendService/backend.service';
 import { NgxSignaturePadComponent } from '@eve-sama/ngx-signature-pad/lib/ngx-signature-pad.component';
 import { NgxSignatureOptions      } from '@eve-sama/ngx-signature-pad/lib/types/ngx-signature-pad';
-import { _languageName            } from 'src/app/_models/entityInfo.model';
+import { _languageName            } from 'src/app/_models/common/entityInfo.model';
 
 @Component({
   selector: 'app-ocr-photo-capture',

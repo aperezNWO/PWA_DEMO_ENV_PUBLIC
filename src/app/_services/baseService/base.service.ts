@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 import { BehaviorSubject, Subject, tap, debounceTime, switchMap, delay, Observable, of } from "rxjs";
 import { _SortColumn } from "src/app/_headers/BaseSortableHeader.directive";
 import { _SearchState, _BaseSearchResult, matches, _SortDirection, sort } from "src/app/_models/common/common";
-import { _BaseModel } from "src/app/_models/entityInfo.model";
+import { _BaseModel } from "src/app/_models/common/entityInfo.model";
 
 @Injectable({
   providedIn: 'root'

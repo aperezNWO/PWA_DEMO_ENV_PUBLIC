@@ -25,7 +25,7 @@ import { PageNotFoundComponent           } from './_modules/home/page-not-found/
 import { NavComponent                    } from './_modules/home/nav/nav.component';
 import { AAboutWebComponent              } from './_modules/about/a-about-web/a-about-web.component';
 import { UnitTestingComponent            } from './_modules/_unitttesting/unit-testing.component';
-import { LogType                         } from './_models/entityInfo.model';
+import { LogType                         } from './_models/common/entityInfo.model';
 import { BackendService                  } from './_services/BackendService/backend.service';
 import { ConfigService                   } from './_services/ConfigService/config.service';
 import { AppRoutingModule                } from './app-routing.module';
@@ -38,7 +38,7 @@ import { SCMComponent                           } from './_modules/about/scm/scm
 import { LLMListComponent                       } from './_modules/about/llmlist/llmlist.component';
 
 import { DemosWebComponent } from './_modules/_Demos/DemosWeb/demos-web/demos-web.component';
-import { CurriculumComponent } from './_modules/_Demos/_DemosCurriculum/curriculum/curriculum.component';
+import { CurriculumComponent } from './_modules/_Demos/_DemosCurriculum/curriculumAngular/curriculum.component';
 import { TopicsComponent } from './_modules/_Demos/_DemosCurriculum/topics/topics.component';
 import { DemosFeaturesWebComponent } from './_modules/_Demos/_DemosFeatures/_demos-features-web/demos-features-web.component';
 import { AlgorithmCollisionComponent } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-collision/algorithm-collision.component';

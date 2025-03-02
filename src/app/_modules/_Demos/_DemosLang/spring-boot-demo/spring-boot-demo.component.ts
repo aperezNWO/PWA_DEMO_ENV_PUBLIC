@@ -5,7 +5,7 @@ import { BehaviorSubject, debounceTime, delay, Observable, of, Subject, switchMa
 import { ENV_LIST_SPRING_BOOT_DEMO } from 'src/app/_models/common/common';
 import { _environment } from 'src/environments/environment';
 import { ConfigService } from 'src/app/_services/ConfigService/config.service';
-import { _BaseModel } from 'src/app/_models/entityInfo.model';
+import { _BaseModel } from 'src/app/_models/common/entityInfo.model';
 //
 type _SortDirection = 'asc' | 'desc' | '';
 //

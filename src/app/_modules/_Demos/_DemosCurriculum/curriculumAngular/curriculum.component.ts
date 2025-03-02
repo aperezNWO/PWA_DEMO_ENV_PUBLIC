@@ -2,10 +2,10 @@ import { Component, PipeTransform, QueryList, ViewChildren } from '@angular/core
 import { Directive, EventEmitter, Input, Output            } from '@angular/core';
 import { DecimalPipe                                       } from '@angular/common';
 import { BehaviorSubject, debounceTime, delay, Observable, of, Subject, switchMap, tap } from 'rxjs';
-import { ENV_LIST_NODEJS_DEMO } from 'src/app/_models/common/common';
 import { _environment } from 'src/environments/environment';
 import { ConfigService } from 'src/app/_services/ConfigService/config.service';
 import { _BaseModel } from 'src/app/_models/common/entityInfo.model';
+import { ENV_LIST_ANGULAR_EDU } from 'src/app/_models/common/common';
 //
 type _SortDirection = 'asc' | 'desc' | '';
 //
@@ -74,11 +74,11 @@ class _BaseSortableHeader {
 }
 //
 @Component({
-  selector: 'app-nodejs-demo',
-  templateUrl: './nodejs-demo.component.html',
-  styleUrl: './nodejs-demo.component.css'
+  selector: 'app-curriculum',
+  templateUrl: './curriculum.component.html',
+  styleUrl: './curriculum.component.css'
 })
-export class NodejsDemoComponent  {
+export class CurriculumComponent   {
   //
   @ViewChildren(_BaseSortableHeader) headers: QueryList<_BaseSortableHeader> | undefined;
   //
@@ -118,7 +118,7 @@ export class NodejsDemoComponent  {
   //
   private GetData():void{
     // 1. get data 
-    const pageSetting    = _environment.pageSettingDictionary[ENV_LIST_NODEJS_DEMO];
+    const pageSetting    = _environment.pageSettingDictionary[ENV_LIST_ANGULAR_EDU ];
 
 
     this.__configService.loadJsonData(pageSetting.p_Path,
@@ -307,4 +307,5 @@ export class NodejsDemoComponent  {
     this.searchTerm = "";
   }
 }
+
 
