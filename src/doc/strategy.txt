@@ -591,4 +591,18 @@
 
  -- [_] v [1.5.1]. implementar ngb grid.         
 
+ -- [_] change domain PWA_DEMO for ANGULAR_DEMO.    
+
+ -- [_] tag effect list .    
+
+        -- [_] references.    
+
+        -- [_] language.    
+
+-- [_] both ways reference.    
+
+        -- [_] ngb grid  => searchTerm?<search_Term>.    
+
+        -- [_] demo page => lang=<lang>.    
+
 ////////////////////////////////////////////////////////////////////////////////
