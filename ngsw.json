@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1740965459657,
+  "timestamp": 1741402652197,
   "index": "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/index.html",
   "assetGroups": [
     {
@@ -78,7 +78,7 @@
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/896.4519226224848d4d.js": "b78fb0b014bc156bc77299cc45560d056ef29bac",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/config/_PagesInfo.json": "515fe80292083315b0d131954cfc06dcc26eacbe",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/config/_UsersInfo.json": "9e061019143f4316b306d77d6f9241fbbcae4d9a",
-    "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/config/_config.json": "9317dce833d35b37f098bc66312b2f46aa533282",
+    "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/config/_config.json": "f22d8dcb00e558efc15c7b9c4658e8eebb6e6675",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/config/_jsonList.json": "11e7c3c058a4c43ee659489176cc570cc4457f98",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/demos/angularDemo/angular_Curriculum_base.json": "eb99c28f2f312027b64119b165bdf312a6afb518",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/demos/angularDemo/angular_Demos_base.json": "77a20eb195464fd7d780df161d5ceb1256b05420",
@@ -86,7 +86,7 @@
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/demos/djangoDemo/django_Config_base.json": "8852717d48bab6e3c74c78ea4c3f9f113d6d4f98",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/demos/djangoDemo/django_Demos_base.json": "0c6377c6afbe512bcf61dca4cc64779544128102",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/demos/netCoreDemo/netcore_config_base.json": "01947e54d1b8fa334c38c78a8e94d2ca0affc399",
-    "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/demos/netCoreDemo/netcore_demos_base.json": "124d4302e5dea75e5be025b38fd509ced2c9faeb",
+    "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/demos/netCoreDemo/netcore_demos_base.json": "f930dc209b5571a8797b4585a5bfdc87a3ef8958",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/demos/nodejsDemo/nodejs_Config_base.json": "d4df528acbf3793e25b3de0469df315374fc762c",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/demos/nodejsDemo/nodejs_Demos_base.json": "c0f0dad35d4156061b65ee12542712fdb2671605",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/demos/springBootDemo/springBoot_Config_base.json": "8852717d48bab6e3c74c78ea4c3f9f113d6d4f98",
