@@ -10,7 +10,7 @@ import { PageSetting } from 'src/app/_models/common/common';
 export class ConfigService {
   constructor(protected http: HttpClient) {}
     //
-    loadJsonist() {
+    loadJsonList() {
       return this.http.get('./assets/config/_jsonList.json').toPromise()
         .then((data: any) => {
             //

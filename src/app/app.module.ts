@@ -78,7 +78,7 @@ import { DjangoDemoComponent } from './_modules/_Demos/_DemosLang/django-demo/dj
 //
 export function initialize(_configService: ConfigService) {
   //
-  _configService.loadJsonist().then(()=> {
+  _configService.loadJsonList().then(()=> {
       //
       _configService.loadPagesInfoData();
       //
@@ -195,7 +195,7 @@ export class CustomErrorHandler implements ErrorHandler {
         {  provide: LocationStrategy, useClass: HashLocationStrategy },
         {  provide: ErrorHandler, useClass: CustomErrorHandler },
         [
-          ConfigService,
+          ConfigService,  // no colocar "ConfigService" en la seccion "deps" causa error y no reconoce la funcion "LoadJsonList"
           {
             provide   : APP_INITIALIZER,
             useFactory: initialize,
