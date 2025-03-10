@@ -75,6 +75,7 @@ import { NetcoredemoComponent } from './_modules/_Demos/_DemosLang/netcoredemo/n
 import { NodejsDemoComponent } from './_modules/_Demos/_DemosLang/nodejs-demo/nodejs-demo.component';
 import { SpringBootDemoComponent } from './_modules/_Demos/_DemosLang/spring-boot-demo/spring-boot-demo.component';
 import { DjangoDemoComponent } from './_modules/_Demos/_DemosLang/django-demo/django-demo.component';
+import { SpeechPanelComponent } from './_components/speech-panel/speech-panel.component';
 //
 export function initialize(_configService: ConfigService) {
   //
@@ -188,6 +189,7 @@ export class CustomErrorHandler implements ErrorHandler {
         NodejsDemoComponent,
         SpringBootDemoComponent,
         DjangoDemoComponent,
+        SpeechPanelComponent,
     ],
     exports: [RouterModule],
     providers: [

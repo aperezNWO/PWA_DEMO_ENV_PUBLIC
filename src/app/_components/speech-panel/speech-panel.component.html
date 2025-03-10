@@ -1,0 +1,14 @@
+<div>
+    <button (click)="this.speechService.startListening()" [disabled]="this.speechService.isListening">   <img class="imgSearch" [src]="this.ListeningButtonIconOn"></button>
+    <button (click)="this.speechService.stopListening()"  [disabled]="!this.speechService.isListening">  <img class="imgSearch" [src]="this.ListeningButtonIconOff"></button>
+    <button (click)="this.speakText()"                    [disabled]="this.speechService.isListening">   <img class="imgSearch" [src]="this.SpeakerIcon"></button>
+    <button (click)="this.clearText()"                                                               >   <img class="imgSearch" [src]="this.clearFormIcon" alt="new search"></button>
+</div>
+<div>
+    @if ((this.speechService.isListening) && (!this.speechService.error))  {
+        <span class="col col-form-label">[Escuchando...]</span>
+    }
+    <span class="col col-form-label" *ngIf="this.speechService.error" class="error">
+    <p>Error: {{ this.speechService.error }}</p>
+    </span>
+</div>

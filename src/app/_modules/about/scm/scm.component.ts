@@ -4,7 +4,7 @@ import { DecimalPipe                                       } from '@angular/comm
 import { BehaviorSubject, debounceTime, delay, Observable, of, Subject, switchMap, tap } from 'rxjs';
 import { _environment                                      } from 'src/environments/environment';
 import { SiteRole } from 'src/app/_models/common/common';
-import { SpeechService } from 'src/app/_services/speech.service';
+//import { SpeechService } from 'src/app/_services/speech.service';
 //
 export interface _SCMItem 
 {
@@ -108,19 +108,11 @@ export class SCMComponent {
     sortDirection: '',
   };
   //////////////////////////////////////////////////////////
-    ListeningButtonIconOn : string  = './assets/images/mic_on.gif';
-    ListeningButtonIconOff: string  = './assets/images/mic_off.gif';
-    SpeakerIcon           : string  = './assets/images/speaker_on.gif';
-    clearFormIcon         : string  = './assets/images/clearForm.gif';;
- 
   //
   constructor(
     private pipe          : DecimalPipe,
-    public  speechService : SpeechService
   ) 
   {
-    //
-    //this.InitializeSpeechRecognition();
     //
     this._search$
       .pipe(
@@ -148,7 +140,7 @@ export class SCMComponent {
     const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
 
     //
-    console.log("search : " + JSON.stringify(_environment.scmList));
+    //console.log("search : " + JSON.stringify(_environment.scmList));
     _searchPages   = _environment.scmList;
 
     // 2. filter
@@ -233,12 +225,16 @@ export class SCMComponent {
     this.sortDirection = direction;
   }
   //////////////////////////////////////////////////////////
+  speakText(param_searchTerm : string) : void 
+  {
+      //
+      console.log("Speak Text. Caught Event");
+      
+      this.searchTerm = param_searchTerm;
+  }
+  //
   clearText() : void
   {
       this.searchTerm = "";
-  }
-  speakText() : void 
-  {
-      this.searchTerm = this.speechService.speakText();
   }
 } 
