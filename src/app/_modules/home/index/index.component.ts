@@ -82,22 +82,11 @@ export class IndexComponent {
     sortDirection: '',
   };
   //////////////////////////////////////////////////////////
-    recognition         : any;
-    isListening         : boolean   = false;
-    transcript          : string    = '';
-    error               : string    = '';
-    ListeningButtonIconOn : string  = './assets/images/mic_on.gif';
-    ListeningButtonIconOff: string  = './assets/images/mic_off.gif';
-    SpeakerIcon           : string  = './assets/images/speaker_on.gif';
-    ClearFormIcon         : string  = './assets/images/clearForm.gif';
   //
   constructor(
     private pipe: DecimalPipe,
-    //public _authService: AuthService,
   ) 
   {
-    //
-    this.InitializeSpeechRecognition();
     //
     this._search$
       .pipe(
@@ -209,71 +198,17 @@ export class IndexComponent {
     this.sortDirection = direction;
   }
   //////////////////////////////////////////////////////////
-  InitializeSpeechRecognition():void {
-    // Initialize the SpeechRecognition object
-    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-    if (SpeechRecognition) {
-      this.recognition = new SpeechRecognition();
-      this.recognition.lang = 'es-CO'; // Set language
-      this.recognition.interimResults = false; // Only final results
-      this.recognition.maxAlternatives = 1;
-
-      // Event handlers
-      this.recognition.onresult = (event: any) => {
-        //
-        this.transcript = event.results[0][0].transcript;
-        console.log('Transcript:', this.transcript);
-      };
-
-      this.recognition.onerror = (event: any) => {
-        this.error = event.error;
-        this.isListening = false;
-        console.error('Error:', this.error);
-      };
-
-      this.recognition.onend = () => {
-        //
-        console.log('Recognition ended.');
-      };
-    } else {
-      alert('Speech Recognition API is not supported in your browser.');
-    }
+  speakText(param_searchTerm : string) : void 
+  {
+      //
+      console.log("Speak Text. Caught Event");
+      
+      this.searchTerm = param_searchTerm;
   }
   //
-  startListening() {
-    //
-    if (this.recognition) {
-      console.log('listening started');
-      this.isListening = true;
-      this.recognition.start();
-    }
-  }
-
-  stopListening() {
-    if (this.recognition) {
-      console.log('listening ended');
-      //
-      this.isListening = false;
-      this.recognition.stop()
-    }
-  }
-
-  speakText() {
-    if (this.transcript) {
-      //
-      const utterance = new SpeechSynthesisUtterance(this.transcript);
-      utterance.lang = 'es-CO';
-      window.speechSynthesis.speak(utterance);
-      //
-      this.searchTerm = this.transcript;
-      //
-    } else {
-      alert('No text to speak!');
-    }
-  }
-  //
-  clearText() {
-    this.searchTerm = "";
-  }
+  clearText() : void
+  {
+      this.searchTerm = "";
+  }  
 }
 
