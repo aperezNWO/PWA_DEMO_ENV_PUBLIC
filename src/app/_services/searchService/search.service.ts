@@ -1,11 +1,12 @@
-import { DecimalPipe               } from "@angular/common";
-import { Injectable, PipeTransform } from "@angular/core";
-import { BehaviorSubject, Subject, tap, debounceTime, switchMap, delay, Observable, of } from "rxjs";
+import { DecimalPipe                       } from "@angular/common";
+import { Inject, Injectable, PipeTransform } from "@angular/core";
 import { _SortDirection           } from "src/app/_headers/sortable.directive";
-import { ENV_LIST_ANGULAR_DEMO    } from "src/app/_models/common/common";
 import { _BaseModel               } from "src/app/_models/common/entityInfo.model";
 import { _environment             } from "src/environments/environment";
+import { PAGE_ID, PAGE_SIZE       } from "src/app/_models/common/common";
 import { ConfigService            } from "../ConfigService/config.service";
+import { BehaviorSubject, Subject, tap, debounceTime, switchMap, delay, Observable, of } from "rxjs";
+
 // 0.
 export type _SortColumn               = keyof _BaseModel      | '';
 // 1.
@@ -69,22 +70,31 @@ export class SearchService  {
 		sortDirection : '',
 	};
 	// 3.
-	public _SEARCH_PAGES          : _BaseModel[] = [];
+	// public _SEARCH_PAGES          : _BaseModel[] = [];
 	// 4.
-	constructor(private pipe            : DecimalPipe,
-				private __configService : ConfigService
+	constructor(@Inject(PAGE_ID) 
+				private PAGE_ID           : string,
+				@Inject(PAGE_SIZE) 
+				private PAGE_SIZE         : number,
+				private pipe              : DecimalPipe,
+				private __configService   : ConfigService
 	) 
 	{
 		//
-		this.GetData();
+		this.GetData(PAGE_ID);
+		//
+		this.pageSize = PAGE_SIZE;
+
 	}
 	// 4. Get Data
-	private GetData():void{
+	private GetData(PAGE_ID : string):void{
 			// 1. get data 
-			const pageSetting    = _environment.pageSettingDictionary[ENV_LIST_ANGULAR_DEMO ];
+			const pageSetting    = _environment.pageSettingDictionary[PAGE_ID ];
 			//
 			this.__configService.loadJsonData(pageSetting.p_Path,
 			this._environmentList).then(() => {
+					//
+					console.log("json data : " + JSON.stringify(this._environmentList));
 					//
 					this._search$
 					.pipe(
@@ -105,16 +115,17 @@ export class SearchService  {
 	// 5. 
 	private _search(): Observable<_BaseSearchResult> {
 		//
-		let _searchPages  : any;
+	    let _searchPages  : _BaseModel[] = [];
 		let _total        : any;
 		let _searchResult : _BaseSearchResult = { searchPages: _searchPages, total: _total };
 
 		// 0. get state
 		const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
 
-		// 1. get pages
-		//_searchPages = sort(this._SEARCH_PAGES, sortColumn, sortDirection);
-		_searchPages = sort(_environment.scmList , sortColumn, sortDirection);
+		// 1. get data 
+		this._environmentList.forEach((element: any) => {
+				_searchPages.push(element);
+		});
 
 		// 2. filter
 		_searchPages = _searchPages.filter((_searchPage: _BaseModel) => matches(_searchPage, searchTerm, this.pipe));

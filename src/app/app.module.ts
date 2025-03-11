@@ -87,8 +87,6 @@ export function initialize(_configService: ConfigService) {
       _configService.loadUsersData();
       //
       _configService.loadLLMList();
-      //
-      _configService.loadSCMList();
   });
   // 
   return () =>  _configService.loadConfig();

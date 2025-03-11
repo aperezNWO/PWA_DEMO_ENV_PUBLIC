@@ -1,46 +1,27 @@
-import { Component,  QueryList, ViewChildren               } from '@angular/core';
+import { Component                                         } from '@angular/core';
 import { _environment                                      } from 'src/environments/environment';
-import { SiteRole                                          } from 'src/app/_models/common/common';
-import { SearchService                                     } from 'src/app/_services/searchService/search.service';
 import { _BaseModel                                        } from 'src/app/_models/common/entityInfo.model';
-import { _BaseSortEvent, BaseSortableHeader                                    } from 'src/app/_headers/sortable.directive';
-import { Observable } from 'rxjs';
+import { _BaseSortEvent                                    } from 'src/app/_headers/sortable.directive';
+import { SearchComponent                                   } from 'src/app/_components/search/search.component';
+import { SearchService                                     } from 'src/app/_services/searchService/search.service';
+import { ENV_LIST_SCM_CONFIG, PAGE_ID, PAGE_SIZE           } from 'src/app/_models/common/common';
 
-
+//
 @Component({
   selector: 'app-scm',
   templateUrl: './scm.component.html',
-  styleUrls: ['./scm.component.css']
+  styleUrls: ['./scm.component.css'],
+  providers: [
+    SearchService,
+    { provide: PAGE_ID,   useValue: ENV_LIST_SCM_CONFIG }, // Unique ID for this component
+    { provide: PAGE_SIZE, useValue: 8                   } 
+  ]
 })
-export class SCMComponent {
-  //
- 	public __pages!:     Observable<_BaseModel[]>;
-	public __total!:     Observable<number>;
-  //
-  @ViewChildren(BaseSortableHeader) _headers: QueryList<BaseSortableHeader> | undefined;
-  //
-  public ConfigRoleString: string = SiteRole.RoleConfig.toString();
- //////////////////////////////////////////////////////////
-  //
-  constructor(
-    public searchService         : SearchService
-  ) 
+export class SCMComponent extends SearchComponent {
+  
+  constructor(searchService         : SearchService)
   {
-    //
-    this.__pages     = this.searchService.Pagelist;
-		this.__total     = this.searchService.total;
-  }
-  //
-  onSort({ _column, _direction }: _BaseSortEvent) {
-    // resetting other headers
-    this._headers?.forEach((__header) => {
-      if (__header.sortable !== _column) {
-        __header.direction = '';
-      }
-    });
-    //
-    this.searchService.sortColumn    = _column;
-    this.searchService.sortDirection = _direction;
+      super(searchService);
   }
   //////////////////////////////////////////////////////////
   speakText(param_searchTerm : string) : void 

@@ -1,7 +1,7 @@
 import { Injectable   } from '@angular/core';
 import { HttpClient   } from '@angular/common/http';
 import { _environment } from 'src/environments/environment';
-import { PageSetting } from 'src/app/_models/common/common';
+import { PageSetting  } from 'src/app/_models/common/common';
 
 @Injectable({
   providedIn: 'root'
@@ -79,23 +79,10 @@ export class ConfigService {
       });
   }
 
-  loadSCMList() {
-    return this.http.get('./assets/json/scm.json').toPromise()
-      .then((data: any) => {
-          //
-          //console.log("loading scm list..." + JSON.stringify(data));
-          //
-          _environment.scmList = data; // Assign loaded data to environment variable
-      })
-      .catch(error => {
-        console.error('Error loading configuration:', error);
-      });
-  }
-  
   //
   // ONLY HAPPENS ONCE ON APPMODULE LOADING
   loadLLMList() {
-    return this.http.get('./assets/json/llm.json').toPromise()
+    return this.http.get('./assets/config/llm.json').toPromise()
       .then((data: any) => {
           //
           //console.log("loading LLM List..." + JSON.stringify(data));

@@ -1,9 +1,6 @@
-import { PipeTransform                        } from "@angular/core";
+import { InjectionToken } from "@angular/core";
 import { _environment                         } from "../../../environments/environment";
 import { _BaseModel                           } from "./entityInfo.model";
-
-
-
 
 //
 export enum SiteRole
@@ -48,15 +45,6 @@ export class  LoginInfo
 //
 export type UserInfoType   = UserInfo; 
 //
-//export type _SortDirection = 'asc' | 'desc' | '';
-//
-//export const pagerotate: { [key: string]: _SortDirection } = { asc: 'desc', desc: '', '': 'asc' };
-//
-//export interface _BaseSearchResult {
-//    searchPages : _BaseModel[];
-//    total       : number;
-//}   
-
 export interface PageSetting {
     f_Name           : string;
     p_Path           : string;
@@ -65,26 +53,11 @@ export interface PageSetting {
 export interface PageSettingDictionary {
    [key: string]: PageSetting;
 }
- 
-
-
 //
-export function matches(netcoreConfigPagelist: _BaseModel, term: string, pipe: PipeTransform) {
-	return (
-		netcoreConfigPagelist.name.toLowerCase().includes(term?.toLowerCase())        ||
-		netcoreConfigPagelist.description.toLowerCase().includes(term?.toLowerCase()) ||
-		netcoreConfigPagelist.field_1?.toLowerCase().includes(term?.toLowerCase())    ||
-		netcoreConfigPagelist.field_2?.toLowerCase().includes(term?.toLowerCase())    ||
-		netcoreConfigPagelist.field_3?.toLowerCase().includes(term?.toLowerCase())    ||
-		netcoreConfigPagelist.field_4?.toLowerCase().includes(term?.toLowerCase())    ||
-		netcoreConfigPagelist.field_5?.toLowerCase().includes(term?.toLowerCase())    ||
-		netcoreConfigPagelist.field_6?.toLowerCase().includes(term?.toLowerCase())    ||
-		netcoreConfigPagelist.field_7?.toLowerCase().includes(term?.toLowerCase())    ||
-		netcoreConfigPagelist.field_8?.toLowerCase().includes(term?.toLowerCase())    ||
-		netcoreConfigPagelist.field_9?.toLowerCase().includes(term?.toLowerCase())    ||
-		netcoreConfigPagelist.field_10?.toLowerCase().includes(term?.toLowerCase())    
-	);
-}
+export const PAGE_ID   = new InjectionToken<string>('PAGE_ID'); 
+export const PAGE_SIZE = new InjectionToken<number>('PAGE_SIZE'); 
+//
+export const ENV_LIST_SCM_CONFIG         = 'SCM_CONFIG';
 
 export const ENV_LIST_ANGULAR_EDU        = 'ANGULAR_EDU';
 
