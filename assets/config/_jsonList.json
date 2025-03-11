@@ -31,5 +31,9 @@
     { 
         "f_Name"            : "DJANGO_PYTHON_DEMO",
         "p_Path"            : "./assets/demos/djangoDemo/django_Demos_base.json"
+    },
+    { 
+        "f_Name"            : "SCM_CONFIG",
+        "p_Path"            : "./assets/config/scm.json"
     }
 ] 
