@@ -11,7 +11,7 @@
       type="text"
       class="form-control"
       name="searchTerm"
-      [(ngModel)]="searchTerm"
+      [(ngModel)]="this.searchService.searchTerm"
     />
   </div>
   <span class="col-sm-auto">
@@ -22,50 +22,50 @@
       </app-speech-panel>
     </div>
   </span>
-  @if (loading | async) {
+  @if (this.searchService.loading | async) {
     <span class="col col-form-label">[Cargando...]</span>
   }
 </div>
 <table class="table table-striped table-dark">
   <thead>
     <tr>
-      <th align="left" scope="col" sortable="id"              >#</th>
-      <th align="left" scope="col" sortable="done"            >(Hecho)</th>
-      <th align="left" scope="col" sortable="description"     >[Type]</th>
-      <th align="left" scope="col" sortable="name"            >[desc_1]</th>
-      <th align="left" scope="col" sortable="field_2"         >[desc_2]</th>
-      <th align="left" scope="col" sortable="field_4"         >[desc_3]</th>
-      <th align="left" scope="col" sortable="field_6"         >[desc_4]</th>
+      <th align="left" scope="col" sortable="id"              (sortevent)="onSort($event)">#</th>
+      <th align="left" scope="col" sortable="done"            (sortevent)="onSort($event)">(Hecho)</th>
+      <th align="left" scope="col" sortable="description"     (sortevent)="onSort($event)">[Type]</th>
+      <th align="left" scope="col" sortable="name"            (sortevent)="onSort($event)">[desc_1]</th>
+      <th align="left" scope="col" sortable="field_2"         (sortevent)="onSort($event)">[desc_2]</th>
+      <th align="left" scope="col" sortable="field_4"         (sortevent)="onSort($event)">[desc_3]</th>
+      <th align="left" scope="col" sortable="field_6"         (sortevent)="onSort($event)">[desc_4]</th>
     </tr>
   </thead> 
   <tbody>
-    @for (scmItem of _Pagelist | async; track scmItem.id) {
+    @for (scmItem of this.__pages | async; track scmItem.id) {
         <tr>
 					<th scope="row">{{ scmItem.id }}</th>
 					<td>
 						<input type="checkbox" name="done" id="done" value="done" [checked]="scmItem.done" readonly>
 					</td>
           <td align="left">
-              <ngb-highlight [result]="scmItem.description" [term]="searchTerm" />
+              <ngb-highlight [result]="scmItem.description" [term]="this.searchService.searchTerm" />
           </td>
           <td align="left">
             <a [href]="scmItem.field_1">
-              <ngb-highlight [result]="scmItem.name" [term]="searchTerm" />
+              <ngb-highlight [result]="scmItem.name" [term]="this.searchService.searchTerm" />
             </a>
           </td>
           <td align="left">
             <a [href]="scmItem.field_3" target="_blank">
-              <ngb-highlight [result]="scmItem.field_2" [term]="searchTerm" />
+              <ngb-highlight [result]="scmItem.field_2" [term]="this.searchService.searchTerm" />
             </a>
           </td>
           <td align="left">
             <a [href]="scmItem.field_5" target="_blank">
-              <ngb-highlight [result]="scmItem.field_4" [term]="searchTerm" />
+              <ngb-highlight [result]="scmItem.field_4" [term]="this.searchService.searchTerm" />
             </a>
           </td>
           <td align="left">
             <a [href]="scmItem.field_7" target="_blank">
-              <ngb-highlight [result]="scmItem.field_6" [term]="searchTerm" />
+              <ngb-highlight [result]="scmItem.field_6" [term]="this.searchService.searchTerm" />
             </a>
           </td>
         </tr>
@@ -78,10 +78,10 @@
 </table>
 
 <div class="d-flex justify-content-between p-2">
-  <ngb-pagination [collectionSize]="(total | async)!" [(page)]="page" [pageSize]="pageSize">
+  <ngb-pagination [collectionSize]="(this.searchService.total | async)!" [(page)]="this.searchService.page" [pageSize]="this.searchService.pageSize">
   </ngb-pagination>
 
-  <select class="form-select" style="width: auto" name="pageSize" [(ngModel)]="pageSize">
+  <select class="form-select" style="width: auto" name="pageSize" [(ngModel)]="this.searchService.pageSize">
     <option [ngValue]="2">2 items por Pagina</option>
     <option [ngValue]="4">4 items por Pagina</option>
     <option [ngValue]="6">6 tems por Pagina</option>

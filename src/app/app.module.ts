@@ -33,7 +33,7 @@ import { finalize, tap                   } from 'rxjs';
 import { NgxSignaturePadModule           } from '@eve-sama/ngx-signature-pad';
 import { NgbHighlight, NgbModule                } from '@ng-bootstrap/ng-bootstrap';
 import { NgbPaginationModule, NgbAlertModule    } from '@ng-bootstrap/ng-bootstrap';
-import { IndexComponent                         } from './_modules/home/index/index.component';
+import { IndexComponent                         } from './_modules/about/index/index.component';
 import { SCMComponent                           } from './_modules/about/scm/scm.component';
 import { LLMListComponent                       } from './_modules/about/llmlist/llmlist.component';
 
@@ -76,6 +76,7 @@ import { NodejsDemoComponent } from './_modules/_Demos/_DemosLang/nodejs-demo/no
 import { SpringBootDemoComponent } from './_modules/_Demos/_DemosLang/spring-boot-demo/spring-boot-demo.component';
 import { DjangoDemoComponent } from './_modules/_Demos/_DemosLang/django-demo/django-demo.component';
 import { SpeechPanelComponent } from './_components/speech-panel/speech-panel.component';
+import { BaseSortableHeader } from './_headers/sortable.directive';
 //
 export function initialize(_configService: ConfigService) {
   //
@@ -190,6 +191,7 @@ export class CustomErrorHandler implements ErrorHandler {
         SpringBootDemoComponent,
         DjangoDemoComponent,
         SpeechPanelComponent,
+        BaseSortableHeader,
     ],
     exports: [RouterModule],
     providers: [

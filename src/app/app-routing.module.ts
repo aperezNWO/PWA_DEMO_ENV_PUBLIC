@@ -34,7 +34,7 @@ import { MiscelaneousComponent } from './_modules/_Demos/_DemosFeatures/miscelan
 import { OcrPhotoCaptureComponent } from './_modules/_Demos/_DemosFeatures/miscelaneous/ocr-photo-capture/ocr-photo-capture.component';
 import { DemosWebComponent } from './_modules/_Demos/DemosWeb/demos-web/demos-web.component';
 import { ContactformComponent } from './_modules/about/contactform/contactform.component';
-import { IndexComponent } from './_modules/home/index/index.component';
+import { IndexComponent } from './_modules/about/index/index.component';
 import { DemosCurriculumWebComponent } from './_modules/_Demos/_DemosCurriculum/_demos-curriculum-web/demos-curriculum-web.component';
 import { DemosLangWebComponent } from './_modules/_Demos/_DemosLang/_demos-lang-web/demos-lang-web.component';
 import { CppDemoComponent } from './_modules/_Demos/_DemosLang/cpp-demo/cpp-demo.component';

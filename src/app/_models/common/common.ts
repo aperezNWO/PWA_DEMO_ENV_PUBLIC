@@ -3,8 +3,7 @@ import { _environment                         } from "../../../environments/envi
 import { _BaseModel                           } from "./entityInfo.model";
 
 
-//
-export type _SortColumn               = keyof _BaseModel      | '';
+
 
 //
 export enum SiteRole
@@ -49,18 +48,14 @@ export class  LoginInfo
 //
 export type UserInfoType   = UserInfo; 
 //
-export type _SortDirection = 'asc' | 'desc' | '';
+//export type _SortDirection = 'asc' | 'desc' | '';
 //
-export const pagerotate: { [key: string]: _SortDirection } = { asc: 'desc', desc: '', '': 'asc' };
+//export const pagerotate: { [key: string]: _SortDirection } = { asc: 'desc', desc: '', '': 'asc' };
 //
-export const compare = (v1: string | number | boolean, v2: string | number | boolean) => (v1 < v2 ? -1 : v1 > v2 ? 1 : 0);
-//
-
-
-export interface _BaseSearchResult {
-    searchPages : _BaseModel[];
-    total       : number;
-}   
+//export interface _BaseSearchResult {
+//    searchPages : _BaseModel[];
+//    total       : number;
+//}   
 
 export interface PageSetting {
     f_Name           : string;
@@ -71,25 +66,8 @@ export interface PageSettingDictionary {
    [key: string]: PageSetting;
 }
  
-//
-export interface _SearchState {
-	page          : number;
-	pageSize      : number;
-	searchTerm    : string;
-	sortColumn    : _SortColumn;
-	sortDirection : _SortDirection;
-}
-//
-export function sort(pagelist: _BaseModel[], column: _SortColumn, direction: string): _BaseModel[] {
-	if (direction === '' || column === '') {
-		return pagelist;
-	} else {
-		return [...pagelist].sort((a, b) => { 
-			const res = compare(a[column], b[column]);
-			return direction === 'asc' ? res : -res;
-		});
-	}
-}
+
+
 //
 export function matches(netcoreConfigPagelist: _BaseModel, term: string, pipe: PipeTransform) {
 	return (
@@ -123,7 +101,7 @@ export const ENV_LIST_SPRING_BOOT_DEMO   = 'SPRING_BOOT_DEMO';
 export const ENV_LIST_DJANGO_PYTHON_DEMO = 'DJANGO_PYTHON_DEMO';
 
 
-//
+
 
 
 
