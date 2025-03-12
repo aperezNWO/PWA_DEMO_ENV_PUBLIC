@@ -39,4 +39,4 @@ export class SearchComponent {
     this.searchService.sortColumn    = _column;
     this.searchService.sortDirection = _direction;
   }
-}
+ }

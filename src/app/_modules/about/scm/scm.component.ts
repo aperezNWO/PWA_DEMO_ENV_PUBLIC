@@ -23,17 +23,4 @@ export class SCMComponent extends SearchComponent {
   {
       super(searchService);
   }
-  //////////////////////////////////////////////////////////
-  speakText(param_searchTerm : string) : void 
-  {
-      //
-      console.log("Speak Text. Caught Event");
-      
-      this.searchService.searchTerm = param_searchTerm;
-  }
-  //
-  clearText() : void
-  {
-      this.searchService.searchTerm = "";
-  }
 } 

@@ -196,4 +196,17 @@ export class SearchService  {
 		Object.assign(this._state, patch);
 		this._search$.next();
 	}
+	 //////////////////////////////////////////////////////////
+	 public speakText(param_searchTerm : string) : void 
+	 {
+		 //
+		 console.log("Speak Text. Caught Event");
+		 
+		 this.searchTerm = param_searchTerm;
+	 }
+	 //
+	 public clearText() : void
+	 {
+		 this.searchTerm = "";
+	 }
 }

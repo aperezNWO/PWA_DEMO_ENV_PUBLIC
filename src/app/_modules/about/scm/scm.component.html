@@ -17,8 +17,8 @@
   <span class="col-sm-auto">
     <div>
       <app-speech-panel 
-           (clickEventSpeak)="this.speakText($event)"
-           (clickEventClearText)="this.clearText()">
+           (clickEventSpeak)="this.searchService.speakText($event)"
+           (clickEventClearText)="this.searchService.clearText()">
       </app-speech-panel>
     </div>
   </span>
