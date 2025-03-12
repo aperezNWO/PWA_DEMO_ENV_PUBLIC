@@ -29,14 +29,14 @@
 	<table class="table table-striped table-dark">
 		<thead>
 			<tr>
-				<th scope="col" sortable="id"             >#</th>
-				<th scope="col" sortable="done"           >(Hecho)</th>
-				<th scope="col" sortable="name"           >Nombre</th>
-				<th scope="col" sortable="field_3"        >Demo</th>
-				<th scope="col" sortable="field_4"        >Repo</th>
-				<th scope="col" sortable="field_5"        >Tema</th>
-				<th scope="col" sortable="field_2"        >P. Clave</th>
-				<th scope="col" sortable="description"    >Descripción</th>
+				<th scope="col" sortable="id"             (sortevent)="onSort($event)" >#</th>
+				<th scope="col" sortable="done"           (sortevent)="onSort($event)" >(Hecho)</th>
+				<th scope="col" sortable="name"           (sortevent)="onSort($event)" >Nombre</th>
+				<th scope="col" sortable="field_3"        (sortevent)="onSort($event)" >Demo</th>
+				<th scope="col" sortable="field_4"        (sortevent)="onSort($event)" >Repo</th>
+				<th scope="col" sortable="field_5"        (sortevent)="onSort($event)" >Tema</th>
+				<th scope="col" sortable="field_2"        (sortevent)="onSort($event)" >P. Clave</th>
+				<th scope="col" sortable="description"    (sortevent)="onSort($event)" >Descripción</th>
 			</tr>
 		</thead>
 		<tbody>
