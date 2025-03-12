@@ -1,54 +1,12 @@
-import { DecimalPipe                       } from "@angular/common";
-import { Inject, Injectable, PipeTransform } from "@angular/core";
-import { _SortDirection           } from "src/app/_headers/sortable.directive";
+import { DecimalPipe                                           } from "@angular/common";
+import { Inject, Injectable                                    } from "@angular/core";
+import { _BaseSearchResult, _SearchState, _SortColumn          } from "src/app/_headers/sortable.directive";
+import { _SortDirection, matches                               } from "src/app/_headers/sortable.directive";
 import { _BaseModel               } from "src/app/_models/common/entityInfo.model";
 import { _environment             } from "src/environments/environment";
 import { PAGE_ID, PAGE_SIZE       } from "src/app/_models/common/common";
 import { ConfigService            } from "../ConfigService/config.service";
 import { BehaviorSubject, Subject, tap, debounceTime, switchMap, delay, Observable, of } from "rxjs";
-
-// 0.
-export type _SortColumn               = keyof _BaseModel      | '';
-// 1.
-interface _BaseSearchResult {
-	searchPages : _BaseModel[];
-	total       : number;
-} 
-// 2.
-interface _SearchState {
-	  page          : number;
-	  pageSize      : number;
-	  searchTerm    : string;
-	  sortColumn    : _SortColumn;
-	  sortDirection : _SortDirection;
-}
-// 3.
-export const compare = (v1: string | number | boolean, v2: string | number | boolean) => (v1 < v2 ? -1 : v1 > v2 ? 1 : 0);
-// 4.
-export function sort(pagelist: _BaseModel[], column: _SortColumn, direction: string): _BaseModel[] {
-	if (direction === '' || column === '') {
-		return pagelist;
-	} else {
-		return [...pagelist].sort((a, b) => { 
-			const res = compare(a[column], b[column]);
-			return direction === 'asc' ? res : -res;
-		});
-	}
-}
-// 5.
-function matches(scmList: _BaseModel, term: string, pipe: PipeTransform) {
-	return (
-	  scmList.name?.toLowerCase().includes(term?.toLowerCase())        ||       
-	  scmList.description?.toLowerCase().includes(term?.toLowerCase()) ||              
-	  scmList.field_1?.toLowerCase().includes(term?.toLowerCase())     ||    
-	  scmList.field_2?.toLowerCase().includes(term?.toLowerCase())     ||    
-	  scmList.field_3?.toLowerCase().includes(term?.toLowerCase())     ||  
-	  scmList.field_4?.toLowerCase().includes(term?.toLowerCase())     || 
-	  scmList.field_5?.toLowerCase().includes(term?.toLowerCase())     || 
-	  scmList.field_6?.toLowerCase().includes(term?.toLowerCase())     || 
-	  scmList.field_7?.toLowerCase().includes(term?.toLowerCase())     
-	);
-}
 
 @Injectable({
   providedIn: 'root'
@@ -69,8 +27,6 @@ export class SearchService  {
 		sortColumn    : '',
 		sortDirection : '',
 	};
-	// 3.
-	// public _SEARCH_PAGES          : _BaseModel[] = [];
 	// 4.
 	constructor(@Inject(PAGE_ID) 
 				private PAGE_ID           : string,
@@ -144,11 +100,11 @@ export class SearchService  {
 	// 6. PROPERTIES
 	//////////////////////////////////////////////////////////////////////
 	//
-	get total() {
+	public get total() {
 		return this._total!.asObservable();
 	}
 	//
-	get loading() {
+	public get loading() {
 		return this._loading!.asObservable();
 	}
 	//
@@ -160,11 +116,11 @@ export class SearchService  {
 		this._Pagelist! = value;
 	}
 	//
-	get page() {
+	public get page() {
 		return this._state.page;
 	}
 	//
-	set page(page: number) {
+	public set page(page: number) {
 		this._set({ page });
 	}
 	//
@@ -172,41 +128,41 @@ export class SearchService  {
 		return this._state.pageSize;
 	}
 	//
-	set pageSize(pageSize: number) {
+	public set pageSize(pageSize: number) {
 		this._set({ pageSize });
 	}
 	//
-	get searchTerm() {
+	public get searchTerm() {
 		return this._state.searchTerm;
 	}
 	//
-	set searchTerm(searchTerm: string) {
+	public set searchTerm(searchTerm: string) {
 		this._set({ searchTerm });
 	}
 	//
-	set sortColumn(sortColumn: _SortColumn) {
+	public set sortColumn(sortColumn: _SortColumn) {
 		this._set({ sortColumn });
 	}
 	//
-	set sortDirection(sortDirection: _SortDirection) {
+	public set sortDirection(sortDirection: _SortDirection) {
 		this._set({ sortDirection });
 	}
 	//
-	private _set(patch: Partial<_SearchState>) {
+	public _set(patch: Partial<_SearchState>) {
 		Object.assign(this._state, patch);
 		this._search$.next();
 	}
-	 //////////////////////////////////////////////////////////
-	 public speakText(param_searchTerm : string) : void 
-	 {
+	//////////////////////////////////////////////////////////
+	public speakText(param_searchTerm : string) : void 
+	{
 		 //
 		 console.log("Speak Text. Caught Event");
 		 
 		 this.searchTerm = param_searchTerm;
-	 }
-	 //
-	 public clearText() : void
-	 {
+	}
+	//
+	public clearText() : void
+	{
 		 this.searchTerm = "";
-	 }
+	}
 }
