@@ -113,7 +113,7 @@ export class SearchService  {
 			});
 	}						
 	// 5. 
-	private _search(): Observable<_BaseSearchResult> {
+	public _search(): Observable<_BaseSearchResult> {
 		//
 	    let _searchPages  : _BaseModel[] = [];
 		let _total        : any;

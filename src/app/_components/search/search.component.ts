@@ -16,7 +16,7 @@ export class SearchComponent {
   public __pages!:     Observable<_BaseModel[]>;
   public __total!:     Observable<number>;
   //
-  @ViewChildren(BaseSortableHeader) _headers: QueryList<BaseSortableHeader> | undefined;
+  @ViewChildren(BaseSortableHeader) _headers: QueryList<BaseSortableHeader> | undefined;;  
   //
   public ConfigRoleString: string = SiteRole.RoleConfig.toString();
 
