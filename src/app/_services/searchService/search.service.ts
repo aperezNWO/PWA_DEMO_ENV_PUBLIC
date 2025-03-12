@@ -1,6 +1,6 @@
 import { DecimalPipe                                           } from "@angular/common";
 import { Inject, Injectable                                    } from "@angular/core";
-import { _BaseSearchResult, _SearchState, _SortColumn          } from "src/app/_headers/sortable.directive";
+import { _BaseSearchResult, _SearchState, _SortColumn, sort          } from "src/app/_headers/sortable.directive";
 import { _SortDirection, matches                               } from "src/app/_headers/sortable.directive";
 import { _BaseModel               } from "src/app/_models/common/entityInfo.model";
 import { _environment             } from "src/environments/environment";
@@ -83,14 +83,17 @@ export class SearchService  {
 				_searchPages.push(element);
 		});
 
-		// 2. filter
+		// 2. sort
+		_searchPages = sort(_searchPages, sortColumn, sortDirection);
+
+		// 3. filter
 		_searchPages = _searchPages.filter((_searchPage: _BaseModel) => matches(_searchPage, searchTerm, this.pipe));
 		_total       = _searchPages.length;
 
-		// 3. paginate
+		// 4. paginate
 		_searchPages = _searchPages.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
 
-		// 4. return
+		// 5. return
 		_searchResult = { searchPages: _searchPages, total: _total };
 
 		// 5. return
