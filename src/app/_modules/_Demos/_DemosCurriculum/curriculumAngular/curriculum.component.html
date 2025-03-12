@@ -14,7 +14,12 @@
 			/>
 		</div>
 		<span class="col-sm-auto">
-
+			<div>
+				<app-speech-panel 
+					 (clickEventSpeak)="this.searchService.speakText($event)"
+					 (clickEventClearText)="this.searchService.clearText()">
+				</app-speech-panel>
+			  </div>
 		</span>
 		@if (this.searchService.loading | async) {
 			<span class="col col-form-label">[Cargando...]</span>
