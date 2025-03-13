@@ -2,14 +2,14 @@ import { Directive, Input, Output, EventEmitter, PipeTransform } from "@angular/
 import { _BaseModel                                            } from "../_models/common/entityInfo.model";
 
 // 1.
-export type _SortDirection = 'asc' | 'desc' | '';
+export type _SortDirection = 'asc' | 'desc'   | '';
 export type _SortColumn    = keyof _BaseModel | '';
 // 2. 
 export const pagerotate: { [key: string]: _SortDirection } = { asc: 'desc', desc: '', '': 'asc' };
 // 3.
 export interface _BaseSortEvent {
   _column    : _SortColumn;
-  _direction: _SortDirection;
+  _direction : _SortDirection;
 }
 // 1.
 export interface _BaseSearchResult {

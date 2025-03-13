@@ -613,6 +613,8 @@
 
 -- [_] Revision general de funcionalidad.  
 
--- [_] Fix sort functionality.  
+-- [x] Fix sort functionality.  
+
+-- [x] Implement grid component / service.  
 
 ////////////////////////////////////////////////////////////////////////////////
