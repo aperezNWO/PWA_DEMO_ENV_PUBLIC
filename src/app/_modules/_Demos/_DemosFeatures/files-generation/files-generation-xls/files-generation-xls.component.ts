@@ -109,46 +109,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
         //
         console.log(this.pageTitle + "- [INGRESO]" );
         //
-        this.route.queryParams.subscribe(params => {
-          //-----------------------------------------------------------------------------
-          // LENGUAJES DE PROGRAMACION
-          //-----------------------------------------------------------------------------
-          this.__languajeList = new Array();
-          //
-          this.__languajeList.push(
-            new _languageName(0, '(SELECCIONE OPCION..)', false,""),
-          );
-          //
-          this.__languajeList.push(new _languageName(1, '(.Net Core   / C#)'             , false ,"CS" ));
-          this.__languajeList.push(new _languageName(2, '(Node.js     / JavaScript)'     , false ,"JS" ));
-          this.__languajeList.push(new _languageName(3, '(SpringBoot  / Java)'           , false ,"JV" ));
-          this.__languajeList.push(new _languageName(4, '(Django      / Pytnon)'         , false ,"PY" ));
-          //
-          let langName = params['langName'] ? params['langName'] : "" ;
-          //
-          console.log("query param : " + langName);
-          //
-          if (langName !== '')
-          {   
-              //
-              console.log("search langName :" + langName );
-              //
-              for (var index = 1; index < this.__languajeList.length; index++) {
-                  //
-
-                  //
-                  if (this.__languajeList[index]._shortName  == langName)
-                    this.__languajeList[index]._selected = true;        
-              }
-
-          } else {
-            //
-            console.log("langName not found, selecting :  " + this.__languajeList[1]._value);
-            //
-            this.__languajeList[1]._selected = true; // C#
-          }
-        });
-
+        this.queryParams();
         //
         this.rf_newSearch();
         this.td_newSearch();
@@ -159,6 +120,49 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
     //--------------------------------------------------------------------------
     // METODOS COMUNES 
     //--------------------------------------------------------------------------
+    //
+    queryParams():void{
+      //
+      this.route.queryParams.subscribe(params => {
+        //-----------------------------------------------------------------------------
+        // LENGUAJES DE PROGRAMACION
+        //-----------------------------------------------------------------------------
+        this.__languajeList = new Array();
+        //
+        this.__languajeList.push(
+          new _languageName(0, '(SELECCIONE OPCION..)', false,""),
+        );
+        //
+        this.__languajeList.push(new _languageName(1, '(.Net Core   / C#)'             , false ,"CS" ));
+        this.__languajeList.push(new _languageName(2, '(Node.js     / JavaScript)'     , false ,"JS" ));
+        this.__languajeList.push(new _languageName(3, '(SpringBoot  / Java)'           , false ,"JV" ));
+        this.__languajeList.push(new _languageName(4, '(Django      / Pytnon)'         , false ,"PY" ));
+        //
+        let langName = params['langName'] ? params['langName'] : "" ;
+        //
+        console.log("query param : " + langName);
+        //
+        if (langName !== '')
+        {   
+            //
+            console.log("search langName :" + langName );
+            //
+            for (var index = 1; index < this.__languajeList.length; index++) {
+                //
+
+                //
+                if (this.__languajeList[index]._shortName  == langName)
+                  this.__languajeList[index]._selected = true;        
+            }
+
+        } else {
+          //
+          console.log("langName not found, selecting :  " + this.__languajeList[1]._value);
+          //
+          this.__languajeList[1]._selected = true; // C#
+        }
+      });
+    }
     //
     GetFormattedDate(p_date : /*Date*/ string, order : number) {
       //
