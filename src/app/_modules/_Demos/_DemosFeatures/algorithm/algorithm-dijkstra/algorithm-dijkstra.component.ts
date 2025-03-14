@@ -558,10 +558,10 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
     //-----------------------------------------------------------------------------
     this.__languajeList = new Array();
     //
-    this.__languajeList.push( new _languageName(0,"(SELECCIONE OPCION..)",false));        
-    this.__languajeList.push( new _languageName(1,"(.NET CORE/C#)"       ,false));        
-    this.__languajeList.push( new _languageName(2,"(.NET CORE/C++)"      ,true));        
-    this.__languajeList.push( new _languageName(3,"(.SPRINGBOOT/JAVA)"   ,false));        
+    this.__languajeList.push( new _languageName(0,"(SELECCIONE OPCION..)",false,""));        
+    this.__languajeList.push( new _languageName(1,"(.NET CORE/C#)"       ,false,""));        
+    this.__languajeList.push( new _languageName(2,"(.NET CORE/C++)"      ,true ,""));        
+    this.__languajeList.push( new _languageName(3,"(.SPRINGBOOT/JAVA)"   ,false,""));        
   }
   // 
   ////////////////////////////////////////////////////////////////

@@ -4,9 +4,9 @@ import { MatTableDataSource                            } from '@angular/material
 import { MatPaginator                                  } from '@angular/material/paginator';
 import { UtilManager                                   } from 'src/app/_engines/util.engine';
 import { BehaviorSubject, delay, Observable, tap       } from 'rxjs';
-import { LogEntry, SearchCriteria, _languageName } from 'src/app/_models/common/entityInfo.model';
-import { BackendService } from 'src/app/_services/BackendService/backend.service';
-import { CustomErrorHandler } from 'src/app/app.component';
+import { LogEntry, SearchCriteria, _languageName       } from 'src/app/_models/common/entityInfo.model';
+import { BackendService                                } from 'src/app/_services/BackendService/backend.service';
+import { ActivatedRoute, Router                        } from '@angular/router';
 //
 @Component({
   selector     : 'app-files-generation-xls',
@@ -95,32 +95,66 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
     //--------------------------------------------------------------------------
     // EVENT HANDLERS FORMIULARIO 
     //--------------------------------------------------------------------------
-    constructor(private backendService: BackendService, private formBuilder: FormBuilder, private customErrorHandler : CustomErrorHandler) {
-      //
+    constructor(
+                private backendService      : BackendService, 
+                private formBuilder         : FormBuilder, 
+                private router              : Router,
+                public  route               : ActivatedRoute,
+    ) 
+    {
+        //
     }
     //
     ngOnInit(): void {
         //
         console.log(this.pageTitle + "- [INGRESO]" );
         //
+        this.route.queryParams.subscribe(params => {
+          //-----------------------------------------------------------------------------
+          // LENGUAJES DE PROGRAMACION
+          //-----------------------------------------------------------------------------
+          this.__languajeList = new Array();
+          //
+          this.__languajeList.push(
+            new _languageName(0, '(SELECCIONE OPCION..)', false,""),
+          );
+          //
+          this.__languajeList.push(new _languageName(1, '(.Net Core   / C#)'             , false ,"CS" ));
+          this.__languajeList.push(new _languageName(2, '(Node.js     / JavaScript)'     , false ,"JS" ));
+          this.__languajeList.push(new _languageName(3, '(SpringBoot  / Java)'           , false ,"JV" ));
+          this.__languajeList.push(new _languageName(4, '(Django      / Pytnon)'         , false ,"PY" ));
+          //
+          let langName = params['langName'] ? params['langName'] : "" ;
+          //
+          console.log("query param : " + langName);
+          //
+          if (langName !== '')
+          {   
+              //
+              console.log("search langName :" + langName );
+              //
+              for (var index = 1; index < this.__languajeList.length; index++) {
+                  //
+
+                  //
+                  if (this.__languajeList[index]._shortName  == langName)
+                    this.__languajeList[index]._selected = true;        
+              }
+
+          } else {
+            //
+            console.log("langName not found, selecting :  " + this.__languajeList[1]._value);
+            //
+            this.__languajeList[1]._selected = true; // C#
+          }
+        });
+
+        //
         this.rf_newSearch();
         this.td_newSearch();
     }
     //
     ngAfterViewInit():void {
-        //-----------------------------------------------------------------------------
-        // LENGUAJES DE PROGRAMACION
-        //-----------------------------------------------------------------------------
-        this.__languajeList = new Array();
-        //
-        this.__languajeList.push(
-          new _languageName(0, '(SELECCIONE OPCION..)', false),
-        );
-        //
-        this.__languajeList.push(new _languageName(1, '(.Net Core   / C#)'             , true  ));
-        this.__languajeList.push(new _languageName(2, '(Node.js     / JavaScript)'     , false ));
-        this.__languajeList.push(new _languageName(2, '(SpringBoot  / Java)'           , false ));
-        this.__languajeList.push(new _languageName(2, '(Django      / Pytnon)'         , false ));
     }
     //--------------------------------------------------------------------------
     // METODOS COMUNES 

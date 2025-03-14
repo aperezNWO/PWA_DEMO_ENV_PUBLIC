@@ -68,13 +68,13 @@ export class OcrPhotoCaptureComponent implements AfterViewInit , OnInit {
   ngAfterViewInit() {
     //-----------------------------------------------------------------------------
     this.__sourceList = new Array();
-    this.__sourceList.push( new _languageName(0,"(SELECCIONE OPCION..)" ,false));        
-    this.__sourceList.push( new _languageName(1,"(DESDE CANVAS)"        ,true));        
-    this.__sourceList.push( new _languageName(2,"(DESDE CAMARA)"        ,false));        
+    this.__sourceList.push( new _languageName(0,"(SELECCIONE OPCION..)" ,false,""));        
+    this.__sourceList.push( new _languageName(1,"(DESDE CANVAS)"        ,true ,""));        
+    this.__sourceList.push( new _languageName(2,"(DESDE CAMARA)"        ,false,""));        
     //-----------------------------------------------------------------------------
     this.__engineList = new Array();
-    this.__engineList.push( new _languageName(0,"(SELECCIONE OPCION..)"                        ,false));        
-    this.__engineList.push( new _languageName(1,"(OCR / TESSERACT - javascript)"               ,true));        
+    this.__engineList.push( new _languageName(0,"(SELECCIONE OPCION..)"                        ,false, ""));        
+    this.__engineList.push( new _languageName(1,"(OCR / TESSERACT - javascript)"               ,true,  ""));        
     //this.__engineList.push( new _languageName(2,"(COMPUTER VISION / OPENCV - javascript) "   ,false));        
     //this.__sourceList.push( new _languageName(2,"(COMPUTER VISION / TENSORFLOW)"  ,false));        
     //-----------------------------------------------------------------------------

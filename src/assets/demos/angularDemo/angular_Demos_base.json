@@ -127,7 +127,7 @@
         "description"      : "Exportación via servicio RESTFUL",
         "field_6"          : ".NET Core",
         "field_1"          : "v17, .NET Core, xls, OfficeOpenXm,eppPlus",
-        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationXLS",
+        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationXLS?langName=CS",
         "field_3"          : "https://github.com/aperezNWO/mcsdNetCoreBackup/blob/main/mcsd.Core.Library/Managers/XlsManager.cs",
         "field_4"          : "https://www.nuget.org/packages/EPPlus/"  
     },

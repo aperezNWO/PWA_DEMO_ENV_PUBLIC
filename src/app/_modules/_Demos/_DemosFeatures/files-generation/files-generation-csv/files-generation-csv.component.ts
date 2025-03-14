@@ -3,9 +3,9 @@ import { FormBuilder, Validators                       } from '@angular/forms';
 import { MatTableDataSource                            } from '@angular/material/table';
 import { MatPaginator                                  } from '@angular/material/paginator';
 import { BehaviorSubject, delay, Observable, tap       } from 'rxjs';
-import { PersonEntity, SearchCriteria, _languageName } from 'src/app/_models/common/entityInfo.model';
-import { BackendService } from 'src/app/_services/BackendService/backend.service';
-import { CustomErrorHandler } from 'src/app/app.component';
+import { PersonEntity, SearchCriteria, _languageName   } from 'src/app/_models/common/entityInfo.model';
+import { BackendService                                } from 'src/app/_services/BackendService/backend.service';
+import { CustomErrorHandler                            } from 'src/app/app.component';
 //
 @Component({
   selector: 'app-files-generation-csv',
@@ -94,13 +94,13 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
         this.__languajeList = new Array();
         //
         this.__languajeList.push(
-          new _languageName(0, '(SELECCIONE OPCION..)', false),
+          new _languageName(0, '(SELECCIONE OPCION..)', false,""),
         );
         //
-        this.__languajeList.push(new _languageName(1, '(.Net Core   / C#)'             , true));
-        this.__languajeList.push(new _languageName(2, '(Node.js     / JavaScript)'     , false));
-        this.__languajeList.push(new _languageName(2, '(SpringBoot  / Java)'           , false ));
-        this.__languajeList.push(new _languageName(2, '(Django      / Python)'         , false ));
+        this.__languajeList.push(new _languageName(1, '(.Net Core   / C#)'             , true  ,""));
+        this.__languajeList.push(new _languageName(2, '(Node.js     / JavaScript)'     , false ,""));
+        this.__languajeList.push(new _languageName(3, '(SpringBoot  / Java)'           , false ,""));
+        this.__languajeList.push(new _languageName(4, '(Django      / Python)'         , false ,""));
     }
     //
     SetCSVData():void

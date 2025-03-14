@@ -16,7 +16,7 @@
         "name"             : "Generar archivos XLS",
         "description"      : "Generar archivos XLS",
         "field_1"          : ".net core, sql server, api rest, XLS",
-        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationXLS/",
+        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationXLS?langName=CS",
         "field_3"          : "https://github.com/aperezNWO/mcsdNetCoreBackup/blob/main/mcsd.Core.Library/Managers/XlsManager.cs",
         "field_4"          : "https://angularwebapidemo.somee.com/demos/generarinformejson",
         "field_5"          : "https://www.epplussoftware.com/"
