@@ -30,7 +30,7 @@
         "description"      : "CSV DEMO",
         "field_6"          : "Nodejs",
         "field_1"          : "NodeJs, codesandbox, ms sql server",
-        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationCSV",
+        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationCSV?langName=CS",
         "field_3"          : "https://github.com/aperezNWO/CS_NodeJs/blob/main/modules/database.js",
         "field_4"          : "https://www.npmjs.com/package/mssql"  ,
         "field_5"          : "https://9rfn3t-4000.csb.app/GenerarInformeCSVJson"

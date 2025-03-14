@@ -98,7 +98,6 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
     constructor(
                 private backendService      : BackendService, 
                 private formBuilder         : FormBuilder, 
-                private router              : Router,
                 public  route               : ActivatedRoute,
     ) 
     {
@@ -148,8 +147,6 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
             console.log("search langName :" + langName );
             //
             for (var index = 1; index < this.__languajeList.length; index++) {
-                //
-
                 //
                 if (this.__languajeList[index]._shortName  == langName)
                   this.__languajeList[index]._selected = true;        

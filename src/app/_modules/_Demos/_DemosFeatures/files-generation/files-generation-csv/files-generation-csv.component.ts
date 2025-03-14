@@ -2,10 +2,11 @@ import { AfterViewInit, Component, OnInit, ViewChild   } from '@angular/core';
 import { FormBuilder, Validators                       } from '@angular/forms';
 import { MatTableDataSource                            } from '@angular/material/table';
 import { MatPaginator                                  } from '@angular/material/paginator';
-import { BehaviorSubject, delay, Observable, tap       } from 'rxjs';
+import { BehaviorSubject, Observable                   } from 'rxjs';
 import { PersonEntity, SearchCriteria, _languageName   } from 'src/app/_models/common/entityInfo.model';
 import { BackendService                                } from 'src/app/_services/BackendService/backend.service';
 import { CustomErrorHandler                            } from 'src/app/app.component';
+import { ActivatedRoute                                } from '@angular/router';
 //
 @Component({
   selector: 'app-files-generation-csv',
@@ -75,19 +76,29 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
     // EVENT HANDLERS FORMIULARIO 
     //--------------------------------------------------------------------------
     //
-    constructor(public backendService: BackendService, public formBuilder: FormBuilder, public customErrorHandler : CustomErrorHandler) {
+    constructor(public backendService       : BackendService, 
+                public formBuilder          : FormBuilder, 
+                public customErrorHandler   : CustomErrorHandler,
+                public  route               : ActivatedRoute) {
       //
     }
     //
     ngOnInit(): void {
         //
-        this.rf_newSearch();
+        console.log(FilesGenerationCSVComponent.PageTitle + " - [INGRESO]");      
         //
-        console.log(FilesGenerationCSVComponent.PageTitle + " - [INGRESO]");
+        this.queryParams();
+        //
+        this.rf_newSearch();
     }
     //
     ngAfterViewInit():void {
         //
+    }  
+    //
+    queryParams():void{
+      //
+      this.route.queryParams.subscribe(params => {
         //-----------------------------------------------------------------------------
         // LENGUAJES DE PROGRAMACION
         //-----------------------------------------------------------------------------
@@ -97,10 +108,33 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
           new _languageName(0, '(SELECCIONE OPCION..)', false,""),
         );
         //
-        this.__languajeList.push(new _languageName(1, '(.Net Core   / C#)'             , true  ,""));
-        this.__languajeList.push(new _languageName(2, '(Node.js     / JavaScript)'     , false ,""));
-        this.__languajeList.push(new _languageName(3, '(SpringBoot  / Java)'           , false ,""));
-        this.__languajeList.push(new _languageName(4, '(Django      / Python)'         , false ,""));
+        this.__languajeList.push(new _languageName(1, '(.Net Core   / C#)'             , false ,"CS" ));
+        this.__languajeList.push(new _languageName(2, '(Node.js     / JavaScript)'     , false ,"JS" ));
+        this.__languajeList.push(new _languageName(3, '(SpringBoot  / Java)'           , false ,"JV" ));
+        this.__languajeList.push(new _languageName(4, '(Django      / Pytnon)'         , false ,"PY" ));
+        //
+        let langName = params['langName'] ? params['langName'] : "" ;
+        //
+        console.log("query param : " + langName);
+        //
+        if (langName !== '')
+        {   
+            //
+            console.log("search langName :" + langName );
+            //
+            for (var index = 1; index < this.__languajeList.length; index++) {
+                //
+                if (this.__languajeList[index]._shortName  == langName)
+                  this.__languajeList[index]._selected = true;        
+            }
+
+        } else {
+          //
+          console.log("langName not found, selecting :  " + this.__languajeList[1]._value);
+          //
+          this.__languajeList[1]._selected = true; // C#
+        }
+      });
     }
     //
     SetCSVData():void
