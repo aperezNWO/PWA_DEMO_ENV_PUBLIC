@@ -16,7 +16,7 @@
         "name"             : "Listado desde MS SQL Server - XLS",
         "description"      : "Listado desde MS SQL Server - XLS",
         "field_1"          : "Spring Boot, REST Service, MS SQL SERVER",
-        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationXLS/",
+        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationXLS?langName=JV",
         "field_3"          : "https://github.com/aperezNWO/JAVA2_EE_SB_DEMO/blob/master/src/main/java/com/example/DAO/AccessLogDAO.java",
         "field_4"          : "https://docs.spring.io/spring-boot/docs/2.1.x/reference/html/boot-features-sql.html"  ,
         "field_6"          : "https://r9ls6q-8080.csb.app/getAllLogs"		
