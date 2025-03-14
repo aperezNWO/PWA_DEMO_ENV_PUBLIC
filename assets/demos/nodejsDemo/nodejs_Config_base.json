@@ -34,7 +34,7 @@
 		"done"             : true,
 		"name"             : "CSV/XLS DEMO",
 		"description"      : "CSV/XLS DEMO",
-		"field_1"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationCSV",
+		"field_1"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationCSV?langName=JS",
 		"field_2"          : "https://github.com/Exam70486/CS_NodeJs/blob/main/index.js",
 		"field_3"          : "https://codesandbox.io/p/github/Exam70486/CS_NodeJs/main",      
 		"field_4"          : "https://dpfkr5-4000.csb.app/GenerarInformeCSVJson" 

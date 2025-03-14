@@ -5,7 +5,7 @@
         "name"             : "[SQL QUERY DEMO - CSV]",
         "description"      : "Listado desde MS SQL Server - CSV",
         "field_1"          : "Django, Python, REST Service, MS SQL SERVER",
-        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationCSV/",
+        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationCSV?langName=PY",
         "field_3"          : "https://github.com/aperezNWO/django_setup_windows/blob/main/hello/views.py",
         "field_4"          : "https://n96q4t-8000.csb.app/getAllPersons?format=json"  ,
         "field_6"          : "https://pypi.org/project/mssql-django/"		

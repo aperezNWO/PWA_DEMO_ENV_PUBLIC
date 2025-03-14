@@ -5,7 +5,7 @@
         "name"             : "Generar archivos CSV",
         "description"      : "Generar archivos CSV",
         "field_1"          : ".net core, sql server, api rest, CSV",
-        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationCSV/",
+        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationCSV?langName=CS",
         "field_3"          : "https://github.com/aperezNWO/mcsdNetCoreBackup/blob/main/mcsd.Core.Library/Managers/CSVManager.cs",
         "field_4"          : "https://angularwebapidemo.somee.com/demos/GenerarInformeCSVJson",
         "field_5"          : "https://learn.microsoft.com/es-es/dotnet/api/system.text.stringbuilder?view=net-6.0"
