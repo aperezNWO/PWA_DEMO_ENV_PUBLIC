@@ -303,7 +303,7 @@
         "done"        : true,
         "name"        : "[NODE.JS - SUDOKU DEMO]",
         "description" : "ENV_ONLINE_HOSTING",
-        "field_1"     : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/GamesSudoku",
+        "field_1"     : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/GamesSudoku?langName=JS",
         "field_2"     : "[Repo]",
         "field_3"     : "https://github.com/aperezNWO/CS_NodeJs/blob/main/modules/sudoku.js",
         "field_4"     : "[Hosting]",
