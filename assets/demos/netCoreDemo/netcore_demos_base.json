@@ -60,7 +60,7 @@
         "name"             : "Algoritmo de Dijkstra",
         "description"      : "Algoritmo de Dijkstra",
         "field_1"          : ".net core, api rest, Dijkstra, Distancia más corta",
-        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/AlgorithmDijkstra?langMame=CPP",
+        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/AlgorithmDijkstra?langMame=CS",
         "field_3"          : "https://github.com/aperezNWO/mcsdNetCoreBackup/blob/main/mcsd.Core.Library/Managers/AlgorithmManager.cs",
         "field_4"          : "https://angularwebapidemo.somee.com/demos/GenerateRandomVertex?p_vertexSize=9&p_sourcePoint=0",
         "field_5"          : "https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/"
