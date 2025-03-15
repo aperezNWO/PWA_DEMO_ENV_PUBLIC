@@ -53,5 +53,16 @@
         "field_3"          : "https://github.com/aperezNWO/mcsdNetCoreBackup/blob/main/mcsd.Core.Library/Managers/AlgorithmManager.cs",
         "field_4"          : "https://angularwebapidemo.somee.com/demos/_GetSort?p_sortAlgoritm=2&p_unsortedList=16|1|20|15|12|8|19|6|11|14|23|5|2|10|9|13|24|7|22|18|0|17|3|21|4",
         "field_5"          : "https://www.geeksforgeeks.org/quick-sort-algorithm/"
+	},
+    {
+		"id"               : 6,
+        "done"             : true,
+        "name"             : "Algoritmo de Dijkstra",
+        "description"      : "Algoritmo de Dijkstra",
+        "field_1"          : ".net core, api rest, Dijkstra, Distancia más corta",
+        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/AlgorithmDijkstra?langMame=CPP",
+        "field_3"          : "https://github.com/aperezNWO/mcsdNetCoreBackup/blob/main/mcsd.Core.Library/Managers/AlgorithmManager.cs",
+        "field_4"          : "https://angularwebapidemo.somee.com/demos/GenerateRandomVertex?p_vertexSize=9&p_sourcePoint=0",
+        "field_5"          : "https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/"
 	}
 ]  
