@@ -27,8 +27,8 @@
         "name"             : "Algoritmo discancia mas corta",
         "description"      : "Algoritmo discancia mas corta",
         "field_1"          : "Spring Boot, REST service, Dijkstra",
-        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/AlgorithmDijkstra?langMame=JAVA",
-        "field_3"          : "https://github.com/aperezNWO/JAVA2_EE_SB_DEMO/blob/master/src/main/java/com/example/demo/DemoEndPoint.java",
+        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/AlgorithmDijkstra?langName=JAVA",
+        "field_3"          : "https://github.com/aperezNWO/JAVA2_EE_SB_DEMO/blob/master/src/main/java/com/example/demo/AlgorithmManager.java",
         "field_4"          : "https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/",
         "field_6"          : "https://r9ls6q-8080.csb.app/GenerateRandomVertex_SpringBoot"		
     }
