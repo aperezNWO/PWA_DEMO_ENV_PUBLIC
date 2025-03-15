@@ -1,5 +1,5 @@
 import { InjectionToken } from "@angular/core";
-import { _environment                         } from "../../../environments/environment";
+import { _environment                         } from "../../environments/environment";
 import { _BaseModel                           } from "./entityInfo.model";
 
 //

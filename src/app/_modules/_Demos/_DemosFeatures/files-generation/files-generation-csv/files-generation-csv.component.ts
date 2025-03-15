@@ -3,7 +3,7 @@ import { FormBuilder, Validators                       } from '@angular/forms';
 import { MatTableDataSource                            } from '@angular/material/table';
 import { MatPaginator                                  } from '@angular/material/paginator';
 import { BehaviorSubject, Observable                   } from 'rxjs';
-import { PersonEntity, SearchCriteria, _languageName   } from 'src/app/_models/common/entityInfo.model';
+import { PersonEntity, SearchCriteria, _languageName   } from 'src/app/_models/entityInfo.model';
 import { BackendService                                } from 'src/app/_services/BackendService/backend.service';
 import { CustomErrorHandler                            } from 'src/app/app.component';
 import { ActivatedRoute                                } from '@angular/router';
@@ -79,7 +79,8 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
     constructor(public backendService       : BackendService, 
                 public formBuilder          : FormBuilder, 
                 public customErrorHandler   : CustomErrorHandler,
-                public  route               : ActivatedRoute) {
+                public route                : ActivatedRoute) 
+    {
       //
     }
     //
@@ -108,10 +109,10 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
           new _languageName(0, '(SELECCIONE OPCION..)', false,""),
         );
         //
-        this.__languajeList.push(new _languageName(1, '(.Net Core   / C#)'             , false ,"CS" ));
-        this.__languajeList.push(new _languageName(2, '(Node.js     / JavaScript)'     , false ,"JS" ));
-        this.__languajeList.push(new _languageName(3, '(SpringBoot  / Java)'           , false ,"JV" ));
-        this.__languajeList.push(new _languageName(4, '(Django      / Pytnon)'         , false ,"PY" ));
+        this.__languajeList.push(new _languageName(1, '(.Net Core   / C#)'             , false ,"CS"   ));
+        this.__languajeList.push(new _languageName(2, '(Node.js     / JavaScript)'     , false ,"JS"   ));
+        this.__languajeList.push(new _languageName(3, '(SpringBoot  / Java)'           , false ,"JAVA" ));
+        this.__languajeList.push(new _languageName(4, '(Django      / Pytnon)'         , false ,"PY"   ));
         //
         let langName = params['langName'] ? params['langName'] : "" ;
         //

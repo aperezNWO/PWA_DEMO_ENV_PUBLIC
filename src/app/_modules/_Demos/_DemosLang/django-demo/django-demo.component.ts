@@ -1,9 +1,8 @@
 import { Component                                         } from '@angular/core';
 import { _environment                                      } from 'src/environments/environment';
-import { _BaseModel                                        } from 'src/app/_models/common/entityInfo.model';
-import { _BaseSortEvent                                    } from 'src/app/_headers/sortable.directive';
+import { _BaseModel                                        } from 'src/app/_models/entityInfo.model';
 import { SearchService                                     } from 'src/app/_services/searchService/search.service';
-import { ENV_LIST_DJANGO_PYTHON_DEMO, PAGE_ID, PAGE_SIZE   } from 'src/app/_models/common/common';
+import { ENV_LIST_DJANGO_PYTHON_DEMO, PAGE_ID, PAGE_SIZE   } from 'src/app/_models/common';
 import { SearchComponent                                   } from 'src/app/_components/search/search.component';
 
 @Component({

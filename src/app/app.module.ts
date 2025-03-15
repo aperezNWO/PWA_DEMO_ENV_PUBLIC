@@ -25,7 +25,7 @@ import { PageNotFoundComponent           } from './_modules/home/page-not-found/
 import { NavComponent                    } from './_modules/home/nav/nav.component';
 import { AAboutWebComponent              } from './_modules/about/a-about-web/a-about-web.component';
 import { UnitTestingComponent            } from './_modules/_unitttesting/unit-testing.component';
-import { LogType                         } from './_models/common/entityInfo.model';
+import { LogType                         } from './_models/entityInfo.model';
 import { BackendService                  } from './_services/BackendService/backend.service';
 import { ConfigService                   } from './_services/ConfigService/config.service';
 import { AppRoutingModule                } from './app-routing.module';
@@ -76,7 +76,7 @@ import { NodejsDemoComponent } from './_modules/_Demos/_DemosLang/nodejs-demo/no
 import { SpringBootDemoComponent } from './_modules/_Demos/_DemosLang/spring-boot-demo/spring-boot-demo.component';
 import { DjangoDemoComponent } from './_modules/_Demos/_DemosLang/django-demo/django-demo.component';
 import { SpeechPanelComponent } from './_components/speech-panel/speech-panel.component';
-import { BaseSortableHeader } from './_headers/sortable.directive';
+import { BaseSortableHeader } from './_directives/sortable.directive';
 //
 export function initialize(_configService: ConfigService) {
   //

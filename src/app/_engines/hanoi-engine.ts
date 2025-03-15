@@ -1,7 +1,7 @@
 import { Injectable,  ViewChild } from "@angular/core";
 import { Observable             } from "rxjs";
 import { BehaviorSubject        } from "rxjs/internal/BehaviorSubject";
-import { ListItem               } from "../_models/common/entityInfo.model";
+import { ListItem               } from "../_models/entityInfo.model";
 //
 export class DiskInfo
 {

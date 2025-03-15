@@ -1,11 +1,11 @@
 import { Component, OnInit            } from '@angular/core';
 import { ViewChild, AfterViewInit     } from '@angular/core';
-import { FormBuilder, NgForm, Validators      } from '@angular/forms';
+import { FormBuilder, NgForm,         } from '@angular/forms';
 import { HttpEventType, HttpResponse  } from '@angular/common/http';
 import { Observable                   } from 'rxjs';
-import { BackendService                  } from 'src/app/_services/BackendService/backend.service';
+import { BackendService               } from 'src/app/_services/BackendService/backend.service';
 import { PdfService                   } from 'src/app/_engines/pdf.engine';
-import { ListItem                     } from 'src/app/_models/common/entityInfo.model';
+import { ListItem                     } from 'src/app/_models/entityInfo.model';
 //
 @Component({
   selector: 'app-sudoku',
@@ -67,8 +67,8 @@ export class SudokuComponent implements OnInit, AfterViewInit {
     //-----------------------------------------------------------------------------
     this.__languajeList = new Array();
     this.__languajeList.push(new ListItem(0, '(SELECCIONE OPCION..)', false));
-    this.__languajeList.push(new ListItem(1, '(.NET Core/C++)', true));
-    this.__languajeList.push(new ListItem(2, '(Node.js)'      , false));
+    this.__languajeList.push(new ListItem(1, '(.NET Core/C++)'      , true));
+    this.__languajeList.push(new ListItem(2, '(Node.js)'            , false));
     //
     this._cppSourceDivHidden = false;
     //

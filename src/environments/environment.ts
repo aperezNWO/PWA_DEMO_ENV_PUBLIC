@@ -1,4 +1,4 @@
-import { PageSetting, PageSettingDictionary } from "src/app/_models/common/common";
+import { PageSetting, PageSettingDictionary } from "src/app/_models/common";
 
 interface EnvironmentConfig {
     production              : boolean; 

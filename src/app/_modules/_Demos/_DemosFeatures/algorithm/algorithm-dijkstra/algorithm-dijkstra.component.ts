@@ -1,10 +1,11 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { Observable                                  } from 'rxjs';
-import { _languageName, _vertexSize                  } from 'src/app/_models/common/entityInfo.model';
+import { _languageName, _vertexSize                  } from 'src/app/_models/entityInfo.model';
 import { PdfService                                  } from 'src/app/_engines/pdf.engine';
 import { UtilManager                                 } from 'src/app/_engines/util.engine';
 import { BackendService } from 'src/app/_services/BackendService/backend.service';
 import { CustomErrorHandler } from 'src/app/app.component';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector       : 'app-algorithm-dijkstra',
   templateUrl    : './algorithm-dijkstra.component.html',
@@ -56,7 +57,10 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
   ////////////////////////////////////////////////////////////////
   // EVENT HANDLERS //////////////////////////////////////////////  
   ////////////////////////////////////////////////////////////////
-  constructor(public backendService: BackendService, public customErrorHandler: CustomErrorHandler, public pdfService : PdfService)
+  constructor(public backendService     : BackendService, 
+              public customErrorHandler : CustomErrorHandler, 
+              public pdfService         : PdfService,
+              public route              : ActivatedRoute) 
   {
      //
      backendService.SetLog(this.pageTitle,"PAGE_DIJKSTRA_DEMO");
@@ -79,6 +83,46 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
     //    
     this._ResetControls();
   };
+  //
+  queryParams():void {
+     //
+     this.route.queryParams.subscribe(params => {
+      //-----------------------------------------------------------------------------
+      // LENGUAJES DE PROGRAMACION
+      //-----------------------------------------------------------------------------
+      this.__languajeList = new Array();
+      //
+      this.__languajeList.push(
+        new _languageName(0, '(SELECCIONE OPCION..)', false,""),
+      );
+      //
+      this.__languajeList.push(new _languageName(1, '(.Net Core   / C#)'             , false ,"CS" ));
+      this.__languajeList.push(new _languageName(2, '(.Net Core   / C++)'            , false ,"CPP" ));
+      this.__languajeList.push(new _languageName(3, '(SpringBoot  / Java)'           , false ,"JAVA" ));
+      //
+      let langName = params['langName'] ? params['langName'] : "" ;
+      //
+      console.log("query param : " + langName);
+      //
+      if (langName !== '')
+      {   
+          //
+          console.log("search langName :" + langName );
+          //
+          for (var index = 1; index < this.__languajeList.length; index++) {
+              //
+              if (this.__languajeList[index]._shortName  == langName)
+                this.__languajeList[index]._selected = true;        
+          }
+
+      } else {
+        //
+        console.log("langName not found, selecting :  " + this.__languajeList[1]._value);
+        //
+        this.__languajeList[1]._selected = true; // C#
+      }
+    });
+  }
   //
   public _vertexSizeListChange():void
   {
@@ -556,12 +600,7 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
     //-----------------------------------------------------------------------------
     // LENGUAJES DE PROGRAMACION
     //-----------------------------------------------------------------------------
-    this.__languajeList = new Array();
-    //
-    this.__languajeList.push( new _languageName(0,"(SELECCIONE OPCION..)",false,""));        
-    this.__languajeList.push( new _languageName(1,"(.NET CORE/C#)"       ,false,""));        
-    this.__languajeList.push( new _languageName(2,"(.NET CORE/C++)"      ,true ,""));        
-    this.__languajeList.push( new _languageName(3,"(.SPRINGBOOT/JAVA)"   ,false,""));        
+    this.queryParams();      
   }
   // 
   ////////////////////////////////////////////////////////////////

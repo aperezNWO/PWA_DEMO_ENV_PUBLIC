@@ -4,7 +4,7 @@ import { MatTableDataSource                            } from '@angular/material
 import { MatPaginator                                  } from '@angular/material/paginator';
 import { UtilManager                                   } from 'src/app/_engines/util.engine';
 import { BehaviorSubject, delay, Observable, tap       } from 'rxjs';
-import { LogEntry, SearchCriteria, _languageName       } from 'src/app/_models/common/entityInfo.model';
+import { LogEntry, SearchCriteria, _languageName       } from 'src/app/_models/entityInfo.model';
 import { BackendService                                } from 'src/app/_services/BackendService/backend.service';
 import { ActivatedRoute, Router                        } from '@angular/router';
 //
@@ -132,10 +132,10 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
           new _languageName(0, '(SELECCIONE OPCION..)', false,""),
         );
         //
-        this.__languajeList.push(new _languageName(1, '(.Net Core   / C#)'             , false ,"CS" ));
-        this.__languajeList.push(new _languageName(2, '(Node.js     / JavaScript)'     , false ,"JS" ));
-        this.__languajeList.push(new _languageName(3, '(SpringBoot  / Java)'           , false ,"JV" ));
-        this.__languajeList.push(new _languageName(4, '(Django      / Pytnon)'         , false ,"PY" ));
+        this.__languajeList.push(new _languageName(1, '(.Net Core   / C#)'             , false ,"CS"   ));
+        this.__languajeList.push(new _languageName(2, '(Node.js     / JavaScript)'     , false ,"JS"   ));
+        this.__languajeList.push(new _languageName(3, '(SpringBoot  / Java)'           , false ,"JAVA" ));
+        this.__languajeList.push(new _languageName(4, '(Django      / Pytnon)'         , false ,"PY"   ));
         //
         let langName = params['langName'] ? params['langName'] : "" ;
         //
