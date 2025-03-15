@@ -617,6 +617,15 @@
 
 -- [x] Implement grid component / service.  
 
--- [x] <app-search>>/app-search>
+-- [_] <app-search></app-search>
+
+-- [_] SCM ENV_LIBRARY
+
+-- [_] ngbgrid searchTerm param.
+
+-- [_] Promise<<type>>.
+
+-- [_] //console.log replace
+.
 
 ////////////////////////////////////////////////////////////////////////////////

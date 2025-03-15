@@ -193,11 +193,14 @@ export class CustomErrorHandler implements ErrorHandler {
     ],
     exports: [RouterModule],
     providers: [
-        {  provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptor, multi: true },
-        {  provide: LocationStrategy, useClass: HashLocationStrategy },
-        {  provide: ErrorHandler, useClass: CustomErrorHandler },
+           DatePipe,
+           DecimalPipe,
+           ConfigService,  
+           BackendService,
+        {  provide: HTTP_INTERCEPTORS , useClass: LoggingInterceptor, multi: true },
+        {  provide: LocationStrategy  , useClass: HashLocationStrategy            },
+        {  provide: ErrorHandler      , useClass: CustomErrorHandler              },
         [
-          ConfigService,  // no colocar "ConfigService" en la seccion "deps" causa error y no reconoce la funcion "LoadJsonList"
           {
             provide   : APP_INITIALIZER,
             useFactory: initialize,
@@ -205,7 +208,7 @@ export class CustomErrorHandler implements ErrorHandler {
             multi     : true
           }
         ],
-        DatePipe,DecimalPipe
+
     ],
     bootstrap: [AppComponent],
     imports: [
