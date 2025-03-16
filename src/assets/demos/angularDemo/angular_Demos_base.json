@@ -171,12 +171,12 @@
 		"id"               : 15,
         "done"             : true,
         "name"             : "Exportación a csv desde Backend",
-        "description"      : "Exportación via servicio RESTFUL",
+        "description"      : "Exportación via servicio RESTFUL con ms sql server",
         "field_6"          : ".NET Core",
-        "field_1"          : "v17, .NET Core, csv, stringbuilder",
+        "field_1"          : "v17, .NET Core, csv, stringbuilder, ms sql server, HttpClient",
         "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationCSV?langName=CS",
-        "field_3"          : "https://github.com/aperezNWO/mcsdNetCoreBackup/blob/main/mcsd.Core.Library/Managers/CSVManager.cs",
-        "field_4"          : "https://learn.microsoft.com/en-us/dotnet/api/system.text.stringbuilder?view=net-5.0",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/files-generation/files-generation-csv/files-generation-csv.component.ts",
+        "field_4"          : "https://v17.angular.io/guide/http-request-data-from-server",
         "field_10"         : "c8981879-7457-4534-b660-b2e8c8eb9c83"  
     }
 ]       
