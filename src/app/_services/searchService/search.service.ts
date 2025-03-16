@@ -43,6 +43,8 @@ export class SearchService  {
 		this.pageSize   = PAGE_SIZE;
 		//
 		this.searchTerm = SEARCH_TERM;
+		//
+		console.log("SEARCH_TERM" + SEARCH_TERM);
 
 	}
 	// 4. Get Data

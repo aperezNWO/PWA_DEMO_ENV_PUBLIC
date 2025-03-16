@@ -10,6 +10,7 @@ import { ConfigService                                           } from '../Conf
 })
 //
 export class BackendService implements OnInit {
+
     ////////////////////////////////////////////////////////////////  
     // CAMPOS
     ////////////////////////////////////////////////////////////////  
@@ -616,5 +617,6 @@ export class BackendService implements OnInit {
     //
     return this.http.post(url, { base64Image });
   }
+  ///////////////////////////////////////////////////////////////
 }
   

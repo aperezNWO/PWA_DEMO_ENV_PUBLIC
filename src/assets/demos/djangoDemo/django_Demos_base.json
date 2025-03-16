@@ -8,7 +8,8 @@
         "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationCSV?langName=PY",
         "field_3"          : "https://github.com/aperezNWO/django_setup_windows/blob/main/hello/views.py",
         "field_4"          : "https://n96q4t-8000.csb.app/getAllPersons?format=json"  ,
-        "field_6"          : "https://pypi.org/project/mssql-django/"		
+        "field_6"          : "https://pypi.org/project/mssql-django/",
+        "field_10"         : "882904a3-efd8-4ed7-bf4c-ccae59b995ce"		
     },
     {
 		"id"               : 2,
@@ -19,6 +20,7 @@
         "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationXLS?langName=PY",
         "field_3"          : "https://github.com/aperezNWO/django_setup_windows/blob/main/hello/views.py",
         "field_4"          : "https://n96q4t-8000.csb.app/getAllLogs?format=json"  ,
-        "field_6"          : "https://pypi.org/project/mssql-django/"		
+        "field_6"          : "https://pypi.org/project/mssql-django/",		
+        "field_10"         : "f1ba13c3-131f-4517-aa72-ca9899058317"	
     }
 ]       

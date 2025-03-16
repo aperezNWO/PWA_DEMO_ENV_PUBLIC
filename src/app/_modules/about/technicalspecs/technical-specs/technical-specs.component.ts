@@ -1,8 +1,7 @@
-import { Component, VERSION                } from '@angular/core';
-import { CustomErrorHandler                } from 'src/app/app.module';
+import { Component, signal, VERSION        } from '@angular/core';
 import { HttpClient                        } from '@angular/common/http';
-import { BackendService                       } from '../../../../_services/BackendService/backend.service';
-import { ConfigService                    } from 'src/app/_services/ConfigService/config.service';
+import { BackendService                    } from '../../../../_services/BackendService/backend.service';
+import { ConfigService                     } from 'src/app/_services/ConfigService/config.service';
 import { Observable                        } from 'rxjs';
 //
 @Component({
@@ -12,11 +11,16 @@ import { Observable                        } from 'rxjs';
 })
 //
 export class TechnicalSpecsComponent {
+////////////////////////////////////////////////////////////////  
+// METODOS - [EVENT HANDLERS]
+////////////////////////////////////////////////////////////////  
     //
     _appBrand          : string | undefined;
     _appVersion        : string | undefined;
     _runtimeVersion    : string = VERSION.full;
     _webApiAppVersion  : string = "";
+    //
+    guid = signal<string>(''); // Signal to hold the GUID
     //
     public static get PageTitle()   : string {
       //
@@ -65,10 +69,9 @@ export class TechnicalSpecsComponent {
     }
     //
     constructor(
-          public http               : HttpClient, 
-          public _configService     : ConfigService,
-          private backendService       : BackendService, 
-          private customErrorHandler: CustomErrorHandler
+          public  http               : HttpClient, 
+          public  _configService     : ConfigService,
+          private backendService     : BackendService, 
     ) 
     {
       ////
@@ -89,6 +92,8 @@ export class TechnicalSpecsComponent {
       backendService.SetLog(this.pageTitle,"PAGE_TECH_SPECS");
       //
       this._GetWebApiAppVersion();
+      //
+      this.generateNewGuid()
     }
     //
     private _GetWebApiAppVersion() {
@@ -117,4 +122,10 @@ export class TechnicalSpecsComponent {
       //
       appVersion.subscribe(appVersionObserver);
     }
+    //
+    generateNewGuid() 
+    {
+      this.guid.set(this._configService.generateGuid())
+    }
+    ///////////////////////////////////////////////////////////  
 }

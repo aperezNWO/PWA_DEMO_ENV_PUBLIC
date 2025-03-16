@@ -628,4 +628,8 @@
 
 -- [_] <app-search></app-search>
 
+-- [_] main page / global search.
+
+-- [_] random guid generator.
+
 ////////////////////////////////////////////////////////////////////////////////

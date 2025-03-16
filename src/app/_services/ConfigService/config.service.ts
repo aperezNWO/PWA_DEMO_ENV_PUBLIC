@@ -2,13 +2,16 @@ import { Injectable   } from '@angular/core';
 import { HttpClient   } from '@angular/common/http';
 import { _environment } from 'src/environments/environment';
 import { PageSetting } from 'src/app/_models/entity.model';
+import { ActivatedRoute } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class ConfigService {
-  constructor(protected http: HttpClient) {}
+  //
+  constructor( protected http  : HttpClient
+              ,public    route : ActivatedRoute) {}
     //
     loadJsonList() {
       return this.http.get('./assets/config/_jsonList.json').toPromise()
@@ -117,4 +120,29 @@ export class ConfigService {
     //
     return jsonData;
   }
+   /**
+   * Generates a random GUID.
+   * @returns A string representing the generated GUID.
+   */
+   generateGuid(): string {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (char) => {
+      const random = (Math.random() * 16) | 0; // Generate a random number between 0 and 15
+      const value = char === 'x' ? random : (random & 0x3) | 0x8; // Ensure 'y' is one of [8, 9, A, B]
+      return value.toString(16); // Convert to hexadecimal
+    });
+  }
+  queryUrlParams(paraName: string):string {
+     //
+     let returnValue = ""; 
+     //
+     this.route.queryParams.subscribe(params => {
+      //
+      returnValue = params[paraName] ? params[paraName] : "" ;
+      //
+      console.log("query param : " + returnValue);
+    });
+    //
+    return returnValue;
+  }
+  ///////////////////////////////////////////////////////////////
 }

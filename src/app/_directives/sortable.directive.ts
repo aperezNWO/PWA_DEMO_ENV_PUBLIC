@@ -48,7 +48,10 @@ export function matches(scmList: _BaseModel, term: string, pipe: PipeTransform) 
     scmList.field_4?.toLowerCase().includes(term?.toLowerCase())     || 
     scmList.field_5?.toLowerCase().includes(term?.toLowerCase())     || 
     scmList.field_6?.toLowerCase().includes(term?.toLowerCase())     || 
-    scmList.field_7?.toLowerCase().includes(term?.toLowerCase())     
+    scmList.field_7?.toLowerCase().includes(term?.toLowerCase())     || 
+    scmList.field_8?.toLowerCase().includes(term?.toLowerCase())     || 
+    scmList.field_9?.toLowerCase().includes(term?.toLowerCase())     ||  
+    scmList.field_10?.toLowerCase().includes(term?.toLowerCase())     
   );
 }
 // 4. 
