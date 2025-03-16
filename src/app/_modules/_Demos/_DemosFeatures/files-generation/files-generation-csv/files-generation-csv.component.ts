@@ -72,6 +72,7 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
     });
     //
     public _loading               = new BehaviorSubject<boolean>(false);
+    public isListVisible          = false; // Initially hidden
     //--------------------------------------------------------------------------
     // EVENT HANDLERS FORMIULARIO 
     //--------------------------------------------------------------------------
@@ -96,6 +97,10 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
     ngAfterViewInit():void {
         //
     }  
+    //
+    toggleList() {
+      this.isListVisible = !this.isListVisible; // Toggle visibility
+    }
     //
     queryParams():void{
       //
@@ -412,6 +417,8 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
         this.csv_dataSource            = new MatTableDataSource<PersonEntity>();
         //
         this.csv_dataSource.paginator  = this.csv_paginator
+        //
+        this.isListVisible             = false;
     }
     //
     rf_onSubmit() 

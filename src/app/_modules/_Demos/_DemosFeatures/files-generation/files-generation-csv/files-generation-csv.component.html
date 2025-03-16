@@ -4,8 +4,11 @@
 </div>  
   <hr> 
   <span class="reference">
-    <p>Ver referencia&nbsp;<a routerLink="/AngularDemo" [queryParams]="{ searchTerm: 'c8981879-7457-4534-b660-b2e8c8eb9c83' }">[Angular]</a></p>
-    <p>Ver referencia&nbsp;<a routerLink="/DjangoDemo"  [queryParams]="{ searchTerm: '882904a3-efd8-4ed7-bf4c-ccae59b995ce' }">[PYTHON/DJANGO]</a></p>
+    <button class="btn btn-primary" (click)="this.toggleList()">[Ver Referencias]</button>
+    <ul *ngIf="isListVisible">
+        <li><a routerLink="/AngularDemo" [queryParams]="{ searchTerm: 'c8981879-7457-4534-b660-b2e8c8eb9c83' }">[Angular]</a></li>
+        <li><a routerLink="/DjangoDemo"  [queryParams]="{ searchTerm: '882904a3-efd8-4ed7-bf4c-ccae59b995ce' }">[PYTHON/DJANGO]</a></li>
+    </ul>
 </span>   
   <hr>
   <div>
