@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit , ViewChild } from '@angular/core';
 import { CommonModule                                 } from '@angular/common';
-import { ListItem                                     } from 'src/app/_models/entityInfo.model';
+import { ListItem                                     } from 'src/app/_models/entity.model';
 import { SquareComponent                              } from "../square/square.component";
 import { TicTacToeEngine                              } from 'src/app/_engines/game.engine';
 //

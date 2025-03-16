@@ -2,7 +2,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild,Renderer2    } from '@angular/core';
 import { NgxSignaturePadComponent } from '@eve-sama/ngx-signature-pad/lib/ngx-signature-pad.component';
 import { NgxSignatureOptions      } from '@eve-sama/ngx-signature-pad/lib/types/ngx-signature-pad';
-import { _languageName            } from 'src/app/_models/entityInfo.model';
+import { _languageName            } from 'src/app/_models/entity.model';
 import { ShapeDetectionService    } from 'src/app/_services/ShapeDetection/shape-detection.service';
 declare var cv: any; // Declare cv as a global variable
 @Component({

@@ -1,8 +1,7 @@
 import { Component, QueryList, ViewChildren } from '@angular/core';
 import { Observable                         } from 'rxjs';
 import { BaseSortableHeader, _BaseSortEvent } from 'src/app/_directives/sortable.directive';
-import { SiteRole                           } from 'src/app/_models/common';
-import { _BaseModel                         } from 'src/app/_models/entityInfo.model';
+import { _BaseModel, SiteRole                         } from 'src/app/_models/entity.model';
 import { SearchService                      } from 'src/app/_services/searchService/search.service';
 
 @Component({

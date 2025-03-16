@@ -599,15 +599,9 @@
 
         -- [_] language.    
 
--- [_] both ways reference.    
-
-        -- [_] ngb grid  => searchTerm?<search_Term>.    
-
-        -- [_] demo page => lang=<lang>.    
-
 -- [_] asp.net core demo.           
 
--- [_] Speech Panel component.  
+-- [x] Speech Panel component.  
 
 -- [_] Page icons.  
 
@@ -615,17 +609,23 @@
 
 -- [x] Fix sort functionality.  
 
--- [x] Implement grid component / service.  
-
--- [_] <app-search></app-search>
-
--- [_] SCM ENV_LIBRARY
-
--- [_] ngbgrid searchTerm param.
+-- [x] Implement grid component / service. 
 
 -- [_] Promise<<type>>.
 
 -- [_] //console.log replace
-.
+
+
+-- [_] both ways reference.    
+
+        -- [_] ngb grid  => searchTerm?<search_Term>.    
+
+                -- [_] ngbgrid searchTerm param.
+
+        -- [_] demo page => langName?<lang>.  
+
+                -- [>] SCM ENV_LIBRARY
+
+-- [_] <app-search></app-search>
 
 ////////////////////////////////////////////////////////////////////////////////

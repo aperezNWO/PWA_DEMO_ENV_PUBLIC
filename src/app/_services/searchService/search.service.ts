@@ -1,10 +1,10 @@
-import { DecimalPipe              } from "@angular/common";
-import { Inject, Injectable       } from "@angular/core";
-import { _BaseModel               } from "src/app/_models/entityInfo.model";
-import { _environment             } from "src/environments/environment";
-import { PAGE_ID, PAGE_SIZE       } from "src/app/_models/common";
-import { ConfigService            } from "../ConfigService/config.service";
-import { BehaviorSubject, Subject, tap, debounceTime, switchMap, delay, Observable, of } from "rxjs";
+import { DecimalPipe                           } from "@angular/common";
+import { Inject, Injectable                    } from "@angular/core";
+import { _BaseModel                            } from "src/app/_models/entity.model";
+import { _environment                          } from "src/environments/environment";
+import { PAGE_ID, PAGE_SIZE, SEARCH_TERM       } from "src/app/_models/common";
+import { ConfigService                         } from "../ConfigService/config.service";
+import { BehaviorSubject, Subject, tap, debounceTime, switchMap, delay, Observable, of       } from "rxjs";
 import { _SearchState, _BaseSearchResult, matches, _SortColumn, _SortDirection, sort         } from "src/app/_directives/sortable.directive";
 
 @Injectable({
@@ -31,6 +31,8 @@ export class SearchService  {
 				private PAGE_ID           : string,
 				@Inject(PAGE_SIZE) 
 				private PAGE_SIZE         : number,
+				@Inject(SEARCH_TERM) 
+				private SEARCH_TERM       : string,
 				private pipe              : DecimalPipe,
 				private __configService   : ConfigService
 	) 
@@ -38,7 +40,9 @@ export class SearchService  {
 		//
 		this.GetData(PAGE_ID);
 		//
-		this.pageSize = PAGE_SIZE;
+		this.pageSize   = PAGE_SIZE;
+		//
+		this.searchTerm = SEARCH_TERM;
 
 	}
 	// 4. Get Data

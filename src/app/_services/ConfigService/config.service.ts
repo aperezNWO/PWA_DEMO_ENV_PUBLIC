@@ -1,7 +1,7 @@
 import { Injectable   } from '@angular/core';
 import { HttpClient   } from '@angular/common/http';
 import { _environment } from 'src/environments/environment';
-import { PageSetting  } from 'src/app/_models/common';
+import { PageSetting } from 'src/app/_models/entity.model';
 
 @Injectable({
   providedIn: 'root'

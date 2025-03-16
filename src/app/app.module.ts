@@ -25,7 +25,7 @@ import { PageNotFoundComponent           } from './_modules/home/page-not-found/
 import { NavComponent                    } from './_modules/home/nav/nav.component';
 import { AAboutWebComponent              } from './_modules/about/a-about-web/a-about-web.component';
 import { UnitTestingComponent            } from './_modules/_unitttesting/unit-testing.component';
-import { LogType                         } from './_models/entityInfo.model';
+import { LogType                         } from './_models/entity.model';
 import { BackendService                  } from './_services/BackendService/backend.service';
 import { ConfigService                   } from './_services/ConfigService/config.service';
 import { AppRoutingModule                } from './app-routing.module';

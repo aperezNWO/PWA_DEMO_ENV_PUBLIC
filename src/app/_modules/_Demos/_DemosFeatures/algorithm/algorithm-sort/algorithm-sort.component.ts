@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { Observable                                  } from 'rxjs';
-import { SortInfo, _languageName                     } from 'src/app/_models/entityInfo.model';
+import { SortInfo, _languageName                     } from 'src/app/_models/entity.model';
 import { DrawEngine } from 'src/app/_engines/draw.engine';
 import { BackendService } from 'src/app/_services/BackendService/backend.service';
 import { CustomErrorHandler } from 'src/app/app.component';

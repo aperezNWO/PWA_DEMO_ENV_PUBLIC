@@ -1,5 +1,5 @@
 import { Directive, Input, Output, EventEmitter, PipeTransform } from "@angular/core";
-import { _BaseModel                                            } from "../_models/entityInfo.model";
+import { _BaseModel                                            } from "../_models/entity.model";
 
 // 1.
 export type _SortDirection = 'asc' | 'desc'   | '';

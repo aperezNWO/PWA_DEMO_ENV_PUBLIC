@@ -1,3 +1,5 @@
+////////////////////////////////////////////////////////////////////////////
+
 export enum LogType {
       Info  = 1
     , Debug = 2
@@ -107,3 +109,57 @@ export interface _BaseModel
     field_9          : string;
     field_10         : string;
 }
+
+//
+export enum SiteRole
+{
+    RoleAnonyumous = 0,
+    RoleAdmin      = 1,
+    RoleMarketing  = 2,
+    RoleConfig     = 3,
+    RoleEducation  = 4
+}
+//
+export type SiteRoleType   = SiteRole; 
+//
+export interface PageInfo
+{
+    url          : string;
+    text         : string;
+    pageRoles    : string;
+}
+//
+export interface UserInfo
+{
+    userId     : number;
+    fullName   : string;
+    userName   : string;
+    pwd        : string;
+    userRoles  : string;
+}
+//
+//
+export class  LoginInfo
+{
+    //
+    constructor(
+        public    P_LOGIN_NAME       : string,
+        public    P_LOGIN_PASSWORD   : string,
+    )
+    {
+        //
+    }
+}
+//
+export type UserInfoType   = UserInfo; 
+//
+export interface PageSetting {
+    f_Name           : string;
+    p_Path           : string;
+}
+//
+export interface PageSettingDictionary {
+   [key: string]: PageSetting;
+}
+
+////////////////////////////////////////////////////////////////////////////
