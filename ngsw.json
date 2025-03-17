@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1742175449649,
+  "timestamp": 1742175843893,
   "index": "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/index.html",
   "assetGroups": [
     {
@@ -79,9 +79,9 @@
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/config/llm.json": "542f4742aa96a49cbe71961ba2360921f8619035",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/config/scm.json": "7d2438f54269379750b4ae2bc6b058ef5049c404",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/demos/angularDemo/angular_Curriculum_base.json": "eb99c28f2f312027b64119b165bdf312a6afb518",
-    "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/demos/angularDemo/angular_Demos_base.json": "ead7ea8fe45ee3c9602fadde75c66ba64f129862",
+    "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/demos/angularDemo/angular_Demos_base.json": "50c7339f71510484cc6a029d5e236f33bf1f775f",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/demos/cppDemo/cpp_Demos_base.json": "2b9f5369fb64890e115d97981c0830d702362671",
-    "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/demos/djangoDemo/django_Demos_base.json": "5f11cc639ba3340e64051076518d87d920df06c1",
+    "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/demos/djangoDemo/django_Demos_base.json": "ad70a68210b2332025b754420acb6dd3ad9ff159",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/demos/netCoreDemo/netcore_demos_base.json": "bc92c7d43cf3ab09ef4a9ecbdef0dac1d07cb622",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/demos/nodejsDemo/nodejs_Demos_base.json": "096597e8acdc39522a828545d6352a40c369caaf",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/demos/springBootDemo/springBoot_Demos_base.json": "4020c52ea38696239a65027fd1702defe4b4893e",
