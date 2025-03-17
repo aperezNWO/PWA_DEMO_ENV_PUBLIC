@@ -138,10 +138,10 @@
         "description"      : "Exportación via servicio RESTFUL",
         "field_6"          : ".NET Core",
         "field_1"          : "v17, .NET Core, xls, OfficeOpenXm,eppPlus",
-        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationXLS?langName=CS",
-        "field_3"          : "https://github.com/aperezNWO/mcsdNetCoreBackup/blob/main/mcsd.Core.Library/Managers/XlsManager.cs",
-        "field_4"          : "https://www.nuget.org/packages/EPPlus/" ,
-        "field_10"         : "" 
+        "field_2"          : "/#/FilesGenerationXLS?langName=CS",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/files-generation/files-generation-xls/files-generation-xls.component.ts",
+        "field_4"          : "https://v17.angular.io/guide/http-request-data-from-server" ,
+        "field_10"         : "096030d9-cebd-4243-addf-02a36e7eda01" 
     },
     {
 		"id"               : 13,
@@ -174,7 +174,7 @@
         "description"      : "Exportación via servicio RESTFUL con ms sql server",
         "field_6"          : ".NET Core",
         "field_1"          : "v17, .NET Core, csv, stringbuilder, ms sql server, HttpClient",
-        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationCSV?langName=CS",
+        "field_2"          : "/#/FilesGenerationCSV?langName=CS",
         "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/files-generation/files-generation-csv/files-generation-csv.component.ts",
         "field_4"          : "https://v17.angular.io/guide/http-request-data-from-server",
         "field_10"         : "c8981879-7457-4534-b660-b2e8c8eb9c83"  
