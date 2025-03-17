@@ -19,7 +19,7 @@ export class FilesGenerationWebComponent {
   constructor(backendService : BackendService, customErrorHandler : CustomErrorHandler)
   {
     //
-    console.log(this.pageTitle + " - [INGRESO]");
+    //console.log(this.pageTitle + " - [INGRESO]");
     //
     backendService.SetLog(this.pageTitle,"PAGE_FILE_GENERATION_INDEX");
   }

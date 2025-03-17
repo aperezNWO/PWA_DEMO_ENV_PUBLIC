@@ -78,7 +78,7 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
     public GetSort()
     {
         //
-        console.log(AlgorithmSortComponent.PageTitle + " - [GET SORT]" );
+        //console.log(AlgorithmSortComponent.PageTitle + " - [GET SORT]" );
         //
         let selectedIndex   : number = this.SortAlgorithmList.nativeElement.options.selectedIndex;
         let p_sortAlgorith  : number = this.SortAlgorithmList.nativeElement.options[selectedIndex].value;
@@ -149,7 +149,7 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
                         this.stringMatrix[index] = this.stringMatrix[index].replace("<br/>", ",");
                     }
                     //
-                    console.log('SORT_BENCHMARK . SORTED ARRAY : ' + index + ' : ' + this.stringMatrix[index]);
+                    //console.log('SORT_BENCHMARK . SORTED ARRAY : ' + index + ' : ' + this.stringMatrix[index]);
                 }
                 //-----------------------------------------------------------------------
                 // DIBUJAR CUADRICULA
@@ -182,7 +182,7 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
     public GetNewSort():void
     {
         //
-        console.log(AlgorithmSortComponent.PageTitle + " - [NEW SORT]" );  
+        //console.log(AlgorithmSortComponent.PageTitle + " - [NEW SORT]" );  
         //
         this.SortAlgorithmList.nativeElement.options.selectedIndex = 0;
         //
@@ -248,11 +248,11 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
     _ResetControls():void
     {
         //
-        console.log(this.pageTitle   + ' [RESET CONTROLS] ');
+        //console.log(this.pageTitle   + ' [RESET CONTROLS] ');
         //
         this.stringArray_            = this.mensajes.nativeElement.innerHTML.split("<br>");
         //
-        console.log('NUMBER ARRAY [CURRENT] : ' + this.stringArray_);
+        //console.log('NUMBER ARRAY [CURRENT] : ' + this.stringArray_);
         //
         let numberArray  : SortInfo[] = []; 
         //
@@ -275,7 +275,7 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
     DrawStep():void
     {
         //
-        console.log('SORT_BENCHMARK . DRAWING ARRAY : ' + this.indexDraw);
+        //console.log('SORT_BENCHMARK . DRAWING ARRAY : ' + this.indexDraw);
         //
         if (this.indexDraw >= this.stringMatrix.length)
         {
@@ -296,7 +296,7 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
             //
             this.GetSortLabel     = "[...ordenado...]";
             //
-            console.log('SORT_BENCHMARK . SORTED ARRAY : ' + _sortedArrayDecoded);
+            //console.log('SORT_BENCHMARK . SORTED ARRAY : ' + _sortedArrayDecoded);
             //
             const utterance = new SpeechSynthesisUtterance( this.lblStatus );
             speechSynthesis.speak(utterance); 
@@ -311,11 +311,11 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
             //
             let stringArray_past    : string[]   = (this.indexDraw == 1) ? this.stringArray_ : this.stringMatrix[this.indexDraw - 1].split(",") ;
             //
-            console.log('NUMBER ARRAY [PAST]    : ' + stringArray_past);
+            //console.log('NUMBER ARRAY [PAST]    : ' + stringArray_past);
             //
             let stringArray_current : string[]   = this.stringMatrix[this.indexDraw].split(",");
             //
-            console.log('NUMBER ARRAY [CURRENT] : ' + stringArray_current);
+            //console.log('NUMBER ARRAY [CURRENT] : ' + stringArray_current);
             //
             let numberArray : SortInfo[] = []; 
             //
@@ -347,7 +347,7 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
         //
         this.GetSortLabel     = "[...ordenando...]";
         //
-        console.log('SORT_BENCHMARK . DRAWING ARRAY INITIAL. index: ' + this.indexDraw + ',matrix length : : ' + this.stringMatrix.length);
+        //console.log('SORT_BENCHMARK . DRAWING ARRAY INITIAL. index: ' + this.indexDraw + ',matrix length : : ' + this.stringMatrix.length);
         //
         this.DrawStep();
     }

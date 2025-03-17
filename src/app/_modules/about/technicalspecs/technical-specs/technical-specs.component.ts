@@ -84,10 +84,10 @@ export class TechnicalSpecsComponent {
       this.__baseUrlSprinbBootJava  = this._configService.getConfigValue('baseUrlSpringBootJava');
 
       //
-      console.log("baseUrlNetCore : " + this.__baseUrlNetCore);
-      console.log("baseUrlNodeJs  : " + this.__baseUrlNodeJs);
+      //console.log("baseUrlNetCore : " + this.__baseUrlNetCore);
+      //console.log("baseUrlNodeJs  : " + this.__baseUrlNodeJs);
       //
-      console.log(this.pageTitle + "- [INGRESO]");
+      //console.log(this.pageTitle + "- [INGRESO]");
       //
       backendService.SetLog(this.pageTitle,"PAGE_TECH_SPECS");
       //
@@ -103,11 +103,11 @@ export class TechnicalSpecsComponent {
       const appVersionObserver = {
         next: (jsondata: string)     => { 
           //
-          console.log('_GetAppVersion - (return): ' + jsondata);
+          //console.log('_GetAppVersion - (return): ' + jsondata);
           //
           this._webApiAppVersion = jsondata;
           //
-          console.log(this.pageTitle + "- [webApiVersion] - " + this._webApiAppVersion);
+          //console.log(this.pageTitle + "- [webApiVersion] - " + this._webApiAppVersion);
         },
         error           : (err: Error)      => {
 
@@ -116,7 +116,7 @@ export class TechnicalSpecsComponent {
         },
         complete        : ()                => {
           //
-          console.log('_GetAppVersion -  (COMPLETE)');
+          //console.log('_GetAppVersion -  (COMPLETE)');
         },
       };
       //

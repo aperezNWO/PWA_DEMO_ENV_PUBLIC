@@ -613,7 +613,7 @@
 
 -- [_] Promise<<type>>.
 
--- [_] //console.log replace
+-- [_] ////console.log replace
 
 
 -- [_] both ways reference.    
@@ -631,5 +631,7 @@
 -- [_] main page / global search.
 
 -- [_] random guid generator.
+
+-- [_] relative path.
 
 ////////////////////////////////////////////////////////////////////////////////

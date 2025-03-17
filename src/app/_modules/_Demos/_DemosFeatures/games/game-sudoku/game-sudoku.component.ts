@@ -54,7 +54,7 @@ export class SudokuComponent implements OnInit, AfterViewInit {
   //
   constructor(private algorithmService: BackendService,private formBuilder: FormBuilder, public pdfEngine: PdfService) {
     //
-    console.log('[SUDOKU - INGRESO]');
+    //console.log('[SUDOKU - INGRESO]');
   }
   //
   ngAfterViewInit(): void {
@@ -80,7 +80,7 @@ export class SudokuComponent implements OnInit, AfterViewInit {
   //
   public _cppSourceDivHiddenChanged(): void {
     //
-    console.log('SUDOKU - [DIV CPP SOURCE CHANGED]');
+    //console.log('SUDOKU - [DIV CPP SOURCE CHANGED]');
     //
     let _selectedIndex: number =
       this._languajeList.nativeElement.options.selectedIndex;
@@ -91,7 +91,7 @@ export class SudokuComponent implements OnInit, AfterViewInit {
   //
   public _fileUploadDivHiddenChanged(): void {
     //
-    console.log('SUDOKU - [DIV FILEUPLOAD CHANGED]');
+    //console.log('SUDOKU - [DIV FILEUPLOAD CHANGED]');
     //
     let _selectedIndex: number =
       this._sourceList.nativeElement.options.selectedIndex;
@@ -102,7 +102,7 @@ export class SudokuComponent implements OnInit, AfterViewInit {
   //
   public GenerateFromBackend():void {
         //
-        console.log('[SUDOKU - GENERATE FROM BACKEND]');
+        //console.log('[SUDOKU - GENERATE FROM BACKEND]');
         //
         let generatedSudoku: Observable<string>;
         let selectedIndex  : number = this._languajeList.nativeElement.options.selectedIndex; // c++ by default
@@ -125,7 +125,7 @@ export class SudokuComponent implements OnInit, AfterViewInit {
         const generatedSudokuObserver = {
           next: (jsondata: string) => {
             //
-            console.log('[SUDOKU - GENERATE] - (return): ' + jsondata);
+            //console.log('[SUDOKU - GENERATE] - (return): ' + jsondata);
             //
             this._sudokuGenerated = jsondata;
             //
@@ -140,7 +140,7 @@ export class SudokuComponent implements OnInit, AfterViewInit {
             //
             for (let i = 0; i < 9; i++) {
               const row: number[] = [];
-              console.log(jsonDataArray[i]);
+              //console.log(jsonDataArray[i]);
               const rowString: string[] = jsonDataArray[i].split(',');
               for (let j = 0; j < 9; j++) {
                 row.push(parseInt(rowString[j]));
@@ -168,7 +168,7 @@ export class SudokuComponent implements OnInit, AfterViewInit {
           },
           complete: () => {
             //
-            console.log('[SUDOKU - GENERATE] -  (COMPLETE)');
+            //console.log('[SUDOKU - GENERATE] -  (COMPLETE)');
             //
             this.btnGenerateCaption = '[GENERAR]';
           },
@@ -186,7 +186,7 @@ export class SudokuComponent implements OnInit, AfterViewInit {
   //
   upload(): void {
     //
-    console.log('[SUDOKU - GENERATE  FROM FILE]');
+    //console.log('[SUDOKU - GENERATE  FROM FILE]');
     //
     if (this.selectedFiles) {
       const file: File | null = this.selectedFiles.item(0);
@@ -215,7 +215,7 @@ export class SudokuComponent implements OnInit, AfterViewInit {
               const utterance = new SpeechSynthesisUtterance( this.message  );
               speechSynthesis.speak(utterance);  
               //
-              console.log('RESPONSE : ' + event.body);
+              //console.log('RESPONSE : ' + event.body);
               //
               let  jsondata  = event.body;
               //
@@ -236,7 +236,7 @@ export class SudokuComponent implements OnInit, AfterViewInit {
               //
               for (let i = 0; i < 9; i++) {
                 const row: number[] = [];
-                console.log(jsonDataArray[i]);
+                //console.log(jsonDataArray[i]);
                 const rowString: string[] = jsonDataArray[i].split(',');
                 for (let j = 0; j < 9; j++) {
                   row.push(parseInt(rowString[j]));
@@ -270,7 +270,7 @@ export class SudokuComponent implements OnInit, AfterViewInit {
           },
           complete: () => {
             //
-            console.log('[SUDOKU - GENERATE  FROM FILE] -  (COMPLETE)');
+            //console.log('[SUDOKU - GENERATE  FROM FILE] -  (COMPLETE)');
             //
             this.btnGenerateCaption = '[GENERAR]';
             //
@@ -293,7 +293,7 @@ export class SudokuComponent implements OnInit, AfterViewInit {
   //
   public _GetSudoku(): void {
       //
-      console.log('[SUDOKU - GENERATE - MAIN MENU]');
+      //console.log('[SUDOKU - GENERATE - MAIN MENU]');
       //
       let selectedIndex  : number = this._sourceList.nativeElement.options.selectedIndex; // "FROM ARCHIVE" by default
       //
@@ -312,7 +312,7 @@ export class SudokuComponent implements OnInit, AfterViewInit {
   //
   public _SolveSudoku(): void {
     //
-    console.log('[SUDOKU - SOLVE] \n' + this._sudokuGenerated);
+    //console.log('[SUDOKU - SOLVE] \n' + this._sudokuGenerated);
     //
     this.sudokuSolved = true;
     //
@@ -342,7 +342,7 @@ export class SudokuComponent implements OnInit, AfterViewInit {
         const utterance = new SpeechSynthesisUtterance( this.message  );
         speechSynthesis.speak(utterance); 
         //
-        console.log('[SUDOKU - SOLVE] - (return): ' + jsondata);
+        //console.log('[SUDOKU - SOLVE] - (return): ' + jsondata);
         //
         this._sudokuGenerated = jsondata;
         //
@@ -357,7 +357,7 @@ export class SudokuComponent implements OnInit, AfterViewInit {
         //
         for (let i = 0; i < 9; i++) {
           const row: number[] = [];
-          console.log(jsonDataArray[i]);
+          //console.log(jsonDataArray[i]);
           const rowString: string[] = jsonDataArray[i].split(',');
           for (let j = 0; j < 9; j++) {
             row.push(parseInt(rowString[j]));
@@ -378,7 +378,7 @@ export class SudokuComponent implements OnInit, AfterViewInit {
       },
       complete: () => {
         //
-        console.log('[SUDOKU - SOLVE] -  (COMPLETE)');
+        //console.log('[SUDOKU - SOLVE] -  (COMPLETE)');
         //
         this.btnSolveCaption = '[RESOLVER]';
         //
@@ -430,7 +430,7 @@ export class SudokuComponent implements OnInit, AfterViewInit {
   submitForm(form: NgForm) {
     if (form.valid) {
       // Handle form submission logic
-      console.log(form.value); // Access form values
+      //console.log(form.value); // Access form values
       //
       let name    = form.value['txtName'];
       let message = form.value['txtMessage'];

@@ -14,6 +14,6 @@ export class MessageComponent {
   
   receiveData(data: any) {
     // Handle the data received from the child
-    console.log("[CHAT APP] - Received : " + JSON.stringify(data));
+    //console.log("[CHAT APP] - Received : " + JSON.stringify(data));
   }
 }

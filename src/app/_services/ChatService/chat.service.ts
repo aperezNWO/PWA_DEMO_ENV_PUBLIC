@@ -17,7 +17,7 @@ export class ChatService {
     //
     let url =  configService.getConfigValue("baseUrlNodeJsChat");
     //
-    console.log("Setting chat from url : " + url);
+    //console.log("Setting chat from url : " + url);
     //
     this.socket = io(url , {
       //
@@ -27,11 +27,11 @@ export class ChatService {
     // Replace with your server URL
     this.socket.on('message', (message: any) => {
       //
-      console.log("received message : [" + JSON.stringify(message) + "]");
+      //console.log("received message : [" + JSON.stringify(message) + "]");
       //
       this.messages.push(message);
       //
-      console.log("Message Array (service) : " + this.messages);
+      //console.log("Message Array (service) : " + this.messages);
       //
       this.onNewMessage.next(message);
     });
@@ -40,7 +40,7 @@ export class ChatService {
   //
   getMessages(): Observable<any[]> {
     //
-    console.log("Receiving messages to UIX...");
+    //console.log("Receiving messages to UIX...");
     //
     return of(this.messages);
   }

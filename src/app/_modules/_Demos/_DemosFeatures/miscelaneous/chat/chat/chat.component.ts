@@ -22,15 +22,15 @@ export class ChatComponent implements OnInit {
   }
   //
   NotifyingMessage(message: string): void {
-    console.log("Pushing data to client : " + message);
+    //console.log("Pushing data to client : " + message);
     //this.parentData.push(message);
-    console.log("Message Array (client) : " + this.parentData);
+    //console.log("Message Array (client) : " + this.parentData);
   }
   //
   submitForm(form: NgForm) {
     if (form.valid) {
       // Handle form submission logic
-      console.log(form.value); // Access form values
+      //console.log(form.value); // Access form values
       //
       let name    = form.value['txtName'];
       let message = form.value['txtMessage'];
@@ -46,7 +46,7 @@ export class ChatComponent implements OnInit {
     //
     let messageToSend : string = `[${formattedDate}] -[${name}] Says: "${message}"`;
     //
-    console.log("sending message: {" + message + "}");
+    //console.log("sending message: {" + message + "}");
     //
     this.chatService.sendMessage(messageToSend);
   }

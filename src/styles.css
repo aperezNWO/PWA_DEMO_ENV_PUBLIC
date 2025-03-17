@@ -96,3 +96,14 @@ a:visited
    width:15px;
    height:25px;
  }
+
+
+ .reference 
+
+      a, a:visited, a:hover, a:active {
+         color: #ffffff; 
+      }
+
+   
+ 
+ 

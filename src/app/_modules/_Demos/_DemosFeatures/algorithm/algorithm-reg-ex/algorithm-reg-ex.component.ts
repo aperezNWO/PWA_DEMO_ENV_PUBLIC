@@ -42,7 +42,7 @@ export class AlgorithmRegExComponent implements OnInit, AfterViewInit {
     //
     ngOnInit(): void {
         //
-        console.log(AlgorithmRegExComponent.PageTitle + " - [INGRESANDO]");
+        //console.log(AlgorithmRegExComponent.PageTitle + " - [INGRESANDO]");
         //
         //-----------------------------------------------------------------------------
         // LENGUAJES DE PROGRAMACION
@@ -56,7 +56,7 @@ export class AlgorithmRegExComponent implements OnInit, AfterViewInit {
     //
     ngAfterViewInit(): void {
       //
-      console.log(AlgorithmRegExComponent.PageTitle + " - [INICIO VISUAL]");
+      //console.log(AlgorithmRegExComponent.PageTitle + " - [INICIO VISUAL]");
       //
       this._GetXMLData();
     }
@@ -65,7 +65,7 @@ export class AlgorithmRegExComponent implements OnInit, AfterViewInit {
     ////////////////////////////////////////////////////////////////
     _GetXMLData():void {
         //
-        console.log(AlgorithmRegExComponent.PageTitle + " - [GET XML DATA]");
+        //console.log(AlgorithmRegExComponent.PageTitle + " - [GET XML DATA]");
         //
         let xmlInfo!  : Observable<string>;
         //
@@ -119,7 +119,7 @@ export class AlgorithmRegExComponent implements OnInit, AfterViewInit {
     //
     GetRegex():void{
         //
-        console.log(AlgorithmRegExComponent.PageTitle + " - [EVAL REGEX]");   
+        //console.log(AlgorithmRegExComponent.PageTitle + " - [EVAL REGEX]");   
         //
         let selectedIndex   : number = this.tagSearch.nativeElement.options.selectedIndex;
         let tagSearchIndex  : number = this.tagSearch.nativeElement.options[selectedIndex].value;
@@ -182,9 +182,9 @@ export class AlgorithmRegExComponent implements OnInit, AfterViewInit {
                     //
                     this.pattern       = UtilManager.DebugHostingContent(resultArray[2]);
                     //
-                    console.log("REGEX. AMT OF MATCHES   : " + matchAmt);
+                    //console.log("REGEX. AMT OF MATCHES   : " + matchAmt);
                     //
-                    console.log("REGEX. PATTERN          : " + this.pattern);
+                    //console.log("REGEX. PATTERN          : " + this.pattern);
                     //----------------------------------------------------------------------
                     // CONFIGURA CONTROLES
                     //----------------------------------------------------------------------

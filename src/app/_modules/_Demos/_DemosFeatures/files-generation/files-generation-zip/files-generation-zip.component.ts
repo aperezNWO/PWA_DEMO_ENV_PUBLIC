@@ -39,7 +39,7 @@ export class FilesGenerationZIPComponent {
   //--------------------------------------------------------------------------
   constructor(private backendService: BackendService, customErrorHandler: CustomErrorHandler) {
     //
-    console.log(this.pageTitle + " - [INGRESO]");
+    //console.log(this.pageTitle + " - [INGRESO]");
     //
     backendService.SetLog(this.pageTitle,"PAGE_ZIP_DEMO");
   }
@@ -77,14 +77,14 @@ export class FilesGenerationZIPComponent {
             else if (event instanceof HttpResponse) 
             {
               //
-              console.log("RESPONSE : " + event.body);
+              //console.log("RESPONSE : " + event.body);
               //
               this.message = "[SE CARGO CORRECTAMENTE EL ARCHIVO]";
             }
           },
           error: (err: any) => {
             //
-            console.log(err);
+            //console.log(err);
             //
             this.progress = 0;
             //  
@@ -132,7 +132,7 @@ export class FilesGenerationZIPComponent {
             //
             this.downloadLink  = UtilManager.DebugHostingContent(downloadLink_1);
             //
-            console.log('[Download link] : ' + this.downloadLink);
+            //console.log('[Download link] : ' + this.downloadLink);
             //
             this.message = "[SE GENERO CORRECTAMENTE ARCHIVO ZIP]";
             //
@@ -148,7 +148,7 @@ export class FilesGenerationZIPComponent {
           },       
           complete: ()        => {
             //
-            console.log('Observer got a complete notification');
+            //console.log('Observer got a complete notification');
             //
           },
       }
@@ -158,7 +158,7 @@ export class FilesGenerationZIPComponent {
   //--------------------------------------------------------------------------
   NewZip():void{
       //
-      console.log(this.pageTitle + ' - [NEW PDF] ');  
+      //console.log(this.pageTitle + ' - [NEW PDF] ');  
       //
       this.selectedFiles = undefined;
       //

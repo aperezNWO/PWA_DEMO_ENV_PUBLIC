@@ -32,7 +32,7 @@ export class ConfigService {
       return this.http.get('./assets/config/_UsersInfo.json').toPromise()
         .then((data: any) => {
             //
-            ////console.log("loading users..." + JSON.stringify(data));
+            //////console.log("loading users..." + JSON.stringify(data));
             //
             _environment.usersList = data; // Assign loaded data to environment variable
         })
@@ -45,7 +45,7 @@ export class ConfigService {
       return this.http.get('./assets/config/_PagesInfo.json').toPromise()
         .then((data: any) => {
             //
-            ////console.log("loading routes data..." + JSON.stringify(data));
+            //////console.log("loading routes data..." + JSON.stringify(data));
             //
             _environment.routesList = data; // Assign loaded data to environment variable
         })
@@ -73,7 +73,7 @@ export class ConfigService {
     return this.http.get('./assets/json/angular_Curriculum_base.json').toPromise()
       .then((data: any) => {
           //
-          //console.log("loading curruculum..." + JSON.stringify(data));
+          ////console.log("loading curruculum..." + JSON.stringify(data));
           //
           _environment.LLMList = data; // Assign loaded data to environment variable
       })
@@ -88,7 +88,7 @@ export class ConfigService {
     return this.http.get('./assets/config/llm.json').toPromise()
       .then((data: any) => {
           //
-          //console.log("loading LLM List..." + JSON.stringify(data));
+          ////console.log("loading LLM List..." + JSON.stringify(data));
           //
           _environment.LLMList = data; // Assign loaded data to environment variable
       })
@@ -101,7 +101,7 @@ export class ConfigService {
     return this.http.get('./assets/config/_config.json').toPromise()
       .then((data: any) => {
           //
-          //console.log("loading configuration...");
+          ////console.log("loading configuration...");
           //
           _environment.externalConfig = data; // Assign loaded data to environment variable
       })
@@ -114,9 +114,9 @@ export class ConfigService {
     //
     let jsonData : string = JSON.parse(JSON.stringify(_environment.externalConfig))[key];
     //
-    //console.log(jsonData);
+    ////console.log(jsonData);
     //
-    //console.log('Reading config : ' + key + ', value :' + jsonData)
+    ////console.log('Reading config : ' + key + ', value :' + jsonData)
     //
     return jsonData;
   }
@@ -139,7 +139,7 @@ export class ConfigService {
       //
       returnValue = params[paraName] ? params[paraName] : "" ;
       //
-      console.log("query param : " + returnValue);
+      //console.log("query param : " + returnValue);
     });
     //
     return returnValue;

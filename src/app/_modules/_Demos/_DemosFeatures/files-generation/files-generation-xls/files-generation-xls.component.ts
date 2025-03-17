@@ -91,7 +91,9 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
     public __languajeList                              : any;
     protected tituloListadoLenguajes                   : string = "[Backend] :";
     //
-    public _loading               = new BehaviorSubject<boolean>(false);
+    public _loading                  = new BehaviorSubject<boolean>(false);
+    public isListVisible             = false; // Initially hidden
+    public toogleLisCaption: string  = "[Ver Referencias]";
     //--------------------------------------------------------------------------
     // EVENT HANDLERS FORMIULARIO 
     //--------------------------------------------------------------------------
@@ -106,7 +108,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
     //
     ngOnInit(): void {
         //
-        console.log(this.pageTitle + "- [INGRESO]" );
+        //console.log(this.pageTitle + "- [INGRESO]" );
         //
         this.queryParams();
         //
@@ -119,6 +121,11 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
     //--------------------------------------------------------------------------
     // METODOS COMUNES 
     //--------------------------------------------------------------------------
+    //
+    toggleList() {
+      this.isListVisible     = !this.isListVisible; // Toggle visibility
+      this.toogleLisCaption  = !(this.isListVisible)? "[Ver Referencias]" : "[Ocultar Referencias]";
+  }
     //
     queryParams():void{
       //
@@ -139,12 +146,12 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
         //
         let langName = params['langName'] ? params['langName'] : "" ;
         //
-        console.log("query param : " + langName);
+        //console.log("query param : " + langName);
         //
         if (langName !== '')
         {   
             //
-            console.log("search langName :" + langName );
+            //console.log("search langName :" + langName );
             //
             for (var index = 1; index < this.__languajeList.length; index++) {
                 //
@@ -154,7 +161,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
 
         } else {
           //
-          console.log("langName not found, selecting :  " + this.__languajeList[1]._value);
+          //console.log("langName not found, selecting :  " + this.__languajeList[1]._value);
           //
           this.__languajeList[1]._selected = true; // C#
         }
@@ -212,11 +219,11 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
           _P_FECHA_FIN        : ["2023-12-31"  , Validators.required],
         });
         //
-        console.log("(DEFAULT VALUES - INIT)");
-        console.log("P_ROW_NUM         : " + (this.rf_searchForm.value["_P_ROW_NUM"]        || ""));
-        console.log("P_FECHA_INICIO    : " + (this.rf_searchForm.value["_P_FECHA_INICIO"]   || ""));      
-        console.log("P_FECHA_FIN       : " + (this.rf_searchForm.value["_P_FECHA_FIN"]      || "")); 
-        console.log("(DEFAULT VALUES - END)");
+        //console.log("(DEFAULT VALUES - INIT)");
+        //console.log("P_ROW_NUM         : " + (this.rf_searchForm.value["_P_ROW_NUM"]        || ""));
+        //console.log("P_FECHA_INICIO    : " + (this.rf_searchForm.value["_P_FECHA_INICIO"]   || ""));      
+        //console.log("P_FECHA_FIN       : " + (this.rf_searchForm.value["_P_FECHA_FIN"]      || "")); 
+        //console.log("(DEFAULT VALUES - END)");
         //
         this.rf_buttonCaption     = "[Buscar]";
         //
@@ -273,7 +280,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
         //
         next: (p_logEntry: LogEntry[])     => { 
           //
-          console.log('Observer got a next value: ' + JSON.stringify(p_logEntry));
+          //console.log('Observer got a next value: ' + JSON.stringify(p_logEntry));
           //
           let recordCount : number  = p_logEntry.length;
           //
@@ -301,7 +308,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
         },       
         complete: ()        => {
           //
-          console.log('Observer got a complete notification');
+          //console.log('Observer got a complete notification');
           //
           this.rf_buttonCaption     = "[Buscar]";
           //
@@ -320,7 +327,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
     //
     rf_GenerarInformeXLSPost():void  {
       //
-      console.log("GENERAR EXCEL (RF) - POST");
+      //console.log("GENERAR EXCEL (RF) - POST");
       //
       let rf_excelFileName!                   : Observable<string>;
       //
@@ -339,7 +346,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
         //
         next: (_excelFileName: string) => { 
           //
-          console.log('Observer got a next value: ' + _excelFileName);
+          //console.log('Observer got a next value: ' + _excelFileName);
           //
           let urlFile                = UtilManager.DebugHostingContent(_excelFileName);
           //
@@ -362,7 +369,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
         },
         complete: () => {
           //
-          console.log('Observer got a complete notification')
+          //console.log('Observer got a complete notification')
           //
           this.rf_buttonCaption_xls  = "[Generar Excel]";
         },
@@ -391,11 +398,11 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
          ,""
          ,"");
       //
-      console.log("(DEFAULT VALUES - INIT)");
-      console.log("P_ROW_NUM         : " + this.td_model.P_ROW_NUM);
-      console.log("P_FECHA_INICIO    : " + this.td_model.P_FECHA_INICIO);      
-      console.log("P_FECHA_FIN       : " + this.td_model.P_FECHA_FIN); 
-      console.log("(DEFAULT VALUES - END)");
+      //console.log("(DEFAULT VALUES - INIT)");
+      //console.log("P_ROW_NUM         : " + this.td_model.P_ROW_NUM);
+      //console.log("P_FECHA_INICIO    : " + this.td_model.P_FECHA_INICIO);      
+      //console.log("P_FECHA_FIN       : " + this.td_model.P_FECHA_FIN); 
+      //console.log("(DEFAULT VALUES - END)");
       //
       this.td_buttonCaption     = "[Buscar]";
       //
@@ -436,13 +443,13 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
       td_searchCriteria.P_FECHA_INICIO_STR = this.GetFormattedDate(td_searchCriteria.P_FECHA_INICIO,0);
       td_searchCriteria.P_FECHA_FIN_STR    = this.GetFormattedDate(td_searchCriteria.P_FECHA_FIN   ,0); 
       //
-      console.log("(FROM PARAM) : P_DATA_SOURCE_ID                     : " + td_searchCriteria.P_DATA_SOURCE_ID);
-      console.log("(FROM PARAM) : P_ROW_NUM                            : " + td_searchCriteria.P_ROW_NUM);  
-      console.log("(FROM PARAM) : P_FECHA_INICIO (origen)              : " + td_searchCriteria.P_FECHA_INICIO);
-      console.log("(FROM PARAM) : P_FECHA_FIN    (origen)              : " + td_searchCriteria.P_FECHA_FIN);  
-      console.log("(FROM PARAM) : P_FECHA_INICIO (valid : 01/09/2022)  : " + td_searchCriteria.P_FECHA_INICIO_STR);
-      console.log("(FROM PARAM) : P_FECHA_FIN    (valid : 30/09/2022)  : " + td_searchCriteria.P_FECHA_FIN_STR);
-      console.log("(SEARCH INIT)");
+      //console.log("(FROM PARAM) : P_DATA_SOURCE_ID                     : " + td_searchCriteria.P_DATA_SOURCE_ID);
+      //console.log("(FROM PARAM) : P_ROW_NUM                            : " + td_searchCriteria.P_ROW_NUM);  
+      //console.log("(FROM PARAM) : P_FECHA_INICIO (origen)              : " + td_searchCriteria.P_FECHA_INICIO);
+      //console.log("(FROM PARAM) : P_FECHA_FIN    (origen)              : " + td_searchCriteria.P_FECHA_FIN);  
+      //console.log("(FROM PARAM) : P_FECHA_INICIO (valid : 01/09/2022)  : " + td_searchCriteria.P_FECHA_INICIO_STR);
+      //console.log("(FROM PARAM) : P_FECHA_FIN    (valid : 30/09/2022)  : " + td_searchCriteria.P_FECHA_FIN_STR);
+      //console.log("(SEARCH INIT)");
       //
       let selectedIndex: number = this._languajeList.nativeElement.options.selectedIndex; // c++ by default
       //
@@ -460,9 +467,9 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
               const td_observer = {
                 next: (td_logEntry: LogEntry[])     => { 
                   //
-                  console.log('TEMPLATE DRIVEN - RETURN VALUES (Record Count): ' + td_logEntry.length);
+                  //console.log('TEMPLATE DRIVEN - RETURN VALUES (Record Count): ' + td_logEntry.length);
                   //
-                  //console.log('TEMPLATE DRIVEN - RETURN VALUES '                 + td_logEntry);
+                  ////console.log('TEMPLATE DRIVEN - RETURN VALUES '                 + td_logEntry);
                   //
                   this.td_dataSource           = new MatTableDataSource<LogEntry>(td_logEntry);
                   this.td_dataSource.paginator = this.td_paginator;
@@ -486,7 +493,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
                 },
                 complete        : ()                => {
                   //
-                  console.log('TEMPLATE DRIVEN -  (SEARCH END)');
+                  //console.log('TEMPLATE DRIVEN -  (SEARCH END)');
                   //
                   this.td_formSubmit           = false;
                   this.td_buttonCaption        = "[Buscar]";
@@ -517,7 +524,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
                   this.td_textStatus           = "Se encontraron [" + td_logEntry_node_js_json.length + "] registros ";
                   this.td_formSubmit           = false;
                   //
-                  console.log('TEMPLATE DRIVEN - NODE.JS - RETURN VALUE (count)   : ' + td_logEntry_node_js_json.length);
+                  //console.log('TEMPLATE DRIVEN - NODE.JS - RETURN VALUE (count)   : ' + td_logEntry_node_js_json.length);
                   //
                   const utterance = new SpeechSynthesisUtterance( this.td_textStatus  );
                   speechSynthesis.speak(utterance);  
@@ -535,7 +542,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
                 },
                 complete        : ()                => {
                   //
-                  console.log('TEMPLATE DRIVEN - NODE.JS -  (SEARCH END)');
+                  //console.log('TEMPLATE DRIVEN - NODE.JS -  (SEARCH END)');
                   //
                   this.td_formSubmit           = false;
                   this.td_buttonCaption        = "[Buscar]";
@@ -558,7 +565,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
               const td_observer_sprinbbootjava = {
                 next: (td_logEntry_sprinbboot_java: string)     => { 
                   //
-                  console.log('TEMPLATE DRIVEN - SPRINGBOOT / JAVA - RETURN VALUES  : ' + td_logEntry_sprinbboot_java);
+                  //console.log('TEMPLATE DRIVEN - SPRINGBOOT / JAVA - RETURN VALUES  : ' + td_logEntry_sprinbboot_java);
                   //
                   let td_logEntry_springboot_java_json   = JSON.parse(td_logEntry_sprinbboot_java);
                   //
@@ -584,7 +591,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
                 },
                 complete        : ()                => {
                   //
-                  console.log('TEMPLATE DRIVEN - sprinbboot/java -  (SEARCH END)');
+                  //console.log('TEMPLATE DRIVEN - sprinbboot/java -  (SEARCH END)');
                   //
                   this.td_formSubmit           = false;
                   this.td_buttonCaption        = "[Buscar]";
@@ -607,7 +614,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
           const td_observer_pythondjango = {
             next: (td_logEntry_python_django: string)     => { 
               //
-              console.log('TEMPLATE DRIVEN - PYTHON / DJANGO - RETURN VALUES  : ' + td_logEntry_python_django);
+              //console.log('TEMPLATE DRIVEN - PYTHON / DJANGO - RETURN VALUES  : ' + td_logEntry_python_django);
               //
               let td_logEntry_python_django_json   = JSON.parse(td_logEntry_python_django);
               //
@@ -633,7 +640,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
             },
             complete        : ()                => {
               //
-              console.log('TEMPLATE DRIVEN - sprinbboot/java -  (SEARCH END)');
+              //console.log('TEMPLATE DRIVEN - sprinbboot/java -  (SEARCH END)');
               //
               this.td_formSubmit           = false;
               this.td_buttonCaption        = "[Buscar]";
@@ -655,7 +662,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
     td_GenerarInformeXLS(_searchCriteria : SearchCriteria)
     {
       //
-      console.log("GENERAR EXCEL (td) - POST");
+      //console.log("GENERAR EXCEL (td) - POST");
       //
       let td_excelFileName!                   : Observable<string>;
       //
@@ -674,7 +681,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
         //
         next: (_excelFileName: string) => { 
           //
-          console.log('Observer got a next value: ' + _excelFileName);
+          //console.log('Observer got a next value: ' + _excelFileName);
           //
           let urlFile                = UtilManager.DebugHostingContent(_excelFileName); 
           //
@@ -697,7 +704,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
         },
         complete: () => {
           //
-          console.log('Observer got a complete notification')
+          //console.log('Observer got a complete notification')
           //
           this.td_buttonCaption_xls  = "[Generar Excel]";
         },

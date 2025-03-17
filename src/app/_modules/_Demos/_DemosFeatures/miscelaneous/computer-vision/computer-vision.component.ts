@@ -75,7 +75,7 @@ export class ComputerVisionComponent implements AfterViewInit , OnInit {
       script.src = 'assets/opencv.js'; // Path to your local opencv.js
       script.async = true;
       script.onload = () => {
-        console.log('OpenCV.js loaded');
+        //console.log('OpenCV.js loaded');
       };
       document.body.appendChild(script);
     }
@@ -118,7 +118,7 @@ export class ComputerVisionComponent implements AfterViewInit , OnInit {
     //
     this.status = "";
     //
-    console.log(`Selected Source : ${this.selectedIndex}`);
+    //console.log(`Selected Source : ${this.selectedIndex}`);
   }
   selectionChangeEngines() {
     //
@@ -132,7 +132,7 @@ export class ComputerVisionComponent implements AfterViewInit , OnInit {
   //
   saveSignature():void {
      //
-     console.log("Saving signature..., option : " + this.selectedIndexEngines);
+     //console.log("Saving signature..., option : " + this.selectedIndexEngines);
      //
      this.selectionChangeEngines();
      //   
@@ -150,7 +150,7 @@ export class ComputerVisionComponent implements AfterViewInit , OnInit {
   // Trigger a click event on the anchor
   clearSignature():void{
      //
-     console.log("clearing signature...");
+     //console.log("clearing signature...");
      // PNG
      this.signature?.clear();
      //
@@ -198,7 +198,7 @@ export class ComputerVisionComponent implements AfterViewInit , OnInit {
           canvas.width  = video.videoWidth / 4;
           canvas.height = video.videoHeight / 4;
 
-          console.log("width: " + canvas.width + " height: " + canvas.height);
+          //console.log("width: " + canvas.width + " height: " + canvas.height);
 
           context.drawImage(video, 0, 0, canvas.width, canvas.height);
           this.capturedImage = canvas.toDataURL('image/png');
@@ -250,7 +250,7 @@ export class ComputerVisionComponent implements AfterViewInit , OnInit {
   //
   async flipCamera() : Promise<void> {
     //
-    console.log('flippling camera');
+    //console.log('flippling camera');
     //
     this.isFrontCamera = !this.isFrontCamera;
     this.stopCamera();
@@ -261,7 +261,7 @@ export class ComputerVisionComponent implements AfterViewInit , OnInit {
 
     const img = new Image();
     img.onload = () => {
-      console.log("loading  shape detection service ...")
+      //console.log("loading  shape detection service ...")
       //
       const shapes        = this.shapeDetectionService.detectShapes(img);
       this.detectedShapes = shapes;

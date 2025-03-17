@@ -91,22 +91,22 @@ export class BackendService implements OnInit {
     //
     ngOnInit(): void {
       //
-      //console.log("Calling MCSDService initialization...");
+      ////console.log("Calling MCSDService initialization...");
       //
     }
     constructor(public http: HttpClient, public _configService : ConfigService) {
       //
-      //console.log("Calling MCSDService constructor...");
+      ////console.log("Calling MCSDService constructor...");
       //
       this.__baseUrlNetCore      = this._configService.getConfigValue('baseUrlNetCore');
       this.__baseUrlNodeJs       = this._configService.getConfigValue('baseUrlNodeJs');
       this.__baseUrlNodeJsOcr    = this._configService.getConfigValue('baseUrlNodeJsOcr');
       this.__baserUrlSpringBoot  = this._configService.getConfigValue('baseUrlSpringBootJava');
       //
-      //console.log("baseUrlNetCore         : " + this.__baseUrlNetCore);
-      //console.log("baseUrlNodeJs          : " + this.__baseUrlNodeJs);
-      //console.log("baseUrlNodeJsOcr       : " + this.__baseUrlNodeJsOcr);
-      //console.log("baseUrlSpringBootJava  : " + this.__baserUrlSpringBoot);
+      ////console.log("baseUrlNetCore         : " + this.__baseUrlNetCore);
+      ////console.log("baseUrlNodeJs          : " + this.__baseUrlNodeJs);
+      ////console.log("baseUrlNodeJsOcr       : " + this.__baseUrlNodeJsOcr);
+      ////console.log("baseUrlSpringBootJava  : " + this.__baserUrlSpringBoot);
     }
     ////////////////////////////////////////////////////////////////  
     // METODOS - [COMUNES]
@@ -164,14 +164,14 @@ export class BackendService implements OnInit {
       //
       let p_url    =  `${_prefix}demos/_SetSTATPieCache`;
       //
-      //console.log("Setting STAT Pie data to cache :  " + p_url);
+      ////console.log("Setting STAT Pie data to cache :  " + p_url);
       //
       let jsonCSVData : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //
       const jsonCSVDataObserver = {
         next: (jsondata: string)     => { 
           //
-          //console.log('_SetSTATPieCache - (return): ' + jsondata);
+          ////console.log('_SetSTATPieCache - (return): ' + jsondata);
         },
         error           : (err: Error)      => {
           //
@@ -179,7 +179,7 @@ export class BackendService implements OnInit {
         },
         complete        : ()                => {
           //
-          //console.log('_SetSTATPieCache -  (COMPLETE)');
+          ////console.log('_SetSTATPieCache -  (COMPLETE)');
         },
       };
       //
@@ -223,7 +223,7 @@ export class BackendService implements OnInit {
         this.HTTPOptions_JSON,
       );
       //
-      console.log('getLogRemotoNodeJS : ' + p_url);
+      //console.log('getLogRemotoNodeJS : ' + p_url);
       //
       return nodeJsOutput;
     }
@@ -237,7 +237,7 @@ export class BackendService implements OnInit {
         this.HTTPOptions_JSON,
       );
       //
-      //console.log('getLogRemotoSprinbBootJava ' + p_url);
+      ////console.log('getLogRemotoSprinbBootJava ' + p_url);
       //
       return nodeJsOutput;
     }
@@ -251,7 +251,7 @@ export class BackendService implements OnInit {
         this.HTTPOptions_JSON,
       );
       //
-      //console.log('getPersonsSprinbBootJava ' + p_url);
+      ////console.log('getPersonsSprinbBootJava ' + p_url);
       //
       return nodeJsOutput;
     }
@@ -266,7 +266,7 @@ export class BackendService implements OnInit {
         this.HTTPOptions_JSON,
       );
       //
-      //console.log('getLogRemotoSprinbBootJava ' + p_url);
+      ////console.log('getLogRemotoSprinbBootJava ' + p_url);
       //
       return djantoPythonOutput;
     }
@@ -290,7 +290,7 @@ export class BackendService implements OnInit {
         this.HTTPOptions_JSON,
       );
       //
-      //console.log('getLogRemotoSprinbBootJava ' + p_url);
+      ////console.log('getLogRemotoSprinbBootJava ' + p_url);
       //
       return djantoPythonOutput;
     }
@@ -313,14 +313,14 @@ export class BackendService implements OnInit {
       //
       let p_url    = `${_prefix}demos/_SetSTATBarCache`;
       //
-      //console.log("Setting STAT Bar data to cache :  " + p_url);
+      ////console.log("Setting STAT Bar data to cache :  " + p_url);
       //
       let jsonDataObservable : Observable<string> = this.http.get<string>(p_url,this.HTTPOptions_Text);   
       //
       const jsonDataOberver = {
         next: (jsondata: string)     => { 
           //
-          //console.log('_SetSTATBarCache - (return): ' + jsondata);
+          ////console.log('_SetSTATBarCache - (return): ' + jsondata);
         },
         error           : (err: Error)      => {
           //
@@ -329,7 +329,7 @@ export class BackendService implements OnInit {
         },
         complete        : ()                => {
           //
-          //console.log('_SetSTATBarCache -  (COMPLETE)');
+          ////console.log('_SetSTATBarCache -  (COMPLETE)');
         },
       };
       //
@@ -346,7 +346,7 @@ export class BackendService implements OnInit {
       //
       let url    = `${this._baseUrlNetCore}demos/_ZipDemoGetFileName`;
       //
-      console.log("[GENERATE ZIP FILE] - (UPLOADING FILE) url: " + url);
+      //console.log("[GENERATE ZIP FILE] - (UPLOADING FILE) url: " + url);
       // USAR REQUEST PARA OBTENER PORCENTAJE DE STATUS
       const req = new HttpRequest('POST', url, formData, {
         reportProgress: true,
@@ -360,9 +360,9 @@ export class BackendService implements OnInit {
         //
         let p_url   = `${this._baseUrlNetCore}demos/_SetZip?p_fileName=${p_fileName}`;
         //
-        //console.log("[GENERATE ZIP FILE] - [GETTING ZIP] - fileName: " + p_fileName);
+        ////console.log("[GENERATE ZIP FILE] - [GETTING ZIP] - fileName: " + p_fileName);
         //
-        //console.log("[GENERATE ZIP FILE] - [GETTING ZIP] - url     : " + p_url);
+        ////console.log("[GENERATE ZIP FILE] - [GETTING ZIP] - url     : " + p_url);
         //
         let returnUrl     : Observable<string> = this.http.get<string>(p_url,this.HTTPOptions_JSON); 
         //
@@ -375,9 +375,9 @@ export class BackendService implements OnInit {
         //
         let p_url   = `${this._baseUrlNetCore}demos/_GetPdf?subjectName=${subjectName}`;
         //
-        //console.log("[GENERATE PDF FILE] - [GETTING ZIP] - subjectName  : " + subjectName);
+        ////console.log("[GENERATE PDF FILE] - [GETTING ZIP] - subjectName  : " + subjectName);
         //
-        //console.log("[GENERATE PDF FILE] - [GETTING ZIP] - url          : " + p_url);
+        ////console.log("[GENERATE PDF FILE] - [GETTING ZIP] - url          : " + p_url);
         // USAR REQUEST PARA OBTENER PORCENTAJE DE STATUS
         const req = new HttpRequest('GET', p_url, {
           reportProgress: true,
@@ -468,14 +468,14 @@ export class BackendService implements OnInit {
       //
       let p_url   : string  = `${_prefix}demos/_SetXmlDataToCache`;
       //
-      //console.log("Setting XML data to cache :  " + p_url)
+      ////console.log("Setting XML data to cache :  " + p_url)
       //
       let xmlData : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //
       const td_observer = {
         next: (jsondata: string)     => { 
           //
-          //console.log('_SetXmlDataToCache - (return): ' + jsondata);
+          ////console.log('_SetXmlDataToCache - (return): ' + jsondata);
         },
         error           : (err: Error)      => {
           //
@@ -484,7 +484,7 @@ export class BackendService implements OnInit {
         },
         complete        : ()                => {
           //
-          //console.log('_SetXmlDataToCache -  (COMPLETE)');
+          ////console.log('_SetXmlDataToCache -  (COMPLETE)');
         },
       };
       //
@@ -599,7 +599,7 @@ export class BackendService implements OnInit {
     //
     let url = `${this._baseUrlNetCore}demos/Sudoku_Upload_File`;
     //
-    console.log('[SUDOKU] - (UPLOADING FILE) url: ' + url);
+    //console.log('[SUDOKU] - (UPLOADING FILE) url: ' + url);
     //
     const req = new HttpRequest('POST', url, formData, {
       reportProgress: true,
@@ -613,7 +613,7 @@ export class BackendService implements OnInit {
     //
     let url = this._configService.getConfigValue('baseUrlNodeJsOcr');
     //
-    //console.log('Sending ocr to url : ' + url);
+    ////console.log('Sending ocr to url : ' + url);
     //
     return this.http.post(url, { base64Image });
   }

@@ -28,7 +28,7 @@ export class BoardComponent implements OnInit, AfterViewInit {
   //
   ngOnInit(): void {
     // INITIALIZE DATA
-    console.log("[TIC-TAC-TOE - INICIAR VALORES");
+    //console.log("[TIC-TAC-TOE - INICIAR VALORES");
     //
     this.__SourceList = new Array();
     this.__SourceList.push(new ListItem(0, '(SELECCIONE OPCION..)'   , false));
@@ -49,14 +49,14 @@ export class BoardComponent implements OnInit, AfterViewInit {
   //
   makeMove(n: number): void {
     //
-    console.log(`[TIC-TAC-TOE] - [Click on cel : {${n}}] `);
+    //console.log(`[TIC-TAC-TOE] - [Click on cel : {${n}}] `);
     //
     this.ticTacToeEngine.makeMove(n);
   }
   //
   newGame():void{
     //
-    console.log("[GAME - TIC-TAC-TOE] - [NEW GAME]")
+    //console.log("[GAME - TIC-TAC-TOE] - [NEW GAME]")
     //
     this.ticTacToeEngine.initialise();
     //
@@ -67,7 +67,7 @@ export class BoardComponent implements OnInit, AfterViewInit {
   //
   startGame():void {
     //
-    console.log("[GAME - TIC-TAC-TOE] - [START GAME]")
+    //console.log("[GAME - TIC-TAC-TOE] - [START GAME]")
     //
     let selectedvalue: number = this._sourceList.nativeElement.options[this._sourceList.nativeElement.options.selectedIndex].value;
     //

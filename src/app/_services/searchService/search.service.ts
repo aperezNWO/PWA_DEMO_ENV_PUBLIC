@@ -44,7 +44,7 @@ export class SearchService  {
 		//
 		this.searchTerm = SEARCH_TERM;
 		//
-		console.log("SEARCH_TERM" + SEARCH_TERM);
+		//console.log("SEARCH_TERM" + SEARCH_TERM);
 
 	}
 	// 4. Get Data
@@ -55,7 +55,7 @@ export class SearchService  {
 			this.__configService.loadJsonData(pageSetting.p_Path,
 			this._environmentList).then(() => {
 					//
-					console.log("json data : " + JSON.stringify(this._environmentList));
+					//console.log("json data : " + JSON.stringify(this._environmentList));
 					//
 					this._search$
 					.pipe(
@@ -164,7 +164,7 @@ export class SearchService  {
 	public speakText(param_searchTerm : string) : void 
 	{
 		 //
-		 console.log("Speak Text. Caught Event");
+		 //console.log("Speak Text. Caught Event");
 		 
 		 this.searchTerm = param_searchTerm;
 	}

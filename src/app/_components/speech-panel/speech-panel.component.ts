@@ -25,13 +25,13 @@ export class SpeechPanelComponent {
       //
       this.clickEventSpeak.emit(this.speechService.speakText());
       //
-      console.log("Speak Text Event Emmiter");
+      //console.log("Speak Text Event Emmiter");
   }
   //
   clearText() : void
   {
     this.clickEventClearText.emit();
     //
-    console.log("Clear Text Event Emmiter");
+    //console.log("Clear Text Event Emmiter");
   }
 }

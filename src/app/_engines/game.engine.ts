@@ -215,7 +215,7 @@ export class TicTacToeEngine
   {
     let gameRunning  : boolean = (this.gameOver(this.board) == false); 
     //
-    console.log(`[TIC-TAC-TOE] - [Declare Winner] `);
+    //console.log(`[TIC-TAC-TOE] - [Declare Winner] `);
     //
     if ((gameRunning && (this.moveIndex != this.boardSurface)) == false )
     {

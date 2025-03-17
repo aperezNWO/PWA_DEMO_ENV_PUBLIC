@@ -201,7 +201,7 @@ export class IndexComponent {
   speakText(param_searchTerm : string) : void 
   {
       //
-      console.log("Speak Text. Caught Event");
+      //console.log("Speak Text. Caught Event");
       
       this.searchTerm = param_searchTerm;
   }

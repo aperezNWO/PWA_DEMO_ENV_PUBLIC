@@ -35,7 +35,7 @@ export class HomeWebComponent implements OnInit {
   constructor(backendService : BackendService, private _configService: ConfigService, customErrorHandler : CustomErrorHandler)
   {
       //
-      console.log(this.pageTitle + " - [INGRESO]") ;
+      //console.log(this.pageTitle + " - [INGRESO]") ;
       //
       if (backendService._baseUrlNetCore != null)
       {

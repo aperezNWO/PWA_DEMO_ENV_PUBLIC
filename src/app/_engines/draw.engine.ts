@@ -102,7 +102,7 @@ export class DrawEngine
         let coordinate_x    : number = Number.parseInt(coordinateArray[0]);
         let coordinate_y    : number = Number.parseInt(coordinateArray[1]);
         //
-        //console.log("coordinate [" + index + "] : " + points[index] + " ");
+        ////console.log("coordinate [" + index + "] : " + points[index] + " ");
         //
         this.DrawPoint(index.toString(), coordinate_x, coordinate_y, strokeStyle);
     }
@@ -130,7 +130,7 @@ export class DrawEngine
     //
     DrawLines(pointArray : string[], matrixArray : string[], strokeStyle : string, drawingSubSet : Boolean, PointListHidden : string) : void {
     //
-    //console.log("DRAWING_LINES");
+    ////console.log("DRAWING_LINES");
     //--------------------------------------------------------------------------
     // CREAR MATRIZ
     //--------------------------------------------------------------------------
@@ -153,7 +153,7 @@ export class DrawEngine
         //
         var matrixLine = matrixArray[_index_x].replace("{", "").replace("}", "").split(",");
         //
-        //console.log("MATRIX ROW " + matrixLine);
+        ////console.log("MATRIX ROW " + matrixLine);
         //
         for (_index_y = 0; _index_y < matrixLine.length; _index_y++) {
             //
@@ -179,7 +179,7 @@ export class DrawEngine
             //
             let pointValue = matrix[index_x][index_y];
             //
-            //console.log("_MATRIX (" + index_x + "," + index_y + ") = " + pointValue);
+            ////console.log("_MATRIX (" + index_x + "," + index_y + ") = " + pointValue);
             //
             // POINTS  : [11,7]|[3,21]|[22,11]|[13,19]|[8,0]|[15,18]|[12,14]|[6,3]|[4,4]
             //
@@ -188,7 +188,7 @@ export class DrawEngine
                 var pointSource = pointArray[index_x].replace("[", "").replace("]", "").split(",");
                 var pointDest   = pointArray[index_y].replace("[", "").replace("]", "").split(",");;
                 //
-                //console.log("_DRAWING LINE FOR (" + pointValue + " )");
+                ////console.log("_DRAWING LINE FOR (" + pointValue + " )");
                 //
                 var x1 = parseInt(pointSource[0]);
                 var y1 = parseInt(pointSource[1]);

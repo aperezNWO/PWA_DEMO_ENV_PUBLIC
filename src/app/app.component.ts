@@ -42,9 +42,9 @@ export class AppComponent implements OnInit {
                ) 
     {
       //
-      //console.log("Loading AppComponent...");
+      ////console.log("Loading AppComponent...");
       //
-      //console.log("[SETTING CONFIG VALUES (not working on service constructor)]...");
+      ////console.log("[SETTING CONFIG VALUES (not working on service constructor)]...");
       // IMPLEMENT AS MAP AND ITERATE
       this._appBrand          = this._configService.getConfigValue('appBrand');
       this._appVersion        = this._configService.getConfigValue('appVersion');
@@ -75,7 +75,7 @@ export class AppComponent implements OnInit {
       //
       let title : string = `${this._appBrand} - ${this._appVersion}`;
       //
-      //console.log("Setting Title : " + title);
+      ////console.log("Setting Title : " + title);
       //
       this._title = `${this._appBrand}`;
       //
@@ -88,7 +88,7 @@ export class AppComponent implements OnInit {
         if (this.redirectPage !== undefined)
         {
           //
-          //console.log("Redirecting To Page : "  +  this.redirectPage );
+          ////console.log("Redirecting To Page : "  +  this.redirectPage );
           //
           switch (this.redirectPage)
           {

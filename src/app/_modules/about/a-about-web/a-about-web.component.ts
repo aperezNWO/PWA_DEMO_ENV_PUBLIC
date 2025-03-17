@@ -19,7 +19,7 @@ export class AAboutWebComponent {
   constructor(private backendServiCe: BackendService, private customErrorHandler: CustomErrorHandler)
   {
       //
-      console.log(this.pageTitle + "- [INGRESO]");
+      //console.log(this.pageTitle + "- [INGRESO]");
       //
       backendServiCe.SetLog(this.pageTitle,"PAGE_ABOUT");
   }

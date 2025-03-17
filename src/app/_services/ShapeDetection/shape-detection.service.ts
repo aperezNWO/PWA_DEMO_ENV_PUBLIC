@@ -16,7 +16,7 @@ export class ShapeDetectionService {
         // Ensure OpenCV.js is loaded
         if (cv.getBuildInformation) {
 
-          console.log('cv is loaded ... ' + cv.getBuildInformation) 
+          //console.log('cv is loaded ... ' + cv.getBuildInformation) 
           // Create a Mat from the image
           const src = cv.imread(image);
           const gray = new cv.Mat();
@@ -66,7 +66,7 @@ export class ShapeDetectionService {
           return shapes;
         } else 
         {
-           console.log('cv missing');
+           //console.log('cv missing');
         }
     //};
     return shapes;    

@@ -23,7 +23,7 @@ export class SpeechService {
           this.recognition.onresult = (event: any) => {
             //
             this.transcript = event.results[0][0].transcript;
-            console.log('Transcript:', this.transcript);
+            //console.log('Transcript:', this.transcript);
           };
     
           this.recognition.onerror = (event: any) => {
@@ -34,7 +34,7 @@ export class SpeechService {
     
           this.recognition.onend = () => {
             //
-            console.log('Recognition ended.');
+            //console.log('Recognition ended.');
           };
         } else {
           alert('Speech Recognition API is not supported in your browser.');
@@ -45,7 +45,7 @@ export class SpeechService {
   startListening() {
     //
     if (this.recognition) {
-      console.log('listening started');
+      //console.log('listening started');
       this.isListening = true;
       this.recognition.start();
     }
@@ -53,7 +53,7 @@ export class SpeechService {
 
   stopListening() {
     if (this.recognition) {
-      console.log('listening ended');
+      //console.log('listening ended');
       //
       this.isListening = false;
       this.recognition.stop()

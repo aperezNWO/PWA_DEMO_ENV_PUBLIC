@@ -105,7 +105,7 @@ export class HanoiEngine
   public _checkWinCondition() {
     const currentState = this.gameState$.getValue();
     if (currentState[2].length === 3) {
-      console.log('Congratulations! You solved the puzzle!');
+      //console.log('Congratulations! You solved the puzzle!');
       // You can add more win condition logic here
       return true;
     }
@@ -145,7 +145,7 @@ export class HanoiEngine
       //
       let message : string = `Step ${(this._stepsIndex + 1)} of ${this._stepsAmt}. Move disk ${n} from Tower ${from} to Tower ${to}`;
       //
-      console.log(message);
+      //console.log(message);
       // 
       this.steps.push(message);
       // 
@@ -155,7 +155,7 @@ export class HanoiEngine
       let n_to   : number = hanoiStep.to.charCodeAt(0)   - 65; 
       //
       //
-      console.log(` Manuel Step ${n_from} to ${n_to} `);
+      //console.log(` Manuel Step ${n_from} to ${n_to} `);
       //
       this.manual_moveDisk(n_from, n_to);
     }
@@ -233,7 +233,7 @@ export class HanoiEngine
   //
   auto_newGame():void {
     //
-    console.log("[HANOI TOWERS] - [NEW GAME]")
+    //console.log("[HANOI TOWERS] - [NEW GAME]")
     //
     //this._diskAmt   = parseInt(this.__diskAmtList.nativeElement.options[this.__diskAmtList.nativeElement.options.selectedIndex].value);
     //
@@ -271,7 +271,7 @@ export class HanoiEngine
     //
     this.auto_newGame();
     //
-    console.log("[HANOI TOWERS] - [START GAME]")
+    //console.log("[HANOI TOWERS] - [START GAME]")
     //
     if (this._diskAmt === 0)
       return;

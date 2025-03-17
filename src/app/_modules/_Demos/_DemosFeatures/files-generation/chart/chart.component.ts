@@ -1,11 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-import { Chart, registerables } from 'chart.js';
-import { Observable } from 'rxjs';
-import { PdfService } from 'src/app/_engines/pdf.engine';
-import { BackendService } from 'src/app/_services/BackendService/backend.service';
-import { CustomErrorHandler } from 'src/app/app.component';
-import { FilesGenerationCSVComponent } from '../../files-generation/files-generation-csv/files-generation-csv.component';
+import { FormBuilder                  } from '@angular/forms';
+import { Chart, registerables         } from 'chart.js';
+import { Observable                   } from 'rxjs';
+import { PdfService                   } from 'src/app/_engines/pdf.engine';
+import { BackendService               } from 'src/app/_services/BackendService/backend.service';
+import { CustomErrorHandler           } from 'src/app/app.component';
 
 @Component({
   selector: 'app-chart',
@@ -71,21 +70,21 @@ export class ChartComponent implements OnInit  {
         const csv_observer = {
           next: (csv_data: string)     => { 
             //
-            console.log(FilesGenerationCSVComponent.PageTitle + " - [SET CSV DATA] - Return Values : [" + csv_data + "]");
+            //console.log(FilesGenerationCSVComponent.PageTitle + " - [SET CSV DATA] - Return Values : [" + csv_data + "]");
             //
             let jsondata     = JSON.parse(csv_data);
             //
             let recordNumber = jsondata.length;
             //
-            console.log('ESTADISTICA - (return): ' + recordNumber);
+            //console.log('ESTADISTICA - (return): ' + recordNumber);
             //
             jsondata.forEach((element: JSON, index : number) => {
               //
-              console.log(index + " " + JSON.stringify(element));
+              //console.log(index + " " + JSON.stringify(element));
               //
-              console.log("[CSV DEMO] - SET CHART - RESULT : index [" + index + "] value={"
-                    + jsondata[index]["id_Column"]
-              + "-" + jsondata[index]["ciudad"] + "}");
+              //console.log("[CSV DEMO] - SET CHART - RESULT : index [" + index + "] value={"
+              //      + jsondata[index]["id_Column"]
+              //+ "-" + jsondata[index]["ciudad"] + "}");
               //
               statLabels.push(jsondata[index]["ciudad"]);
               statData.push(Number(jsondata[index]["id_Column"]));
@@ -94,7 +93,7 @@ export class ChartComponent implements OnInit  {
               let randomNumber_2 = Math.floor(Math.random() * 100);
               let randomNumber_3 = Math.floor(Math.random() * 100);
               //
-              console.log('RANDOM NUMBERS : [' + randomNumber_1 + ',' + randomNumber_2 + ',' + randomNumber_3 + ']')
+              //console.log('RANDOM NUMBERS : [' + randomNumber_1 + ',' + randomNumber_2 + ',' + randomNumber_3 + ']')
               //
               let rgbStr = 'rgb('
                   + (Number(jsondata[index]["id_Column"]) + randomNumber_1) + ','
@@ -108,11 +107,11 @@ export class ChartComponent implements OnInit  {
           },
           error           : (err: Error)      => {
             //
-            console.log(FilesGenerationCSVComponent.PageTitle + " - [SET CSV DATA] - Error : [" + err.message + "]");
+            //console.log(FilesGenerationCSVComponent.PageTitle + " - [SET CSV DATA] - Error : [" + err.message + "]");
           },
           complete        : ()                => {
             //
-            console.log(FilesGenerationCSVComponent.PageTitle + " - [SET CSV DATA] - [Search end]");
+            //console.log(FilesGenerationCSVComponent.PageTitle + " - [SET CSV DATA] - [Search end]");
             //
             const data = {
               labels: statLabels,
@@ -169,15 +168,15 @@ export class ChartComponent implements OnInit  {
           //
           let recordNumber = jsondata.length;
           //
-          console.log('ESTADISTICA - (return): ' + recordNumber);
+          //console.log('ESTADISTICA - (return): ' + recordNumber);
           //
           jsondata.forEach((element: JSON, index : number) => {
-              //
-              console.log(index + " " + JSON.stringify(element));
-              //
-              console.log("[SI-SPAE-WEB] - GET STAT - RESULT : index [" + index + "] value={"
-              + jsondata[index]["pageName"]
-              + "," + jsondata[index]["ipValue"] + "}");
+                //
+                //console.log(index + " " + JSON.stringify(element));
+                //
+                //console.log("[SI-SPAE-WEB] - GET STAT - RESULT : index [" + index + "] value={"
+                //+ jsondata[index]["pageName"]
+                //+ "," + jsondata[index]["ipValue"] + "}");
                 //
                 statLabels.push(jsondata[index]["pageName"] + " - " + jsondata[index]["ipValue"]);
                 statData.push(Number(jsondata[index]["ipValue"]));
@@ -194,7 +193,7 @@ export class ChartComponent implements OnInit  {
         },
         complete        : ()                => {
           //
-          console.log('ESTADISTICA -  (SEARCH END)');
+          //console.log('ESTADISTICA -  (SEARCH END)');
           //
           const data = {
             labels              : statLabels,

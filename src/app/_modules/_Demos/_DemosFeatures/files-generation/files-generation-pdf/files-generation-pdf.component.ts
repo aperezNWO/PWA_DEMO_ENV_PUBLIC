@@ -34,7 +34,7 @@ export class FilesGenerationPDFComponent {
   constructor(private backendService: BackendService, customErrorHandler : CustomErrorHandler)
   {
     //
-    console.log(FilesGenerationPDFComponent.PageTitle + "- [INGRESO]");
+    //console.log(FilesGenerationPDFComponent.PageTitle + "- [INGRESO]");
     //
     backendService.SetLog(this.pageTitle,"PAGE_PDF_DEMO");
   }  

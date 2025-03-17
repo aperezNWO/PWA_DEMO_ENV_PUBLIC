@@ -32,14 +32,14 @@ export class ContactformComponent implements OnInit  {
 
       //this.user = user;
       this.isLoggedIn = (user != null);
-      console.log("Facebook User:", this.user); // Log the user details
+      //console.log("Facebook User:", this.user); // Log the user details
 
     });*/
   }
 
   onSubmit() {
     if (this.contactForm.valid) {
-      console.log('Form Submitted!', this.contactForm.value);
+      //console.log('Form Submitted!', this.contactForm.value);
       // Here you can handle form submission, e.g., send data to a server
 
       if (this.contactForm.valid) {
@@ -48,7 +48,7 @@ export class ContactformComponent implements OnInit  {
         // Send the form data to the backend
         this.http.post('https://9rfn3t-4000.csb.app/contact', formData).subscribe(
           (response) => {
-            console.log('Form submitted successfully!', response);
+            //console.log('Form submitted successfully!', response);
             alert('Gracias! Se le enviará pronto un email con más información.');
             this.contactForm.reset(); // Reset the form after successful submission
           },
@@ -58,12 +58,12 @@ export class ContactformComponent implements OnInit  {
           }
         );
       } else {
-        console.log('Form is invalid');
+        //console.log('Form is invalid');
       }
 
       this.logout();
     } else {
-      console.log('Form is invalid');
+      //console.log('Form is invalid');
     }
   }
   
@@ -71,7 +71,7 @@ export class ContactformComponent implements OnInit  {
   loginWithFacebook() {
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID).then(
       (userData) => {
-        console.log("User Data:", userData);
+        //console.log("User Data:", userData);
         // Here you can send the token to your backend
         // Example:
         // this.sendTokenToBackend(userData.authToken);
@@ -96,7 +96,7 @@ export class ContactformComponent implements OnInit  {
     // Example using HttpClient (you'll need to import HttpClientModule)
     // this.http.post('/api/auth/facebook', { token }).subscribe(
     //   (response) => {
-    //     console.log('Token sent to backend:', response);
+    //     //console.log('Token sent to backend:', response);
     //     // Handle successful token verification
     //   },
     //   (error) => {

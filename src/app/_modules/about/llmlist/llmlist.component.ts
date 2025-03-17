@@ -10,7 +10,7 @@ export class LLMListComponent {
       public aiPrompts : any[] = [];
       constructor()
       {
-        console.log('AI Prompts: ' + JSON.stringify(_environment.LLMList));
+        //console.log('AI Prompts: ' + JSON.stringify(_environment.LLMList));
 
         this.aiPrompts = _environment.LLMList;
       }

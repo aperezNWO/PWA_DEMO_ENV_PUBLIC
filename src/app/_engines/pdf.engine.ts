@@ -15,7 +15,7 @@ export class PdfService {
   getPdf(pageTitle: string, c_canvas : any, divCanvas_Pdf : any, fileName: string, observer : any):void
   {
       //
-      console.log(pageTitle + ": [GENERANDO PDF]" );
+      //console.log(pageTitle + ": [GENERANDO PDF]" );
       //
       const timestamp = new Date().toISOString();
       //

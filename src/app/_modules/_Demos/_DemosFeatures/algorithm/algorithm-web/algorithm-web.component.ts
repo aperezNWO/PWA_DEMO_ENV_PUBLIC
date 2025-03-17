@@ -19,6 +19,6 @@ export class AlgorithmWebComponent {
   constructor(private customErrorHandler : CustomErrorHandler)
   {
       //
-      console.log(AlgorithmWebComponent.PageTitle + " - [INGRESO]");
+      //console.log(AlgorithmWebComponent.PageTitle + " - [INGRESO]");
   }
 }
