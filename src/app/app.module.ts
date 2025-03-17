@@ -70,13 +70,14 @@ import { ContactformComponent } from './_modules/about/contactform/contactform.c
 import { TechnicalSpecsComponent } from './_modules/about/technicalspecs/technical-specs/technical-specs.component';
 import { DemosLangWebComponent } from './_modules/_Demos/_DemosLang/_demos-lang-web/demos-lang-web.component';
 import { DemosCurriculumWebComponent } from './_modules/_Demos/_DemosCurriculum/_demos-curriculum-web/demos-curriculum-web.component';
-import { CppDemoComponent } from './_modules/_Demos/_DemosLang/cpp-demo/cpp-demo.component';
-import { NetcoredemoComponent } from './_modules/_Demos/_DemosLang/netcoredemo/netcoredemo.component';
-import { NodejsDemoComponent } from './_modules/_Demos/_DemosLang/nodejs-demo/nodejs-demo.component';
+import { CppDemoComponent        } from './_modules/_Demos/_DemosLang/cpp-demo/cpp-demo.component';
+import { NetcoredemoComponent    } from './_modules/_Demos/_DemosLang/netcoredemo/netcoredemo.component';
+import { NodejsDemoComponent     } from './_modules/_Demos/_DemosLang/nodejs-demo/nodejs-demo.component';
 import { SpringBootDemoComponent } from './_modules/_Demos/_DemosLang/spring-boot-demo/spring-boot-demo.component';
-import { DjangoDemoComponent } from './_modules/_Demos/_DemosLang/django-demo/django-demo.component';
-import { SpeechPanelComponent } from './_components/speech-panel/speech-panel.component';
-import { BaseSortableHeader } from './_directives/sortable.directive';
+import { DjangoDemoComponent     } from './_modules/_Demos/_DemosLang/django-demo/django-demo.component';
+import { SpeechPanelComponent    } from './_components/speech-panel/speech-panel.component';
+import { BaseSortableHeader      } from './_directives/sortable.directive';
+import { BaseComponent           } from './_components/base/base.component';
 //
 export function initialize(_configService: ConfigService) {
   //
@@ -190,6 +191,7 @@ export class CustomErrorHandler implements ErrorHandler {
         DjangoDemoComponent,
         SpeechPanelComponent,
         BaseSortableHeader,
+        BaseComponent,
     ],
     exports: [RouterModule],
     providers: [
