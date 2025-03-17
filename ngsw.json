@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1742175843893,
+  "timestamp": 1742176048512,
   "index": "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/index.html",
   "assetGroups": [
     {
@@ -74,7 +74,7 @@
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/896.4519226224848d4d.js": "b78fb0b014bc156bc77299cc45560d056ef29bac",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/config/_PagesInfo.json": "515fe80292083315b0d131954cfc06dcc26eacbe",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/config/_UsersInfo.json": "9e061019143f4316b306d77d6f9241fbbcae4d9a",
-    "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/config/_config.json": "67578958f825e96f48499056924ece4f3fd6af69",
+    "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/config/_config.json": "eb38bb63488e76ac8d08da3d83c496e400a267d2",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/config/_jsonList.json": "108ab84f2f31f58e7563e80aed75efce6c6f173b",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/config/llm.json": "542f4742aa96a49cbe71961ba2360921f8619035",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/config/scm.json": "7d2438f54269379750b4ae2bc6b058ef5049c404",
