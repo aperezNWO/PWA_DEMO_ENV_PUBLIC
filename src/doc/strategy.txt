@@ -630,7 +630,7 @@
 
 -- [_] main page / global search.
 
--- [_] random guid generator.
+-- [x] random guid generator.
 
 -- [_] relative path.
 
@@ -639,5 +639,9 @@
         -- [_] inside.
 
         -- [_] outside.
+
+-- [_] deploymenbt dev / production mode.
+
+-- [_] LANG LIST UL/LI.
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -54,6 +54,9 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
   public selectedIndexLanguage  : number  = 0;
   //
   public getGraphIdle           : boolean = false;
+  //
+  public isListVisible            = false; // Initially hidden
+  public toogleLisCaption: string = "[Ver Referencias]";
   ////////////////////////////////////////////////////////////////
   // EVENT HANDLERS //////////////////////////////////////////////  
   ////////////////////////////////////////////////////////////////
@@ -83,6 +86,14 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
     //    
     this._ResetControls();
   };
+  //--------------------------------------------------------------------------
+  // METODOS COMUNES 
+  //--------------------------------------------------------------------------
+  //
+  toggleList() {
+    this.isListVisible     = !this.isListVisible; // Toggle visibility
+    this.toogleLisCaption  = !(this.isListVisible)? "[Ver Referencias]" : "[Ocultar Referencias]";
+  }
   //
   queryParams():void {
      //

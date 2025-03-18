@@ -5,10 +5,11 @@
         "name"             : "Listado desde MS SQL Server - CSV",
         "description"      : "Listado desde MS SQL Server - CSV",
         "field_1"          : "Spring Boot, REST Service, MS SQL SERVER",
-        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationCSV?langName=JAVA",
+        "field_2"          : ".#/FilesGenerationCSV?langName=JAVA",
         "field_3"          : "https://github.com/aperezNWO/JAVA2_EE_SB_DEMO/blob/master/src/main/java/com/example/DAO/personasDAO.java",
         "field_4"          : "https://docs.spring.io/spring-boot/docs/2.1.x/reference/html/boot-features-sql.html"  ,
-        "field_6"          : "https://r9ls6q-8080.csb.app/getAllPersons"		
+        "field_6"          : "https://r9ls6q-8080.csb.app/getAllPersons",
+        "field_10"         : "b9d33b9d-4f94-4f95-a437-b4544ff478ca"		
     },
     {
         "id"               : 2,
@@ -16,10 +17,11 @@
         "name"             : "Listado desde MS SQL Server - XLS",
         "description"      : "Listado desde MS SQL Server - XLS",
         "field_1"          : "Spring Boot, REST Service, MS SQL SERVER",
-        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationXLS?langName=JAVA",
+        "field_2"          : "./#/FilesGenerationXLS?langName=JAVA",
         "field_3"          : "https://github.com/aperezNWO/JAVA2_EE_SB_DEMO/blob/master/src/main/java/com/example/DAO/AccessLogDAO.java",
         "field_4"          : "https://docs.spring.io/spring-boot/docs/2.1.x/reference/html/boot-features-sql.html"  ,
-        "field_6"          : "https://r9ls6q-8080.csb.app/getAllLogs"		
+        "field_6"          : "https://r9ls6q-8080.csb.app/getAllLogs",
+        "field_10"         : "4cb9a915-ad62-4ba1-ad34-351112d50343"			
     },
     {
 		"id"               : 3,
@@ -27,9 +29,10 @@
         "name"             : "Algoritmo discancia mas corta",
         "description"      : "Algoritmo discancia mas corta",
         "field_1"          : "Spring Boot, REST service, Dijkstra",
-        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/AlgorithmDijkstra?langName=JAVA",
+        "field_2"          : "./#/AlgorithmDijkstra?langName=JAVA",
         "field_3"          : "https://github.com/aperezNWO/JAVA2_EE_SB_DEMO/blob/master/src/main/java/com/example/demo/AlgorithmManager.java",
         "field_4"          : "https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/",
-        "field_6"          : "https://r9ls6q-8080.csb.app/GenerateRandomVertex_SpringBoot"		
+        "field_6"          : "https://r9ls6q-8080.csb.app/GenerateRandomVertex_SpringBoot",
+        "field_10"         : "1e32e88d-da6c-429a-b326-22056574e8a4"			
     }
 ]       
