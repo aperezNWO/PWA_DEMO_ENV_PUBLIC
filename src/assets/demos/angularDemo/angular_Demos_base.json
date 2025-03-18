@@ -6,7 +6,7 @@
         "description"      : "Archivo config.json",
         "field_6"          : "Angular",
         "field_1"          : "v17, Json, Config, HttpClient, Environment",
-        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/",
+        "field_2"          : "./#/",
         "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_services/ConfigService/config.service.ts",
         "field_4"          : "https://angular.dev/guide/http/setup" ,
         "field_10"         : ""  
@@ -18,7 +18,7 @@
         "description"      : "Registro de llamadas http.",
         "field_6"          : "Angular",
         "field_1"          : "v17, HttpInterceptor, HttpRequest, HttpHandler",
-        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/",
+        "field_2"          : "./#/",
         "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/app.module.ts",
         "field_4"          : "https://angular.dev/guide/http/interceptors" ,
         "field_10"         : "" 
@@ -30,7 +30,7 @@
         "description"      : "Manejo de errores y excepcioness",
 		"field_6"          : "Angular",
 		"field_1"          : "v17, ErrorHandler",
-		"field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/",
+		"field_2"          : "./#/",
 		"field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/app.module.ts",
 		"field_4"          : "https://angular.dev/api/core/ErrorHandler#"  ,
         "field_10"         : ""
@@ -42,7 +42,7 @@
          "description"     : "Líneas, Figuras, Rellenos",
          "field_6"         : "Angular",
          "field_1"         : "v17, Canvas",
-         "field_2"         : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/AlgorithmSort",
+         "field_2"         : "./#/AlgorithmSort",
          "field_3"         : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_engines/draw.engine.ts",
          "field_4"         : "https://developer.mozilla.org/es/docs/Web/API/Canvas_API" ,
          "field_10"         : "" 
@@ -54,7 +54,7 @@
          "name"             : "Gráficos tipo Pastel y Barras",
          "field_6"          : "Angular",
          "field_1"          : "v17, Pie Chart, Bar Chart, Chart.js",
-         "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/Chart",
+         "field_2"          : "./#/Chart",
          "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/miscelaneous/chart/chart.component.ts",
          "field_4"          : "https://www.chartjs.org/"  ,
          "field_10"         : ""
@@ -66,7 +66,7 @@
          "description"      : "Parámetros URL via GET separados por &",
          "field_6"          : "Angular",
          "field_1"          : "v17, ActivatedRoute, queryParams",
-         "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_LANDING/?redirectPage=FeaturePages",
+         "field_2"          : "./#/?redirectPage=FeaturePages",
          "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_LANDING/blob/main/src/app/app.component.ts",
          "field_4"          : "https://angular.dev/api/router/ActivatedRoute?tab=description"  ,
          "field_10"         : ""
@@ -78,7 +78,7 @@
         "description"      : "Algoritmos Min Max",
         "field_6"          : "Angular",
         "field_1"          : "v17, Algorimto Min Max, Tic Tac Toe",
-        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/GamesTicTacToe",
+        "field_2"          : "./#/GamesTicTacToe",
         "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_engines/game.engine.ts",
         "field_4"          : "https://en.m.wikipedia.org/wiki/Minimax"  ,
         "field_10"         : ""
@@ -90,7 +90,7 @@
         "description"      : "Exportación a pdf desde Frontend",
         "field_6"          : "Angular",
         "field_1"          : "v17, jsPDF",
-        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/Chart",
+        "field_2"          : "./#/Chart",
         "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_engines/pdf.engine.ts",
         "field_4"          : "https://www.npmjs.com/package/jspdf"  ,
         "field_10"         : ""
@@ -102,7 +102,7 @@
         "description"      : "Reconocimientos de Caracteres",
         "field_6"          : "Node.js",
         "field_1"          : "Node.js, OCR, tesseract, codesandbox",
-        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/OcrPhotoCapture",
+        "field_2"          : "./#/OcrPhotoCapture",
         "field_3"          : "https://github.com/aperezNWO/cs_nodejs_ocr_/blob/main/index.js",
         "field_4"          : "https://github.com/tesseract-ocr/tesseract"  ,
         "field_10"         : ""
@@ -114,7 +114,7 @@
         "description"      : "Llamado a Sockets",
         "field_6"          : "Node.js",
         "field_1"          : "v17, Node.js, Sockets,  Chat, Codesandbox",
-        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/Chat",
+        "field_2"          : "./#/Chat",
         "field_3"          : "https://github.com/aperezNWO/cs_node_js_test_chat/blob/main/index.js",
         "field_4"          : "https://socket.io/get-started/chat/"  ,
         "field_10"         : ""
@@ -126,7 +126,7 @@
         "description"      : "Exportación via servicio RESTFUL",
         "field_6"          : ".NET Core",
         "field_1"          : ".NET Core, pdf, iTextSharp",
-        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationPDF",
+        "field_2"          : "./#/FilesGenerationPDF",
         "field_3"          : "https://github.com/aperezNWO/mcsdNetCoreBackup/blob/main/mcsd.Core.Library/Managers/PDFManager.cs",
         "field_4"          : "https://www.nuget.org/packages/iTextSharp/"  ,
         "field_10"         : ""
@@ -150,7 +150,7 @@
         "description"      : "Juego Torres de Nanoi",
         "field_6"          : "Angular",
         "field_1"          : "v17, Algoritmo recursión, observable,",
-        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/GamesHanoiAuto",
+        "field_2"          : "./#/GamesHanoiAuto",
         "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_engines/hanoi-engine.ts",
         "field_4"          : "https://en.wikipedia.org/wiki/Tower_of_Hanoi" ,
         "field_10"         : "" 
@@ -162,7 +162,7 @@
         "description"      : "COMPUTER VISION DEMO",
         "field_6"          : "Angular",
         "field_1"          : "V17, Computer Vision, Tensorflow",
-        "field_2"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/ComputerVision",
+        "field_2"          : "./#/ComputerVision",
         "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_services/ShapeDetection/shape-detection.service.ts",
         "field_4"          : "https://www.tensorflow.org/js?hl=es",
         "field_10"         : ""
@@ -186,7 +186,7 @@
         "description"      : "Algoritmo Distancia mas corta",
         "field_6"          : ".NET Core",
         "field_1"          : "v17, Algoritmo Dijkstra, Canvas",
-        "field_2"          : "/#/AlgorithmDijkstra?langName=CS",
+        "field_2"          : "./#/AlgorithmDijkstra?langName=CS",
         "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/algorithm/algorithm-dijkstra/algorithm-dijkstra.component.ts",
         "field_4"          : "https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API",
         "field_10"         : "a819d617-74fe-41f0-8f58-0f62377d15e6"  

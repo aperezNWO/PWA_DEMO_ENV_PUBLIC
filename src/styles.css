@@ -98,11 +98,15 @@ a:visited
  }
 
 
- .reference 
+ .reference {
 
-      a, a:visited, a:hover, a:active {
-         color: #ffffff; 
-      }
+   a, a:visited, a:hover, a:active {
+      color: #ffffff; 
+   };
+
+   font-size:xx-small;
+
+ }
 
    
  
