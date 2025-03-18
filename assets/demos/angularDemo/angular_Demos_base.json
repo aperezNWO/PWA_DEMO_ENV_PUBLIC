@@ -178,5 +178,17 @@
         "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/files-generation/files-generation-csv/files-generation-csv.component.ts",
         "field_4"          : "https://v17.angular.io/guide/http-request-data-from-server",
         "field_10"         : "c8981879-7457-4534-b660-b2e8c8eb9c83"  
+    },
+    {
+		"id"               : 16,
+        "done"             : true,
+        "name"             : "Algoritmo Distancia mas corta",
+        "description"      : "Algoritmo Distancia mas corta",
+        "field_6"          : ".NET Core",
+        "field_1"          : "v17, Algoritmo Dijkstra, Canvas",
+        "field_2"          : "/#/AlgorithmDijkstra?langName=CS",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/algorithm/algorithm-dijkstra/algorithm-dijkstra.component.ts",
+        "field_4"          : "https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API",
+        "field_10"         : "a819d617-74fe-41f0-8f58-0f62377d15e6"  
     }
 ]       
