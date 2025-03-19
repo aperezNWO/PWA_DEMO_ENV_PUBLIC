@@ -5,6 +5,7 @@ import { SearchService                                     } from 'src/app/_serv
 import { ENV_LIST_SPRING_BOOT_DEMO, PAGE_ID, PAGE_SIZE,SEARCH_TERM     } from 'src/app/_models/common';
 import { SearchComponent                                               } from 'src/app/_components/search/search.component';
 import { ConfigService                                                 } from 'src/app/_services/ConfigService/config.service';
+import { SpeechService                                                 } from 'src/app/_services/speechService/speech.service';
 
 //
 @Component({
@@ -23,9 +24,13 @@ import { ConfigService                                                 } from 's
 })
 export class SpringBootDemoComponent extends SearchComponent  
 {
-  constructor(searchService         : SearchService)
+  constructor(searchService         : SearchService,
+              speechService         : SpeechService
+  )
   {
       super(searchService);
+      //
+      speechService.speakTextCustom("Demos SpringBoot Java")
   }
 } 
 

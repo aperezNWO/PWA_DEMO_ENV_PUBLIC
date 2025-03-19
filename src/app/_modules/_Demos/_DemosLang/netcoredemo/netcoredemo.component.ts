@@ -5,6 +5,7 @@ import { SearchService                                           } from 'src/app
 import { ENV_LIST_NETCORE_DEMO, PAGE_ID, PAGE_SIZE, SEARCH_TERM  } from 'src/app/_models/common';
 import { SearchComponent                                         } from 'src/app/_components/search/search.component';
 import { ConfigService                                           } from 'src/app/_services/ConfigService/config.service';
+import { SpeechService } from 'src/app/_services/speechService/speech.service';
 
 //
 @Component({
@@ -23,9 +24,14 @@ import { ConfigService                                           } from 'src/app
 })
 export class NetcoredemoComponent   extends SearchComponent  
 {
-  constructor(searchService         : SearchService)
+  constructor(searchService                : SearchService,
+              public speechService         : SpeechService,
+  )
   {
+      //
       super(searchService);
+      //
+      this.speechService.speakTextCustom("Demos .NET Core C Charp")
   }
 } 
 

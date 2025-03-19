@@ -19,7 +19,9 @@ export class SearchComponent {
   //
   public ConfigRoleString: string = SiteRole.RoleConfig.toString();
 
-  constructor(public searchService         : SearchService)
+  constructor(public searchService         : SearchService,
+
+  )
   {
     //
     this.__pages     = this.searchService.Pagelist;
@@ -37,5 +39,11 @@ export class SearchComponent {
     //
     this.searchService.sortColumn    = _column;
     this.searchService.sortDirection = _direction;
+  }
+  //
+  ngOnInit(): void {
+    //
+    // Preload voices
+
   }
  }

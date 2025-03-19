@@ -5,6 +5,7 @@ import { SearchService                                     } from 'src/app/_serv
 import { SearchComponent                                               } from 'src/app/_components/search/search.component';
 import { ENV_LIST_DJANGO_PYTHON_DEMO, PAGE_ID, PAGE_SIZE,SEARCH_TERM   } from 'src/app/_models/common';
 import { ConfigService                                                 } from 'src/app/_services/ConfigService/config.service';
+import { SpeechService                                                 } from 'src/app/_services/speechService/speech.service';
 
 @Component({
   selector: 'app-django-demo',
@@ -23,8 +24,12 @@ import { ConfigService                                                 } from 's
 })
 export class DjangoDemoComponent extends SearchComponent  
 {
-  constructor(searchService         : SearchService)
+  constructor(searchService         : SearchService,
+              speechService         : SpeechService
+  )
   {
       super(searchService);
+      //
+      speechService.speakTextCustom("Demos Django Python");
   }
 } 

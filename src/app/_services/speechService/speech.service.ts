@@ -73,12 +73,15 @@ export class SpeechService {
     return this.transcript;
   }
   //
-  speakTextCustom(_transcript:string) {
+  speakTextCustom(_transcript:string, lang : string = '') {
       //
-      const utterance = new SpeechSynthesisUtterance( _transcript );
-      utterance.lang  = 'es-CO';
-      speechSynthesis.speak(utterance); 
-      //
-      console.log("speaking texst : " + _transcript);
+      setTimeout(() => {
+        //
+        console.log("speaking texst : " + _transcript);
+        //
+        const utterance = new SpeechSynthesisUtterance(_transcript);
+        utterance.lang  = (lang=='')?  'es-CO' : lang;
+        speechSynthesis.speak(utterance);
+      }, 1000); // Delay by 1 second     
   }
 }

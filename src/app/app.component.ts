@@ -4,6 +4,8 @@ import { Title                         } from '@angular/platform-browser';
 import { CustomErrorHandler            } from './app.module';
 import { BackendService                } from './_services/BackendService/backend.service';
 import { ConfigService                 } from './_services/ConfigService/config.service';
+import { SpeechService } from './_services/speechService/speech.service';
+export { CustomErrorHandler            };
 
 //
 @Component({
@@ -19,33 +21,16 @@ export class AppComponent implements OnInit {
     public readonly _appBrand                                    : string | undefined  = "";
     public readonly _appVersion                                  : string | undefined  = "";
                     redirectPage                                 : string | null       = null;
-    //
-    private  navbarCollapsed                                     : boolean = true;
-    //
-    public get NavbarCollapsed() : boolean {
-      //
-      return this.navbarCollapsed;
-    }
-    //
-    public set NavbarCollapsed(p_navbarCollapsed: boolean) {
-        //
-        this.navbarCollapsed = p_navbarCollapsed;
-    }
     //-----------------------------------------------------------------------------------------------------
     constructor(
                 private router              : Router,
                 public  route               : ActivatedRoute,  
-                private _customErrorHandler : CustomErrorHandler, 
                 private backendService      : BackendService, 
                 private _configService      : ConfigService,
-                private titleService        : Title
+                private titleService        : Title,
                ) 
     {
-      //
-      ////console.log("Loading AppComponent...");
-      //
-      ////console.log("[SETTING CONFIG VALUES (not working on service constructor)]...");
-      // IMPLEMENT AS MAP AND ITERATE
+      // TODO:IMPLEMENT AS MAP AND ITERATE
       this._appBrand          = this._configService.getConfigValue('appBrand');
       this._appVersion        = this._configService.getConfigValue('appVersion');
       let __baseUrlNetCore    = this._configService.getConfigValue('baseUrlNetCore');
@@ -75,8 +60,6 @@ export class AppComponent implements OnInit {
       //
       let title : string = `${this._appBrand} - ${this._appVersion}`;
       //
-      ////console.log("Setting Title : " + title);
-      //
       this._title = `${this._appBrand}`;
       //
       this.titleService.setTitle(title);
@@ -88,20 +71,13 @@ export class AppComponent implements OnInit {
         if (this.redirectPage !== undefined)
         {
           //
-          ////console.log("Redirecting To Page : "  +  this.redirectPage );
-          //
           switch (this.redirectPage)
           {
             case "AlgorithmDijkstra":
                 // 
                 this.router.navigateByUrl('/AlgorithmDijkstra');
             break;
-            //default : 
-                //
-            //    this.router.navigateByUrl("/Home");
-            //break;
           };
-          
         } else {
           //
           this.router.navigateByUrl("/Home");
@@ -110,14 +86,7 @@ export class AppComponent implements OnInit {
     }   
     //-----------------------------------------------------------------------------------------------------
     ngOnInit() {
-
+        //
     }
-    //
-    getValueFromConfig(key: string) {
-      return this._configService.getConfigValue(key);
-    }
-
   }   
-//-----------------------------------------------------------------------------------------------------
-export { CustomErrorHandler };
 //-----------------------------------------------------------------------------------------------------

@@ -11,23 +11,23 @@ export class DemosLangWebComponent implements AfterViewInit {
       pages = [
         {
           'url': '/AngularDemo',
-          'text': '[ANGULAR DEMO]',
+          'text': '[ANGULAR / TYPESCRIPT]',
         },
         {
           'url': '/CppDemo',
-          'text': '[CPP DEMO]',
+          'text': '[.NET CORE / C++]',
         },
         {
           'url': '/NetCoreDemo',
-          'text': '[.NET CORE DEMO]',
+          'text': '[.NET CORE / C#]',
         },
         {
           'url': '/NodeJsDemo',
-          'text': '[NODE.JS DEMO]',
+          'text': '[NODE.JS / JAVASCRIPT]',
         },
         {
           'url': '/SpringBootDemo',
-          'text': '[SPRING BOOT DEMO]',
+          'text': '[SPRING BOOT / JAVA]',
         },
         {
           'url': '/DjangoDemo',

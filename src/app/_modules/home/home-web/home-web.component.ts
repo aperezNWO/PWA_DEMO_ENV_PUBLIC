@@ -35,8 +35,6 @@ export class HomeWebComponent implements OnInit, AfterViewInit {
               public   speechService : SpeechService)
   {
       //
-      //console.log(this.pageTitle + " - [INGRESO]") ;
-      //
       if (backendService._baseUrlNetCore != null)
       {
         //
@@ -44,16 +42,18 @@ export class HomeWebComponent implements OnInit, AfterViewInit {
       }
       //
       this._appBrand  = this._configService.getConfigValue('appBrand');
+
   }
   //
   ngOnInit(): void {
-    //
+      //
+      // Preload voices
+      speechSynthesis.getVoices();
   }
   //
   ngAfterViewInit():void
   {
-    //
-    this.speechService.speakTextCustom("Bienvenidos a Angular Demo");
+      //
+      this.speechService.speakTextCustom("Bienvenidos a Angular Demo");
   }
-
 }
