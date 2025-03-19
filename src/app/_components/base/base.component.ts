@@ -14,7 +14,7 @@ export class BaseComponent {
   public isListVisible            = false; // Initially hidden
   public toogleLisCaption: string = "[Ver Referencias]";
   //
-     constructor( public backendService       : BackendService, 
+  constructor(    public backendService       : BackendService, 
                   public formBuilder          : FormBuilder, 
                   public customErrorHandler   : CustomErrorHandler,
                   public route                : ActivatedRoute) 

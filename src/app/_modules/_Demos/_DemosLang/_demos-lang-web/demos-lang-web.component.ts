@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component     } from '@angular/core';
+import { SpeechService                } from 'src/app/_services/speechService/speech.service';
 
 @Component({
   selector: 'app-demos-lang-web',
   templateUrl: './demos-lang-web.component.html',
   styleUrl: './demos-lang-web.component.css'
 })
-export class DemosLangWebComponent {
+export class DemosLangWebComponent implements AfterViewInit {
       //
       pages = [
         {
@@ -33,4 +34,14 @@ export class DemosLangWebComponent {
           'text': '[PYTHON / DJANGO]',
         }
       ]
+      //
+      constructor(public speechService : SpeechService){
+
+      }
+      //
+      ngAfterViewInit():void
+      {
+        //
+        this.speechService.speakTextCustom("Demos Lenguajes");
+      }
 }

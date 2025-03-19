@@ -309,6 +309,18 @@
 
 -- [x] angular pensum.
 
+-- [x] Speech Panel component. 
+ 
+-- [x] Fix sort functionality.  
+
+-- [x] Implement grid component / service. 
+
+-- [x] random guid generator.
+
+-- [x] LANG LIST UL/LI.
+
+-- [x] ////console.log replace
+
 -- [_] home menu items.
 
         -- [_] programming languages / backend.
@@ -601,19 +613,11 @@
 
 -- [_] asp.net core demo.           
 
--- [x] Speech Panel component.  
-
 -- [_] Page icons.  
 
 -- [_] Revision general de funcionalidad.  
 
--- [x] Fix sort functionality.  
-
--- [x] Implement grid component / service. 
-
 -- [_] Promise<<type>>.
-
--- [_] ////console.log replace
 
 
 -- [_] both ways reference.    
@@ -630,8 +634,6 @@
 
 -- [_] main page / global search.
 
--- [x] random guid generator.
-
 -- [_] relative path.
 
 -- [_] Module federation.
@@ -642,6 +644,7 @@
 
 -- [_] deploymenbt dev / production mode.
 
--- [_] LANG LIST UL/LI.
+
+-- [_] angular deme welcome speech
 
 ////////////////////////////////////////////////////////////////////////////////

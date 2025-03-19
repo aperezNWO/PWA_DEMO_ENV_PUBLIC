@@ -59,7 +59,7 @@ export class SpeechService {
       this.recognition.stop()
     }
   }
-
+  //
   speakText():string {
     if (this.transcript) {
       //
@@ -71,5 +71,14 @@ export class SpeechService {
       alert('No text to speak!');
     }
     return this.transcript;
+  }
+  //
+  speakTextCustom(_transcript:string) {
+      //
+      const utterance = new SpeechSynthesisUtterance( _transcript );
+      utterance.lang  = 'es-CO';
+      speechSynthesis.speak(utterance); 
+      //
+      console.log("speaking texst : " + _transcript);
   }
 }

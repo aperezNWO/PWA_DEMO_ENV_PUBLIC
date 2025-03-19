@@ -42,5 +42,13 @@
     {
         "url"  : "https://chat.qwenlm.ai/",
         "name" : "Qwen"
-    }
-    ] 
+    },
+    {
+        "url"  : "https://manus.im/",
+        "name" : "Manus"
+    },
+    {
+        "url"  : "https://kimi.ai/",
+        "name" : "Kimi"
+    }  
+] 
