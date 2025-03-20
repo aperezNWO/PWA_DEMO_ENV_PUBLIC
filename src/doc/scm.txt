@@ -1,3 +1,111 @@
+=====================================================================
+-- SCM - HOSTING
+=====================================================================
+
+-- [x] environments.
+
+        -- [_] LOCAL_IIS.
+        -- [_] WebApi.
+        -- [_] angulardemo.
+
+-- [>] SOURCE github.com        
+
+        -- [_] PUBLIC SOURCES.                        
+                -- [x] [mcsdWebApíTFS] (tff)      -->  (github) "mcsd_public".
+                -- [>] Update sources.
+
+-- [>] HOSTING  
+
+        -- [_] [alternativas]
+
+                -- [_] https://xranks.com/es/somee.com
+
+        -- [_] [somee.com]
+         
+                -- [_] [HELP]
+                        https://somee.com/doka/Help/Article/106/How_to_deploy_Web_project_from_Visual_Studio
+
+                -- [_] [mcsd/angulardemo/webapidemo]
+                -- [_] [db].
+                       -- [_] reset log db #1 / debug content.
+                       -- [_] enbable   db #2 / (CSV DEMO).
+                -- [_] check disabled accounts.
+                       -- [_] https://www.angulardemo.somee.com.
+
+-- [>] webapidemo / service.
+
+       -- [x] remove demo views/controllers.
+       -- [x] enable domain "WebApiDemo".
+       -- [x] mcsdWebApíTFS.
+       -- [x] mcsdBackup.
+
+                -- [x] BACKUP /DELETE BOOK "DELORME".  
+                -- [x] BACKUP /DELETE folder "_angular".  
+                -- [x] turn off domain "mcsdBackup".
+                -- [x] change tfs/github name "mcsdNet48TFS" / "mcsdNet48GitHub".
+                -- [x] change tfs/github name "mcsd" por "mcsdNetCoreBackup".
+
+        -- [_] REDUCE FILE SIZE.
+                -- [_] check disable email from "somee.com".
+
+/*
+
+        Your website 'angulardemo.somee.com' was disabled for the following reason: 
+
+        Website's average, per request bandwidth has exceeded a limit that is set for the website hosted with a free hosting package! 
+        Although we do not limit the file size that can be uploaded or downloaded from your website, 
+        we set a limit of [150KByte] on average file size that can be downloaded from the website hosted with free package. 
+
+        The average is calculated every several hours for all files together, including *.html, *.asp, *.aspx, *.jpg, *.png, *.gif, *.mpg 
+        and other text and media files. 
+
+        Your website is scheduled to start again in about 12 hours, or you can start it manually from our control panel any time. 
+
+        But if you will not take actions to decrease the average file size that is sent from your website it will be stopped again 
+        and you are allowed to start it 5 times only. 
+
+        You can also switch to any other hosting package where such maintenance is not performed.
+
+*/
+=====================================================================
+-- STRATEGY - DIFUSION
+=====================================================================
+
+-- [_] FREELANCE WEB SITES
+
+                -- [_] WORKANA.
+                -- [_] FIVERR.
+                -- [_] UPWORK.
+
+-- [_] LINKEDIN
+
+-- [_] facebook
+
+        -- [_] .NET COMMUNITY
+        -- [_] ANGULAR COMMUNITY
+
+-- [_] DIRECT EMAIL
+
+        -- [_] JOB SEARCH MODULE
+
+-- [_] TWITTER /
+-- [_] INSTAGRAM / TK.
+-- [_] NON IT COMPANIES / DIRECT OFFER.
+
+=====================================================================
+-- ERRORS
+=====================================================================
+
+-- [_]
+
+=====================================================================
+-- OBSERVACIONES / REDES SOCIALES
+=====================================================================
+-- [daniel sevilla]         
+
+    -- [_]              https://primeng.org/installation.
+
+=====================================================================
 /////////////////////////////////////////////////////////////////
 // SCM STRATEGY
 /////////////////////////////////////////////////////////////////

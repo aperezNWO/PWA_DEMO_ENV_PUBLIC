@@ -30,7 +30,7 @@ export class SpringBootDemoComponent extends SearchComponent
   {
       super(searchService);
       //
-      speechService.speakTextCustom("Demos SpringBoot Java")
+      speechService.speakTextCustom("Demos SpringBoot Java");
   }
 } 
 

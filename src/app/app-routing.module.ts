@@ -6,16 +6,15 @@ import { AAboutWebComponent              } from './_modules/about/a-about-web/a-
 import { SCMComponent                    } from './_modules/about/scm/scm.component';
 import { LLMListComponent                } from './_modules/about/llmlist/llmlist.component';
 import { TechnicalSpecsComponent         } from './_modules/about/technicalspecs/technical-specs/technical-specs.component';
-import { CurriculumComponent } from './_modules/_Demos/_DemosCurriculum/curriculumAngular/curriculum.component';
-import { TopicsComponent } from './_modules/_Demos/_DemosCurriculum/topics/topics.component';
-import { DemosFeaturesWebComponent } from './_modules/_Demos/_DemosFeatures/_demos-features-web/demos-features-web.component';
-import { AlgorithmCollisionComponent } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-collision/algorithm-collision.component';
-import { AlgorithmDijkstraComponent } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-dijkstra/algorithm-dijkstra.component';
-import { AlgorithmRegExComponent } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-reg-ex/algorithm-reg-ex.component';
-import { AlgorithmSortComponent } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-sort/algorithm-sort.component';
-import { AlgorithmWebComponent } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-web/algorithm-web.component';
-import { FeaturePagesComponent } from './_modules/_Demos/_DemosLang/angular-demo/feature-pages.component';
-import { ChartComponent } from './_modules/_Demos/_DemosFeatures/files-generation/chart/chart.component';
+import { CurriculumComponent             } from './_modules/_Demos/_DemosCurriculum/curriculumAngular/curriculum.component';
+import { DemosFeaturesWebComponent       } from './_modules/_Demos/_DemosFeatures/_demos-features-web/demos-features-web.component';
+import { AlgorithmCollisionComponent     } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-collision/algorithm-collision.component';
+import { AlgorithmDijkstraComponent      } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-dijkstra/algorithm-dijkstra.component';
+import { AlgorithmRegExComponent         } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-reg-ex/algorithm-reg-ex.component';
+import { AlgorithmSortComponent          } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-sort/algorithm-sort.component';
+import { AlgorithmWebComponent           } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-web/algorithm-web.component';
+import { FeaturePagesComponent           } from './_modules/_Demos/_DemosLang/angular-demo/feature-pages.component';
+import { ChartComponent                  } from './_modules/_Demos/_DemosFeatures/files-generation/chart/chart.component';
 import { FilesGenerationCSVComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-csv/files-generation-csv.component';
 import { FilesGenerationPDFComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-pdf/files-generation-pdf.component';
 import { FilesGenerationWebComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-web/files-generation-web.component';
@@ -58,7 +57,6 @@ export const routes: _Route[] = [
   {  id: 0,  path: 'SCM'                   , component: SCMComponent                        , caption: ' About  - SCM'                                },
   {  id: 0,  path: 'LLMList'               , component: LLMListComponent                    , caption: ' About  - LLM List'                           },
   {  id: 0,  path: 'TechnicalSpecs'        , component: TechnicalSpecsComponent             , caption: ' About  - Technical Specifications'           },
-  {  id: 0,  path: 'Topics'                , component: TopicsComponent                     , caption: ' About  - Topics'                             },
   {  id: 0,  path: 'Features'              , component: FeaturePagesComponent               , caption: ' About  - Features'                           },
   {  id: 0,  path: 'ContactForm'           , component: ContactformComponent                , caption: ' About  - Contact Form'                       },
   {  id: 0,  path: 'AlgorithmWeb'          , component: AlgorithmWebComponent               , caption: ' Algoritmos - Main Page'                      },

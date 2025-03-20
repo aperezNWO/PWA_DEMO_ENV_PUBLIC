@@ -16,7 +16,7 @@ import { HttpClient, HttpClientModule    } from '@angular/common/http';
 import { HttpHandler, HttpInterceptor    } from '@angular/common/http';
 import { HttpRequest, HttpResponse       } from '@angular/common/http';
 import { HTTP_INTERCEPTORS               } from '@angular/common/http';
-import { RouterModule, Routes            } from '@angular/router';
+import { RouterModule                    } from '@angular/router';
 import { HashLocationStrategy            } from '@angular/common';
 import { LocationStrategy                } from '@angular/common';
 import { AppComponent                    } from './app.component';
@@ -37,17 +37,16 @@ import { IndexComponent                         } from './_modules/about/index/i
 import { SCMComponent                           } from './_modules/about/scm/scm.component';
 import { LLMListComponent                       } from './_modules/about/llmlist/llmlist.component';
 
-import { DemosWebComponent } from './_modules/_Demos/DemosWeb/demos-web/demos-web.component';
-import { CurriculumComponent } from './_modules/_Demos/_DemosCurriculum/curriculumAngular/curriculum.component';
-import { TopicsComponent } from './_modules/_Demos/_DemosCurriculum/topics/topics.component';
-import { DemosFeaturesWebComponent } from './_modules/_Demos/_DemosFeatures/_demos-features-web/demos-features-web.component';
-import { AlgorithmCollisionComponent } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-collision/algorithm-collision.component';
-import { AlgorithmDijkstraComponent } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-dijkstra/algorithm-dijkstra.component';
-import { AlgorithmRegExComponent } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-reg-ex/algorithm-reg-ex.component';
-import { AlgorithmSortComponent } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-sort/algorithm-sort.component';
-import { AlgorithmWebComponent } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-web/algorithm-web.component';
-import { FeaturePagesComponent } from './_modules/_Demos/_DemosLang/angular-demo/feature-pages.component';
-import { ChartComponent } from './_modules/_Demos/_DemosFeatures/files-generation/chart/chart.component';
+import { DemosWebComponent                      } from './_modules/_Demos/DemosWeb/demos-web/demos-web.component';
+import { CurriculumComponent                    } from './_modules/_Demos/_DemosCurriculum/curriculumAngular/curriculum.component';
+import { DemosFeaturesWebComponent              } from './_modules/_Demos/_DemosFeatures/_demos-features-web/demos-features-web.component';
+import { AlgorithmCollisionComponent            } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-collision/algorithm-collision.component';
+import { AlgorithmDijkstraComponent             } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-dijkstra/algorithm-dijkstra.component';
+import { AlgorithmRegExComponent                } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-reg-ex/algorithm-reg-ex.component';
+import { AlgorithmSortComponent                 } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-sort/algorithm-sort.component';
+import { AlgorithmWebComponent                  } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-web/algorithm-web.component';
+import { FeaturePagesComponent                  } from './_modules/_Demos/_DemosLang/angular-demo/feature-pages.component';
+import { ChartComponent                         } from './_modules/_Demos/_DemosFeatures/files-generation/chart/chart.component';
 import { FilesGenerationCSVComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-csv/files-generation-csv.component';
 import { FilesGenerationPDFComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-pdf/files-generation-pdf.component';
 import { FilesGenerationWebComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-web/files-generation-web.component';
@@ -171,7 +170,6 @@ export class CustomErrorHandler implements ErrorHandler {
         MiscelaneousComponent,
         NavComponent,
         PageNotFoundComponent,
-        TopicsComponent,
         IndexComponent,
         ComputerVisionComponent,
         GameHanoi3dComponent,
