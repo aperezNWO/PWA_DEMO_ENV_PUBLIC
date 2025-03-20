@@ -6,9 +6,10 @@
         "description"      : "Formularios basados en plantillas",
         "field_1"          : "Angular",
         "field_2"          : "v17, Template Forms",
-        "field_3"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationCSV",
+        "field_3"          : "./#/FilesGenerationCSV",
         "field_4"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/files-generation/files-generation-csv/files-generation-csv.component.html",
-        "field_5"          : "https://v17.angular.io/guide/forms"
+        "field_5"          : "https://v17.angular.io/guide/forms",
+        "field_10"         : "dc4cb652-1c97-40eb-903e-054a519fd437"   
     },
     {
 		"id"               : 2,
@@ -17,9 +18,10 @@
         "description"      : "Fomularios Reactivos",
         "field_1"          : "Angular",
         "field_2"          : "v17, Reactive Forms, Responsive",
-        "field_3"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationCSV",
+        "field_3"          : "./#/FilesGenerationCSV",
         "field_4"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PROD/blob/master/src/app/_modules/files-generation/files-generation-csv/files-generation-csv.component.html",
-        "field_5"          : "https://v17.angular.io/guide/reactive-forms"       
+        "field_5"          : "https://v17.angular.io/guide/reactive-forms" ,
+        "field_10"         : "13fa3cc9-e8da-4104-b738-799c934695f3"         
     },
     {
 		"id"               : 3,
@@ -28,9 +30,10 @@
         "description"      : "Llamadas a backends",
         "field_1"          : "Angular",
         "field_2"          : "v17, Services, HttpClient, REST API, RESTful, Injection Dependency",
-        "field_3"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationCSV",
+        "field_3"          : "./#/FilesGenerationCSV",
         "field_4"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PROD/blob/master/src/app/_services/mcsd.service.ts",
-        "field_5"          : "https://v17.angular.io/guide/architecture-services"   
+        "field_5"          : "https://v17.angular.io/guide/architecture-services",
+        "field_10"         : "6b0d083e-a469-4e55-8b74-056e5f18bee4"      
     },
     {
 		"id"               : 4,
@@ -39,9 +42,10 @@
         "description"      : "Injección de Dependencia",
         "field_1"          : "Angular",
         "field_2"          : "v17, Constructor, Injection Dependency",
-        "field_3"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FilesGenerationCSV",
+        "field_3"          : "./#/FilesGenerationCSV",
         "field_4"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PROD/blob/master/src/app/_services/mcsd.service.ts",
-        "field_5"          : "https://v17.angular.io/guide/dependency-injection"   
+        "field_5"          : "https://v17.angular.io/guide/dependency-injection",
+        "field_10"         : "fb9a44f9-55ca-43c8-b759-064d1c74e562"      
     },  
     {
 		"id"               : 5,
@@ -50,9 +54,10 @@
         "description"      : "Formato de fechas, numero y moneda",
         "field_1"          : "Angular",
         "field_2"          : "v17, Pipes, Date, Currency, Formatting",
-        "field_3"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/Chat",
+        "field_3"          : "./#/Chat",
         "field_4"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PROD/blob/master/src/app/_modules/miscelaneous/chat/chat/chat.component.ts",
-        "field_5"          : "https://v17.angular.io/guide/pipes-overview"   
+        "field_5"          : "https://v17.angular.io/guide/pipes-overview",
+        "field_10"         : "c8e48c90-3b35-487d-a1c0-c8b27953b35c"      
     },
     {
 		"id"               : 6,
@@ -61,9 +66,10 @@
         "description"      : "Directives",
         "field_1"          : "Angular",
         "field_2"          : "v17, Directives",
-        "field_3"          : "https://apereznwo.github.io/NG_BOOTSTRAP_DEMO_ENV_TEST/TableSampleComponent",
-        "field_4"          : "https://github.com/aperezNWO/NG_BOOTSTRAP_DEMO_ENV_TEST/blob/main/src/app/_services/sortable.directive.ts",
-        "field_5"          : "https://v17.angular.io/guide/directive-composition-api"   
+        "field_3"          : "./#/Index",
+        "field_4"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_directives/sortable.directive.ts",
+        "field_5"          : "https://v17.angular.io/guide/directive-composition-api",
+        "field_10"         : "cc9c0f9c-addc-4d34-85da-8b00afb1a29f"   
     },
     {
 		"id"               : 7,
@@ -72,8 +78,10 @@
         "description"      : "Observables",
         "field_1"          : "Angular",
         "field_2"          : "v17, Observables",
-        "field_3"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/GamesHanoiAuto",
+        "field_3"          : "./#/GamesHanoiAuto",
         "field_4"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_engines/hanoi-engine.ts",
-        "field_5"          : "https://v17.angular.io/guide/observables"   
+        "field_5"          : "https://v17.angular.io/guide/observables",
+        "field_10"         : "7a1130e9-0d73-4a87-8af6-37415f403a42"
+           
     }      
 ]
