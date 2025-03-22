@@ -66,8 +66,6 @@ export class TechnicalSpecsComponent {
     //
     ngOnInit(): void {
       //
-      let guid = this._configService.generateGuid();
-      this.guid.set(guid);
     }
     //
     constructor(
@@ -121,13 +119,20 @@ export class TechnicalSpecsComponent {
       };
       //
       appVersion.subscribe(appVersionObserver);
+      //
+      this.setNewGuid();
+    }
+    //
+    setNewGuid():string
+    {
+      let guid = this._configService.generateGuid();
+      this.guid.set(guid);
+      return guid;
     }
     //
     async generateNewGuid() {
       try {
-        let guid = this._configService.generateGuid();
-        this.guid.set(guid);
-        await navigator.clipboard.writeText(guid);
+        await navigator.clipboard.writeText(this.setNewGuid());
         alert('Text copied to clipboard!');
       } catch (error) {
         console.error('Failed to copy text: ', error);
