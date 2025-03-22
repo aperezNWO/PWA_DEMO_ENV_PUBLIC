@@ -77,7 +77,7 @@ export class SpeechService {
       //
       setTimeout(() => {
         //
-        console.log("speaking texst : " + _transcript);
+        console.log("speaking text : " + _transcript);
         //
         const utterance = new SpeechSynthesisUtterance(_transcript);
         utterance.lang  = (lang=='')?  'es-CO' : lang;

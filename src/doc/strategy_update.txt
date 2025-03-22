@@ -330,5 +330,8 @@
 
         -- [_] Error en Index / Games.  
 
+-- [_] Sound init workaround.  
 
+-- [_] button copy to clipborad guid.
+  
  ////////////////////////////////////////////////////////////////////////////////

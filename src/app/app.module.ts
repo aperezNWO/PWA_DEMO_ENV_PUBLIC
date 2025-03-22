@@ -247,9 +247,10 @@ export class AppModule {
     //-----------------------------------------------------------------------------------------------------
     constructor(public customErrorHandler : CustomErrorHandler, 
                 public loggingInterceptor : LoggingInterceptor,
-                public backendService     : BackendService,) 
+                public backendService     : BackendService,
+               ) 
     {
-      //
+
     }
 }
 

@@ -4,7 +4,6 @@ import { Title                         } from '@angular/platform-browser';
 import { CustomErrorHandler            } from './app.module';
 import { BackendService                } from './_services/BackendService/backend.service';
 import { ConfigService                 } from './_services/ConfigService/config.service';
-import { SpeechService } from './_services/speechService/speech.service';
 export { CustomErrorHandler            };
 
 //
@@ -63,26 +62,6 @@ export class AppComponent implements OnInit {
       this._title = `${this._appBrand}`;
       //
       this.titleService.setTitle(title);
-      //
-      this.route.queryParams.subscribe(params => {
-        //
-        this.redirectPage = params['redirectPage'] ? params['redirectPage'] : "" ;
-        //
-        if (this.redirectPage !== undefined)
-        {
-          //
-          switch (this.redirectPage)
-          {
-            case "AlgorithmDijkstra":
-                // 
-                this.router.navigateByUrl('/AlgorithmDijkstra');
-            break;
-          };
-        } else {
-          //
-          this.router.navigateByUrl("/Home");
-        }
-      });
     }   
     //-----------------------------------------------------------------------------------------------------
     ngOnInit() {
