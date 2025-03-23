@@ -1,112 +1,133 @@
-<div align="center"><h1>SUDOKU BOARD</h1></div>
-<!-- TABLERO / INICIO -->    
-<hr/>
-<!-- TABLERO / INICIO           --> 
-<div class="sudoku-board" #_sudoku_board>
-<table>
-    <tbody>
-    <tr *ngFor="let col of board; let rowIndex = index">
-    <td *ngFor="let cell of col; let cellIndex = index">
-        <div [className]="( 
-                            ( (cellIndex>=3) && (cellIndex<=5) ) && ((rowIndex>= 0) && (rowIndex <  3)   ) ||
-                           !( (cellIndex>=3) && (cellIndex<=5) ) && ((rowIndex>= 3) && (rowIndex <= 5)   ) ||
-                            ( (cellIndex>=3) && (cellIndex<=5) ) && ((rowIndex>  5) && (rowIndex <= 8)   ) 
-                        ) ?('sudoku-cell_bright'):('sudoku-cell_dark')">{{ cell }}</div>
-    </td>
-    </tr>
-</tbody>
-</table>
-</div>
-<!-- TABLERO / FIN      --> 
-<hr />
-<form [formGroup]="rf_searchForm" (ngSubmit)="this._SolveSudoku()">
-    <!-- GENERERAR DESDE ... / INICIO -->
-    <div  class="form-group" id="SourceListDiv" align="left">
-        <label for="SourceList"><span id="tituloListadoLenguajes">{{this.tituloGenerarDesde}}</span></label>
-        <select id="SourceList"
-                name="SourceList"
-                #_SourceList
-                (change)="this._fileUploadDivHiddenChanged()">
-                <option *ngFor="let _SourceName of __generateSourceList" 
-                        [value]   ="_SourceName._index"
-                        [selected]="_SourceName._selected">{{_SourceName._value}}
-                </option>
-        </select>
+<div class="content">
+    <div align="center">
+        <h1>SUDOKU BOARD</h1>
     </div>
-    <!-- GENERERAR DESDE ... / FIN    -->
-    <!-- LISTADO LENGUAJE / INICIO  -->    
-    <div  class="form-group" id="LangListDiv" align="left">
-        <label for="LanguajeList"><span id="tituloListadoLenguajes">{{this.tituloListadoLenguajes}}</span></label>
-        <select id="LanguageList"
-                name="LanguajeList"
-                #_languajeList
-                (change)="this._cppSourceDivHiddenChanged()">
-                <option *ngFor="let _languageName of __languajeList" 
-                        [value]   ="_languageName._index"
-                        [selected]="_languageName._selected">{{_languageName._value}}
-                </option>
-        </select>
-    </div>
-    <hr>
-    <!-- listado lenguaje / fin       --> 
-    <!-- FILE UPLOAD         / INICIO -->
-    <form>
-        <div class="fileUpload" align="left" [hidden]="this._fileUploadDivHidden">
-            <a href="./assets/sudoku.txt" target="_blank" download="sudoku.txt">[Download Template]</a>
-            <hr>
-            <!-- FILE UPLOAD / INICIO -->
-            <div class="col-12">
-                    <label class="btn btn-default p-0">
-                        <input type="file" name="_fileUpload" #_fileUpload (change)="selectFile($event)" />
-                    </label>
-                    |
-                    <button id="resetFile" type="reset">[RESET]</button>
-            </div>
-            <hr>       
-            <!-- FILE UPLOAD / FIN    -->
-            <!-- PROGRESS    / INICIO -->
-            <div *ngIf="currentFile" class="progress my-3">
-                <div
-                    class="progress-bar progress-bar-info progress-bar-striped"
-                    role="progressbar"
-                    attr.aria-valuenow="{{ progress }}"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                    [ngStyle]="{ width: progress + '%' }"
-                >
-                {{ progress }}%
-                </div>
-            </div>
-            <!-- PROGRESS    / FIN  -->
-        </div>
-    </form>
-    <!-- FILE UPLOAD / FIN            -->
-    <hr>
-    <!--STATUS / INICIO               -->
-    <div align="left">
-        <div *ngIf="message" class="alert alert-secondary" role="alert">{{ message }}</div>
-    </div>
-    <!-- STATUS / FIN     -->
-    <!-- BUTTONS / INICIO -->
+    <hr> 
+    <div class="reference" align="right">
+    <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
+    <ul *ngIf="isListVisible" align="left" widdth="10px">
+        <li> [Frontend]
+            <ul>
+                <li><a routerLink="/AngularDemo" [queryParams]="{ searchTerm: '8c25ff6b-2568-411b-b366-cb5700b95b28' }">[Angular]</a></li>
+            </ul>
+        </li>
+        <li>[Backend]
+            <ul>
+            <li><a routerLink="/CppDemo"         [queryParams]="{ searchTerm: 'dbda4780-50c8-4a97-8617-cf2a60bf9b32' }">[.netcore/c++]</a></li>
+            <li><a routerLink="/NodeJsDemo"      [queryParams]="{ searchTerm: 'f1f0af0b-4032-49b7-9df0-80e578168fa3' }">[nodejs / javascript]</a></li>
+            </ul>
+        </li>
+    </ul>
+    </div>  
+    <!-- ENCABEZADO / FIN -->    
     <hr/>
-    <div align="left">
-        <input class="btn btn-primary" id="GetSudoku"   type="button" [value]="this.btnGenerateCaption"   (click)="this._GetSudoku()"
-        [disabled]="(this.btnGenerateCaption == '[...generando...]') ||
-                    (this.btnSolveCaption    == '[...resolviendo...]')">
-        |
-        <input class="btn btn-success" id="SolveSudoku" type="submit" [value]="this.btnSolveCaption" 
-        [disabled]="(this.btnSolveCaption    == '[...resolviendo...]') ||
-                    (this.btnGenerateCaption == '[...generando...]')   ||
-                    (this.sudokuSolved       == true)">
-        <!-- GENERAR PDF / INICIO -->
-        <span *ngIf="(this.board.length>0)" align="left">
-            |
-            <input class="btn btn-secondary" type="button" name="btnGeneratePdf" value="[GENERAR PDF]" (click)="this._GetPdf()" [disabled]="(this.message == '[...Generando PDF...]')">
-        </span>
-        <!-- GENERAR PDF / FIN    -->
+    <!-- TABLERO / INICIO           --> 
+    <div class="sudoku-board" #_sudoku_board>
+    <table>
+        <tbody>
+        <tr *ngFor="let col of board; let rowIndex = index">
+        <td *ngFor="let cell of col; let cellIndex = index">
+            <div [className]="( 
+                                ( (cellIndex>=3) && (cellIndex<=5) ) && ((rowIndex>= 0) && (rowIndex <  3)   ) ||
+                            !( (cellIndex>=3) && (cellIndex<=5) ) && ((rowIndex>= 3) && (rowIndex <= 5)   ) ||
+                                ( (cellIndex>=3) && (cellIndex<=5) ) && ((rowIndex>  5) && (rowIndex <= 8)   ) 
+                            ) ?('sudoku-cell_bright'):('sudoku-cell_dark')">{{ cell }}</div>
+        </td>
+        </tr>
+    </tbody>
+    </table>
     </div>
-    <!-- BUTTONS / FIN        -->
+    <!-- TABLERO / FIN      --> 
+    <hr />
+    <form [formGroup]="rf_searchForm" (ngSubmit)="this._SolveSudoku()">
+        <!-- GENERERAR DESDE ... / INICIO -->
+        <div  class="form-group" id="SourceListDiv" align="left">
+            <label for="SourceList"><span id="tituloListadoLenguajes">{{this.tituloGenerarDesde}}</span></label>
+            <select id="SourceList"
+                    name="SourceList"
+                    #_SourceList
+                    (change)="this._fileUploadDivHiddenChanged()">
+                    <option *ngFor="let _SourceName of __generateSourceList" 
+                            [value]   ="_SourceName._index"
+                            [selected]="_SourceName._selected">{{_SourceName._value}}
+                    </option>
+            </select>
+        </div>
+        <!-- GENERERAR DESDE ... / FIN    -->
+        <!-- LISTADO LENGUAJE / INICIO  -->    
+        <div  class="form-group" id="LangListDiv" align="left">
+            <label for="LanguajeList"><span id="tituloListadoLenguajes">{{this.tituloListadoLenguajes}}</span></label>
+            <select id="LanguageList"
+                    name="LanguajeList"
+                    #_languajeList
+                    (change)="this._cppSourceDivHiddenChanged()">
+                    <option *ngFor="let _languageName of __languajeList" 
+                            [value]   ="_languageName._index"
+                            [selected]="_languageName._selected">{{_languageName._value}}
+                    </option>
+            </select>
+        </div>
+        <hr>
+        <!-- listado lenguaje / fin       --> 
+        <!-- FILE UPLOAD         / INICIO -->
+        <form>
+            <div class="fileUpload" align="left" [hidden]="this._fileUploadDivHidden">
+                <a href="./assets/sudoku.txt" target="_blank" download="sudoku.txt">[Download Template]</a>
+                <hr>
+                <!-- FILE UPLOAD / INICIO -->
+                <div class="col-12">
+                        <label class="btn btn-default p-0">
+                            <input type="file" name="_fileUpload" #_fileUpload (change)="selectFile($event)" />
+                        </label>
+                        |
+                        <button id="resetFile" type="reset">[RESET]</button>
+                </div>
+                <hr>       
+                <!-- FILE UPLOAD / FIN    -->
+                <!-- PROGRESS    / INICIO -->
+                <div *ngIf="currentFile" class="progress my-3">
+                    <div
+                        class="progress-bar progress-bar-info progress-bar-striped"
+                        role="progressbar"
+                        attr.aria-valuenow="{{ progress }}"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        [ngStyle]="{ width: progress + '%' }"
+                    >
+                    {{ progress }}%
+                    </div>
+                </div>
+                <!-- PROGRESS    / FIN  -->
+            </div>
+        </form>
+        <!-- FILE UPLOAD / FIN            -->
+        <hr>
+        <!--STATUS / INICIO               -->
+        <div align="left">
+            <div *ngIf="message" class="alert alert-secondary" role="alert">{{ message }}</div>
+        </div>
+        <!-- STATUS / FIN     -->
+        <!-- BUTTONS / INICIO -->
+        <hr/>
+        <div align="left">
+            <input class="btn btn-primary" id="GetSudoku"   type="button" [value]="this.btnGenerateCaption"   (click)="this._GetSudoku()"
+            [disabled]="(this.btnGenerateCaption == '[...generando...]') ||
+                        (this.btnSolveCaption    == '[...resolviendo...]')">
+            |
+            <input class="btn btn-success" id="SolveSudoku" type="submit" [value]="this.btnSolveCaption" 
+            [disabled]="(this.btnSolveCaption    == '[...resolviendo...]') ||
+                        (this.btnGenerateCaption == '[...generando...]')   ||
+                        (this.sudokuSolved       == true)">
+            <!-- GENERAR PDF / INICIO -->
+            <span *ngIf="(this.board.length>0)" align="left">
+                |
+                <input class="btn btn-secondary" type="button" name="btnGeneratePdf" value="[GENERAR PDF]" (click)="this._GetPdf()" [disabled]="(this.message == '[...Generando PDF...]')">
+            </span>
+            <!-- GENERAR PDF / FIN    -->
+        </div>
+        <!-- BUTTONS / FIN        -->
 
-</form>
-<hr />
-<div align="right"><a routerLink="/GamesWeb">[Volver al Menú]</a></div>
+    </form>
+    <hr />
+    <div align="right"><a routerLink="/GamesWeb">[Volver al Menú]</a></div>
+</div>

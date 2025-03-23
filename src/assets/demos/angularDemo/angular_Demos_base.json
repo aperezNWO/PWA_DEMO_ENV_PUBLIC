@@ -190,5 +190,17 @@
         "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/algorithm/algorithm-dijkstra/algorithm-dijkstra.component.ts",
         "field_4"          : "https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API",
         "field_10"         : "a819d617-74fe-41f0-8f58-0f62377d15e6"  
+    },
+    {
+		"id"               : 17,
+        "done"             : true,
+        "name"             : "Juego Sudoku",
+        "description"      : "Juego Sudoku",
+        "field_6"          : "Angular",
+        "field_1"          : "v17, Sudoku, canvas",
+        "field_2"          : "./#/GamesSudoku",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/games/game-sudoku/game-sudoku.component.ts",
+        "field_4"          : "https://www.geeksforgeeks.org/sudoku-backtracking-7/" ,
+        "field_10"         : "8c25ff6b-2568-411b-b366-cb5700b95b28" 
     }
 ]       

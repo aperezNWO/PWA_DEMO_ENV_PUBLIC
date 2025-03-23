@@ -5,7 +5,8 @@ import { HttpEventType, HttpResponse  } from '@angular/common/http';
 import { Observable                   } from 'rxjs';
 import { BackendService               } from 'src/app/_services/BackendService/backend.service';
 import { PdfService                   } from 'src/app/_engines/pdf.engine';
-import { ListItem                     } from 'src/app/_models/entity.model';
+import { _languageName, ListItem                     } from 'src/app/_models/entity.model';
+import { ActivatedRoute } from '@angular/router';
 //
 @Component({
   selector: 'app-sudoku',
@@ -51,9 +52,15 @@ export class SudokuComponent implements OnInit, AfterViewInit {
     //_fileUpload   : ["", Validators.required],
   });
   pageTitle       : string = '[SUDOKU]';
+  public isListVisible            = false; // Initially hidden
+  public toogleLisCaption: string = "[Ver Referencias]";
   //
-  constructor(private algorithmService: BackendService,private formBuilder: FormBuilder, public pdfEngine: PdfService) {
-    //
+  constructor(
+                  private algorithmService : BackendService,
+                  private formBuilder      : FormBuilder, 
+                  public  pdfEngine        : PdfService,
+                  public  route            : ActivatedRoute) 
+  { 
     //console.log('[SUDOKU - INGRESO]');
   }
   //
@@ -62,13 +69,8 @@ export class SudokuComponent implements OnInit, AfterViewInit {
   }
   //
   ngOnInit(): void {
-    //-----------------------------------------------------------------------------
-    // LENGUAJES DE PROGRAMACION
-    //-----------------------------------------------------------------------------
-    this.__languajeList = new Array();
-    this.__languajeList.push(new ListItem(0, '(SELECCIONE OPCION..)', false));
-    this.__languajeList.push(new ListItem(1, '(.NET Core/C++)'      , true));
-    this.__languajeList.push(new ListItem(2, '(Node.js)'            , false));
+    //
+    this.queryParams();
     //
     this._cppSourceDivHidden = false;
     //
@@ -76,6 +78,47 @@ export class SudokuComponent implements OnInit, AfterViewInit {
     this.__generateSourceList.push(new ListItem(0, '(SELECCIONE OPCION..)', false));
     this.__generateSourceList.push(new ListItem(1, '[Archivo]'      , false));
     this.__generateSourceList.push(new ListItem(2, '[Backend]'      , true));
+  }
+  //--------------------------------------------------------------------------
+  // METODOS COMUNES 
+  //--------------------------------------------------------------------------
+  //
+  toggleList() {
+    this.isListVisible     = !this.isListVisible; // Toggle visibility
+    this.toogleLisCaption  = !(this.isListVisible)? "[Ver Referencias]" : "[Ocultar Referencias]";
+  }
+  //
+  queryParams():void{
+    //
+    this.route.queryParams.subscribe(params => {
+      //-----------------------------------------------------------------------------
+      // LENGUAJES DE PROGRAMACION
+      //-----------------------------------------------------------------------------
+      this.__languajeList = new Array();
+      //-----------------------------------------------------------------------------
+      // LENGUAJES DE PROGRAMACION
+      //-----------------------------------------------------------------------------
+      this.__languajeList = new Array();
+      this.__languajeList.push(new _languageName(0, '(SELECCIONE OPCION..)', false,""    ));
+      this.__languajeList.push(new _languageName(1, '(.NET Core/C++)'      , true ,"CPP" ));
+      this.__languajeList.push(new _languageName(2, '(Node.js)'            , false,"JS"  ));
+      //
+      let langName = params['langName'] ? params['langName'] : "" ;
+      //
+      if (langName !== '')
+      {   
+          //
+          for (var index = 1; index < this.__languajeList.length; index++) {
+              //
+              if (this.__languajeList[index]._shortName  == langName)
+                this.__languajeList[index]._selected = true;        
+          }
+
+      } else {
+        //
+        this.__languajeList[1]._selected = true; // C#
+      }
+    });
   }
   //
   public _cppSourceDivHiddenChanged(): void {

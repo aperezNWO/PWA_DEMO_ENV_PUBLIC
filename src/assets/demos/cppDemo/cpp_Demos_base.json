@@ -6,10 +6,11 @@
         "description"      : "Sudoku Game",
         "field_3"          : "CppBuilder",
         "field_2"          : "Sudoku Game",
-        "field_1"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/GamesSudoku?langName=CPP",
+        "field_1"          : "./#/GamesSudoku?langName=CPP",
         "field_4"          : "https://github.com/aperezNWO/CppBuilder01/blob/master/Project3/Sudoku.cpp",
         "field_5"          : "https://www.geeksforgeeks.org/program-sudoku-generator/",
-        "field_6"          : "https://angularwebapidemo.somee.com/Demos/Sudoku_Solve_CPP?p_matrix=[{7,3,9,1,4,2,0,6,8},{0,4,0,3,8,5,7,9,1},{1,8,0,6,9,7,3,2,4},{2,0,3,5,7,8,4,0,6},{0,1,0,9,3,6,2,8,5},{8,0,0,4,2,1,0,7,3},{0,0,0,0,5,4,0,3,7},{3,7,4,8,1,9,6,0,2},{0,2,1,0,0,3,8,4,9"   
+        "field_6"          : "https://angularwebapidemo.somee.com/Demos/Sudoku_Solve_CPP?p_matrix=[{7,3,9,1,4,2,0,6,8},{0,4,0,3,8,5,7,9,1},{1,8,0,6,9,7,3,2,4},{2,0,3,5,7,8,4,0,6},{0,1,0,9,3,6,2,8,5},{8,0,0,4,2,1,0,7,3},{0,0,0,0,5,4,0,3,7},{3,7,4,8,1,9,6,0,2},{0,2,1,0,0,3,8,4,9" ,
+        "field_10"         : "dbda4780-50c8-4a97-8617-cf2a60bf9b32"  
     },
     {
 		"id"               : 2,
@@ -18,7 +19,7 @@
         "description"      : "Sort Algorithm",
         "field_3"          : "CppBuilder",
         "field_2"          : "Sort Algorithm, Bubble Sort, Quick Sort",
-        "field_1"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/AlgorithmSort",
+        "field_1"          : "./#/AlgorithmSort",
         "field_4"          : "https://github.com/aperezNWO/CppBuilder01/blob/master/Project2/SortBenchMark.cpp",
         "field_5"          : "https://en.wikipedia.org/wiki/Quicksort",
         "field_6"          : "https://angularwebapidemo.somee.com/demos/_GetSort_CPP?p_sortAlgoritm=2&p_unsortedList=10|5|1|23|2|19|13|14|3|0|8|22|18|9|17|7|16|12|11|4|21|24|6|20|15"   
@@ -30,7 +31,7 @@
         "description"      : "Shortest Path Algorithm",
         "field_3"          : "CppBuilder",
         "field_2"          : "Shortest Path, Graph, Dijkstra",
-        "field_1"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/AlgorithmDijkstra?langName=CPP",
+        "field_1"          : "./#/AlgorithmDijkstra?langName=CPP",
         "field_4"          : "https://github.com/aperezNWO/CppBuilder01/blob/master/Project2/Dijkstra.cpp",
         "field_5"          : "https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/",
         "field_6"          : "https://angularwebapidemo.somee.com/demos/GenerateRandomVertex_CPP?p_vertexSize=9&p_sourcePoint=0"   
@@ -42,7 +43,7 @@
         "description"      : "Regex Demo",
         "field_3"          : "CppBuilder",
         "field_2"          : "Regular Expressions",
-        "field_1"          : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/AlgorithmRegEx",
+        "field_1"          : "./#/AlgorithmRegEx",
         "field_4"          : "https://github.com/aperezNWO/CppBuilder01/blob/master/Project1/RegExManager.cpp",
         "field_5"          : "https://en.cppreference.com/w/cpp/regex/regex_search",
         "field_6"          : "https://angularwebapidemo.somee.com/demos/_RegExEval_CPP?p_tagSearch=company&p_textSearch=bmg"   
