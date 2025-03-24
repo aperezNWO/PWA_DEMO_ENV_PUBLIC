@@ -70,7 +70,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
     //
     td_buttonCaption_xls               : string  = "[Generar Excel]";
     //
-    td_textStatus_xls                  = signal<string>("");
+    td_textStatus_xls                  : string  = "";
     //
     td_ExcelDownloadLink               : string  = "#";
     //
@@ -120,11 +120,6 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
         effect(() => {
           if (this.td_textStatus())
               this.speechService.speakTextCustom(this.td_textStatus());
-        });
-        // Define an effect to react to changes in the signal
-        effect(() => {
-          if (this.td_textStatus_xls())
-              this.speechService.speakTextCustom(this.td_textStatus_xls());
         });
     }
     //
@@ -386,7 +381,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
       //
       this.td_buttonCaption_xls               = "[Generar Excel]";
       //
-      this.td_textStatus_xls.set("");
+      this.td_textStatus_xls                  = "";
       //
       this.td_ExcelDownloadLink               = "#";
     }
@@ -596,7 +591,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
       //
       this.td_buttonCaption_xls               = "[Generando por favor espere...]";
       //
-      this.td_textStatus_xls.set("Generando por favor espere.");
+      this.td_textStatus.set("Generando por favor espere.");
       //
       const xlsObserver                       = {
         //
@@ -606,7 +601,9 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
           //
           this.td_ExcelDownloadLink  = `${this.backendService._baseUrlNetCore}/wwwroot/xlsx/${urlFile}`;
           //
-          this.td_textStatus_xls.set("Descargar Excel");
+          this.td_textStatus.set("Se generó el archivo XLS correctamente");
+          //
+          this.td_textStatus_xls = "[Descargar Excel]";
         },
         error   : (err: Error)  => {
           //
@@ -616,7 +613,9 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
           //
           this.td_buttonCaption_xls  = "[Ha ocurrido un error]";
           //
-          this.td_textStatus_xls.set("[Ha ocurrido un error]");
+          this.td_textStatus_xls = "[Ha ocurrido un error]";
+          //
+          this.td_textStatus.set("Ha ocurrido un error")
         },
         complete: () => {
           //

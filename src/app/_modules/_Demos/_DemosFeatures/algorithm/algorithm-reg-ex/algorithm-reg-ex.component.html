@@ -1,7 +1,36 @@
-    <div class="content-body">
+    <div class="content">
         <div align="center"><h1>{{this.pageTitle}}</h1></div>
         <hr>
-        <p>Ver referencia&nbsp;<a href="javascript: void window.open('https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex?view=net-5.0')">[Clase "RegEx"]</a></p>
+        <div class="reference" align="right">
+            <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
+            <ul *ngIf="isListVisible" align="left" width="10px">
+                <li> [Frontend]
+                  <ul>
+                    <li><a routerLink="/AngularDemo" [queryParams]="{ searchTerm: '756e8939-bca0-45f7-b581-63e417b6a2d5' }">[Angular]</a></li>
+                  </ul>
+                </li>
+                <li>[Backend]
+                  <ul>
+                    <li><a routerLink="/NetCoreDemo"     [queryParams]="{ searchTerm: '2c8741f0-d7b9-4cef-8aae-e5b2aa4cc0e4' }">[.netcore/c#]</a></li>
+                    <li><a routerLink="/CppDemo"         [queryParams]="{ searchTerm: '82ffb387-0aee-4849-9594-75fc2898cf1e' }">[.netcore/c++]</a></li>
+                </ul>
+                </li>
+                <li>[Librerias]
+                    <ul>
+                        <li>
+                            <p><a href="javascript: void window.open('https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex?view=net-5.0')">[Clase "RegEx"]</a></p>
+                         </li>
+                    </ul>
+                </li>
+                <li>[Temática]
+                    <ul>
+                        <li>
+                            <a href="javascript: void window.open('https://en.wikipedia.org/wiki/Regular_expression')">[Regular Expressions]</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>   
         <hr>
         <p>[CONTENIDO A BUSCAR]</p>
         <div id="XmlContent">
@@ -45,7 +74,7 @@
             </div>
             <!--STATUS / INICIO   -->
             <div *ngIf="this.lblStatus" class="form-group alert alert-secondary" align="center" role="alert">
-                    {{ this.lblStatus }}
+                    {{ this.lblStatus() }}
             </div>
             <!-- STATUS / FIN     -->
             <!-- BOTONES / INICIO -->

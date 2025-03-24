@@ -2,16 +2,41 @@
     <!-- ENCABEZADO / INICIO -->
     <div align="center"><H1>{{this.pageTitle}}</H1></div>
     <hr>
-    <p>Ver referencia&nbsp;<a href="javascript: void window.open('https://en.wikipedia.org/wiki/Bubble_sort')">[BUBBLE SORT]</a></p>
-    <p>Ver referencia&nbsp;<a href="javascript: void window.open('https://en.wikipedia.org/wiki/Quicksort')">[QUICK SORT]</a></p>
-    <p>Ver referencia&nbsp;<a href="javascript: void window.open('https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle')">[FISHER/YATES SHUFFLE]</a></p>
+    <div class="reference" align="right">
+        <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
+        <ul *ngIf="isListVisible" align="left" widdth="10px">
+            <li> [Frontend]
+                <ul>
+                    <li><a routerLink="/AngularDemo" [queryParams]="{ searchTerm: '6bfa047d-dbd7-4991-a4d6-b9786c601285' }">[Angular]</a></li>
+                </ul>
+            </li>
+            <li>[Backend]
+                <ul>
+                <li><a routerLink="/CppDemo"             [queryParams]="{ searchTerm: 'bf4b9c6d-3cac-4585-885e-4b8e29420010' }">[.netcore/c++]</a></li>
+                <li><a routerLink="/NetCoreDemo"         [queryParams]="{ searchTerm: '2f631080-b28c-4973-add6-0d26cb30e2c1' }">[.netcore/c#]</a></li>
+                </ul>
+            </li>
+            <li>[Librerias]
+                <ul>
+                    <li><a href="https://developer.mozilla.org/es/docs/Web/API/Canvas_API" target="_blank">[canvas]</a></li>
+                </ul>
+            </li>
+            <li>[Temas]
+                <ul>
+                    <li><a href="javascript: void window.open('https://en.wikipedia.org/wiki/Bubble_sort')">[BUBBLE SORT]</a></li>
+                    <li><a href="javascript: void window.open('https://en.wikipedia.org/wiki/Quicksort')">[QUICK SORT]</a></li>
+                    <li><a href="javascript: void window.open('https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle')">[FISHER/YATES SHUFFLE]</a></li>
+                </ul>
+            </li>
+        </ul>
+        </div>  
     <!-- ENCABEZADO / FIN   -->
     <hr>
     <!--  BOARD / INICIO   -->
     <p>Listado a Ordenar</p>
         <div id="mensajes_1" #mensajes_1 class="mensajes">
         </div>
-    <br/>        
+    <br/>            
     <p>Listado Oredenado</p>        
         <div id="mensajes_2" #mensajes_2 class="mensajes">
         </div>
@@ -47,7 +72,7 @@
             <hr>
             <!--STATUS / INICIO   -->
             <div  *ngIf="this.lblStatus" class="form-group alert alert-secondary" align="center" role="alert">
-                {{ this.lblStatus }}
+                {{ this.lblStatus() }}
             </div>
             <!-- STATUS / FIN      -->
             <hr />
@@ -55,7 +80,7 @@
             <div class="form-group" align="left" >
                 <input class="btn btn-primary"   id="NewSort" type="button" title="[REINICIAR]" value="[REINICIAR]" 
                 (click)="this.GetNewSort()" 
-                [disabled]=" !(this.lblStatus == '[SE ORDENO CORRECTAMENTE EL LISTADO]')  ">
+                [disabled]=" (this.GetSortLabel  == '[...ordenando...]')  ">
                 |
                 <input class="btn btn-success"   id="GetSort" type="button" title="[ORDENAR]" value={{this.GetSortLabel}} 
                 (click)="this.GetSort()"

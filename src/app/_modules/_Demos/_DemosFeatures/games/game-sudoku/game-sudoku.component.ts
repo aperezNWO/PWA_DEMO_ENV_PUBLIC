@@ -1,12 +1,13 @@
-import { Component, OnInit            } from '@angular/core';
-import { ViewChild, AfterViewInit     } from '@angular/core';
-import { FormBuilder, NgForm,         } from '@angular/forms';
-import { HttpEventType, HttpResponse  } from '@angular/common/http';
-import { Observable                   } from 'rxjs';
-import { BackendService               } from 'src/app/_services/BackendService/backend.service';
-import { PdfService                   } from 'src/app/_engines/pdf.engine';
-import { _languageName, ListItem                     } from 'src/app/_models/entity.model';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit, signal, effect } from '@angular/core';
+import { ViewChild, AfterViewInit          } from '@angular/core';
+import { FormBuilder, NgForm,              } from '@angular/forms';
+import { HttpEventType, HttpResponse       } from '@angular/common/http';
+import { ActivatedRoute                    } from '@angular/router';
+import { Observable                        } from 'rxjs';
+import { BackendService                    } from 'src/app/_services/BackendService/backend.service';
+import { PdfService                        } from 'src/app/_engines/pdf.engine';
+import { _languageName, ListItem           } from 'src/app/_models/entity.model';
+import { SpeechService                     } from 'src/app/_services/speechService/speech.service';
 //
 @Component({
   selector: 'app-sudoku',
@@ -33,7 +34,6 @@ export class SudokuComponent implements OnInit, AfterViewInit {
   //
   public __generateSourceList : any;
   //
-  public _cppSourceDivHidden: boolean = true;
   public _fileUploadDivHidden:boolean = true;
   //
   public sudokuSolved: boolean = true;
@@ -45,13 +45,13 @@ export class SudokuComponent implements OnInit, AfterViewInit {
   selectedFiles?   : FileList;
   currentFile?     : File;
   progress         : number = 0;
-  message          : string = '';
+  message          = signal<string>('');
   downloadLink     : string = '';
   //
   rf_searchForm   = this.formBuilder.group({
     //_fileUpload   : ["", Validators.required],
   });
-  pageTitle       : string = '[SUDOKU]';
+  pageTitle       : string = '[GAMES - SUDOKU]';
   public isListVisible            = false; // Initially hidden
   public toogleLisCaption: string = "[Ver Referencias]";
   //
@@ -59,9 +59,19 @@ export class SudokuComponent implements OnInit, AfterViewInit {
                   private algorithmService : BackendService,
                   private formBuilder      : FormBuilder, 
                   public  pdfEngine        : PdfService,
-                  public  route            : ActivatedRoute) 
+                  public  route            : ActivatedRoute,
+                  public  speechService    : SpeechService,
+                  public  backendService   : BackendService) 
   { 
-    //console.log('[SUDOKU - INGRESO]');
+    //
+    this.speechService.speakTextCustom(this.pageTitle);
+    //
+    backendService.SetLog(this.pageTitle,"PAGE_DIJKSTRA_DEMO");
+    //
+    effect(() => {
+      if (this.message())
+        this.speechService.speakTextCustom(this.message());
+    });
   }
   //
   ngAfterViewInit(): void {
@@ -71,8 +81,6 @@ export class SudokuComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     //
     this.queryParams();
-    //
-    this._cppSourceDivHidden = false;
     //
     this.__generateSourceList = new Array();
     this.__generateSourceList.push(new ListItem(0, '(SELECCIONE OPCION..)', false));
@@ -86,6 +94,8 @@ export class SudokuComponent implements OnInit, AfterViewInit {
   toggleList() {
     this.isListVisible     = !this.isListVisible; // Toggle visibility
     this.toogleLisCaption  = !(this.isListVisible)? "[Ver Referencias]" : "[Ocultar Referencias]";
+    if (this.isListVisible)
+        this.speechService.speakTextCustom("Ver referencias");
   }
   //
   queryParams():void{
@@ -121,31 +131,18 @@ export class SudokuComponent implements OnInit, AfterViewInit {
     });
   }
   //
-  public _cppSourceDivHiddenChanged(): void {
-    //
-    //console.log('SUDOKU - [DIV CPP SOURCE CHANGED]');
-    //
-    let _selectedIndex: number =
-      this._languajeList.nativeElement.options.selectedIndex;
-    this._cppSourceDivHidden = _selectedIndex != 1; // item 1 = "c++"
-    //
-    this.message = "";
-  }
-  //
   public _fileUploadDivHiddenChanged(): void {
-    //
-    //console.log('SUDOKU - [DIV FILEUPLOAD CHANGED]');
     //
     let _selectedIndex: number =
       this._sourceList.nativeElement.options.selectedIndex;
     this._fileUploadDivHidden = _selectedIndex != 1; // item 1 = "Desde Archivo"
     //
-    this.message = "";
+    this.message.set("");
   }
   //
   public GenerateFromBackend():void {
         //
-        //console.log('[SUDOKU - GENERATE FROM BACKEND]');
+        this.message.set("Generando");
         //
         let generatedSudoku: Observable<string>;
         let selectedIndex  : number = this._languajeList.nativeElement.options.selectedIndex; // c++ by default
@@ -168,8 +165,6 @@ export class SudokuComponent implements OnInit, AfterViewInit {
         const generatedSudokuObserver = {
           next: (jsondata: string) => {
             //
-            //console.log('[SUDOKU - GENERATE] - (return): ' + jsondata);
-            //
             this._sudokuGenerated = jsondata;
             //
             jsondata = jsondata.replaceAll('[', '');
@@ -191,10 +186,7 @@ export class SudokuComponent implements OnInit, AfterViewInit {
               this.board.push(row);
             }
             //
-            this.message            =  "[Se generó correctamente]";
-            //
-            const utterance = new SpeechSynthesisUtterance( this.message  );
-            speechSynthesis.speak(utterance);  
+            this.message.set("Se generó correctamente");
           },
           error: (err: Error) => {
             //
@@ -204,14 +196,9 @@ export class SudokuComponent implements OnInit, AfterViewInit {
             //
             this.btnGenerateCaption = '[GENERAR]';            
             //
-            this.message            =  "[Ha ocurrido un error]";
-            //
-            const utterance = new SpeechSynthesisUtterance( this.message  );
-            speechSynthesis.speak(utterance);  
+            this.message.set("Ha ocurrido un error");
           },
           complete: () => {
-            //
-            //console.log('[SUDOKU - GENERATE] -  (COMPLETE)');
             //
             this.btnGenerateCaption = '[GENERAR]';
           },
@@ -229,8 +216,6 @@ export class SudokuComponent implements OnInit, AfterViewInit {
   //
   upload(): void {
     //
-    //console.log('[SUDOKU - GENERATE  FROM FILE]');
-    //
     if (this.selectedFiles) {
       const file: File | null = this.selectedFiles.item(0);
       //
@@ -238,7 +223,7 @@ export class SudokuComponent implements OnInit, AfterViewInit {
         //
         this.progress = 0;
         //
-        this.message = '...cargando...';
+        this.message.set('...cargando...');
         //
         this.sudokuSolved = false;
         //
@@ -253,12 +238,7 @@ export class SudokuComponent implements OnInit, AfterViewInit {
               this.progress = Math.round((100 * event.loaded) / event.total);
             } else if (event instanceof HttpResponse) {
               //
-              this.message          = "[Se generó correctamente]";
-              //
-              const utterance = new SpeechSynthesisUtterance( this.message  );
-              speechSynthesis.speak(utterance);  
-              //
-              //console.log('RESPONSE : ' + event.body);
+              this.message.set("Se generó correctamente");
               //
               let  jsondata  = event.body;
               //
@@ -279,7 +259,6 @@ export class SudokuComponent implements OnInit, AfterViewInit {
               //
               for (let i = 0; i < 9; i++) {
                 const row: number[] = [];
-                //console.log(jsonDataArray[i]);
                 const rowString: string[] = jsonDataArray[i].split(',');
                 for (let j = 0; j < 9; j++) {
                   row.push(parseInt(rowString[j]));
@@ -301,19 +280,14 @@ export class SudokuComponent implements OnInit, AfterViewInit {
               this.message = err.error.message;
             } else {
               //
-              this.message = '[Could not upload the file!]';
+              this.message.set('no se puede cargar el archivo');
             }
             //
             this.currentFile = undefined;
             //
             this.btnGenerateCaption = '[GENERAR]';
-            //
-            const utterance = new SpeechSynthesisUtterance( this.message  );
-            speechSynthesis.speak(utterance);  
           },
           complete: () => {
-            //
-            //console.log('[SUDOKU - GENERATE  FROM FILE] -  (COMPLETE)');
             //
             this.btnGenerateCaption = '[GENERAR]';
             //
@@ -327,16 +301,11 @@ export class SudokuComponent implements OnInit, AfterViewInit {
     else 
     {
         //
-        this.message          = "[Favor seleccione archivo...]";
-        //
-        const utterance = new SpeechSynthesisUtterance( this.message  );
-        speechSynthesis.speak(utterance); 
+        this.message.set("Favor seleccione archivo");
     }
   }
   //
   public _GetSudoku(): void {
-      //
-      //console.log('[SUDOKU - GENERATE - MAIN MENU]');
       //
       let selectedIndex  : number = this._sourceList.nativeElement.options.selectedIndex; // "FROM ARCHIVE" by default
       //
@@ -355,11 +324,11 @@ export class SudokuComponent implements OnInit, AfterViewInit {
   //
   public _SolveSudoku(): void {
     //
-    //console.log('[SUDOKU - SOLVE] \n' + this._sudokuGenerated);
-    //
     this.sudokuSolved = true;
     //
     this.btnSolveCaption = '[...resolviendo...]';
+    //
+    this.message.set('resolviendo');
     //
     let solveSudoku: Observable<string>;
     //
@@ -380,12 +349,7 @@ export class SudokuComponent implements OnInit, AfterViewInit {
     const solveSudokuObserver = {
       next: (jsondata: string) => {
         //
-        this.message = "[Se resolvió correctamente]";
-        //
-        const utterance = new SpeechSynthesisUtterance( this.message  );
-        speechSynthesis.speak(utterance); 
-        //
-        //console.log('[SUDOKU - SOLVE] - (return): ' + jsondata);
+        this.message.set("Se resolvió correctamente");
         //
         this._sudokuGenerated = jsondata;
         //
@@ -400,7 +364,6 @@ export class SudokuComponent implements OnInit, AfterViewInit {
         //
         for (let i = 0; i < 9; i++) {
           const row: number[] = [];
-          //console.log(jsonDataArray[i]);
           const rowString: string[] = jsonDataArray[i].split(',');
           for (let j = 0; j < 9; j++) {
             row.push(parseInt(rowString[j]));
@@ -414,14 +377,9 @@ export class SudokuComponent implements OnInit, AfterViewInit {
           '[SUDOKU - SOLVE] - (ERROR) : ' + JSON.stringify(err.message),
         );
         //
-        this.message = "[Ha ocurrido un error]";
-        //
-        const utterance = new SpeechSynthesisUtterance( this.message  );
-        speechSynthesis.speak(utterance);  
+        this.message.set("Ha ocurrido un error");
       },
       complete: () => {
-        //
-        //console.log('[SUDOKU - SOLVE] -  (COMPLETE)');
         //
         this.btnSolveCaption = '[RESOLVER]';
         //
@@ -443,7 +401,7 @@ export class SudokuComponent implements OnInit, AfterViewInit {
     let fileName_input  : string     = `SUDOKU_BOARD_${suffix}`;
     let fileName_output : string     = '';
     //
-    this.message = '[...Generando PDF...]';
+    this.message.set('Generando PDF');
     //
     this.pdfEngine._GetPDF
       (
@@ -460,11 +418,12 @@ export class SudokuComponent implements OnInit, AfterViewInit {
         },
         error: (error: { message: string; }) => {
             //
-            this.message   = 'ha ocurrido un error : ' + error.message;
+            this.message.set('ha ocurrido un error : ' + error.message);
         },
         complete: () => {
             //
-            this.message = `Se ha generado el archivo PDF :[ ${fileName_output} ]`;
+            //this.message = `Se ha generado el archivo PDF :[ ${fileName_output} ]`;
+            this.message.set(`Se ha generado el archivo PDF `);
         }
       }
     );
@@ -472,13 +431,9 @@ export class SudokuComponent implements OnInit, AfterViewInit {
   //
   submitForm(form: NgForm) {
     if (form.valid) {
-      // Handle form submission logic
-      //console.log(form.value); // Access form values
       //
       let name    = form.value['txtName'];
       let message = form.value['txtMessage'];
-      //
-      //this.sendMessage(name,message);
     }
-    }
+  }
 }

@@ -1,9 +1,10 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { Observable                                  } from 'rxjs';
-import { SortInfo, _languageName                     } from 'src/app/_models/entity.model';
-import { DrawEngine } from 'src/app/_engines/draw.engine';
-import { BackendService } from 'src/app/_services/BackendService/backend.service';
-import { CustomErrorHandler } from 'src/app/app.component';
+import { AfterViewInit, Component, OnInit, ViewChild, effect, signal } from '@angular/core';
+import { ActivatedRoute                                              } from '@angular/router';
+import { Observable                                                  } from 'rxjs';
+import { SortInfo, _languageName                                     } from 'src/app/_models/entity.model';
+import { DrawEngine                                                  } from 'src/app/_engines/draw.engine';
+import { BackendService                                              } from 'src/app/_services/BackendService/backend.service';
+import { SpeechService                                               } from 'src/app/_services/speechService/speech.service';
 //
 @Component({
   selector: 'app-algorithm-sort',
@@ -23,7 +24,7 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
     ////////////////////////////////////////////////////////////////////////
     private   rectSize                                    : number = 10;
     readonly  pageTitle                                   : string = AlgorithmSortComponent.PageTitle;
-    public    lblStatus                                   : string = "[STATUS]";
+    public    lblStatus                                   = signal<string>("[STATUS]");
     public    tituloListadoLenguajes                      : string = "[BACKEND] : ";
     public    context                                     : any;
     @ViewChild('c_canvas') c_canvas                       : any;
@@ -44,24 +45,27 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
     public    __languajeList      : any;
     protected   drawEngine        : DrawEngine | undefined;
     //
-    constructor(private backendService: BackendService, private customErrorHandler: CustomErrorHandler)
+    public isListVisible            = false; // Initially hidden
+    public toogleLisCaption: string = "[Ver Referencias]";
+    //
+    constructor(private backendService    : BackendService, 
+                public  speechService     : SpeechService,
+                public  route             : ActivatedRoute)
     {
         //
         backendService.SetLog(this.pageTitle,"PAGE_SORT_BENCHAMRK_DEMO");
+        //
+        effect(() => {
+        if (this.lblStatus() && (this.GetSortLabel  != "[...ordenando...]"))
+            this.speechService.speakTextCustom(this.lblStatus());
+        });
+        //
+        this.speechService.speakTextCustom(this.pageTitle);
     }
     //
     ngOnInit(): void {
         //
-        console.info(AlgorithmSortComponent.PageTitle + " - [INGRESO]");
-
-        //-----------------------------------------------------------------------------
-        // LENGUAJES DE PROGRAMACION
-        //-----------------------------------------------------------------------------
-        this.__languajeList = new Array();
-        //
-        this.__languajeList.push( new _languageName(0,"(SELECCIONE OPCION..)",false,""));        
-        this.__languajeList.push( new _languageName(1,"(.NET Core/C#)"       ,false,""));        
-        this.__languajeList.push( new _languageName(2,"(.NET Core/C++)"      ,true ,""));    
+        this.queryParams();
     }
     //
     ngAfterViewInit(): void {
@@ -74,11 +78,51 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
         //
         this.GetNewSort();
     }
+    //--------------------------------------------------------------------------
+    // METODOS COMUNES 
+    //--------------------------------------------------------------------------
+    //
+    toggleList() {
+        this.isListVisible     = !this.isListVisible; // Toggle visibility
+        this.toogleLisCaption  = !(this.isListVisible)? "[Ver Referencias]" : "[Ocultar Referencias]";
+        //
+        (this.isListVisible)? this.speechService.speakTextCustom("[Ver Referencias]") : null;
+    }
+    //
+    queryParams():void {
+        //
+        this.route.queryParams.subscribe(params => {
+            //-----------------------------------------------------------------------------
+            // LENGUAJES DE PROGRAMACION
+            //-----------------------------------------------------------------------------
+            this.__languajeList = new Array();
+            //
+            this.__languajeList.push( new _languageName(0,"(SELECCIONE OPCION...)",false ,""));        
+            this.__languajeList.push( new _languageName(1,"(.NET Core/C#)"        ,true  ,"CS"));        
+            this.__languajeList.push( new _languageName(2,"(.NET Core/C++)"       ,false ,"CPP")); 
+            //
+            let langName = params['langName'] ? params['langName'] : "" ;
+            //
+            //console.log("query param : " + langName);
+            //
+            if (langName !== '')
+            {   
+                //
+                for (var index = 1; index < this.__languajeList.length; index++) {
+                    //
+                    if (this.__languajeList[index]._shortName  == langName)
+                    this.__languajeList[index]._selected = true;        
+                }
+
+            } else {
+            //
+            this.__languajeList[1]._selected = true; // C#
+            }
+        });
+    }
     //
     public GetSort()
     {
-        //
-        //console.log(AlgorithmSortComponent.PageTitle + " - [GET SORT]" );
         //
         let selectedIndex   : number = this.SortAlgorithmList.nativeElement.options.selectedIndex;
         let p_sortAlgorith  : number = this.SortAlgorithmList.nativeElement.options[selectedIndex].value;
@@ -86,7 +130,7 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
         if (p_sortAlgorith == 0)
         {
             //
-            this.lblStatus = ('FAVOR SELECCIONE UN ALGORITMO');
+            this.lblStatus.set('FAVOR SELECCIONE UN ALGORITMO');
             //
             return;
         }
@@ -121,9 +165,6 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
         const GetSortInfoObserver   = {
             //
             next: (data: string)     => { 
-                //
-                console.info(AlgorithmSortComponent.PageTitle + ' - [GETTING SORT]  - RETURN VALUE : ' + data);
-                //
                 //-----------------------------------------------------------------------
                 // CORREGIR DATOS DE MATRIZ PARA VISUALIZAR EN CANVAS
                 //-----------------------------------------------------------------------
@@ -148,8 +189,6 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
                         //
                         this.stringMatrix[index] = this.stringMatrix[index].replace("<br/>", ",");
                     }
-                    //
-                    //console.log('SORT_BENCHMARK . SORTED ARRAY : ' + index + ' : ' + this.stringMatrix[index]);
                 }
                 //-----------------------------------------------------------------------
                 // DIBUJAR CUADRICULA
@@ -163,10 +202,7 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
                 //
                 console.error(AlgorithmSortComponent.PageTitle + ' - [GETTING SORT] - [error] : ' + err.message);
                 //
-                this.lblStatus  = "[ha ocurrido un error]";
-                //
-                const utterance = new SpeechSynthesisUtterance( this.lblStatus );
-                speechSynthesis.speak(utterance);  
+                this.lblStatus.set("ha ocurrido un error");
                 //
                 return false;
             },       
@@ -182,8 +218,6 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
     public GetNewSort():void
     {
         //
-        //console.log(AlgorithmSortComponent.PageTitle + " - [NEW SORT]" );  
-        //
         this.SortAlgorithmList.nativeElement.options.selectedIndex = 0;
         //
         this.stringMatrix              = [];
@@ -192,7 +226,7 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
         //
         this.mensajes_2.nativeElement.innerHTML   = "...obteniendo arreglo...";
         //
-        this.lblStatus                            = "...obteniendo arreglo...";                                    
+        this.lblStatus.set("...obteniendo arreglo...");                                    
         //
         let randomVertexInfo!          : Observable<string>;
         //
@@ -230,10 +264,7 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
                 //
                 console.error(AlgorithmSortComponent.PageTitle + ' - [GETTING NEW SORT] - [error] : ' + err.message);
                 //
-                this.lblStatus  = "[ha ocurrido un error]";
-                //
-                const utterance = new SpeechSynthesisUtterance( this.lblStatus );
-                speechSynthesis.speak(utterance);  
+                this.lblStatus.set("ha ocurrido un error");
             },       
             complete: ()        => {
                 //
@@ -248,11 +279,7 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
     _ResetControls():void
     {
         //
-        //console.log(this.pageTitle   + ' [RESET CONTROLS] ');
-        //
         this.stringArray_            = this.mensajes.nativeElement.innerHTML.split("<br>");
-        //
-        //console.log('NUMBER ARRAY [CURRENT] : ' + this.stringArray_);
         //
         let numberArray  : SortInfo[] = []; 
         //
@@ -267,15 +294,13 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
         //
         this.drawEngine?.DrawRectangles(numberArray);
         //
-        this.lblStatus       = "[REINICIO EXITOSO]";
+        this.lblStatus.set("REINICIO EXITOSO");
         //
         this.GetSortLabel    = "[ORDENAR]";
     }
     //
     DrawStep():void
     {
-        //
-        //console.log('SORT_BENCHMARK . DRAWING ARRAY : ' + this.indexDraw);
         //
         if (this.indexDraw >= this.stringMatrix.length)
         {
@@ -292,14 +317,9 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
             //
             this.mensajes_2.nativeElement.innerHTML = _sortedArrayDecoded;
             //
-            this.lblStatus        = "[SE ORDENO CORRECTAMENTE EL LISTADO]";
+            this.lblStatus.set("SE ORDENO CORRECTAMENTE EL LISTADO");
             //
-            this.GetSortLabel     = "[...ordenado...]";
-            //
-            //console.log('SORT_BENCHMARK . SORTED ARRAY : ' + _sortedArrayDecoded);
-            //
-            const utterance = new SpeechSynthesisUtterance( this.lblStatus );
-            speechSynthesis.speak(utterance); 
+            this.GetSortLabel     = "[ORDENAR]";
             //
             return;
         }
@@ -307,15 +327,11 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
         if ((this.stringMatrix[this.indexDraw] == null) || (this.stringMatrix[this.indexDraw] != ''))
         {
             //
-            this.lblStatus  = `Paso ${this.indexDraw} de ${this.stringMatrix.length-1}`;
+            this.lblStatus.set(`Paso ${this.indexDraw} de ${this.stringMatrix.length-1}`);
             //
             let stringArray_past    : string[]   = (this.indexDraw == 1) ? this.stringArray_ : this.stringMatrix[this.indexDraw - 1].split(",") ;
             //
-            //console.log('NUMBER ARRAY [PAST]    : ' + stringArray_past);
-            //
             let stringArray_current : string[]   = this.stringMatrix[this.indexDraw].split(",");
-            //
-            //console.log('NUMBER ARRAY [CURRENT] : ' + stringArray_current);
             //
             let numberArray : SortInfo[] = []; 
             //
@@ -345,9 +361,9 @@ export class AlgorithmSortComponent implements OnInit, AfterViewInit {
         //
         this.indexDraw = 0;
         //
-        this.GetSortLabel     = "[...ordenando...]";
+        this.GetSortLabel  = "[...ordenando...]";
         //
-        //console.log('SORT_BENCHMARK . DRAWING ARRAY INITIAL. index: ' + this.indexDraw + ',matrix length : : ' + this.stringMatrix.length);
+        this.lblStatus.set("Ordenando");
         //
         this.DrawStep();
     }

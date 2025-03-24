@@ -14,8 +14,10 @@
                 </li>
                 <li>[Backend]
                   <ul>
-                    <li><a routerLink="/SpringBootDemo"  [queryParams]="{ searchTerm: '1e32e88d-da6c-429a-b326-22056574e8a4' }">[Java/Springboot]</a></li>
-                  </ul>
+                    <li><a routerLink="/NetCoreDemo"     [queryParams]="{ searchTerm: '292ed965-b158-45a6-900e-78a5dc8ed1bd' }">[.netcore/c#]</a></li>
+                    <li><a routerLink="/CppDemo"         [queryParams]="{ searchTerm: '8a33d9c8-708b-43a8-be1e-dae42606f2a0' }">[.netcore/c++]</a></li>
+                    <li><a routerLink="/SpringBootDemo"  [queryParams]="{ searchTerm: '1e32e88d-da6c-429a-b326-22056574e8a4' }">[Springboot/Java]</a></li>
+                </ul>
                 </li>
                 <li>[Librerias]
                     <ul>
@@ -32,7 +34,7 @@
                     </ul>
                 </li>
             </ul>
-          </div>       
+        </div>       
          <!-- ENCABEZADO FIN    -->
         <hr />
         <!-- PANEL GRAFICO / INICIO -->
@@ -60,8 +62,7 @@
             <label for="_vertexSizeList">Cantidad de Puntos:</label>
             <select     id="_vertexSizeList"
                         name="_vertexSizeList"
-                        #_vertexSizeList
-                        (change)="this._vertexSizeListChange();">                    
+                        #_vertexSizeList>                    
             <option *ngFor="let _vertexSize of __vertexSizeList" [value]="_vertexSize._index">{{_vertexSize._value}}</option>
             </select>
         </div>

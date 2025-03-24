@@ -31,13 +31,12 @@ export class SpeechService {
             this.isListening = false;
             console.error('Error:', this.error);
           };
-    
+          //
           this.recognition.onend = () => {
             //
-            //console.log('Recognition ended.');
           };
         } else {
-          alert('Speech Recognition API is not supported in your browser.');
+          console.info('Speech Recognition API is not supported in your browser.');
         }
   }
 
@@ -77,7 +76,7 @@ export class SpeechService {
       //
       setTimeout(() => {
         //
-        console.log("speaking text : " + _transcript);
+        //console.log("speaking text : " + _transcript);
         //
         const utterance = new SpeechSynthesisUtterance(_transcript);
         utterance.lang  = (lang=='')?  'es-CO' : lang;

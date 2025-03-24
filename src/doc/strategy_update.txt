@@ -2,6 +2,10 @@
 -- STRATEGY UPDATE
 ////////////////////////////////////////////////////////////////////////////////
 
+-- [x] Sound init workaround.  
+
+-- [x] button copy to clipborad guid.
+
 -- [_] home menu items.
 
         -- [_] programming languages / backend.
@@ -332,10 +336,16 @@
 
         -- [>] Ver Referencia [Tema].
 
--- [x] Sound init workaround.  
+-- [_] source code header comments for github.  
 
--- [x] button copy to clipborad guid.
+-- [_] trends page. 
+  
+        -- [_] Machine Learning. 
+    
+        -- [_] Computer Vision. 
+  
+        -- [_] Data Science. 
 
-
+  -- [_] fix angular curiculum <---> angular reference.       
   
  ////////////////////////////////////////////////////////////////////////////////

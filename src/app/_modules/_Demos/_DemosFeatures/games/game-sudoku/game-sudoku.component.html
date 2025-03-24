@@ -1,6 +1,6 @@
 <div class="content">
     <div align="center">
-        <h1>SUDOKU BOARD</h1>
+        <h1>{{  this.pageTitle }}</h1>
     </div>
     <hr> 
     <div class="reference" align="right">
@@ -20,6 +20,11 @@
         <li>[Librerias]
             <ul>
                 <li><a href="https://www.npmjs.com/package/jspdf" target="_blank">[jsPDF]</a></li>
+            </ul>
+        </li>
+        <li>[Temas]
+            <ul>
+                <li><a href="https://www.geeksforgeeks.org/sudoku-backtracking-7/" target="_blank">[Sudoku]</a></li>
             </ul>
         </li>
     </ul>
@@ -64,8 +69,7 @@
             <label for="LanguajeList"><span id="tituloListadoLenguajes">{{this.tituloListadoLenguajes}}</span></label>
             <select id="LanguageList"
                     name="LanguajeList"
-                    #_languajeList
-                    (change)="this._cppSourceDivHiddenChanged()">
+                    #_languajeList>
                     <option *ngFor="let _languageName of __languajeList" 
                             [value]   ="_languageName._index"
                             [selected]="_languageName._selected">{{_languageName._value}}
@@ -109,7 +113,7 @@
         <hr>
         <!--STATUS / INICIO               -->
         <div align="left">
-            <div *ngIf="message" class="alert alert-secondary" role="alert">{{ message }}</div>
+            <div *ngIf="message" class="alert alert-secondary" role="alert">{{  message() }}</div>
         </div>
         <!-- STATUS / FIN     -->
         <!-- BUTTONS / INICIO -->
@@ -126,7 +130,7 @@
             <!-- GENERAR PDF / INICIO -->
             <span *ngIf="(this.board.length>0)" align="left">
                 |
-                <input class="btn btn-secondary" type="button" name="btnGeneratePdf" value="[GENERAR PDF]" (click)="this._GetPdf()" [disabled]="(this.message == '[...Generando PDF...]')">
+                <input class="btn btn-secondary" type="button" name="btnGeneratePdf" value="[GENERAR PDF]" (click)="this._GetPdf()" [disabled]="(this.message.toString() == '[...Generando PDF...]')">
             </span>
             <!-- GENERAR PDF / FIN    -->
         </div>

@@ -26,8 +26,8 @@
     {
 		"id"               : 3,
         "done"             : true,
-        "name"             : "Algoritmo discancia mas corta",
-        "description"      : "Algoritmo discancia mas corta",
+        "name"             : "Algoritmo distancia mas corta",
+        "description"      : "Algoritmo distancia mas corta",
         "field_1"          : "Spring Boot, REST service, Dijkstra",
         "field_2"          : "./#/AlgorithmDijkstra?langName=JAVA",
         "field_3"          : "https://github.com/aperezNWO/JAVA2_EE_SB_DEMO/blob/master/src/main/java/com/example/demo/AlgorithmManager.java",

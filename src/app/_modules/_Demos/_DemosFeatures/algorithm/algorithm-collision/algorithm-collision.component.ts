@@ -1,5 +1,7 @@
-import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-import { PageRestartService } from 'src/app/_services/pageRestart/page-restart.service';
+import { Component, ViewChild, ElementRef, AfterViewInit, effect, signal } from '@angular/core';
+import { BackendService                                                  } from 'src/app/_services/BackendService/backend.service';
+import { PageRestartService                                              } from 'src/app/_services/pageRestart/page-restart.service';
+import { SpeechService                                                   } from 'src/app/_services/speechService/speech.service';
 
 @Component({
   selector: 'app-algorithm-collision',
@@ -7,7 +9,11 @@ import { PageRestartService } from 'src/app/_services/pageRestart/page-restart.s
   styleUrl: './algorithm-collision.component.css'
 })
 export class AlgorithmCollisionComponent implements AfterViewInit {
+  //
+  protected pageTitle : string = "[ALGORITMOS - COLISION]";
+  //
   @ViewChild('ballCanvas', { static: false }) canvas!: ElementRef<HTMLCanvasElement> | null;
+  //
   private ctx!: CanvasRenderingContext2D | null;
   private ball = {
     x: 100,
@@ -17,13 +23,19 @@ export class AlgorithmCollisionComponent implements AfterViewInit {
     radius: 15,
     mass: 1
   };
-  private gravity = 0.5;  // Gravity pulling down
-  private friction = 0.98; // Friction to slow down the ball
+  private gravity     = 0.5;  // Gravity pulling down
+  private friction    = 0.98; // Friction to slow down the ball
   private restitution = 0.8; // Bounce factor, 1 = perfect elastic collision, <1 = energy loss
 
-  constructor(private pageRestartService: PageRestartService)
+  constructor(private pageRestartService: PageRestartService,
+              public  speechService     : SpeechService,
+              public  backendService    : BackendService,
+  )
   {
-    
+     //
+     this.backendService.SetLog(this.pageTitle,"PAGE_COLLISION_DEMO");
+     //
+     this.speechService.speakTextCustom(this.pageTitle)
   }
   restart() {
     this.pageRestartService.reloadPage(); // or use any other method

@@ -1,9 +1,11 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { effect, signal                              } from '@angular/core';
+import { ActivatedRoute                              } from '@angular/router';
 import { Observable                                  } from 'rxjs';
 import { _languageName                               } from 'src/app/_models/entity.model';
 import { UtilManager                                 } from 'src/app/_engines/util.engine';
-import { BackendService } from 'src/app/_services/BackendService/backend.service';
-import { CustomErrorHandler } from 'src/app/app.component';
+import { BackendService                              } from 'src/app/_services/BackendService/backend.service';
+import { SpeechService                               } from 'src/app/_services/speechService/speech.service';
 
 //
 @Component({
@@ -23,7 +25,7 @@ export class AlgorithmRegExComponent implements OnInit, AfterViewInit {
     //
     readonly  pageTitle              : string = AlgorithmRegExComponent.PageTitle;
     protected xmlData                : string = "";
-    protected lblStatus              : string = "";
+    protected lblStatus              = signal<string>("");
     protected pattern                : string = "";
     public    __languajeList         : any;
     public    tituloListadoLenguajes : string = "BACKEND";
@@ -34,44 +36,80 @@ export class AlgorithmRegExComponent implements OnInit, AfterViewInit {
     @ViewChild('regExSearch')     regExSearch    : any;
     @ViewChild('_languajeList')   _languajeList  : any;
     //
-    constructor(private backendService:BackendService, private customErrorHandler : CustomErrorHandler)
+    public isListVisible            = false; // Initially hidden
+    public toogleLisCaption: string = "[Ver Referencias]";
+    //
+    constructor(private backendService: BackendService, 
+                public  speechService : SpeechService,
+                public  route         : ActivatedRoute)
     {
         //
         backendService.SetLog(this.pageTitle,"PAGE_REGEX_DEMO");
+        //
+        effect(() => {
+        if (this.lblStatus())
+            this.speechService.speakTextCustom(this.lblStatus());
+        });
+        //
+        this.speechService.speakTextCustom(this.pageTitle);
     }
     //
     ngOnInit(): void {
         //
-        //console.log(AlgorithmRegExComponent.PageTitle + " - [INGRESANDO]");
-        //
-        //-----------------------------------------------------------------------------
-        // LENGUAJES DE PROGRAMACION
-        //-----------------------------------------------------------------------------
-        this.__languajeList = new Array();
-        //
-        this.__languajeList.push( new _languageName(0,"(SELECCIONE OPCION..)",false,""));        
-        this.__languajeList.push( new _languageName(1,"(.NET CORE/C#)"       ,false,""));        
-        this.__languajeList.push( new _languageName(2,"(.NET CORE/C++)"      ,true ,""));  
+        this.queryParams();
     }
     //
     ngAfterViewInit(): void {
-      //
-      //console.log(AlgorithmRegExComponent.PageTitle + " - [INICIO VISUAL]");
       //
       this._GetXMLData();
     }
     ////////////////////////////////////////////////////////////////
     // METODOS    //////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////
-    _GetXMLData():void {
+    //
+    toggleList() {
+        this.isListVisible     = !this.isListVisible; // Toggle visibility
+        this.toogleLisCaption  = !(this.isListVisible)? "[Ver Referencias]" : "[Ocultar Referencias]";
         //
-        //console.log(AlgorithmRegExComponent.PageTitle + " - [GET XML DATA]");
+        (this.isListVisible)? this.speechService.speakTextCustom("[Ver Referencias]") : null;
+    }
+    //
+    queryParams():void {
+        //
+        this.route.queryParams.subscribe(params => {
+            //-----------------------------------------------------------------------------
+            // LENGUAJES DE PROGRAMACION
+            //-----------------------------------------------------------------------------
+            this.__languajeList = new Array();
+            //
+            this.__languajeList.push( new _languageName(0,"(SELECCIONE OPCION..)",false ,""   ));        
+            this.__languajeList.push( new _languageName(1,"(.NET CORE/C#)"       ,true  ,"CS" ));        
+            this.__languajeList.push( new _languageName(2,"(.NET CORE/C++)"      ,false ,"CPP"));  
+            //
+            let langName = params['langName'] ? params['langName'] : "" ;
+            //
+            if (langName !== '')
+            {   
+                //
+                for (var index = 1; index < this.__languajeList.length; index++) {
+                    //
+                    if (this.__languajeList[index]._shortName  == langName)
+                        this.__languajeList[index]._selected = true;        
+                }
+
+            } else {
+                //
+                this.__languajeList[1]._selected = true; // C#
+            }
+        });
+    }
+    _GetXMLData():void {
         //
         let xmlInfo!  : Observable<string>;
         //
         xmlInfo       = this.backendService._GetXmlData();
         //
-        this.lblStatus = "[..CARGANDO POR FAVOR ESPERERE...]"
+        this.lblStatus.set("[..CARGANDO POR FAVOR ESPERERE...]");
         //
         const xmlInfoObserver   = {
             //
@@ -89,19 +127,13 @@ export class AlgorithmRegExComponent implements OnInit, AfterViewInit {
                 //
                 this.mensajes.nativeElement.innerHTML = this.xmlData;
                 //
-                this.lblStatus = "[REINICIO EXITOSO]"
-                //
-                const utterance = new SpeechSynthesisUtterance( this.lblStatus );
-                speechSynthesis.speak(utterance); 
+                this.lblStatus.set("[REINICIO EXITOSO]")                 
                 //
                 this.pattern   = "";
             },
             error: (err: Error) => {
                 //
-                this.lblStatus = "[HA OCURRIDO UN ERROR]";
-                //
-                const utterance = new SpeechSynthesisUtterance( this.lblStatus );
-                speechSynthesis.speak(utterance); 
+                this.lblStatus.set("[HA OCURRIDO UN ERROR]");
                 //
                 this.pattern   = "";
                 //
@@ -119,23 +151,20 @@ export class AlgorithmRegExComponent implements OnInit, AfterViewInit {
     //
     GetRegex():void{
         //
-        //console.log(AlgorithmRegExComponent.PageTitle + " - [EVAL REGEX]");   
-        //
         let selectedIndex   : number = this.tagSearch.nativeElement.options.selectedIndex;
         let tagSearchIndex  : number = this.tagSearch.nativeElement.options[selectedIndex].value;
-        let tagSearchValue  : string = "";
         let textSearchValue : string = this.textSearch.nativeElement.value;
         //
         if (tagSearchIndex == 0) {
             //
-            this.lblStatus = "FAVOR SELECCIONE UN [ELEMENTO A BUSCAR]";
+            this.lblStatus.set("FAVOR SELECCIONE UN [ELEMENTO A BUSCAR]") ;
             //
             return;
         }
         //
         if (textSearchValue == "") {
             //
-            this.lblStatus = "FAVOR INGRESE UN VALOR EN EL CAMPO [CONTENIDO]";
+            this.lblStatus.set("FAVOR INGRESE UN VALOR EN EL CAMPO [CONTENIDO]");
             //
             return;
         }
@@ -181,26 +210,13 @@ export class AlgorithmRegExComponent implements OnInit, AfterViewInit {
                     let xmlHighlighted : string = resultArray[1];
                     //
                     this.pattern       = UtilManager.DebugHostingContent(resultArray[2]);
-                    //
-                    //console.log("REGEX. AMT OF MATCHES   : " + matchAmt);
-                    //
-                    //console.log("REGEX. PATTERN          : " + this.pattern);
                     //----------------------------------------------------------------------
                     // CONFIGURA CONTROLES
                     //----------------------------------------------------------------------
                     //
                     this.mensajes.nativeElement.innerHTML = xmlHighlighted;
                     //
-                    //$("#GetRegex").prop('disabled', true);
-                    //
-                    //$("#newSearch").prop('disabled', false);
-                    //
-                    //this.regExSearch.nativeElement.text   = pattern;
-                    //
-                    this.lblStatus = 'SE ENCONTRARON (' + matchAmt + ') COINCIDENCIAS';
-                    //
-                    const utterance = new SpeechSynthesisUtterance( this.lblStatus );
-                    speechSynthesis.speak(utterance); 
+                    this.lblStatus.set('SE ENCONTRARON (' + matchAmt + ') COINCIDENCIAS');
                 }
             },
             error: (err: Error) => {
