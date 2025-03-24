@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, ViewChild   } from '@angular/core';
+import { AfterViewInit, Component, effect, OnInit, ViewChild ,signal  } from '@angular/core';
 import { FormBuilder, Validators                       } from '@angular/forms';
 import { MatTableDataSource                            } from '@angular/material/table';
 import { MatPaginator                                  } from '@angular/material/paginator';
@@ -7,6 +7,7 @@ import { PersonEntity, SearchCriteria, _languageName   } from 'src/app/_models/e
 import { BackendService                                } from 'src/app/_services/BackendService/backend.service';
 import { CustomErrorHandler                            } from 'src/app/app.component';
 import { ActivatedRoute                                } from '@angular/router';
+import { SpeechService                                 } from 'src/app/_services/speechService/speech.service';
 //
 @Component({
   selector: 'app-files-generation-csv',
@@ -40,7 +41,7 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
     // PROPIEADES - REACTIVE FORMS
     //--------------------------------------------------------------------------
     //
-    rf_textStatus                      : string = "";
+    protected rf_textStatus            = signal<string>("");
     //
     rf_buttonCaption                   : string = "[Buscar]";
     //
@@ -82,9 +83,17 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
     constructor(public backendService       : BackendService, 
                 public formBuilder          : FormBuilder, 
                 public customErrorHandler   : CustomErrorHandler,
-                public route                : ActivatedRoute) 
+                public route                : ActivatedRoute,
+                public speechService        : SpeechService) 
     {
+      // Define an effect to react to changes in the signal
+      effect(() => {
+        if (this.rf_textStatus())
+            this.speechService.speakTextCustom(this.rf_textStatus());
+        //console.log('Signal value changed:', this.status_message());
+      });
       //
+      this.speechService.speakTextCustom(this.pageTitle);
     }
     //
     ngOnInit(): void {
@@ -106,6 +115,8 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
     toggleList() {
       this.isListVisible     = !this.isListVisible; // Toggle visibility
       this.toogleLisCaption  = !(this.isListVisible)? "[Ver Referencias]" : "[Ocultar Referencias]";
+      if (this.isListVisible)
+        this.speechService.speakTextCustom("Ver Referncias");
     }
     //
     queryParams():void{
@@ -174,24 +185,18 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
                     //
                     //console.log(FilesGenerationCSVComponent.PageTitle + ' - [SET CSV DATA] - RecordNumber ' + recordNumber);
                     //
-                    this.rf_textStatus        = "Se encontraton [" + recordNumber  + "] registros";
+                    this.rf_textStatus.set("Se encontraton [" + recordNumber  + "] registros");
                     //
                     this.csv_dataSource           = new MatTableDataSource<PersonEntity>(jsondata);
                     this.csv_dataSource.paginator = this.csv_paginator;
-                    //
-                    const utterance = new SpeechSynthesisUtterance( this.rf_textStatus );
-                    speechSynthesis.speak(utterance);  
                   },
                   error           : (err: Error)      => {
                     //
                     //console.log(FilesGenerationCSVComponent.PageTitle + " - [SET CSV DATA] - Error : [" + err.message + "]");
                     //
-                    this.rf_textStatus    = "[Ha ocurrido un error]";
+                    this.rf_textStatus.set("[Ha ocurrido un error]");
                     //
                     this.rf_buttonCaption = "[Buscar]";
-                    //
-                    const utterance = new SpeechSynthesisUtterance( this.rf_textStatus );
-                    speechSynthesis.speak(utterance);  
                   },
                   complete        : ()                => {
                     //
@@ -220,24 +225,19 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
                     //
                     //console.log(FilesGenerationCSVComponent.PageTitle + ' - [SET CSV DATA] - [NODE JS] - RecordNumber ' + recordNumber);
                     //
-                    this.rf_textStatus            = "Se encontraton [" + recordNumber  + "] registros";
+                    this.rf_textStatus.set("Se encontraton [" + recordNumber  + "] registros");
                     //
                     this.csv_dataSource           = new MatTableDataSource<PersonEntity>(csv_data_node_js_json);
                     this.csv_dataSource.paginator = this.csv_paginator;
-                    //
-                    const utterance = new SpeechSynthesisUtterance( this.rf_textStatus );
-                    speechSynthesis.speak(utterance);     
                   },
                   error           : (err: Error)      => {
                     //
                     //console.log(FilesGenerationCSVComponent.PageTitle + " - [SET CSV DATA] - [NODE JS] - Error : [" + err.message + "]");
                     //
-                    this.rf_textStatus    = "[Ha ocurrido un error]";
+                    this.rf_textStatus.set("[Ha ocurrido un error]");
                     //
                     this.rf_buttonCaption = "[Buscar]";
                     //
-                    const utterance = new SpeechSynthesisUtterance( this.rf_textStatus );
-                    speechSynthesis.speak(utterance);  
                   },
                   complete        : ()                => {
                     //
@@ -262,24 +262,21 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
                     //
                     let td_persons_springboot_java_json   = JSON.parse(td_persons_sprinbboot_java);
                     //
-                    this.rf_textStatus            = "Se encontraron [" + td_persons_springboot_java_json.length + "] registros ";
+                    this.rf_textStatus.set("Se encontraron [" + td_persons_springboot_java_json.length + "] registros ");
                     this.rf_formSubmit            = false;
                     //
                     this.csv_dataSource           = new MatTableDataSource<PersonEntity>(td_persons_springboot_java_json);
                     this.csv_dataSource.paginator = this.csv_paginator;
-                    //
-                    const utterance = new SpeechSynthesisUtterance( this.rf_textStatus );
-                    speechSynthesis.speak(utterance);  
                   },
                   error           : (err: Error)      => {
                     //
                     console.error('TEMPLATE DRIVEN - sprigboot/Java - (ERROR) : ' + JSON.stringify(err.message));
                     //
-                    this.rf_textStatus           = "Ha ocurrido un error. Favor intente de nuevo";
+                    this.rf_textStatus.set("Ha ocurrido un error. Favor intente de nuevo");
                     this.rf_formSubmit           = false;
                     this.rf_buttonCaption        = "[Buscar]";
                     //
-                    const utterance = new SpeechSynthesisUtterance( this.rf_textStatus );
+                    const utterance = new SpeechSynthesisUtterance( this.rf_textStatus() );
                     speechSynthesis.speak(utterance);  
                   },
                   complete        : ()                => {
@@ -306,25 +303,19 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
                     //
                     let td_persons_django_pytnon_json   = JSON.parse(td_persons_python_django);
                     //
-                    this.rf_textStatus            = "Se encontraron [" + td_persons_django_pytnon_json.length + "] registros ";
+                    this.rf_textStatus.set("Se encontraron [" + td_persons_django_pytnon_json.length + "] registros ");
                     this.rf_formSubmit            = false;
                     //
                     this.csv_dataSource           = new MatTableDataSource<PersonEntity>(td_persons_django_pytnon_json);
                     this.csv_dataSource.paginator = this.csv_paginator;
-                    //
-                    const utterance = new SpeechSynthesisUtterance( this.rf_textStatus );
-                    speechSynthesis.speak(utterance);  
                   },
                   error           : (err: Error)      => {
                     //
                     console.error('TEMPLATE DRIVEN - python/django - (ERROR) : ' + JSON.stringify(err.message));
                     //
-                    this.rf_textStatus           = "Ha ocurrido un error. Favor intente de nuevo";
+                    this.rf_textStatus.set("Ha ocurrido un error. Favor intente de nuevo");
                     this.rf_formSubmit           = false;
                     this.rf_buttonCaption        = "[Buscar]";
-                    //
-                    const utterance = new SpeechSynthesisUtterance( this.rf_textStatus );
-                    speechSynthesis.speak(utterance);  
                   },
                   complete        : ()                => {
                     //
@@ -364,12 +355,16 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
             this.downloadLink = downloadLink_1;
             //
             //console.log(FilesGenerationCSVComponent.PageTitle + " - [SET CSV LINK] - DOWNLOAD LINK : [" + this.downloadLink + "]");
+            //
+            this.rf_textStatus.set("Se generó el archivo CSV correctamente");
           },
           error           : (err: Error)      => {
             //
             //console.log(FilesGenerationCSVComponent.PageTitle + " - [SET CSV LINK] - Error : [" + err.message + "]");
             //
             this.downloadCaption = "";
+            //
+            this.rf_textStatus.set("ha ocurrido un error generando archivo CSV");
           },
           complete        : ()                => {
             //
@@ -412,7 +407,7 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
         //
         this.rf_formSubmit          = false;
         //
-        this.rf_textStatus          = "";
+        this.rf_textStatus.set("");
         //
         this.rf_buttonCaption_csv   = "[Generar CSV]";
         //
@@ -449,7 +444,7 @@ export class FilesGenerationCSVComponent implements OnInit, AfterViewInit {
         //
         this.rf_formSubmit        = true;
         //
-        this.rf_textStatus        = "";
+        this.rf_textStatus.set("");
         //
         if ((this.rf_searchForm.valid == true))
             this.rf_update(_model);

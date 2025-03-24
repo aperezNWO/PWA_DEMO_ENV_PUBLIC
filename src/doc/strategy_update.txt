@@ -326,12 +326,16 @@
 
 -- [>] Revision general de funcionalidad.  
 
-        -- [_] mensaje de espera en algoritmos / springboot java.  
+        -- [_] mensaje de espera --> signals.  
 
-        -- [_] Error en Index / Games.  
+        -- [x] Error en Index / Games.  
+
+        -- [>] Ver Referencia [Tema].
 
 -- [x] Sound init workaround.  
 
 -- [x] button copy to clipborad guid.
+
+
   
  ////////////////////////////////////////////////////////////////////////////////

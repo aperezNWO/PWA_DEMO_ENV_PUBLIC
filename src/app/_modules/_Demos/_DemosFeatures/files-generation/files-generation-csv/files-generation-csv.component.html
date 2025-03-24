@@ -18,12 +18,17 @@
             <li><a routerLink="/DjangoDemo"      [queryParams]="{ searchTerm: '882904a3-efd8-4ed7-bf4c-ccae59b995ce' }">[Django/Python]</a></li>
           </ul>
         </li>
+        <li>[Libraries]
+            <ul>
+              <li><a href="https://material.angular.io/" target="_blank">[Angular Material]</a></li>
+            </ul>
+        </li>
     </ul>
   </div>   
   <hr>
   <div>
       <!-- PANEL BUSQUEDA / INICIO -->
-      <form class="searchPanel" [formGroup]="rf_searchForm" (ngSubmit)="rf_onSubmit()">
+      <form class="searchPanel" [formGroup]="rf_searchForm">
         <!--BACKEND -->
         <div class="form-group" align="right" id="LangListDiv" >
           <label for="LangList">{{this.tituloListadoLenguajes}}</label>
@@ -60,11 +65,11 @@
         </div>
         <!-- INICIO BUTTONS PANEL        -->
         <div class="form-group" align="right" style="display: block;" >
-          <button class="btn btn-primary"     type="submit" [disabled]="(this.rf_buttonCaption != '[Buscar]')">{{this.rf_buttonCaption}}</button>
+          <button class="btn btn-primary"     type="button" (click)="rf_onSubmit()" [disabled]="(this.rf_buttonCaption != '[Buscar]')">{{this.rf_buttonCaption}}</button>
           |
           <button class="btn btn-primary"     type="button" (click)="this.rf_newSearch()">[Nueva]</button>
           |
-          <button class="btn btn-success"     ype="button" (click)="SetCSVLink()" [disabled]="(this.rf_buttonCaption_csv != '[Generar CSV]')">{{this.rf_buttonCaption_csv}}</button>
+          <button class="btn btn-success"     type="button" (click)="SetCSVLink()" [disabled]="(this.rf_buttonCaption_csv != '[Generar CSV]')">{{this.rf_buttonCaption_csv}}</button>
         </div> 
         <!-- FIN BUTTONS PANEL                     -->
         <!-- INICIO MENSAJES VALIDACION (REACTIVE) -->
@@ -90,7 +95,7 @@
           } 
           @else 
           {
-            <span id="searchStatus"  name="searchStatus" class="searchStatus" >{{this.rf_textStatus}}</span>
+            <span id="searchStatus"  name="searchStatus" class="searchStatus" >{{this.rf_textStatus() }}</span>
           }
         </div>
         <!-- FIN    / STATUS BUSQUEDA      -->

@@ -1,11 +1,14 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { Observable                                  } from 'rxjs';
-import { _languageName, _vertexSize                  } from 'src/app/_models/entity.model';
-import { PdfService                                  } from 'src/app/_engines/pdf.engine';
-import { UtilManager                                 } from 'src/app/_engines/util.engine';
-import { BackendService } from 'src/app/_services/BackendService/backend.service';
-import { CustomErrorHandler } from 'src/app/app.component';
-import { ActivatedRoute } from '@angular/router';
+import { AfterViewInit, Component, OnInit, ViewChild,signal,effect  } from '@angular/core';
+import { ActivatedRoute                                             } from '@angular/router';
+import { Observable                                                 } from 'rxjs';
+import { _languageName, _vertexSize                                 } from 'src/app/_models/entity.model';
+import { PdfService                                                 } from 'src/app/_engines/pdf.engine';
+import { UtilManager                                                } from 'src/app/_engines/util.engine';
+import { BackendService                                             } from 'src/app/_services/BackendService/backend.service';
+import { SpeechService                                              } from 'src/app/_services/speechService/speech.service';
+import { CustomErrorHandler                                         } from 'src/app/app.component';
+
+
 @Component({
   selector       : 'app-algorithm-dijkstra',
   templateUrl    : './algorithm-dijkstra.component.html',
@@ -23,7 +26,7 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
   ////////////////////////////////////////////////////////////////
   // VARIABLES ///////////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////
-  protected status_message      : string = "";
+  protected status_message   = signal<string>("");
   readonly  pageTitle        : string = AlgorithmDijkstraComponent.PageTitle;
   protected vertexMax        : number = 9;
   protected rectSize         : number = 10;
@@ -63,10 +66,20 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
   constructor(public backendService     : BackendService, 
               public customErrorHandler : CustomErrorHandler, 
               public pdfService         : PdfService,
-              public route              : ActivatedRoute) 
+              public route              : ActivatedRoute,
+              public speechService      : SpeechService) 
   {
      //
      backendService.SetLog(this.pageTitle,"PAGE_DIJKSTRA_DEMO");
+     //
+     // Define an effect to react to changes in the signal
+     effect(() => {
+       if (this.status_message())
+          this.speechService.speakTextCustom(this.status_message());
+       //console.log('Signal value changed:', this.status_message());
+     });
+     //
+     this.speechService.speakTextCustom(this.pageTitle);
   }
   //
   ngOnInit(): void {
@@ -93,6 +106,8 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
   toggleList() {
     this.isListVisible     = !this.isListVisible; // Toggle visibility
     this.toogleLisCaption  = !(this.isListVisible)? "[Ver Referencias]" : "[Ocultar Referencias]";
+    //
+    (this.isListVisible)? this.speechService.speakTextCustom("[Ver Referencias]") : null;
   }
   //
   queryParams():void {
@@ -228,9 +243,11 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
       //[x]
       this.MatrixListHidden = "";
       //
-      this.status_message      = "";
+      this.status_message.set("");
       //[X]
       this.DrawGrid();
+      //
+      this.status_message.set(`Se reinició correctamente el gráfico`);
   };
   // 
   _GetGraph():void
@@ -249,6 +266,10 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
         let randomVertexInfo!  : Observable<string>;
         //
         let _progLangId        : number = Number.parseInt(this._languajeList.nativeElement.value);
+        //
+        this.status_message.set('[Generando Gráfico por favor espere]');
+        //
+        //this.speechService.speakText();
         //
         switch(_progLangId)    
         {
@@ -324,10 +345,9 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
                 let _sourcePoint        : number = Number.parseInt(this._sourcePointList.nativeElement.value);
                 this.tituloListadoDistancias     = "DISTANCIAS DESDE [" + _sourcePoint.toString() + "]:";
                 //
-                this.status_message              = "[Se generó correctamente el gráfico]";
+                this.status_message.set("[Se generó correctamente el gráfico]");
                 //
-                const utterance = new SpeechSynthesisUtterance( this.status_message);
-                speechSynthesis.speak(utterance); 
+                //this.speechService.speakText();
                 //
                 this.DrawDistanceList(false,vertexString);
             },
@@ -337,10 +357,9 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
                 //
                 this._ResetControls();
                 //
-                this.status_message = '[Ha ocurrido un error favor intente de nuevo]'
+                this.status_message.set('[Ha ocurrido un error favor intente de nuevo]');
                 //
-                const utterance = new SpeechSynthesisUtterance( this.status_message);
-                speechSynthesis.speak(utterance); 
+                //this.speechService.speakText();
             },       
             complete: ()        => {
                 //
@@ -621,7 +640,9 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
   _GetPDF():void
   {
       //
-      this.status_message = '[...Generando PDF...]'
+      this.status_message.set('[...Generando PDF...]');
+      //
+      //this.speechService.speakText();
       //
       let fileName         : string     = "DIJKSTRA";
       let fileName_output  : string     = '';
@@ -639,11 +660,11 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
           },
           error: (error: Error) => {
               //
-              this.status_message   = 'ha ocurrido un error : ' + error.message;
+              this.status_message.set('ha ocurrido un error : ' + error.message);
           },
           complete: () => {
               //
-              this.status_message   = `Se ha generado el archivo [${fileName_output}]`;
+              this.status_message.set(`Se ha generado el archivo pdf correctamente`);
           }
         }
       );
