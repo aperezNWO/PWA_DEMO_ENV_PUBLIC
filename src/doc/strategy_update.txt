@@ -346,6 +346,8 @@
   
         -- [_] Data Science. 
 
-  -- [_] fix angular curiculum <---> angular reference.       
+ -- [_] fix angular curiculum <---> angular reference.    
+
+ -- [_] disable sound button.        
   
  ////////////////////////////////////////////////////////////////////////////////
