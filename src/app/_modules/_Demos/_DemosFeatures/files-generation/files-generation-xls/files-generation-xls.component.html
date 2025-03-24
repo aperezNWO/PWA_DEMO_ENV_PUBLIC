@@ -106,13 +106,13 @@
           } 
           @else 
           {
-            <span id="td_status" name="td_searchStatus" id="td_searchStatus" class="searchStatus"  style="width:100%;">{{this.td_textStatus}}</span>
+            <span id="td_status" name="td_searchStatus" id="td_searchStatus" class="searchStatus"  style="width:100%;">{{this.td_textStatus()}}</span>
           }
         </div>
         <!-- FIN    STATUS BUSQUEDA -->
         <!-- INICIO DESCARGA EXCEL       -->
         <div class="form-group" align="right" id="td_divdescargaexcel" style="display: block;">
-          <a [href]="this.td_ExcelDownloadLink" id="DownloadFile">{{this.td_textStatus_xls}}</a>
+          <a [href]="this.td_ExcelDownloadLink" id="DownloadFile">{{this.td_textStatus_xls()}}</a>
         </div>
         <!-- FIN DESCARGA EXCEL          -->
       </form> 

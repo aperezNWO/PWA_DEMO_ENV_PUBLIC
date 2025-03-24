@@ -1,12 +1,13 @@
-import { AfterViewInit, Component, OnInit, ViewChild   } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild, signal, effect  } from '@angular/core';
 import { FormBuilder, Validators                       } from '@angular/forms';
 import { MatTableDataSource                            } from '@angular/material/table';
 import { MatPaginator                                  } from '@angular/material/paginator';
 import { UtilManager                                   } from 'src/app/_engines/util.engine';
-import { BehaviorSubject, delay, Observable, tap       } from 'rxjs';
+import { BehaviorSubject, Observable                   } from 'rxjs';
 import { LogEntry, SearchCriteria, _languageName       } from 'src/app/_models/entity.model';
 import { BackendService                                } from 'src/app/_services/BackendService/backend.service';
-import { ActivatedRoute, Router                        } from '@angular/router';
+import { ActivatedRoute                                } from '@angular/router';
+import { SpeechService                                 } from 'src/app/_services/speechService/speech.service';
 //
 @Component({
   selector     : 'app-files-generation-xls',
@@ -26,7 +27,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
     // PROPIEADES - REACTIVE FORMS
     //--------------------------------------------------------------------------
     //
-    rf_textStatus                      : string = "";
+    rf_textStatus                      = signal<string>("");
     //
     rf_buttonCaption                   : string = "[Buscar]";
     //
@@ -36,7 +37,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
     //
     rf_buttonCaption_xls               : string  = "";
     //
-    rf_textStatus_xls                  : string  = "";
+    rf_textStatus_xls                  = signal<string>("");
     //
     rf_dataSource                      = new MatTableDataSource<LogEntry>();
     // 
@@ -61,7 +62,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
     // PROPIEADES - TEMPLATE FORMS
     //--------------------------------------------------------------------------
     //
-    td_textStatus                      : string  = "";
+    td_textStatus                      = signal<string>("");
     //
     td_formSubmit                      : boolean = false;
     //
@@ -69,7 +70,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
     //
     td_buttonCaption_xls               : string  = "[Generar Excel]";
     //
-    td_textStatus_xls                  : string  = "";
+    td_textStatus_xls                  = signal<string>("");
     //
     td_ExcelDownloadLink               : string  = "#";
     //
@@ -101,14 +102,35 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
                 private backendService      : BackendService, 
                 private formBuilder         : FormBuilder, 
                 public  route               : ActivatedRoute,
+                public  speechService       : SpeechService,
     ) 
     {
-        //
+        // Define an effect to react to changes in the signal
+        effect(() => {
+          if (this.rf_textStatus())
+              this.speechService.speakTextCustom(this.rf_textStatus());
+        });
+        // Define an effect to react to changes in the signal
+        effect(() => {
+          if (this.rf_textStatus_xls())
+              this.speechService.speakTextCustom(this.rf_textStatus_xls());
+          //console.log('Signal value changed:', this.status_message());
+        });
+        // Define an effect to react to changes in the signal
+        effect(() => {
+          if (this.td_textStatus())
+              this.speechService.speakTextCustom(this.td_textStatus());
+        });
+        // Define an effect to react to changes in the signal
+        effect(() => {
+          if (this.td_textStatus_xls())
+              this.speechService.speakTextCustom(this.td_textStatus_xls());
+        });
     }
     //
     ngOnInit(): void {
         //
-        //console.log(this.pageTitle + "- [INGRESO]" );
+        this.speechService.speakTextCustom(this.pageTitle); 
         //
         this.queryParams();
         //
@@ -125,7 +147,9 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
     toggleList() {
       this.isListVisible     = !this.isListVisible; // Toggle visibility
       this.toogleLisCaption  = !(this.isListVisible)? "[Ver Referencias]" : "[Ocultar Referencias]";
-  }
+      if(this.isListVisible)
+        this.speechService.speakTextCustom("Ver Referencia");
+    }
     //
     queryParams():void{
       //
@@ -146,8 +170,6 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
         //
         let langName = params['langName'] ? params['langName'] : "" ;
         //
-        //console.log("query param : " + langName);
-        //
         if (langName !== '')
         {   
             //
@@ -161,8 +183,6 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
 
         } else {
           //
-          //console.log("langName not found, selecting :  " + this.__languajeList[1]._value);
-          //
           this.__languajeList[1]._selected = true; // C#
         }
       });
@@ -172,27 +192,12 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
       //
       var today = '';
       switch (order) {
-          case 0:  // FECHA COMPLATIBLE CON ORACLE
+          case 0:  // FECHA COMPLATIBLE CON RDBMS
               var p_dates = p_date.toString().split('-'); // P_DATE   = 2022-04-09
               var day     = p_dates[2];
               var month   = p_dates[1];
               var year    = p_dates[0];
               today       = day + "/" + month + "/" + year;
-              //
-              break;
-          case 1:  // FECHA COMPATIBLE  CON UIX
-              //
-              /*
-              var _day      :number  = p_date.getDate();
-              var _month    :number  = p_date.getMonth() + 1;
-              var _yearStr  :string  = p_date.getFullYear().toString();
-              var _monthStr :string  = "";
-              var _dayStr   :string  = "";
-              //
-              if (_month < 10) _monthStr = "0"   + _month.toString();
-              if (_day < 10)   _dayStr   = "0"   + _day.toString();
-              //
-              today                 = _yearStr  + "-" + _monthStr + "-" + _dayStr;*/
               //
               break;
       }
@@ -212,28 +217,20 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
         this.rf_dataSource.paginator = this.rf_paginator;
         //
         this.rf_searchForm   = this.formBuilder.group({
-          //_P_DATA_SOURCE_ID   : ["1"           , Validators.required],
-          //_P_ID_TIPO_LOG      : ["1"           , Validators.required],
           _P_ROW_NUM          : ["999"         , Validators.required],
           _P_FECHA_INICIO     : ["2023-01-01"  , Validators.required],
           _P_FECHA_FIN        : ["2023-12-31"  , Validators.required],
         });
         //
-        //console.log("(DEFAULT VALUES - INIT)");
-        //console.log("P_ROW_NUM         : " + (this.rf_searchForm.value["_P_ROW_NUM"]        || ""));
-        //console.log("P_FECHA_INICIO    : " + (this.rf_searchForm.value["_P_FECHA_INICIO"]   || ""));      
-        //console.log("P_FECHA_FIN       : " + (this.rf_searchForm.value["_P_FECHA_FIN"]      || "")); 
-        //console.log("(DEFAULT VALUES - END)");
-        //
         this.rf_buttonCaption     = "[Buscar]";
         //
         this.rf_formSubmit        = false;
         //
-        this.rf_textStatus        = "";
+        this.rf_textStatus.set("");
         //
         this.rf_buttonCaption_xls               = "[Generar Excel]";
         //
-        this.rf_textStatus_xls                  = "";
+        this.rf_textStatus_xls.set("");
         //
         this.rf_ExcelDownloadLink               = "#";
     }
@@ -260,7 +257,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
         //
         this.rf_formSubmit        = true;
         //
-        this.rf_textStatus        = "";
+        this.rf_textStatus.set("");
         //
         if ((this.rf_searchForm.valid == true))
             this.rf_update(_model);
@@ -280,31 +277,23 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
         //
         next: (p_logEntry: LogEntry[])     => { 
           //
-          //console.log('Observer got a next value: ' + JSON.stringify(p_logEntry));
-          //
           let recordCount : number  = p_logEntry.length;
           //
-          this.rf_textStatus        = "Se encontraton [" + recordCount  + "] registros";
+          this.rf_textStatus.set("Se encontraton [" + recordCount  + "] registros");
           //
           this.rf_dataSource           = new MatTableDataSource<LogEntry>(p_logEntry);
           this.rf_dataSource.paginator = this.rf_paginator;
           //
-          // los botones se configuran en el evento "complete()".
-          const utterance = new SpeechSynthesisUtterance( this.rf_textStatus   );
-          speechSynthesis.speak(utterance);  
         },
         error: (err: Error) => {
           //
           console.error('Observer got an error: ' + err);
           //
-          this.rf_textStatus        = "Ha ocurrido un error";
+          this.rf_textStatus.set("Ha ocurrido un error");
           //
           this.rf_buttonCaption     = "[Buscar]";
           //
           this.rf_formSubmit        = false;
-          //
-          const utterance = new SpeechSynthesisUtterance( this.rf_textStatus   );
-          speechSynthesis.speak(utterance);  
         },       
         complete: ()        => {
           //
@@ -337,22 +326,18 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
       //
       this.rf_buttonCaption_xls               = "[Generando por favor espere...]";
       //
-      this.rf_textStatus_xls                  = "[Generando por favor espere...]";
-      //
-      const utterance = new SpeechSynthesisUtterance( this.rf_textStatus_xls   );
-      speechSynthesis.speak(utterance);   
+      this.rf_textStatus_xls.set("Generando por favor espere");
       //
       const xlsObserver                       = {
         //
         next: (_excelFileName: string) => { 
           //
-          //console.log('Observer got a next value: ' + _excelFileName);
           //
           let urlFile                = UtilManager.DebugHostingContent(_excelFileName);
           //
           this.rf_ExcelDownloadLink  = `${this.backendService._baseUrlNetCore}/wwwroot/xlsx/${urlFile}`;
           //
-          this.rf_textStatus_xls     = "[Descargar Excel]";
+          this.rf_textStatus_xls.set("[Descargar Excel]");
         },
         error   : (err: Error)  => {
           //
@@ -362,14 +347,9 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
           //
           this.rf_buttonCaption_xls  = "[Ha ocurrido un error]";
           //
-          this.rf_textStatus_xls     = "[Ha ocurrido un error]";
-          //
-          const utterance = new SpeechSynthesisUtterance( this.rf_textStatus_xls   );
-          speechSynthesis.speak(utterance);  
+          this.rf_textStatus_xls.set("[Ha ocurrido un error]");
         },
         complete: () => {
-          //
-          //console.log('Observer got a complete notification')
           //
           this.rf_buttonCaption_xls  = "[Generar Excel]";
         },
@@ -398,21 +378,15 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
          ,""
          ,"");
       //
-      //console.log("(DEFAULT VALUES - INIT)");
-      //console.log("P_ROW_NUM         : " + this.td_model.P_ROW_NUM);
-      //console.log("P_FECHA_INICIO    : " + this.td_model.P_FECHA_INICIO);      
-      //console.log("P_FECHA_FIN       : " + this.td_model.P_FECHA_FIN); 
-      //console.log("(DEFAULT VALUES - END)");
-      //
       this.td_buttonCaption     = "[Buscar]";
       //
       this.td_formSubmit        = false;
       //
-      this.td_textStatus        = "";
+      this.td_textStatus.set("");
       //
       this.td_buttonCaption_xls               = "[Generar Excel]";
       //
-      this.td_textStatus_xls                  = "";
+      this.td_textStatus_xls.set("");
       //
       this.td_ExcelDownloadLink               = "#";
     }
@@ -443,14 +417,6 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
       td_searchCriteria.P_FECHA_INICIO_STR = this.GetFormattedDate(td_searchCriteria.P_FECHA_INICIO,0);
       td_searchCriteria.P_FECHA_FIN_STR    = this.GetFormattedDate(td_searchCriteria.P_FECHA_FIN   ,0); 
       //
-      //console.log("(FROM PARAM) : P_DATA_SOURCE_ID                     : " + td_searchCriteria.P_DATA_SOURCE_ID);
-      //console.log("(FROM PARAM) : P_ROW_NUM                            : " + td_searchCriteria.P_ROW_NUM);  
-      //console.log("(FROM PARAM) : P_FECHA_INICIO (origen)              : " + td_searchCriteria.P_FECHA_INICIO);
-      //console.log("(FROM PARAM) : P_FECHA_FIN    (origen)              : " + td_searchCriteria.P_FECHA_FIN);  
-      //console.log("(FROM PARAM) : P_FECHA_INICIO (valid : 01/09/2022)  : " + td_searchCriteria.P_FECHA_INICIO_STR);
-      //console.log("(FROM PARAM) : P_FECHA_FIN    (valid : 30/09/2022)  : " + td_searchCriteria.P_FECHA_FIN_STR);
-      //console.log("(SEARCH INIT)");
-      //
       let selectedIndex: number = this._languajeList.nativeElement.options.selectedIndex; // c++ by default
       //
       switch (selectedIndex) {
@@ -458,7 +424,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
               //
               this.td_buttonCaption = "[Favor espere...]";
               //
-              this.td_textStatus    = "";
+              this.td_textStatus.set("Favor espere...");
               // 
               let td_informeLogRemoto!                 : Observable<LogEntry[]>;
               //      
@@ -467,33 +433,21 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
               const td_observer = {
                 next: (td_logEntry: LogEntry[])     => { 
                   //
-                  //console.log('TEMPLATE DRIVEN - RETURN VALUES (Record Count): ' + td_logEntry.length);
-                  //
-                  ////console.log('TEMPLATE DRIVEN - RETURN VALUES '                 + td_logEntry);
-                  //
                   this.td_dataSource           = new MatTableDataSource<LogEntry>(td_logEntry);
                   this.td_dataSource.paginator = this.td_paginator;
                   //
-                  this.td_textStatus           = "Se encontraron [" + td_logEntry.length + "] registros ";
+                  this.td_textStatus.set("Se encontraron [" + td_logEntry.length + "] registros ");
                   this.td_formSubmit           = false;
-                  //
-                  const utterance = new SpeechSynthesisUtterance( this.td_textStatus  );
-                  speechSynthesis.speak(utterance);  
                 },
                 error           : (err: Error)      => {
                   //
                   console.error('TEMPLATE DRIVEN - (ERROR) : ' + JSON.stringify(err.message));
                   //
-                  this.td_textStatus           = "Ha ocurrido un error. Favor intente de nuevo";
+                  this.td_textStatus.set("Ha ocurrido un error. Favor intente de nuevo");
                   this.td_formSubmit           = false;
                   this.td_buttonCaption        = "[Buscar]";
-                  //
-                  const utterance = new SpeechSynthesisUtterance( this.td_textStatus  );
-                  speechSynthesis.speak(utterance);  
                 },
                 complete        : ()                => {
-                  //
-                  //console.log('TEMPLATE DRIVEN -  (SEARCH END)');
                   //
                   this.td_formSubmit           = false;
                   this.td_buttonCaption        = "[Buscar]";
@@ -507,7 +461,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
               //
               this.td_buttonCaption = "[Favor espere...]";
               //
-              this.td_textStatus    = "";
+              this.td_textStatus.set("Favor espere");
               // 
               let td_informeLogRemoto_NodeJs!   : Observable<string>;
               // 
@@ -521,28 +475,18 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
                   this.td_dataSource           = new MatTableDataSource<LogEntry>(td_logEntry_node_js_json);
                   this.td_dataSource.paginator = this.td_paginator;
                   //
-                  this.td_textStatus           = "Se encontraron [" + td_logEntry_node_js_json.length + "] registros ";
+                  this.td_textStatus.set("Se encontraron [" + td_logEntry_node_js_json.length + "] registros ");
                   this.td_formSubmit           = false;
-                  //
-                  //console.log('TEMPLATE DRIVEN - NODE.JS - RETURN VALUE (count)   : ' + td_logEntry_node_js_json.length);
-                  //
-                  const utterance = new SpeechSynthesisUtterance( this.td_textStatus  );
-                  speechSynthesis.speak(utterance);  
                 },
                 error           : (err: Error)      => {
                   //
                   console.error('TEMPLATE DRIVEN - NODE.JS - (ERROR) : ' + JSON.stringify(err.message));
                   //
-                  this.td_textStatus           = "Ha ocurrido un error. Favor intente de nuevo";
+                  this.td_textStatus.set("Ha ocurrido un error. Favor intente de nuevo");
                   this.td_formSubmit           = false;
                   this.td_buttonCaption        = "[Buscar]";
-                  //
-                  const utterance = new SpeechSynthesisUtterance( this.td_textStatus  );
-                  speechSynthesis.speak(utterance);  
                 },
                 complete        : ()                => {
-                  //
-                  //console.log('TEMPLATE DRIVEN - NODE.JS -  (SEARCH END)');
                   //
                   this.td_formSubmit           = false;
                   this.td_buttonCaption        = "[Buscar]";
@@ -556,7 +500,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
               //
               this.td_buttonCaption = "[Favor espere...]";
               //
-              this.td_textStatus    = "";
+              this.td_textStatus.set("Favor espere");
               // 
               let td_informeLogRemoto_SprinbBootJava!   : Observable<string>;
               // 
@@ -572,26 +516,18 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
                   this.td_dataSource           = new MatTableDataSource<LogEntry>(td_logEntry_springboot_java_json);
                   this.td_dataSource.paginator = this.td_paginator;
                   //
-                  this.td_textStatus           = "Se encontraron [" + td_logEntry_springboot_java_json.length + "] registros ";
+                  this.td_textStatus.set("Se encontraron [" + td_logEntry_springboot_java_json.length + "] registros ");
                   this.td_formSubmit           = false;
-                  //
-                  const utterance = new SpeechSynthesisUtterance( this.td_textStatus  );
-                  speechSynthesis.speak(utterance);  
                 },
                 error           : (err: Error)      => {
                   //
                   console.error('TEMPLATE DRIVEN - sprigboot/Java - (ERROR) : ' + JSON.stringify(err.message));
                   //
-                  this.td_textStatus           = "Ha ocurrido un error. Favor intente de nuevo";
+                  this.td_textStatus.set("Ha ocurrido un error. Favor intente de nuevo");
                   this.td_formSubmit           = false;
                   this.td_buttonCaption        = "[Buscar]";
-                  //
-                  const utterance = new SpeechSynthesisUtterance( this.td_textStatus_xls  );
-                  speechSynthesis.speak(utterance);  
                 },
                 complete        : ()                => {
-                  //
-                  //console.log('TEMPLATE DRIVEN - sprinbboot/java -  (SEARCH END)');
                   //
                   this.td_formSubmit           = false;
                   this.td_buttonCaption        = "[Buscar]";
@@ -605,7 +541,7 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
           //
           this.td_buttonCaption = "[Favor espere...]";
           //
-          this.td_textStatus    = "";
+          this.td_textStatus.set("Favor espere");
           // 
           let td_informeLogRemoto_PythonDjango!   : Observable<string>;
           // 
@@ -614,33 +550,23 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
           const td_observer_pythondjango = {
             next: (td_logEntry_python_django: string)     => { 
               //
-              //console.log('TEMPLATE DRIVEN - PYTHON / DJANGO - RETURN VALUES  : ' + td_logEntry_python_django);
-              //
               let td_logEntry_python_django_json   = JSON.parse(td_logEntry_python_django);
               //
               this.td_dataSource           = new MatTableDataSource<LogEntry>(td_logEntry_python_django_json);
               this.td_dataSource.paginator = this.td_paginator;
               //
-              this.td_textStatus           = "Se encontraron [" + td_logEntry_python_django_json.length + "] registros ";
+              this.td_textStatus.set("Se encontraron [" + td_logEntry_python_django_json.length + "] registros ");
               this.td_formSubmit           = false;
-              //
-              const utterance = new SpeechSynthesisUtterance( this.td_textStatus  );
-              speechSynthesis.speak(utterance);  
             },
             error           : (err: Error)      => {
               //
               console.error('TEMPLATE DRIVEN - python/django - (ERROR) : ' + JSON.stringify(err.message));
               //
-              this.td_textStatus           = "Ha ocurrido un error. Favor intente de nuevo";
+              this.td_textStatus.set("Ha ocurrido un error. Favor intente de nuevo");
               this.td_formSubmit           = false;
               this.td_buttonCaption        = "[Buscar]";
-              //
-              const utterance = new SpeechSynthesisUtterance( this.td_textStatus_xls  );
-              speechSynthesis.speak(utterance);  
             },
             complete        : ()                => {
-              //
-              //console.log('TEMPLATE DRIVEN - sprinbboot/java -  (SEARCH END)');
               //
               this.td_formSubmit           = false;
               this.td_buttonCaption        = "[Buscar]";
@@ -662,8 +588,6 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
     td_GenerarInformeXLS(_searchCriteria : SearchCriteria)
     {
       //
-      //console.log("GENERAR EXCEL (td) - POST");
-      //
       let td_excelFileName!                   : Observable<string>;
       //
       td_excelFileName                        = this.backendService.getInformeExcel(this.rf_model);
@@ -672,22 +596,17 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
       //
       this.td_buttonCaption_xls               = "[Generando por favor espere...]";
       //
-      this.td_textStatus_xls                  = "[Generando por favor espere...]";
-      //
-      const utterance = new SpeechSynthesisUtterance( this.td_textStatus_xls  );
-      speechSynthesis.speak(utterance);  
+      this.td_textStatus_xls.set("Generando por favor espere.");
       //
       const xlsObserver                       = {
         //
         next: (_excelFileName: string) => { 
           //
-          //console.log('Observer got a next value: ' + _excelFileName);
-          //
           let urlFile                = UtilManager.DebugHostingContent(_excelFileName); 
           //
           this.td_ExcelDownloadLink  = `${this.backendService._baseUrlNetCore}/wwwroot/xlsx/${urlFile}`;
           //
-          this.td_textStatus_xls     = "[Descargar Excel]";
+          this.td_textStatus_xls.set("Descargar Excel");
         },
         error   : (err: Error)  => {
           //
@@ -697,14 +616,9 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
           //
           this.td_buttonCaption_xls  = "[Ha ocurrido un error]";
           //
-          this.td_textStatus_xls     = "[Ha ocurrido un error]";
-          //
-          const utterance = new SpeechSynthesisUtterance( this.td_textStatus_xls  );
-          speechSynthesis.speak(utterance);  
+          this.td_textStatus_xls.set("[Ha ocurrido un error]");
         },
         complete: () => {
-          //
-          //console.log('Observer got a complete notification')
           //
           this.td_buttonCaption_xls  = "[Generar Excel]";
         },
