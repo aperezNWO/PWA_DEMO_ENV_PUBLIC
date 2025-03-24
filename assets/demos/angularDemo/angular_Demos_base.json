@@ -202,5 +202,29 @@
         "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/games/game-sudoku/game-sudoku.component.ts",
         "field_4"          : "https://www.geeksforgeeks.org/sudoku-backtracking-7/" ,
         "field_10"         : "8c25ff6b-2568-411b-b366-cb5700b95b28" 
+    },
+    {
+		"id"               : 18,
+        "done"             : true,
+        "name"             : "Algoritmos - Ordenamiento",
+        "description"      : "Algoritmos - Ordenamiento",
+        "field_6"          : "Angular",
+        "field_1"          : "v17, bubble sort, quick sort",
+        "field_2"          : "./#/AlgorithmSort",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/algorithm/algorithm-sort/algorithm-sort.component.ts",
+        "field_4"          : "https://en.wikipedia.org/wiki/Quicksort" ,
+        "field_10"         : "6bfa047d-dbd7-4991-a4d6-b9786c601285" 
+    },
+    {
+		"id"               : 19,
+        "done"             : true,
+        "name"             : "Algoritmos - Expresiones Regulares",
+        "description"      : "Algoritmos - Expresiones Regulares",
+        "field_6"          : "Angular",
+        "field_1"          : "v17, Regular Expressions",
+        "field_2"          : "./#/AlgorithmRegEx",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/algorithm/algorithm-reg-ex/algorithm-reg-ex.component.ts",
+        "field_4"          : "https://en.wikipedia.org/wiki/Regular_expression" ,
+        "field_10"         : "756e8939-bca0-45f7-b581-63e417b6a2d5" 
     }
 ]       
