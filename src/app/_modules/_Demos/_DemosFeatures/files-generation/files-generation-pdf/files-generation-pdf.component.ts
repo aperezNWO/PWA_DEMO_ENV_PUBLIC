@@ -1,8 +1,8 @@
-import { Component, ViewChild        } from '@angular/core';
-import { HttpEventType, HttpResponse } from '@angular/common/http';
-import { UtilManager                 } from 'src/app/_engines/util.engine';
-import { BackendService } from 'src/app/_services/BackendService/backend.service';
-import { CustomErrorHandler } from 'src/app/app.component';
+import { Component, ViewChild, effect, signal } from '@angular/core';
+import { HttpEventType, HttpResponse          } from '@angular/common/http';
+import { UtilManager                          } from 'src/app/_engines/util.engine';
+import { BackendService                       } from 'src/app/_services/BackendService/backend.service';
+import { SpeechService                        } from 'src/app/_services/speechService/speech.service';
 
 
 @Component({
@@ -15,7 +15,7 @@ export class FilesGenerationPDFComponent {
   // PROPERTIES
   ////////////////////////////////////////////////////////////////
   protected progress               : number  = 0;
-  protected message                : string  = '';
+  protected message                = signal<string>('');
   public    downloadCaption        : string  = '';
   public    values                 : string  = '';
   public    DownloadLink           : string  = '';
@@ -28,22 +28,40 @@ export class FilesGenerationPDFComponent {
   readonly  pageTitle             : string = FilesGenerationPDFComponent.PageTitle;
   //
   @ViewChild('subjectName') subjectName             : any;
+  public isListVisible            = false; // Initially hidden
+  public toogleLisCaption: string = "[Ver Referencias]";
   ////////////////////////////////////////////////////////////////
   // EVENT HANDLERS
   ////////////////////////////////////////////////////////////////
-  constructor(private backendService: BackendService, customErrorHandler : CustomErrorHandler)
+  constructor(private backendService : BackendService, 
+              public  speechService  : SpeechService)
   {
     //
-    //console.log(FilesGenerationPDFComponent.PageTitle + "- [INGRESO]");
-    //
     backendService.SetLog(this.pageTitle,"PAGE_PDF_DEMO");
+    // Define an effect to react to changes in the signal
+    effect(() => {
+      if (this.message())
+          this.speechService.speakTextCustom(this.message());
+    });
+    //
+    this.speechService.speakTextCustom(this.pageTitle);
   }  
+  //--------------------------------------------------------------------------
+  // METODOS COMUNES 
+  //--------------------------------------------------------------------------
+  //
+  toggleList() {
+    this.isListVisible     = !this.isListVisible; // Toggle visibility
+    this.toogleLisCaption  = !(this.isListVisible)? "[Ver Referencias]" : "[Ocultar Referencias]";
+    if (this.isListVisible)
+      this.speechService.speakTextCustom("Ver Referncias");
+  }
   //
   public onNewPdf()
   {
     //
     this.progress     = 0;
-    this.message      = '';
+    this.message.set('Reinicio exitoso');
     this.DownloadLink = '';
     this.pdfFileName  = "";
     this.subjectName.nativeElement.value = '';
@@ -54,12 +72,12 @@ export class FilesGenerationPDFComponent {
       //
       if (this.subjectName.nativeElement.value == '')
       {
-        this.message            = 'Favor ingrese [NOMBRE COMPLETO]';
+        this.message.set('Favor ingrese [NOMBRE COMPLETO]');
         return;
       }
       //
       this.progress             = 0;
-      this.message              = '...cargando...';
+      this.message.set('...cargando...');
       this.downloadCaption      = '...cargando...';
       //
       let _subjectName : string = this.subjectName.nativeElement.value;
@@ -99,12 +117,9 @@ export class FilesGenerationPDFComponent {
                   //
                   console.info('[GENERATE PDF FILE] - [Download link] : ' + this.DownloadLink);
                   //
-                  this.message         = '[Se cargó correctamente el archivo]';
+                  this.message.set('Se cargó correctamente el archivo');
                   //
                   this.downloadCaption = '[DESCARGAR PDF]'
-                  //
-                  const utterance = new SpeechSynthesisUtterance( this.message  );
-                  speechSynthesis.speak(utterance);  
                 }
             } 
             else 
@@ -122,12 +137,9 @@ export class FilesGenerationPDFComponent {
           },
         error           : (err: Error)      => {
           //
-          this.message  = '[Ha ocurrido un error]';
+          this.message.set('Ha ocurrido un error');
           //
           console.error('[GENERATE PDF FILE] - Error :' + err);
-          //
-          const utterance = new SpeechSynthesisUtterance( this.message  );
-          speechSynthesis.speak(utterance);  
         },
         complete        : ()                => {
           //

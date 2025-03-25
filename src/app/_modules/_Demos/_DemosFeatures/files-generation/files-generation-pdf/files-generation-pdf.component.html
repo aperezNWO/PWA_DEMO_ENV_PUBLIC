@@ -3,7 +3,26 @@
         <h4>{{pageTitle}}</h4>
     </div>
     <hr>
-    <p>Ver referencia&nbsp;<a href="javascript: void window.open('https://www.nuget.org/packages/iTextSharp/')">[ITextSharp v5.5.13.2]</a></p>
+    <div class="reference" align="right">
+        <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
+        <ul *ngIf="isListVisible" align="left" widdth="10px">
+            <li> [Frontend]
+              <ul>
+                <li><a routerLink="/AngularDemo" [queryParams]="{ searchTerm: '179c6e7c-6dad-4aea-a515-d45d09641a76' }">[Angular]</a></li>
+              </ul>
+            </li>
+            <li>[Backend]
+              <ul>
+                <li><a routerLink="/NetCoreDemo"     [queryParams]="{ searchTerm: '0cd41eee-f54c-44be-b03a-422769b1a8f2' }">[.net core/c#]</a></li>
+               </ul>
+            </li>
+            <li>[Libraries]
+                <ul>
+                    <a href="javascript: void window.open('https://www.nuget.org/packages/iTextSharp/')">[ITextSharp v5.5.13.2]</a>
+                </ul>
+            </li>
+        </ul>
+      </div>   
     <hr>
     <div>
         NOMBRE COMPLETO : <input type="text" class="inputPDF" id="subjectName" #subjectName>
@@ -34,7 +53,7 @@
     &nbsp;
     <input id="NewPdf"  class="btn btn-primary" type="button" title="[NUEVO PDF]"   value="[NUEVO PDF]"   (click)="this.onNewPdf()" [hidden]="(this.DownloadLink == '')">
     <hr>
-    <div *ngIf="message" class="alert alert-secondary" role="alert">{{ this.message }}</div>
+    <div *ngIf="message" class="alert alert-secondary" role="alert">{{ this.message() }}</div>
     <hr>
     <div align="right"><a routerLink="/FilesGenerationWeb">[Volver al Menú]</a></div> 
 </div>

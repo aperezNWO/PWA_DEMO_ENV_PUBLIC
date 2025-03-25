@@ -348,6 +348,19 @@
 
  -- [_] fix angular curiculum <---> angular reference.    
 
- -- [_] disable sound button.        
-  
+ -- [_] disable sound button.    
+     
+ -- [_] base component.    
+     
+        -- [_] signal status message.    
+
+        -- [_] effect.
+ 
+        -- [_] backend page log.
+
+        -- [_] <base.component><base-compoent>.
+
+        -- [_] json pages list.
+            
+
  ////////////////////////////////////////////////////////////////////////////////
