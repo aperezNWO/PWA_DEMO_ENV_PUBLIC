@@ -93,6 +93,78 @@
         "field_3"          : "./#/TechnicalSpecs",
         "field_4"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/about/technicalspecs/technical-specs/technical-specs.component.ts",
         "field_5"          : "https://v17.angular.io/guide/signals",
-        "field_10"         : "7a1130e9-0d73-4a87-8af6-37415f403a42"
-    }      
+        "field_10"         : "36a2abea-23a1-4fa5-a797-3506e690388d"
+    },
+    {
+		"id"               : 9,
+        "done"             : true,
+        "name"             : "HttpClient",
+        "description"      : "Lectura de archivos de configuración json",
+        "field_6"          : "Angular",
+        "field_1"          : "v17, Json, Config, HttpClient, Environment",
+        "field_2"          : "./#/",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_services/ConfigService/config.service.ts",
+        "field_4"          : "https://angular.dev/guide/http/setup" ,
+        "field_10"         : "1d95eb8b-6f7a-4f29-875f-36f2408ae038"  
+    },
+    {
+		"id"               : 10,
+        "done"             : true,
+        "name"             : "Interceptores",
+        "description"      : "Registro de llamadas http.",
+        "field_6"          : "Angular",
+        "field_1"          : "v17, HttpInterceptor, HttpRequest, HttpHandler",
+        "field_2"          : "./#/",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/app.module.ts",
+        "field_4"          : "https://angular.dev/guide/http/interceptors" ,
+        "field_10"         : "7958d969-4e38-42b4-a109-186be1cfbdfc" 
+    },
+    {
+		"id"               : 11,
+        "done"             : true,
+        "name"             : "ErrorHandler",
+        "description"      : "Manejo de errores y excepcioness",
+		"field_6"          : "Angular",
+		"field_1"          : "v17, ErrorHandler",
+		"field_2"          : "./#/",
+		"field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/app.module.ts",
+		"field_4"          : "https://angular.dev/api/core/ErrorHandler#"  ,
+        "field_10"         : "ca712a7f-b09e-4f46-b1e3-8684fb35988a"
+    },  
+    {
+        "id"              : 12,
+        "done"            : true,
+        "name"            : "Canvas",
+        "description"     : "Líneas, Figuras, Rellenos",
+        "field_6"         : "Angular",
+        "field_1"         : "v17, Canvas",
+        "field_2"         : "./#/AlgorithmSort",
+        "field_3"         : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_engines/draw.engine.ts",
+        "field_4"         : "https://developer.mozilla.org/es/docs/Web/API/Canvas_API" ,
+        "field_10"        : "2076888b-b81b-42ea-a512-8e77df5cd4eb" 
+   },
+   {
+        "id"               : 13,
+        "done"             : true,
+        "name"             : "queryParams",
+        "description"      : "Extraer Parámetros de una URL",
+        "field_6"          : "Angular",
+        "field_1"          : "v17, ActivatedRoute, queryParams",
+        "field_2"          : "./#/FilesGenerationCSV?langName=CS",
+        "field_3"          : "",
+        "field_4"          : "https://angular.dev/api/router/ActivatedRoute?tab=description"  ,
+        "field_10"         : "ae5b4cf3-1aef-4bea-a257-b0d2779b1531"
+   },
+   {
+        "id"               : 14,
+        "done"             : true,
+        "name"             : "Exportación a pdf desde Frontend",
+        "description"      : "Exportación a pdf desde Frontend",
+        "field_6"          : "Angular",
+        "field_1"          : "v17, jsPDF",
+        "field_2"          : "./#/Chart",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_engines/pdf.engine.ts",
+        "field_4"          : "https://www.npmjs.com/package/jspdf"  ,
+        "field_10"         : "ae16755e-cfd8-4b43-a572-ba0a0a1eb4e8"
+   }   
 ]
