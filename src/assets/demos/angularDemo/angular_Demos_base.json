@@ -103,7 +103,7 @@
         "field_6"          : "Node.js",
         "field_1"          : "Node.js, OCR, tesseract, codesandbox",
         "field_2"          : "./#/OcrPhotoCapture",
-        "field_3"          : "https://github.com/aperezNWO/cs_nodejs_ocr_/blob/main/index.js",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/miscelaneous/ocr-photo-capture/ocr-photo-capture.component.ts",
         "field_4"          : "https://github.com/tesseract-ocr/tesseract"  ,
         "field_10"         : "5640c548-8aa6-4f15-bcf9-b10b8cb7fd0d"
     },
@@ -115,7 +115,7 @@
         "field_6"          : "Node.js",
         "field_1"          : "v17, Node.js, Sockets,  Chat, Codesandbox",
         "field_2"          : "./#/Chat",
-        "field_3"          : "https://github.com/aperezNWO/cs_node_js_test_chat/blob/main/index.js",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/miscelaneous/chat/chat/chat.component.ts",
         "field_4"          : "https://socket.io/get-started/chat/"  ,
         "field_10"         : "415b3965-c5ef-4953-8484-080c34df691f"
     },
