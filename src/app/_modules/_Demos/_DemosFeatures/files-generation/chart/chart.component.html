@@ -1,52 +1,77 @@
-<div align="center"><h1>[CHARTS]</h1></div>
-<hr/>
-<mat-tab-group>
-    <mat-tab label="[PIE CHART]">
-        <div align="center" style="padding-top:10px;width:400px;">
-             <!-- PANEL GRAFICO / INICIO  -->
-            <div id="divPieChart_CSV" #divPieChart_CSV style="display: block; box-sizing: border-box; height: 400px; width: 400px;padding:10px;" height="400px" width="400px">
-                <canvas  id="canvas_csv" #canvas_csv style="background-color:bisque;padding:10px 10px 10px 10px;">{{ this.pieChartVar_csv }}</canvas>
+<div class="content">
+    <div align="center">
+            <h1>{{this.pageTitle}}</h1>
+    </div>
+    <hr>
+    <div class="reference" align="right">
+        <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
+        <ul *ngIf="isListVisible" align="left" widdth="10px">
+            <li> [Frontend]
+            <ul>
+                <li><a routerLink="/AngularDemo"     [queryParams]="{ searchTerm: '483973b3-b8f6-478b-a702-de3fbab225a4' }">[Angular]</a></li>
+            </ul>
+            </li>
+            <li>[Backend]
+            <ul>
+                <li><a routerLink="/NetCoreDemo"     [queryParams]="{ searchTerm: '0b0b083f-bda7-44b8-9922-2365317ee934' }">[.net core/c#]</a></li>
+            </ul>
+            </li>
+            <li>[Libraries]
+                <ul>
+                <li><a href="https://www.chartjs.org/" target="_blank">[chart.js]</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>   
+    <hr/>
+    <mat-tab-group>
+        <mat-tab label="[PIE CHART]" (click)="this.pdf_message_csv.set('PIE CHART')">
+            <div align="center" style="padding-top:10px;width:400px;">
+                <!-- PANEL GRAFICO / INICIO  -->
+                <div id="divPieChart_CSV" #divPieChart_CSV style="display: block; box-sizing: border-box; height: 400px; width: 400px;padding:10px;" height="400px" width="400px">
+                    <canvas  id="canvas_csv" #canvas_csv style="background-color:bisque;padding:10px 10px 10px 10px;">{{ this.pieChartVar_csv }}</canvas>
+                </div>
+                <!-- PANEL GRAFICO / FIN     -->
             </div>
-            <!-- PANEL GRAFICO / FIN     -->
-        </div>
-        <div align="right" style="padding:10px 10px 10px 10px;">
-            <hr />
-            <!-- GENERAR PDF / INICIO    -->
-            <div id="divdescargapdf" style="display: block" align="right">
-                <input class="btn btn-success" id="GetPDF" type="button" title="[GENERAR PDF]" value="[GENERAR PDF]" (click)="GetPDF('[PIE CHART]')" [disabled]="(this.pdf_message_csv == '[...Generando PDF...]')">           
+            <div align="right" style="padding:10px 10px 10px 10px;">
+                <hr />
+                <!-- GENERAR PDF / INICIO    -->
+                <div id="divdescargapdf" style="display: block" align="right">
+                    <input class="btn btn-success" id="GetPDF" type="button" title="[GENERAR PDF]" value="[GENERAR PDF]" (click)="GetPDF('[PIE CHART]')" [disabled]="(this.pdf_message_csv.toString() == '[...Generando PDF...]')">           
+                </div>
+                <hr />
+                <!-- GENERAR PDF / FIN    -->
+                <!-- STATUS / INICIO -->
+                <div align="right">
+                    <div *ngIf="this.pdf_message_csv" class="alert alert-secondary" role="alert">{{ this.pdf_message_csv() }}</div>
+                </div>
+                <!-- STATUS / FIN   -->
             </div>
-            <hr />
-            <!-- GENERAR PDF / FIN    -->
-            <!-- STATUS / INICIO -->
-            <div align="right">
-                <div *ngIf="this.pdf_message_csv" class="alert alert-secondary" role="alert">{{ this.pdf_message_csv }}</div>
+        </mat-tab>
+        <mat-tab label="[BAR CHART]" (click)="this.pdf_message_xls.set('BAR CHART')">
+            <div align="center" style="padding-top:10px;">
+                <!-- PANEL GRAFICO / INICIO  -->
+                <div id="divPieChart_xls" #divPieChart_XLS style="display: block; box-sizing: border-box; height: 400px; width: 800px;padding:10px;" height="400px" width="800px">
+                    <canvas  id="canvas_xls" #canvas_xls style="background-color:bisque;padding:10px 10px 10px 10px;">{{ this.pieChartVar_xls }}</canvas>
+                </div>
+                <!-- PANEL GRAFICO / FIN     -->
             </div>
-            <!-- STATUS / FIN   -->
-        </div>
-    </mat-tab>
-    <mat-tab label="[BAR CHART]">
-        <div align="center" style="padding-top:10px;">
-            <!-- PANEL GRAFICO / INICIO  -->
-            <div id="divPieChart_xls" #divPieChart_XLS style="display: block; box-sizing: border-box; height: 400px; width: 800px;padding:10px;" height="400px" width="800px">
-                  <canvas  id="canvas_xls" #canvas_xls style="background-color:bisque;padding:10px 10px 10px 10px;">{{ this.pieChartVar_xls }}</canvas>
+            <div align="right" style="padding:10px 10px 10px 10px;width:800px;">
+                <hr />
+                <!-- GENERAR PDF / INICIO    -->
+                <div id="divdescargapdf" style="display: block" align="right">
+                    <input class="btn btn-success" id="GetPDF" type="button" title="[GENERAR PDF]" value="[GENERAR PDF]" (click)="this.GetPDF('[BAR CHART]')" [disabled]="(this.pdf_message_xls.toString() == '[...Generando PDF...]')">           
+                </div>
+                <!-- GENERAR PDF / FIN    -->
+                <hr />
+                <!-- STATUS / INICIO -->
+                <div align="right">
+                    <div *ngIf="this.pdf_message_xls" class="alert alert-secondary" role="alert">{{ this.pdf_message_xls() }}</div>
+                </div>
+                <!-- STATUS / FIN   -->
             </div>
-            <!-- PANEL GRAFICO / FIN     -->
-         </div>
-         <div align="right" style="padding:10px 10px 10px 10px;width:800px;">
-            <hr />
-            <!-- GENERAR PDF / INICIO    -->
-            <div id="divdescargapdf" style="display: block" align="right">
-                <input class="btn btn-success" id="GetPDF" type="button" title="[GENERAR PDF]" value="[GENERAR PDF]" (click)="this.GetPDF('[BAR CHART]')" [disabled]="(this.pdf_message_xls == '[...Generando PDF...]')">           
-            </div>
-            <!-- GENERAR PDF / FIN    -->
-            <hr />
-            <!-- STATUS / INICIO -->
-            <div align="right">
-                <div *ngIf="this.pdf_message_xls" class="alert alert-secondary" role="alert">{{ this.pdf_message_xls }}</div>
-            </div>
-            <!-- STATUS / FIN   -->
-         </div>
-    </mat-tab>
-</mat-tab-group>
-<hr/>
-<div align="right"><a routerLink="/FilesGenerationWeb">[Volver al Menú]</a></div>
+        </mat-tab>
+    </mat-tab-group>
+    <hr/>
+    <div align="right"><a routerLink="/FilesGenerationWeb">[Volver al Menú]</a></div>
+</div>

@@ -1,10 +1,9 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder                  } from '@angular/forms';
-import { Chart, registerables         } from 'chart.js';
-import { Observable                   } from 'rxjs';
+import { Component, effect, OnInit, signal, ViewChild } from '@angular/core';
 import { PdfService                   } from 'src/app/_engines/pdf.engine';
 import { BackendService               } from 'src/app/_services/BackendService/backend.service';
-import { CustomErrorHandler           } from 'src/app/app.component';
+import { SpeechService                } from 'src/app/_services/speechService/speech.service';
+import { Chart, registerables         } from 'chart.js';
+import { Observable                   } from 'rxjs';
 
 @Component({
   selector: 'app-chart',
@@ -16,8 +15,8 @@ export class ChartComponent implements OnInit  {
     // PROPIEDADES COMUNES
     //--------------------------------------------------------------------------
     //
-    pdf_message_csv                                    : string = '';  
-    pdf_message_xls                                    : string = '';  
+    pdf_message_csv                                    = signal<string>('');  
+    pdf_message_xls                                    = signal<string>('');  
     //--------------------------------------------------------------------------
     // PROPIEDADES - ESTADISTICA
     //--------------------------------------------------------------------------
@@ -37,12 +36,36 @@ export class ChartComponent implements OnInit  {
     @ViewChild('divPieChart_XLS') divPieChart_xls : any;
     //
     public pieChartVar_xls                        : any;
+    //
+    public isListVisible            = false; // Initially hidden
+    public toogleLisCaption: string = "[Ver Referencias]";
+    //
+    public static get PageTitle()   : string {
+      return '[GENERAR ARCHIVOS - CHART]';
+    }
+    readonly pageTitle   : string = ChartComponent.PageTitle;
     //--------------------------------------------------------------------------
     // EVENT HANDLERS FORMIULARIO 
     //--------------------------------------------------------------------------
-    constructor(private backendService: BackendService, private formBuilder: FormBuilder, private customErrorHandler : CustomErrorHandler, public pdfService: PdfService) {
+    constructor(private backendService: BackendService, 
+                private speechService : SpeechService, 
+                public  pdfService    : PdfService) {
       //
       Chart.register(...registerables);
+      //
+      backendService.SetLog(this.pageTitle,"PAGE_CHART_DEMO");
+      // Define an effect to react to changes in the signal
+      effect(() => {
+        if (this.pdf_message_csv())
+            this.speechService.speakTextCustom(this.pdf_message_csv());
+      });
+      // Define an effect to react to changes in the signal
+      effect(() => {
+        if (this.pdf_message_xls())
+            this.speechService.speakTextCustom(this.pdf_message_xls());
+      });
+      //
+      this.speechService.speakTextCustom(this.pageTitle);
     }
     //
     ngOnInit(): void {
@@ -51,8 +74,19 @@ export class ChartComponent implements OnInit  {
       //}+
       this.SetBarChart();
     }
+
     //--------------------------------------------------------------------------
-    // METODOS
+    // METODOS COMUNES 
+    //--------------------------------------------------------------------------
+    //
+    toggleList() {
+      this.isListVisible     = !this.isListVisible; // Toggle visibility
+      this.toogleLisCaption  = !(this.isListVisible)? "[Ver Referencias]" : "[Ocultar Referencias]";
+      if (this.isListVisible)
+        this.speechService.speakTextCustom("Ver Referncias");
+    }   
+    //--------------------------------------------------------------------------
+    // METODOS ESTADISTICA
     //--------------------------------------------------------------------------
     //
     SetPieChart():void
@@ -146,9 +180,6 @@ export class ChartComponent implements OnInit  {
       //
       csv_informeLogRemoto.subscribe(csv_observer);
     }   
-    //--------------------------------------------------------------------------
-    // METODOS - ESTADISTICAS
-    //--------------------------------------------------------------------------
     //
     SetBarChart():void {
       //
@@ -236,7 +267,7 @@ export class ChartComponent implements OnInit  {
     GetPDF(P_fileName : string):void
     {
         //
-        (P_fileName == '[PIE CHART]')? this.pdf_message_csv = '[...Generando PDF...]' : this.pdf_message_xls = '[...Generando PDF...]'
+        (P_fileName == '[PIE CHART]')? this.pdf_message_csv.set('[...Generando PDF...]') : this.pdf_message_xls.set('[...Generando PDF...]');
         //
         let fileName_output  : string     = '';
         //
@@ -254,12 +285,13 @@ export class ChartComponent implements OnInit  {
             error: (error: Error) => {
                 //
                 let msg = 'ha ocurrido un error : ' + error.message;
-                (P_fileName == '[PIE CHART]')? this.pdf_message_csv   = msg : this.pdf_message_xls   = msg;
+                (P_fileName == '[PIE CHART]')? this.pdf_message_csv.set(msg)   : this.pdf_message_xls.set(msg);
             },
             complete: () => {
                 //
-                let msg = `Se ha generado el archivo [${fileName_output}]`;
-                (P_fileName == '[PIE CHART]')? this.pdf_message_csv  = msg : this.pdf_message_xls    = msg;
+                //let msg = `Se ha generado el archivo [${fileName_output}]`;
+                let msg = `Se ha generado el archivo PDF corrctamente`;
+                (P_fileName == '[PIE CHART]')? this.pdf_message_csv.set(msg)   : this.pdf_message_xls.set(msg);
             }
           }
         );
