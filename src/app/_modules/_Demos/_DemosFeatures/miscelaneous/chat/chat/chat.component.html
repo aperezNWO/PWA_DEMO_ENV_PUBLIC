@@ -1,37 +1,61 @@
-<div align="center"><h1>[MISCELANEOUS - CHAT]</h1></div>
-<hr/>
-<div id="divMessageInput" align="left">
-<form #messageinputform="ngForm" (ngSubmit)="submitForm(messageinputform);">
-        <div class="form-group">        
-        <label for="txtName">Your Name:</label>
-        <input type="text" #_txtName  id="txtName" name="txtName" maxlength="10" ngModel required>
+<div class="content">
+        <div align="center">
+                <h1>{{ this.pageTitle }}</h1>
         </div>
-        <div class="form-group">        
-        <label for="txtMessage">Your Message :</label>
-        <input type="text" #_txtMessage id="txtMessage" name="txtMessage"  maxlength="25" ngModel required>
+        <hr/>
+        <div class="reference" align="right">
+                <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
+                <ul *ngIf="isListVisible" align="left" widdth="10px">
+                    <li> [Frontend]
+                      <ul>
+                        <li><a routerLink="/AngularDemo"     [queryParams]="{ searchTerm: '415b3965-c5ef-4953-8484-080c34df691f' }">[Angular]</a></li>
+                      </ul>
+                    </li>
+                    <li>[Backend]
+                      <ul>
+                        <li><a routerLink="/NodeJsDemo"      [queryParams]="{ searchTerm: '1996fa99-4e01-42eb-ac45-98e2918208d9' }">[Node.Js/Javascript]</a></li>
+                      </ul>
+                    </li>
+                    <li>[Libraries]
+                        <ul>
+                          <li><a href="https://socket.io/get-started/chat/" target="_blank">[socket.io]</a></li>
+                        </ul>
+                    </li>
+                </ul>
+        </div>   
+        <hr/>
+        <div id="divMessageInput" align="left">
+        <form #messageinputform="ngForm" (ngSubmit)="submitForm(messageinputform);">
+                <div class="form-group">        
+                <label for="txtName">Your Name:</label>
+                <input type="text" #_txtName  id="txtName" name="txtName" maxlength="10" ngModel required>
+                </div>
+                <div class="form-group">        
+                <label for="txtMessage">Your Message :</label>
+                <input type="text" #_txtMessage id="txtMessage" name="txtMessage"  maxlength="25" ngModel required>
+                </div>
+                <div class="form-group" align="left" *ngIf="(messageinputform.valid==false) && (messageinputform.submitted)">
+                        Pleae enter all fields
+                </div>
+                <input type="submit" class="btn btn-primary" value="[SEND MESSAGE]">
+        </form>
         </div>
-        <div class="form-group" align="left" *ngIf="(messageinputform.valid==false) && (messageinputform.submitted)">
-                Pleae enter all fields
+        <hr>
+        <h4>[MESSAGES]</h4>
+        <!-- MESSAGES / INICIO -->
+        <div id="divMessageOutput">
+                <table class="message-data" *ngFor="let message of this.parentData.reverse()">
+                <tr>
+                <td>
+                        <span class="alert alet-secondary">
+                                {{message}}           
+                        </span>
+                </td>
+                </tr>
+                </table>
         </div>
-        <input type="submit" class="btn btn-primary" value="[SEND MESSAGE]">
-</form>
+        <!-- MESSAGES / FIN    -->
+        <hr>
+        <div align="right"><a routerLink="/Miscelaneous">[Volver al Menú]</a></div>
 </div>
-<hr>
-<h4>[MESSAGES]</h4>
-<!-- MESSAGES / INICIO -->
-<div id="divMessageOutput">
-        <table class="message-data" *ngFor="let message of this.parentData.reverse()">
-        <tr>
-           <td>
-                <span class="alert alet-secondary">
-                        {{message}}           
-                </span>
-          </td>
-        </tr>
-        </table>
-</div>
-<!-- MESSAGES / FIN    -->
-<hr>
-<div align="right"><a routerLink="/Miscelaneous">[Volver al Menú]</a></div>
-  
 

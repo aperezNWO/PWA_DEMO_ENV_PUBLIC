@@ -7,6 +7,7 @@ import { _BaseModel                           } from "./entity.model";
 //
 export const PAGE_ID     = new InjectionToken<string>('PAGE_ID'); 
 export const PAGE_SIZE   = new InjectionToken<number>('PAGE_SIZE');
+export const PAGE_TITLE  = new InjectionToken<number>('PAGE_TITLE');
 export const SEARCH_TERM = new InjectionToken<string>('SEARCH_TERM');  
 
 ////////////////////////////////////////////////////////////////////////////

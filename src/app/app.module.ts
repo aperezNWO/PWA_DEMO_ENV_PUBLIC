@@ -63,7 +63,7 @@ import { GameWebComponent } from './_modules/_Demos/_DemosFeatures/games/game-we
 import { ChatComponent } from './_modules/_Demos/_DemosFeatures/miscelaneous/chat/chat/chat.component';
 import { ComputerVisionComponent } from './_modules/_Demos/_DemosFeatures/miscelaneous/computer-vision/computer-vision.component';
 import { MathParsingComponent } from './_modules/_Demos/_DemosFeatures/miscelaneous/math-parsing/math-parsing.component';
-import { MiscelaneousComponent } from './_modules/_Demos/_DemosFeatures/miscelaneous/miscelaneous/miscelaneous.component';
+import { MiscelaneousComponent } from './_modules/_Demos/_DemosFeatures/miscelaneous/_miscelaneous/miscelaneous.component';
 import { OcrPhotoCaptureComponent } from './_modules/_Demos/_DemosFeatures/miscelaneous/ocr-photo-capture/ocr-photo-capture.component';
 import { ContactformComponent } from './_modules/about/contactform/contactform.component';
 import { TechnicalSpecsComponent } from './_modules/about/technicalspecs/technical-specs/technical-specs.component';

@@ -1,5 +1,27 @@
 <div class="content" align="center">
     <h1>[MISCELANEOUS - OCR]</h1>
+      <hr>
+      <div class="reference" align="right">
+      <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
+      <ul *ngIf="isListVisible" align="left" widdth="10px">
+          <li> [Frontend]
+            <ul>
+              <li><a routerLink="/AngularDemo"     [queryParams]="{ searchTerm: '5640c548-8aa6-4f15-bcf9-b10b8cb7fd0d' }">[Angular]</a></li>
+            </ul>
+          </li>
+          <li>[Backend]
+            <ul>
+              <li><a routerLink="/NodeJsDemo"      [queryParams]="{ searchTerm: '894ab07b-45d4-4a87-b9d7-a59e78a73e79' }">[Node.Js/Javascript]</a></li>
+            </ul>
+          </li>
+          <li>[Libraries]
+              <ul>
+                <li><a href="https://github.com/tesseract-ocr/tesseract" target="_blank">[Tesseract]</a></li>
+              </ul>
+          </li>
+      </ul>
+    </div>
+    <hr>  
     <div id="canvasContainer" [hidden]="this.hiddenCanvasContainer">
         <hr/>
         <!-- CANVAS INICIO   -->
@@ -38,7 +60,7 @@
     </div>
     <hr>
     <!-- STATUS INICIO -->
-    <span style="padding:2px; width:100px;height:10px;background-color: azure;">{{this.status}}</span>
+    <span style="padding:2px; width:100px;height:10px;background-color: azure;">{{this.status_message()}}</span>
     <hr />
     <!-- STATUS FIN        -->
     <!-- FORMULARIO INICIO -->

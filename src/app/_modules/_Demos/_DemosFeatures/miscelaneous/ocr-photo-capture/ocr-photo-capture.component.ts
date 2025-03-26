@@ -1,15 +1,18 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild    } from '@angular/core';
 import { BackendService           } from 'src/app/_services/BackendService/backend.service';
+import { _languageName            } from 'src/app/_models/entity.model';
+import { BaseComponent            } from 'src/app/_components/base/base.component';
 import { NgxSignaturePadComponent } from '@eve-sama/ngx-signature-pad/lib/ngx-signature-pad.component';
 import { NgxSignatureOptions      } from '@eve-sama/ngx-signature-pad/lib/types/ngx-signature-pad';
-import { _languageName            } from 'src/app/_models/entity.model';
+import { ActivatedRoute } from '@angular/router';
+import { SpeechService } from 'src/app/_services/speechService/speech.service';
 
 @Component({
   selector: 'app-ocr-photo-capture',
   templateUrl: './ocr-photo-capture.component.html',
   styleUrl: './ocr-photo-capture.component.css'
 })
-export class OcrPhotoCaptureComponent implements AfterViewInit , OnInit {
+export class OcrPhotoCaptureComponent extends BaseComponent implements AfterViewInit , OnInit {
   /** Catch object, call functions via instance object */
   @ViewChild('signature') signature: NgxSignaturePadComponent | undefined;
   /** You can see more introduction in the below about NgxSignatureOptions */
@@ -22,7 +25,6 @@ export class OcrPhotoCaptureComponent implements AfterViewInit , OnInit {
     }
   };
   //
-  public status                : string = '';
   public statusButton          : string = '[save]';
   public statusButtonSaveImage : string = '[save image]';
   public captureButtonStatus   : string = '[capture image]';
@@ -51,9 +53,13 @@ export class OcrPhotoCaptureComponent implements AfterViewInit , OnInit {
   selectedIndexEngines    : number  = 0;
   
   //
-  constructor(public backendService : BackendService)
+  constructor(public override backendService : BackendService,
+              public override route          : ActivatedRoute,
+              public override speechService  : SpeechService,
+  )
   {
       //
+      super(backendService,route,speechService,"[MISCELANEOUS - OCR]")
   }
   //
   ngOnInit(): void {
@@ -100,7 +106,7 @@ export class OcrPhotoCaptureComponent implements AfterViewInit , OnInit {
         break;
     }
     //
-    this.status = "";
+    this.status_message.set("");
     //
     //console.log(`Selected Source : ${this.selectedIndex}`);
   }
@@ -131,7 +137,7 @@ export class OcrPhotoCaptureComponent implements AfterViewInit , OnInit {
         break;          
         default:
           //
-          this.status = "Favor seleccione la opción [ENGINE]";
+          this.status_message.set("Favor seleccione la opción [ENGINE]");
           break;
      }
   }
@@ -142,7 +148,7 @@ export class OcrPhotoCaptureComponent implements AfterViewInit , OnInit {
      // PNG
      this.signature?.clear();
      //
-     this.status = "";
+     this.status_message.set("");
      //
      this.statusButton = "[save]";
   }
@@ -162,22 +168,19 @@ export class OcrPhotoCaptureComponent implements AfterViewInit , OnInit {
       (response) => {
         //
         //console.log('Image uploaded successfully:', response);
-        this.status = JSON.parse(JSON.stringify(response))['message'];
+        this.status_message.set(JSON.parse(JSON.stringify(response))['message']);
         //
         this.statusButton            = '[save]';
         this.statusButtonSaveImage   = '[save image]';
         this.captureButtonStatus     = '[start capture]';
         this.captureButtonDisabled   = false;
         this.saveImageButtonDisabled = true;
-        //
-        const utterance = new SpeechSynthesisUtterance(this.status);
-        speechSynthesis.speak(utterance);     
       },
       (error) => {
         //
         console.error('Error uploading image:', error);
         //
-        this.status = error;
+        this.status_message.set(error);
         //
         this.statusButton = '[save]';
       }
@@ -251,7 +254,7 @@ export class OcrPhotoCaptureComponent implements AfterViewInit , OnInit {
               }
           break;
           default : //
-              this.status = "Favor seleccione la opción [ENGINE]";
+              this.status_message.set("Favor seleccione la opción [ENGINE]");
           break;
        }
   }

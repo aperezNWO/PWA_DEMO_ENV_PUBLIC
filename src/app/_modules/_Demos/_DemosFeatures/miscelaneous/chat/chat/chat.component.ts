@@ -1,8 +1,12 @@
 // chat.component.ts
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { DatePipe                     } from '@angular/common';
-import { NgForm                       } from '@angular/forms';
+import { NgForm                       } from '@angular/forms'
+import { ActivatedRoute               } from '@angular/router';;
 import { ChatService                  } from 'src/app/_services/ChatService/chat.service';
+import { BaseComponent                } from 'src/app/_components/base/base.component';
+import { BackendService               } from 'src/app/_services/BackendService/backend.service';
+import { SpeechService                } from 'src/app/_services/speechService/speech.service';
 //
 @Component({
   selector: 'app-chat',
@@ -10,12 +14,21 @@ import { ChatService                  } from 'src/app/_services/ChatService/chat
   styleUrls: ['./chat.component.css']
 })
 //
-export class ChatComponent implements OnInit {
+export class ChatComponent extends BaseComponent implements OnInit  {
   parentData: any[] = [];
   @ViewChild("_txtName")    txtName:any;
   @ViewChild("_txtMessage") txtMessage:any;
-  constructor(private chatService: ChatService,private datePipe: DatePipe) {}
+  //
+  constructor(public chatService               : ChatService,
+              public datePipe                  : DatePipe,
+              public override backendService   : BackendService,
+              public override route            : ActivatedRoute,
+              public override speechService    : SpeechService) 
+  {
+      //
+      super(backendService,route,speechService,"[MISCELANEOUS - CHAT]");
 
+  }
   ngOnInit() {
     this.chatService.getMessages().subscribe(messages => this.parentData = messages);
     this.chatService.onNewMessage.subscribe(message   => this.NotifyingMessage(message));
@@ -46,7 +59,7 @@ export class ChatComponent implements OnInit {
     //
     let messageToSend : string = `[${formattedDate}] -[${name}] Says: "${message}"`;
     //
-    //console.log("sending message: {" + message + "}");
+    this.status_message.set(message);
     //
     this.chatService.sendMessage(messageToSend);
   }
