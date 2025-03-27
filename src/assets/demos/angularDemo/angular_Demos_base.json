@@ -1,30 +1,6 @@
 [
     {
-		 "id"               : 1,
-         "done"             : true,
-         "description"      : "Generar Archivos - Chart",
-         "name"             : "Gráficos tipo Pastel y Barras",
-         "field_6"          : "Angular",
-         "field_1"          : "v17, Pie Chart, Bar Chart, Chart.js",
-         "field_2"          : "./#/Chart",
-         "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/miscelaneous/chart/chart.component.ts",
-         "field_4"          : "https://www.chartjs.org/"  ,
-         "field_10"         : "483973b3-b8f6-478b-a702-de3fbab225a4"
-    },
-    {
-		"id"               : 2,
-        "done"             : true,
-        "name"             : "Games - Tic Tac Toe",
-        "description"      : "Algoritmos Min Max",
-        "field_6"          : "Angular",
-        "field_1"          : "v17, Algorimto Min Max, Tic Tac Toe",
-        "field_2"          : "./#/GamesTicTacToe",
-        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_engines/game.engine.ts",
-        "field_4"          : "https://en.m.wikipedia.org/wiki/Minimax"  ,
-        "field_10"         : "ac973e56-6f8e-4d0e-a7d9-3a8a415af70b"
-    },
-    {
-		"id"               : 3,
+		"id"               : 1,
         "done"             : true,
         "name"             : "Miscelaneuos - OCR",
         "description"      : "Reconocimientos de Caracteres",
@@ -36,7 +12,19 @@
         "field_10"         : "5640c548-8aa6-4f15-bcf9-b10b8cb7fd0d"
     },
     {
-		"id"               : 4,
+		"id"               : 2,
+        "done"             : true,
+        "name"             : "Miscelaneous - COMPUTER VISION",
+        "description"      : "Miscelaneous - COMPUTER VISION",
+        "field_6"          : "Angular",
+        "field_1"          : "V17, Computer Vision, Tensorflow",
+        "field_2"          : "./#/ComputerVision",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_services/ShapeDetection/shape-detection.service.ts",
+        "field_4"          : "https://www.tensorflow.org/js?hl=es",
+        "field_10"         : "c094e0c5-c29b-4bdf-91ea-8204bb6e8942"
+    },
+    {
+		"id"               : 3,
         "done"             : true,
         "name"             : "Miscelaneous - Chat",
         "description"      : "Llamado a Sockets",
@@ -48,18 +36,30 @@
         "field_10"         : "415b3965-c5ef-4953-8484-080c34df691f"
     },
     {
-		"id"               : 5,
+		"id"               : 4,
         "done"             : true,
-        "name"             : "Genearar Archivos - PDF",
-        "description"      : "Exportación via servicio RESTFUL",
-        "field_6"          : ".NET Core",
-        "field_1"          : ".NET Core, pdf, iTextSharp",
-        "field_2"          : "./#/FilesGenerationPDF",
-        "field_3"          : "",
-        "field_4"          : "https://www.nuget.org/packages/iTextSharp/"  ,
-        "field_10"         : "179c6e7c-6dad-4aea-a515-d45d09641a76"
+        "name"             : "Miscelaneous - Math Parser",
+        "description"      : "Math Parser",
+        "field_6"          : "mathjs",
+        "field_1"          : "v17, Math Parser, math.js",
+        "field_2"          : "./#/MathParsing",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/miscelaneous/math-parsing/math-parsing.component.ts",
+        "field_4"          : "https://www.npmjs.com/package/mathjs"  ,
+        "field_10"         : "5efc8f87-995f-40aa-9d5b-5bdf5810dd6d"
     },
     {
+		"id"               : 5,
+        "done"             : true,
+        "name"             : "Generar archivos - csv",
+        "description"      : "Exportación via servicio RESTFUL con ms sql server",
+        "field_6"          : ".NET Core",
+        "field_1"          : "v17, .NET Core, csv, stringbuilder, ms sql server, HttpClient",
+        "field_2"          : "./#/FilesGenerationCSV?langName=CS",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/files-generation/files-generation-csv/files-generation-csv.component.ts",
+        "field_4"          : "https://v17.angular.io/guide/http-request-data-from-server",
+        "field_10"         : "c8981879-7457-4534-b660-b2e8c8eb9c83"  
+    },
+     {
 		"id"               : 6,
         "done"             : true,
         "name"             : "Generar Archivos - xls",
@@ -74,8 +74,56 @@
     {
 		"id"               : 7,
         "done"             : true,
-        "name"             : "Games - Torres de Hanoi",
-        "description"      : "Games - Torres de Nanoi",
+        "name"             : "Genearar Archivos - PDF",
+        "description"      : "Exportación via servicio RESTFUL",
+        "field_6"          : ".NET Core",
+        "field_1"          : ".NET Core, pdf, iTextSharp",
+        "field_2"          : "./#/FilesGenerationPDF",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_engines/pdf.engine.ts",
+        "field_4"          : "https://www.nuget.org/packages/iTextSharp/"  ,
+        "field_10"         : "179c6e7c-6dad-4aea-a515-d45d09641a76"
+    },
+    {
+		 "id"               : 8,
+         "done"             : true,
+         "description"      : "Generar Archivos - Chart",
+         "name"             : "Gráficos tipo Pastel y Barras",
+         "field_6"          : "Angular",
+         "field_1"          : "v17, Pie Chart, Bar Chart, Chart.js",
+         "field_2"          : "./#/Chart",
+         "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/miscelaneous/chart/chart.component.ts",
+         "field_4"          : "https://www.chartjs.org/"  ,
+         "field_10"         : "483973b3-b8f6-478b-a702-de3fbab225a4"
+    },
+    {
+		"id"               : 9,
+        "done"             : true,
+        "name"             : "Games - Sudoku",
+        "description"      : "Games - Sudoku",
+        "field_6"          : "Angular",
+        "field_1"          : "v17, Sudoku, canvas",
+        "field_2"          : "./#/GamesSudoku",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/games/game-sudoku/game-sudoku.component.ts",
+        "field_4"          : "https://www.geeksforgeeks.org/sudoku-backtracking-7/" ,
+        "field_10"         : "8c25ff6b-2568-411b-b366-cb5700b95b28" 
+    },
+      {
+		"id"               : 10,
+        "done"             : true,
+        "name"             : "Games - Tic Tac Toe",
+        "description"      : "Algoritmos Min Max",
+        "field_6"          : "Angular",
+        "field_1"          : "v17, Algorimto Min Max, Tic Tac Toe",
+        "field_2"          : "./#/GamesTicTacToe",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_engines/game.engine.ts",
+        "field_4"          : "https://en.m.wikipedia.org/wiki/Minimax"  ,
+        "field_10"         : "ac973e56-6f8e-4d0e-a7d9-3a8a415af70b"
+    },
+    {
+		"id"               : 11,
+        "done"             : true,
+        "name"             : "Games - Torres de Hanoi 2d",
+        "description"      : "Games - Torres de Nanoi 2d",
         "field_6"          : "Angular",
         "field_1"          : "v17, Algoritmo recursión, observable,",
         "field_2"          : "./#/GamesHanoiAuto",
@@ -84,31 +132,31 @@
         "field_10"         : "85fbe9be-c748-4754-bd71-daf1a40d3fb9" 
     },
     {
-		"id"               : 8,
+		"id"               : 12,
         "done"             : true,
-        "name"             : "Miscelaneous - COMPUTER VISION",
-        "description"      : "Miscelaneous - COMPUTER VISION",
+        "name"             : "Games - Torres de Hanoi 3d",
+        "description"      : "Games - Torres de Nanoi 3d",
         "field_6"          : "Angular",
-        "field_1"          : "V17, Computer Vision, Tensorflow",
-        "field_2"          : "./#/ComputerVision",
-        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_services/ShapeDetection/shape-detection.service.ts",
-        "field_4"          : "https://www.tensorflow.org/js?hl=es",
-        "field_10"         : "c094e0c5-c29b-4bdf-91ea-8204bb6e8942"
+        "field_1"          : "v17, Algoritmo recursión, observable, THREE,TWEEN  ",
+        "field_2"          : "./#/GamesHanoi3d",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/games/game-hanoi3d/game-hanoi3d.component.ts",
+        "field_4"          : "https://www.npmjs.com/package/three-tween" ,
+        "field_10"         : "7bd14d49-9fc4-4657-86b8-d16132a8c3e1" 
     },
     {
-		"id"               : 9,
+		"id"               : 13,
         "done"             : true,
-        "name"             : "Generar archivos - csv",
-        "description"      : "Exportación via servicio RESTFUL con ms sql server",
-        "field_6"          : ".NET Core",
-        "field_1"          : "v17, .NET Core, csv, stringbuilder, ms sql server, HttpClient",
-        "field_2"          : "./#/FilesGenerationCSV?langName=CS",
-        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/files-generation/files-generation-csv/files-generation-csv.component.ts",
-        "field_4"          : "https://v17.angular.io/guide/http-request-data-from-server",
-        "field_10"         : "c8981879-7457-4534-b660-b2e8c8eb9c83"  
+        "name"             : "Games - Tetris",
+        "description"      : "Games - Tetris",
+        "field_6"          : "Angular",
+        "field_1"          : "v17, Algoritmo recursión, observable,",
+        "field_2"          : "./#/GamesTetris",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/games/game-tetris/game-tetris.component.ts",
+        "field_4"          : "https://en.wikipedia.org/wiki/Tetris" ,
+        "field_10"         : "67431c50-5240-4889-81df-84270075fed8" 
     },
     {
-		"id"               : 10,
+		"id"               : 14,
         "done"             : true,
         "name"             : "Algoritmo - Distancia mas corta",
         "description"      : "Algoritmo - Distancia mas corta",
@@ -120,19 +168,7 @@
         "field_10"         : "a819d617-74fe-41f0-8f58-0f62377d15e6"  
     },
     {
-		"id"               : 11,
-        "done"             : true,
-        "name"             : "Games - Sudoku",
-        "description"      : "Games - Sudoku",
-        "field_6"          : "Angular",
-        "field_1"          : "v17, Sudoku, canvas",
-        "field_2"          : "./#/GamesSudoku",
-        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/games/game-sudoku/game-sudoku.component.ts",
-        "field_4"          : "https://www.geeksforgeeks.org/sudoku-backtracking-7/" ,
-        "field_10"         : "8c25ff6b-2568-411b-b366-cb5700b95b28" 
-    },
-    {
-		"id"               : 12,
+		"id"               : 15,
         "done"             : true,
         "name"             : "Algoritmos - Ordenamiento",
         "description"      : "Algoritmos - Ordenamiento",
@@ -144,7 +180,7 @@
         "field_10"         : "6bfa047d-dbd7-4991-a4d6-b9786c601285" 
     },
     {
-		"id"               : 13,
+		"id"               : 16,
         "done"             : true,
         "name"             : "Algoritmos - Expresiones Regulares",
         "description"      : "Algoritmos - Expresiones Regulares",
@@ -154,5 +190,17 @@
         "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/algorithm/algorithm-reg-ex/algorithm-reg-ex.component.ts",
         "field_4"          : "https://en.wikipedia.org/wiki/Regular_expression" ,
         "field_10"         : "756e8939-bca0-45f7-b581-63e417b6a2d5" 
+    },
+    {
+		"id"               : 17,
+        "done"             : true,
+        "name"             : "Algoritmos - Colisión",
+        "description"      : "Algoritmos - Colisión",
+        "field_6"          : "Angular",
+        "field_1"          : "v17, Canvar, Collision",
+        "field_2"          : "./#/AlgorithmCollision",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/algorithm/algorithm-collision/algorithm-collision.component.ts",
+        "field_4"          : "https://en.wikipedia.org/wiki/Collision" ,
+        "field_10"         : "60669d7b-0380-4756-8f71-7286a4324228" 
     }
 ]       
