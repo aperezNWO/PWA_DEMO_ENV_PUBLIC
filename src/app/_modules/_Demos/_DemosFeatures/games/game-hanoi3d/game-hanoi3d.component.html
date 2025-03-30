@@ -1,5 +1,30 @@
 <div align="center">
-    <h1>[HANOI - 3D]</h1>
+  <!-- ENCABEZADO / INICIO  -->  
+  <div align="center">
+    <h1>{{  this.pageTitle }}</h1>
+  </div>
+  <hr> 
+  <div class="reference" align="right">
+  <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
+  <ul *ngIf="isListVisible" align="left" widdth="10px">
+      <li> [Frontend]
+          <ul>
+              <li><a routerLink="/AngularDemo" [queryParams]="{ searchTerm: '7bd14d49-9fc4-4657-86b8-d16132a8c3e1' }">[Angular]</a></li>
+          </ul>
+      </li>
+      <li>[Librerias]
+          <ul>
+              <li><a href="https://www.npmjs.com/package/three-tween" target="_blank">[TWEEN / THREE ]</a></li>
+          </ul>
+      </li>
+      <li>[Temas]
+          <ul>
+              <li><a href="https://en.wikipedia.org/wiki/Tower_of_Hanoi" target="_blank">[Torres de Hanoi]</a></li>
+          </ul>
+      </li>
+  </ul>
+  </div>  
+  <!-- ENCABEZADO / FIN -->  
     <hr>
     <div #rendererContainer style="width: 300px; height: 300px;"></div>
     <hr>

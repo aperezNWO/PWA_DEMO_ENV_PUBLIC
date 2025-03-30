@@ -1,3 +1,29 @@
-<app-board></app-board>
-<hr />
-<div align="right"><a routerLink="/GamesWeb">[Volver al Menú]</a></div>
+<div class="content">    
+      <!-- ENCABEZADO / INICIO  -->  
+       <div align="center">
+        <h1>{{  this.pageTitle }}</h1>
+        </div>
+        <hr> 
+        <div class="reference" align="right">
+        <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
+        <ul *ngIf="isListVisible" align="left" widdth="10px">
+        <li> [Frontend]
+            <ul>
+                <li><a routerLink="/AngularDemo" [queryParams]="{ searchTerm: 'ac973e56-6f8e-4d0e-a7d9-3a8a415af70b' }">[Angular]</a></li>
+            </ul>
+        </li>
+        <li>[Temas]
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Tic-tac-toe" target="_blank">[Tic Tac Toe]</a></li>
+            </ul>
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Minimax" target="_blank">[Min Max Algorithm]</a></li>
+            </ul>
+        </li>
+        </ul>
+        </div>  
+      <!-- ENCABEZADO / FIN -->  
+      <app-board></app-board>
+      <hr />
+      <div align="right"><a routerLink="/GamesWeb">[Volver al Menú]</a></div>
+</div>

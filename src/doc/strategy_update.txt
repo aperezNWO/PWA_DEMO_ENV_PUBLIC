@@ -373,5 +373,9 @@
  --  [_] canvas component.
 
  --  [_] image capture component.
+  
+ --  [_] voice search component - ask A.I.
 
+ 
+ 
  ////////////////////////////////////////////////////////////////////////////////

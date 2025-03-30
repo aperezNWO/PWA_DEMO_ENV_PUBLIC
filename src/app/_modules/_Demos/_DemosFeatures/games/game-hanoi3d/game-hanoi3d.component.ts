@@ -3,13 +3,17 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import * as THREE from 'three';
 import * as TWEEN from 'tween';
 import { PageRestartService } from 'src/app/_services/pageRestart/page-restart.service';
+import { ActivatedRoute } from '@angular/router';
+import { BackendService } from 'src/app/_services/BackendService/backend.service';
+import { SpeechService } from 'src/app/_services/speechService/speech.service';
+import { BaseComponent } from 'src/app/_components/base/base.component';
 
 @Component({
   selector: 'app-game-hanoi3d',
   templateUrl: './game-hanoi3d.component.html',
   styleUrl: './game-hanoi3d.component.css'
 })
-export class GameHanoi3dComponent implements OnInit, AfterViewInit {
+export class GameHanoi3dComponent extends BaseComponent implements OnInit, AfterViewInit {
   @ViewChild('rendererContainer', { static: false }) rendererContainer!: ElementRef;
   scene!: THREE.Scene;
   camera!: THREE.PerspectiveCamera;
@@ -22,11 +26,21 @@ export class GameHanoi3dComponent implements OnInit, AfterViewInit {
   currentMove = 0;
   isAnimating = false;
 
-  constructor(private pageRestartService: PageRestartService)
-  {
-    
+  //
+  constructor(
+                  public  pageRestartService        : PageRestartService,
+                  public  override route            : ActivatedRoute,
+                  public  override speechService    : SpeechService,
+                  public  override backendService   : BackendService) 
+  { 
+      //
+      super(backendService,
+            route,
+            speechService,
+            "[GAMES - HANOI 3D]"
+      )
   }
-  
+
   restart() {
     this.pageRestartService.reloadPage(); // or use any other method
   }

@@ -1,23 +1,50 @@
-<h4>[HANOI- 2d]</h4>
-<br>
-<div class="game-container">
-    <div *ngFor="let tower of hanoiEngine.towers$ | async; let i = index" class="tower">
-      <h2>Tower {{ i + 1 }}</h2>
-      <div class="disks-container">
-        <div *ngFor="let disk of tower" class="disk" [style.width.px]="disk.size * 20">
-          {{ disk.size }}
-        </div>
-      </div>
+  <div class="content">
+  <!-- ENCABEZADO / INICIO  -->  
+    <div align="center">
+      <h1>{{  this.pageTitle }}</h1>
     </div>
-</div>
-<hr>
-<div align="center">
-  <p>Moves: {{ hanoiEngine.moves$ | async }}</p>
-  <button class="btn btn-primary"   (click)="hanoiEngine.manual_resetGame()" [disabled]="!(this.hanoiEngine._checkWinCondition())">Reset Game</button>
-  |
-  <button class="btn btn-success"   (click)="hanoiEngine.auto_startGame()" [disabled]="((this.hanoiEngine._steps.length > 0))">Start Game</button> 
-</div>
-<hr />
-<div align="right">
-    <a routerLink="/GamesWeb">[Volver al Menú]</a>
+    <hr> 
+    <div class="reference" align="right">
+    <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
+    <ul *ngIf="isListVisible" align="left" widdth="10px">
+        <li> [Frontend]
+            <ul>
+                <li><a routerLink="/AngularDemo" [queryParams]="{ searchTerm: '85fbe9be-c748-4754-bd71-daf1a40d3fb9' }">[Angular]</a></li>
+            </ul>
+        </li>
+        <li>[Librerias]
+            <ul>
+                <li><a href="https://v17.angular.io/guide/observables" target="_blank">[Observer]</a></li>
+            </ul>
+        </li>
+        <li>[Temas]
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Tower_of_Hanoi" target="_blank">[Torres de Hanoi]</a></li>
+            </ul>
+        </li>
+    </ul>
+    </div>  
+    <!-- ENCABEZADO / FIN -->  
+    <hr>
+    <div class="game-container">
+        <div *ngFor="let tower of hanoiEngine.towers$ | async; let i = index" class="tower">
+          <h2>Tower {{ i + 1 }}</h2>
+          <div class="disks-container">
+            <div *ngFor="let disk of tower" class="disk" [style.width.px]="disk.size * 20">
+              {{ disk.size }}
+            </div>
+          </div>
+        </div>
+    </div>
+    <hr>
+    <div align="center">
+      <p>Moves: {{ hanoiEngine.moves$ | async }}</p>
+      <button class="btn btn-primary"   (click)="hanoiEngine.manual_resetGame()" [disabled]="!(this.hanoiEngine._checkWinCondition())">Reset Game</button>
+      |
+      <button class="btn btn-success"   (click)="hanoiEngine.auto_startGame()" [disabled]="((this.hanoiEngine._steps.length > 0))">Start Game</button> 
+    </div>
+    <hr />
+    <div align="right">
+        <a routerLink="/GamesWeb">[Volver al Menú]</a>
+    </div>
 </div>

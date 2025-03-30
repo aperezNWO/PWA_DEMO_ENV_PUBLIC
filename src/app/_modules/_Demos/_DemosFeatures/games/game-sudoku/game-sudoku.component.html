@@ -1,4 +1,5 @@
 <div class="content">
+    <!-- ENCABEZADO / INICIO  -->  
     <div align="center">
         <h1>{{  this.pageTitle }}</h1>
     </div>
@@ -113,7 +114,7 @@
         <hr>
         <!--STATUS / INICIO               -->
         <div align="left">
-            <div *ngIf="message" class="alert alert-secondary" role="alert">{{  message() }}</div>
+            <div *ngIf="this.status_message()" class="alert alert-secondary" role="alert">{{  this.status_message() }}</div>
         </div>
         <!-- STATUS / FIN     -->
         <!-- BUTTONS / INICIO -->
@@ -130,7 +131,7 @@
             <!-- GENERAR PDF / INICIO -->
             <span *ngIf="(this.board.length>0)" align="left">
                 |
-                <input class="btn btn-secondary" type="button" name="btnGeneratePdf" value="[GENERAR PDF]" (click)="this._GetPdf()" [disabled]="(this.message.toString() == '[...Generando PDF...]')">
+                <input class="btn btn-secondary" type="button" name="btnGeneratePdf" value="[GENERAR PDF]" (click)="this._GetPdf()" [disabled]="(this.status_message() == '[...Generando PDF...]')">
             </span>
             <!-- GENERAR PDF / FIN    -->
         </div>

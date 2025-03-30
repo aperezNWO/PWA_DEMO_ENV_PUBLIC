@@ -1,7 +1,11 @@
 // tetris.component.ts
 import { Component, HostListener, OnInit } from '@angular/core';
-import { BehaviorSubject, interval, Subscription } from 'rxjs';
-import { PageRestartService } from 'src/app/_services/pageRestart/page-restart.service';
+import { ActivatedRoute                  } from '@angular/router';
+import { interval, Subscription          } from 'rxjs';
+import { BaseComponent                   } from 'src/app/_components/base/base.component';
+import { BackendService                  } from 'src/app/_services/BackendService/backend.service';
+import { PageRestartService              } from 'src/app/_services/pageRestart/page-restart.service';
+import { SpeechService                   } from 'src/app/_services/speechService/speech.service';
 
 interface Position {
   x: number;
@@ -13,7 +17,7 @@ interface Position {
   templateUrl: './game-tetris.component.html',
   styleUrl: './game-tetris.component.css'
 })
-export class GameTetrisComponent  implements OnInit {
+export class GameTetrisComponent  extends BaseComponent implements OnInit  {
   readonly BOARD_WIDTH = 10;
   readonly BOARD_HEIGHT = 20;
   readonly TICK_INTERVAL = 1000;
@@ -39,10 +43,21 @@ export class GameTetrisComponent  implements OnInit {
     L: { shape: [[0, 0, 1], [1, 1, 1]], color: '#f0a000' }
   };
 
-  constructor(private pageRestartService: PageRestartService)
-  {
-    
+//
+  constructor(
+                  private pageRestartService        : PageRestartService,
+                  public  override route            : ActivatedRoute,
+                  public  override speechService    : SpeechService,
+                  public  override backendService   : BackendService) 
+  { 
+      //
+      super(backendService,
+            route,
+            speechService,
+            "[GAMES - TETRIS]"
+      )
   }
+  //
   restart() {
     this.pageRestartService.reloadPage(); // or use any other method
   }
