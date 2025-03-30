@@ -375,7 +375,7 @@
  --  [_] image capture component.
   
  --  [_] voice search component - ask A.I.
-
- 
+   
+ --  [_] PAGE_<FEATURE>_DEMO --> setLog().
  
  ////////////////////////////////////////////////////////////////////////////////

@@ -1,8 +1,9 @@
-import { Component, OnInit, AfterViewInit , ViewChild } from '@angular/core';
+import { Component, OnInit, AfterViewInit , ViewChild,effect } from '@angular/core';
 import { CommonModule                                 } from '@angular/common';
 import { ListItem                                     } from 'src/app/_models/entity.model';
 import { SquareComponent                              } from "../square/square.component";
 import { TicTacToeEngine                              } from 'src/app/_engines/game.engine';
+import { SpeechService                                } from 'src/app/_services/speechService/speech.service';
 //
 @Component({
     selector: 'app-board',
@@ -20,10 +21,15 @@ export class BoardComponent implements OnInit, AfterViewInit {
   protected IsNewGame                      : boolean = false;
   protected showBoard                      : boolean = false;
   //
-  public    ticTacToeEngine                : TicTacToeEngine = new TicTacToeEngine();
-  //
-  constructor() {
-    //
+  constructor(public ticTacToeEngine : TicTacToeEngine,
+              public speechService   : SpeechService
+  ) 
+  {
+    // Define an effect to react to changes in the signal
+    effect(() => {
+      if (this.ticTacToeEngine.message())
+          this.speechService.speakTextCustom(this.ticTacToeEngine.message());
+    });
   }
   //
   ngOnInit(): void {

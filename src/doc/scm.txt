@@ -348,8 +348,8 @@ Could not find a declaration file for module 'three/examples/jsm/controls/OrbitC
   Try `npm i --save-dev @types/three` if it exists or add a new declaration (.d.ts) file containing `declare module 'three/examples/jsm/controls/OrbitControls';`
 
 git add * 
-git commit -m "Application [ANGULAR DEMO - ENV_PUBLIC] v[1.7.17]
->> 1)  Both ways reference -> .net core demo. " 
+git commit -m "Application [ANGULAR DEMO - ENV_PUBLIC] v[1.7.24]
+>>  1) Angular Reference / Curriculum update. " 
 git push 
 git pull
 

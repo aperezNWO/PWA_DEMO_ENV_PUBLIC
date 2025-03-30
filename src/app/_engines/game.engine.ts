@@ -1,4 +1,9 @@
-//
+import { Injectable , signal } from "@angular/core";
+
+//  
+@Injectable({
+  providedIn: 'root'
+})
 export class TicTacToeEngine
 {
     //
@@ -13,7 +18,7 @@ export class TicTacToeEngine
     private            board        : ('X' | 'O' | null)[][] = [];
     public             winner       : ('X' | 'O' | null)     = null;
     public             squares      : ('X' | 'O' | null)[]   = Array(this.boardSurface).fill(null);
-    public             message      : string = '';
+    public             message      = signal<string>('');
     //    
     constructor()
     {
@@ -41,18 +46,18 @@ export class TicTacToeEngine
         //
         this.winner    = null;
         this.moveIndex = 0;
-        this.message   = '';
+        this.message.set('');
     }
     //
     declareWinner(whoseTurn: number): void 
     {
         if (whoseTurn == this.COMPUTER) 
         {
-            this.message = "[ganó COMPUTADOR]";
+            this.message.set("[ganó COMPUTADOR]");
             this.winner  = this.COMPUTERMOVE;
         }
         else {
-            this.message = "[ganó HUMANO]";
+            this.message.set("[ganó HUMANO]");
             this.winner  = this.HUMANMOVE;
         }
     }
@@ -222,16 +227,13 @@ export class TicTacToeEngine
       //
       if (gameRunning && this.moveIndex == this.boardSurface){
           //
-          this.message = "[EMPATE]";
+          this.message.set("[EMPATE]");
           this.winner  = null;
       }
 	  else
 	  {
   			this.declareWinner(this.whoseTurn);
 	  }
-      //
-      const utterance = new SpeechSynthesisUtterance( this.message  );
-      speechSynthesis.speak(utterance);    
       //
       return true;
     } 
@@ -269,4 +271,6 @@ export class TicTacToeEngine
       }
   }
 }
+
+
 

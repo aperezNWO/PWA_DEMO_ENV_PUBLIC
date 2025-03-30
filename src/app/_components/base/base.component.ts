@@ -31,7 +31,7 @@ export class BaseComponent {
       //
       this.speechService.speakTextCustom(this.pageTitle);
       //
-      this.backendService.SetLog(this.pageTitle,"PAGE_CHAT_DEMO");
+      this.backendService.SetLog(this.pageTitle,this.pageTitle);
       // Define an effect to react to changes in the signal
       effect(() => {
         if (this.status_message())

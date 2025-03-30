@@ -39,7 +39,7 @@
     <hr>
     <!--STATUS / INICIO -->
     <div class="form-group" align="center">
-      <div *ngIf="this.ticTacToeEngine.message" class="alert alert-secondary" role="alert"><b>{{ this.ticTacToeEngine.message }}</b></div>
+    <div *ngIf="this.ticTacToeEngine.message()" class="alert alert-secondary" role="alert"><b>{{ this.ticTacToeEngine.message() }}</b></div>
     </div>
     <!-- STATUS / FIN   -->
 </form>
