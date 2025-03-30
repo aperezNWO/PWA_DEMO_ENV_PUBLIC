@@ -1,6 +1,29 @@
 
 <div align="center">
-    <div class="container mx-auto p-6">
+  <h1>{{this.pageTitle}}</h1>
+  <hr>
+  <div class="reference" align="right">
+    <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
+    <ul *ngIf="isListVisible" align="left" widdth="10px">
+        <li> [Frontend]
+          <ul>
+            <li><a routerLink="/AngularDemo"     [queryParams]="{ searchTerm: '5efc8f87-995f-40aa-9d5b-5bdf5810dd6d' }">[Angular]</a></li>
+          </ul>
+        </li>
+        <li>[Libraries]
+            <ul>
+              <li><a href="https://mathjs.org/" target="_blank">[Math Parser]</a></li>
+            </ul>
+        </li>
+        <li>[Tema]
+          <ul>
+            <li><a href="https://en.wikipedia.org/wiki/Parsing#Parser" target="_blank">[Parser]</a></li>
+          </ul>
+        </li>
+    </ul>
+  </div>
+   <hr> 
+  <div class="container mx-auto p-6">
         <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow">
           <h2 class="text-2xl font-bold mb-4">Math Expression Parser</h2>
           <hr>
@@ -46,10 +69,10 @@
           </div>
     
           <!-- Result -->
-          <div *ngIf="result !== null" 
+          <div *ngIf="this.status_message() !== null" 
                class="p-4 rounded"
                [ngClass]="{'bg-green-100': !error, 'bg-red-100': error}">
-            <strong>Result:</strong> {{result}}
+            <strong>Result:</strong> {{this.status_message()}}
           </div>
     
           <!-- Examples -->

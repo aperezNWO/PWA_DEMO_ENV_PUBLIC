@@ -1,4 +1,6 @@
-import { Component, ViewChild, ElementRef, AfterViewInit, effect, signal } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewInit                 } from '@angular/core';
+import { ActivatedRoute                                                  } from '@angular/router';
+import { BaseComponent                                                   } from 'src/app/_components/base/base.component';
 import { BackendService                                                  } from 'src/app/_services/BackendService/backend.service';
 import { PageRestartService                                              } from 'src/app/_services/pageRestart/page-restart.service';
 import { SpeechService                                                   } from 'src/app/_services/speechService/speech.service';
@@ -8,9 +10,7 @@ import { SpeechService                                                   } from 
   templateUrl: './algorithm-collision.component.html',
   styleUrl: './algorithm-collision.component.css'
 })
-export class AlgorithmCollisionComponent implements AfterViewInit {
-  //
-  protected pageTitle : string = "[ALGORITMOS - COLISION]";
+export class AlgorithmCollisionComponent extends BaseComponent implements AfterViewInit {
   //
   @ViewChild('ballCanvas', { static: false }) canvas!: ElementRef<HTMLCanvasElement> | null;
   //
@@ -26,17 +26,16 @@ export class AlgorithmCollisionComponent implements AfterViewInit {
   private gravity     = 0.5;  // Gravity pulling down
   private friction    = 0.98; // Friction to slow down the ball
   private restitution = 0.8; // Bounce factor, 1 = perfect elastic collision, <1 = energy loss
-
+  //
   constructor(private pageRestartService: PageRestartService,
-              public  speechService     : SpeechService,
-              public  backendService    : BackendService,
+              public  override speechService     : SpeechService,
+              public  override backendService    : BackendService,
+              public  override route             : ActivatedRoute,
   )
   {
-     //
-     this.backendService.SetLog(this.pageTitle,"PAGE_COLLISION_DEMO");
-     //
-     this.speechService.speakTextCustom(this.pageTitle)
+      super(backendService,route,speechService,"[ALGORITMOS - COLISIÓN]");
   }
+  
   restart() {
     this.pageRestartService.reloadPage(); // or use any other method
   }

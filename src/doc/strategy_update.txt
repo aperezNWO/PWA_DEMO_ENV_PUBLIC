@@ -366,4 +366,12 @@
 
  -- [_] github permalink.
 
+ --  [_] page Number param grid.
+
+ --  [_] base component inheritance.
+
+ --  [_] canvas component.
+
+ --  [_] image capture component.
+
  ////////////////////////////////////////////////////////////////////////////////

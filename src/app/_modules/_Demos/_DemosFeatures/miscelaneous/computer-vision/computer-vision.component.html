@@ -1,5 +1,32 @@
 <div class="content" align="center">
-    <h1>[MISCELANEOUS - COMPUTER VISION]</h1>
+    <h1>{{this.pageTitle}}</h1>
+    <hr>
+    <div class="reference" align="right">
+      <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
+      <ul *ngIf="isListVisible" align="left" widdth="10px">
+          <li> [Frontend]
+            <ul>
+              <li><a routerLink="/AngularDemo" [queryParams]="{ searchTerm: 'c094e0c5-c29b-4bdf-91ea-8204bb6e8942' }">[Angular]</a></li>
+            </ul>
+          </li>
+          <li>[Librerias]
+              <ul>
+                <li><a href="https://www.npmjs.com/package/ngx-signaturepad" target="_blank">[ngx-signaturepad]</a></li>
+              </ul>
+              <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" target="_blank">[HTML Video]</a></li>
+              </ul>
+              <ul>
+                <li><a href="https://www.tensorflow.org/js/demos?hl=es" target="_blank">[Tensorflow]</a></li>
+              </ul>
+            </li>
+          <li>[Temas]
+              <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Computer_vision" target="_blank">[Computer Vision]</a></li>
+              </ul>
+          </li>
+      </ul>
+  </div>  
    <!-- [hidden]="this.hiddenCanvasContainer"-->
     <div id="canvasContainer" [hidden]="this.hiddenCanvasContainer">
         <hr/>

@@ -1,6 +1,27 @@
 <div align="center">
     <h1>{{ this.pageTitle }}</h1>
     <hr>
+    <div class="reference" align="right">
+        <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
+        <ul *ngIf="isListVisible" align="left" widdth="10px">
+            <li> [Frontend]
+              <ul>
+                <li><a routerLink="/AngularDemo" [queryParams]="{ searchTerm: '60669d7b-0380-4756-8f71-7286a4324228' }">[Angular]</a></li>
+              </ul>
+            </li>
+            <li>[Librerias]
+                <ul>
+                  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API" target="_blank">[HTML Canvas]</a></li>
+                </ul>
+            </li>
+            <li>[Temas]
+                <ul>
+                  <li><a href="https://en.wikipedia.org/wiki/Collision" target="_blank">[Colisión]</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>   
+    <hr>
     <canvas #ballCanvas width="300" height="300"></canvas>
     <hr>
     <button (click)="restart()">[RESTART]</button>

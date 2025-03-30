@@ -1,16 +1,22 @@
-import { Component } from '@angular/core';
+import { Component      } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import * as math from 'mathjs';
+import { BaseComponent   } from 'src/app/_components/base/base.component';
+import { BackendService  } from 'src/app/_services/BackendService/backend.service';
+import { SpeechService   } from 'src/app/_services/speechService/speech.service';
 
 @Component({
   selector: 'app-math-parsing',
   templateUrl: './math-parsing.component.html',
   styleUrl: './math-parsing.component.css'
 })
-export class MathParsingComponent {
+export class MathParsingComponent extends BaseComponent {
+  ///////////////////////////////////////////////////////////////
+  //  PROPIEDADES
+  ///////////////////////////////////////////////////////////////
   expression: string = '(x + y)';
-  variables: string = '{"x": 3, "y": 4}';
-  result: string | null = null;
-  error: boolean = false;
+  variables : string = '{"x": 3, "y": 4}';
+  error     : boolean = false;
 
   examples = [
     {
@@ -34,7 +40,25 @@ export class MathParsingComponent {
       variables: ''
     }
   ];
-
+  ///////////////////////////////////////////////////////////////
+  //  EVENT HANDLERS
+  ///////////////////////////////////////////////////////////////
+  //
+  constructor(public override backendService          : BackendService,
+              public override route                   : ActivatedRoute,
+              public override speechService           : SpeechService,
+  )
+  {
+      //
+      super(backendService,
+            route,
+            speechService,
+            "[MISCELANEOUS - MATH PARSING]");
+  }
+  ///////////////////////////////////////////////////////////////
+  //  METODOS COMUNES
+  ///////////////////////////////////////////////////////////////
+  
   evaluate() {
     try {
       let scope = {};
@@ -52,13 +76,14 @@ export class MathParsingComponent {
       const result = math.evaluate(this.expression, scope);
       
       // Format the result
-      this.result = typeof result === 'number' ? 
+      this.status_message.set( (typeof result === 'number') ? 
         math.format(result, { precision: 14 }) : 
-        result.toString();
+        result
+      );
       
       this.error = false;
     } catch (err: any) {
-      this.result = `Error: ${err.message}`;
+      this.status_message.set( `Error: ${err.message}`);
       this.error = true;
     }
   }
@@ -66,7 +91,7 @@ export class MathParsingComponent {
   clear() {
     this.expression = '';
     this.variables = '';
-    this.result = null;
+    this.status_message.set('');
     this.error = false;
   }
 
@@ -75,5 +100,6 @@ export class MathParsingComponent {
     this.variables = example.variables;
     this.evaluate();
   }
+  ///////////////////////////////////////////////////////////////
 }
 

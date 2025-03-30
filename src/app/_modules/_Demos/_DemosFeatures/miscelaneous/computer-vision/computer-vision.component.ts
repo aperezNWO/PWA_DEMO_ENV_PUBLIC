@@ -1,16 +1,21 @@
 
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild,Renderer2    } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild,    } from '@angular/core';
+import { ActivatedRoute           } from '@angular/router';
+import { BaseComponent            } from 'src/app/_components/base/base.component';
+import { _languageName            } from 'src/app/_models/entity.model';
+import { BackendService           } from 'src/app/_services/BackendService/backend.service';
+import { ShapeDetectionService    } from 'src/app/_services/ShapeDetection/shape-detection.service';
+import { SpeechService            } from 'src/app/_services/speechService/speech.service';
 import { NgxSignaturePadComponent } from '@eve-sama/ngx-signature-pad/lib/ngx-signature-pad.component';
 import { NgxSignatureOptions      } from '@eve-sama/ngx-signature-pad/lib/types/ngx-signature-pad';
-import { _languageName            } from 'src/app/_models/entity.model';
-import { ShapeDetectionService    } from 'src/app/_services/ShapeDetection/shape-detection.service';
+
 declare var cv: any; // Declare cv as a global variable
-@Component({
+@Component({   
   selector: 'computer-vision',
   templateUrl: './computer-vision.component.html',
   styleUrl: './computer-vision.component.css'
 })
-export class ComputerVisionComponent implements AfterViewInit , OnInit {
+export class ComputerVisionComponent extends BaseComponent implements AfterViewInit , OnInit {
   /** Catch object, call functions via instance object */
   @ViewChild('signature') signature: NgxSignaturePadComponent | undefined;
   /** You can see more introduction in the below about NgxSignatureOptions */
@@ -53,9 +58,17 @@ export class ComputerVisionComponent implements AfterViewInit , OnInit {
   ////////////////////////////////////////////////////////////////
   detectedShapes: string[] = [];
   //
-  constructor(public shapeDetectionService : ShapeDetectionService)
+  constructor(public          shapeDetectionService   : ShapeDetectionService,
+              public override backendService          : BackendService,
+              public override route                   : ActivatedRoute,
+              public override speechService           : SpeechService,
+  )
   {
-
+      //
+      super(backendService,
+            route,
+            speechService,
+            "[ALGORITMOS - COMPUTER VISION]");
   }
   //
   ngOnInit(): void {

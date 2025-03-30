@@ -1,7 +1,9 @@
 <div class="content" align="center">
-    <h1>[MISCELANEOUS - OCR]</h1>
-      <hr>
-      <div class="reference" align="right">
+    <div>
+        <h1>{{this.pageTitle}}</h1>
+    </div>
+    <hr> 
+    <div class="reference" align="right">
       <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
       <ul *ngIf="isListVisible" align="left" widdth="10px">
           <li> [Frontend]
@@ -20,7 +22,7 @@
               </ul>
           </li>
       </ul>
-    </div>
+     </div>
     <hr>  
     <div id="canvasContainer" [hidden]="this.hiddenCanvasContainer">
         <hr/>
