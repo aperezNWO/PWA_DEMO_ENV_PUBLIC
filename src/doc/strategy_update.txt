@@ -376,5 +376,7 @@
  --  [_] LANDING PAGES WITH JSON PAGES LIST.
 
  --  [_] PAGES LIST BASE COMPONENT.
- 
+
+ --  [_] ANGULAR ERROR HANDLING BEST PRACTICES.
+
  ////////////////////////////////////////////////////////////////////////////////
