@@ -68,7 +68,8 @@ export class ComputerVisionComponent extends BaseComponent implements AfterViewI
       super(backendService,
             route,
             speechService,
-            "[ALGORITMOS - COMPUTER VISION]");
+            "[ALGORITMOS - COMPUTER VISION]",
+            "PAGE_ALGORITMOS_COMPUTER_VISION");
   }
   //
   ngOnInit(): void {

@@ -37,7 +37,8 @@ export class GameHanoi3dComponent extends BaseComponent implements OnInit, After
       super(backendService,
             route,
             speechService,
-            "[GAMES - HANOI 3D]"
+            "[GAMES - HANOI 3D]",
+            "PAGES_GAMES_HANOI_3D",
       )
   }
 

@@ -26,7 +26,11 @@ export class ChatComponent extends BaseComponent implements OnInit  {
               public override speechService    : SpeechService) 
   {
       //
-      super(backendService,route,speechService,"[MISCELANEOUS - CHAT]");
+      super(backendService,
+            route,
+            speechService,
+            "[MISCELANEOUS - CHAT]",
+            "PAGE_MISCELANEOUS_CHAT");
 
   }
   ngOnInit() {

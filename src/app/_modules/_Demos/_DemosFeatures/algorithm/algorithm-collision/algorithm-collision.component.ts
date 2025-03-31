@@ -33,7 +33,11 @@ export class AlgorithmCollisionComponent extends BaseComponent implements AfterV
               public  override route             : ActivatedRoute,
   )
   {
-      super(backendService,route,speechService,"[ALGORITMOS - COLISIÓN]");
+      super(backendService,
+            route,
+            speechService,
+            "[ALGORITMOS - COLISIÓN]",
+            "PAGE_ALGORITMOS_COLISION");
   }
   
   restart() {

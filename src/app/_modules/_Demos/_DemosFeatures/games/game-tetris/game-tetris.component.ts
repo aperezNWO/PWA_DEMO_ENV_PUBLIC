@@ -54,7 +54,8 @@ export class GameTetrisComponent  extends BaseComponent implements OnInit  {
       super(backendService,
             route,
             speechService,
-            "[GAMES - TETRIS]"
+            "[GAMES - TETRIS]",
+            "PAGE_GAMES_IETRIS"
       )
   }
   //

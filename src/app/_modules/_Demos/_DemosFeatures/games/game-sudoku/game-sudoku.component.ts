@@ -64,7 +64,8 @@ export class SudokuComponent extends BaseComponent implements OnInit, AfterViewI
       super(backendService,
             route,
             speechService,
-            "[GAMES - SUDOKU]"
+            "[GAMES - SUDOKU]",
+            "PAGE_GAMES_SUDOKU",
       )
   }
   //

@@ -23,7 +23,8 @@ export class GameHanoiAutoComponent extends BaseComponent {
       super(backendService,
             route,
             speechService,
-            "[GAMES - HANOI 2D]"
+            "[GAMES - HANOI 2D]",
+            "PAGE_GAMES_HANOI_2D",
       )
   }
   //

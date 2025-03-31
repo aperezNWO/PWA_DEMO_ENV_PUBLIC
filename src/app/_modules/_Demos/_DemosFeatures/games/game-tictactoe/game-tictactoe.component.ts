@@ -20,7 +20,8 @@ export class GameTictactoeComponent extends BaseComponent {
       super(backendService,
             route,
             speechService,
-            "[GAMES - TIC TAC TOE]"
+            "[GAMES - TIC TAC TOE]",
+            "PAGE_GAMES_TIC_TAC_TOE",
       )
   }
 }

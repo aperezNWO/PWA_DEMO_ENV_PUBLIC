@@ -53,7 +53,8 @@ export class MathParsingComponent extends BaseComponent {
       super(backendService,
             route,
             speechService,
-            "[MISCELANEOUS - MATH PARSING]");
+            "[MISCELANEOUS - MATH PARSING]",
+            "PAGE_MISCELANEOUS_MATH_PARSING");
   }
   ///////////////////////////////////////////////////////////////
   //  METODOS COMUNES

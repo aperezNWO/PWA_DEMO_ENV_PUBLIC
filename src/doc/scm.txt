@@ -342,14 +342,17 @@ npm install @eve-sama/ngx-signature-pad --force
 
                -- [>] codesandbox.io
 
+
 /////////////////////////////////////////////////////////////////
 
 Could not find a declaration file for module 'three/examples/jsm/controls/OrbitControls'. 'c:/Users/pablo.perez/dev/_Angular/BaseLine/PWA_DEMO_ENV_PUBLIC/node_modules/three/examples/jsm/controls/OrbitControls.js' implicitly has an 'any' type.
   Try `npm i --save-dev @types/three` if it exists or add a new declaration (.d.ts) file containing `declare module 'three/examples/jsm/controls/OrbitControls';`
 
+/////////////////////////////////////////////////////////////////
+
 git add * 
-git commit -m "Application [ANGULAR DEMO - ENV_PUBLIC] v[1.7.24]
->>  1) Angular Reference / Curriculum update. " 
+git commit -m "Application [ANGULAR DEMO - ENV_PUBLIC] v[1.7.25]
+>>  1) Page Log. " 
 git push 
 git pull
 

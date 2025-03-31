@@ -59,7 +59,7 @@ export class OcrPhotoCaptureComponent extends BaseComponent implements AfterView
   )
   {
       //
-      super(backendService,route,speechService,"[MISCELANEOUS - OCR]")
+      super(backendService,route,speechService,"[MISCELANEOUS - OCR]",'PAGE_MISCELANEOUS_OCR')
   }
   //
   ngOnInit(): void {
