@@ -1,4 +1,7 @@
 import { AfterViewInit, Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { BaseComponent } from 'src/app/_components/base/base.component';
+import { BackendService } from 'src/app/_services/BackendService/backend.service';
 import { SpeechService } from 'src/app/_services/speechService/speech.service';
 
 @Component({
@@ -6,16 +9,20 @@ import { SpeechService } from 'src/app/_services/speechService/speech.service';
   templateUrl: './demos-curriculum-web.component.html',
   styleUrl: './demos-curriculum-web.component.css'
 })
-export class DemosCurriculumWebComponent implements AfterViewInit {
-      //
-      constructor(public speechService : SpeechService){
-
-      }
-      //
-      ngAfterViewInit():void
-      {
-        //
-        this.speechService.speakTextCustom("Demos Currículo");
-      }
+export class DemosCurriculumWebComponent extends BaseComponent {
+     constructor(
+           backendService : BackendService,
+           route          : ActivatedRoute,
+           speechService  : SpeechService,
+       )
+       {
+           //
+           super(backendService,
+                 route,
+                 speechService,
+                 "[DEMOS - CURRICULUM]",
+                 "PAGE_DEMOS_CURRICIULUM_INDEX",
+           );
+       }
 
 }

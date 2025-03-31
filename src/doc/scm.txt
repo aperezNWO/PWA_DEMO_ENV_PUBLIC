@@ -342,6 +342,15 @@ npm install @eve-sama/ngx-signature-pad --force
 
                -- [>] codesandbox.io
 
+/////////////////////////////////////////////////////////////////
+
+-- [_] git hub source.        
+
+      -- [_] aperezNWO      -> PRIVATE.        
+
+      -- [_] aperezNWOGmail -> PUBLIC.        
+
+      -- [_] EXAM486        -> PUBLIC.       
 
 /////////////////////////////////////////////////////////////////
 

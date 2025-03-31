@@ -53,7 +53,7 @@
     &nbsp;
     <input id="NewPdf"  class="btn btn-primary" type="button" title="[NUEVO PDF]"   value="[NUEVO PDF]"   (click)="this.onNewPdf()" [hidden]="(this.DownloadLink == '')">
     <hr>
-    <div *ngIf="message" class="alert alert-secondary" role="alert">{{ this.message() }}</div>
+    <div *ngIf="this.status_message()" class="alert alert-secondary" role="alert">{{ this.status_message() }}</div>
     <hr>
     <div align="right"><a routerLink="/FilesGenerationWeb">[Volver al Menú]</a></div> 
 </div>

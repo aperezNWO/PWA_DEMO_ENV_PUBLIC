@@ -1,9 +1,11 @@
-import { Component, OnInit                   } from '@angular/core';
+import { Component                           } from '@angular/core';
 import { HttpEventType, HttpResponse         } from '@angular/common/http';
+import { ActivatedRoute                      } from '@angular/router';
 import { Observable                          } from 'rxjs';
 import { UtilManager                         } from 'src/app/_engines/util.engine';
-import { BackendService } from 'src/app/_services/BackendService/backend.service';
-import { CustomErrorHandler } from 'src/app/app.component';
+import { BackendService                      } from 'src/app/_services/BackendService/backend.service';
+import { BaseComponent                       } from 'src/app/_components/base/base.component';
+import { SpeechService                       } from 'src/app/_services/speechService/speech.service';
 //
 @Component({
   selector: 'app-files-generation-zip',
@@ -11,21 +13,7 @@ import { CustomErrorHandler } from 'src/app/app.component';
   styleUrls: ['./files-generation-zip.component.css']
 })
 //
-export class FilesGenerationZIPComponent {
-  //--------------------------------------------------------------------------
-  // PROPIEDADES COMUNES
-  //--------------------------------------------------------------------------
-  //
-  public static get PageTitle()   : string {
-    return '[GENERAR ARCHIVOS ZIP]';
-  }
-  //
-  readonly pageTitle              : string = FilesGenerationZIPComponent.PageTitle;
-  //
-  //--------------------------------------------------------------------------
-  // PROPIEDADES - FILE UPLOAD - FORM SUBMIT
-  //--------------------------------------------------------------------------
-  //
+export class FilesGenerationZIPComponent extends BaseComponent {
   //--------------------------------------------------------------------------
   // PROPIEDADES - FILE UPLOAD  - BYTESTREAM
   //--------------------------------------------------------------------------
@@ -37,11 +25,18 @@ export class FilesGenerationZIPComponent {
   //--------------------------------------------------------------------------
   // EVENT HANDLERS / CONSTRUCTORS  
   //--------------------------------------------------------------------------
-  constructor(private backendService: BackendService, customErrorHandler: CustomErrorHandler) {
-    //
-    //console.log(this.pageTitle + " - [INGRESO]");
-    //
-    backendService.SetLog(this.pageTitle,"PAGE_ZIP_DEMO");
+  constructor(public override backendService        : BackendService,
+              public override route                 : ActivatedRoute,
+              public override speechService         : SpeechService,
+
+  ) 
+  {
+       super(backendService,
+            route,
+            speechService,
+            "[FILE GENERATION - ZIP]",
+            "PAGE_DEMOS_FILE_GENERATION_ZIP"
+       )
   }
   //--------------------------------------------------------------------------
   // METODOS COMUNES

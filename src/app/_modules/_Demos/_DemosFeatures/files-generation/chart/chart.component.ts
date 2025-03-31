@@ -4,13 +4,15 @@ import { BackendService               } from 'src/app/_services/BackendService/b
 import { SpeechService                } from 'src/app/_services/speechService/speech.service';
 import { Chart, registerables         } from 'chart.js';
 import { Observable                   } from 'rxjs';
+import { BaseComponent } from 'src/app/_components/base/base.component';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
   styleUrl: './chart.component.css'
 })
-export class ChartComponent implements OnInit  {
+export class ChartComponent extends BaseComponent implements OnInit  {
     //--------------------------------------------------------------------------
     // PROPIEDADES COMUNES
     //--------------------------------------------------------------------------
@@ -36,36 +38,23 @@ export class ChartComponent implements OnInit  {
     @ViewChild('divPieChart_XLS') divPieChart_xls : any;
     //
     public pieChartVar_xls                        : any;
-    //
-    public isListVisible            = false; // Initially hidden
-    public toogleLisCaption: string = "[Ver Referencias]";
-    //
-    public static get PageTitle()   : string {
-      return '[GENERAR ARCHIVOS - CHART]';
-    }
-    readonly pageTitle   : string = ChartComponent.PageTitle;
     //--------------------------------------------------------------------------
     // EVENT HANDLERS FORMIULARIO 
     //--------------------------------------------------------------------------
-    constructor(private backendService: BackendService, 
-                private speechService : SpeechService, 
-                public  pdfService    : PdfService) {
+    constructor(public override backendService: BackendService,
+                public override route         : ActivatedRoute, 
+                public override speechService : SpeechService, 
+                public  pdfService            : PdfService) {
+      
+      //
+      super(backendService,
+            route,
+            speechService,
+            "[GENERAR ARCHIVOS - CHART]",
+            "PAGE_FILE_GENERATION_CHART"
+      )
       //
       Chart.register(...registerables);
-      //
-      backendService.SetLog(this.pageTitle,"PAGE_CHART_DEMO");
-      // Define an effect to react to changes in the signal
-      effect(() => {
-        if (this.pdf_message_csv())
-            this.speechService.speakTextCustom(this.pdf_message_csv());
-      });
-      // Define an effect to react to changes in the signal
-      effect(() => {
-        if (this.pdf_message_xls())
-            this.speechService.speakTextCustom(this.pdf_message_xls());
-      });
-      //
-      this.speechService.speakTextCustom(this.pageTitle);
     }
     //
     ngOnInit(): void {
@@ -74,17 +63,6 @@ export class ChartComponent implements OnInit  {
       //}+
       this.SetBarChart();
     }
-
-    //--------------------------------------------------------------------------
-    // METODOS COMUNES 
-    //--------------------------------------------------------------------------
-    //
-    toggleList() {
-      this.isListVisible     = !this.isListVisible; // Toggle visibility
-      this.toogleLisCaption  = !(this.isListVisible)? "[Ver Referencias]" : "[Ocultar Referencias]";
-      if (this.isListVisible)
-        this.speechService.speakTextCustom("Ver Referncias");
-    }   
     //--------------------------------------------------------------------------
     // METODOS ESTADISTICA
     //--------------------------------------------------------------------------

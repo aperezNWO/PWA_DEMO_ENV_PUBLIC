@@ -12,12 +12,12 @@ import { AlgorithmCollisionComponent     } from './_modules/_Demos/_DemosFeature
 import { AlgorithmDijkstraComponent      } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-dijkstra/algorithm-dijkstra.component';
 import { AlgorithmRegExComponent         } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-reg-ex/algorithm-reg-ex.component';
 import { AlgorithmSortComponent          } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-sort/algorithm-sort.component';
-import { AlgorithmWebComponent           } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-web/algorithm-web.component';
+import { AlgorithmWebComponent           } from './_modules/_Demos/_DemosFeatures/algorithm/_algorithm-web/algorithm-web.component';
 import { FeaturePagesComponent           } from './_modules/_Demos/_DemosLang/angular-demo/feature-pages.component';
 import { ChartComponent                  } from './_modules/_Demos/_DemosFeatures/files-generation/chart/chart.component';
 import { FilesGenerationCSVComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-csv/files-generation-csv.component';
 import { FilesGenerationPDFComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-pdf/files-generation-pdf.component';
-import { FilesGenerationWebComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-web/files-generation-web.component';
+import { FilesGenerationWebComponent } from './_modules/_Demos/_DemosFeatures/files-generation/_files-generation-web/files-generation-web.component';
 import { FilesGenerationXLSComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-xls/files-generation-xls.component';
 import { FilesGenerationZIPComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-zip/files-generation-zip.component';
 import { GameHanoiAutoComponent } from './_modules/_Demos/_DemosFeatures/games/game-hanoi-auto/game-hanoi-auto.component';
@@ -25,7 +25,7 @@ import { GameHanoi3dComponent } from './_modules/_Demos/_DemosFeatures/games/gam
 import { SudokuComponent } from './_modules/_Demos/_DemosFeatures/games/game-sudoku/game-sudoku.component';
 import { GameTetrisComponent } from './_modules/_Demos/_DemosFeatures/games/game-tetris/game-tetris.component';
 import { GameTictactoeComponent } from './_modules/_Demos/_DemosFeatures/games/game-tictactoe/game-tictactoe.component';
-import { GameWebComponent } from './_modules/_Demos/_DemosFeatures/games/game-web/game-web.component';
+import { GameWebComponent } from './_modules/_Demos/_DemosFeatures/games/_game-web/game-web.component';
 import { ChatComponent } from './_modules/_Demos/_DemosFeatures/miscelaneous/chat/chat/chat.component';
 import { ComputerVisionComponent } from './_modules/_Demos/_DemosFeatures/miscelaneous/computer-vision/computer-vision.component';
 import { MathParsingComponent } from './_modules/_Demos/_DemosFeatures/miscelaneous/math-parsing/math-parsing.component';

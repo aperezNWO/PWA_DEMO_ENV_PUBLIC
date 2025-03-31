@@ -247,16 +247,9 @@
         -- [_] isolated url / ENV_LANDING.
  
         -- [_] Microsoft Forms.
+       
 
--- [_] git hub source.        
-
-      -- [_] aperezNWO      -> PRIVATE.        
-
-      -- [_] aperezNWOGmail -> PUBLIC.        
-
-      -- [_] EXAM486        -> PUBLIC.              
-
--- [_]  Add current contact form.        
+-- [x]  Add current contact form.        
 
 -- [_]  node js typescript.  
 
@@ -272,7 +265,9 @@
 
 -- [x] grid lang cache error :          
 
--- [_] demos with query params.  
+-- [x] PAGE_<FEATURE>_DEMO --> setLog().
+ 
+-- [x] demos with query params.  
 
 -- [x] Precargar Imagenes Portada.  
 
@@ -376,6 +371,10 @@
   
  --  [_] voice search component - ask A.I.
    
- --  [_] PAGE_<FEATURE>_DEMO --> setLog().
+ --  [_] ROOT PAGES WITH JSON PAGES LIST.
+
+ --  [_] LANDING PAGES WITH JSON PAGES LIST.
+
+ --  [_] PAGES LIST BASE COMPONENT.
  
  ////////////////////////////////////////////////////////////////////////////////

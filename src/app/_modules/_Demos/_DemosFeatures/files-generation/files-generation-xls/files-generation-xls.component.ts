@@ -8,6 +8,7 @@ import { LogEntry, SearchCriteria, _languageName       } from 'src/app/_models/e
 import { BackendService                                } from 'src/app/_services/BackendService/backend.service';
 import { ActivatedRoute                                } from '@angular/router';
 import { SpeechService                                 } from 'src/app/_services/speechService/speech.service';
+import { BaseComponent } from 'src/app/_components/base/base.component';
 //
 @Component({
   selector     : 'app-files-generation-xls',
@@ -15,14 +16,7 @@ import { SpeechService                                 } from 'src/app/_services
   styleUrls    : ['./files-generation-xls.component.css']
 })
 //
-export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
-    //--------------------------------------------------------------------------
-    // PROPIEDADES COMUNES
-    //--------------------------------------------------------------------------
-    public static get PageTitle()   : string {
-      return '[GENERAR ARCHIVOS XLS]';
-    }
-    readonly pageTitle          : string = FilesGenerationXLSComponent.PageTitle;
+export class FilesGenerationXLSComponent extends BaseComponent implements OnInit {
     //--------------------------------------------------------------------------
     // PROPIEADES - REACTIVE FORMS
     //--------------------------------------------------------------------------
@@ -92,19 +86,24 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
     public __languajeList                              : any;
     protected tituloListadoLenguajes                   : string = "[Backend] :";
     //
-    public _loading                  = new BehaviorSubject<boolean>(false);
-    public isListVisible             = false; // Initially hidden
-    public toogleLisCaption: string  = "[Ver Referencias]";
+    public _loading                                    = new BehaviorSubject<boolean>(false);
     //--------------------------------------------------------------------------
     // EVENT HANDLERS FORMIULARIO 
     //--------------------------------------------------------------------------
     constructor(
-                private backendService      : BackendService, 
-                private formBuilder         : FormBuilder, 
-                public  route               : ActivatedRoute,
-                public  speechService       : SpeechService,
+                public          formBuilder         : FormBuilder,
+                public override backendService      : BackendService, 
+                public override route               : ActivatedRoute,
+                public override speechService       : SpeechService,
     ) 
     {
+        //
+        super(backendService,
+              route,
+              speechService,
+              "[GENERAR ARCHIVOS XLS]",
+              "PAGE_FILE_GENERATION_XLS"
+        )
         // Define an effect to react to changes in the signal
         effect(() => {
           if (this.rf_textStatus())
@@ -132,19 +131,9 @@ export class FilesGenerationXLSComponent implements OnInit, AfterViewInit {
         this.rf_newSearch();
         this.td_newSearch();
     }
-    //
-    ngAfterViewInit():void {
-    }
     //--------------------------------------------------------------------------
     // METODOS COMUNES 
     //--------------------------------------------------------------------------
-    //
-    toggleList() {
-      this.isListVisible     = !this.isListVisible; // Toggle visibility
-      this.toogleLisCaption  = !(this.isListVisible)? "[Ver Referencias]" : "[Ocultar Referencias]";
-      if(this.isListVisible)
-        this.speechService.speakTextCustom("Ver Referencia");
-    }
     //
     queryParams():void{
       //
