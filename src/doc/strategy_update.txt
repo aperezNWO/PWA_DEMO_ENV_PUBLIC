@@ -379,4 +379,7 @@
 
  --  [_] ANGULAR ERROR HANDLING BEST PRACTICES.
 
+ --  [_] ANGULAR LOG HANDLING BEST PRACTICES.
+ 
+
  ////////////////////////////////////////////////////////////////////////////////
