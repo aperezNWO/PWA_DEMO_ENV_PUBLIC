@@ -6,6 +6,7 @@ import { ENV_LIST_ANGULAR_EDU, PAGE_ID, PAGE_SIZE,SEARCH_TERM } from 'src/app/_m
 import { SearchComponent                                      } from 'src/app/_components/search/search.component';
 import { ConfigService                                        } from 'src/app/_services/ConfigService/config.service';
 import { SpeechService                                        } from 'src/app/_services/speechService/speech.service';
+import { BackendService                                       } from 'src/app/_services/BackendService/backend.service';
 
 @Component({
   selector: 'app-curriculum',
@@ -24,14 +25,20 @@ import { SpeechService                                        } from 'src/app/_s
 })
 export class CurriculumComponent extends SearchComponent  
 {
-  constructor(
-      searchService                : SearchService,
-      public speechService         : SpeechService
-  )
-  {
-      //
-      super(searchService);
-      //
-      this.speechService.speakTextCustom("Referencia Angular");
-  }
+    //
+    public pageTitle : string = "[REFERENCIA - ANGULAR]";
+    //
+    constructor(
+                public speechService                  : SpeechService,
+                public backendService                 : BackendService,
+                public override searchService         : SearchService,
+    )
+    {
+        //
+        super(searchService);
+        //
+        this.speechService.speakTextCustom(this.pageTitle);
+        //
+        this.backendService.SetLog(this.pageTitle,"PAGE_REFERENCE_ANGULAR");
+    }
 } 

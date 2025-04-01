@@ -1,8 +1,10 @@
 import { Component, signal, VERSION        } from '@angular/core';
-import { HttpClient                        } from '@angular/common/http';
 import { BackendService                    } from '../../../../_services/BackendService/backend.service';
 import { ConfigService                     } from 'src/app/_services/ConfigService/config.service';
 import { Observable                        } from 'rxjs';
+import { BaseComponent                     } from 'src/app/_components/base/base.component';
+import { ActivatedRoute                    } from '@angular/router';
+import { SpeechService                     } from 'src/app/_services/speechService/speech.service';
 //
 @Component({
   selector: 'app-technical-specs',
@@ -10,10 +12,10 @@ import { Observable                        } from 'rxjs';
   styleUrls: ['./technical-specs.component.css']
 })
 //
-export class TechnicalSpecsComponent {
-////////////////////////////////////////////////////////////////  
-// METODOS - [EVENT HANDLERS]
-////////////////////////////////////////////////////////////////  
+export class TechnicalSpecsComponent extends BaseComponent {
+    ////////////////////////////////////////////////////////////////  
+    // [PROPIEDADES]
+    //////////////////////////////////////////////////////////////// 
     //
     _appBrand          : string | undefined;
     _appVersion        : string | undefined;
@@ -21,13 +23,6 @@ export class TechnicalSpecsComponent {
     _webApiAppVersion  : string = "";
     //
     guid = signal<string>(''); // Signal to hold the GUID
-    //
-    public static get PageTitle()   : string {
-      //
-      return '[ESPECIFICACIONES TÉCNICAS]';
-    }
-    //
-    readonly pageTitle : string = TechnicalSpecsComponent.PageTitle;
     //
     public get _baseUrlNetCore(): string {
       //
@@ -58,22 +53,23 @@ export class TechnicalSpecsComponent {
     protected __baseUrlNodeJsChat     : string = '';
     protected __baseUrlNodeJsOcr      : string = '';
     protected __baseUrlSprinbBootJava : string = '';
-
-    //
     ////////////////////////////////////////////////////////////////  
-    // METODOS - [EVENT HANDLERS]
+    // [EVENT HANDLERS]
     ////////////////////////////////////////////////////////////////  
-    //
-    ngOnInit(): void {
-      //
-    }
-    //
     constructor(
-          public  http               : HttpClient, 
-          public  _configService     : ConfigService,
-          private backendService     : BackendService, 
-    ) 
+           public          _configService     : ConfigService,
+           public override backendService     : BackendService,
+           public override route              : ActivatedRoute,
+           public override speechService      : SpeechService,
+    )
     {
+      //
+      super(backendService,
+            route,
+            speechService,
+            "[ACERCA DE - ESPECIFICACIONES TÉCNICAS]",
+            "PAGE_ABOUT_TECHNICAL_SPECS",
+      );
       ////
       this._appBrand                = this._configService.getConfigValue('appBrand');
       this._appVersion              = this._configService.getConfigValue('appVersion');
@@ -94,6 +90,12 @@ export class TechnicalSpecsComponent {
       this._GetWebApiAppVersion();
     }
     //
+    ngOnInit(): void {
+      //
+    }
+    ////////////////////////////////////////////////////////////////  
+    // [METODOS COMUNES]
+    ////////////////////////////////////////////////////////////////  
     private _GetWebApiAppVersion() {
       //
       let appVersion : Observable<string> = this.backendService._GetWebApiAppVersion();

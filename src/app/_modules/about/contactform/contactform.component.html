@@ -1,50 +1,47 @@
-<hr>
-<h2>Contáctenos</h2>
-<hr>
-
-<div *ngIf="isLoggedIn">
-  <!--<p>Welcome, {{ user?.name }}!</p>-->
-  <!--<img [src]="user?.photoUrl" alt="Profile Picture">-->
-
-  <div class="contact-form-container">
-    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <label for="name">Nombre</label>
-        <input id="name" type="text" maxlength="100" formControlName="name" placeholder="Ingrese su nombre"/>
-        <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="error">
-          Nombre es requerido y debe ser por lo menos 3 caracteres de largo.
-        </div>
-      </div>
-  
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input id="email" type="email" formControlName="email" placeholder="Ingrese su email"/>
-        <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="error">
-          Por favor ingrese un email válido.
-        </div>
-      </div>
-  
-      <div class="form-group">
-        <label for="message">Mensaje</label>
-        <textarea id="message" formControlName="message" maxlength="100" placeholder="Ingrese su mensaje (máximo 100 caracteres)"></textarea>
-        <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="error">
-             Mensaje es rquerido y debe ser al menos 10 caracteres de largo
-        </div>
-      </div>
-  
-      <button type="submit" [disabled]="contactForm.invalid">[Enviar]</button>
-    </form>
-  </div>
-
+<div class="content">
+  <div align="center"><h2>{{this.pageTitle}}</h2></div>
   <hr>
-</div>
+  <div *ngIf="isLoggedIn">
+    <!--<p>Welcome, {{ user?.name }}!</p>-->
+    <!--<img [src]="user?.photoUrl" alt="Profile Picture">-->
 
+    <div class="contact-form-container">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input id="name" type="text" maxlength="100" formControlName="name" placeholder="Ingrese su nombre"/>
+          <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="error">
+            Nombre es requerido y debe ser por lo menos 3 caracteres de largo.
+          </div>
+        </div>
+    
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" type="email" formControlName="email" placeholder="Ingrese su email"/>
+          <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="error">
+            Por favor ingrese un email válido.
+          </div>
+        </div>
+    
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea id="message" formControlName="message" maxlength="100" placeholder="Ingrese su mensaje (máximo 100 caracteres)"></textarea>
+          <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="error">
+              Mensaje es rquerido y debe ser al menos 10 caracteres de largo
+          </div>
+        </div>
+    
+        <button type="submit" [disabled]="contactForm.invalid">[Enviar]</button>
+      </form>
+    </div>
 
-<div *ngIf="!isLoggedIn">
-    <a (click)="this.isLoggedIn = true;">Volver al Formulario</a>
     <hr>
-</div>
-
-<div align="right">
-    <a routerLink="/Home">[Volver al Inicio]</a>
   </div>
+  <div align="right" *ngIf="!isLoggedIn">
+      <a (click)="this.isLoggedIn = true;">[V]olver al Formulario]</a>
+  </div>
+  <hr>
+  <div align="right">
+      <a routerLink="/Home">[Volver al Inicio]</a>
+  </div>
+</div>

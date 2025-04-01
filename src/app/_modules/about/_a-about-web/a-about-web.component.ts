@@ -10,7 +10,8 @@ import { SpeechService     } from 'src/app/_services/speechService/speech.servic
   styleUrls: ['./a-about-web.component.css']
 })
 export class AAboutWebComponent extends BaseComponent {
-     constructor(
+       //
+       constructor(
            backendService : BackendService,
            route          : ActivatedRoute,
            speechService  : SpeechService,

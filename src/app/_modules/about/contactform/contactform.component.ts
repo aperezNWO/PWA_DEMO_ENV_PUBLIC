@@ -1,31 +1,46 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-//import { FacebookLoginProvider, SocialAuthService, SocialUser } from '@abacritt/angularx-social-login';
-import { HttpClient } from '@angular/common/http';
+import { Component, OnInit                        } from '@angular/core';
+import { FormBuilder, FormGroup, Validators       } from '@angular/forms';
+import { HttpClient                               } from '@angular/common/http';
+import { BaseComponent                            } from 'src/app/_components/base/base.component';
+import { BackendService } from 'src/app/_services/BackendService/backend.service';
+import { ActivatedRoute } from '@angular/router';
+import { SpeechService } from 'src/app/_services/speechService/speech.service';
 
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.css'
 })
-export class ContactformComponent implements OnInit  {
-  //user: SocialUser | null = null;
-  //isLoggedIn: boolean = false;
-  isLoggedIn: boolean = true;
+export class ContactformComponent extends BaseComponent implements OnInit   {
 
-  contactForm!: FormGroup;
-
-  constructor(/*private authService: SocialAuthService, */ private fb: FormBuilder, private http: HttpClient) {
-
-
-    this.contactForm = this.fb.group({
-      name: ['', [Validators.required, Validators.minLength(3)]],
-      email: ['', [Validators.required, Validators.email]],
-      message: ['', [Validators.required, Validators.minLength(10)]],
-    });
-
+     //user: SocialUser | null = null;
+     //isLoggedIn: boolean = false;
+     isLoggedIn    : boolean = true;
+     contactForm!  : FormGroup; 
+     
+     constructor(
+           private fb                         : FormBuilder, 
+           private http                       : HttpClient,
+           public override backendService     : BackendService,
+           public override route              : ActivatedRoute,
+           public override speechService      : SpeechService,
+     )
+     {
+      //
+      super(backendService,
+            route,
+            speechService,
+            "[CONTÁCTENOS]",
+            "PAGE_ABOUT_CONTACT_FORM",
+      );
+      //     
+      this.contactForm = this.fb.group({
+          name   : ['', [Validators.required, Validators.minLength(3)]],
+          email  : ['', [Validators.required, Validators.email]],
+          message: ['', [Validators.required, Validators.minLength(10)]],
+      });
   }
-
+  //
   ngOnInit() {
     /*
     this.authService.authState.subscribe((user) => {
@@ -36,7 +51,7 @@ export class ContactformComponent implements OnInit  {
 
     });*/
   }
-
+  //
   onSubmit() {
     if (this.contactForm.valid) {
       //console.log('Form Submitted!', this.contactForm.value);

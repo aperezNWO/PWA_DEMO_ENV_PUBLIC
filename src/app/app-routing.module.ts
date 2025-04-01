@@ -2,7 +2,7 @@ import { NgModule                        } from '@angular/core';
 import { Route, RouterModule             } from '@angular/router';
 import { HomeWebComponent                } from './_modules/home/home-web/home-web.component';
 import { PageNotFoundComponent           } from './_modules/home/page-not-found/page-not-found.component';
-import { AAboutWebComponent              } from './_modules/about/a-about-web/a-about-web.component';
+import { AAboutWebComponent              } from './_modules/about/_a-about-web/a-about-web.component';
 import { SCMComponent                    } from './_modules/about/scm/scm.component';
 import { LLMListComponent                } from './_modules/about/llmlist/llmlist.component';
 import { TechnicalSpecsComponent         } from './_modules/about/technicalspecs/technical-specs/technical-specs.component';

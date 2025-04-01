@@ -6,6 +6,7 @@ import { ENV_LIST_SPRING_BOOT_DEMO, PAGE_ID, PAGE_SIZE,SEARCH_TERM     } from 's
 import { SearchComponent                                               } from 'src/app/_components/search/search.component';
 import { ConfigService                                                 } from 'src/app/_services/ConfigService/config.service';
 import { SpeechService                                                 } from 'src/app/_services/speechService/speech.service';
+import { BackendService                                                } from 'src/app/_services/BackendService/backend.service';
 
 //
 @Component({
@@ -24,13 +25,21 @@ import { SpeechService                                                 } from 's
 })
 export class SpringBootDemoComponent extends SearchComponent  
 {
-  constructor(searchService         : SearchService,
-              speechService         : SpeechService
-  )
-  {
-      super(searchService);
-      //
-      speechService.speakTextCustom("Demos SpringBoot Java");
-  }
+    //
+    public pageTitle : string = "[DEMOS - SPRING BOOT / JAVA]";
+    //
+    constructor(
+                public speechService                  : SpeechService,
+                public backendService                 : BackendService,
+                public override searchService         : SearchService,
+    )
+    {
+        //
+        super(searchService);
+        //
+        this.speechService.speakTextCustom(this.pageTitle);
+        //
+        this.backendService.SetLog(this.pageTitle,"PAGE_DEMOS_SPRINGBOOT_JAVA");
+    }
 } 
 

@@ -1,4 +1,8 @@
 import { Component    } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { BaseComponent } from 'src/app/_components/base/base.component';
+import { BackendService } from 'src/app/_services/BackendService/backend.service';
+import { SpeechService } from 'src/app/_services/speechService/speech.service';
 import { _environment } from 'src/environments/environment';
 
 @Component({
@@ -6,12 +10,24 @@ import { _environment } from 'src/environments/environment';
   templateUrl: './llmlist.component.html',
   styleUrl: './llmlist.component.css'
 })
-export class LLMListComponent {
-      public aiPrompts : any[] = [];
-      constructor()
-      {
-        //console.log('AI Prompts: ' + JSON.stringify(_environment.LLMList));
-
-        this.aiPrompts = _environment.LLMList;
-      }
+export class LLMListComponent  extends BaseComponent {
+    //
+    public aiPrompts : any[] = [];
+    //
+    constructor(
+           public override backendService     : BackendService,
+           public override route              : ActivatedRoute,
+           public override speechService      : SpeechService,
+    )
+    {
+      //
+      super(backendService,
+            route,
+            speechService,
+            "[ACERCA DE - LLM LIST]",
+            "PAGE_ABOUT_LLM_LIST",
+      );
+      //
+      this.aiPrompts = _environment.LLMList;
+   }
 }

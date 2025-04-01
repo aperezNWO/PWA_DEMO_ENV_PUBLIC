@@ -5,7 +5,8 @@ import { SearchService                                           } from 'src/app
 import { ENV_LIST_NETCORE_DEMO, PAGE_ID, PAGE_SIZE, SEARCH_TERM  } from 'src/app/_models/common';
 import { SearchComponent                                         } from 'src/app/_components/search/search.component';
 import { ConfigService                                           } from 'src/app/_services/ConfigService/config.service';
-import { SpeechService } from 'src/app/_services/speechService/speech.service';
+import { SpeechService                                           } from 'src/app/_services/speechService/speech.service';
+import { BackendService                                          } from 'src/app/_services/BackendService/backend.service';
 
 //
 @Component({
@@ -24,15 +25,22 @@ import { SpeechService } from 'src/app/_services/speechService/speech.service';
 })
 export class NetcoredemoComponent   extends SearchComponent  
 {
-  constructor(searchService                : SearchService,
-              public speechService         : SpeechService,
-  )
-  {
-      //
-      super(searchService);
-      //
-      this.speechService.speakTextCustom("Demos .NET Core C Charp")
-  }
+     //
+     public pageTitle : string = "[DEMOS - .NET CORE / C#]";
+     //
+     constructor(
+                 public speechService                  : SpeechService,
+                 public backendService                 : BackendService,
+                 public override searchService         : SearchService,
+     )
+     {
+         //
+         super(searchService);
+         //
+         this.speechService.speakTextCustom(this.pageTitle);
+         //
+         this.backendService.SetLog(this.pageTitle,"PAGE_DEMOS_NETCORE_C_SHARP");
+     }
 } 
 
 

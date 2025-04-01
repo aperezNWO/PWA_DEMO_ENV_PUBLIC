@@ -6,6 +6,7 @@ import { ENV_LIST_NODEJS_DEMO, PAGE_ID, PAGE_SIZE,SEARCH_TERM          } from 's
 import { SearchComponent                                               } from 'src/app/_components/search/search.component';
 import { ConfigService                                                 } from 'src/app/_services/ConfigService/config.service';
 import { SpeechService } from 'src/app/_services/speechService/speech.service';
+import { BackendService } from 'src/app/_services/BackendService/backend.service';
 
 //
 @Component({
@@ -24,14 +25,21 @@ import { SpeechService } from 'src/app/_services/speechService/speech.service';
 })
 export class NodejsDemoComponent   extends SearchComponent  
 {
-  constructor(searchService         : SearchService,
-              public speechService  : SpeechService,
+  //
+  public pageTitle : string = "[DEMOS - NODE.JS / JAVASCRIPT]";
+  //
+  constructor(
+              public speechService                  : SpeechService,
+              public backendService                 : BackendService,
+              public override searchService         : SearchService,
   )
   {
       //
       super(searchService);
       //
-      this.speechService.speakTextCustom("Demos Node JS Javascript");
+      this.speechService.speakTextCustom(this.pageTitle);
+      //
+      this.backendService.SetLog(this.pageTitle,"PAGE_DEMOS_NODE_JS_JAVASCRIPT");
   }
 } 
 

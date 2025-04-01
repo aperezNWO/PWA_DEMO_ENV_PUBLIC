@@ -5,7 +5,8 @@ import { SearchService                                     } from 'src/app/_serv
 import { ENV_LIST_ANGULAR_DEMO, PAGE_ID, PAGE_SIZE,SEARCH_TERM   } from 'src/app/_models/common';
 import { SearchComponent                                         } from 'src/app/_components/search/search.component';
 import { ConfigService                                           } from 'src/app/_services/ConfigService/config.service';
-import { SpeechService } from 'src/app/_services/speechService/speech.service';
+import { SpeechService                                           } from 'src/app/_services/speechService/speech.service';
+import { BackendService                                          } from 'src/app/_services/BackendService/backend.service';
 
 @Component({
   selector: 'app-feature-pages',
@@ -24,16 +25,22 @@ import { SpeechService } from 'src/app/_services/speechService/speech.service';
 })
 export class FeaturePagesComponent  extends SearchComponent  
 {
-  constructor(searchService         : SearchService,
-              public speechService  : SpeechService,
-
-  )
-  {
-      //
-      super(searchService);
-      //
-      this.speechService.speakTextCustom("Demos Angular Typescript","en-US")
-  }
+    //
+    public pageTitle : string = "[DEMOS - ANGULAR / TYPESCRIPT]";
+    //
+    constructor(
+                public speechService                  : SpeechService,
+                public backendService                 : BackendService,
+                public override searchService         : SearchService,
+    )
+    {
+        //
+        super(searchService);
+        //
+        this.speechService.speakTextCustom(this.pageTitle,"en-US");
+        //
+        this.backendService.SetLog(this.pageTitle,"PAGE_DEMOS_ANGULAR_TYPESCRIPT");
+    }
 } 
 
 
