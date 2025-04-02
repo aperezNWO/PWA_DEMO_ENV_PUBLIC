@@ -1,0 +1,10 @@
+ [
+      {
+        "logname_mp"   : "PAGE_ANGULAR_DEMO_INDEX",
+        "pagename_mp"  : "Bienvenidos a [Angular Demo]"
+      },
+      {
+        "logname_mp"   : "PAGE_ABOUT_INDEX",
+        "pagename_mp"  : "[ACERCA DE]"
+      }
+  ]

@@ -122,13 +122,6 @@ export enum SiteRole
 //
 export type SiteRoleType   = SiteRole; 
 //
-export interface PageInfo
-{
-    url          : string;
-    text         : string;
-    pageRoles    : string;
-}
-//
 export interface UserInfo
 {
     userId     : number;
@@ -160,6 +153,28 @@ export interface PageSetting {
 //
 export interface PageSettingDictionary {
    [key: string]: PageSetting;
+}
+
+//
+export interface PageInfo
+{
+    id           : number;
+    url          : string;
+    text         : string;
+}
+export interface mainpage {
+    logname_mp : string;
+    pagename_mp: string;
+    //pages_MP   : PageInfo[];
+}
+/*
+export interface MainPagesResponse {
+    mainpages: mainpage[];
+}*/
+
+//
+export interface MainPageSettingDictionary {
+    [key: string]: mainpage;
 }
 
 ////////////////////////////////////////////////////////////////////////////

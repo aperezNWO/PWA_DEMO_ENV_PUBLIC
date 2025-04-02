@@ -1,8 +1,9 @@
-import { Injectable   } from '@angular/core';
-import { HttpClient   } from '@angular/common/http';
-import { _environment } from 'src/environments/environment';
-import { PageSetting } from 'src/app/_models/entity.model';
+import { Injectable     } from '@angular/core';
+import { HttpClient     } from '@angular/common/http';
+import { _environment   } from 'src/environments/environment';
 import { ActivatedRoute } from '@angular/router';
+import { mainpage, PageSetting } from 'src/app/_models/entity.model';
+
 
 @Injectable({
   providedIn: 'root'
@@ -104,6 +105,23 @@ export class ConfigService {
           ////console.log("loading configuration...");
           //
           _environment.externalConfig = data; // Assign loaded data to environment variable
+      })
+      .catch(error => {
+        console.error('Error loading configuration:', error);
+      });
+  }
+  //
+  loadMainPages()
+  {
+    return this.http.get('./assets/config/_mainPages.json').toPromise()
+      .then((data: any) => {
+          //
+          _environment.mainPageList = data; // Assign loaded data to environment variable
+          //
+          _environment.mainPageList.forEach((element: mainpage) => {
+             //
+            _environment.mainPageListDictionary[element.logname_mp] = element;
+          });
       })
       .catch(error => {
         console.error('Error loading configuration:', error);

@@ -1,4 +1,4 @@
-import { PageSettingDictionary, PageSetting } from "src/app/_models/entity.model";
+import { PageSettingDictionary, PageSetting, mainpage, MainPageSettingDictionary } from "src/app/_models/entity.model";
 
 interface EnvironmentConfig {
     production              : boolean; 
@@ -13,6 +13,8 @@ interface EnvironmentConfig {
     jsonList                : PageSetting[];     // 
     scmList                 : [],                //  
     LLMList                 : []                 //
+    mainPageList            : mainpage[];        //
+    mainPageListDictionary  : MainPageSettingDictionary;
 }
 
 
@@ -28,5 +30,7 @@ export const _environment : EnvironmentConfig  = {
     usersList               : [],        // 
     jsonList                : [],        // 
     scmList                 : [],        //      
-    LLMList                 : []         // 
+    LLMList                 : [],        // 
+    mainPageList            : [],
+    mainPageListDictionary  : {},        //
 };

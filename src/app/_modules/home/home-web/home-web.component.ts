@@ -4,6 +4,8 @@ import { SpeechService                           } from 'src/app/_services/speec
 import { ConfigService                           } from 'src/app/_services/ConfigService/config.service';
 import { BaseComponent                           } from 'src/app/_components/base/base.component';
 import { ActivatedRoute                          } from '@angular/router';
+import { _environment                            } from 'src/environments/environment';
+import { PAGE_ANGULAR_DEMO_INDEX                 } from 'src/app/_models/common';
 //
 @Component({
   selector    : 'app-home-web',
@@ -27,7 +29,8 @@ export class HomeWebComponent extends BaseComponent implements OnInit, AfterView
       route,
       speechService,
       `Bienvenidos a ${configService.getConfigValue('appBrand')}`,
-      "PAGE_ANGULAR_DEMO_INDEX"
+      "PAGE_ANGULAR_DEMO_INDEX", 
+      //_environment.mainPageListDictionary[PAGE_ANGULAR_DEMO_INDEX].LogName_MP
     );
     //
     this._pages =[
@@ -44,6 +47,7 @@ export class HomeWebComponent extends BaseComponent implements OnInit, AfterView
         'text': '[CURRICULUM]',
       },
     ];
+
   }
   //
   ngOnInit(): void {
@@ -51,7 +55,12 @@ export class HomeWebComponent extends BaseComponent implements OnInit, AfterView
   }
   //
   ngAfterViewInit():void
-  {
-      //
+  {  
+    //this._pages =  _environment.mainPageListDictionary[PAGE_ANGULAR_DEMO_INDEX].Pages_MP;
+
+    console.info(_environment.mainPageListDictionary)
+    console.info(_environment.pageSettingDictionary);
+
+    console.info(_environment.mainPageListDictionary[PAGE_ANGULAR_DEMO_INDEX]);
   }
 }
