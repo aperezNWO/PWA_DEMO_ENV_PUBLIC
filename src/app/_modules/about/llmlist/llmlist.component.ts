@@ -12,8 +12,6 @@ import { _environment } from 'src/environments/environment';
 })
 export class LLMListComponent  extends BaseComponent {
     //
-    public aiPrompts : any[] = [];
-    //
     constructor(
            public override backendService     : BackendService,
            public override route              : ActivatedRoute,
@@ -28,6 +26,6 @@ export class LLMListComponent  extends BaseComponent {
             "PAGE_ABOUT_LLM_LIST",
       );
       //
-      this.aiPrompts = _environment.LLMList;
+      this._pages = _environment.LLMList;
    }
 }

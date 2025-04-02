@@ -381,5 +381,20 @@
 
  --  [_] ANGULAR LOG HANDLING BEST PRACTICES.
  
+ --  [_] base compoent pages property.
 
+ --  [_] main pages collection.
+     
+     --  [_] title log property.
+     
+     --  [_] title property.
+
+     --  [_] title speech property.
+
+     --  [_] title speech lang roperty.
+
+ --  [_] references component.       
+
+ --  [_] json pages with multiple schemas / read on demand.   
+    
  ////////////////////////////////////////////////////////////////////////////////

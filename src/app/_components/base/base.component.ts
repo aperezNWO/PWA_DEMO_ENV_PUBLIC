@@ -10,36 +10,47 @@ import { SpeechService                              } from 'src/app/_services/sp
   styleUrl: './base.component.css'
 })
 export class BaseComponent {
-  //
-  public PageTitle()   : string {
-    return this.pageTitle;
+  /////////////////////////////////////////////////////////
+  // PROPERTIES
+  /////////////////////////////////////////////////////////
+  
+  public get pageTitle()   : string {
+    return this._pageTitle;
   }
-  pageTitle   : string;
+  private _pageTitle       : string;
   //
   public isListVisible            = false; // Initially hidden
   public toogleLisCaption: string = "[Ver Referencias]";
   //
   public status_message           = signal<string>('');
   //
+  public _pages         : any[]   = [];
+  /////////////////////////////////////////////////////////
+  // CONSTRUCTOR - EVENT HANDLERS
+  /////////////////////////////////////////////////////////
+  //
   constructor(    public backendService                           : BackendService, 
                   public route                                    : ActivatedRoute,
                   public speechService                            : SpeechService,
-                  @Inject(PAGE_TITLE)     public  _pageTitle      : string,
+                  @Inject(PAGE_TITLE)     public  p_pageTitle      : string,
                   @Inject(PAGE_TITLE_LOG) public PAGE_TITLE_LOG   : string
              ) 
   {
       //
-      this.pageTitle  = _pageTitle;
+      this._pageTitle  = p_pageTitle;
       //
-      this.speechService.speakTextCustom(this.pageTitle);
+      this.speechService.speakTextCustom(this._pageTitle);
       //
-      this.backendService.SetLog(this.pageTitle,this.PAGE_TITLE_LOG);
+      this.backendService.SetLog(this._pageTitle,this.PAGE_TITLE_LOG);
       // Define an effect to react to changes in the signal
       effect(() => {
         if (this.status_message())
             this.speechService.speakTextCustom(this.status_message());
       });
   }
+  /////////////////////////////////////////////////////////
+  // METHODS
+  /////////////////////////////////////////////////////////
   //
   toggleList() {
     //

@@ -17,21 +17,6 @@ export class HomeWebComponent extends BaseComponent implements OnInit, AfterView
       return `Bienvenidos a ${this.configService.getConfigValue('appBrand')}`;
   }
   //
-  pages =[
-    {
-      'url': '/DemosFeaturesWeb', 
-      'text': '[CARACTERISTICAS]',
-    },  
-    {
-      'url': '/DemosLanguageWeb', 
-      'text': '[LENGUAJES]',
-    },    
-    {
-      'url': '/DemosCurriculumWeb',
-      'text': '[CURRICULUM]',
-    },
-  ];
-  //
   constructor(private configService           : ConfigService, 
               public  override backendService : BackendService,
               public  override route          : ActivatedRoute, 
@@ -44,6 +29,21 @@ export class HomeWebComponent extends BaseComponent implements OnInit, AfterView
       `Bienvenidos a ${configService.getConfigValue('appBrand')}`,
       "PAGE_ANGULAR_DEMO_INDEX"
     );
+    //
+    this._pages =[
+      {
+        'url': '/DemosFeaturesWeb', 
+        'text': '[CARACTERISTICAS]',
+      },  
+      {
+        'url': '/DemosLanguageWeb', 
+        'text': '[LENGUAJES]',
+      },    
+      {
+        'url': '/DemosCurriculumWeb',
+        'text': '[CURRICULUM]',
+      },
+    ];
   }
   //
   ngOnInit(): void {

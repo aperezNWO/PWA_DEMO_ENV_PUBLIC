@@ -24,5 +24,29 @@ export class AAboutWebComponent extends BaseComponent {
                  "[ACERCA DE]",
                  "PAGE_ABOUT_INDEX",
            );
+           //
+           this._pages = [
+            {
+              'url' : '/TechnicalSpecs', 
+              'text': '[ESPECIFICACIONES TECNICAS]',
+            },  
+            {
+              'url': '/SCM',
+              'text': '[SOFTWARE CONFIGURATION MANAGEMENT]',
+            },
+            {
+              'url': '/LLMList', 
+              'text': '[LARGE LANGUAGE MODELS LIST]',
+            },   
+            {
+              'url': '/ContactForm', 
+              'text': '[CONTACT FORM]',
+            },   
+            {
+              'url': '/Index', 
+              'text': '[INDEX]',
+            },    
+          ];
        }
+
 }
