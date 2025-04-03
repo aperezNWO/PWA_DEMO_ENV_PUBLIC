@@ -4,8 +4,10 @@ import { BackendService               } from 'src/app/_services/BackendService/b
 import { SpeechService                } from 'src/app/_services/speechService/speech.service';
 import { Chart, registerables         } from 'chart.js';
 import { Observable                   } from 'rxjs';
-import { BaseComponent } from 'src/app/_components/base/base.component';
-import { ActivatedRoute } from '@angular/router';
+import { BaseComponent                } from 'src/app/_components/base/base.component';
+import { ActivatedRoute               } from '@angular/router';
+import { PAGE_FILE_GENERATION_CHART   } from 'src/app/_models/common';
+import { ConfigService                } from 'src/app/_services/ConfigService/config.service';
 
 @Component({
   selector: 'app-chart',
@@ -41,17 +43,18 @@ export class ChartComponent extends BaseComponent implements OnInit  {
     //--------------------------------------------------------------------------
     // EVENT HANDLERS FORMIULARIO 
     //--------------------------------------------------------------------------
-    constructor(public override backendService: BackendService,
-                public override route         : ActivatedRoute, 
-                public override speechService : SpeechService, 
-                public  pdfService            : PdfService) {
-      
+    constructor(public override configService  : ConfigService,
+                public override backendService : BackendService,
+                public override route          : ActivatedRoute, 
+                public override speechService  : SpeechService, 
+                public pdfService              : PdfService) 
+    {
       //
-      super(backendService,
+      super(configService,
+            backendService,
             route,
             speechService,
-            "[GENERAR ARCHIVOS - CHART]",
-            "PAGE_FILE_GENERATION_CHART"
+            PAGE_FILE_GENERATION_CHART
       )
       //
       Chart.register(...registerables);

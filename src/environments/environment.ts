@@ -1,9 +1,10 @@
-import { PageSettingDictionary, PageSetting, mainpage, MainPageSettingDictionary } from "src/app/_models/entity.model";
+import { PageSettingDictionary, PageSetting, MainPage, MainPageSettingDictionary } from "src/app/_models/entity.model";
 
 interface EnvironmentConfig {
     production              : boolean; 
     externalConfig          : {};                //
     pageSettingDictionary   : PageSettingDictionary;
+    mainPageListDictionary  : MainPageSettingDictionary;
     currentUserId           : number;
     currentUserRoles        : string;     
     usersInfo               : [];                // 
@@ -11,17 +12,17 @@ interface EnvironmentConfig {
     routesList              : [];                // 
     usersList               : [];                // 
     jsonList                : PageSetting[];     // 
+    mainPageList            : MainPage[];        //
     scmList                 : [],                //  
     LLMList                 : []                 //
-    mainPageList            : mainpage[];        //
-    mainPageListDictionary  : MainPageSettingDictionary;
 }
 
 
 export const _environment : EnvironmentConfig  = {
-    production: true, // Set to true in environment.prod.ts
+    production: true,                    // Set to true in environment.prod.ts
     externalConfig          : {},        // 
     pageSettingDictionary   : {},
+    mainPageListDictionary  : {},
     currentUserId           : 0,       
     currentUserRoles        : "",      
     usersInfo               : [],        // 
@@ -29,8 +30,7 @@ export const _environment : EnvironmentConfig  = {
     routesList              : [],        // 
     usersList               : [],        // 
     jsonList                : [],        // 
+    mainPageList            : [],
     scmList                 : [],        //      
     LLMList                 : [],        // 
-    mainPageList            : [],
-    mainPageListDictionary  : {},        //
 };

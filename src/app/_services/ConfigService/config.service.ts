@@ -2,7 +2,8 @@ import { Injectable     } from '@angular/core';
 import { HttpClient     } from '@angular/common/http';
 import { _environment   } from 'src/environments/environment';
 import { ActivatedRoute } from '@angular/router';
-import { mainpage, PageSetting } from 'src/app/_models/entity.model';
+import { MainPage, PageSetting } from 'src/app/_models/entity.model';
+import { PAGE_ANGULAR_DEMO_INDEX } from 'src/app/_models/common';
 
 
 @Injectable({
@@ -12,24 +13,33 @@ import { mainpage, PageSetting } from 'src/app/_models/entity.model';
 export class ConfigService {
   //
   constructor( protected http  : HttpClient
-              ,public    route : ActivatedRoute) {}
+              ,public    route : ActivatedRoute) 
+  {
     //
-    loadJsonList() {
-      return this.http.get('./assets/config/_jsonList.json').toPromise()
-        .then((data: any) => {
-            //
-            _environment.jsonList = data; // Assign loaded data to environment variable
-            //
-            _environment.jsonList.forEach((element: PageSetting) => {
-                 _environment.pageSettingDictionary[element.f_Name] = element;
-            });
-        })
-        .catch(error => {
-          console.error('Error loading configuration:', error);
-        });
-    }
-    // ONLY HAPPENS ONCE ON APPMODULE LOADING
-    loadUsersData() {
+  } 
+  //
+  loadJsonList():Promise<void> 
+  {
+      return new Promise( (resolve) =>
+      {
+           this.http.get('./assets/config/_jsonList.json').toPromise()
+            .then((data: any) => {
+                //
+                _environment.jsonList = data; // Assign loaded data to environment variable
+                //
+                _environment.jsonList.forEach((element: PageSetting) => {
+                    _environment.pageSettingDictionary[element.f_Name] = element;
+                });
+                //
+                resolve();
+            })
+            .catch(error => {
+              console.error('Error loading configuration:', error);
+            })
+    });
+  };
+  // ONLY HAPPENS ONCE ON APPMODULE LOADING
+  loadUsersData() {
       return this.http.get('./assets/config/_UsersInfo.json').toPromise()
         .then((data: any) => {
             //
@@ -111,23 +121,32 @@ export class ConfigService {
       });
   }
   //
-  loadMainPages()
+  _loadMainPages() : Promise<void> 
   {
-    return this.http.get('./assets/config/_mainPages.json').toPromise()
-      .then((data: any) => {
-          //
-          _environment.mainPageList = data; // Assign loaded data to environment variable
-          //
-          _environment.mainPageList.forEach((element: mainpage) => {
-             //
-            _environment.mainPageListDictionary[element.logname_mp] = element;
-          });
-      })
-      .catch(error => {
-        console.error('Error loading configuration:', error);
-      });
-  }
-  //
+    return new Promise((resolve) => 
+    {
+        //
+        this.http.get('./assets/config/_mainPages.json').toPromise()
+        .then((data: any) => {
+            //
+            _environment.mainPageList = data; // Assign loaded data to environment variable
+            //
+            _environment.mainPageList.forEach((element: MainPage) => {
+              //
+              _environment.mainPageListDictionary[element.log_name] = element;
+            });
+
+                      
+            //
+            resolve();
+
+        })
+        .catch(error => {
+          console.error('Error loading configuration:', error);
+        });
+    });
+  };
+ //
   getConfigValue(key: string) {
     //
     let jsonData : string = JSON.parse(JSON.stringify(_environment.externalConfig))[key];

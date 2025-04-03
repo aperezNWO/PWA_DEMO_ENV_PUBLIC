@@ -1,7 +1,9 @@
 import { Component, ViewChild, ElementRef, AfterViewInit                 } from '@angular/core';
 import { ActivatedRoute                                                  } from '@angular/router';
 import { BaseComponent                                                   } from 'src/app/_components/base/base.component';
+import { PAGE_ALGORITMOS_COLISION                                        } from 'src/app/_models/common';
 import { BackendService                                                  } from 'src/app/_services/BackendService/backend.service';
+import { ConfigService                                                   } from 'src/app/_services/ConfigService/config.service';
 import { PageRestartService                                              } from 'src/app/_services/pageRestart/page-restart.service';
 import { SpeechService                                                   } from 'src/app/_services/speechService/speech.service';
 
@@ -28,16 +30,17 @@ export class AlgorithmCollisionComponent extends BaseComponent implements AfterV
   private restitution = 0.8; // Bounce factor, 1 = perfect elastic collision, <1 = energy loss
   //
   constructor(private pageRestartService: PageRestartService,
+              public  override configService     : ConfigService,
               public  override speechService     : SpeechService,
               public  override backendService    : BackendService,
               public  override route             : ActivatedRoute,
   )
   {
-      super(backendService,
+      super(configService,
+            backendService,
             route,
             speechService,
-            "[ALGORITMOS - COLISIÓN]",
-            "PAGE_ALGORITMOS_COLISION");
+            PAGE_ALGORITMOS_COLISION);
   }
   
   restart() {

@@ -5,6 +5,7 @@ import { Observable                        } from 'rxjs';
 import { BaseComponent                     } from 'src/app/_components/base/base.component';
 import { ActivatedRoute                    } from '@angular/router';
 import { SpeechService                     } from 'src/app/_services/speechService/speech.service';
+import { PAGE_ABOUT_TECHNICAL_SPECS        } from 'src/app/_models/common';
 //
 @Component({
   selector: 'app-technical-specs',
@@ -57,35 +58,27 @@ export class TechnicalSpecsComponent extends BaseComponent {
     // [EVENT HANDLERS]
     ////////////////////////////////////////////////////////////////  
     constructor(
-           public          _configService     : ConfigService,
+           public override configService      : ConfigService,
            public override backendService     : BackendService,
            public override route              : ActivatedRoute,
            public override speechService      : SpeechService,
     )
     {
       //
-      super(backendService,
+      super(configService,
+            backendService,
             route,
             speechService,
-            "[ACERCA DE - ESPECIFICACIONES TÉCNICAS]",
-            "PAGE_ABOUT_TECHNICAL_SPECS",
+            PAGE_ABOUT_TECHNICAL_SPECS,
       );
       ////
-      this._appBrand                = this._configService.getConfigValue('appBrand');
-      this._appVersion              = this._configService.getConfigValue('appVersion');
-      this.__baseUrlNetCore         = this._configService.getConfigValue('baseUrlNetCore');
-      this.__baseUrlNodeJs          = this._configService.getConfigValue('baseUrlNodeJs');
-      this.__baseUrlNodeJsChat      = this._configService.getConfigValue('baseUrlNodeJsChat');
-      this.__baseUrlNodeJsOcr       = this._configService.getConfigValue('baseUrlNodeJsOcr');
-      this.__baseUrlSprinbBootJava  = this._configService.getConfigValue('baseUrlSpringBootJava');
-
-      //
-      //console.log("baseUrlNetCore : " + this.__baseUrlNetCore);
-      //console.log("baseUrlNodeJs  : " + this.__baseUrlNodeJs);
-      //
-      //console.log(this.pageTitle + "- [INGRESO]");
-      //
-      backendService.SetLog(this.pageTitle,"PAGE_TECH_SPECS");
+      this._appBrand                = this.configService.getConfigValue('appBrand');
+      this._appVersion              = this.configService.getConfigValue('appVersion');
+      this.__baseUrlNetCore         = this.configService.getConfigValue('baseUrlNetCore');
+      this.__baseUrlNodeJs          = this.configService.getConfigValue('baseUrlNodeJs');
+      this.__baseUrlNodeJsChat      = this.configService.getConfigValue('baseUrlNodeJsChat');
+      this.__baseUrlNodeJsOcr       = this.configService.getConfigValue('baseUrlNodeJsOcr');
+      this.__baseUrlSprinbBootJava  = this.configService.getConfigValue('baseUrlSpringBootJava');
       //
       this._GetWebApiAppVersion();
     }
@@ -127,7 +120,7 @@ export class TechnicalSpecsComponent extends BaseComponent {
     //
     setNewGuid():string
     {
-      let guid = this._configService.generateGuid();
+      let guid = this.configService.generateGuid();
       this.guid.set(guid);
       return guid;
     }

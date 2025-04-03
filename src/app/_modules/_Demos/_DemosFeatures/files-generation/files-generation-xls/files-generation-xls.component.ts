@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, ViewChild, signal, effect  } from '@angular/core';
+import { Component, OnInit, ViewChild, signal, effect  } from '@angular/core';
 import { FormBuilder, Validators                       } from '@angular/forms';
 import { MatTableDataSource                            } from '@angular/material/table';
 import { MatPaginator                                  } from '@angular/material/paginator';
@@ -8,7 +8,9 @@ import { LogEntry, SearchCriteria, _languageName       } from 'src/app/_models/e
 import { BackendService                                } from 'src/app/_services/BackendService/backend.service';
 import { ActivatedRoute                                } from '@angular/router';
 import { SpeechService                                 } from 'src/app/_services/speechService/speech.service';
-import { BaseComponent } from 'src/app/_components/base/base.component';
+import { BaseComponent                                 } from 'src/app/_components/base/base.component';
+import { ConfigService                                 } from 'src/app/_services/ConfigService/config.service';
+import { PAGE_FILE_GENERATION_XLS                      } from 'src/app/_models/common';
 //
 @Component({
   selector     : 'app-files-generation-xls',
@@ -92,17 +94,18 @@ export class FilesGenerationXLSComponent extends BaseComponent implements OnInit
     //--------------------------------------------------------------------------
     constructor(
                 public          formBuilder         : FormBuilder,
+                public override configService       : ConfigService,
                 public override backendService      : BackendService, 
                 public override route               : ActivatedRoute,
                 public override speechService       : SpeechService,
     ) 
     {
         //
-        super(backendService,
+        super(configService,
+              backendService,
               route,
               speechService,
-              "[GENERAR ARCHIVOS XLS]",
-              "PAGE_FILE_GENERATION_XLS"
+              PAGE_FILE_GENERATION_XLS
         )
         // Define an effect to react to changes in the signal
         effect(() => {

@@ -2,7 +2,7 @@
 <div align="center">
     <h4><b>{{this.pageTitle}}</b></h4>
     <hr>
-    <ul *ngFor="let page of pages">
+    <ul *ngFor="let page of this._pages">
         <li class="nav-item">
             <a routerLink="/{{page.url}}"><div align="left">{{page.text}}</div></a>
         </li>

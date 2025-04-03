@@ -6,7 +6,9 @@ import { PdfService                                                 } from 'src/
 import { UtilManager                                                } from 'src/app/_engines/util.engine';
 import { BackendService                                             } from 'src/app/_services/BackendService/backend.service';
 import { SpeechService                                              } from 'src/app/_services/speechService/speech.service';
-import { CustomErrorHandler                                         } from 'src/app/app.component';
+import { BaseComponent                                              } from 'src/app/_components/base/base.component';
+import { ConfigService                                              } from 'src/app/_services/ConfigService/config.service';
+import { PAGE_ALGORITMOS_DIJKSTRA                                   } from 'src/app/_models/common';
 
 
 @Component({
@@ -15,19 +17,10 @@ import { CustomErrorHandler                                         } from 'src/
   styleUrls      : ['./algorithm-dijkstra.component.css']
 })
 //
-export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
+export class AlgorithmDijkstraComponent extends BaseComponent implements OnInit, AfterViewInit  {
   ////////////////////////////////////////////////////////////////
   // PROPERTIES //////////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////
-  //
-  public static get PageTitle()      : string {
-    return '[ALGORITMOS - DISTANCIA MAS CORTA]';
-  }
-  ////////////////////////////////////////////////////////////////
-  // VARIABLES ///////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////////
-  protected status_message   = signal<string>("");
-  readonly  pageTitle        : string = AlgorithmDijkstraComponent.PageTitle;
   protected vertexMax        : number = 9;
   protected rectSize         : number = 10;
   protected screenSize       : number = 250;
@@ -58,26 +51,24 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
   //
   public getGraphIdle           : boolean = false;
   //
-  public isListVisible            = false; // Initially hidden
-  public toogleLisCaption: string = "[Ver Referencias]";
   ////////////////////////////////////////////////////////////////
   // EVENT HANDLERS //////////////////////////////////////////////  
   ////////////////////////////////////////////////////////////////
-  constructor(public backendService     : BackendService, 
-              public customErrorHandler : CustomErrorHandler, 
-              public pdfService         : PdfService,
-              public route              : ActivatedRoute,
-              public speechService      : SpeechService) 
+  constructor(public override configService      : ConfigService,
+              public override backendService     : BackendService, 
+              public override route              : ActivatedRoute,
+              public override speechService      : SpeechService,
+              public pdfService                  : PdfService,
+              //public customErrorHandler           : CustomErrorHandler, 
+            ) 
   {
-     //
-     backendService.SetLog(this.pageTitle,"PAGE_DIJKSTRA_DEMO");
-     //
-     effect(() => {
-       if (this.status_message())
-          this.speechService.speakTextCustom(this.status_message());
-     });
-     //
-     this.speechService.speakTextCustom(this.pageTitle);
+      super(configService,
+            backendService,
+            route,
+            speechService,
+            PAGE_ALGORITMOS_DIJKSTRA
+
+      );
   }
   //
   ngOnInit(): void {
@@ -96,13 +87,6 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
   //--------------------------------------------------------------------------
   // METODOS COMUNES 
   //--------------------------------------------------------------------------
-  //
-  toggleList() {
-    this.isListVisible     = !this.isListVisible; // Toggle visibility
-    this.toogleLisCaption  = !(this.isListVisible)? "[Ver Referencias]" : "[Ocultar Referencias]";
-    //
-    (this.isListVisible)? this.speechService.speakTextCustom("[Ver Referencias]") : null;
-  }
   //
   queryParams():void {
      //
@@ -267,7 +251,7 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
                 //
                 let data_3    = data_2.replace(regex_2, "≡");
                 //
-                console.warn(AlgorithmDijkstraComponent.PageTitle + ' - [GETTING VERTEX VALUES]  - RETURN VALUE : ' + data_3);
+                console.warn(this.pageTitle + ' - [GETTING VERTEX VALUES]  - RETURN VALUE : ' + data_3);
                 //------------------------------------------------------------
                 // OBTENER PUNTOS
                 //------------------------------------------------------------
@@ -311,7 +295,7 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
             },
             error: (err: Error) => {
                 //
-                console.error(AlgorithmDijkstraComponent.PageTitle + ' - [GETTING VERTEX VALUES] - [error] : ' + err.message);
+                console.error(this.pageTitle + ' - [GETTING VERTEX VALUES] - [error] : ' + err.message);
                 //
                 this._ResetControls();
                 //
@@ -319,7 +303,7 @@ export class AlgorithmDijkstraComponent implements OnInit, AfterViewInit {
             },       
             complete: ()        => {
                 //
-                console.warn(AlgorithmDijkstraComponent.PageTitle + ' - [GETTING VERTEX VALUES] - [Observer got a complete notification]');
+                console.warn(this.pageTitle + ' - [GETTING VERTEX VALUES] - [Observer got a complete notification]');
             },
         };
         //

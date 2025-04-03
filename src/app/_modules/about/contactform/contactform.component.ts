@@ -2,10 +2,12 @@ import { Component, OnInit                        } from '@angular/core';
 import { FormBuilder, FormGroup, Validators       } from '@angular/forms';
 import { HttpClient                               } from '@angular/common/http';
 import { BaseComponent                            } from 'src/app/_components/base/base.component';
-import { BackendService } from 'src/app/_services/BackendService/backend.service';
-import { ActivatedRoute } from '@angular/router';
-import { SpeechService } from 'src/app/_services/speechService/speech.service';
-
+import { BackendService                           } from 'src/app/_services/BackendService/backend.service';
+import { ActivatedRoute                           } from '@angular/router';
+import { SpeechService                            } from 'src/app/_services/speechService/speech.service';
+import { ConfigService                            } from 'src/app/_services/ConfigService/config.service';
+import { PAGE_ABOUT_CONTACT_FORM                  } from 'src/app/_models/common';
+    
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contactform.component.html',
@@ -21,17 +23,18 @@ export class ContactformComponent extends BaseComponent implements OnInit   {
      constructor(
            private fb                         : FormBuilder, 
            private http                       : HttpClient,
+           public override configService      : ConfigService,
            public override backendService     : BackendService,
            public override route              : ActivatedRoute,
            public override speechService      : SpeechService,
      )
      {
       //
-      super(backendService,
+      super(configService,
+            backendService,
             route,
             speechService,
-            "[CONTÁCTENOS]",
-            "PAGE_ABOUT_CONTACT_FORM",
+            PAGE_ABOUT_CONTACT_FORM,
       );
       //     
       this.contactForm = this.fb.group({

@@ -2,7 +2,9 @@ import { Component      } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BaseComponent  } from 'src/app/_components/base/base.component';
 import { HanoiEngine    } from 'src/app/_engines/hanoi-engine';
+import { PAGE_GAMES_HANOI_2D } from 'src/app/_models/common';
 import { BackendService } from 'src/app/_services/BackendService/backend.service';
+import { ConfigService  } from 'src/app/_services/ConfigService/config.service';
 import { SpeechService  } from 'src/app/_services/speechService/speech.service';
 
 @Component({
@@ -15,16 +17,17 @@ export class GameHanoiAutoComponent extends BaseComponent {
   //
   constructor(
                   public  hanoiEngine               : HanoiEngine,
+                  public  override configService    : ConfigService,
                   public  override route            : ActivatedRoute,
                   public  override speechService    : SpeechService,
                   public  override backendService   : BackendService) 
   { 
       //
-      super(backendService,
+      super(configService,
+            backendService,
             route,
             speechService,
-            "[GAMES - HANOI 2D]",
-            "PAGE_GAMES_HANOI_2D",
+            PAGE_GAMES_HANOI_2D,
       )
   }
   //

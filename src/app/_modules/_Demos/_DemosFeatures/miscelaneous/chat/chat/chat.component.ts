@@ -7,6 +7,8 @@ import { ChatService                  } from 'src/app/_services/ChatService/chat
 import { BaseComponent                } from 'src/app/_components/base/base.component';
 import { BackendService               } from 'src/app/_services/BackendService/backend.service';
 import { SpeechService                } from 'src/app/_services/speechService/speech.service';
+import { ConfigService                } from 'src/app/_services/ConfigService/config.service';
+import { PAGE_MISCELANEOUS_CHAT       } from 'src/app/_models/common';
 //
 @Component({
   selector: 'app-chat',
@@ -21,16 +23,17 @@ export class ChatComponent extends BaseComponent implements OnInit  {
   //
   constructor(public chatService               : ChatService,
               public datePipe                  : DatePipe,
+              public override configService    : ConfigService,
               public override backendService   : BackendService,
               public override route            : ActivatedRoute,
               public override speechService    : SpeechService) 
   {
       //
-      super(backendService,
+      super(configService,
+            backendService,
             route,
             speechService,
-            "[MISCELANEOUS - CHAT]",
-            "PAGE_MISCELANEOUS_CHAT");
+            PAGE_MISCELANEOUS_CHAT);
 
   }
   ngOnInit() {

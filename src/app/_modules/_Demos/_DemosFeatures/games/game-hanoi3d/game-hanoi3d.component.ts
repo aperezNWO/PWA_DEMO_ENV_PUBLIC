@@ -7,6 +7,8 @@ import { ActivatedRoute } from '@angular/router';
 import { BackendService } from 'src/app/_services/BackendService/backend.service';
 import { SpeechService } from 'src/app/_services/speechService/speech.service';
 import { BaseComponent } from 'src/app/_components/base/base.component';
+import { PAGES_GAMES_HANOI_3D } from 'src/app/_models/common';
+import { ConfigService } from 'src/app/_services/ConfigService/config.service';
 
 @Component({
   selector: 'app-game-hanoi3d',
@@ -29,16 +31,17 @@ export class GameHanoi3dComponent extends BaseComponent implements OnInit, After
   //
   constructor(
                   public  pageRestartService        : PageRestartService,
+                  public  override configService    : ConfigService,
                   public  override route            : ActivatedRoute,
                   public  override speechService    : SpeechService,
                   public  override backendService   : BackendService) 
   { 
       //
-      super(backendService,
+      super(configService,
+            backendService,
             route,
             speechService,
-            "[GAMES - HANOI 3D]",
-            "PAGES_GAMES_HANOI_3D",
+            PAGES_GAMES_HANOI_3D,
       )
   }
 

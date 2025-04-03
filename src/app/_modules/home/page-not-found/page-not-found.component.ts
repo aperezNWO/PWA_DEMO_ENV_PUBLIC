@@ -1,8 +1,10 @@
-import { Component     } from '@angular/core';
+import { Component      } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { BaseComponent } from 'src/app/_components/base/base.component';
+import { BaseComponent  } from 'src/app/_components/base/base.component';
+import { PAGE_NOT_FOUND } from 'src/app/_models/common';
 import { BackendService } from 'src/app/_services/BackendService/backend.service';
-import { SpeechService } from 'src/app/_services/speechService/speech.service';
+import { ConfigService  } from 'src/app/_services/ConfigService/config.service';
+import { SpeechService  } from 'src/app/_services/speechService/speech.service';
 //
 @Component({
   selector: 'app-page-not-found',
@@ -13,17 +15,18 @@ import { SpeechService } from 'src/app/_services/speechService/speech.service';
 export class PageNotFoundComponent  extends BaseComponent {
     //
       constructor(
+          configServivce : ConfigService,
           backendService : BackendService,
           route          : ActivatedRoute,
           speechService  : SpeechService,
       )
       {
           //
-          super(backendService,
+          super(configServivce,
+                backendService,
                 route,
                 speechService,
-                "[PAGINA NO ENCONTRADA]",
-                "PAGE_NOT_FOUND",
+                PAGE_NOT_FOUND,
           );
       }
   }

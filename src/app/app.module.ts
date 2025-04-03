@@ -78,21 +78,25 @@ import { SpeechPanelComponent    } from './_components/speech-panel/speech-panel
 import { BaseSortableHeader      } from './_directives/sortable.directive';
 import { BaseComponent           } from './_components/base/base.component';
 //
-export function initialize(_configService: ConfigService) {
-  //
-  _configService.loadJsonList().then(()=> {
+export function initialize(_configService: ConfigService) 
+// 
+{
       //
-      _configService.loadPagesInfoData();
-      //
-      _configService.loadUsersData();
-      //
-      _configService.loadLLMList();
-      //
-      _configService.loadMainPages();
-  });
-  // 
-  return () =>  _configService.loadConfig();
+      _configService.loadJsonList().then( ()=> 
+      {
+            //
+            //_configService._loadMainPages().then( ()=> 
+            //{
+                //
+                _configService.loadPagesInfoData();
+                //
+                _configService.loadUsersData();
+                //
+                _configService.loadLLMList();
+            //});
+      });
 
+      return () => _configService.loadConfig();
 }
 //
 @Injectable({
@@ -100,7 +104,7 @@ export function initialize(_configService: ConfigService) {
 })
 export class LoggingInterceptor implements HttpInterceptor {
   constructor() {}
-
+  
   intercept(req: HttpRequest<any>, next: HttpHandler) {
     const started = Date.now();
     let ok: string;

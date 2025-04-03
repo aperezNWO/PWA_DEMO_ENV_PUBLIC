@@ -6,6 +6,25 @@
 
 -- [x] button copy to clipborad guid.
 
+-- [_] book / resources.
+
+        -- [_] w3c.
+
+        -- [_] freecodecamp.
+
+        -- [_] mdn.
+
+        -- [_] the art opute programming.
+
+        -- [_] angular.dev.
+
+        -- [_] owasp.
+
+        -- [_] deeplearning.ai.
+
+        -- [_] coursera - algorithms.
+        
+
 -- [_] home menu items.
 
         -- [_] programming languages / backend.
@@ -396,5 +415,11 @@
  --  [_] references component.       
 
  --  [_] json pages with multiple schemas / read on demand.   
+
+ --  [_] rust samples.
+
+ --  [_] global signal.
+
+ --  [_] libraries external resource --> mainPages.json-> pages.
     
  ////////////////////////////////////////////////////////////////////////////////

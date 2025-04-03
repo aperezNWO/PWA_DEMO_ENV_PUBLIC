@@ -73,8 +73,8 @@
                 <input type="text" id="regExSearch" #regExSearch class="fieldSetRegex" value="{{this.pattern}}" style="background-color:#cccccc;" readonly="readonly">
             </div>
             <!--STATUS / INICIO   -->
-            <div *ngIf="this.lblStatus" class="form-group alert alert-secondary" align="center" role="alert">
-                    {{ this.lblStatus() }}
+            <div *ngIf="this.status_message" class="form-group alert alert-secondary" align="center" role="alert">
+                    {{ this.status_message() }}
             </div>
             <!-- STATUS / FIN     -->
             <!-- BOTONES / INICIO -->

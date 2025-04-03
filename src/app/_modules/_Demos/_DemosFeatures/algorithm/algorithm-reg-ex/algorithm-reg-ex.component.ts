@@ -1,11 +1,13 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { effect, signal                              } from '@angular/core';
 import { ActivatedRoute                              } from '@angular/router';
 import { Observable                                  } from 'rxjs';
 import { _languageName                               } from 'src/app/_models/entity.model';
 import { UtilManager                                 } from 'src/app/_engines/util.engine';
 import { BackendService                              } from 'src/app/_services/BackendService/backend.service';
 import { SpeechService                               } from 'src/app/_services/speechService/speech.service';
+import { BaseComponent                               } from 'src/app/_components/base/base.component';
+import { ConfigService                               } from 'src/app/_services/ConfigService/config.service';
+import { PAGE_ALGORITMOS_REGEX                       } from 'src/app/_models/common';
 
 //
 @Component({
@@ -14,18 +16,11 @@ import { SpeechService                               } from 'src/app/_services/s
   styleUrls: ['./algorithm-reg-ex.component.css']
 })
 //
-export class AlgorithmRegExComponent implements OnInit, AfterViewInit {
+export class AlgorithmRegExComponent extends BaseComponent implements OnInit, AfterViewInit {
     ////////////////////////////////////////////////////////////////
     // PROPERTIES //////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////
-    //
-    public static get PageTitle()      : string {
-      return '[ALGORITMOS - EXPRESIONES REGULARES]';
-    }
-    //
-    readonly  pageTitle              : string = AlgorithmRegExComponent.PageTitle;
     protected xmlData                : string = "";
-    protected lblStatus              = signal<string>("");
     protected pattern                : string = "";
     public    __languajeList         : any;
     public    tituloListadoLenguajes : string = "BACKEND";
@@ -36,22 +31,19 @@ export class AlgorithmRegExComponent implements OnInit, AfterViewInit {
     @ViewChild('regExSearch')     regExSearch    : any;
     @ViewChild('_languajeList')   _languajeList  : any;
     //
-    public isListVisible            = false; // Initially hidden
-    public toogleLisCaption: string = "[Ver Referencias]";
-    //
-    constructor(private backendService: BackendService, 
-                public  speechService : SpeechService,
-                public  route         : ActivatedRoute)
+    constructor(public override configService : ConfigService,
+                public override backendService: BackendService, 
+                public override speechService : SpeechService,
+                public override route         : ActivatedRoute)
     {
         //
-        backendService.SetLog(this.pageTitle,"PAGE_REGEX_DEMO");
-        //
-        effect(() => {
-        if (this.lblStatus())
-            this.speechService.speakTextCustom(this.lblStatus());
-        });
-        //
-        this.speechService.speakTextCustom(this.pageTitle);
+        super(
+                configService,
+                backendService,
+                route,
+                speechService,
+                PAGE_ALGORITMOS_REGEX
+        );
     }
     //
     ngOnInit(): void {
@@ -66,13 +58,6 @@ export class AlgorithmRegExComponent implements OnInit, AfterViewInit {
     ////////////////////////////////////////////////////////////////
     // METODOS    //////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////
-    //
-    toggleList() {
-        this.isListVisible     = !this.isListVisible; // Toggle visibility
-        this.toogleLisCaption  = !(this.isListVisible)? "[Ver Referencias]" : "[Ocultar Referencias]";
-        //
-        (this.isListVisible)? this.speechService.speakTextCustom("[Ver Referencias]") : null;
-    }
     //
     queryParams():void {
         //
@@ -109,7 +94,7 @@ export class AlgorithmRegExComponent implements OnInit, AfterViewInit {
         //
         xmlInfo       = this.backendService._GetXmlData();
         //
-        this.lblStatus.set("[..CARGANDO POR FAVOR ESPERERE...]");
+        this.status_message.set("[..CARGANDO POR FAVOR ESPERERE...]");
         //
         const xmlInfoObserver   = {
             //
@@ -118,7 +103,7 @@ export class AlgorithmRegExComponent implements OnInit, AfterViewInit {
                 // OBTENER DATA
                 //------------------------------------------------------------
                 //
-                console.warn(AlgorithmRegExComponent.PageTitle + ' - [GET XML DATA] - [RETURN VALUE] : ' + _xmlData.length);
+                console.warn(this.pageTitle + ' - [GET XML DATA] - [RETURN VALUE] : ' + _xmlData.length);
                 //
                 this.xmlData = _xmlData;
                 //-------------------------------------------------------------
@@ -127,21 +112,21 @@ export class AlgorithmRegExComponent implements OnInit, AfterViewInit {
                 //
                 this.mensajes.nativeElement.innerHTML = this.xmlData;
                 //
-                this.lblStatus.set("[REINICIO EXITOSO]")                 
+                this.status_message.set("[REINICIO EXITOSO]")                 
                 //
                 this.pattern   = "";
             },
             error: (err: Error) => {
                 //
-                this.lblStatus.set("[HA OCURRIDO UN ERROR]");
+                this.status_message.set("[HA OCURRIDO UN ERROR]");
                 //
                 this.pattern   = "";
                 //
-                console.error(AlgorithmRegExComponent.PageTitle + ' - [GET XML DATA]- [error] : ' + err.message);
+                console.error(this.pageTitle + ' - [GET XML DATA]- [error] : ' + err.message);
             },       
             complete: ()        => {
                 //
-                console.info(AlgorithmRegExComponent.PageTitle  + ' - [GET XML DATA]- [Observer got a complete notification]');
+                console.info(this.pageTitle  + ' - [GET XML DATA]- [Observer got a complete notification]');
                 //
             },
         };
@@ -157,14 +142,14 @@ export class AlgorithmRegExComponent implements OnInit, AfterViewInit {
         //
         if (tagSearchIndex == 0) {
             //
-            this.lblStatus.set("FAVOR SELECCIONE UN [ELEMENTO A BUSCAR]") ;
+            this.status_message.set("FAVOR SELECCIONE UN [ELEMENTO A BUSCAR]") ;
             //
             return;
         }
         //
         if (textSearchValue == "") {
             //
-            this.lblStatus.set("FAVOR INGRESE UN VALOR EN EL CAMPO [CONTENIDO]");
+            this.status_message.set("FAVOR INGRESE UN VALOR EN EL CAMPO [CONTENIDO]");
             //
             return;
         }
@@ -197,7 +182,7 @@ export class AlgorithmRegExComponent implements OnInit, AfterViewInit {
                 // OBTENER DATA
                 //------------------------------------------------------------
                 //
-                console.warn(AlgorithmRegExComponent.PageTitle + ' - [EVAL REGEX] - [RETURN VALUE] : ' + data.length);
+                console.warn(this.pageTitle + ' - [EVAL REGEX] - [RETURN VALUE] : ' + data.length);
                 //    
                 let resultArray : string[] = data.split("|");
                 //
@@ -216,16 +201,16 @@ export class AlgorithmRegExComponent implements OnInit, AfterViewInit {
                     //
                     this.mensajes.nativeElement.innerHTML = xmlHighlighted;
                     //
-                    this.lblStatus.set('SE ENCONTRARON (' + matchAmt + ') COINCIDENCIAS');
+                    this.status_message.set('SE ENCONTRARON (' + matchAmt + ') COINCIDENCIAS');
                 }
             },
             error: (err: Error) => {
                 //
-                console.error(AlgorithmRegExComponent.PageTitle + ' - [EVAL REGEX] - [error] : ' + err.message);
+                console.error(this.pageTitle + ' - [EVAL REGEX] - [error] : ' + err.message);
             },       
             complete: ()        => {
                 //
-                console.info(AlgorithmRegExComponent.PageTitle  + ' - [EVAL REGEX] - [Observer got a complete notification]');
+                console.info(this.pageTitle  + ' - [EVAL REGEX] - [Observer got a complete notification]');
                 //
             },
         };

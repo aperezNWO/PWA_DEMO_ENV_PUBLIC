@@ -8,6 +8,8 @@ import { ShapeDetectionService    } from 'src/app/_services/ShapeDetection/shape
 import { SpeechService            } from 'src/app/_services/speechService/speech.service';
 import { NgxSignaturePadComponent } from '@eve-sama/ngx-signature-pad/lib/ngx-signature-pad.component';
 import { NgxSignatureOptions      } from '@eve-sama/ngx-signature-pad/lib/types/ngx-signature-pad';
+import { ConfigService                    } from 'src/app/_services/ConfigService/config.service';
+import { PAGE_MISELANEOUS_COMPUTER_VISION } from 'src/app/_models/common';
 
 declare var cv: any; // Declare cv as a global variable
 @Component({   
@@ -59,17 +61,18 @@ export class ComputerVisionComponent extends BaseComponent implements AfterViewI
   detectedShapes: string[] = [];
   //
   constructor(public          shapeDetectionService   : ShapeDetectionService,
+              public override configService           : ConfigService,
               public override backendService          : BackendService,
               public override route                   : ActivatedRoute,
               public override speechService           : SpeechService,
   )
   {
       //
-      super(backendService,
+      super(configService,
+            backendService,
             route,
             speechService,
-            "[ALGORITMOS - COMPUTER VISION]",
-            "PAGE_ALGORITMOS_COMPUTER_VISION");
+            PAGE_MISELANEOUS_COMPUTER_VISION);
   }
   //
   ngOnInit(): void {

@@ -1,8 +1,10 @@
 import { Component, effect, Inject, signal          } from '@angular/core';
 import { ActivatedRoute                             } from '@angular/router';
-import { PAGE_TITLE, PAGE_TITLE_LOG                 } from 'src/app/_models/common';
+import { PAGE_TITLE_LOG                             } from 'src/app/_models/common';
 import { BackendService                             } from 'src/app/_services/BackendService/backend.service';
+import { ConfigService                              } from 'src/app/_services/ConfigService/config.service';
 import { SpeechService                              } from 'src/app/_services/speechService/speech.service';
+import { _environment                               } from 'src/environments/environment';
 
 @Component({
   selector: 'app-base',
@@ -17,7 +19,10 @@ export class BaseComponent {
   public get pageTitle()   : string {
     return this._pageTitle;
   }
-  private _pageTitle       : string;
+  public set pageTitle(value : string) {
+    this._pageTitle = value;
+  }
+  private _pageTitle       : string = "";
   //
   public isListVisible            = false; // Initially hidden
   public toogleLisCaption: string = "[Ver Referencias]";
@@ -29,23 +34,32 @@ export class BaseComponent {
   // CONSTRUCTOR - EVENT HANDLERS
   /////////////////////////////////////////////////////////
   //
-  constructor(    public backendService                           : BackendService, 
+  constructor(    public configService                            : ConfigService,
+                  public backendService                           : BackendService, 
                   public route                                    : ActivatedRoute,
                   public speechService                            : SpeechService,
-                  @Inject(PAGE_TITLE)     public  p_pageTitle      : string,
                   @Inject(PAGE_TITLE_LOG) public PAGE_TITLE_LOG   : string
              ) 
   {
-      //
-      this._pageTitle  = p_pageTitle;
-      //
-      this.speechService.speakTextCustom(this._pageTitle);
-      //
-      this.backendService.SetLog(this._pageTitle,this.PAGE_TITLE_LOG);
       // Define an effect to react to changes in the signal
       effect(() => {
         if (this.status_message())
             this.speechService.speakTextCustom(this.status_message());
+      });
+      //      
+      this.configService._loadMainPages().then( ()=> 
+      {
+            //
+            console.log(_environment.mainPageListDictionary[PAGE_TITLE_LOG])
+             //
+            this.pageTitle = _environment.mainPageListDictionary[PAGE_TITLE_LOG].page_name;
+            //
+            this.speechService.speakTextCustom(this.pageTitle);
+            //
+            this.backendService.SetLog(this._pageTitle,this.PAGE_TITLE_LOG);
+            //
+            if (_environment.mainPageListDictionary[PAGE_TITLE_LOG].pages)
+                 this._pages    = _environment.mainPageListDictionary[PAGE_TITLE_LOG].pages;
       });
   }
   /////////////////////////////////////////////////////////

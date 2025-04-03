@@ -6,7 +6,8 @@ import { BaseComponent                   } from 'src/app/_components/base/base.c
 import { BackendService                  } from 'src/app/_services/BackendService/backend.service';
 import { PageRestartService              } from 'src/app/_services/pageRestart/page-restart.service';
 import { SpeechService                   } from 'src/app/_services/speechService/speech.service';
-
+import { ConfigService     } from 'src/app/_services/ConfigService/config.service';
+import { PAGE_GAMES_IETRIS } from 'src/app/_models/common';
 interface Position {
   x: number;
   y: number;
@@ -46,16 +47,17 @@ export class GameTetrisComponent  extends BaseComponent implements OnInit  {
 //
   constructor(
                   private pageRestartService        : PageRestartService,
+                  public  override configService    : ConfigService,
                   public  override route            : ActivatedRoute,
                   public  override speechService    : SpeechService,
                   public  override backendService   : BackendService) 
   { 
       //
-      super(backendService,
+      super(configService,
+            backendService,
             route,
             speechService,
-            "[GAMES - TETRIS]",
-            "PAGE_GAMES_IETRIS"
+            PAGE_GAMES_IETRIS
       )
   }
   //

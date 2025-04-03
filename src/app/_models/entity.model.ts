@@ -162,10 +162,10 @@ export interface PageInfo
     url          : string;
     text         : string;
 }
-export interface mainpage {
-    logname_mp : string;
-    pagename_mp: string;
-    //pages_MP   : PageInfo[];
+export interface MainPage {
+    log_name    : string;
+    page_name   : string;
+    pages       : PageInfo[];
 }
 /*
 export interface MainPagesResponse {
@@ -174,7 +174,7 @@ export interface MainPagesResponse {
 
 //
 export interface MainPageSettingDictionary {
-    [key: string]: mainpage;
+    [key: string]: MainPage;
 }
 
 ////////////////////////////////////////////////////////////////////////////

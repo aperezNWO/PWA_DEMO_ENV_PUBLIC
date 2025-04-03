@@ -8,7 +8,9 @@ import { BackendService                    } from 'src/app/_services/BackendServ
 import { PdfService                        } from 'src/app/_engines/pdf.engine';
 import { _languageName, ListItem           } from 'src/app/_models/entity.model';
 import { SpeechService                     } from 'src/app/_services/speechService/speech.service';
-import { BaseComponent } from 'src/app/_components/base/base.component';
+import { BaseComponent                     } from 'src/app/_components/base/base.component';
+import { PAGE_GAMES_SUDOKU                 } from 'src/app/_models/common';
+import { ConfigService                     } from 'src/app/_services/ConfigService/config.service';
 //
 @Component({
   selector: 'app-sudoku',
@@ -56,16 +58,17 @@ export class SudokuComponent extends BaseComponent implements OnInit, AfterViewI
                   private algorithmService : BackendService,
                   private formBuilder      : FormBuilder, 
                   public  pdfEngine        : PdfService,
+                  public  override configService    : ConfigService,
                   public  override route            : ActivatedRoute,
                   public  override speechService    : SpeechService,
                   public  override backendService   : BackendService) 
   { 
       //
-      super(backendService,
+      super(configService,  
+            backendService,
             route,
             speechService,
-            "[GAMES - SUDOKU]",
-            "PAGE_GAMES_SUDOKU",
+            PAGE_GAMES_SUDOKU,
       )
   }
   //

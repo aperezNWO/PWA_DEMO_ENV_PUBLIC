@@ -9,6 +9,8 @@ import { CustomErrorHandler                            } from 'src/app/app.compo
 import { ActivatedRoute                                } from '@angular/router';
 import { SpeechService                                 } from 'src/app/_services/speechService/speech.service';
 import { BaseComponent                                 } from 'src/app/_components/base/base.component';
+import { ConfigService                                 } from 'src/app/_services/ConfigService/config.service';
+import { PAGE_FILE_GENERATION_CSV                      } from 'src/app/_models/common';
 //
 @Component({
   selector: 'app-files-generation-csv',
@@ -72,15 +74,16 @@ export class FilesGenerationCSVComponent extends BaseComponent implements OnInit
     constructor(
                 public formBuilder                   : FormBuilder, 
                 public customErrorHandler            : CustomErrorHandler,
+                public override configService        : ConfigService,
                 public override backendService       : BackendService, 
                 public override route                : ActivatedRoute,
                 public override speechService        : SpeechService) 
     {
-          super(backendService,
+          super(configService,
+                backendService,
                 route,
                 speechService,
-                "[GENERAR ARCHIVOS - CSV]",
-                "PAGE_FILE_GENERATION_CSV"
+                PAGE_FILE_GENERATION_CSV
           )
     }
     //

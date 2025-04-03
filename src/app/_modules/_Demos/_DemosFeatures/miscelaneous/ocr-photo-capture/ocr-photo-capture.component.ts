@@ -5,7 +5,9 @@ import { BaseComponent            } from 'src/app/_components/base/base.componen
 import { NgxSignaturePadComponent } from '@eve-sama/ngx-signature-pad/lib/ngx-signature-pad.component';
 import { NgxSignatureOptions      } from '@eve-sama/ngx-signature-pad/lib/types/ngx-signature-pad';
 import { ActivatedRoute } from '@angular/router';
-import { SpeechService } from 'src/app/_services/speechService/speech.service';
+import { SpeechService  } from 'src/app/_services/speechService/speech.service';
+import { ConfigService  } from 'src/app/_services/ConfigService/config.service';
+import { PAGE_MISCELANEOUS_OCR } from 'src/app/_models/common';
 
 @Component({
   selector: 'app-ocr-photo-capture',
@@ -53,13 +55,18 @@ export class OcrPhotoCaptureComponent extends BaseComponent implements AfterView
   selectedIndexEngines    : number  = 0;
   
   //
-  constructor(public override backendService : BackendService,
+  constructor(public override configService  : ConfigService,
+              public override backendService : BackendService,
               public override route          : ActivatedRoute,
               public override speechService  : SpeechService,
   )
   {
       //
-      super(backendService,route,speechService,"[MISCELANEOUS - OCR]",'PAGE_MISCELANEOUS_OCR')
+      super(configService,
+            backendService,
+            route,
+            speechService,
+            PAGE_MISCELANEOUS_OCR)
   }
   //
   ngOnInit(): void {

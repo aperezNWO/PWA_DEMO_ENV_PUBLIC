@@ -6,6 +6,8 @@ import { UtilManager                         } from 'src/app/_engines/util.engin
 import { BackendService                      } from 'src/app/_services/BackendService/backend.service';
 import { BaseComponent                       } from 'src/app/_components/base/base.component';
 import { SpeechService                       } from 'src/app/_services/speechService/speech.service';
+import { ConfigService                       } from 'src/app/_services/ConfigService/config.service';
+import { PAGE_DEMOS_FILE_GENERATION_ZIP      } from 'src/app/_models/common';
 //
 @Component({
   selector: 'app-files-generation-zip',
@@ -25,23 +27,20 @@ export class FilesGenerationZIPComponent extends BaseComponent {
   //--------------------------------------------------------------------------
   // EVENT HANDLERS / CONSTRUCTORS  
   //--------------------------------------------------------------------------
-  constructor(public override backendService        : BackendService,
+  constructor(public override configService         : ConfigService,
+              public override backendService        : BackendService,
               public override route                 : ActivatedRoute,
               public override speechService         : SpeechService,
 
   ) 
   {
-       super(backendService,
-            route,
-            speechService,
-            "[FILE GENERATION - ZIP]",
-            "PAGE_DEMOS_FILE_GENERATION_ZIP"
+       super(configService,
+             backendService,
+             route,
+             speechService,
+             PAGE_DEMOS_FILE_GENERATION_ZIP
        )
   }
-  //--------------------------------------------------------------------------
-  // METODOS COMUNES
-  //--------------------------------------------------------------------------
-  //
   //--------------------------------------------------------------------------
   // METODOS - FILE UPLOAD COMPONENT
   //--------------------------------------------------------------------------

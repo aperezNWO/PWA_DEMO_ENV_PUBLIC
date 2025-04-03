@@ -3,6 +3,9 @@ import { BackendService    } from '../../../_services/BackendService/backend.ser
 import { BaseComponent     } from 'src/app/_components/base/base.component';
 import { ActivatedRoute    } from '@angular/router';
 import { SpeechService     } from 'src/app/_services/speechService/speech.service';
+import { PAGE_ABOUT_INDEX  } from 'src/app/_models/common';
+import { ConfigService     } from 'src/app/_services/ConfigService/config.service';
+import { _environment      } from 'src/environments/environment';
 //
 @Component({
   selector: 'app-a-about-web',
@@ -10,43 +13,24 @@ import { SpeechService     } from 'src/app/_services/speechService/speech.servic
   styleUrls: ['./a-about-web.component.css']
 })
 export class AAboutWebComponent extends BaseComponent {
-       //
-       constructor(
-           backendService : BackendService,
-           route          : ActivatedRoute,
-           speechService  : SpeechService,
-       )
-       {
+    //
+    constructor(
+        public override configService  : ConfigService,
+        public override backendService : BackendService,
+        public override route          : ActivatedRoute,
+        public override speechService  : SpeechService,
+    )
+    {
            //
-           super(backendService,
+           super(configService,
+                 backendService,
                  route,
                  speechService,
-                 "[ACERCA DE]",
-                 "PAGE_ABOUT_INDEX",
+                 PAGE_ABOUT_INDEX,
            );
-           //
-           this._pages = [
-            {
-              'url' : '/TechnicalSpecs', 
-              'text': '[ESPECIFICACIONES TECNICAS]',
-            },  
-            {
-              'url': '/SCM',
-              'text': '[SOFTWARE CONFIGURATION MANAGEMENT]',
-            },
-            {
-              'url': '/LLMList', 
-              'text': '[LARGE LANGUAGE MODELS LIST]',
-            },   
-            {
-              'url': '/ContactForm', 
-              'text': '[CONTACT FORM]',
-            },   
-            {
-              'url': '/Index', 
-              'text': '[INDEX]',
-            },    
-          ];
-       }
-
+  }
+  //
+  ngOnInit(): void {
+    //
+  }
 }
