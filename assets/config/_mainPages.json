@@ -1,0 +1,185 @@
+ [
+      {
+        "log_name"   : "PAGE_ANGULAR_DEMO_INDEX",
+        "page_name"  : "Bienvenidos a [Angular Demo]",
+        "pages"      : [
+          { "id": 1, "url" : "/DemosFeaturesWeb"    , "text": "[CARACTERISTICAS]" },
+          { "id": 2, "url" : "/DemosLanguageWeb"    , "text": "[LENGUAJES]"       },
+          { "id": 3, "url" : "/DemosCurriculumWeb"  , "text": "[CURRICULUM]"      }
+        ]
+      },
+      {
+        "log_name"   : "PAGE_ABOUT_INDEX",
+        "page_name"  : "[ACERCA DE]",
+        "pages"      : [
+          { "id": 1, "url" : "/TechnicalSpecs"      , "text": "[ESPECIFICACIONES TECNICAS]"               },
+          { "id": 2, "url" : "/SCM"                 , "text": "[SOFTWARE CONFIGURATION MANAGEMENT]"       },
+          { "id": 3, "url" : "/LLMList"             , "text": "[LARGE LANGUAGE MODELS LIST]"              },
+          { "id": 4, "url" : "/ContactForm"         , "text": "[CONTACT FORM]"                            },
+          { "id": 4, "url" : "/Index"               , "text": "[INDEX]"                                   }
+        ]
+      },
+      {
+        "log_name"   : "PAGE_NOT_FOUND",
+        "page_name"  : "[PÁGINA NO ENCONTRADA]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_ABOUT_TECHNICAL_SPECS",
+        "page_name"  : "[ACERCA DE - ESPECIFICACIONES TÉCNICAS]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_ABOUT_LLM_LIST",
+        "page_name"  : "[ACERCA DE - LISTADO DE LLMs]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_ABOUT_CONTACT_FORM",
+        "page_name"  : "[CONTÁCTENOS]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_DEMOS_LENGUAJES_INDEX",
+        "page_name"  : "[DEMOS - LENGUAJES]",
+        "pages"      : [
+          { "id": 1, "url" : "/AngularDemo'"      , "text": "[ANGULAR / TYPESCRIPT]"    },
+          { "id": 2, "url" : "/CppDemo'"          , "text": "[.NET CORE / C++]"         },
+          { "id": 3, "url" : "/NetCoreDemo'"      , "text": "[.NET CORE / C#]"          },
+          { "id": 4, "url" : "/NodeJsDemo"        , "text": "[NODE.JS / JAVASCRIPT]"    },
+          { "id": 4, "url" : "/SpringBootDemo"    , "text": "[SPRING BOOT / JAVA]"      },
+          { "id": 4, "url" : "/DjangoDemo"        , "text": "[PYTHON / DJANGO]"         }
+        ]
+      },
+      {
+        "log_name"   : "PAGE_MISCELANEOUS_OCR",
+        "page_name"  : "[MISCELANEOUS - OCR]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_GAMES_HANOI_2D",
+        "page_name"  : "[GAMES - HANOI 2D]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_DEMOS_INDEX",
+        "page_name"  : "[DEMOS]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_MISCELANEOUS_MATH_PARSING",
+        "page_name"  : "[MISCELANEOUS - MATH PARSING]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_DEMOS_CURRICIULUM_INDEX",
+        "page_name"  : "[DEMOS - CURRICULUM]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_MISCELANEOUS_COMPUTER_VISION",
+        "page_name"  : "[MISELANEOUS - COMPUTER VISION]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_MISCELANEOUS_CHAT",
+        "page_name"  : "[MISCELANEOUS - CHAT]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_DEMOS_MISELANEOUS_INDEX",
+        "page_name"  : "[DEMOS - MISCELANEOUS]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_FILE_GENERATION_CSV",
+        "page_name"  : "[GENERAR ARCHIVOS - CSV]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_GAMES_TIC_TAC_TOE",
+        "page_name"  : "[GAMES - TIC TAC TOE]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_GAMES_TIC_TAC_TOE",
+        "page_name"  : "[GAMES - TETRIS]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_GAMES_SUDOKU",
+        "page_name"  : "[GAMES - SUDOKU]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGES_GAMES_HANOI_3D",
+        "page_name"  : "[GAMES - HANOI 3D]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_DEMOS_GAMES_INDEX",
+        "page_name"  : "[DEMOS - GAMES]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_DEMOS_FILE_GENERATION_ZIP",
+        "page_name"  : "[FILE GENERATION - ZIP]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_FILE_GENERATION_XLS",
+        "page_name"  : "[GENERAR ARCHIVOS XLS]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_DEMOS_CARACTERISTICAS_INDEX",
+        "page_name"  : "[DEMOS - CARACTERISTICAS]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_FILE_GENERATION_PDF",
+        "page_name"  : "[GENERAR ARCHIVOS - PDF]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_ALGORITMOS_INDEX",
+        "page_name"  : "[DEMOS - ALGORITMOS]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_FILE_GENERATION_CHART",
+        "page_name"  : "[GENERAR ARCHIVOS - CHART]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_DEMOS_FILE_GENREATION_INDEX",
+        "page_name"  : "[DEMOS - GENERAR ARCHIVOS]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_ALGORITMOS_COLISION",
+        "page_name"  : "[ALGORITMOS - COLISIÓN]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_ALGORITMOS_DIJKSTRA",
+        "page_name"  : "[ALGORITMOS - DIJKSTRA]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_ALGORITMOS_REGEX",
+        "page_name"  : "[ALGORITMOS - EXPRESIONES REGULARES]",
+        "pages"      : []
+      },
+      {
+        "log_name"   : "",
+        "page_name"  : "",
+        "pages"      : []
+      },
+
+        {
+        "log_name"   : "",
+        "page_name"  : "",
+        "pages"      : []
+      }
+  ]
