@@ -39,7 +39,7 @@ export class HomeWebComponent extends BaseComponent implements OnInit, AfterView
       this.configService._loadMainPages().then( ()=> 
       {
           //
-          console.log(_environment.mainPageListDictionary[PAGE_ANGULAR_DEMO_INDEX])
+          //console.log(_environment.mainPageListDictionary[PAGE_ANGULAR_DEMO_INDEX])
           //
           this._pages = _environment.mainPageListDictionary[PAGE_ANGULAR_DEMO_INDEX].pages;
           //

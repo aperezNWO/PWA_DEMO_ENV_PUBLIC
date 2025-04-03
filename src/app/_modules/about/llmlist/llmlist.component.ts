@@ -29,6 +29,11 @@ export class LLMListComponent  extends BaseComponent {
             PAGE_ABOUT_LLM_LIST,
       );
       //
-      this._pages = _environment.LLMList;
+      this.configService._loadMainPages().then( ()=> 
+      {
+          //
+          this._pages = _environment.LLMList;
+          //
+      });
    }
 }
