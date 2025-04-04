@@ -29,10 +29,10 @@ export class EduResourcesComponent   extends BaseComponent {
             PAGE_ABOUT_EDU_RESC,
       );
       //
-      this.configService.loadEduResources().then( ()=> 
+      this.configService._loadMainPages().then( ()=> 
       {
           //
-          this._pages = _environment.eduResourcesList;
+          this._pages = _environment.mainPageListDictionary[PAGE_ABOUT_EDU_RESC].pages;
           //
       });
    }

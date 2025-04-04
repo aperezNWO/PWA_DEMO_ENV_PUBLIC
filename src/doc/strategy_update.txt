@@ -420,12 +420,16 @@
 
  --  [_] global signal.
 
- --  [_] libraries external resource --> mainPages.json-> pages.
-    
+ --  [_] Tetris engine.
+      
  --  [_] Merge isolated lists.
 
  --  [_] check nested lists.
-       
+
+ --  [_] libraries external resource --> mainPages.json-> pages.
+
+ --  [_] merge "jsonList.json" and "mainPages.json".
+
  --  [_] update angular curriculum.
        
  ////////////////////////////////////////////////////////////////////////////////

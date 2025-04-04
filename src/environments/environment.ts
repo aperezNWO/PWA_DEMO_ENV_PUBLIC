@@ -7,9 +7,7 @@ interface EnvironmentConfig {
     mainPageListDictionary  : MainPageSettingDictionary; //
     jsonList                : PageSetting[];             // 
     mainPageList            : MainPage[];                //
-    eduResourcesList        : [];                        //
     scmList                 : [];                        //  
-    LLMList                 : [];                        //
 }
 
 
@@ -20,7 +18,5 @@ export const _environment : EnvironmentConfig  = {
     mainPageListDictionary  : {},        //
     jsonList                : [],        // 
     mainPageList            : [],        //
-    eduResourcesList        : [],        //
     scmList                 : [],        //      
-    LLMList                 : [],        // 
 };

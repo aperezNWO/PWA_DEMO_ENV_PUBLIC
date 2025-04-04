@@ -38,19 +38,6 @@ export class ConfigService {
             })
     });
   };
-  // ONLY HAPPENS ONCE ON APPMODULE LOADING
-  loadEduResources() {
-      return this.http.get('./assets/config/eduResources.json').toPromise()
-        .then((data: any) => {
-            //
-            //////console.log("loading users..." + JSON.stringify(data));
-            //
-            _environment.eduResourcesList = data; // Assign loaded data to environment variable
-        })
-        .catch(error => {
-          console.error('Error loading users:', error);
-        });
-  }
    // ONLY HAPPENS ONCE ON APPMODULE LOADING
    loadJsonData(p_Path: string, array : string[]) {
     return this.http.get(p_Path).toPromise()
@@ -65,20 +52,6 @@ export class ConfigService {
         console.error('Error loading configuration:', error);
       });
   }  
-  //
-  // ONLY HAPPENS ONCE ON APPMODULE LOADING
-  loadLLMList() {
-    return this.http.get('./assets/config/llm.json').toPromise()
-      .then((data: any) => {
-          //
-          ////console.log("loading LLM List..." + JSON.stringify(data));
-          //
-          _environment.LLMList = data; // Assign loaded data to environment variable
-      })
-      .catch(error => {
-        console.error('Error loading configuration:', error);
-      });
-  }
   // ONLY HAPPENS ONCE ON APPMODULE LOADING
   loadConfig() {
     return this.http.get('./assets/config/_config.json').toPromise()
@@ -118,7 +91,7 @@ export class ConfigService {
         });
     });
   };
- //
+  //
   getConfigValue(key: string) {
     //
     let jsonData : string = JSON.parse(JSON.stringify(_environment.externalConfig))[key];
@@ -133,13 +106,14 @@ export class ConfigService {
    * Generates a random GUID.
    * @returns A string representing the generated GUID.
    */
-   generateGuid(): string {
+  generateGuid(): string {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (char) => {
       const random = (Math.random() * 16) | 0; // Generate a random number between 0 and 15
       const value = char === 'x' ? random : (random & 0x3) | 0x8; // Ensure 'y' is one of [8, 9, A, B]
       return value.toString(16); // Convert to hexadecimal
     });
   }
+  // 
   queryUrlParams(paraName: string):string {
      //
      let returnValue = ""; 

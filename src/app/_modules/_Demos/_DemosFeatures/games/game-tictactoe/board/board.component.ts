@@ -2,7 +2,7 @@ import { Component, OnInit, AfterViewInit , ViewChild,effect } from '@angular/co
 import { CommonModule                                 } from '@angular/common';
 import { ListItem                                     } from 'src/app/_models/entity.model';
 import { SquareComponent                              } from "../square/square.component";
-import { TicTacToeEngine                              } from 'src/app/_engines/game.engine';
+import { TicTacToeEngine                              } from 'src/app/_engines/tictactoe.engine';
 import { SpeechService                                } from 'src/app/_services/speechService/speech.service';
 //
 @Component({

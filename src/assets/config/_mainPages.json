@@ -33,12 +33,124 @@
       {
         "log_name"   : "PAGE_ABOUT_LLM_LIST",
         "page_name"  : "[ACERCA DE - LISTADO DE LLMs]",
-        "pages"      : []
+        "pages"      : [
+              {
+                  "id"   : 1 ,
+                  "url"  : "https://gemini.google.com/",
+                  "text" : "Google Gemini"
+              },
+              {
+                  "id"  : 2 ,
+                  "url" : "https://chatgpt.com/",
+                  "text": "Chat GTP"
+              },
+              {
+                  "id"   : 3,
+                  "url"  : "https://claude.ai/new",
+                  "text" : "Arthropic - Claude"
+              },
+              {
+                  "id"   : 4,
+                  "url"  : "https://groq.com/",
+                  "text" : "Groq"
+              },
+              {
+                  "id"   : 5,  
+                  "url"  : "https://pi.ai/talk",
+                  "text" : "Inflection - PI"
+              },
+              {
+                  "id"   : 6,
+                  "url"  : "https://www.meta.ai/",
+                  "text" : "Meta - A.I."
+              },
+              {
+                  "id"   : 7,
+                  "url"  : "https://venice.ai/",
+                  "text" : "Venice"
+              },
+              {
+                  "id"   : 8,
+                  "url"  : "https://x.com/i/grok?focus=1",
+                  "text" : "xAI"
+              },
+              {
+                  "id"   : 9,
+                  "url"  : "https://copilot.microsoft.com/",
+                  "text" : "Microsoft Copilot"
+              },
+              {
+                  "id"   : 10,
+                  "url"  : "https://www.deepseek.com/",
+                  "text" : "Deep Seek"
+              },
+              {
+                  "id"   : 11,
+                  "url"  : "https://chat.qwenlm.ai/",
+                  "text" : "Qwen"
+              },
+              {
+                  "id"   : 12,
+                  "url"  : "https://manus.im/",
+                  "text" : "Manus"
+              },
+              {
+                  "id"   : 13,
+                  "url"  : "https://kimi.ai/",
+                  "text" : "Kimi"
+              }  
+        ]
       },
       {
         "log_name"   : "PAGE_ABOUT_EDU_RESC",
         "page_name"  : "[ACERCA DE - EDUCATIONAL RESOURCES]",
-        "pages"      : []
+        "pages"      : [
+              {
+                  "id"  : 1,
+                  "url" : "https://angular.dev/",
+                  "name": "Angular Main Page"
+              },
+              {
+                  "id"  : 2,
+                  "url": "https://isocpp.org/",
+                  "name": "C++ Main Page"
+              },
+              {
+                  "id"  : 3,
+                  "url" : "https://www.coursera.org/learn/analysis-of-algorithms",
+                  "name": "Coursera - Análisis de Algoritmos"
+              },
+              {
+                  "id"  : 4,
+                  "url" : "https://www.deeplearning.ai/",
+                  "name": "Coursera - Deep Learning"
+              },
+              {
+                  "id"  : 5,
+                  "url" : "https://www-cs-faculty.stanford.edu/~knuth/taocp.html",
+                  "name": "The Art of Computer Programming"
+              },    
+              {
+                  "id"  : 6,
+                  "url" : "https://developer.mozilla.org/en-US/",
+                  "name": "Mozilla Developer Network"
+              },    
+              {
+                  "id"  : 7,
+                  "url" : "https://web.dev/?hl=es-419",
+                  "name": "Web.dev (by Google)"
+              },    
+              {
+                  "id"  : 8,
+                  "url" : "https://www.freecodecamp.org/learn",
+                  "name": "Freecodecampo (By Microsoft)"
+              },
+              {
+                  "id"  : 9,
+                  "url" : "https://owasp.org/",
+                  "name": "Open Web Application Security Project (OWASP)"
+              }   
+         ]
       },
       {
         "log_name"   : "PAGE_ABOUT_CONTACT_FORM",
@@ -182,8 +294,7 @@
         "page_name"  : "",
         "pages"      : []
       },
-
-        {
+      {
         "log_name"   : "",
         "page_name"  : "",
         "pages"      : []
