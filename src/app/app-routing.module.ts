@@ -41,6 +41,7 @@ import { NetcoredemoComponent } from './_modules/_Demos/_DemosLang/netcoredemo/n
 import { NodejsDemoComponent } from './_modules/_Demos/_DemosLang/nodejs-demo/nodejs-demo.component';
 import { SpringBootDemoComponent } from './_modules/_Demos/_DemosLang/spring-boot-demo/spring-boot-demo.component';
 import { DjangoDemoComponent } from './_modules/_Demos/_DemosLang/django-demo/django-demo.component';
+import { EduResourcesComponent } from './_modules/about/edu-resources/edu-resources.component';
 
 export interface _Route extends Route
 {
@@ -56,6 +57,7 @@ export const routes: _Route[] = [
   {  id: 0,  path: 'AAboutWeb'             , component: AAboutWebComponent                  , caption: ' About  - Main Page'                          },
   {  id: 0,  path: 'SCM'                   , component: SCMComponent                        , caption: ' About  - SCM'                                },
   {  id: 0,  path: 'LLMList'               , component: LLMListComponent                    , caption: ' About  - LLM List'                           },
+  {  id: 0,  path: 'EduResources'          , component: EduResourcesComponent               , caption: ' About  - Educational Resources'              },
   {  id: 0,  path: 'TechnicalSpecs'        , component: TechnicalSpecsComponent             , caption: ' About  - Technical Specifications'           },
   {  id: 0,  path: 'Features'              , component: FeaturePagesComponent               , caption: ' About  - Features'                           },
   {  id: 0,  path: 'ContactForm'           , component: ContactformComponent                , caption: ' About  - Contact Form'                       },

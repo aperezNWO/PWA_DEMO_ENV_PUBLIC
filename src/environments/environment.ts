@@ -2,35 +2,25 @@ import { PageSettingDictionary, PageSetting, MainPage, MainPageSettingDictionary
 
 interface EnvironmentConfig {
     production              : boolean; 
-    externalConfig          : {};                //
-    pageSettingDictionary   : PageSettingDictionary;
-    mainPageListDictionary  : MainPageSettingDictionary;
-    currentUserId           : number;
-    currentUserRoles        : string;     
-    usersInfo               : [];                // 
-    usersDictionary         : [];                // 
-    routesList              : [];                // 
-    usersList               : [];                // 
-    jsonList                : PageSetting[];     // 
-    mainPageList            : MainPage[];        //
-    scmList                 : [],                //  
-    LLMList                 : []                 //
+    externalConfig          : {};                        //
+    pageSettingDictionary   : PageSettingDictionary;     //
+    mainPageListDictionary  : MainPageSettingDictionary; //
+    jsonList                : PageSetting[];             // 
+    mainPageList            : MainPage[];                //
+    eduResourcesList        : [];                        //
+    scmList                 : [];                        //  
+    LLMList                 : [];                        //
 }
 
 
 export const _environment : EnvironmentConfig  = {
     production: true,                    // Set to true in environment.prod.ts
     externalConfig          : {},        // 
-    pageSettingDictionary   : {},
-    mainPageListDictionary  : {},
-    currentUserId           : 0,       
-    currentUserRoles        : "",      
-    usersInfo               : [],        // 
-    usersDictionary         : [],        // 
-    routesList              : [],        // 
-    usersList               : [],        // 
+    pageSettingDictionary   : {},        //
+    mainPageListDictionary  : {},        //
     jsonList                : [],        // 
-    mainPageList            : [],
+    mainPageList            : [],        //
+    eduResourcesList        : [],        //
     scmList                 : [],        //      
     LLMList                 : [],        // 
 };

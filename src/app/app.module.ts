@@ -77,6 +77,7 @@ import { DjangoDemoComponent     } from './_modules/_Demos/_DemosLang/django-dem
 import { SpeechPanelComponent    } from './_components/speech-panel/speech-panel.component';
 import { BaseSortableHeader      } from './_directives/sortable.directive';
 import { BaseComponent           } from './_components/base/base.component';
+import { EduResourcesComponent   } from './_modules/about/edu-resources/edu-resources.component';
 //
 export function initialize(_configService: ConfigService) 
 // 
@@ -85,15 +86,7 @@ export function initialize(_configService: ConfigService)
       _configService.loadJsonList().then( ()=> 
       {
             //
-            //_configService._loadMainPages().then( ()=> 
-            //{
-                //
-                _configService.loadPagesInfoData();
-                //
-                _configService.loadUsersData();
-                //
-                _configService.loadLLMList();
-            //});
+
       });
 
       return () => _configService.loadConfig();
@@ -196,6 +189,7 @@ export class CustomErrorHandler implements ErrorHandler {
         SpeechPanelComponent,
         BaseSortableHeader,
         BaseComponent,
+        EduResourcesComponent,
     ],
     exports: [RouterModule],
     providers: [

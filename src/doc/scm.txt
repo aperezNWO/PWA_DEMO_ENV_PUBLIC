@@ -359,9 +359,12 @@ Could not find a declaration file for module 'three/examples/jsm/controls/OrbitC
 
 /////////////////////////////////////////////////////////////////
 
+
+
+
 git add * 
-git commit -m "Application [ANGULAR DEMO - ENV_PUBLIC] v[1.8.0]
->> 1)  Basecomponent, pages property. " 
+git commit -m "Application [ANGULAR DEMO - ENV_PUBLIC] v[1.8.2]
+>> 1)  Educational Resources Page. " 
 git push 
 git pull
 

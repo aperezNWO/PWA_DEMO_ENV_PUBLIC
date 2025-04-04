@@ -39,31 +39,18 @@ export class ConfigService {
     });
   };
   // ONLY HAPPENS ONCE ON APPMODULE LOADING
-  loadUsersData() {
-      return this.http.get('./assets/config/_UsersInfo.json').toPromise()
+  loadEduResources() {
+      return this.http.get('./assets/config/eduResources.json').toPromise()
         .then((data: any) => {
             //
             //////console.log("loading users..." + JSON.stringify(data));
             //
-            _environment.usersList = data; // Assign loaded data to environment variable
+            _environment.eduResourcesList = data; // Assign loaded data to environment variable
         })
         .catch(error => {
           console.error('Error loading users:', error);
         });
-    }
-    //
-    loadPagesInfoData() {
-      return this.http.get('./assets/config/_PagesInfo.json').toPromise()
-        .then((data: any) => {
-            //
-            //////console.log("loading routes data..." + JSON.stringify(data));
-            //
-            _environment.routesList = data; // Assign loaded data to environment variable
-        })
-        .catch(error => {
-          console.error('Error loading routes dada...', error);
-        });
-    }
+  }
    // ONLY HAPPENS ONCE ON APPMODULE LOADING
    loadJsonData(p_Path: string, array : string[]) {
     return this.http.get(p_Path).toPromise()
@@ -78,21 +65,6 @@ export class ConfigService {
         console.error('Error loading configuration:', error);
       });
   }  
-  //
-  // ONLY HAPPENS ONCE ON APPMODULE LOADING
-  loadCurriculum() {
-    return this.http.get('./assets/json/angular_Curriculum_base.json').toPromise()
-      .then((data: any) => {
-          //
-          ////console.log("loading curruculum..." + JSON.stringify(data));
-          //
-          _environment.LLMList = data; // Assign loaded data to environment variable
-      })
-      .catch(error => {
-        console.error('Error loading configuration:', error);
-      });
-  }
-
   //
   // ONLY HAPPENS ONCE ON APPMODULE LOADING
   loadLLMList() {

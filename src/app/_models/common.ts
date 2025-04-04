@@ -95,6 +95,8 @@ export const PAGE_ALGORITMOS_DIJKSTRA           = "PAGE_ALGORITMOS_DIJKSTRA";
 
 export const PAGE_ALGORITMOS_REGEX              = "PAGE_ALGORITMOS_REGEX";
 
+export const PAGE_ABOUT_EDU_RESC                = "PAGE_ABOUT_EDU_RESC";
+
 ////////////////////////////////////////////////////////////////////////////
 
 
