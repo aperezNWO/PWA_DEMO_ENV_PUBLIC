@@ -290,9 +290,18 @@
         "pages"      : []
       },
       {
-        "log_name"   : "",
-        "page_name"  : "",
-        "pages"      : []
+        "log_name"   : "PAGE_ABOUT_SCM",
+        "page_name"  : "[SOFTWARE CONFIGURATION MANAGEMENT]",
+        "pages"      : [
+          { "id": 1, "url" : "./assets/config/scm.json"       , "text": ""    }
+        ]
+      },
+      {
+        "log_name"   : "ANGULAR_EDU",
+        "page_name"  : "[ANGULAR - CURRICULUM]",
+        "pages"      : [
+             { "id": 1, "url" : "./assets/demos/angularDemo/angular_Curriculum_base.json"       , "text": ""    }
+        ]
       },
       {
         "log_name"   : "",
