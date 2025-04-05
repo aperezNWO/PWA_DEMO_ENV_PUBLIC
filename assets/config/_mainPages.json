@@ -297,12 +297,55 @@
         ]
       },
       {
-        "log_name"   : "ANGULAR_EDU",
+        "log_name"   : "PAGE_CURRICULUM_ANGULAR",
         "page_name"  : "[ANGULAR - CURRICULUM]",
         "pages"      : [
              { "id": 1, "url" : "./assets/demos/angularDemo/angular_Curriculum_base.json"       , "text": ""    }
         ]
       },
+      {
+        "log_name"   : "PAGE_DEMOS_DJANGO_PYTHON",
+        "page_name"  : "[DEMOS / PYTHON - DJANGO]",
+        "pages"      : [
+             { "id": 1, "url" : "./assets/demos/djangoDemo/django_Demos_base.json"             , "text": ""      }
+        ]
+      },
+      {
+        "log_name"   : "PAGE_DEMOS_SPRING_BOOT_JAVA",
+        "page_name"  : "[DEMOS / SPRINGBOOT - JAVA]",
+        "pages"      : [
+          { "id": 1, "url" : "./assets/demos/springBootDemo/springBoot_Demos_base.json"         , "text": ""      }
+        ]
+      },
+      {
+        "log_name"   : "PAGE_DEMOS_NETCORE_CPP",
+        "page_name"  : "[DEMOS / .NET CORE - C++]",
+        "pages"      : [
+          { "id": 1, "url" : "./assets/demos/cppDemo/cpp_Demos_base.json"                       , "text": ""      }
+        ]
+      },
+      {
+        "log_name"   : "PAGE_DEMOS_NETCORE_CSHARP",
+        "page_name"  : "[DEMOS / .NET CORE - C#]",
+        "pages"      : [
+          { "id": 1, "url" : "./assets/demos/netCoreDemo/netcore_demos_base.json"               , "text": ""      }
+        ]
+      },
+      {
+        "log_name"   : "PAGE_DEMOS_NODEJS_JAVASCRIPT",
+        "page_name"  : "[DEMOS / NODE.JS - JAVASCRIPT]",
+        "pages"      : [
+          { "id": 1, "url" : "./assets/demos/nodejsDemo/nodejs_Demos_base.json"               , "text": ""      }
+        ]
+      },
+      {
+        "log_name"   : "PAGE_DEMOS_ANGULAR_JAVASCRIPT",
+        "page_name"  : "[DEMOS / ANGULAR - TYPESCRIPT]",
+        "pages"      : [
+          { "id": 1, "url" : "./assets/demos/angularDemo/angular_Demos_base.json"              , "text": ""      }
+        ]
+      },
+           
       {
         "log_name"   : "",
         "page_name"  : "",
