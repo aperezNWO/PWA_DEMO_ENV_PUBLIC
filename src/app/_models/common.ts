@@ -13,8 +13,6 @@ export const SEARCH_TERM     = new InjectionToken<string>('SEARCH_TERM');
 
 ////////////////////////////////////////////////////////////////////////////
 
-export const ENV_LIST_SCM_CONFIG         = 'SCM_CONFIG';
-
 export const ENV_LIST_ANGULAR_EDU        = 'ANGULAR_EDU';
 
 export const ENV_LIST_ANGULAR_DEMO       = 'ANGULAR_DEMO';
@@ -99,7 +97,10 @@ export const PAGE_ABOUT_EDU_RESC                = "PAGE_ABOUT_EDU_RESC";
 
 ////////////////////////////////////////////////////////////////////////////
 
+export const PAGE_ABOUT_SCM                      = 'PAGE_ABOUT_SCM';
 
+
+////////////////////////////////////////////////////////////////////////////
 
 
 

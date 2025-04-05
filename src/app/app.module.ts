@@ -78,6 +78,7 @@ import { SpeechPanelComponent    } from './_components/speech-panel/speech-panel
 import { BaseSortableHeader      } from './_directives/sortable.directive';
 import { BaseComponent           } from './_components/base/base.component';
 import { EduResourcesComponent   } from './_modules/about/edu-resources/edu-resources.component';
+import { _SearchComponent } from './_components/search/_search.component ';
 //
 export function initialize(_configService: ConfigService) 
 // 
@@ -189,6 +190,7 @@ export class CustomErrorHandler implements ErrorHandler {
         BaseSortableHeader,
         BaseComponent,
         EduResourcesComponent,
+        _SearchComponent,
     ],
     exports: [RouterModule],
     providers: [

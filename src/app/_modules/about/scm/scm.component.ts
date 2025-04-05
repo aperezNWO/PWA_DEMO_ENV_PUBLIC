@@ -5,7 +5,9 @@ import { SearchComponent                                   } from 'src/app/_comp
 import { SearchService                                                  } from 'src/app/_services/searchService/search.service';
 import { SpeechService                                                  } from 'src/app/_services/speechService/speech.service';
 import { BackendService                                                 } from 'src/app/_services/BackendService/backend.service';
-import { ENV_LIST_SCM_CONFIG, PAGE_ID, PAGE_SIZE, SEARCH_TERM           } from 'src/app/_models/common';
+import { PAGE_ABOUT_SCM, PAGE_ID, PAGE_SIZE, SEARCH_TERM           } from 'src/app/_models/common';
+import { _SearchService                                                 } from 'src/app/_services/searchService/_search.service';
+import { _SearchComponent } from 'src/app/_components/search/_search.component ';
 
 //
 @Component({
@@ -13,28 +15,26 @@ import { ENV_LIST_SCM_CONFIG, PAGE_ID, PAGE_SIZE, SEARCH_TERM           } from '
   templateUrl: './scm.component.html',
   styleUrls: ['./scm.component.css'],
   providers: [
-    SearchService,
-    { provide: PAGE_ID,     useValue: ENV_LIST_SCM_CONFIG }, // Unique ID for this component
+    _SearchService,
+    { provide: PAGE_ID,     useValue: PAGE_ABOUT_SCM }, // Unique ID for this component
     { provide: PAGE_SIZE,   useValue: 8                   },
     { provide: SEARCH_TERM, useValue: ""                  }  
   ]
 })
-export class SCMComponent extends SearchComponent {
-  //
-  public pageTitle : string = "[Software Configuration Management]";
+export class SCMComponent extends _SearchComponent {
   //
   constructor(
               public speechService                  : SpeechService,
               public backendService                 : BackendService,
-              public override searchService         : SearchService,
+              public override searchService         : _SearchService,
   )
   {
       //
       super(searchService);
       //
-      this.speechService.speakTextCustom(this.pageTitle);
+      this.speechService.speakTextCustom(this.searchService.pageTitle);
       //
-      this.backendService.SetLog(this.pageTitle,"PAGE_ABOUT_SCM")
+      this.backendService.SetLog(this.searchService.pageTitle,PAGE_ABOUT_SCM)
 
   }
 } 

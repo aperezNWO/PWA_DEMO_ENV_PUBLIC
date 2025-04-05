@@ -10,12 +10,13 @@ import { _SearchState, _BaseSearchResult, matches, _SortColumn, _SortDirection, 
 @Injectable({
   providedIn: 'root'
 })
-export class SearchService  {
+export class _SearchService  {
 	// 1.
 	public _loading               = new BehaviorSubject<boolean>(true);
 	public _search$               = new Subject<void>();
 	private _Pagelist             = new BehaviorSubject<_BaseModel[]>([]);
 	public _total                 = new BehaviorSubject<number>(0);
+	private _pageTitle            : string = "";
 	// 1.
 	private  _environmentList : string[] = [];
 	// 2. 
@@ -48,11 +49,20 @@ export class SearchService  {
 
 	}
 	// 4. Get Data
-	private GetData(_PAGE_ID : string):void{
-			// 1. get data 
-			const pageSetting    = _environment.pageSettingDictionary[_PAGE_ID ];
+	private GetData(PAGE_ID : string):void{
+
+		this.__configService._loadMainPages().then( ()=> 
+		{
 			//
-			this.__configService.loadJsonData(pageSetting.p_Path,
+			//console.log(_environment.mainPageListDictionary[PAGE_ANGULAR_DEMO_INDEX])
+			//
+			//this._pages = _environment.mainPageListDictionary[PAGE_ANGULAR_DEMO_INDEX].pages;
+			//
+			// 1. get data 
+			this.pageTitle       = _environment.mainPageListDictionary[PAGE_ID ].page_name;
+			const pageSetting    = _environment.mainPageListDictionary[PAGE_ID ];
+			//
+			this.__configService.loadJsonData(pageSetting.pages[0].url,
 			this._environmentList).then(() => {
 					//
 					//console.log("json data : " + JSON.stringify(this._environmentList));
@@ -72,6 +82,9 @@ export class SearchService  {
 				//
 				this._search$.next();
 			});
+			
+		});
+
 	}						
 	// 5. 
 	public _search(): Observable<_BaseSearchResult> {
@@ -107,6 +120,15 @@ export class SearchService  {
 	//////////////////////////////////////////////////////////////////////
 	// 6. PROPERTIES
 	//////////////////////////////////////////////////////////////////////
+	//
+	public get pageTitle()
+	{
+		return this._pageTitle
+	}
+	public set pageTitle(value : string)
+	{
+		this._pageTitle = value;
+	}
 	//
 	public get total() {
 		return this._total!.asObservable();
