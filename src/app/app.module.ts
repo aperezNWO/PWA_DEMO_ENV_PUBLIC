@@ -83,11 +83,6 @@ import { _SearchComponent } from './_components/search/_search.component ';
 export function initialize(_configService: ConfigService) 
 // 
 {
-      //
-      _configService.loadJsonList().then( ()=> 
-      {
-            //
-      });
       //  
       return () => _configService.loadConfig();
 }

@@ -434,4 +434,9 @@
        
  --  [_] merge page dictionaries.
 
+ --  [_] update angular curriculum.
+
+ --  [_] COMMENT CODE GITHUB STYLE
+
+
  ////////////////////////////////////////////////////////////////////////////////

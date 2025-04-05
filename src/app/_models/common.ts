@@ -13,22 +13,6 @@ export const SEARCH_TERM     = new InjectionToken<string>('SEARCH_TERM');
 
 ////////////////////////////////////////////////////////////////////////////
 
-export const ENV_LIST_ANGULAR_EDU        = 'ANGULAR_EDU';
-
-export const ENV_LIST_ANGULAR_DEMO       = 'ANGULAR_DEMO';
-
-export const ENV_LIST_CPP_DEMO           = 'CPP_DEMO';
-
-export const ENV_LIST_NETCORE_DEMO       = 'NETCORE_DEMO';
-
-export const ENV_LIST_NODEJS_DEMO        = 'NODEJS_DEMO';
-
-export const ENV_LIST_SPRING_BOOT_DEMO   = 'SPRING_BOOT_DEMO';
-
-export const ENV_LIST_DJANGO_PYTHON_DEMO = 'DJANGO_PYTHON_DEMO';
-
-////////////////////////////////////////////////////////////////////////////
-
 export const PAGE_ANGULAR_DEMO_INDEX            = "PAGE_ANGULAR_DEMO_INDEX";
 
 export const PAGE_ABOUT_INDEX                   = "PAGE_ABOUT_INDEX";
@@ -98,11 +82,21 @@ export const PAGE_ABOUT_EDU_RESC                = "PAGE_ABOUT_EDU_RESC";
 ////////////////////////////////////////////////////////////////////////////
 
 export const PAGE_ABOUT_SCM                      = 'PAGE_ABOUT_SCM';
+  
+export const PAGE_CURRICULUM_ANGULAR             = 'PAGE_CURRICULUM_ANGULAR';
 
+export const PAGE_DEMOS_DJANGO_PYTHON            = 'PAGE_DEMOS_DJANGO_PYTHON';
+
+export const PAGE_DEMOS_SPRING_BOOT_JAVA         = 'PAGE_DEMOS_SPRING_BOOT_JAVA';
+
+export const PAGE_DEMOS_NETCORE_CSHARP           = 'PAGE_DEMOS_NETCORE_CSHARP';
+
+export const PAGE_DEMOS_NETCORE_CPP              = 'PAGE_DEMOS_NETCORE_CPP';
+
+export const PAGE_DEMOS_NODEJS_JAVASCRIPT        = 'PAGE_DEMOS_NODEJS_JAVASCRIPT';
+
+export const PAGE_DEMOS_ANGULAR_JAVASCRIPT       = 'PAGE_DEMOS_ANGULAR_JAVASCRIPT';
 
 ////////////////////////////////////////////////////////////////////////////
-
-
-
 
 

@@ -17,29 +17,8 @@ export class ConfigService {
   {
     //
   } 
-  //
-  loadJsonList():Promise<void> 
-  {
-      return new Promise( (resolve) =>
-      {
-           this.http.get('./assets/config/_jsonList.json').toPromise()
-            .then((data: any) => {
-                //
-                _environment.jsonList = data; // Assign loaded data to environment variable
-                //
-                _environment.jsonList.forEach((element: PageSetting) => {
-                    _environment.pageSettingDictionary[element.f_Name] = element;
-                });
-                //
-                resolve();
-            })
-            .catch(error => {
-              console.error('Error loading configuration:', error);
-            })
-    });
-  };
-   // ONLY HAPPENS ONCE ON APPMODULE LOADING
-   loadJsonData(p_Path: string, array : string[]) {
+  // ONLY HAPPENS ONCE ON APPMODULE LOADING
+  loadJsonData(p_Path: string, array : string[]) {
     return this.http.get(p_Path).toPromise()
       .then((data: any) => {
           //

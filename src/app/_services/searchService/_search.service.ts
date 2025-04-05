@@ -3,7 +3,9 @@ import { Inject, Injectable                    } from "@angular/core";
 import { _BaseModel                            } from "src/app/_models/entity.model";
 import { _environment                          } from "src/environments/environment";
 import { PAGE_ID, PAGE_SIZE, SEARCH_TERM       } from "src/app/_models/common";
-import { ConfigService                         } from "../ConfigService/config.service";
+import { ConfigService                                                                       } from "../ConfigService/config.service";
+import { BackendService                                                                      } from "../BackendService/backend.service";
+import { SpeechService                                                                       } from "../speechService/speech.service";
 import { BehaviorSubject, Subject, tap, debounceTime, switchMap, delay, Observable, of       } from "rxjs";
 import { _SearchState, _BaseSearchResult, matches, _SortColumn, _SortDirection, sort         } from "src/app/_directives/sortable.directive";
 
@@ -17,6 +19,7 @@ export class _SearchService  {
 	private _Pagelist             = new BehaviorSubject<_BaseModel[]>([]);
 	public _total                 = new BehaviorSubject<number>(0);
 	private _pageTitle            : string = "";
+	private _PAGE_ID              : string = "";
 	// 1.
 	private  _environmentList : string[] = [];
 	// 2. 
@@ -35,7 +38,9 @@ export class _SearchService  {
 				@Inject(SEARCH_TERM) 
 				private SEARCH_TERM       : string,
 				private pipe              : DecimalPipe,
-				private __configService   : ConfigService
+				private __configService   : ConfigService,
+				private backendService    : BackendService,
+				private speechService     : SpeechService,
 	) 
 	{
 		//
@@ -44,20 +49,12 @@ export class _SearchService  {
 		this.pageSize   = PAGE_SIZE;
 		//
 		this.searchTerm = SEARCH_TERM;
-		//
-		//console.log("SEARCH_TERM" + SEARCH_TERM);
-
 	}
 	// 4. Get Data
 	private GetData(PAGE_ID : string):void{
 
 		this.__configService._loadMainPages().then( ()=> 
 		{
-			//
-			//console.log(_environment.mainPageListDictionary[PAGE_ANGULAR_DEMO_INDEX])
-			//
-			//this._pages = _environment.mainPageListDictionary[PAGE_ANGULAR_DEMO_INDEX].pages;
-			//
 			// 1. get data 
 			this.pageTitle       = _environment.mainPageListDictionary[PAGE_ID ].page_name;
 			const pageSetting    = _environment.mainPageListDictionary[PAGE_ID ];
@@ -81,10 +78,16 @@ export class _SearchService  {
 					});
 				//
 				this._search$.next();
+				//
+				console.info("speak " + this.pageTitle);
+				//
+				console.info("log   " + this.pageID);
+				//
+				this.speechService.speakTextCustom(this.pageTitle);
+				//
+				this.backendService.SetLog(this.pageTitle,this.pageID);
 			});
-			
 		});
-
 	}						
 	// 5. 
 	public _search(): Observable<_BaseSearchResult> {
@@ -120,6 +123,15 @@ export class _SearchService  {
 	//////////////////////////////////////////////////////////////////////
 	// 6. PROPERTIES
 	//////////////////////////////////////////////////////////////////////
+	//
+	public get pageID()
+	{
+		return this._PAGE_ID;
+	}
+	public set pageID(value : string)
+	{
+		this._PAGE_ID = value;
+	}
 	//
 	public get pageTitle()
 	{
