@@ -58,6 +58,16 @@ export class ChartComponent extends BaseComponent implements OnInit  {
       )
       //
       Chart.register(...registerables);
+      // Define an effect to react to changes in the signal
+      effect(() => {
+        if (this.pdf_message_csv())
+            this.speechService.speakTextCustom(this.pdf_message_csv());
+      });
+      // Define an effect to react to changes in the signal
+      effect(() => {
+        if (this.pdf_message_xls())
+            this.speechService.speakTextCustom(this.pdf_message_xls());
+      });
     }
     //
     ngOnInit(): void {

@@ -50,8 +50,6 @@ export class BaseComponent {
       this.configService._loadMainPages().then( ()=> 
       {
             //
-            //console.log(_environment.mainPageListDictionary[PAGE_TITLE_LOG])
-             //
             this.pageTitle = _environment.mainPageListDictionary[PAGE_TITLE_LOG].page_name;
             //
             this.speechService.speakTextCustom(this.pageTitle);

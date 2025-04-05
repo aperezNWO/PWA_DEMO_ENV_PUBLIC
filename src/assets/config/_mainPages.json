@@ -159,7 +159,7 @@
       },
       {
         "log_name"   : "PAGE_DEMOS_LENGUAJES_INDEX",
-        "page_name"  : "[DEMOS - LENGUAJES]",
+        "page_name"  : "[DEMOS - LENGUAJES / LIBRERIAS]",
         "pages"      : [
           { "id": 1, "url" : "/AngularDemo"       , "text": "[ANGULAR / TYPESCRIPT]"    },
           { "id": 2, "url" : "/CppDemo"           , "text": "[.NET CORE / C++]"         },

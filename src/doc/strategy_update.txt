@@ -426,9 +426,7 @@
 
  --  [_] check nested lists.
 
- --  [_] libraries external resource --> mainPages.json-> pages.
-
- --  [_] merge "jsonList.json" and "mainPages.json".
+ --  [x] merge "jsonList.json" and "mainPages.json".
 
  --  [_] update angular curriculum.
        
@@ -438,5 +436,28 @@
 
  --  [_] COMMENT CODE GITHUB STYLE
 
+ --  [_] Chart sample sound.
+
+ --  [_] languages / libraries demo.
+
+ --  [_] stored procedures.
+
+      --  [_] delete "page_index"... from log entries.
+
+ --  [_] recorrido reviison funcionalidad.
+
+ --  [_] complete curriculum other languages.
+
+ --  [_] languages / libraries tensorflow.
+
+ --  [_] curriculum tensorflow.
+ 
+ --  [_] libraries external resource --> mainPages.json-> pages.
+
+        --  [_] bootstrap.
+ 
+        --  [_] tensorflow.
+ 
+ --  [_] Referrences Angular / uix , Angular / Services.
 
  ////////////////////////////////////////////////////////////////////////////////
