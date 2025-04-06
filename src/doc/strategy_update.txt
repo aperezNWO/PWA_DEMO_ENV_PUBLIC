@@ -460,6 +460,14 @@
  
  --  [_] Referrences Angular / uix , Angular / Services.
 
- --  [_] Use Java as primary language for opencv and tesseract.
- 
+ --  [_] tesseract programming language order usage : 
+
+         --  [_] python.
+
+         --  [_] java.
+
+         --  [_] c++.
+
+  --  [_]  how can I use qwen and python to ask for any list and generate an output in excel?       
+
  ////////////////////////////////////////////////////////////////////////////////

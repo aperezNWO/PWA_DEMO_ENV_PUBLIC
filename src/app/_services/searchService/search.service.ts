@@ -54,23 +54,28 @@ export class SearchService  {
 			//
 			this.__configService.loadJsonData(pageSetting.p_Path,
 			this._environmentList).then(() => {
-					//
-					//console.log("json data : " + JSON.stringify(this._environmentList));
-					//
+					/*
+						In Angular and RxJS (Reactive Extensions for JavaScript), the pipe method is a core feature of Observables . 
+						It allows you to combine multiple RxJS operators (like map, filter, debounceTime, etc.) 
+						into a sequence or pipeline, which processes the data emitted by the Observable in a declarative way.
+						The pipe method is used to apply transformations, filtering, error handling, 
+						and other operations to the stream of data emitted by the Observable. 
+						It makes Observables highly flexible and powerful for handling asynchronous data streams.
+					*/
 					this._search$
 					.pipe(
-						tap(() => this._loading!.next(true)),
-						debounceTime(200),
-						switchMap(() => this._search()),
-						delay(200),
-						tap(() => this._loading!.next(false)),
+					  tap(() => this._loading!.next(true)), // Step 1: Set loading state to true
+					  debounceTime(200),                    // Step 2: Wait for 200ms of inactivity before proceeding
+					  switchMap(() => this._search()),      // Step 3: Perform the search and cancel previous searches
+					  delay(200),                           // Step 4: Add a 200ms delay after the search completes
+					  tap(() => this._loading!.next(false)) // Step 5: Set loading state to false
 					)
-					.subscribe((result) => {
-						this._Pagelist!.next(result.searchPages);
-						this._total!.next(result.total);
+					.subscribe((result) => {                    // Step 6: Handle the search result
+					  this._Pagelist!.next(result.searchPages); // Emit the list of pages
+					  this._total!.next(result.total);          // Emit the total number of results
 					});
-				//
-				this._search$.next();
+					//
+					this._search$.next();
 			});
 	}						
 	// 5. 
