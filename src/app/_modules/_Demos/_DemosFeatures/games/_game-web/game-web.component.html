@@ -1,12 +1,9 @@
 <H4>{{this.pageTitle}}</H4>
 <hr>
-<ul>
-    <li><a routerLink="/GamesSudoku">[GAMES - SUDOKU]</a></li>
-    <li><a routerLink="/GamesTicTacToe">[GAMES - TICTACTOE]</a></li>
-    <li><a routerLink="/GamesHanoiAuto">[GAMES - HANOI 2d]</a></li>
-    <li><a routerLink="/GamesHanoi3d">[GAMES - HANOI 3d]</a></li>
-    <li><a routerLink="/GamesTetris">[GAMES - TETRIS]</a></li>
-    <!--<li><a routerLink="/GamesAmigoSecreto">[GAMES - AMIGO SECRETO]</a></li>-->
+<ul *ngFor="let page of this._pages">
+    <li class="nav-item">
+        <a routerLink="/{{page.url}}"><div align="left">{{page.text}}</div></a>
+    </li>
 </ul>
 <hr>
 <div align="right"><a routerLink="/DemosFeaturesWeb">[Volver al Inicio]</a></div>

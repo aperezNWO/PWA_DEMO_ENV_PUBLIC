@@ -1,10 +1,9 @@
 <H4>{{this.pageTitle}}</H4>
 <hr>
-<ul>
-    <li><a routerLink="/OcrPhotoCapture">[MISCELANEOUS - OCR]</a></li>
-    <li><a routerLink="/ComputerVision">[MISCELANEOUS - COMPUTER VISION]</a></li>
-    <li><a routerLink="/Chat">[MISCELANEOUS - CHAT]</a></li>
-    <li><a routerLink="/MathParsing">[MISCELANEOUS - MATH PARSING]</a></li>
+<ul *ngFor="let page of this._pages">
+    <li class="nav-item">
+        <a routerLink="/{{page.url}}"><div align="left">{{page.text}}</div></a>
+    </li>
 </ul>
 <hr>
 <div align="right"><a routerLink="/DemosFeaturesWeb">[Volver al Inicio]</a></div>

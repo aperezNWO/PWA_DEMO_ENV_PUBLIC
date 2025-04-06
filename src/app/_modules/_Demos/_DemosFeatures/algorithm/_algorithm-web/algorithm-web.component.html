@@ -1,10 +1,9 @@
 <H4>{{this.pageTitle}}</H4>
 <hr>
-<ul>
-    <li><a routerLink="/AlgorithmRegEx">[ALGORITMOS - EXPRESIONES REGULARES]</a></li>
-    <li><a routerLink="/AlgorithmSort">[ALGORITMOS - ORDENAMIENTO]</a></li>
-    <li><a routerLink="/AlgorithmDijkstra">[ALGORITMOS - DISTANCIA MAS CORTA]</a></li>
-    <li><a routerLink="/AlgorithmCollision">[ALGORITMOS - COLISIÓN]</a></li>
-</ul>
+<div align="left">
+    <ul *ngFor="let page of this._pages" >
+        <li><a [routerLink]="page.url">{{page.text}}</a></li>
+    </ul>
+</div>
 <hr>
 <div align="right"><a routerLink="/DemosFeaturesWeb">[Volver al Inicio]</a></div>

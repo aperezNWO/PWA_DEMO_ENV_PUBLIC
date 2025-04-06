@@ -1,12 +1,10 @@
 
 <H4>{{this.pageTitle}}</H4>
 <hr>
-<ul>
-    <!--<li><a routerLink="/Features">[FEATURES LIST]</a></li>-->
-    <li><a routerLink="/Miscelaneous">[MISCELANEOUS]</a></li>
-    <li><a routerLink="/GamesWeb">[GAMES]</a></li>
-    <li><a routerLink="/AlgorithmWeb">[ALGORITHMS]</a></li>
-    <li><a routerLink="/FilesGenerationWeb">[FILE GENERATION]</a></li>
-</ul>
+<div align="left">
+    <ul *ngFor="let page of this._pages" >
+        <li><a [routerLink]="page.url">{{page.text}}</a></li>
+    </ul>
+</div>
 <hr>
 <div align="right"><a routerLink="/DemosWeb">[Volver al Inicio]</a></div>
