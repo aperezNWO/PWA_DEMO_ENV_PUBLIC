@@ -460,4 +460,6 @@
  
  --  [_] Referrences Angular / uix , Angular / Services.
 
+ --  [_] Use Java as primary language for opencv and tesseract.
+ 
  ////////////////////////////////////////////////////////////////////////////////
