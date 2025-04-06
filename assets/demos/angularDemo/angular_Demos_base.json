@@ -79,7 +79,7 @@
         "field_6"          : ".NET Core",
         "field_1"          : ".NET Core, pdf, iTextSharp",
         "field_2"          : "./#/FilesGenerationPDF",
-        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_engines/pdf.engine.ts",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/files-generation/files-generation-pdf/files-generation-pdf.component.ts",
         "field_4"          : "https://www.nuget.org/packages/iTextSharp/"  ,
         "field_10"         : "179c6e7c-6dad-4aea-a515-d45d09641a76"
     },
