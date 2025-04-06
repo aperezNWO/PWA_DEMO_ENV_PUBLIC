@@ -112,44 +112,49 @@
               },
               {
                   "id"  : 2,
+                  "url" : "https://ng-bootstrap.github.io/#/components/table/examples#basic",
+                  "name": "ng-bootstrap"
+              }, 
+              {
+                  "id"  : 3,
                   "url": "https://isocpp.org/",
                   "name": "C++ Main Page"
               },
               {
-                  "id"  : 3,
+                  "id"  : 4,
                   "url" : "https://www.coursera.org/learn/analysis-of-algorithms",
                   "name": "Coursera - Análisis de Algoritmos"
               },
               {
-                  "id"  : 4,
+                  "id"  : 5,
                   "url" : "https://www.deeplearning.ai/",
                   "name": "Coursera - Deep Learning"
               },
               {
-                  "id"  : 5,
+                  "id"  : 6,
                   "url" : "https://www-cs-faculty.stanford.edu/~knuth/taocp.html",
                   "name": "The Art of Computer Programming"
               },    
               {
-                  "id"  : 6,
+                  "id"  : 7,
                   "url" : "https://developer.mozilla.org/en-US/",
                   "name": "Mozilla Developer Network"
               },    
               {
-                  "id"  : 7,
+                  "id"  : 8,
                   "url" : "https://web.dev/?hl=es-419",
                   "name": "Web.dev (by Google)"
               },    
               {
-                  "id"  : 8,
+                  "id"  : 9,
                   "url" : "https://www.freecodecamp.org/learn",
                   "name": "Freecodecampo (By Microsoft)"
               },
               {
-                  "id"  : 9,
+                  "id"  : 10,
                   "url" : "https://owasp.org/",
                   "name": "Open Web Application Security Project (OWASP)"
-              }   
+              }
          ]
       },
       {
@@ -170,18 +175,23 @@
         ]
       },
       {
-        "log_name"   : "PAGE_MISCELANEOUS_OCR",
-        "page_name"  : "[MISCELANEOUS - OCR]",
+        "log_name"   : "PAGE_DEMOS_CURRICIULUM_INDEX",
+        "page_name"  : "[DEMOS - CURRICULUM]",
         "pages"      : []
       },
       {
-        "log_name"   : "PAGE_GAMES_HANOI_2D",
-        "page_name"  : "[GAMES - HANOI 2D]",
-        "pages"      : []
+        "log_name"   : "PAGE_DEMOS_MISELANEOUS_INDEX",
+        "page_name"  : "[DEMOS - MISCELANEOUS]",
+        "pages"      : [
+            { "id": 1, "url" : "/OcrPhotoCapture"       , "text": "[MISCELANEOUS - OCR]"               },
+            { "id": 2, "url" : "/ComputerVision"        , "text": "[MISCELANEOUS - COMPUTER VISION]"   },
+            { "id": 3, "url" : "/Chat"                  , "text": "[MISCELANEOUS - CHAT]"              },
+            { "id": 4, "url" : "/MathParsing"           , "text": "[MISCELANEOUS - MATH PARSING]"      }
+          ]
       },
       {
-        "log_name"   : "PAGE_DEMOS_INDEX",
-        "page_name"  : "[DEMOS]",
+        "log_name"   : "PAGE_MISCELANEOUS_COMPUTER_VISION",
+        "page_name"  : "[MISELANEOUS - COMPUTER VISION]",
         "pages"      : []
       },
       {
@@ -190,29 +200,25 @@
         "pages"      : []
       },
       {
-        "log_name"   : "PAGE_DEMOS_CURRICIULUM_INDEX",
-        "page_name"  : "[DEMOS - CURRICULUM]",
-        "pages"      : []
-      },
-      {
-        "log_name"   : "PAGE_MISCELANEOUS_COMPUTER_VISION",
-        "page_name"  : "[MISELANEOUS - COMPUTER VISION]",
-        "pages"      : []
-      },
-      {
         "log_name"   : "PAGE_MISCELANEOUS_CHAT",
         "page_name"  : "[MISCELANEOUS - CHAT]",
         "pages"      : []
       },
       {
-        "log_name"   : "PAGE_DEMOS_MISELANEOUS_INDEX",
-        "page_name"  : "[DEMOS - MISCELANEOUS]",
+        "log_name"   : "PAGE_MISCELANEOUS_OCR",
+        "page_name"  : "[MISCELANEOUS - OCR]",
         "pages"      : []
       },
       {
-        "log_name"   : "PAGE_FILE_GENERATION_CSV",
-        "page_name"  : "[GENERAR ARCHIVOS - CSV]",
-        "pages"      : []
+        "log_name"   : "PAGE_DEMOS_GAMES_INDEX",
+        "page_name"  : "[DEMOS - GAMES]",
+        "pages"      : [
+          { "id": 1, "url" : "/GamesSudoku"            , "text": "[GAMES - SUDOKU]"      },
+          { "id": 2, "url" : "/GamesTicTacToe"         , "text": "[GAMES - TICTACTOE]"   },
+          { "id": 3, "url" : "/GamesHanoiAuto"         , "text": "[GAMES - HANOI 2d]"    },
+          { "id": 4, "url" : "/GamesHanoi3d"           , "text": "[GAMES - HANOI 3d]"    },
+          { "id": 5, "url" : "/GamesTetris"            , "text": "[GAMES - TETRIS]"      }
+        ]
       },
       {
         "log_name"   : "PAGE_GAMES_TETRIS",
@@ -230,18 +236,33 @@
         "pages"      : []
       },
       {
+        "log_name"   : "PAGE_GAMES_HANOI_2D",
+        "page_name"  : "[GAMES - HANOI 2D]",
+        "pages"      : []
+      },
+      {
         "log_name"   : "PAGES_GAMES_HANOI_3D",
         "page_name"  : "[GAMES - HANOI 3D]",
         "pages"      : []
       },
       {
-        "log_name"   : "PAGE_DEMOS_GAMES_INDEX",
-        "page_name"  : "[DEMOS - GAMES]",
+        "log_name"   : "PAGE_DEMOS_FILE_GENREATION_INDEX",
+        "page_name"  : "[DEMOS - GENERAR ARCHIVOS]",
+        "pages"      : [
+          { "id": 1, "url" : "/FilesGenerationCSV"       , "text": "[GENERAR ARCHIVO CSV]"      },
+          { "id": 2, "url" : "/FilesGenerationXLS"       , "text": "[GENERAR ARCHIVO XLS]"      },
+          { "id": 3, "url" : "/FilesGenerationPDF"       , "text": "[GENERAR ARCHIVO PDF]"      },
+          { "id": 4, "url" : "/Chart"                    , "text": "[GENERAR ARCHIVO CHART]"    }
+        ]
+      },
+      {
+        "log_name"   : "PAGE_FILE_GENERATION_CSV",
+        "page_name"  : "[GENERAR ARCHIVOS - CSV]",
         "pages"      : []
       },
       {
         "log_name"   : "PAGE_DEMOS_FILE_GENERATION_ZIP",
-        "page_name"  : "[FILE GENERATION - ZIP]",
+        "page_name"  : "[GENERAR ARCHIVOS - ZIP]",
         "pages"      : []
       },
       {
@@ -250,18 +271,8 @@
         "pages"      : []
       },
       {
-        "log_name"   : "PAGE_DEMOS_CARACTERISTICAS_INDEX",
-        "page_name"  : "[DEMOS - CARACTERISTICAS]",
-        "pages"      : []
-      },
-      {
         "log_name"   : "PAGE_FILE_GENERATION_PDF",
         "page_name"  : "[GENERAR ARCHIVOS - PDF]",
-        "pages"      : []
-      },
-      {
-        "log_name"   : "PAGE_ALGORITMOS_INDEX",
-        "page_name"  : "[DEMOS - ALGORITMOS]",
         "pages"      : []
       },
       {
@@ -270,9 +281,14 @@
         "pages"      : []
       },
       {
-        "log_name"   : "PAGE_DEMOS_FILE_GENREATION_INDEX",
-        "page_name"  : "[DEMOS - GENERAR ARCHIVOS]",
-        "pages"      : []
+        "log_name"   : "PAGE_ALGORITMOS_INDEX",
+        "page_name"  : "[DEMOS - ALGORITMOS]",
+        "pages"      : [
+          { "id": 1, "url" : "/AlgorithmRegEx"          , "text": "[ALGORITMOS - EXPRESIONES REGULARES]"      },
+          { "id": 2, "url" : "/AlgorithmSort"           , "text": "[ALGORITMOS - ORDENAMIENTO]"               },
+          { "id": 3, "url" : "/AlgorithmDijkstra"       , "text": "[ALGORITMOS - DISTANCIA MAS CORTA]"        },
+          { "id": 4, "url" : "/AlgorithmCollision"      , "text": "[ALGORITMOS - COLISIÓN]"                   }          
+        ]
       },
       {
         "log_name"   : "PAGE_ALGORITMOS_COLISION",
@@ -288,6 +304,25 @@
         "log_name"   : "PAGE_ALGORITMOS_REGEX",
         "page_name"  : "[ALGORITMOS - EXPRESIONES REGULARES]",
         "pages"      : []
+      },
+      {
+        "log_name"   : "PAGE_DEMOS_CARACTERISTICAS_INDEX",
+        "page_name"  : "[DEMOS - CARACTERISTICAS]",
+        "pages"      : [
+          { "id": 1, "url" : "/Miscelaneous"            , "text": "[MISCELANEOUS]"                      },
+          { "id": 2, "url" : "/GamesWeb"                , "text": "[GAMES]"                             },
+          { "id": 3, "url" : "/AlgorithmWeb"            , "text": "[ALGORITHMS]"                        },
+          { "id": 1, "url" : "/FilesGenerationWeb"      , "text": "[FILE GENERATION]"                   }      
+        ]
+      },
+      {
+        "log_name"   : "PAGE_DEMOS_INDEX",
+        "page_name"  : "[DEMOS]",
+        "pages"      : [
+          { "id": 1, "url" : "/DemosFeaturesWeb"            , "text": "[DEMOS - CARACTERISTICAS]"                   },
+          { "id": 1, "url" : "/DemosLanguageWeb"            , "text": "[DEMOS - LENGUAJES]"                         },
+          { "id": 1, "url" : "/DemosCurriculumWeb"          , "text": "[DEMOS - CURRICULUM]"                        }
+        ] 
       },
       {
         "log_name"   : "PAGE_ABOUT_SCM",
@@ -345,7 +380,6 @@
           { "id": 1, "url" : "./assets/demos/angularDemo/angular_Demos_base.json"              , "text": ""      }
         ]
       },
-           
       {
         "log_name"   : "",
         "page_name"  : "",
