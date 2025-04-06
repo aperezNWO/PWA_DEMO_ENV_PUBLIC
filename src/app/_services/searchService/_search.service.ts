@@ -55,14 +55,12 @@ export class _SearchService  {
 
 		this.__configService._loadMainPages().then( ()=> 
 		{
-			// 1. get data 
-			this.pageTitle       = _environment.mainPageListDictionary[PAGE_ID ].page_name;
-			const pageSetting    = _environment.mainPageListDictionary[PAGE_ID ];
-			//
-			this.__configService.loadJsonData(pageSetting.pages[0].url,
-			this._environmentList).then(() => {
-					//
-					//console.log("json data : " + JSON.stringify(this._environmentList));
+				// 1. get data 
+				this.pageTitle       = _environment.mainPageListDictionary[PAGE_ID ].page_name;
+				const pageSetting    = _environment.mainPageListDictionary[PAGE_ID ];
+				//
+				this.__configService.loadJsonData(pageSetting.pages[0].url,
+				this._environmentList).then(() => {
 					//
 					this._search$
 					.pipe(
@@ -76,17 +74,17 @@ export class _SearchService  {
 						this._Pagelist!.next(result.searchPages);
 						this._total!.next(result.total);
 					});
-				//
-				this._search$.next();
-				//
-				console.info("speak " + this.pageTitle);
-				//
-				console.info("log   " + this.pageID);
-				//
-				this.speechService.speakTextCustom(this.pageTitle);
-				//
-				this.backendService.SetLog(this.pageTitle,this.pageID);
-			});
+					//
+					this._search$.next();
+					//
+					console.info("speak " + this.pageTitle);
+					//
+					console.info("log   " + this.pageID);
+					//
+					this.speechService.speakTextCustom(this.pageTitle);
+					//
+					this.backendService.SetLog(this.pageTitle,this.pageID);
+			    });
 		});
 	}						
 	// 5. 
