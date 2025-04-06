@@ -468,6 +468,8 @@
 
          --  [_] c++.
 
-  --  [_]  how can I use qwen and python to ask for any list and generate an output in excel?       
+  --  [_]  how can I use qwen and python to ask for any list and generate an output in excel?    
+
+  --  [_]  library reference : https://ng-bootstrap.github.io/#/components/table/examples#basic   
 
  ////////////////////////////////////////////////////////////////////////////////
