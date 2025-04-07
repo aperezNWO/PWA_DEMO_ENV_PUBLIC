@@ -122,36 +122,41 @@
               },
               {
                   "id"  : 4,
+                  "url" : "https://en.cppreference.com/w/",
+                  "name": "cppreference.com"
+              },
+              {
+                  "id"  : 5,
                   "url" : "https://www.coursera.org/learn/analysis-of-algorithms",
                   "name": "Coursera - Análisis de Algoritmos"
               },
               {
-                  "id"  : 5,
+                  "id"  : 6,
                   "url" : "https://www.deeplearning.ai/",
                   "name": "Coursera - Deep Learning"
               },
               {
-                  "id"  : 6,
+                  "id"  : 7,
                   "url" : "https://www-cs-faculty.stanford.edu/~knuth/taocp.html",
                   "name": "The Art of Computer Programming"
               },    
               {
-                  "id"  : 7,
+                  "id"  : 8,
                   "url" : "https://developer.mozilla.org/en-US/",
                   "name": "Mozilla Developer Network"
               },    
               {
-                  "id"  : 8,
+                  "id"  : 9,
                   "url" : "https://web.dev/?hl=es-419",
                   "name": "Web.dev (by Google)"
               },    
               {
-                  "id"  : 9,
+                  "id"  : 10,
                   "url" : "https://www.freecodecamp.org/learn",
                   "name": "Freecodecampo (By Microsoft)"
               },
               {
-                  "id"  : 10,
+                  "id"  : 11,
                   "url" : "https://owasp.org/",
                   "name": "Open Web Application Security Project (OWASP)"
               }
