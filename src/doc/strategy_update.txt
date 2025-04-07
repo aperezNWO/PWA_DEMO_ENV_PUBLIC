@@ -472,4 +472,8 @@
 
   --  [_]  uix library implementation : https://ng-bootstrap.github.io/#/components/table/examples#basic   
 
+  --  [_]  ¿Can you please show me a code exaple of creating a dll using Embarcadero C++ builder and tensorflow OCR capabilities ?
+ 
  ////////////////////////////////////////////////////////////////////////////////
+
+ 
