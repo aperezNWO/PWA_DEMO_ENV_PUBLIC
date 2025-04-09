@@ -10,7 +10,6 @@ import { ConfigService                                           } from '../Conf
 })
 //
 export class BackendService implements OnInit {
-
     ////////////////////////////////////////////////////////////////  
     // CAMPOS
     ////////////////////////////////////////////////////////////////  
@@ -33,6 +32,11 @@ export class BackendService implements OnInit {
       })
       ,'responseType' : 'text' as 'json'
     }; 
+    public get _baseUrlTensorFlow(): string
+    {
+       return this.__baseUrlTensorFlow;
+    }
+
     //
     public get _baseUrlNetCore(): string {
       //
@@ -79,11 +83,12 @@ export class BackendService implements OnInit {
       return this.__baseUrlDjangoPython;
     }
       //
+    protected __baseUrlTensorFlow     : string = '';
     protected __baseUrlNetCore        : string = '';
     protected __baseUrlNodeJs         : string = '';
     protected __baseUrlNodeJsOcr      : string = '';
     protected __baserUrlSpringBoot    : string = '';
-    protected __baseUrlDjangoPython    : string = '';
+    protected __baseUrlDjangoPython   : string = '';
     //
     ////////////////////////////////////////////////////////////////  
     // METODOS - [EVENT HANDLERS]
@@ -98,6 +103,7 @@ export class BackendService implements OnInit {
       //
       ////console.log("Calling MCSDService constructor...");
       //
+      this.__baseUrlTensorFlow   = this._configService.getConfigValue('baseUrlTensorFlow');
       this.__baseUrlNetCore      = this._configService.getConfigValue('baseUrlNetCore');
       this.__baseUrlNodeJs       = this._configService.getConfigValue('baseUrlNodeJs');
       this.__baseUrlNodeJsOcr    = this._configService.getConfigValue('baseUrlNodeJsOcr');
@@ -116,6 +122,14 @@ export class BackendService implements OnInit {
     {
       //
       let p_url         : string  = `${this._baseUrlNetCore}demos/_GetAppVersion`;
+      //
+      let appVersion    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
+      //
+      return appVersion;
+    }
+    _GetTensorFlowVersion(): Observable<string> {
+      //
+      let p_url         : string  = `${this._configService.getConfigValue('baseUrlTensorFlow')}GetTensorFlowVersion`;
       //
       let appVersion    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //

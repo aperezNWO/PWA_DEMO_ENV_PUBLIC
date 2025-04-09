@@ -474,6 +474,8 @@
 
   --  [_]  ¿Can you please show me a code exaple of creating a dll using Embarcadero C++ builder and tensorflow OCR capabilities ?
  
+           --  [_] https://www.tensorflow.org/install/lang_c?spm=a2ty_o01.29997173.0.0.3f3dc921kZ4Z3g&hl=es-419
+
  ////////////////////////////////////////////////////////////////////////////////
 
  

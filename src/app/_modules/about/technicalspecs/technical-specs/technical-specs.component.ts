@@ -22,8 +22,11 @@ export class TechnicalSpecsComponent extends BaseComponent {
     _appVersion        : string | undefined;
     _runtimeVersion    : string = VERSION.full;
     _webApiAppVersion  : string = "";
+    _tensorFlowVersion : string = "";
     //
     guid = signal<string>(''); // Signal to hold the GUID
+    //
+    private __baseUrlTensoFlow: string;
     //
     public get _baseUrlNetCore(): string {
       //
@@ -74,6 +77,7 @@ export class TechnicalSpecsComponent extends BaseComponent {
       ////
       this._appBrand                = this.configService.getConfigValue('appBrand');
       this._appVersion              = this.configService.getConfigValue('appVersion');
+      this.__baseUrlTensoFlow       = this.configService.getConfigValue('baseUrlNetCore');
       this.__baseUrlNetCore         = this.configService.getConfigValue('baseUrlNetCore');
       this.__baseUrlNodeJs          = this.configService.getConfigValue('baseUrlNodeJs');
       this.__baseUrlNodeJsChat      = this.configService.getConfigValue('baseUrlNodeJsChat');
@@ -81,6 +85,8 @@ export class TechnicalSpecsComponent extends BaseComponent {
       this.__baseUrlSprinbBootJava  = this.configService.getConfigValue('baseUrlSpringBootJava');
       //
       this._GetWebApiAppVersion();
+      //
+      this._GetTensorFlowVersion();
     }
     //
     ngOnInit(): void {
@@ -133,6 +139,35 @@ export class TechnicalSpecsComponent extends BaseComponent {
         console.error('Failed to copy text: ', error);
         alert('Failed to copy text.');
       }
+    }
+    ///////////////////////////////////////////////////////////  
+    private _GetTensorFlowVersion() {
+      //
+      let tensorFlowVersionObservable : Observable<string> = this.backendService._GetTensorFlowVersion();
+      //
+      const tensorFlowVersionObserver = {
+        next: (jsondata: string)     => { 
+          //
+          //console.log('_GetAppVersion - (return): ' + jsondata);
+          //
+          this._tensorFlowVersion = jsondata;
+          //
+          //console.log(this.pageTitle + "- [webApiVersion] - " + this._webApiAppVersion);
+        },
+        error           : (err: Error)      => {
+
+          //
+          console.error('_GetAppVersion- (ERROR) : ' + JSON.stringify(err.message));
+        },
+        complete        : ()                => {
+          //
+          //console.log('_GetAppVersion -  (COMPLETE)');
+        },
+      };
+      //
+      tensorFlowVersionObservable.subscribe(tensorFlowVersionObserver);
+      //
+      return this._tensorFlowVersion;
     }
     ///////////////////////////////////////////////////////////  
 }
