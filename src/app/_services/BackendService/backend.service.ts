@@ -129,7 +129,7 @@ export class BackendService implements OnInit {
     }
     _GetTensorFlowVersion(): Observable<string> {
       //
-      let p_url         : string  = `${this._configService.getConfigValue('baseUrlTensorFlow')}GetTensorFlowVersion`;
+      let p_url         : string  = `${this._configService.getConfigValue('baseUrlTensorFlow')}GetTensorFlowVersion_CPP`;
       //
       let appVersion    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //
