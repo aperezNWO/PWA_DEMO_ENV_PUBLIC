@@ -108,11 +108,6 @@ export class BackendService implements OnInit {
       this.__baseUrlNodeJs       = this._configService.getConfigValue('baseUrlNodeJs');
       this.__baseUrlNodeJsOcr    = this._configService.getConfigValue('baseUrlNodeJsOcr');
       this.__baserUrlSpringBoot  = this._configService.getConfigValue('baseUrlSpringBootJava');
-      //
-      ////console.log("baseUrlNetCore         : " + this.__baseUrlNetCore);
-      ////console.log("baseUrlNodeJs          : " + this.__baseUrlNodeJs);
-      ////console.log("baseUrlNodeJsOcr       : " + this.__baseUrlNodeJsOcr);
-      ////console.log("baseUrlSpringBootJava  : " + this.__baserUrlSpringBoot);
     }
     ////////////////////////////////////////////////////////////////  
     // METODOS - [COMUNES]
@@ -129,7 +124,7 @@ export class BackendService implements OnInit {
     }
     _GetTensorFlowVersion(): Observable<string> {
       //
-      let p_url         : string  = `${this._configService.getConfigValue('baseUrlTensorFlow')}GetTensorFlowVersion_CPP`;
+      let p_url         : string  = `${this._configService.getConfigValue('baseUrlTensorFlow')}GetTensorFlowVersion`;
       //
       let appVersion    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //
