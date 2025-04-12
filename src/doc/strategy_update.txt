@@ -482,4 +482,21 @@
 
  ////////////////////////////////////////////////////////////////////////////////
 
+  --  [_]  Tensorflow Update Log.
+
+         --  [_]  Somee admits x32 only arch. for c and c++.
+
+         --  [_]  TryAsp.net admits both x32 and x64.
+
+         --  [_]  TryAsp.net doen't admit c++ compiled code.
+
+         --  [_]  TryAsp.net admit c generated code for tensorflow x64.
+
+         --  [_]  TryAsp.net c genrerated Tensorflow code expects *.PB model file.
+       
+         --  [_]  *.pb model files are generated mostly on Python.
+
+
+ ////////////////////////////////////////////////////////////////////////////////
+
  
