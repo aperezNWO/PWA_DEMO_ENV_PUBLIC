@@ -488,7 +488,9 @@
 
          --  [_]  TryAsp.net admits both x32 and x64.
 
-         --  [_]  TryAsp.net doen't admit c++ compiled code.
+         --  [_]  TryAsp.net admit c++ compiled code using basic c++ libraries.
+
+         --  [_]  TryAsp.net doen't admit c++ compiled code including tensorflow.
 
          --  [_]  TryAsp.net admit c generated code for tensorflow x64.
 
