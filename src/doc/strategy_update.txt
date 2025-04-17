@@ -479,7 +479,13 @@
   --  [_]  Get backend languages version.
   
   --  [_]  Split servivces for languages.
+    
+  --  [_]  Babilon.js.
 
+  --  [_] Kruskal / Prim algos.
+
+ ////////////////////////////////////////////////////////////////////////////////
+ // TENSORFLOW / TESSERACT      
  ////////////////////////////////////////////////////////////////////////////////
 
   --  [_]  Tensorflow Update Log.
