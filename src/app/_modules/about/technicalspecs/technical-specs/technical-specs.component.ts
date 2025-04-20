@@ -22,11 +22,9 @@ export class TechnicalSpecsComponent extends BaseComponent {
     _appVersion        : string | undefined;
     _runtimeVersion    : string = VERSION.full;
     _webApiAppVersion  : string = "";
-    _tensorFlowVersion : string = "";
+    _tesseractVersion  : string = "";
     //
     guid = signal<string>(''); // Signal to hold the GUID
-    //
-    private __baseUrlTensoFlow: string;
     //
     public get _baseUrlNetCore(): string {
       //
@@ -52,11 +50,17 @@ export class TechnicalSpecsComponent extends BaseComponent {
       return this.__baseUrlSprinbBootJava;
     }
     //
+    public get _baseUrlTensorFlow(): string
+    {
+      return this.__baseUrlTensorFlow;
+    }
+    //
     protected __baseUrlNetCore        : string = '';
     protected __baseUrlNodeJs         : string = '';
     protected __baseUrlNodeJsChat     : string = '';
     protected __baseUrlNodeJsOcr      : string = '';
     protected __baseUrlSprinbBootJava : string = '';
+    protected __baseUrlTensorFlow     : string = '';
     ////////////////////////////////////////////////////////////////  
     // [EVENT HANDLERS]
     ////////////////////////////////////////////////////////////////  
@@ -77,7 +81,7 @@ export class TechnicalSpecsComponent extends BaseComponent {
       ////
       this._appBrand                = this.configService.getConfigValue('appBrand');
       this._appVersion              = this.configService.getConfigValue('appVersion');
-      this.__baseUrlTensoFlow       = this.configService.getConfigValue('baseUrlNetCore');
+      this.__baseUrlTensorFlow      = this.configService.getConfigValue('baseUrlTensorFlow');
       this.__baseUrlNetCore         = this.configService.getConfigValue('baseUrlNetCore');
       this.__baseUrlNodeJs          = this.configService.getConfigValue('baseUrlNodeJs');
       this.__baseUrlNodeJsChat      = this.configService.getConfigValue('baseUrlNodeJsChat');
@@ -86,7 +90,7 @@ export class TechnicalSpecsComponent extends BaseComponent {
       //
       this._GetWebApiAppVersion();
       //
-      this._GetTensorFlowVersion();
+      this._GetTesseractVersion();
     }
     //
     ngOnInit(): void {
@@ -141,16 +145,16 @@ export class TechnicalSpecsComponent extends BaseComponent {
       }
     }
     ///////////////////////////////////////////////////////////  
-    private _GetTensorFlowVersion() {
+    private _GetTesseractVersion() {
       //
-      let tensorFlowVersionObservable : Observable<string> = this.backendService._GetTensorFlowVersion();
+      let tensorFlowVersionObservable : Observable<string> = this.backendService._GetTesseractVersion();
       //
       const tensorFlowVersionObserver = {
         next: (jsondata: string)     => { 
           //
           //console.log('_GetAppVersion - (return): ' + jsondata);
           //
-          this._tensorFlowVersion = jsondata;
+          this._tesseractVersion = jsondata;
           //
           //console.log(this.pageTitle + "- [webApiVersion] - " + this._webApiAppVersion);
         },
@@ -167,7 +171,7 @@ export class TechnicalSpecsComponent extends BaseComponent {
       //
       tensorFlowVersionObservable.subscribe(tensorFlowVersionObserver);
       //
-      return this._tensorFlowVersion;
+      return this._tesseractVersion;
     }
     ///////////////////////////////////////////////////////////  
 }
