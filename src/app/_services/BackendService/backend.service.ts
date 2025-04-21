@@ -32,9 +32,9 @@ export class BackendService implements OnInit {
       })
       ,'responseType' : 'text' as 'json'
     }; 
-    public get _baseUrlTensorFlow(): string
+    public get _baseUrlNetCoreCPPEntry(): string
     {
-       return this.__baseUrlTensorFlow;
+       return this.__baseUrlNetCoreCPPEntry;
     }
 
     //
@@ -83,7 +83,7 @@ export class BackendService implements OnInit {
       return this.__baseUrlDjangoPython;
     }
       //
-    protected __baseUrlTensorFlow     : string = '';
+    protected __baseUrlNetCoreCPPEntry     : string = '';
     protected __baseUrlNetCore        : string = '';
     protected __baseUrlNodeJs         : string = '';
     protected __baseUrlNodeJsOcr      : string = '';
@@ -103,11 +103,11 @@ export class BackendService implements OnInit {
       //
       ////console.log("Calling MCSDService constructor...");
       //
-      this.__baseUrlTensorFlow   = this._configService.getConfigValue('baseUrlTensorFlow');
-      this.__baseUrlNetCore      = this._configService.getConfigValue('baseUrlNetCore');
-      this.__baseUrlNodeJs       = this._configService.getConfigValue('baseUrlNodeJs');
-      this.__baseUrlNodeJsOcr    = this._configService.getConfigValue('baseUrlNodeJsOcr');
-      this.__baserUrlSpringBoot  = this._configService.getConfigValue('baseUrlSpringBootJava');
+      this.__baseUrlNetCoreCPPEntry   = this._configService.getConfigValue('baseUrlNetCoreCPPEntry');
+      this.__baseUrlNetCore           = this._configService.getConfigValue('baseUrlNetCore');
+      this.__baseUrlNodeJs            = this._configService.getConfigValue('baseUrlNodeJs');
+      this.__baseUrlNodeJsOcr         = this._configService.getConfigValue('baseUrlNodeJsOcr');
+      this.__baserUrlSpringBoot       = this._configService.getConfigValue('baseUrlSpringBootJava');
     }
     ////////////////////////////////////////////////////////////////  
     // METODOS - [COMUNES]
@@ -124,7 +124,7 @@ export class BackendService implements OnInit {
     }
     _GetTesseractVersion(): Observable<string> {
       //
-      let p_url         : string  = `${this._configService.getConfigValue('baseUrlTensorFlow')}GetTesseractVersion`;
+      let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}GetTesseractVersion`;
       //
       let appVersion    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //

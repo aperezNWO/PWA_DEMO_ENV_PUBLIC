@@ -85,19 +85,7 @@ export class ComputerVisionComponent extends BaseComponent implements AfterViewI
     //
     this.startCamera();
   }
-  /*
-    //  
-    loadOpenCv() {
-      const script = document.createElement('script');
-      script.src = 'assets/opencv.js'; // Path to your local opencv.js
-      script.async = true;
-      script.onload = () => {
-        //console.log('OpenCV.js loaded');
-      };
-      document.body.appendChild(script);
-    }
-  */
-
+  //
   ngAfterViewInit() {
     //-----------------------------------------------------------------------------
     this.__sourceList = new Array();
@@ -107,9 +95,8 @@ export class ComputerVisionComponent extends BaseComponent implements AfterViewI
     //-----------------------------------------------------------------------------
     this.__engineList = new Array();
     this.__engineList.push( new _languageName(0,"(SELECCIONE OPCION..)"                    ,false,""));        
-    this.__engineList.push( new _languageName(1,"(CV / OPENCV - javascript)"               ,true, ""));        
-    //this.__engineList.push( new _languageName(2,"(COMPUTER VISION / OPENCV - javascript) "   ,false));        
-    //this.__sourceList.push( new _languageName(2,"(COMPUTER VISION / TENSORFLOW)"             ,false));        
+    this.__engineList.push( new _languageName(1,"(OPENCV / javascript)"                    ,true, ""));        
+    //this.__engineList.push( new _languageName(2,"(OPENCV / C++) "   ,false));        
     //-----------------------------------------------------------------------------
   }
   //

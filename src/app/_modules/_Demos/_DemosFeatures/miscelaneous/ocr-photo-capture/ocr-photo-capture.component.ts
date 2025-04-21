@@ -4,10 +4,10 @@ import { _languageName            } from 'src/app/_models/entity.model';
 import { BaseComponent            } from 'src/app/_components/base/base.component';
 import { NgxSignaturePadComponent } from '@eve-sama/ngx-signature-pad/lib/ngx-signature-pad.component';
 import { NgxSignatureOptions      } from '@eve-sama/ngx-signature-pad/lib/types/ngx-signature-pad';
-import { ActivatedRoute } from '@angular/router';
-import { SpeechService  } from 'src/app/_services/speechService/speech.service';
-import { ConfigService  } from 'src/app/_services/ConfigService/config.service';
-import { PAGE_MISCELANEOUS_OCR } from 'src/app/_models/common';
+import { ActivatedRoute           } from '@angular/router';
+import { SpeechService            } from 'src/app/_services/speechService/speech.service';
+import { ConfigService            } from 'src/app/_services/ConfigService/config.service';
+import { PAGE_MISCELANEOUS_OCR    } from 'src/app/_models/common';
 
 @Component({
   selector: 'app-ocr-photo-capture',
@@ -44,7 +44,7 @@ export class OcrPhotoCaptureComponent extends BaseComponent implements AfterView
   //
   capturedImage           : string | null = null;
   tituloListadOrigen      : string | null = "[ORIGEN CAPTURA]";
-  titleEngineList         : string | null = "[ENGINES]";;
+  titleEngineList         : string | null = "[OCR ENGINES]";;
   hiddenCanvasContainer   : boolean = false;
   hiddenCameraContainer   : boolean = false;
   cameraContainerHidden   : boolean = false;  
@@ -87,9 +87,8 @@ export class OcrPhotoCaptureComponent extends BaseComponent implements AfterView
     //-----------------------------------------------------------------------------
     this.__engineList = new Array();
     this.__engineList.push( new _languageName(0,"(SELECCIONE OPCION..)"                        ,false, ""));        
-    this.__engineList.push( new _languageName(1,"(OCR / TESSERACT - javascript)"               ,true,  ""));        
-    //this.__engineList.push( new _languageName(2,"(COMPUTER VISION / OPENCV - javascript) "   ,false));        
-    //this.__sourceList.push( new _languageName(2,"(COMPUTER VISION / TENSORFLOW)"  ,false));        
+    this.__engineList.push( new _languageName(1,"(TESSERACT / javascript)"                     ,true,  ""));        
+    //this.__engineList.push( new _languageName(2,"(TESSERACT / C++) "   ,false));        
     //-----------------------------------------------------------------------------
   }
   //

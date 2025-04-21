@@ -93,15 +93,11 @@
 
        -- [_] https://opencv.org/
 
-       -- [_] https://www.tensorflow.org/?hl=es-419
-
--       -- [_] COMPUTER VISION.
-
         -- [_] OPEN CV / JAVASCRIPT.   
 
         -- [_] OPEN CV / c++ builder.
 
-        -- [_] TENSORFLOW / JAVASCRIPT.   
+        -- [_] TESSERACT / JAVASCRIPT / C++ .   
 
 -- [_] MACHINE LEARNING.
 
@@ -484,8 +480,6 @@
 
   --  [_]  Kruskal / Prim algos.
 
-  --  [_]  Unify C++ Backend / DLLs.
-
  ////////////////////////////////////////////////////////////////////////////////
  // TENSORFLOW
  ////////////////////////////////////////////////////////////////////////////////
@@ -510,8 +504,46 @@
  //  TESSERACT
  ////////////////////////////////////////////////////////////////////////////////
 
-    --  [_] Get Tesseract Version from C++ Builder Wrapper dll / asp.net core end pont.
+    --  [x] Get Tesseract Version from C++ Builder Wrapper dll / asp.net core end pont.
+
+    --  [_] Angular Integration.
     
+ ////////////////////////////////////////////////////////////////////////////////
+ //  OPEN CV 
+ ////////////////////////////////////////////////////////////////////////////////
+
+    --  [_] C++ SAMPLE.
+
+    --  [_] Angular Integration.
+       
+    --  [_] Reference FIX (Tesseract/Tensorflow/CPP BACKEND).
+ 
+ ////////////////////////////////////////////////////////////////////////////////
+ //  BACKEND STRATEGY
+ ////////////////////////////////////////////////////////////////////////////////
+
+
+   --  [_]  Unify C++ Backend / DLLs.
+
+                --  [_]  CPP_CBUILDER_ALGORITHM.
+
+                --  [_]  CPP_CBUILDER_TESSERACT.
+                
+                --  [_]  Split Tesseract / Tensorflow.
+
+                        --  [_]  CPP_GCC_TESSERACT.
+
+                        --  [_]  CPP_GCC_TENSORFLOW.
+    
+   --  [_]  Unify C++ Backend / ASP.NET CORE.
+
+                --  [_]  ASP_NET_CORE_ALGORITHM.
+
+                --  [_]  ASP_NET_CORE_CPP_ENTRY.
+
+                --  [_]  ASP_NET_CORE_EF_SAMPLE.
+                
+
  ////////////////////////////////////////////////////////////////////////////////
 
  
