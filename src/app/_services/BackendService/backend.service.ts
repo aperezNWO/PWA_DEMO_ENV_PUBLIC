@@ -124,7 +124,7 @@ export class BackendService implements OnInit {
     }
     _GetTesseractVersion(): Observable<string> {
       //
-      let p_url         : string  = `${this._configService.getConfigValue('baseUrlTensorFlow')}GetTesseractVersionWrapper`;
+      let p_url         : string  = `${this._configService.getConfigValue('baseUrlTensorFlow')}GetTesseractVersion`;
       //
       let appVersion    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //
