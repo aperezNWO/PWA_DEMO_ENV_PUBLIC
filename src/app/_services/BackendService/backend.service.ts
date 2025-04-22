@@ -410,7 +410,7 @@ export class BackendService implements OnInit {
     //
     getRandomVertexCpp(vertexSize : Number,sourcePoint : Number): Observable<string> {
       //
-      let p_url    = `${this._baseUrlNetCore}demos/GenerateRandomVertex_CPP?p_vertexSize=${vertexSize}&p_sourcePoint=${sourcePoint}`;
+      let p_url    = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}GenerateRandomVertex_CPP?p_vertexSize=${vertexSize}&p_sourcePoint=${sourcePoint}`;
       //
       let dijkstraData : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //
@@ -452,7 +452,7 @@ export class BackendService implements OnInit {
     getSort_CPP(p_sortAlgoritm: number, p_unsortedList: string):Observable<string>
     {
       //
-      let p_url    = `${this._baseUrlNetCore}demos/_GetSort_CPP?p_sortAlgoritm=${p_sortAlgoritm}&p_unsortedList=${p_unsortedList}`;
+      let p_url    = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}_GetSort_CPP?p_sortAlgoritm=${p_sortAlgoritm}&p_unsortedList=${p_unsortedList}`;
       //
       let newSortData : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //
@@ -513,7 +513,7 @@ export class BackendService implements OnInit {
     public _RegExEval_CPP(tagSearchIndex: number, textSearchValue: string): Observable<string>
     {
       //
-      let p_url    : string = `${this._baseUrlNetCore}demos/_RegExEval_CPP?p_tagSearch=${tagSearchIndex}&p_textSearch=${textSearchValue}`;
+      let p_url    : string = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}_RegExEval_CPP?p_tagSearch=${tagSearchIndex}&p_textSearch=${textSearchValue}`;
       //
       let regExData : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //
@@ -566,20 +566,20 @@ export class BackendService implements OnInit {
       return sudokuGenerated;
     } 
     //
-    _GetSudoku(): Observable<string>
+    _GetSudoku_CPP(): Observable<string>
     {
       // 
-      let p_url              : string  = `${this._baseUrlNetCore}Demos/Sudoku_Generate_CPP`;
+      let p_url              : string  =  `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}Sudoku_Generate_CPP`;
       //
       let sudokuGenerated    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //
       return sudokuGenerated;
     };
    //
-   _SolveSudoku(p_matrix : string): Observable<string>
+   _SolveSudoku_CPP(p_matrix : string): Observable<string>
    {
      // 
-     let p_url               : string  = `${this._baseUrlNetCore}Demos/Sudoku_Solve_CPP?p_matrix=${p_matrix}`
+     let p_url               : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}Sudoku_Solve_CPP?p_matrix=${p_matrix}`
      //
      let sudokuSolved        : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
      //

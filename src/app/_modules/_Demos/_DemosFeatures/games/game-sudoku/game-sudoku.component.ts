@@ -140,7 +140,7 @@ export class SudokuComponent extends BaseComponent implements OnInit, AfterViewI
         //
         switch (selectedIndex) {
           case 1: // c++
-            generatedSudoku = this.algorithmService._GetSudoku();
+            generatedSudoku = this.algorithmService._GetSudoku_CPP();
             break;
           case 2: // Typescript
             generatedSudoku = this.algorithmService._GetSudoku_NodeJS();
@@ -328,7 +328,7 @@ export class SudokuComponent extends BaseComponent implements OnInit, AfterViewI
     //
     switch (selectedIndex) {
       case 1: // c++
-        solveSudoku = this.algorithmService._SolveSudoku(this._sudokuGenerated);
+        solveSudoku = this.algorithmService._SolveSudoku_CPP(this._sudokuGenerated);
         break;
       case 2: // Typescript
         solveSudoku = this.algorithmService._SolveSudoku_NodeJS(this._sudokuGenerated);
