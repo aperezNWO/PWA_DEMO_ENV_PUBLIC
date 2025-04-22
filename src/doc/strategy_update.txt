@@ -6,6 +6,13 @@
 
 -- [x] button copy to clipborad guid.
 
+--  [_]  Disable C++ BUILDER.
+
+        --  [_]  uninstall.
+        
+        --  [_]  Compatible Toolchain.
+   
+
 -- [_] book / resources.
 
         -- [_] w3c.
@@ -522,43 +529,38 @@
  //  BACKEND STRATEGY
  ////////////////////////////////////////////////////////////////////////////////
 
+   --  [x]  Unify C++ Backend / ASP.NET CORE.
 
+                --  [x]  ASP_NET_CORE_ALGORITHM.
+
+                --  [x]  ASP_NET_CORE_CPP_ENTRY.
+
+                --  [x]  ASP_NET_CORE_EF_SAMPLE.
+                
    --  [_]  Unify C++ Backend / DLLs.
 
-                --  [_]  CPP_CBUILDER_ALGORITHM.
+                --  [x]  CPP_CBUILDER_ALGORITHM.
 
-                --  [_]  CPP_CBUILDER_TESSERACT.
+                --  [x]  CPP_CBUILDER_TESSERACT.
                 
-                --  [_]  Split Tesseract / Tensorflow.
+                --  [x]  Split Tesseract / Tensorflow.
 
-                        --  [_]  CPP_GCC_TESSERACT.
+                --  [x]  CPP_GCC_TESSERACT.
 
-                                
-                                --  [_]  command line and toolchain on header.
-        
+                        --  [x]  command line and toolchain on header ->  -> C:\msys64\ucrt64\bin.
 
-                        --  [-_]  CPP_GCC_TENSORFLOW.
+                --  [x]  CPP_GCC_ALGORITHM.
 
-                        
-                                --  [_]  command line and toolchain on header.
-        
-    
-   --  [_]  Unify C++ Backend / ASP.NET CORE.
+                        --  [x]  command line and toolchain on header -> C:\msys64\ucrt64\bin.
 
-                --  [_]  ASP_NET_CORE_ALGORITHM.
+                --  [x]  CPP_GCC_TENSORFLOW.
 
-                --  [_]  ASP_NET_CORE_CPP_ENTRY.
-
-                --  [_]  ASP_NET_CORE_EF_SAMPLE.
                 
-   --  [_]  Disable C++ BUILDER.
+                        --  [X]  command line and toolchain on header ->  TOOLCHAIN : C:\msys64\ucrt64\bin.
 
-        --  [_]  Compatible Toolchain.
-   
-        --  [_]  CPP_GCC_ALGORITHM.
 
-                --  [_]  command line and toolchain on header.
-        
+ ////////////////////////////////////////////////////////////////////////////////
+      
    --  [_]  FIREBASE STUDIO TEST 
 
         --  [_]  PWA_DEMO_ENV_PUBLIC   -> SHOW TO PUBLIC
