@@ -533,7 +533,15 @@
 
                         --  [_]  CPP_GCC_TESSERACT.
 
-                        --  [_]  CPP_GCC_TENSORFLOW.
+                                
+                                --  [_]  command line and toolchain on header.
+        
+
+                        --  [-_]  CPP_GCC_TENSORFLOW.
+
+                        
+                                --  [_]  command line and toolchain on header.
+        
     
    --  [_]  Unify C++ Backend / ASP.NET CORE.
 
@@ -543,6 +551,20 @@
 
                 --  [_]  ASP_NET_CORE_EF_SAMPLE.
                 
+   --  [_]  Disable C++ BUILDER.
+
+        --  [_]  Compatible Toolchain.
+   
+        --  [_]  CPP_GCC_ALGORITHM.
+
+                --  [_]  command line and toolchain on header.
+        
+   --  [_]  FIREBASE STUDIO TEST 
+
+        --  [_]  PWA_DEMO_ENV_PUBLIC   -> SHOW TO PUBLIC
+
+        --  [_]  PWA_DEMO_ENV_DEV      -> TENSORFLOW / DATA SCIENCE 
+
 
  ////////////////////////////////////////////////////////////////////////////////
 
