@@ -531,9 +531,15 @@
 
    --  [x]  Unify C++ Backend / ASP.NET CORE.
 
-                --  [x]  ASP_NET_CORE_ALGORITHM.
+                --  [x]  ASP_NET_CORE_CSHARP_DEMO.
+
+                          --  [_]  REMOVE C++ DLL FUNCIONALITY.
 
                 --  [x]  ASP_NET_CORE_CPP_ENTRY.
+
+                          --  [_]  SWAGGER.
+
+                          --  [_]  REDUCE CODE.
 
                 --  [x]  ASP_NET_CORE_EF_SAMPLE.
                 
@@ -549,15 +555,27 @@
 
                         --  [x]  command line and toolchain on header ->  -> C:\msys64\ucrt64\bin.
 
+                        --  [_]  dist files.
+
                 --  [x]  CPP_GCC_ALGORITHM.
 
                         --  [x]  command line and toolchain on header -> C:\msys64\ucrt64\bin.
 
+                        --  [_]  dist files.
+
                 --  [x]  CPP_GCC_TENSORFLOW.
 
-                
                         --  [X]  command line and toolchain on header ->  TOOLCHAIN : C:\msys64\ucrt64\bin.
 
+                        --  [_]  dist files.
+
+        --  [_]  REFERENCES : 
+        
+                --  [_]  c++ library        -> update version
+
+                --  [_]  ASP.NET end point  -> update version
+
+        --  [_]  C++ CURRICULUM            
 
  ////////////////////////////////////////////////////////////////////////////////
       
