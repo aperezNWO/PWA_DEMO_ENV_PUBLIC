@@ -138,6 +138,15 @@ export class BackendService implements OnInit {
       //
       return appVersion;
     }
+    //
+    _GetCppDLLVersion(): Observable<string> {
+      //
+      let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}_GetDLLVersion`;
+      //
+      let appVersion    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
+      //
+      return appVersion;
+    }
     ////////////////////////////////////////////////////////////////  
     // METODOS - [GENERAR ARCHIVO CSV]
     ////////////////////////////////////////////////////////////////  

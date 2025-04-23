@@ -24,6 +24,7 @@ export class TechnicalSpecsComponent extends BaseComponent {
     _webApiAppVersion     : string = "";
     _tesseractVersion     : string = "";
     _ASPNETCoreCppVersion : string = "";
+    _CppDLLVersion        : string = "";
     //
     guid = signal<string>(''); // Signal to hold the GUID
 
@@ -95,6 +96,8 @@ export class TechnicalSpecsComponent extends BaseComponent {
       this._GetTesseractVersion();
       //
       this._GetASPNETCoreCppVersion();
+      //
+      this._GetCppDLLVersion();
     }
     //
     ngOnInit(): void {
@@ -194,7 +197,36 @@ export class TechnicalSpecsComponent extends BaseComponent {
         error           : (err: Error)      => {
 
           //
-          console.error('_GetAppVersion- (ERROR) : ' + JSON.stringify(err.message));
+          console.error('_GetASPNETCoreCppVersion- (ERROR) : ' + JSON.stringify(err.message));
+        },
+        complete        : ()                => {
+          //
+          //console.log('_GetAppVersion -  (COMPLETE)');
+        },
+      };
+      //
+      cppBackendObservable.subscribe(cppBackendObserver);
+      //
+      return this._tesseractVersion;
+    }
+    //
+    private _GetCppDLLVersion() {
+      //
+      let cppBackendObservable : Observable<string> = this.backendService._GetCppDLLVersion();
+      //
+      const cppBackendObserver       = {
+        next: (jsondata: string)     => { 
+          //
+          //console.log('_GetAppVersion - (return): ' + jsondata);
+          //
+          this._CppDLLVersion = jsondata;
+          //
+          //console.log(this.pageTitle + "- [webApiVersion] - " + this._webApiAppVersion);
+        },
+        error           : (err: Error)      => {
+
+          //
+          console.error('_GetCppDLLVersion- (ERROR) : ' + JSON.stringify(err.message));
         },
         complete        : ()                => {
           //
