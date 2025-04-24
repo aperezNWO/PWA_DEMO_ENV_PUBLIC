@@ -1,7 +1,7 @@
 {
     "appBrand"                : "[ANGULAR DEMO]",
     "appEnv"                  : "[ENV_PUBLIC]",
-    "appVersion"              : "2.0.8",
+    "appVersion"              : "2.0.9",
     "baseUrlNetCoreCPPEntry"  : "https://tensorflownetcore64.tryasp.net/",
     "baseUrlNetCore"          : "https://angularwebapidemo.somee.com/",
     "baseUrlNodeJs_"          : "http://localhost:8080/",
