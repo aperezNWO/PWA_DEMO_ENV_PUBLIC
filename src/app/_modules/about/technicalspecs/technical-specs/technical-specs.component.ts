@@ -21,10 +21,10 @@ export class TechnicalSpecsComponent extends BaseComponent {
     _appBrand             : string | undefined;
     _appVersion           : string | undefined;
     _runtimeVersion       : string = VERSION.full;
-    _webApiAppVersion     : string = "";
-    _tesseractVersion     : string = "";
-    _ASPNETCoreCppVersion : string = "";
-    _CppDLLVersion        : string = "";
+    _webApiAppVersion     : string = "(..cargando..)";
+    _tesseractAppVersion  : string = "(..cargando..)";
+    _ASPNETCoreCppVersion : string = "(..cargando..)";
+    _AlgorithmAppVersion  : string = "(..cargando..)";
     //
     guid = signal<string>(''); // Signal to hold the GUID
 
@@ -93,11 +93,11 @@ export class TechnicalSpecsComponent extends BaseComponent {
       //
       this._GetWebApiAppVersion();
       //
-      this._GetTesseractVersion();
+      this._GetTesseractAppVersion();
       //
       this._GetASPNETCoreCppVersion();
       //
-      this._GetCppDLLVersion();
+      this._GetAlgorithmAppVersion();
     }
     //
     ngOnInit(): void {
@@ -152,16 +152,16 @@ export class TechnicalSpecsComponent extends BaseComponent {
       }
     }
     ///////////////////////////////////////////////////////////  
-    private _GetTesseractVersion() {
+    private _GetTesseractAppVersion() {
       //
-      let cppBackendObservable : Observable<string> = this.backendService._GetTesseractVersion();
+      let cppBackendObservable : Observable<string> = this.backendService._GetTesseractAppVersion();
       //
       const cppBackendObserver       = {
         next: (jsondata: string)     => { 
           //
           //console.log('_GetAppVersion - (return): ' + jsondata);
           //
-          this._tesseractVersion = jsondata;
+          this._tesseractAppVersion = jsondata;
           //
           //console.log(this.pageTitle + "- [webApiVersion] - " + this._webApiAppVersion);
         },
@@ -178,7 +178,7 @@ export class TechnicalSpecsComponent extends BaseComponent {
       //
       cppBackendObservable.subscribe(cppBackendObserver);
       //
-      return this._tesseractVersion;
+      return this._tesseractAppVersion;
     }
     //
     private _GetASPNETCoreCppVersion() {
@@ -207,19 +207,19 @@ export class TechnicalSpecsComponent extends BaseComponent {
       //
       cppBackendObservable.subscribe(cppBackendObserver);
       //
-      return this._tesseractVersion;
+      return this._tesseractAppVersion;
     }
     //
-    private _GetCppDLLVersion() {
+    private _GetAlgorithmAppVersion() {
       //
-      let cppBackendObservable : Observable<string> = this.backendService._GetCppDLLVersion();
+      let cppBackendObservable : Observable<string> = this.backendService._GetAlgothmAppVersion();
       //
       const cppBackendObserver       = {
         next: (jsondata: string)     => { 
           //
           //console.log('_GetAppVersion - (return): ' + jsondata);
           //
-          this._CppDLLVersion = jsondata;
+          this._AlgorithmAppVersion = jsondata;
           //
           //console.log(this.pageTitle + "- [webApiVersion] - " + this._webApiAppVersion);
         },
@@ -236,7 +236,7 @@ export class TechnicalSpecsComponent extends BaseComponent {
       //
       cppBackendObservable.subscribe(cppBackendObserver);
       //
-      return this._tesseractVersion;
+      return this._tesseractAppVersion;
     }
     ///////////////////////////////////////////////////////////  
 }

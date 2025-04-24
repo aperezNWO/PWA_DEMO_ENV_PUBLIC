@@ -122,9 +122,9 @@ export class BackendService implements OnInit {
       //
       return appVersion;
     }
-    _GetTesseractVersion(): Observable<string> {
+    _GetTesseractAppVersion(): Observable<string> {
       //
-      let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}GetTesseractVersion`;
+      let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}GetTesseractAppVersion`;
       //
       let appVersion    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //
@@ -139,7 +139,7 @@ export class BackendService implements OnInit {
       return appVersion;
     }
     //
-    _GetCppDLLVersion(): Observable<string> {
+    _GetAlgothmAppVersion(): Observable<string> {
       //
       let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}GetDLLVersion`;
       //
