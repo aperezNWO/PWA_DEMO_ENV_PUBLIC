@@ -5,6 +5,7 @@ import { PAGE_CURRICULUM_ANGULAR, PAGE_ID, PAGE_SIZE,SEARCH_TERM } from 'src/app
 import { ConfigService                                           } from 'src/app/_services/ConfigService/config.service';
 import { _SearchService                                          } from 'src/app/_services/searchService/_search.service';
 import { _SearchComponent                                        } from 'src/app/_components/search/_search.component ';
+import { Router                                                  } from '@angular/router';
 
 @Component({
   selector: 'app-curriculum',
@@ -24,12 +25,20 @@ import { _SearchComponent                                        } from 'src/app
 export class CurriculumComponent extends _SearchComponent  
 {
     //
+    toogleLisCaption: string = "Demos";
+    //
     constructor(
                 public override searchService         : _SearchService,
-    )
+                public          router                : Router,
+    )  
     {
         //
         super(
               searchService);
+    }
+    toggleList() 
+    {
+      //
+      this.router.navigateByUrl('/AngularDemo'); // Redirects to '/target-route'
     }
 } 

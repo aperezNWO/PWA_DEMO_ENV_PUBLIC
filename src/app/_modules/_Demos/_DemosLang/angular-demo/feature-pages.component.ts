@@ -5,6 +5,7 @@ import { PAGE_DEMOS_ANGULAR_JAVASCRIPT, PAGE_ID, PAGE_SIZE,SEARCH_TERM   } from 
 import { ConfigService                                                   } from 'src/app/_services/ConfigService/config.service';
 import { _SearchComponent                                                } from 'src/app/_components/search/_search.component ';
 import { _SearchService                                                  } from 'src/app/_services/searchService/_search.service';
+import { Router                                                          } from '@angular/router';
 @Component({
   selector: 'app-feature-pages',
   templateUrl: './feature-pages.component.html',
@@ -23,12 +24,20 @@ import { _SearchService                                                  } from 
 export class FeaturePagesComponent  extends _SearchComponent  
 {
     //
+    toogleLisCaption: string = "Curriculum";
+    //
     constructor(
                 public override searchService         : _SearchService,
+                public          router                : Router,
     )
     {
         //
         super(searchService);
+    }
+    toggleList() 
+    {
+      //
+      this.router.navigateByUrl('/Curriculum'); // Redirects to '/target-route'
     }
 } 
 
