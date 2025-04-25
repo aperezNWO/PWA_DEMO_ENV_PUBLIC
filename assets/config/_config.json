@@ -1,7 +1,7 @@
 {
     "appBrand"                : "[ANGULAR DEMO]",
     "appEnv"                  : "[ENV_PUBLIC]",
-    "appVersion"              : "2.0.10",
+    "appVersion"              : "2.0.11",
     "baseUrlNetCoreCPPEntry"  : "https://tensorflownetcore64.tryasp.net/",
     "baseUrlNetCore"          : "https://angularwebapidemo.somee.com/",
     "baseUrlNodeJs_"          : "http://localhost:8080/",
@@ -10,7 +10,7 @@
     "baseUrlNodeJsChat"       : "https://q82xnj-3000.csb.app/",
     "baseUrlNodeJsOcr_"       : "http://localhost:3000/upload",
     "baseUrlNodeJsOcr"        : "https://9tvpj7-3000.csb.app/upload",
-    "baseUrlSpringBootJava"   : "https://3rkn5h-8080.csb.app/",
+    "baseUrlSpringBootJava"   : "https://3ghmjk-8080.csb.app/",
     "baseUrlSpringBootJava_"  : "http://localhost:8080/",
     "baseUrlDjangoPython"     : "https://n96q4t-8000.csb.app/"
 }
