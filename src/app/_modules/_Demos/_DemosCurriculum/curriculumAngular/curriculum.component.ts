@@ -25,7 +25,7 @@ import { Router                                                  } from '@angula
 export class CurriculumComponent extends _SearchComponent  
 {
     //
-    toogleLisCaption: string = "Demos";
+    toogleLisCaption: string = "[Ir a Demos...]";
     //
     constructor(
                 public override searchService         : _SearchService,
