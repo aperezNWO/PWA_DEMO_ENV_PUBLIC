@@ -635,9 +635,18 @@ export class BackendService implements OnInit {
     return this.http.request<HttpEvent<any>>(req);
   }
   //
-  uploadBase64Image(base64Image: string) {
+  uploadBase64ImageNodeJs(base64Image: string) {
     //
-    let url = this._configService.getConfigValue('baseUrlNodeJsOcr');
+    let url = `${this._configService.getConfigValue('baseUrlNodeJsOcr')}upload`;
+    //
+    ////console.log('Sending ocr to url : ' + url);
+    //
+    return this.http.post(url, { base64Image });
+  }
+  //
+  uploadBase64ImageCPP(base64Image: string) {
+    //
+    let url = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}upload`;
     //
     ////console.log('Sending ocr to url : ' + url);
     //
