@@ -30,7 +30,6 @@ export class ComputerVisionComponent extends BaseComponent implements AfterViewI
     }
   };
   //
-  public status                : string = '';
   public statusButton          : string = '[save]';
   public statusButtonSaveImage : string = '[save image]';
   public captureButtonStatus   : string = '[capture image]';
@@ -58,7 +57,7 @@ export class ComputerVisionComponent extends BaseComponent implements AfterViewI
   selectedIndex           : number  = 0;
   selectedIndexEngines    : number  = 0;
   ////////////////////////////////////////////////////////////////
-  detectedShapes: string[] = [];
+  detectedShapes          : string[] = [];
   //
   constructor(public          shapeDetectionService   : ShapeDetectionService,
               public override configService           : ConfigService,
@@ -94,13 +93,13 @@ export class ComputerVisionComponent extends BaseComponent implements AfterViewI
     this.__sourceList.push( new _languageName(2,"(DESDE CAMARA)"        ,false ,""));        
     //-----------------------------------------------------------------------------
     this.__engineList = new Array();
-    this.__engineList.push( new _languageName(0,"(SELECCIONE OPCION..)"                    ,false,""));        
-    this.__engineList.push( new _languageName(1,"(OPENCV / javascript)"                    ,true, ""));        
-    //this.__engineList.push( new _languageName(2,"(OPENCV / C++) "   ,false));        
+    this.__engineList.push( new _languageName(0,"(SELECCIONE OPCION..)"                    , false, ""));        
+    this.__engineList.push( new _languageName(1,"(OPENCV / javascript)"                    , true , ""));        
+    this.__engineList.push( new _languageName(2,"(OPENCV / C++)                            ",false, ""));        
     //-----------------------------------------------------------------------------
   }
   //
-  ngOnDestroy(): void {
+  ngOnDestroy(): void {             
     this.stopCamera();
   }
   //
@@ -120,13 +119,15 @@ export class ComputerVisionComponent extends BaseComponent implements AfterViewI
         break;
     }
     //
-    this.status = "";
+    this.status_message.set("");
     //
     //console.log(`Selected Source : ${this.selectedIndex}`);
   }
   selectionChangeEngines() {
     //
     this.selectedIndexEngines = this._engineList.nativeElement.options.selectedIndex;
+    //
+    console.log("selected index " + this.selectedIndexEngines);
   }
   /** The begin event of sign */
   onBeginSign(): void { }
@@ -142,12 +143,34 @@ export class ComputerVisionComponent extends BaseComponent implements AfterViewI
      //   
      switch (this.selectedIndexEngines)
      {
-        case 1 : // CV  / OPENCV
+        case 1 : //opencv / javascrpt
               this.detectShapes(this.signature?.toDataURL() as string);
         break;      
+        case 2 :
+            //
+            this.backendService.uploadBase64ImageCPPOpenCv(this.signature?.toDataURL() as string).subscribe(
+              (response) => {
+                //
+                this.status_message.set(JSON.parse(JSON.stringify(response))['message']);
+                //
+                this.statusButton            = '[save]';
+                this.statusButtonSaveImage   = '[save image]';
+                this.captureButtonStatus     = '[start capture]';
+                this.captureButtonDisabled   = false;
+              },
+              (error) => {
+                //
+                console.error('Error uploading image:', error);
+                //
+                this.status_message.set(error);
+                //
+                this.statusButton = '[save]';
+              }
+            );
+        break;
         default:
           //
-          this.status = "Favor seleccione la opción [ENGINE]";
+          this.status_message.set("Favor seleccione la opción [ENGINE]");
           break;
      }
   }
@@ -158,7 +181,7 @@ export class ComputerVisionComponent extends BaseComponent implements AfterViewI
      // PNG
      this.signature?.clear();
      //
-     this.status = "";
+     this.status_message.set("") ;
      //
      this.statusButton = "[save]";
   }
@@ -216,26 +239,50 @@ export class ComputerVisionComponent extends BaseComponent implements AfterViewI
   }
   //
   saveImage() {
-
        //
        this.selectionChangeEngines();
        //   
        switch (this.selectedIndexEngines)
        {
-          case 1 : // ocr / tesseract
+          case 1 : // OPENCV / JAVASCRIPT
               if (this.capturedImage) {
-                //
-                //this.uploadImage(this.capturedImage)
-                this.detectShapes(this.capturedImage);
-                //
-                this.statusButton            = '[save]';
-                this.statusButtonSaveImage   = '[save image]';
-                this.captureButtonStatus     = '[start capture]';
-                this.captureButtonDisabled   = false;
+                  //
+                  this.detectShapes(this.capturedImage);
+                  //
+                  this.statusButton            = '[save]';
+                  this.statusButtonSaveImage   = '[save image]';
+                  this.captureButtonStatus     = '[start capture]';
+                  this.captureButtonDisabled   = false;
+              }
+          break;
+          case 2 : // OPENCV / C++
+              //
+              if (this.capturedImage)
+              {
+                  //
+                  this.backendService.uploadBase64ImageCPPOpenCv(this.capturedImage).subscribe(
+                    (response) => {
+                      //
+                      this.status_message.set(JSON.parse(JSON.stringify(response))['message']);
+                      //
+                      this.statusButton            = '[save]';
+                      this.statusButtonSaveImage   = '[save image]';
+                      this.captureButtonStatus     = '[start capture]';
+                      this.captureButtonDisabled   = false;
+                    },
+                    (error) => {
+                      //
+                      console.error('Error uploading image:', error);
+                      //
+                      this.status_message.set(error);
+                      //
+                      this.statusButton = '[save]';
+                    }
+                  );
               }
           break;
           default : //
-              this.status = "Favor seleccione la opción [ENGINE]";
+              this.status_message.set("Favor seleccione la opción [ENGINE]") ;
           break;
        }
   }
@@ -263,18 +310,14 @@ export class ComputerVisionComponent extends BaseComponent implements AfterViewI
   ///////////////////////////////////////////////////////
   detectShapes(capturedImage : string): void {
 
-    const img = new Image();
+    const img  = new Image();
     img.onload = () => {
       //console.log("loading  shape detection service ...")
       //
       const shapes        = this.shapeDetectionService.detectShapes(img);
       this.detectedShapes = shapes;
       //
-      this.status     = this.detectedShapes.toString();
-      //
-      const utterance = new SpeechSynthesisUtterance(this.status);
-      speechSynthesis.speak(utterance);
-
+      this.status_message.set(this.detectedShapes.toString()) ;
     };
     img.src = capturedImage;
   }

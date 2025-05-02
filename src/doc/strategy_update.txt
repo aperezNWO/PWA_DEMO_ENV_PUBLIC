@@ -620,14 +620,12 @@
 
         -- [_]  OOP -> inheritance -> ReadConfigFile();
 
-
 -- [_]  TECH SPECS -> BACKEND VERSIONS.
 
--- [x]  C++ DEMOS -> TESSERACT.      
+-- [>]  C++ DEMOS -> TESSERACT.      
+
+        -- [_]  ONLINE TRANSLATION.
 
 -- [>]  C++ DEMOS -> OPEN CV.
-
-
-
 
 ////////////////////////////////////////////////////////////////////////////////

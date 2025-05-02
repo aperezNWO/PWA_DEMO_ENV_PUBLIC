@@ -652,6 +652,15 @@ export class BackendService implements OnInit {
     //
     return this.http.post(url, { base64Image });
   }
+  //
+  uploadBase64ImageCPPOpenCv(base64Image: string) {
+    //
+    let url = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}uploadOpenCv`;
+    //
+    ////console.log('Sending ocr to url : ' + url);
+    //
+    return this.http.post(url, { base64Image });
+  }
   ///////////////////////////////////////////////////////////////
 }
   
