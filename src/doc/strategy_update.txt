@@ -623,6 +623,11 @@
 
 -- [_]  TECH SPECS -> BACKEND VERSIONS.
 
--- [_]  C++ DEMOS -> TESSERACT.      
+-- [x]  C++ DEMOS -> TESSERACT.      
+
+-- [>]  C++ DEMOS -> OPEN CV.
+
+
+
 
 ////////////////////////////////////////////////////////////////////////////////

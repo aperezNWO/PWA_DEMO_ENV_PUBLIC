@@ -3,12 +3,12 @@
 </div>
 <hr/>
 <table>
-    <tr><td>Aplication Name                       </td><td align="left"><b>{{this._appBrand}}</b>                                                            </td></tr>
-    <tr><td>Aplication Version                    </td><td align="left"><b>{{this._appVersion}}</b>                                                          </td></tr>
-    <tr><td>Angular Runtime                       </td><td><b>{{this._runtimeVersion}}</b>                                                                   </td></tr>
-    <tr><td>(Backend ASP.NET / C#  x32)           </td><td><b>.Net Core 5.0  App v[{{this._webApiAppVersion}}]</b>                                           </td></tr>
-    <tr><td>(Backend ASP.NET / C++ x64) Algorithm </td><td><b>.Net Core 8.0  App v[{{this._ASPNETCoreCppVersion}}] - DLL v[{{this._AlgorithmAppVersion}}]</b></td></tr>
-    <tr><td>(Backend ASP.NET / C++ x64) Tesseract </td><td><b>.Net Core 8.0  App v[{{this._ASPNETCoreCppVersion}}] - DLL v[{{this._tesseractAppVersion}}]</b></td></tr>
+    <tr><td>Aplication Name                             </td><td align="left"><b>{{this._appBrand}}</b>                                                            </td></tr>
+    <tr><td>Aplication Version                          </td><td align="left"><b>{{this._appVersion}}</b>                                                          </td></tr>
+    <tr><td>Angular Runtime                             </td><td><b>{{this._runtimeVersion}}</b>                                                                   </td></tr>
+    <tr><td>(Backend ASP.NET Core x32 / C#  )            </td><td><b>v5.0  App v[{{this._webApiAppVersion}}]</b>                                           </td></tr>
+    <tr><td>(Backend ASP.NET Core x64 / DLL C++ - Algorithm)</td><td><b>v8.0  App v[{{this._ASPNETCoreCppVersion}}] / v[{{this._AlgorithmAppVersion}}]</b></td></tr>
+    <tr><td>(Backend ASP.NET Core x64 / DLL C++ - Tesseract)</td><td><b>v8.0  App v[{{this._ASPNETCoreCppVersion}}] / v[{{this._tesseractAppVersion}}]</b></td></tr>
     <tr><td>Random GUID <b><button (click)="this.generateNewGuid()">[GENERATE & COPY]</button></b></td><td><b>{{guid()}}</b>                                 </td></tr>
 </table>
 <hr>
