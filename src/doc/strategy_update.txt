@@ -625,7 +625,9 @@
         -- [x]  FIX REFERENCES.
 
         -- [x]  OOP INHERITANCE THROUGH ALGORITHM.DLL PARENT CLASS 
-                
+
+               -- [_] https://chat.qwen.ai/c/98e5e0ec-6031-46b6-adb0-d7a2ef535c5b
+
                 (A). Read/Write  file parent method.
                 (B). Read Config file parent method.
         
