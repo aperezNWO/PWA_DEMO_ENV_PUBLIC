@@ -75,10 +75,21 @@ export class OcrPhotoCaptureComponent extends BaseComponent implements AfterView
     this.hiddenCameraContainer = true;
     //
     this.startCamera();
+    //
+    this.queryParams();
   }
   //  
-  
   ngAfterViewInit() {
+      //
+  }
+  //
+  ngOnDestroy(): void {
+    this.stopCamera();
+  }
+  //
+  queryParams():void{
+    //
+    this.route.queryParams.subscribe(params => {
     //-----------------------------------------------------------------------------
     this.__sourceList = new Array();
     this.__sourceList.push( new _languageName(0,"(SELECCIONE OPCION..)" ,false,""));        
@@ -86,14 +97,26 @@ export class OcrPhotoCaptureComponent extends BaseComponent implements AfterView
     this.__sourceList.push( new _languageName(2,"(DESDE CAMARA)"        ,false,""));        
     //-----------------------------------------------------------------------------
     this.__engineList = new Array();
-    this.__engineList.push( new _languageName(0,"(SELECCIONE OPCION..)"                        ,false,  ""));        
-    this.__engineList.push( new _languageName(1,"(TESSERACT / javascript)"                     ,true,   ""));        
-    this.__engineList.push( new _languageName(2,"(TESSERACT / C++) "                           ,false,  ""));        
-    //-----------------------------------------------------------------------------
-  }
-  //
-  ngOnDestroy(): void {
-    this.stopCamera();
+    this.__engineList.push( new _languageName(0,"(SELECCIONE OPCION..)"                        ,false,  ""   ));        
+    this.__engineList.push( new _languageName(1,"(TESSERACT / javascript)"                     ,true,   "JS" ));        
+    this.__engineList.push( new _languageName(2,"(TESSERACT / C++) "                           ,false,  "CPP"));  
+        //
+        let langName = params['langName'] ? params['langName'] : "" ;
+        //
+        if (langName !== '')
+        {   
+            //
+            for (var index = 1; index < this.__engineList.length; index++) {
+                //
+                if (this.__engineList[index]._shortName  == langName)
+                  this.__engineList[index]._selected = true;        
+            }
+
+        } else {
+          //
+          this.__engineList[1]._selected = true; // C#
+        }
+    });
   }
   //
   selectionChange() {

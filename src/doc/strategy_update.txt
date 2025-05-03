@@ -620,7 +620,13 @@
 
 -- [>]  C++ DEMOS -> OPEN CV.
 
+        -- [_]  CPP DEMOS ENTRY OPENCV / OCR.
+
+        -- [_]  FIX REFERENCES.
+        
 -- [_]  asp.net core swagger.
+
+
 
  ////////////////////////////////////////////////////////////////////////////////
  // SCM STRATEGY

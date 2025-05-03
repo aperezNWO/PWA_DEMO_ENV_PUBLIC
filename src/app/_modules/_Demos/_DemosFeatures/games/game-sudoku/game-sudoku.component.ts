@@ -88,7 +88,7 @@ export class SudokuComponent extends BaseComponent implements OnInit, AfterViewI
   //--------------------------------------------------------------------------
   // METODOS COMUNES 
   //--------------------------------------------------------------------------
-   //
+  //
   queryParams():void{
     //
     this.route.queryParams.subscribe(params => {

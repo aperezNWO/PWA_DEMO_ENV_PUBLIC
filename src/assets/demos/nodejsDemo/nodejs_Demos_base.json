@@ -6,7 +6,7 @@
         "description"      : "OCR DEMO",
         "field_6"          : "Nodejs",
         "field_1"          : "NodeJs, codesandbox, OCR, Tesseract",
-        "field_2"          : "./#/OcrPhotoCapture",
+        "field_2"          : "./#/OcrPhotoCapture?langName=JS",
         "field_3"          : "https://github.com/aperezNWO/cs_nodejs_ocr_/blob/main/index.js",
         "field_4"          : "https://github.com/tesseract-ocr/tesseract",
         "field_5"          : "https://9tvpj7-3000.csb.app/upload",

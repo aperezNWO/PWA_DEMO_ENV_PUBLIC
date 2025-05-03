@@ -6,7 +6,7 @@
         "description"      : "Reconocimientos de Caracteres",
         "field_6"          : "Node.js",
         "field_1"          : "Node.js, OCR, tesseract, codesandbox",
-        "field_2"          : "./#/OcrPhotoCapture",
+        "field_2"          : "./#/OcrPhotoCapture?langName=JS",
         "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/miscelaneous/ocr-photo-capture/ocr-photo-capture.component.ts",
         "field_4"          : "https://github.com/tesseract-ocr/tesseract"  ,
         "field_10"         : "5640c548-8aa6-4f15-bcf9-b10b8cb7fd0d"
@@ -18,9 +18,9 @@
         "description"      : "Miscelaneous - COMPUTER VISION",
         "field_6"          : "Angular",
         "field_1"          : "V17, Computer Vision, Open CV",
-        "field_2"          : "./#/ComputerVision",
-        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_services/ShapeDetection/shape-detection.service.ts",
-        "field_4"          : "https://docs.opencv.org/4.x/d5/d10/tutorial_js_root.html",
+        "field_2"          : "./#/ComputerVision?langMame=JS",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/78c9c7024c99c9f7d19421a1765d073d298c2168/src/app/_modules/_Demos/_DemosFeatures/miscelaneous/computer-vision/computer-vision.component.ts#L138",
+        "field_4"          : "https://en.wikipedia.org/wiki/Computer_vision",
         "field_10"         : "c094e0c5-c29b-4bdf-91ea-8204bb6e8942"
     },
     {

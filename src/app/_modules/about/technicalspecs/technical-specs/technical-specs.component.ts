@@ -22,9 +22,10 @@ export class TechnicalSpecsComponent extends BaseComponent {
     _appVersion           : string | undefined;
     _runtimeVersion       : string = VERSION.full;
     _webApiAppVersion     : string = "(..cargando..)";
-    _tesseractAppVersion  : string = "(..cargando..)";
-    _ASPNETCoreCppVersion : string = "(..cargando..)";
     _AlgorithmAppVersion  : string = "(..cargando..)";
+    _ASPNETCoreCppVersion : string = "(..cargando..)";
+    _tesseractAppVersion  : string = "(..cargando..)";
+    _OpenCvAppVersion     : string = "(..cargando..)";
     //
     guid = signal<string>(''); // Signal to hold the GUID
 
@@ -93,11 +94,13 @@ export class TechnicalSpecsComponent extends BaseComponent {
       //
       this._GetWebApiAppVersion();
       //
-      this._GetTesseractAppVersion();
+      this._GetAlgorithmAppVersion();
       //
       this._GetASPNETCoreCppVersion();
       //
-      this._GetAlgorithmAppVersion();
+      this._GetTesseractAppVersion();
+      //
+      this._GetOpenCvtAppVersion();
     }
     //
     ngOnInit(): void {
@@ -106,6 +109,26 @@ export class TechnicalSpecsComponent extends BaseComponent {
     ////////////////////////////////////////////////////////////////  
     // [METODOS COMUNES]
     ////////////////////////////////////////////////////////////////  
+    //
+    setNewGuid():string
+    {
+      let guid = this.configService.generateGuid();
+      this.guid.set(guid);
+      return guid;
+    }
+    //
+    async generateNewGuid() {
+      try {
+        await navigator.clipboard.writeText(this.setNewGuid());
+        alert('Text copied to clipboard!');
+      } catch (error) {
+        console.error('Failed to copy text: ', error);
+        alert('Failed to copy text.');
+      }
+    }
+    /////////////////////////////////////////////////////////// 
+    // [METODOS BACKEND]
+    /////////////////////////////////////////////////////////// 
     private _GetWebApiAppVersion() {
       //
       let appVersion : Observable<string> = this.backendService._GetWebApiAppVersion();
@@ -133,42 +156,25 @@ export class TechnicalSpecsComponent extends BaseComponent {
       appVersion.subscribe(appVersionObserver);
       //
       this.setNewGuid();
-    }
+    } 
     //
-    setNewGuid():string
-    {
-      let guid = this.configService.generateGuid();
-      this.guid.set(guid);
-      return guid;
-    }
-    //
-    async generateNewGuid() {
-      try {
-        await navigator.clipboard.writeText(this.setNewGuid());
-        alert('Text copied to clipboard!');
-      } catch (error) {
-        console.error('Failed to copy text: ', error);
-        alert('Failed to copy text.');
-      }
-    }
-    ///////////////////////////////////////////////////////////  
-    private _GetTesseractAppVersion() {
+    private _GetAlgorithmAppVersion() {
       //
-      let cppBackendObservable : Observable<string> = this.backendService._GetTesseractAppVersion();
+      let cppBackendObservable : Observable<string> = this.backendService._GetAlgothmAppVersion();
       //
       const cppBackendObserver       = {
         next: (jsondata: string)     => { 
           //
           //console.log('_GetAppVersion - (return): ' + jsondata);
           //
-          this._tesseractAppVersion = jsondata;
+          this._AlgorithmAppVersion = jsondata;
           //
           //console.log(this.pageTitle + "- [webApiVersion] - " + this._webApiAppVersion);
         },
         error           : (err: Error)      => {
 
           //
-          console.error('_GetAppVersion- (ERROR) : ' + JSON.stringify(err.message));
+          console.error('_GetCppDLLVersion- (ERROR) : ' + JSON.stringify(err.message));
         },
         complete        : ()                => {
           //
@@ -210,23 +216,23 @@ export class TechnicalSpecsComponent extends BaseComponent {
       return this._tesseractAppVersion;
     }
     //
-    private _GetAlgorithmAppVersion() {
+    private _GetTesseractAppVersion() {
       //
-      let cppBackendObservable : Observable<string> = this.backendService._GetAlgothmAppVersion();
+      let cppBackendObservable : Observable<string> = this.backendService._GetTesseractAppVersion();
       //
       const cppBackendObserver       = {
         next: (jsondata: string)     => { 
           //
           //console.log('_GetAppVersion - (return): ' + jsondata);
           //
-          this._AlgorithmAppVersion = jsondata;
+          this._tesseractAppVersion = jsondata;
           //
           //console.log(this.pageTitle + "- [webApiVersion] - " + this._webApiAppVersion);
         },
         error           : (err: Error)      => {
 
           //
-          console.error('_GetCppDLLVersion- (ERROR) : ' + JSON.stringify(err.message));
+          console.error('_GetAppVersion- (ERROR) : ' + JSON.stringify(err.message));
         },
         complete        : ()                => {
           //
@@ -238,5 +244,34 @@ export class TechnicalSpecsComponent extends BaseComponent {
       //
       return this._tesseractAppVersion;
     }
-    ///////////////////////////////////////////////////////////  
+    //
+    private _GetOpenCvtAppVersion() {
+      //
+      let cppBackendObservable : Observable<string> = this.backendService._GetOpenCvAppVersion();
+      //
+      const cppBackendObserver       = {
+        next: (jsondata: string)     => { 
+          //
+          //console.log('_GetAppVersion - (return): ' + jsondata);
+          //
+          this._OpenCvAppVersion = jsondata;
+          //
+          //console.log(this.pageTitle + "- [webApiVersion] - " + this._webApiAppVersion);
+        },
+        error           : (err: Error)      => {
+
+          //
+          console.error('_GetAppVersion- (ERROR) : ' + JSON.stringify(err.message));
+        },
+        complete        : ()                => {
+          //
+          //console.log('_GetAppVersion -  (COMPLETE)');
+        },
+      };
+      //
+      cppBackendObservable.subscribe(cppBackendObserver);
+      //
+      return this._tesseractAppVersion;
+    } 
+   ///////////////////////////////////////////////////////////  
 }

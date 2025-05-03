@@ -42,13 +42,13 @@ export class ShapeDetectionService {
     
             let shape = '';
             if (approx.rows === 3) {
-              shape = 'Triángulo';
+              shape = '[Triángulo]';
             } else if (approx.rows === 4) {
               const rect = cv.boundingRect(approx);
               const aspectRatio = rect.width / rect.height;
-              shape = aspectRatio >= 0.95 && aspectRatio <= 1.05 ? 'Cuadrado' : 'Rectángulo';
+              shape = aspectRatio >= 0.95 && aspectRatio <= 1.05 ? '[Cuadrado]' : '[Rectángulo]';
             } else if (approx.rows > 4) {
-              shape = 'Círculo';
+              shape = '[Círculo]';
             }
     
             if (shape) {

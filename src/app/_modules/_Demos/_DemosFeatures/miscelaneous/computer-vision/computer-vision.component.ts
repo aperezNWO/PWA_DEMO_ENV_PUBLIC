@@ -83,9 +83,22 @@ export class ComputerVisionComponent extends BaseComponent implements AfterViewI
     this.hiddenCameraContainer = true;
     //
     this.startCamera();
+    //
+    this.queryParams();
   }
   //
   ngAfterViewInit() {
+      //
+  }
+  //
+  ngOnDestroy(): void {             
+    this.stopCamera();
+  }
+  //
+  //
+  queryParams():void{
+    //
+    this.route.queryParams.subscribe(params => {
     //-----------------------------------------------------------------------------
     this.__sourceList = new Array();
     this.__sourceList.push( new _languageName(0,"(SELECCIONE OPCION..)" ,false ,""));        
@@ -93,14 +106,26 @@ export class ComputerVisionComponent extends BaseComponent implements AfterViewI
     this.__sourceList.push( new _languageName(2,"(DESDE CAMARA)"        ,false ,""));        
     //-----------------------------------------------------------------------------
     this.__engineList = new Array();
-    this.__engineList.push( new _languageName(0,"(SELECCIONE OPCION..)"                    , false, ""));        
-    this.__engineList.push( new _languageName(1,"(OPENCV / javascript)"                    , true , ""));        
-    this.__engineList.push( new _languageName(2,"(OPENCV / C++)                            ",false, ""));        
+    this.__engineList.push( new _languageName(0,"(SELECCIONE OPCION..)"                    , false, "    "));        
+    this.__engineList.push( new _languageName(1,"(OPENCV / javascript)"                    , true , "JS"  ));        
+    this.__engineList.push( new _languageName(2,"(OPENCV / C++)                            ",false, "CPP" ));        
     //-----------------------------------------------------------------------------
-  }
-  //
-  ngOnDestroy(): void {             
-    this.stopCamera();
+    let langName = params['langName'] ? params['langName'] : "" ;
+    //
+    if (langName !== '')
+    {   
+          //
+          for (var index = 1; index < this.__engineList.length; index++) {
+              //
+              if (this.__engineList[index]._shortName  == langName)
+                this.__engineList[index]._selected = true;        
+          }
+
+    } else {
+      //
+      this.__engineList[1]._selected = true; // C#
+    }
+});
   }
   //
   selectionChange() {
@@ -146,7 +171,7 @@ export class ComputerVisionComponent extends BaseComponent implements AfterViewI
         case 1 : //opencv / javascrpt
               this.detectShapes(this.signature?.toDataURL() as string);
         break;      
-        case 2 :
+        case 2 : // opencv / c++
             //
             this.backendService.uploadBase64ImageCPPOpenCv(this.signature?.toDataURL() as string).subscribe(
               (response) => {
@@ -317,14 +342,10 @@ export class ComputerVisionComponent extends BaseComponent implements AfterViewI
       const shapes        = this.shapeDetectionService.detectShapes(img);
       this.detectedShapes = shapes;
       //
-      this.status_message.set(this.detectedShapes.toString()) ;
+      this.status_message.set("Figura Detectada : " + this.detectedShapes.toString()) ;
     };
     img.src = capturedImage;
   }
-
-
-
-
 }
 
 
