@@ -620,9 +620,14 @@
 
 -- [>]  C++ DEMOS -> OPEN CV.
 
-        -- [_]  CPP DEMOS ENTRY OPENCV / OCR.
+        -- [x]  CPP DEMOS ENTRY OPENCV / OCR.
 
-        -- [_]  FIX REFERENCES.
+        -- [x]  FIX REFERENCES.
+
+        -- [x]  OOP INHERITANCE THROUGH ALGORITHM.DLL PARENT CLASS 
+                
+                (A). Read/Write  file parent method.
+                (B). Read Config file parent method.
         
 -- [_]  asp.net core swagger.
 

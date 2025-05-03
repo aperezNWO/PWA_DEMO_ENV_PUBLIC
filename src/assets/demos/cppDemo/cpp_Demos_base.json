@@ -7,7 +7,7 @@
         "field_3"          : "MINGW64",
         "field_2"          : "Sudoku Game",
         "field_1"          : "./#/GamesSudoku?langName=CPP",
-        "field_4"          : "https://github.com/aperezNWO/CPP_GCC_ALGORITHM/blob/c2966f93059d84b5c129dbd4e81bbaa1c5daa634/include/Sudoku.cpp#L231",
+        "field_4"          : "https://github.com/aperezNWO/CPP_GCC_ALGORITHM/blob/c2966f93059d84b5c129dbd4e81bbaa1c5daa634/Algorithm.cpp#L247",
         "field_5"          : "https://www.geeksforgeeks.org/program-sudoku-generator/",
         "field_6"          : "https://tensorflownetcore64.tryasp.net/Sudoku_Solve_CPP?p_matrix=[{7,3,9,1,4,2,0,6,8},{0,4,0,3,8,5,7,9,1},{1,8,0,6,9,7,3,2,4},{2,0,3,5,7,8,4,0,6},{0,1,0,9,3,6,2,8,5},{8,0,0,4,2,1,0,7,3},{0,0,0,0,5,4,0,3,7},{3,7,4,8,1,9,6,0,2},{0,2,1,0,0,3,8,4,9" ,
         "field_10"         : "dbda4780-50c8-4a97-8617-cf2a60bf9b32"  
@@ -20,7 +20,7 @@
         "field_3"          : "MINGW64",
         "field_2"          : "Sort Algorithm, Bubble Sort, Quick Sort",
         "field_1"          : "./#/AlgorithmSort?langName=CPP",
-        "field_4"          : "https://github.com/aperezNWO/CPP_GCC_ALGORITHM/blob/c2966f93059d84b5c129dbd4e81bbaa1c5daa634/include/SortBenchMark.cpp#L54",
+        "field_4"          : "https://github.com/aperezNWO/CPP_GCC_ALGORITHM/blob/c2966f93059d84b5c129dbd4e81bbaa1c5daa634/Algorithm.cpp#L212",
         "field_5"          : "https://en.wikipedia.org/wiki/Quicksort",
         "field_6"          : "https://tensorflownetcore64.tryasp.net/_GetSort_CPP?p_sortAlgoritm=2&p_unsortedList=10|5|1|23|2|19|13|14|3|0|8|22|18|9|17|7|16|12|11|4|21|24|6|20|15",
         "field_10"         : "bf4b9c6d-3cac-4585-885e-4b8e29420010"   
@@ -33,7 +33,7 @@
         "field_3"          : "MINGW64",
         "field_2"          : "Shortest Path, Graph, Dijkstra",
         "field_1"          : "./#/AlgorithmDijkstra?langName=CPP",
-        "field_4"          : "https://github.com/aperezNWO/CPP_GCC_ALGORITHM/blob/c2966f93059d84b5c129dbd4e81bbaa1c5daa634/include/Dijkstra.cpp#L344",
+        "field_4"          : "https://github.com/aperezNWO/CPP_GCC_ALGORITHM/blob/c2966f93059d84b5c129dbd4e81bbaa1c5daa634/Algorithm.cpp#L203",
         "field_5"          : "https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/",
         "field_6"          : "https://tensorflownetcore64.tryasp.net/GenerateRandomVertex_CPP?p_vertexSize=9&p_sourcePoint=0",
         "field_10"         : "8a33d9c8-708b-43a8-be1e-dae42606f2a0"  
@@ -46,7 +46,7 @@
         "field_3"          : "MINGW64",
         "field_2"          : "Regular Expressions",
         "field_1"          : "./#/AlgorithmRegEx?langName=CPP",
-        "field_4"          : "https://github.com/aperezNWO/CPP_GCC_ALGORITHM/blob/c2966f93059d84b5c129dbd4e81bbaa1c5daa634/include/RegExManager.cpp#L65",
+        "field_4"          : "https://github.com/aperezNWO/CPP_GCC_ALGORITHM/blob/c2966f93059d84b5c129dbd4e81bbaa1c5daa634/Algorithm.cpp#L218",
         "field_5"          : "https://en.cppreference.com/w/cpp/regex/regex_search",
         "field_6"          : "https://tensorflownetcore64.tryasp.net/_RegExEval_CPP?p_tagSearch=company&p_textSearch=bmg",
         "field_10"         : "82ffb387-0aee-4849-9594-75fc2898cf1e"  
@@ -59,7 +59,7 @@
         "field_3"          : "MINGW64",
         "field_2"          : "OCR, Tesseract",
         "field_1"          : "./#/OcrPhotoCapture?langName=CPP",
-        "field_4"          : "https://github.com/aperezNWO/CPP_GCC_TESSERACT/blob/e57058e7e388ae09fc535fcb9379a7a8229ed5e9/tesseractApp.cpp#L160",
+        "field_4"          : "https://github.com/aperezNWO/CPP_GCC_TESSERACT/blob/e57058e7e388ae09fc535fcb9379a7a8229ed5e9/tesseractApp.cpp#L176",
         "field_5"          : "https://en.wikipedia.org/wiki/Optical_character_recognition",
         "field_6"          : "https://tensorflownetcore64.tryasp.net/GetTesseractOcrOutput",
         "field_10"         : "59c5ba46-4a63-4468-b8e4-409ace1f025e"  
@@ -72,7 +72,7 @@
         "field_3"          : "MINGW64",
         "field_2"          : "Computer Vision, OPEN CV",
         "field_1"          : "./#/ComputerVision?langName=CPP",
-        "field_4"          : "https://github.com/aperezNWO/CPP_GCC_OPEN_CV/blob/92076cb4b69103b4e2015ff838c0d46d4c740439/mingwin/OpenCvDll.cpp#L225",
+        "field_4"          : "https://github.com/aperezNWO/CPP_GCC_OPEN_CV/blob/92076cb4b69103b4e2015ff838c0d46d4c740439/mingwin/OpenCvDll.cpp#L252",
         "field_5"          : "https://en.wikipedia.org/wiki/Computer_vision",
         "field_6"          : "https://tensorflownetcore64.tryasp.net/OpenCvReadImage",
         "field_10"         : "40dd1cce-91b6-4fa3-bb64-053130fd1ff6"  
