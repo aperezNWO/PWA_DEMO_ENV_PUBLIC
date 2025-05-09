@@ -168,15 +168,27 @@
         "field_10"         : "ae16755e-cfd8-4b43-a572-ba0a0a1eb4e8"
    },
    {
-        "id"               : 14,
+        "id"               : 15,
         "done"             : true,
-        "name"             : "Chart",
-        "description"      : "Pie Chart, Bar Chart",
+        "name"             : "Promise",
+        "description"      : "Promise, rxjs",
         "field_1"          : "Angular",
-        "field_2"          : "v17, chart.js",
-        "field_3"          : "./#/Chart",
-        "field_4"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/cf7597c0522d46643f261edea429cb9131efd167/src/app/_modules/_Demos/_DemosFeatures/files-generation/chart/chart.component.ts#L162",
-        "field_5"          : "https://www.chartjs.org/"  ,
-        "field_10"         : "fc4ec895-af7d-4324-85ed-57208f99d384"
-    }    
+        "field_2"          : "v17, Promise",
+        "field_3"          : "./#/Home",
+        "field_4"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/06b753e4729db26cfd0df8877bf0304304e5ad3b/src/app/_services/ConfigService/config.service.ts#L48",
+        "field_5"          : "https://v17.angular.io/guide/comparing-observables"  ,
+        "field_10"         : "7950b0e2-5056-493d-9175-e7397c61d529"
+    },
+       {
+        "id"               : 16,
+        "done"             : true,
+        "name"             : "ng bootstrap table",
+        "description"      : "ng bootstrap table",
+        "field_1"          : "Angular",
+        "field_2"          : "v17, ng bootstrap table",
+        "field_3"          : "./#/Index",
+        "field_4"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/06b753e4729db26cfd0df8877bf0304304e5ad3b/src/app/_modules/about/index/index.component.html#L36",
+        "field_5"          : "https://ng-bootstrap.github.io/#/components/table/examples#basic"  ,
+        "field_10"         : "0e78f392-b15e-4da6-beb3-3beab76bed6c"
+    }       
 ]
