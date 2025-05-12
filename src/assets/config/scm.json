@@ -1,4 +1,17 @@
 [
+        {
+        "id"          : 0,
+        "done"        : true,
+        "name"        : "FireBase Studio / Google IDX",
+        "description" : "ENV_ONLINE_MAIN",
+        "field_1"     : "https://firebase.studio/",
+        "field_2"     : "[N/A]",
+        "field_3"     : "#",
+        "field_4"     : "[N/A]",
+        "field_5"     : "#",
+        "field_6"     : "[N/A]",
+        "field_7"     : "#"
+    },
     {
         "id"          : 1,
         "done"        : true,
@@ -67,9 +80,9 @@
     {
         "id"          : 6,
         "done"        : true,
-        "name"        : "C++ BUILDER COMMUNITY EDITION",
+        "name"        : "EMBARCADERO DEV C++ COMMUNITY EDITION",
         "description" : "ENV_OFFLINE_MAIN",
-        "field_1"     : "https://www.embarcadero.com/products/cbuilder/starter",
+        "field_1"     : "",
         "field_2"     : "[N/A]",
         "field_3"     : "#",
         "field_4"     : "[N/A]",
