@@ -150,9 +150,36 @@ export class BackendService implements OnInit {
       return appVersion;
     }
     //
+    _GetTesseractAPIVersion(): Observable<string> {
+      //
+      let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}GetTesseractVersion`;
+      //
+      let appVersion    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
+      //
+      return appVersion;
+    }
+    //
     _GetOpenCvAppVersion(): Observable<string> {
       //
       let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}GetOpenCvAppVersion`;
+      //
+      let appVersion    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
+      //
+      return appVersion;
+    }
+    //
+    _GetOpenCvAPIVersion(): Observable<string> {
+      //
+      let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}GetOpenCvAPIVersion`;
+      //
+      let appVersion    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
+      //
+      return appVersion;
+    }
+    //
+    _GetTensorFlowAPIVersion(): Observable<string> {
+      //
+      let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}GetTensorFlowAPIVersion`;
       //
       let appVersion    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //

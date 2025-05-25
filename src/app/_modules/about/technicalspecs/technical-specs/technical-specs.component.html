@@ -3,14 +3,16 @@
 </div>
 <hr/>
 <table>
-    <tr><td>Aplication Name                             </td><td align="left"><b>{{this._appBrand}}</b>                                                            </td></tr>
-    <tr><td>Aplication Version                          </td><td align="left"><b>{{this._appVersion}}</b>                                                          </td></tr>
-    <tr><td>Angular Runtime                             </td><td><b>{{this._runtimeVersion}}</b>                                                                   </td></tr>
-    <tr><td>(Backend ASP.NET Core x32 / C#  )             </td><td><b>v5.0  App v[{{this._webApiAppVersion}}]</b>                                           </td></tr>
-    <tr><td>(Backend ASP.NET Core x64 / DLL C++ Algorithm)</td><td><b>v8.0  App v[{{this._ASPNETCoreCppVersion}}] / v[{{this._AlgorithmAppVersion}}]</b></td></tr>
-    <tr><td>(Backend ASP.NET Core x64 / DLL C++ Tesseract)</td><td><b>v8.0  App v[{{this._ASPNETCoreCppVersion}}] / v[{{this._tesseractAppVersion}}]</b></td></tr>
-    <tr><td>(Backend ASP.NET Core x64 / DLL C++ OpenCv)   </td><td><b>v8.0  App v[{{this._ASPNETCoreCppVersion}}] / v[{{this._OpenCvAppVersion}}]</b></td></tr>
-    <tr><td>Random GUID <b><button (click)="this.generateNewGuid()">[GENERATE & COPY]</button></b></td><td><b>{{guid()}}</b>                                 </td></tr>
+    <tr><td>Aplication Name                             </td><td align="left"><b>{{this._appBrand}}                         </b></td></tr>
+    <tr><td>Aplication Version                          </td><td align="left"><b>{{this._appVersion}}                       </b></td></tr>
+    <tr><td>Angular Runtime                             </td><td><b>{{this._runtimeVersion}}                                </b></td></tr>
+    <tr><td>(Backend ASP.NET Core x32 / C#       )      </td><td><b>v5.0  App v[{{this._webApiAppVersion}}]                 </b></td></tr>
+    <tr><td>(Backend ASP.NET Core x64 / C# / C++ )      </td><td><b>v8.0  App v[{{this._ASPNETCoreCppVersion}}]             </b></td></tr>
+    <tr><td>(DLL C++ Algorithm)                         </td><td><b>App v[{{this._AlgorithmAppVersion}}]                    </b></td></tr>
+    <tr><td>(DLL C++ Tesseract)                         </td><td><b>App v[{{this._tesseractAppVersion}}]        / API v[{{this._tesseractAPIVersion}}]   </b></td></tr>
+    <tr><td>(DLL C++ OpenCv)                            </td><td><b>App v[{{this._OpenCvAppVersion}}]           / API v[{{this._OpenCvAPIVersion}}]      </b></td></tr>
+    <tr><td>(DLL C++ Tensorflow)                        </td><td><b>App v[{{this._TensorFlowAPPVersion}}]       / API v[{{this._TensorFlowAPIVersion}}]  </b></td></tr>
+    <tr><td>Random GUID <b><button (click)="this.generateNewGuid()">[GENERATE & COPY]</button></b></td><td><b>{{guid()}}    </b></td></tr>
 </table>
 <hr>
 <div align="right"><a routerLink="/AAboutWeb">[Volver al Menú]</a></div>

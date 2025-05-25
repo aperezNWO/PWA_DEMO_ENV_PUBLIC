@@ -633,7 +633,7 @@
         
 -- [_]  asp.net core swagger.
 
-
+-- [_]  techical specs as dynamic list.
 
  ////////////////////////////////////////////////////////////////////////////////
  // SCM STRATEGY
