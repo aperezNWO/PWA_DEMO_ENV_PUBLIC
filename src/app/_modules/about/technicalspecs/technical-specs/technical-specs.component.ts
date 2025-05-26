@@ -29,7 +29,7 @@ export class TechnicalSpecsComponent extends BaseComponent {
     _OpenCvAppVersion     : string = "(..cargando..)";
     _OpenCvAPIVersion     : string = "(..cargando..)";
     _TensorFlowAPIVersion : string = "(..cargando..)";
-    _TensorFlowAPPVersion : string = "1.0.1";
+    _TensorFlowAPPVersion : string = "(..cargando..)";
     //
     guid = signal<string>(''); // Signal to hold the GUID
 
@@ -111,6 +111,8 @@ export class TechnicalSpecsComponent extends BaseComponent {
       this._GetOpenCVAPIVersion();
       //
       this._GetTensorflowAPIVersion();
+      //
+      this._GetTensorflowAPPVersion();
     }
     //
     ngOnInit(): void {
@@ -362,7 +364,30 @@ export class TechnicalSpecsComponent extends BaseComponent {
       //
       cppBackendObservable.subscribe(cppBackendObserver);
       //
-      return this._tesseractAppVersion;
+      return this._TensorFlowAPIVersion;
     } 
+    //
+    private _GetTensorflowAPPVersion(){
+      //
+      let cppBackendObservable : Observable<string> = this.backendService._GetTensorFlowAPPVersion();
+      //
+      const cppBackendObserver       = {
+        next: (jsondata: string)     => { 
+          //
+          this._TensorFlowAPPVersion = jsondata;
+        },
+        error           : (err: Error)      => {
+          //
+          console.error('_GetTensorflowAPIVersion - (ERROR) : ' + JSON.stringify(err.message));
+        },
+        complete        : ()                => {
+          // 
+        },
+      };
+      //
+      cppBackendObservable.subscribe(cppBackendObserver);
+      //
+      return this._TensorFlowAPPVersion;
+   }   
    ///////////////////////////////////////////////////////////  
 }
