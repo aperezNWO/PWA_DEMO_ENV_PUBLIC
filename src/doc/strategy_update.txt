@@ -648,6 +648,8 @@
 -- [_]  TENSORFLOW FOR c++
 ////////////////////////////////////////////////////////////////////////////////
 
+-- [_]  MACHINE LEARNING, ARTIFICIAL INTELLIGENCE, NEURAL NETWORKS CONCEPTS.
+
 -- [_]  CPP CURRICULUM
 
         -- [_]  Smart Pointers.
