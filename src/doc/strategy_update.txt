@@ -650,6 +650,8 @@
 
 -- [_]  MACHINE LEARNING, ARTIFICIAL INTELLIGENCE, NEURAL NETWORKS CONCEPTS.
 
+        -- [_]  https://chat.qwen.ai/c/2370354d-1564-4778-b141-ca63c678014a
+
 -- [_]  CPP CURRICULUM
 
         -- [_]  Smart Pointers.
