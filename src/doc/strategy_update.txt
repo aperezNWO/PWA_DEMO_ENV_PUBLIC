@@ -591,13 +591,27 @@
 
         -- [_] Replicar en cada lenguaje a Curriculum. 
  
+  ////////////////////////////////////////////////////////////////////////////////
+ // SCM STRATEGY
+ ////////////////////////////////////////////////////////////////////////////////
+      
+   --  [_]  SAVE DISK SPACE
+
+   --  [_]  DEV CONTAINERS
+        
+   --  [_]  FIREBASE STUDIO TEST 
+
+        --  [_]  PWA_DEMO_ENV_PUBLIC   -> SHOW TO PUBLIC
+
+        --  [_]  PWA_DEMO_ENV_DEV      -> TENSORFLOW / DATA SCIENCE 
+
  ////////////////////////////////////////////////////////////////////////////////
  // TODO LIST 
  ////////////////////////////////////////////////////////////////////////////////
 
  -- [_] ASP.NET CORE TECHNICAL SPECIFICATIONS / LIBRARY -> DLL.
 
- -- [_] botones "Ir a Demo" , "ir a Curriculum".
+ -- [x] botones "Ir a Demo" , "ir a Curriculum".
 
  -- [_] Cambiar a Idioma ingles.
 
@@ -605,12 +619,6 @@
  
         PWA_DEMO_ENV_PUBLIC -> ANGULAR_DEMO_ENV_PROD.
         PWA_DEMO_ENV_DEV    -> ANGJLAR_DEMO_ENV_PUBLIC.
-
--- [_]  CPP CURRICULUM
-
-        -- [_]  Smart Pointers.
-
-        -- [_]  OOP -> inheritance -> ReadConfigFile();
 
 -- [_]  TECH SPECS -> BACKEND VERSIONS.
 
@@ -635,18 +643,23 @@
 
 -- [_]  techical specs as dynamic list.
 
- ////////////////////////////////////////////////////////////////////////////////
- // SCM STRATEGY
- ////////////////////////////////////////////////////////////////////////////////
-      
-   --  [_]  SAVE DISK SPACE
 
-   --  [_]  DEV CONTAINERS
+////////////////////////////////////////////////////////////////////////////////
+-- [_]  TENSORFLOW FOR c++
+////////////////////////////////////////////////////////////////////////////////
+
+-- [_]  CPP CURRICULUM
+
+        -- [_]  Smart Pointers.
+
+        -- [_]  OOP -> inheritance -> ReadConfigFile();
+
+-- [_]  LINCENSE PLATE RECOGNITION
+
+        -- [_] https://chat.qwen.ai/c/1bd6717f-364c-450d-909d-e67e58088c5c
+
+        -- [_] https://chat.qwen.ai/c/0ad6b5a1-5d93-4b70-ac12-7067ffaebf9b
         
-   --  [_]  FIREBASE STUDIO TEST 
-
-        --  [_]  PWA_DEMO_ENV_PUBLIC   -> SHOW TO PUBLIC
-
-        --  [_]  PWA_DEMO_ENV_DEV      -> TENSORFLOW / DATA SCIENCE 
+        -- [_]  https://chat.qwen.ai/c/c127093a-9ae5-4fcb-8e6e-95b02e739f9c
 
 ////////////////////////////////////////////////////////////////////////////////
