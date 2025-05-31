@@ -590,7 +590,7 @@ export class BackendService implements OnInit {
     public SetLog(p_PageTitle : string ,p_logMsg : string, logType : LogType = LogType.Info):void
     {
       //
-      if ((p_PageTitle == '') || (p_logMsg = ''))
+      if ((p_PageTitle == '') || (p_logMsg == ''))
         return;
       //
       let logInfo!  : Observable<string>;
