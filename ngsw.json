@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1748670685807,
+  "timestamp": 1748674294775,
   "index": "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/index.html",
   "assetGroups": [
     {
@@ -15,7 +15,7 @@
         "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/896.4519226224848d4d.js",
         "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/favicon.ico",
         "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/index.html",
-        "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/main.ea8b917943cd6025.js",
+        "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/main.549496e78dc6f6fa.js",
         "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/manifest.webmanifest",
         "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/polyfills.77586c43fe67260d.js",
         "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/runtime.513bb11c4dc7e0ae.js",
@@ -100,8 +100,8 @@
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/opencv.js": "9c25f0d869689b62b0834b7f938896a4ecfae698",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/assets/sudoku.txt": "a11677cdf143c6ab92080e8a4247c50083c14e71",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/index.html": "dc5038055256ed7017bd859392f1bfed5454beae",
-    "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/main.ea8b917943cd6025.js": "70fec041c66bc05f3510e43edf2fb0a8a3b8abe3",
+    "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/index.html": "c9370ea4dd266b36c74f8a69422a61611e880f53",
+    "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/main.549496e78dc6f6fa.js": "8bab3e4a1dac6dab99f3657f807e8c19bb60f919",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/manifest.webmanifest": "4c4fda145c554fe9a7ed086f63fa914267022e67",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/polyfills.77586c43fe67260d.js": "9e2a9f992517e511f5c0d93f45b293a46678cb36",
     "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/runtime.513bb11c4dc7e0ae.js": "0d34af7dafc44c339f542dfaf83972a20ab6c1d7",
