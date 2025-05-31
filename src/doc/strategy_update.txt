@@ -622,6 +622,10 @@
 
 -- [_]  TECH SPECS -> BACKEND VERSIONS.
 
+-- [>]  C++ DEMOS -> ALGORITHM.
+        
+        -- [_] SORT BENCHMARK OUTPUT AS JSON.
+
 -- [>]  C++ DEMOS -> TESSERACT.      
 
         -- [_]  ONLINE TRANSLATION.
