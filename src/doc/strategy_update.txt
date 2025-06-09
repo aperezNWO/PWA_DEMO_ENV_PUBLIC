@@ -647,6 +647,7 @@
 
 -- [_]  techical specs as dynamic list.
 
+-- [_]  FRACTAL DEMO.
 
 ////////////////////////////////////////////////////////////////////////////////
 -- [_]  TENSORFLOW FOR c++
