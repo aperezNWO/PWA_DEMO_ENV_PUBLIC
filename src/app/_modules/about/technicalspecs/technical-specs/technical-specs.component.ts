@@ -31,6 +31,7 @@ export class TechnicalSpecsComponent extends BaseComponent {
     _OpenCvAPIVersion         : string = "(..cargando..)";
     _TensorFlowAPIVersion     : string = "(..cargando..)";
     _TensorFlowAPPVersion     : string = "(..cargando..)";
+    _TensorFlowCPPVersion     : string = "(..cargando..)";
     //
     guid = signal<string>(''); // Signal to hold the GUID
 
@@ -101,6 +102,8 @@ export class TechnicalSpecsComponent extends BaseComponent {
       //
       this._GetAlgorithmAppVersion();
       //
+      this._GetAlgorithmCPPSTDVersion();
+      //
       this._GetASPNETCoreCppVersion();
       //
       this._GetTesseractAppVersion();
@@ -115,7 +118,7 @@ export class TechnicalSpecsComponent extends BaseComponent {
       //
       this._GetTensorflowAPPVersion();
       //
-      this._GetAlgorithmCPPSTDVersion();
+      this._GetTensorflowcCPPSTDVersion();
     }
     //
     ngOnInit(): void {
@@ -420,6 +423,29 @@ export class TechnicalSpecsComponent extends BaseComponent {
       cppBackendObservable.subscribe(cppBackendObserver);
       //
       return this._TensorFlowAPPVersion;
-   }   
+   } 
+   //
+   private _GetTensorflowcCPPSTDVersion(){
+      //
+      let cppBackendObservable : Observable<string> = this.backendService._TensorFlow_GetCPPSTDVersion();
+      //
+      const cppBackendObserver       = {
+        next: (jsondata: string)     => { 
+          //
+          this._TensorFlowCPPVersion = jsondata;
+        },
+        error           : (err: Error)      => {
+          //
+          console.error('_GetTensorflowcCPPSTDVersion - (ERROR) : ' + JSON.stringify(err.message));
+        },
+        complete        : ()                => {
+          // 
+        },
+      };
+      //
+      cppBackendObservable.subscribe(cppBackendObserver);
+      //
+      return this._TensorFlowCPPVersion;
+   }     
    ///////////////////////////////////////////////////////////  
 }
