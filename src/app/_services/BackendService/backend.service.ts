@@ -177,6 +177,15 @@ export class BackendService implements OnInit {
       return appVersion;
     }
     //
+    _GetOpenCv_CPPSTDVersion(): Observable<string> {
+      //
+      let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}OpenCv_GetCPPSTDVersion`;
+      //
+      let appVersion    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
+      //
+      return appVersion;
+    }
+    //
     _GetTensorFlowAPIVersion(): Observable<string> {
       //
       let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}GetTensorFlowAPIVersion`;

@@ -30,6 +30,7 @@ export class TechnicalSpecsComponent extends BaseComponent {
     _tesseractCPPSTDVersion   : string = "(..cargando..)";
     _OpenCvAppVersion         : string = "(..cargando..)";
     _OpenCvAPIVersion         : string = "(..cargando..)";
+    _OpenCvCPPSTDVersion      : string = "(..cargando..)";
     _TensorFlowAPIVersion     : string = "(..cargando..)";
     _TensorFlowAPPVersion     : string = "(..cargando..)";
     _TensorFlowCPPSTDVersion  : string = "(..cargando..)";
@@ -116,6 +117,8 @@ export class TechnicalSpecsComponent extends BaseComponent {
       this._GetOpenCvAppVersion();
       //
       this._GetOpenCVAPIVersion();
+      //
+      this._GetOpenCV_CPPSTDVersion();
       //
       this._GetTensorflowAPIVersion();
       //
@@ -411,6 +414,35 @@ export class TechnicalSpecsComponent extends BaseComponent {
       return this._OpenCvAPIVersion;
     } 
     //
+    private _GetOpenCV_CPPSTDVersion(){
+      //
+      let cppBackendObservable : Observable<string> = this.backendService._GetOpenCv_CPPSTDVersion();
+      //
+      const cppBackendObserver       = {
+        next: (jsondata: string)     => { 
+          //
+          //console.log('_GetAppVersion - (return): ' + jsondata);
+          //
+          this._OpenCvCPPSTDVersion = jsondata;
+          //
+          //console.log(this.pageTitle + "- [webApiVersion] - " + this._webApiAppVersion);
+        },
+        error           : (err: Error)      => {
+
+          //
+          console.error('_GetOpenCV_CPPSTDVersion- (ERROR) : ' + JSON.stringify(err.message));
+        },
+        complete        : ()                => {
+          //
+          //console.log('_GetAppVersion -  (COMPLETE)');
+        },
+      };
+      //
+      cppBackendObservable.subscribe(cppBackendObserver);
+      //
+      return this._OpenCvCPPSTDVersion;
+    } 
+    //
     private _GetTensorflowAPIVersion(){
       //
       let cppBackendObservable : Observable<string> = this.backendService._GetTensorFlowAPIVersion();
@@ -455,9 +487,9 @@ export class TechnicalSpecsComponent extends BaseComponent {
       cppBackendObservable.subscribe(cppBackendObserver);
       //
       return this._TensorFlowAPPVersion;
-   } 
-   //
-   private _GetTensorflowcCPPSTDVersion(){
+    } 
+    //
+    private _GetTensorflowcCPPSTDVersion(){
       //
       let cppBackendObservable : Observable<string> = this.backendService._TensorFlow_GetCPPSTDVersion();
       //
@@ -478,6 +510,6 @@ export class TechnicalSpecsComponent extends BaseComponent {
       cppBackendObservable.subscribe(cppBackendObserver);
       //
       return this._TensorFlowCPPSTDVersion;
-   }     
-   ///////////////////////////////////////////////////////////  
+    }     
+    ///////////////////////////////////////////////////////////  
 }
