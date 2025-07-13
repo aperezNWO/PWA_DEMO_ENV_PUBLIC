@@ -647,13 +647,17 @@
 
 -- [_]  techical specs as dynamic list.
 
--- [_]  FRACTAL DEMO.
-
 -- [_]  C++ STANDARD VERSION FUNCTION.
 
 -- [_] swagger for ASP.NET CORE c++ ENTRY POINT.
 
 -- [_] ASP.NET CORE c++ ENTRY POINT source code link.
+
+-- [_]  FRACTAL DEMO.
+
+-- [_]  URL:
+
+        https://tensorflownetcore64.tryasp.net/generatejuliaparams/?maxIterations=500&realPart=-0.4&imagPart=0.6
 
 ////////////////////////////////////////////////////////////////////////////////
 -- [_]  TENSORFLOW FOR c++
