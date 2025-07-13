@@ -20,29 +20,29 @@ import { FilesGenerationPDFComponent } from './_modules/_Demos/_DemosFeatures/fi
 import { FilesGenerationWebComponent } from './_modules/_Demos/_DemosFeatures/files-generation/_files-generation-web/files-generation-web.component';
 import { FilesGenerationXLSComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-xls/files-generation-xls.component';
 import { FilesGenerationZIPComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-zip/files-generation-zip.component';
-import { GameHanoiAutoComponent } from './_modules/_Demos/_DemosFeatures/games/game-hanoi-auto/game-hanoi-auto.component';
-import { GameHanoi3dComponent } from './_modules/_Demos/_DemosFeatures/games/game-hanoi3d/game-hanoi3d.component';
-import { SudokuComponent } from './_modules/_Demos/_DemosFeatures/games/game-sudoku/game-sudoku.component';
-import { GameTetrisComponent } from './_modules/_Demos/_DemosFeatures/games/game-tetris/game-tetris.component';
-import { GameTictactoeComponent } from './_modules/_Demos/_DemosFeatures/games/game-tictactoe/game-tictactoe.component';
-import { GameWebComponent } from './_modules/_Demos/_DemosFeatures/games/_game-web/game-web.component';
-import { ChatComponent } from './_modules/_Demos/_DemosFeatures/miscelaneous/chat/chat/chat.component';
-import { ComputerVisionComponent } from './_modules/_Demos/_DemosFeatures/miscelaneous/computer-vision/computer-vision.component';
-import { MathParsingComponent } from './_modules/_Demos/_DemosFeatures/miscelaneous/math-parsing/math-parsing.component';
-import { MiscelaneousComponent } from './_modules/_Demos/_DemosFeatures/miscelaneous/_miscelaneous/miscelaneous.component';
-import { OcrPhotoCaptureComponent } from './_modules/_Demos/_DemosFeatures/miscelaneous/ocr-photo-capture/ocr-photo-capture.component';
-import { DemosWebComponent } from './_modules/_Demos/DemosWeb/demos-web/demos-web.component';
-import { ContactformComponent } from './_modules/about/contactform/contactform.component';
-import { IndexComponent } from './_modules/about/index/index.component';
+import { GameHanoiAutoComponent      } from './_modules/_Demos/_DemosFeatures/games/game-hanoi-auto/game-hanoi-auto.component';
+import { GameHanoi3dComponent        } from './_modules/_Demos/_DemosFeatures/games/game-hanoi3d/game-hanoi3d.component';
+import { SudokuComponent             } from './_modules/_Demos/_DemosFeatures/games/game-sudoku/game-sudoku.component';
+import { GameTetrisComponent         } from './_modules/_Demos/_DemosFeatures/games/game-tetris/game-tetris.component';
+import { GameTictactoeComponent      } from './_modules/_Demos/_DemosFeatures/games/game-tictactoe/game-tictactoe.component';
+import { GameWebComponent            } from './_modules/_Demos/_DemosFeatures/games/_game-web/game-web.component';
+import { ChatComponent               } from './_modules/_Demos/_DemosFeatures/miscelaneous/chat/chat/chat.component';
+import { ComputerVisionComponent     } from './_modules/_Demos/_DemosFeatures/miscelaneous/computer-vision/computer-vision.component';
+import { MathParsingComponent        } from './_modules/_Demos/_DemosFeatures/miscelaneous/math-parsing/math-parsing.component';
+import { MiscelaneousComponent       } from './_modules/_Demos/_DemosFeatures/miscelaneous/_miscelaneous/miscelaneous.component';
+import { OcrPhotoCaptureComponent    } from './_modules/_Demos/_DemosFeatures/miscelaneous/ocr-photo-capture/ocr-photo-capture.component';
+import { DemosWebComponent           } from './_modules/_Demos/DemosWeb/demos-web/demos-web.component';
+import { ContactformComponent        } from './_modules/about/contactform/contactform.component';
+import { IndexComponent              } from './_modules/about/index/index.component';
 import { DemosCurriculumWebComponent } from './_modules/_Demos/_DemosCurriculum/_demos-curriculum-web/demos-curriculum-web.component';
-import { DemosLangWebComponent } from './_modules/_Demos/_DemosLang/_demos-lang-web/demos-lang-web.component';
-import { CppDemoComponent } from './_modules/_Demos/_DemosLang/cpp-demo/cpp-demo.component';
-import { NetcoredemoComponent } from './_modules/_Demos/_DemosLang/netcoredemo/netcoredemo.component';
-import { NodejsDemoComponent } from './_modules/_Demos/_DemosLang/nodejs-demo/nodejs-demo.component';
-import { SpringBootDemoComponent } from './_modules/_Demos/_DemosLang/spring-boot-demo/spring-boot-demo.component';
-import { DjangoDemoComponent } from './_modules/_Demos/_DemosLang/django-demo/django-demo.component';
-import { EduResourcesComponent } from './_modules/about/edu-resources/edu-resources.component';
-import { JuliaformComponent } from './_modules/_Demos/_DemosFeatures/miscelaneous/juliaform/juliaform.component';
+import { DemosLangWebComponent       } from './_modules/_Demos/_DemosLang/_demos-lang-web/demos-lang-web.component';
+import { CppDemoComponent            } from './_modules/_Demos/_DemosLang/cpp-demo/cpp-demo.component';
+import { NetcoredemoComponent        } from './_modules/_Demos/_DemosLang/netcoredemo/netcoredemo.component';
+import { NodejsDemoComponent         } from './_modules/_Demos/_DemosLang/nodejs-demo/nodejs-demo.component';
+import { SpringBootDemoComponent     } from './_modules/_Demos/_DemosLang/spring-boot-demo/spring-boot-demo.component';
+import { DjangoDemoComponent         } from './_modules/_Demos/_DemosLang/django-demo/django-demo.component';
+import { EduResourcesComponent       } from './_modules/about/edu-resources/edu-resources.component';
+import { JuliaformComponent          } from './_modules/_Demos/_DemosLang/juliaform/juliaform.component';
 
 export interface _Route extends Route
 {
@@ -83,7 +83,6 @@ export const routes: _Route[] = [
   {  id: 0,  path: 'OcrPhotoCapture'       , component: OcrPhotoCaptureComponent            , caption: ' Miscelaneous - Ocr Photo Capture'            },
   {  id: 0,  path: 'ComputerVision'        , component: ComputerVisionComponent             , caption: ' Miscelaneous - Computer Vision'              },
   {  id: 0,  path: 'MathParsing'           , component: MathParsingComponent                , caption: ' Miscelaneous - Math Parsing'                 },
-  {  id: 0,  path: 'JuliaForm'             , component: JuliaformComponent                  , caption: ' Miscelaneous - Fractal Demo'                 },
   {  id: 0,  path: 'Miscelaneous'          , component: MiscelaneousComponent               , caption: ' Miscelaneous - Main Page'                    },
   {  id: 0,  path: 'DemosFeaturesWeb'      , component: DemosFeaturesWebComponent           , caption: ' Demos / Features - Main Page'                },
   {  id: 0,  path: 'DemosWeb'              , component: DemosWebComponent                   , caption: ' Demos            - Main Page'                },
@@ -96,6 +95,7 @@ export const routes: _Route[] = [
   {  id: 0,  path: 'NodeJsDemo'            , component: NodejsDemoComponent                 , caption: ' Demos / Language - Node.js / Javascript'     },
   {  id: 0,  path: 'SpringBootDemo'        , component: SpringBootDemoComponent             , caption: ' Demos / Language - SpringBoot / Java'        },
   {  id: 0,  path: 'DjangoDemo'            , component: DjangoDemoComponent                 , caption: ' Demos / Language - Django / Python'          },
+  {  id: 0,  path: 'FractalDemo'           , component: JuliaformComponent                  , caption: ' Demos / Language - C++ / Fractal Demo'       },
   {  id: 0,  path: '**'                    , component: PageNotFoundComponent               , caption: ''                                             },
 ];
 

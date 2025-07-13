@@ -76,5 +76,18 @@
         "field_5"          : "https://en.wikipedia.org/wiki/Computer_vision",
         "field_6"          : "https://tensorflownetcore64.tryasp.net/OpenCvReadImage",
         "field_10"         : "40dd1cce-91b6-4fa3-bb64-053130fd1ff6"  
+    },
+    {
+		"id"               : 7,
+        "done"             : true,
+        "name"             : "FRACTAL Demo",
+        "description"      : "FRACTAL Demo",
+        "field_3"          : "MINGW64",
+        "field_2"          : "Fractal , Julia",
+        "field_1"          : "./#/FractalDemo",
+        "field_4"          : "https://github.com/aperezNWO/CPP_GCC_OPEN_CV/blob/4d162f3c80cf1ec28bbcf50321ff997a8fbc8efd/mingwin/OpenCvDll.cpp#L436",
+        "field_5"          : "https://en.wikipedia.org/wiki/Fractal",
+        "field_6"          : "https://tensorflownetcore64.tryasp.net/generatejuliaparams/?maxIterations=500&realPart=-0.4&imagPart=0.6",
+        "field_10"         : "5e5bfdf8-6876-43a5-a2ea-858628bf0dae"  
     }
 ]	
