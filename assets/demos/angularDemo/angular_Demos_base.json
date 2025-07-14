@@ -47,8 +47,20 @@
         "field_4"          : "https://www.npmjs.com/package/mathjs"  ,
         "field_10"         : "5efc8f87-995f-40aa-9d5b-5bdf5810dd6d"
     },
-    {
+        {
 		"id"               : 5,
+        "done"             : true,
+        "name"             : "Miscelaneous - Fractal Demo",
+        "description"      : "Fractal, Julia",
+        "field_6"          : "Angular",
+        "field_1"          : "v17, Fractal, Julia, OpenCv, C++",
+        "field_2"          : "./#/FractalDemo",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/miscelaneous/juliaform/juliaform.component.ts",
+        "field_4"          : "https://opencv.org/"  ,
+        "field_10"         : "ace5fb03-bc8c-43c5-8650-181bf581b2a4"
+    },
+    {
+		"id"               : 6,
         "done"             : true,
         "name"             : "Generar archivos - csv",
         "description"      : "Exportación via servicio RESTFUL con ms sql server",
@@ -60,7 +72,7 @@
         "field_10"         : "c8981879-7457-4534-b660-b2e8c8eb9c83"  
     },
      {
-		"id"               : 6,
+		"id"               : 7,
         "done"             : true,
         "name"             : "Generar Archivos - xls",
         "description"      : "Exportación via servicio RESTFUL",
@@ -72,7 +84,7 @@
         "field_10"         : "096030d9-cebd-4243-addf-02a36e7eda01" 
     },
     {
-		"id"               : 7,
+		"id"               : 8,
         "done"             : true,
         "name"             : "Genearar Archivos - PDF",
         "description"      : "Exportación via servicio RESTFUL",
@@ -84,7 +96,7 @@
         "field_10"         : "179c6e7c-6dad-4aea-a515-d45d09641a76"
     },
     {
-		 "id"               : 8,
+		 "id"               : 9,
          "done"             : true,
          "description"      : "Generar Archivos - Chart",
          "name"             : "Gráficos tipo Pastel y Barras",
@@ -96,7 +108,7 @@
          "field_10"         : "483973b3-b8f6-478b-a702-de3fbab225a4"
     },
     {
-		"id"               : 9,
+		"id"               : 10,
         "done"             : true,
         "name"             : "Games - Sudoku",
         "description"      : "Games - Sudoku",
@@ -108,7 +120,7 @@
         "field_10"         : "8c25ff6b-2568-411b-b366-cb5700b95b28" 
     },
       {
-		"id"               : 10,
+		"id"               : 11,
         "done"             : true,
         "name"             : "Games - Tic Tac Toe",
         "description"      : "Algoritmos Min Max",
@@ -120,7 +132,7 @@
         "field_10"         : "ac973e56-6f8e-4d0e-a7d9-3a8a415af70b"
     },
     {
-		"id"               : 11,
+		"id"               : 12,
         "done"             : true,
         "name"             : "Games - Torres de Hanoi 2d",
         "description"      : "Games - Torres de Nanoi 2d",
@@ -132,7 +144,7 @@
         "field_10"         : "85fbe9be-c748-4754-bd71-daf1a40d3fb9" 
     },
     {
-		"id"               : 12,
+		"id"               : 13,
         "done"             : true,
         "name"             : "Games - Torres de Hanoi 3d",
         "description"      : "Games - Torres de Nanoi 3d",
@@ -144,7 +156,7 @@
         "field_10"         : "7bd14d49-9fc4-4657-86b8-d16132a8c3e1" 
     },
     {
-		"id"               : 13,
+		"id"               : 14,
         "done"             : true,
         "name"             : "Games - Tetris",
         "description"      : "Games - Tetris",
@@ -156,7 +168,7 @@
         "field_10"         : "67431c50-5240-4889-81df-84270075fed8" 
     },
     {
-		"id"               : 14,
+		"id"               : 15,
         "done"             : true,
         "name"             : "Algoritmo - Distancia mas corta",
         "description"      : "Algoritmo - Distancia mas corta",
@@ -168,7 +180,7 @@
         "field_10"         : "a819d617-74fe-41f0-8f58-0f62377d15e6"  
     },
     {
-		"id"               : 15,
+		"id"               : 16,
         "done"             : true,
         "name"             : "Algoritmos - Ordenamiento",
         "description"      : "Algoritmos - Ordenamiento",
@@ -180,7 +192,7 @@
         "field_10"         : "6bfa047d-dbd7-4991-a4d6-b9786c601285" 
     },
     {
-		"id"               : 16,
+		"id"               : 17,
         "done"             : true,
         "name"             : "Algoritmos - Expresiones Regulares",
         "description"      : "Algoritmos - Expresiones Regulares",
@@ -192,7 +204,7 @@
         "field_10"         : "756e8939-bca0-45f7-b581-63e417b6a2d5" 
     },
     {
-		"id"               : 17,
+		"id"               : 18,
         "done"             : true,
         "name"             : "Algoritmos - Colisión",
         "description"      : "Algoritmos - Colisión",
