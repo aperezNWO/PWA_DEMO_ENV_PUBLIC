@@ -1,12 +1,12 @@
-import { HttpClient                  } from '@angular/common/http';
-import { Component                   } from '@angular/core';
-import { ActivatedRoute              } from '@angular/router';
-import { BaseComponent               } from 'src/app/_components/base/base.component';
+import { HttpClient                     } from '@angular/common/http';
+import { Component                      } from '@angular/core';
+import { ActivatedRoute                 } from '@angular/router';
+import { BaseComponent                  } from 'src/app/_components/base/base.component';
 import { PAGE_MISCELANEOUS_FRACTAL_DEMO } from 'src/app/_models/common';
-import { BackendService              } from 'src/app/_services/BackendService/backend.service';
-import { ConfigService               } from 'src/app/_services/ConfigService/config.service';
-import { ShapeDetectionService       } from 'src/app/_services/ShapeDetection/shape-detection.service';
-import { SpeechService               } from 'src/app/_services/speechService/speech.service';
+import { BackendService                 } from 'src/app/_services/BackendService/backend.service';
+import { ConfigService                  } from 'src/app/_services/ConfigService/config.service';
+import { ShapeDetectionService          } from 'src/app/_services/ShapeDetection/shape-detection.service';
+import { SpeechService                  } from 'src/app/_services/speechService/speech.service';
 
 @Component({
   selector: 'app-juliaform',
@@ -19,6 +19,7 @@ export class JuliaformComponent  extends BaseComponent {
   realPart: number = -0.4;
   imagPart: number = 0.6;
   imageUrl: string | null = null;
+  submitTitle : string = "Generate Fractal";
   //
   constructor(public          shapeDetectionService   : ShapeDetectionService,
               public override configService           : ConfigService,
@@ -37,17 +38,26 @@ export class JuliaformComponent  extends BaseComponent {
   }
    
   onSubmit() {
-    const url = `https://tensorflownetcore64.tryasp.net/generatejuliaparams/?maxIterations=${this.maxIterations}&realPart=${this.realPart}&imagPart=${this.imagPart}`;
+    //
+    const url        = `${this.configService.getConfigValue('baseUrlNetCoreCPPEntry')}generatejuliaparams/?maxIterations=${this.maxIterations}&realPart=${this.realPart}&imagPart=${this.imagPart}`;
+    //
+    this.submitTitle = "[generating...]";
 
     // Fetch the image as a blob
     this.http.get(url, { responseType: 'blob' }).subscribe(
       (response: Blob) => {
         // Convert the blob into an object URL
         this.imageUrl = URL.createObjectURL(response);
+        //
+        this.submitTitle = "Generate Fractal";
       },
       (error) => {
+        //
         console.error('Error fetching the image:', error);
+        //
         this.imageUrl = null;
+        //
+        this.submitTitle = "Generate Fractal";
       }
     );
   }

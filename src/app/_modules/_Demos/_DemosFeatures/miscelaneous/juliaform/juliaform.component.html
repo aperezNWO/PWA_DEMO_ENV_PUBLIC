@@ -9,24 +9,18 @@
       <ul *ngIf="isListVisible" align="left" widdth="10px">
           <li> [Frontend]
             <ul>
-              <li><a routerLink="/AngularDemo"     [queryParams]="{ searchTerm: '5640c548-8aa6-4f15-bcf9-b10b8cb7fd0d' }">[Angular]</a></li>
+              <li><a routerLink="/AngularDemo"     [queryParams]="{ searchTerm: 'ace5fb03-bc8c-43c5-8650-181bf581b2a4' }">[Angular]</a></li>
             </ul>
           </li>
           <li>[Backend]
             <ul>
-              <li><a routerLink="/NodeJsDemo"      [queryParams]="{ searchTerm: '894ab07b-45d4-4a87-b9d7-a59e78a73e79' }">[Node.Js/Javascript]</a></li>
-            </ul>
-            <ul>
-              <li><a routerLink="/CppDemo"         [queryParams]="{ searchTerm: '59c5ba46-4a63-4468-b8e4-409ace1f025e' }">[.net core/c++]</a></li>
+              <li><a routerLink="/CppDemo"         [queryParams]="{ searchTerm: '5e5bfdf8-6876-43a5-a2ea-858628bf0dae' }">[.net core/c++]</a></li>
             </ul>
           </li>
           <li>[Libraries]
             <ul>
-              <li><a href="https://www.npmjs.com/package/tesseract.js/v/2.1.1" target="_blank">[Tesseract / Node.js]</a></li>
+              <li><a href="https://opencv.org/" target="_blank">[Open CV/ C++]</a></li>
             </ul>
-              <ul>
-                <li><a href="https://github.com/tesseract-ocr/tesseract" target="_blank">[Tesseract / C++]</a></li>
-              </ul>
           </li>
       </ul>
     </div>
@@ -48,7 +42,7 @@
             <label for="imagPart">Imaginary Part:</label>
             <input type="number" step="0.01" id="imagPart" name="imagPart"  [(ngModel)]="imagPart"     required>
         </div>
-        <button type="submit">Generate Fractal</button>
+        <button type="submit">{{this.submitTitle}}</button>
         </form>
     </div>
     <hr>

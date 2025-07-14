@@ -197,7 +197,7 @@
             { "id": 2, "url" : "/ComputerVision"        , "text": "[MISCELANEOUS - COMPUTER VISION]"   },
             { "id": 3, "url" : "/Chat"                  , "text": "[MISCELANEOUS - CHAT]"              },
             { "id": 4, "url" : "/MathParsing"           , "text": "[MISCELANEOUS - MATH PARSING]"      },
-            { "id": 5, "url" : "/JuliaForm"             , "text": "[MISCELANEOUS - FRACTAL DEMO]"      }
+            { "id": 5, "url" : "/FractalDemo"           , "text": "[MISCELANEOUS - FRACTAL DEMO]"      }
           ]
       },
       {
@@ -221,8 +221,8 @@
         "pages"      : []
       },
       {
-        "log_name"   : "PAGE_DEMOS_CPP_FRACTAL_DEMO",
-        "page_name"  : "[DEMOS - FRACTAL DEMO]",
+        "log_name"   : "PAGE_MISCELANEOUS_FRACTAL_DEMO",
+        "page_name"  : "[MISCELANEOUS - FRACTAL DEMO]",
         "pages"      : []
       },
       {
