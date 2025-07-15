@@ -655,13 +655,17 @@
 
 -- [_]  FRACTAL DEMO.
 
--- [_]  URL:
+        -- [_]  URL:
 
-        https://tensorflownetcore64.tryasp.net/generatejuliaparams/?maxIterations=500&realPart=-0.4&imagPart=0.6
+                https://tensorflownetcore64.tryasp.net/generatejuliaparams/?maxIterations=500&realPart=-0.4&imagPart=0.6
 
 ////////////////////////////////////////////////////////////////////////////////
 -- [_]  TENSORFLOW FOR c++
 ////////////////////////////////////////////////////////////////////////////////
+
+-- [_]  WORD CLASIFICATION
+
+        -- [_] https://chat.qwen.ai/c/c70ffaa5-78dc-4eeb-87db-3b8f7879fd77
 
 -- [_]  MACHINE LEARNING, ARTIFICIAL INTELLIGENCE, NEURAL NETWORKS CONCEPTS.
 
