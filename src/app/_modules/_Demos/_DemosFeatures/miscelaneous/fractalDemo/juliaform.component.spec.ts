@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { JuliaformComponent } from './juliaform.component';
+import { FractalDemoComponent } from './juliaform.component';
 
 describe('JuliaformComponent', () => {
-  let component: JuliaformComponent;
-  let fixture: ComponentFixture<JuliaformComponent>;
+  let component: FractalDemoComponent;
+  let fixture: ComponentFixture<FractalDemoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [JuliaformComponent]
+      imports: [FractalDemoComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(JuliaformComponent);
+    fixture = TestBed.createComponent(FractalDemoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -78,7 +78,7 @@ import { BaseSortableHeader      } from './_directives/sortable.directive';
 import { BaseComponent           } from './_components/base/base.component';
 import { EduResourcesComponent   } from './_modules/about/edu-resources/edu-resources.component';
 import { _SearchComponent        } from './_components/search/_search.component ';
-import { JuliaformComponent      } from './_modules/_Demos/_DemosFeatures/miscelaneous/juliaform/juliaform.component';
+import { FractalDemoComponent      } from './_modules/_Demos/_DemosFeatures/miscelaneous/fractalDemo/juliaform.component';
 //
 export function initialize(_configService: ConfigService) 
 // 
@@ -161,7 +161,7 @@ export class CustomErrorHandler implements ErrorHandler {
         OcrPhotoCaptureComponent,
         ChatComponent,
         ChartComponent,
-        JuliaformComponent,
+        FractalDemoComponent,
         MiscelaneousComponent,
         NavComponent,
         PageNotFoundComponent,

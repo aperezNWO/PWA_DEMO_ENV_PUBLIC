@@ -13,7 +13,7 @@ import { SpeechService                  } from 'src/app/_services/speechService/
   templateUrl: './juliaform.component.html',
   styleUrl: './juliaform.component.css'
 })
-export class JuliaformComponent  extends BaseComponent {
+export class FractalDemoComponent  extends BaseComponent {
   //
   maxIterations: number = 500;
   realPart: number = -0.4;
@@ -41,15 +41,15 @@ export class JuliaformComponent  extends BaseComponent {
     //
     const url        = `${this.configService.getConfigValue('baseUrlNetCoreCPPEntry')}generatejuliaparams/?maxIterations=${this.maxIterations}&realPart=${this.realPart}&imagPart=${this.imagPart}`;
     //
-    this.submitTitle = "[generating...]";
-
+    this.status_message.set("[generando por favor espere..]");
+    //
     // Fetch the image as a blob
     this.http.get(url, { responseType: 'blob' }).subscribe(
       (response: Blob) => {
         // Convert the blob into an object URL
         this.imageUrl = URL.createObjectURL(response);
         //
-        this.submitTitle = "Generate Fractal";
+        this.status_message.set("[Se generó correctamente la imagen]");
       },
       (error) => {
         //
@@ -57,7 +57,7 @@ export class JuliaformComponent  extends BaseComponent {
         //
         this.imageUrl = null;
         //
-        this.submitTitle = "Generate Fractal";
+        this.status_message.set("[Ha ocurrido un error, favor intente de nuevo]");
       }
     );
   }

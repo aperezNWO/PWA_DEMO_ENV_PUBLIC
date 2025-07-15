@@ -42,7 +42,7 @@ import { NodejsDemoComponent         } from './_modules/_Demos/_DemosLang/nodejs
 import { SpringBootDemoComponent     } from './_modules/_Demos/_DemosLang/spring-boot-demo/spring-boot-demo.component';
 import { DjangoDemoComponent         } from './_modules/_Demos/_DemosLang/django-demo/django-demo.component';
 import { EduResourcesComponent       } from './_modules/about/edu-resources/edu-resources.component';
-import { JuliaformComponent          } from './_modules/_Demos/_DemosFeatures/miscelaneous/juliaform/juliaform.component';
+import { FractalDemoComponent          } from './_modules/_Demos/_DemosFeatures/miscelaneous/fractalDemo/juliaform.component';
 
 export interface _Route extends Route
 {
@@ -83,7 +83,7 @@ export const routes: _Route[] = [
   {  id: 0,  path: 'OcrPhotoCapture'       , component: OcrPhotoCaptureComponent            , caption: ' Miscelaneous - Ocr Photo Capture'            },
   {  id: 0,  path: 'ComputerVision'        , component: ComputerVisionComponent             , caption: ' Miscelaneous - Computer Vision'              },
   {  id: 0,  path: 'MathParsing'           , component: MathParsingComponent                , caption: ' Miscelaneous - Math Parsing'                 },
-  {  id: 0,  path: 'FractalDemo'           , component: JuliaformComponent                  , caption: ' Miscelaneous - Fractal Demo'                 },
+  {  id: 0,  path: 'FractalDemo'           , component: FractalDemoComponent                  , caption: ' Miscelaneous - Fractal Demo'                 },
   {  id: 0,  path: 'Miscelaneous'          , component: MiscelaneousComponent               , caption: ' Miscelaneous - Main Page'                    },
   {  id: 0,  path: 'DemosFeaturesWeb'      , component: DemosFeaturesWebComponent           , caption: ' Demos / Features - Main Page'                },
   {  id: 0,  path: 'DemosWeb'              , component: DemosWebComponent                   , caption: ' Demos            - Main Page'                },
