@@ -72,19 +72,7 @@
         "field_10"         : "292ed965-b158-45a6-900e-78a5dc8ed1bd"
 	},
     {
-        "id"               : 7,
-        "done"             : true,
-        "name"             : "Algoritmo de Dijkstra / c++ DLL endpoint",
-        "description"      : "Algoritmo de Dijkstra / c++ DLL endpoint",
-        "field_1"          : ".net core, c++, Dijkstra, Distancia más corta",
-        "field_2"          : "./#/AlgorithmDijkstra?langMame=CS",
-        "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/8a465f7d3c40159b1d75c528291da7dcf764868a/ASP_NET_CORE_CPP_ENTRY/Controllers/HomeController.cs#L531",
-        "field_4"          : "https://angularwebapidemo.somee.com/demos/GenerateRandomVertex?p_vertexSize=9&p_sourcePoint=0",
-        "field_5"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
-        "field_10"         : "97411cbf-d80a-4d7a-92dc-f88d158ae552"
-    },
-    {
-		"id"               : 8,
+		"id"               : 7,
         "done"             : true,
         "name"             : "Algoritmos - Expresiones Regulares",
         "description"      : "Algoritmos - Expresiones Regulares",
@@ -96,7 +84,7 @@
         "field_10"         : "2c8741f0-d7b9-4cef-8aae-e5b2aa4cc0e4"
 	},
     {
-		"id"               : 9,
+		"id"               : 8,
         "done"             : true,
         "name"             : "Generar Archivos - Chart",
         "description"      : "Generar Archivos - Chart",
@@ -106,5 +94,17 @@
         "field_4"          : "https://angularwebapidemo.somee.com/demos/GetConsultaLogStatPost",
         "field_5"          : "https://www.chartjs.org/",
         "field_10"         : "0b0b083f-bda7-44b8-9922-2365317ee934"
-	}
+	},
+    {
+        "id"               : 9,
+        "done"             : true,
+        "name"             : "Fractal Demo / c++ DLL endpoint",
+        "description"      : "Fractal Demo / c++ DLL endpoint",
+        "field_1"          : ".net core, c++, Fractal, opencv, julia",
+        "field_2"          : "./#/FractalDemo",
+        "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/8a465f7d3c40159b1d75c528291da7dcf764868a/ASP_NET_CORE_CPP_ENTRY/Controllers/HomeController.cs#L531",
+        "field_4"          : "https://angularwebapidemo.somee.com/demos/GenerateRandomVertex?p_vertexSize=9&p_sourcePoint=0",
+        "field_5"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
+        "field_10"         : "97411cbf-d80a-4d7a-92dc-f88d158ae552"
+    }
 ]  
