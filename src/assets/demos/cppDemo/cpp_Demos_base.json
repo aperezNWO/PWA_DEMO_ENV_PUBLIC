@@ -80,8 +80,8 @@
     {
 		"id"               : 7,
         "done"             : true,
-        "name"             : "FRACTAL Demo",
-        "description"      : "FRACTAL Demo",
+        "name"             : "FRACTAL Demo / C++ dll",
+        "description"      : "FRACTAL Demo / C++ dll",
         "field_3"          : "MINGW64",
         "field_2"          : "Fractal , Julia",
         "field_1"          : "./#/FractalDemo",
@@ -89,5 +89,18 @@
         "field_5"          : "https://en.wikipedia.org/wiki/Fractal",
         "field_6"          : "https://tensorflownetcore64.tryasp.net/generatejuliaparams/?maxIterations=500&realPart=-0.4&imagPart=0.6",
         "field_10"         : "5e5bfdf8-6876-43a5-a2ea-858628bf0dae"  
+    },
+    {
+        "id"               : 8,
+        "done"             : true,
+        "name"             : "Fractal Demo / .net core endpoint",
+        "description"      : "Fractal Demo / .net core endpoint",
+        "field_3"          : "MINGW64",
+        "field_2"          : ".net core, c++, Fractal, opencv, julia",
+        "field_1"          : "./#/FractalDemo",
+        "field_4"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/8a465f7d3c40159b1d75c528291da7dcf764868a/ASP_NET_CORE_CPP_ENTRY/Controllers/HomeController.cs#L531",
+        "field_5"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
+        "field_6"          : "https://tensorflownetcore64.tryasp.net/generatejuliaparams/?maxIterations=500&realPart=-0.4&imagPart=0.6",
+        "field_10"         : "97411cbf-d80a-4d7a-92dc-f88d158ae552"
     }
 ]	

@@ -94,17 +94,5 @@
         "field_4"          : "https://angularwebapidemo.somee.com/demos/GetConsultaLogStatPost",
         "field_5"          : "https://www.chartjs.org/",
         "field_10"         : "0b0b083f-bda7-44b8-9922-2365317ee934"
-	},
-    {
-        "id"               : 9,
-        "done"             : true,
-        "name"             : "Fractal Demo / c++ DLL endpoint",
-        "description"      : "Fractal Demo / c++ DLL endpoint",
-        "field_1"          : ".net core, c++, Fractal, opencv, julia",
-        "field_2"          : "./#/FractalDemo",
-        "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/8a465f7d3c40159b1d75c528291da7dcf764868a/ASP_NET_CORE_CPP_ENTRY/Controllers/HomeController.cs#L531",
-        "field_4"          : "https://angularwebapidemo.somee.com/demos/GenerateRandomVertex?p_vertexSize=9&p_sourcePoint=0",
-        "field_5"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
-        "field_10"         : "97411cbf-d80a-4d7a-92dc-f88d158ae552"
-    }
+	}
 ]  
