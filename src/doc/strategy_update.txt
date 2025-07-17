@@ -655,9 +655,13 @@
 
 -- [_]  FRACTAL DEMO.
 
+        -- [_]  PDF EXPORT.
+
         -- [_]  URL:
 
                 https://tensorflownetcore64.tryasp.net/generatejuliaparams/?maxIterations=500&realPart=-0.4&imagPart=0.6
+
+-- [_] REFERENCES AS JSON FILES.
 
 ////////////////////////////////////////////////////////////////////////////////
 -- [_]  TENSORFLOW FOR c++
