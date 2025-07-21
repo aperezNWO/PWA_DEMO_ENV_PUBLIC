@@ -57,8 +57,8 @@
         </div>
         <!-- STATUS / FIN     -->
         <!-- BOTONES INICIO   -->
-        <button type="button" *ngIf="imageUrl" (click)="this.GeneratePDF()">[Generate PDF]</button>
-        <button type="submit" [disabled]="( this.status_message() == '[generando por favor espere..]')" >{{this.submitTitle}}</button>
+        <button type="button" class="btn btn-secondary" *ngIf="imageUrl" (click)="this.GeneratePDF()">[Generate PDF]</button>
+        <button type="submit" class="btn btn-primary"   [disabled]="( this.status_message() == '[generando por favor espere..]')" >{{this.submitTitle}}</button>
         <!-- BOTONES FIN      -->  
       </form>
     </div>
