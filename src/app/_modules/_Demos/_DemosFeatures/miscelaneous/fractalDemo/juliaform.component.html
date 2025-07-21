@@ -56,13 +56,16 @@
             {{ this.status_message() }}
         </div>
         <!-- STATUS / FIN     -->
+        <!-- BOTONES INICIO   -->
+        <button type="button" *ngIf="imageUrl" (click)="this.GeneratePDF()">[Generate PDF]</button>
         <button type="submit" [disabled]="( this.status_message() == '[generando por favor espere..]')" >{{this.submitTitle}}</button>
-        </form>
+        <!-- BOTONES FIN      -->  
+      </form>
     </div>
     <hr>
     <!-- FORMULARIO FIN     -->
     <!-- IMAGEN INICIO      -->
-    <div *ngIf="imageUrl">
+    <div *ngIf="imageUrl" #_fractal_image>
         <h3>Generated Fractal Image:</h3>
         <img [src]="imageUrl" alt="Julia Fractal" width="400px" height="400px"/>
     </div>
