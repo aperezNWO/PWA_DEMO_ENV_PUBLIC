@@ -67,10 +67,10 @@
     {
 		"id"               : 6,
         "done"             : true,
-        "name"             : "OPEN CV Demo",
-        "description"      : "OPEN CV Demo",
+        "name"             : "OPEN CV Demo / C++ DLL",
+        "description"      : "OPEN CV Demo / C++ DLL",
         "field_3"          : "MINGW64",
-        "field_2"          : "Computer Vision, OPEN CV",
+        "field_2"          : "Computer Vision, OPEN CV, C++",
         "field_1"          : "./#/ComputerVision?langName=CPP",
         "field_4"          : "https://github.com/aperezNWO/CPP_GCC_OPEN_CV/blob/92076cb4b69103b4e2015ff838c0d46d4c740439/mingwin/OpenCvDll.cpp#L252",
         "field_5"          : "https://en.wikipedia.org/wiki/Computer_vision",
@@ -79,6 +79,19 @@
     },
     {
 		"id"               : 7,
+        "done"             : true,
+        "name"             : "OPEN CV Demo / .net core endpoint",
+        "description"      : "OPEN CV Demo / .net core endpoint",
+        "field_3"          : "MINGW64",
+        "field_2"          : "Computer Vision, OPEN CV, .net core",
+        "field_1"          : "./#/ComputerVision?langName=CPP",
+        "field_4"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/8a465f7d3c40159b1d75c528291da7dcf764868a/ASP_NET_CORE_CPP_ENTRY/Controllers/HomeController.cs#L307",
+        "field_5"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
+        "field_6"          : "https://tensorflownetcore64.tryasp.net/OpenCvReadImage",
+        "field_10"         : "ae1c7a78-3fd5-4e41-965f-0bfd091c4a1d"  
+    },
+    {
+		"id"               : 8,
         "done"             : true,
         "name"             : "FRACTAL Demo / C++ dll",
         "description"      : "FRACTAL Demo / C++ dll",
@@ -91,7 +104,7 @@
         "field_10"         : "5e5bfdf8-6876-43a5-a2ea-858628bf0dae"  
     },
     {
-        "id"               : 8,
+        "id"               : 9,
         "done"             : true,
         "name"             : "Fractal Demo / .net core endpoint",
         "description"      : "Fractal Demo / .net core endpoint",
