@@ -609,9 +609,19 @@
  // TODO LIST 
  ////////////////////////////////////////////////////////////////////////////////
 
- -- [_] ASP.NET CORE TECHNICAL SPECIFICATIONS / LIBRARY -> DLL.
-
  -- [x] botones "Ir a Demo" , "ir a Curriculum".
+
+ -- [x]  asp.net core swagger.
+
+ -- [x]  FRACTAL DEMO.
+
+        -- [x]  PDF EXPORT.
+
+        -- [x]  URL:
+
+                https://tensorflownetcore64.tryasp.net/generatejuliaparams/?maxIterations=500&realPart=-0.4&imagPart=0.6
+
+ -- [x]  C++ STANDARD VERSION FUNCTION.
 
  -- [_] Cambiar a Idioma ingles.
 
@@ -620,7 +630,7 @@
         PWA_DEMO_ENV_PUBLIC -> ANGULAR_DEMO_ENV_PROD.
         PWA_DEMO_ENV_DEV    -> ANGJLAR_DEMO_ENV_PUBLIC.
 
--- [_]  TECH SPECS -> BACKEND VERSIONS.
+-- [>]  TECH SPECS -> BACKEND VERSIONS.
 
 -- [>]  C++ DEMOS -> ALGORITHM.
         
@@ -643,25 +653,17 @@
                 (A). Read/Write  file parent method.
                 (B). Read Config file parent method.
         
--- [x]  asp.net core swagger.
+-- [_] techical specs as dynamic list.
 
--- [_]  techical specs as dynamic list.
+-- [_] REFERENCES AS JSON FILES.
 
--- [_]  C++ STANDARD VERSION FUNCTION.
-
--- [_] swagger for ASP.NET CORE c++ ENTRY POINT.
+-- [_] csv / xls + ZIP.
 
 -- [_] ASP.NET CORE c++ ENTRY POINT source code link.
 
--- [_]  FRACTAL DEMO.
+        -- [_] swagger for ASP.NET CORE c++ ENTRY POINT.
 
-        -- [_]  PDF EXPORT.
-
-        -- [_]  URL:
-
-                https://tensorflownetcore64.tryasp.net/generatejuliaparams/?maxIterations=500&realPart=-0.4&imagPart=0.6
-
--- [_] REFERENCES AS JSON FILES.
+        -- [_] ASP.NET CORE TECHNICAL SPECIFICATIONS / LIBRARY -> DLL.
 
 ////////////////////////////////////////////////////////////////////////////////
 -- [_]  TENSORFLOW FOR c++

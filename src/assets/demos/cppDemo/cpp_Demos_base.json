@@ -2,8 +2,8 @@
 	{
 		"id"               : 1,
         "done"             : true,
-        "name"             : "Sudoku Game",
-        "description"      : "Sudoku Game",
+        "name"             : "Sudoku Game / c++ dll",
+        "description"      : "Sudoku Game / c++ dll",
         "field_3"          : "MINGW64",
         "field_2"          : "Sudoku Game",
         "field_1"          : "./#/GamesSudoku?langName=CPP",
@@ -12,11 +12,24 @@
         "field_6"          : "https://tensorflownetcore64.tryasp.net/Sudoku_Solve_CPP?p_matrix=[{7,3,9,1,4,2,0,6,8},{0,4,0,3,8,5,7,9,1},{1,8,0,6,9,7,3,2,4},{2,0,3,5,7,8,4,0,6},{0,1,0,9,3,6,2,8,5},{8,0,0,4,2,1,0,7,3},{0,0,0,0,5,4,0,3,7},{3,7,4,8,1,9,6,0,2},{0,2,1,0,0,3,8,4,9" ,
         "field_10"         : "dbda4780-50c8-4a97-8617-cf2a60bf9b32"  
     },
-    {
+    	{
 		"id"               : 2,
         "done"             : true,
-        "name"             : "Sort Algorithm",
-        "description"      : "Sort Algorithm",
+        "name"             : "Sudoku Game / .net core endpoint",
+        "description"      : "Sudoku Game / .net core endpoint",
+        "field_3"          : "MINGW64",
+        "field_2"          : "Sudoku Game, C++, .net core, dllimport",
+        "field_1"          : "./#/GamesSudoku?langName=CPP",
+        "field_4"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/8a465f7d3c40159b1d75c528291da7dcf764868a/ASP_NET_CORE_CPP_ENTRY/Controllers/HomeController.cs#L658",
+        "field_5"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
+        "field_6"          : "https://tensorflownetcore64.tryasp.net/Sudoku_Solve_CPP?p_matrix=[{7,3,9,1,4,2,0,6,8},{0,4,0,3,8,5,7,9,1},{1,8,0,6,9,7,3,2,4},{2,0,3,5,7,8,4,0,6},{0,1,0,9,3,6,2,8,5},{8,0,0,4,2,1,0,7,3},{0,0,0,0,5,4,0,3,7},{3,7,4,8,1,9,6,0,2},{0,2,1,0,0,3,8,4,9" ,
+        "field_10"         : "945b42ca-17b7-44a0-a1c4-2cfec480ef2a"  
+    },
+    {
+		"id"               : 3,
+        "done"             : true,
+        "name"             : "Sort Algorithm / c++ dll",
+        "description"      : "Sort Algorithm / cll dll",
         "field_3"          : "MINGW64",
         "field_2"          : "Sort Algorithm, Bubble Sort, Quick Sort",
         "field_1"          : "./#/AlgorithmSort?langName=CPP",
@@ -25,11 +38,24 @@
         "field_6"          : "https://tensorflownetcore64.tryasp.net/_GetSort_CPP?p_sortAlgoritm=2&p_unsortedList=10|5|1|23|2|19|13|14|3|0|8|22|18|9|17|7|16|12|11|4|21|24|6|20|15",
         "field_10"         : "bf4b9c6d-3cac-4585-885e-4b8e29420010"   
     },
-    {
-		"id"               : 3,
+        {
+		"id"               : 4,
         "done"             : true,
-        "name"             : "Shortest Path Algorithm",
-        "description"      : "Shortest Path Algorithm",
+        "name"             : "Sort Algorithm / .net core endpoint",
+        "description"      : "Sort Algorithm / .net core endpoint ",
+        "field_3"          : "MINGW64",
+        "field_2"          : "Sort Algorithm, Bubble Sort, Quick Sort",
+        "field_1"          : "./#/AlgorithmSort?langName=CPP",
+        "field_4"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/8a465f7d3c40159b1d75c528291da7dcf764868a/ASP_NET_CORE_CPP_ENTRY/Controllers/HomeController.cs#L558",
+        "field_5"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
+        "field_6"          : "https://tensorflownetcore64.tryasp.net/_GetSort_CPP?p_sortAlgoritm=2&p_unsortedList=10|5|1|23|2|19|13|14|3|0|8|22|18|9|17|7|16|12|11|4|21|24|6|20|15",
+        "field_10"         : "b48fc53c-e37a-433c-9ece-773500c5f72f"   
+    },
+    {
+		"id"               : 5,
+        "done"             : true,
+        "name"             : "Shortest Path Algorithm / C++ dll",
+        "description"      : "Shortest Path Algorithm / C++ dll",
         "field_3"          : "MINGW64",
         "field_2"          : "Shortest Path, Graph, Dijkstra",
         "field_1"          : "./#/AlgorithmDijkstra?langName=CPP",
@@ -38,11 +64,24 @@
         "field_6"          : "https://tensorflownetcore64.tryasp.net/GenerateRandomVertex_CPP?p_vertexSize=9&p_sourcePoint=0",
         "field_10"         : "8a33d9c8-708b-43a8-be1e-dae42606f2a0"  
     },
-    {
-		"id"               : 4,
+        {
+		"id"               : 6,
         "done"             : true,
-        "name"             : "Regex Demo",
-        "description"      : "Regex Demo",
+        "name"             : "Shortest Path Algorithm / .net core endpoint",
+        "description"      : "Shortest Path Algorithm / .net core endpoint",
+        "field_3"          : "MINGW64",
+        "field_2"          : "Shortest Path, Graph, Dijkstra",
+        "field_1"          : "./#/AlgorithmDijkstra?langName=CPP",
+        "field_4"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/8a465f7d3c40159b1d75c528291da7dcf764868a/ASP_NET_CORE_CPP_ENTRY/Controllers/HomeController.cs#L531",
+        "field_5"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
+        "field_6"          : "https://tensorflownetcore64.tryasp.net/GenerateRandomVertex_CPP?p_vertexSize=9&p_sourcePoint=0",
+        "field_10"         : "45feb969-2879-4f5f-8d2b-adccb9b187b5"  
+    },
+    {
+		"id"               : 7,
+        "done"             : true,
+        "name"             : "Regex Demo / c++ dll",
+        "description"      : "Regex Demo / cll dll",
         "field_3"          : "MINGW64",
         "field_2"          : "Regular Expressions",
         "field_1"          : "./#/AlgorithmRegEx?langName=CPP",
@@ -51,11 +90,24 @@
         "field_6"          : "https://tensorflownetcore64.tryasp.net/_RegExEval_CPP?p_tagSearch=company&p_textSearch=bmg",
         "field_10"         : "82ffb387-0aee-4849-9594-75fc2898cf1e"  
     },
-    {
-		"id"               : 5,
+        {
+		"id"               : 8,
         "done"             : true,
-        "name"             : "OCR Demo",
-        "description"      : "OCR Demo",
+        "name"             : "Regex Demo / .net core endpoint",
+        "description"      : "Regex Demo / .net core endpoint",
+        "field_3"          : "MINGW64",
+        "field_2"          : "Regular Expressions, c++, dllimport",
+        "field_1"          : "./#/AlgorithmRegEx?langName=CPP",
+        "field_4"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/8a465f7d3c40159b1d75c528291da7dcf764868a/ASP_NET_CORE_CPP_ENTRY/Controllers/HomeController.cs#L626",
+        "field_5"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
+        "field_6"          : "https://tensorflownetcore64.tryasp.net/_RegExEval_CPP?p_tagSearch=company&p_textSearch=bmg",
+        "field_10"         : "830faf00-71cb-45a0-babd-5bcf5dbf9ccd"  
+    },
+    {
+		"id"               : 9,
+        "done"             : true,
+        "name"             : "OCR Demo / c++ DLL",
+        "description"      : "OCR Demo / c++ DLL",
         "field_3"          : "MINGW64",
         "field_2"          : "OCR, Tesseract",
         "field_1"          : "./#/OcrPhotoCapture?langName=CPP",
@@ -65,7 +117,20 @@
         "field_10"         : "59c5ba46-4a63-4468-b8e4-409ace1f025e"  
     },
     {
-		"id"               : 6,
+		"id"               : 10,
+        "done"             : true,
+        "name"             : "OCR Demo / .net core endpoint",
+        "description"      : "OCR Demo / .net core endpoint",
+        "field_3"          : "MINGW64",
+        "field_2"          : "OCR, Tesseract, C++, .net core, DLLImport",
+        "field_1"          : "./#/OcrPhotoCapture?langName=CPP",
+        "field_4"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/8a465f7d3c40159b1d75c528291da7dcf764868a/ASP_NET_CORE_CPP_ENTRY/Controllers/HomeController.cs#L166",
+        "field_5"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
+        "field_6"          : "https://tensorflownetcore64.tryasp.net/GetTesseractOcrOutput",
+        "field_10"         : "9d7836ed-cd9b-4152-b298-18be6ed9b437"  
+    },
+    {
+		"id"               : 11,
         "done"             : true,
         "name"             : "OPEN CV Demo / C++ DLL",
         "description"      : "OPEN CV Demo / C++ DLL",
@@ -78,7 +143,7 @@
         "field_10"         : "40dd1cce-91b6-4fa3-bb64-053130fd1ff6"  
     },
     {
-		"id"               : 7,
+		"id"               : 12,
         "done"             : true,
         "name"             : "OPEN CV Demo / .net core endpoint",
         "description"      : "OPEN CV Demo / .net core endpoint",
@@ -91,7 +156,7 @@
         "field_10"         : "ae1c7a78-3fd5-4e41-965f-0bfd091c4a1d"  
     },
     {
-		"id"               : 8,
+		"id"               : 13,
         "done"             : true,
         "name"             : "FRACTAL Demo / C++ dll",
         "description"      : "FRACTAL Demo / C++ dll",
@@ -104,14 +169,14 @@
         "field_10"         : "5e5bfdf8-6876-43a5-a2ea-858628bf0dae"  
     },
     {
-        "id"               : 9,
+        "id"               : 14,
         "done"             : true,
         "name"             : "Fractal Demo / .net core endpoint",
         "description"      : "Fractal Demo / .net core endpoint",
         "field_3"          : "MINGW64",
         "field_2"          : ".net core, c++, Fractal, opencv, julia",
         "field_1"          : "./#/FractalDemo",
-        "field_4"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/8a465f7d3c40159b1d75c528291da7dcf764868a/ASP_NET_CORE_CPP_ENTRY/Controllers/HomeController.cs#L531",
+        "field_4"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/8a465f7d3c40159b1d75c528291da7dcf764868a/ASP_NET_CORE_CPP_ENTRY/Controllers/HomeController.cs#L497",
         "field_5"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
         "field_6"          : "https://tensorflownetcore64.tryasp.net/generatejuliaparams/?maxIterations=500&realPart=-0.4&imagPart=0.6",
         "field_10"         : "97411cbf-d80a-4d7a-92dc-f88d158ae552"
