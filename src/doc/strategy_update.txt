@@ -578,20 +578,6 @@
                 --  [_]  ASP.NET end point  -> update version
 
  ////////////////////////////////////////////////////////////////////////////////
- // LEARNING STRATEGY
- ////////////////////////////////////////////////////////////////////////////////
-
- -- [_] LINK DEMOS|LENGUAGES --> <-- LENGUAES| CURRICULUM
-
- -- [_] TEMA : TENSORFLOW
-
-        -- [_] INVESTIGAR EN C++
-        
-        -- [_] REPLICAR EN ORDEN A : JAVA / JAVSACXRIPT / Python
-
-        -- [_] Replicar en cada lenguaje a Curriculum. 
- 
- ////////////////////////////////////////////////////////////////////////////////
  // SCM STRATEGY
  ////////////////////////////////////////////////////////////////////////////////
       
@@ -605,9 +591,18 @@
 
         --  [_]  PWA_DEMO_ENV_DEV      -> TENSORFLOW / DATA SCIENCE 
 
+  -- [_] Cambiar URL : 
+ 
+        PWA_DEMO_ENV_PUBLIC -> ANGULAR_DEMO_ENV_PROD.
+        PWA_DEMO_ENV_DEV    -> ANGJLAR_DEMO_ENV_PUBLIC.
+
  ////////////////////////////////////////////////////////////////////////////////
  // TODO LIST 
  ////////////////////////////////////////////////////////////////////////////////
+
+ -- [x]  C++ DEMOS -> ALGORITHM.
+        
+        -- [x] SORT BENCHMARK OUTPUT AS JSON.
 
  -- [x] botones "Ir a Demo" , "ir a Curriculum".
 
@@ -623,24 +618,7 @@
 
  -- [x]  C++ STANDARD VERSION FUNCTION.
 
- -- [_] Cambiar a Idioma ingles.
-
- -- [_] Cambiar URL : 
- 
-        PWA_DEMO_ENV_PUBLIC -> ANGULAR_DEMO_ENV_PROD.
-        PWA_DEMO_ENV_DEV    -> ANGJLAR_DEMO_ENV_PUBLIC.
-
--- [>]  TECH SPECS -> BACKEND VERSIONS.
-
--- [>]  C++ DEMOS -> ALGORITHM.
-        
-        -- [] SORT BENCHMARK OUTPUT AS JSON.
-
--- [>]  C++ DEMOS -> TESSERACT.      
-
-        -- [_]  ONLINE TRANSLATION.
-
--- [>]  C++ DEMOS -> OPEN CV.
+ -- [x]  C++ DEMOS -> OPEN CV.
 
         -- [x]  CPP DEMOS ENTRY OPENCV / OCR.
 
@@ -653,18 +631,46 @@
                 (A). Read/Write  file parent method.
                 (B). Read Config file parent method.
         
--- [_] techical specs as dynamic list.
+-- [x] ASP.NET CORE c++ ENTRY POINT source code link.
+
+        -- [x] swagger for ASP.NET CORE c++ ENTRY POINT.
+
+        -- [x] ASP.NET CORE TECHNICAL SPECIFICATIONS / LIBRARY -> DLL.
+
+-- [>]  TECH SPECS.
+
+        -- [_]  BACKEND VERSIONS.
+
+        -- [_]  techical specs as dynamic list.
+
+-- [>]  C++ DEMOS -> TESSERACT.      
+
+        -- [_]  ONLINE TRANSLATION.
 
 -- [_] REFERENCES AS JSON FILES.
 
 -- [_] csv / xls + ZIP.
 
--- [_] ASP.NET CORE c++ ENTRY POINT source code link.
+-- [_] SETTINGS
 
-        -- [_] swagger for ASP.NET CORE c++ ENTRY POINT.
+        -- [_] SOUND ON/OFF.
 
-        -- [_] ASP.NET CORE TECHNICAL SPECIFICATIONS / LIBRARY -> DLL.
+        -- [_] LANG (iso code).
 
+////////////////////////////////////////////////////////////////////////////////
+ // LEARNING STRATEGY
+ ////////////////////////////////////////////////////////////////////////////////
+
+ -- [x] LINK DEMOS|LENGUAGES --> <-- LENGUAES| CURRICULUM
+
+ -- [_] procedimiento
+
+        -- [_] INVESTIGAR EN C++
+        
+        -- [_] REPLICAR EN ORDEN A : JAVA / JAVSACXRIPT / Python
+
+        -- [_] Replicar en cada lenguaje a Curriculum. 
+ 
 ////////////////////////////////////////////////////////////////////////////////
 -- [_]  TENSORFLOW FOR c++
 ////////////////////////////////////////////////////////////////////////////////
@@ -683,7 +689,7 @@
 
         -- [_]  OOP -> inheritance -> ReadConfigFile();
 
--- [_]  LINCENSE PLATE RECOGNITION
+-- [_]  LICENSE PLATE RECOGNITION
 
         -- [_] https://chat.qwen.ai/c/1bd6717f-364c-450d-909d-e67e58088c5c
 
