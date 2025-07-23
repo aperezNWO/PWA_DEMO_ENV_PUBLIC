@@ -79,3 +79,15 @@ Hello! That's fantastic that you have a C++ programming showcase ready to exhibi
 By leveraging these platforms and strategies, you'll increase your chances of finding freelance projects or job opportunities. Good luck with your showcase!
 
 ////////////////////////////////////////////////////
+
+
+-- [_] https://apereznwo.github.io/PWA_DEMO_ENV_ADMIN/protected
+
+       USER : MARKETING
+
+       CLAVE : Marketing
+
+-- [_] http://apereznwo.github.io/PWA_DEMO_ENV_ADMIN/ContactFormAdmin.
+
+
+////////////////////////////////////////////////////
