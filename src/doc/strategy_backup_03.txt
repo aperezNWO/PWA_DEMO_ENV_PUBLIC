@@ -1,0 +1,309 @@
+/////////////////////////////////////////////////////////
+// STRATEGY BACKUP 03
+/////////////////////////////////////////////////////////
+
+=====================================================================
+-- SCM - HOSTING
+=====================================================================
+
+-- [x] environments.
+
+        -- [_] LOCAL_IIS.
+        -- [_] WebApi.
+        -- [_] mcsd.
+        -- [_] angulardemo.
+
+-- [>] SOURCE github.com        
+
+        -- [_] PUBLIC SOURCES.                        
+                -- [x] [mcsdWebApíTFS] (tff)      -->  (github) "mcsd_public".
+                -- [x] [AngularMCSD]   (github)   -->  (github) "AngularMCSD_public".
+                -- [>] Update sources.
+
+-- [>] HOSTING  
+
+        -- [_] [alternativas]
+
+                -- [_] https://xranks.com/es/somee.com
+
+        -- [_] [somee.com]
+         
+                -- [_] [HELP]
+                        https://somee.com/doka/Help/Article/106/How_to_deploy_Web_project_from_Visual_Studio
+
+                -- [_] [mcsd/angulardemo/webapidemo]
+                -- [_] [db].
+                       -- [_] reset log db #1 / debug content.
+                       -- [_] enbable   db #2 / (CSV DEMO).
+                -- [_] check disabled accounts.
+                       -- [_] https://www.angulardemo.somee.com.
+
+-- [>] webapidemo / service.
+
+       -- [x] remove demo views/controllers.
+       -- [x] enable domain "WebApiDemo".
+       -- [x] mcsdWebApíTFS.
+       -- [x] mcsdBackup.
+
+                -- [x] BACKUP /DELETE BOOK "DELORME".  
+                -- [x] BACKUP /DELETE folder "_angular".  
+                -- [x] turn off domain "mcsdBackup".
+                -- [x] change tfs/github name "mcsdNet48TFS" / "mcsdNet48GitHub".
+                -- [x] change tfs/github name "mcsd" por "mcsdNetCoreBackup".
+
+        -- [_] REDUCE FILE SIZE.
+                -- [_] check disable email from "somee.com".
+
+/*
+
+        Your website 'angulardemo.somee.com' was disabled for the following reason: 
+
+        Website's average, per request bandwidth has exceeded a limit that is set for the website hosted with a free hosting package! 
+        Although we do not limit the file size that can be uploaded or downloaded from your website, 
+        we set a limit of [150KByte] on average file size that can be downloaded from the website hosted with free package. 
+
+        The average is calculated every several hours for all files together, including *.html, *.asp, *.aspx, *.jpg, *.png, *.gif, *.mpg 
+        and other text and media files. 
+
+        Your website is scheduled to start again in about 12 hours, or you can start it manually from our control panel any time. 
+
+        But if you will not take actions to decrease the average file size that is sent from your website it will be stopped again 
+        and you are allowed to start it 5 times only. 
+
+        You can also switch to any other hosting package where such maintenance is not performed.
+
+*/
+=====================================================================
+-- STRATEGY - DIFUSION
+=====================================================================
+
+-- [_] FREELANCE WEB SITES
+
+                -- [_] WORKANA.
+                -- [_] FIVERR.
+                -- [_] UPWORK.
+
+-- [_] LINKEDIN
+
+-- [_] facebook
+
+        -- [_] .NET COMMUNITY
+        -- [_] ANGULAR COMMUNITY
+
+-- [_] DIRECT EMAIL
+
+        -- [_] JOB SEARCH MODULE
+
+-- [_] TWITTER /
+-- [_] INSTAGRAM / TK.
+-- [_] NON IT COMPANIES / DIRECT OFFER.
+
+=====================================================================
+-- ERRORS
+=====================================================================
+
+   -- [x]  Access to XMLHttpRequest at 'https://mcsd.somee.com/demos/GetConsultaLogStatGet' 
+           from origin 'https://mcsdbackup.somee.com' has been blocked by CORS policy:
+           No 'Access-Control-Allow-Origin' header is present on the requested resource.
+
+   -- [x]  Access to XMLHttpRequest at 'https://mcsd.somee.com/demos/GenerarInformeCSVJsonSTAT' 
+           from origin 'https://mcsdbackup.somee.com' has been blocked by CORS policy: 
+           No 'Access-Control-Allow-Origin' header is present on the requested resource.
+
+   -- [_]  index.js:489 [webpack-dev-server] WARNING
+           E:\pablo.perez\dev\AngularMCSD\AngularMCSD\src\app\_modules\files-generation\files-generation-xls\files-generation-xls.component.ts depends on 'html2canvas'. 
+           CommonJS or AMD dependencies can cause optimization bailouts.
+           For more info see: https://angular.io/guide/build#configuring-commonjs-dependencies
+
+=====================================================================
+-- OBSERVACIONES / REDES SOCIALES
+=====================================================================
+-- [daniel sevilla]         
+
+    -- [_]              https://primeng.org/installation.
+
+=====================================================================
+
+////////////////////////////////////////////////////////////////////////////////
+-- [_] TODO GENERAL
+////////////////////////////////////////////////////////////////////////////////
+
+-- [_] Algorithms
+
+        -- [_] [TAOCP]
+
+-- [_] Games
+        -- [_] tic tac toe
+        -- [_] hanoi towers
+        -- [_] sudoku
+-- [_] A.I. Apps
+        -- [_] C# Accord
+        -- [_] C++ OpenCV
+        -- [_] Neural Networks
+        -- [_] Machine Learning
+
+-- [_] Backend
+        -- [_] C#
+        -- [_] C++
+        -- [_] Node Js
+        -- [_] Python
+-- [_] Environments
+        -- [_] CodeSandbox
+        -- [_] Git Hub CodeSpaces
+        -- [_] Docker
+
+=====================================================================
+-- STRATEGY - dev
+=====================================================================
+
+-- [x] [CPP DEMO]
+
+    -- [x] performance benchmark [c# / typescript / c++].
+
+
+-- [x] CORREGIR UIX.
+
+        -- [x] uncontrasted font colors.
+
+-- [_] CHAT GTP.
+
+    -- [_]  https://www.businessinsider.es/chatgpt-codigos-impresionantes-prompts-debes-usar-expertos-1288236
+
+-- [_] ANGULAR TOPICS.
+
+    -- [_] https://angular.io/docs
+
+        -- [_] MODULES.
+        -- [_] @Input.
+        -- [_] i18n.
+        -- [_] Dynamic Forms.
+        -- [_] Angular CDN.
+                -- [_] DebugHostingContent as webapi/global/cdn.
+        -- [_] TOPIC_1.        
+        -- [_] TOPIC_2.
+        -- [_] TOPIC_3.
+
+-- [_] architectural changes.
+
+    -- [_] General Error Handling.
+
+    -- [_] Service Architecture.
+
+        -- [_] uv_apidigitacion / [nuevo ruv].
+
+    -- [_] paquete de idiomas/localizacion (en/us).
+           
+           -- [_] angular i18n.
+
+    -- [_] DebugHostingContent as webapi/global/cdn.
+
+    -- [_] OAUTH.
+
+        -- [_] https://codingpotions.com/angular-login-sesion/
+        -- [_] https://auth0.com/docs/quickstart/spa/angular/01-login
+        -- [_] https://auth0.com/blog/complete-guide-to-angular-user-authentication/
+        -- [_] https://dev.to/ricardochl/angular-login-with-auth0-4d8l
+        -- [_] https://medium.com/@michaszala/2-authentication-guide-angular-14-simple-login-and-register-app-4d7c01a69546
+        -- [_] https://www.positronx.io/angular-facebook-oauth-social-login-tutorial/
+        -- [_] https://medium.com/@danilrabizo/google-authentication-in-the-angular-application-e86df69be58a
+        -- [_] https://learn.microsoft.com/en-us/azure/active-directory/develop/tutorial-v2-angular-auth-code
+
+-- [_] uix --> general.
+
+        -- [x] install bootstrap.
+        -- [x] Bootstrap menu navigation (from .NET CORE).
+        -- [x] implement menu.
+        -- [_] check uix color/usability.
+        -- [_] menu collapse on page entry.
+        -- [_] metronic.
+        -- [_] scss.
+                -- [daniel sevilla]         https://primeng.org/installation.
+
+-- [_] UIX --> check.
+
+     -- [_] [GENERAR ARCHIVO]
+ 
+     -- [_] [ACERCA DE]
+    
+        -- [_] [contacto]
+        -- [_] [technical specs]
+        -- [_] [job search]  
+            -- [_] oauth.        
+        -- [_] [seccion comentarios]
+            -- [_] oauth.
+    
+    -- [_] [LOGIN]            
+            -- [_] CUSTOM.
+            -- [_] oauth.
+            -- [_] DYNAMIC FORM.
+
+    -- [_] [AI/ NEURAL NETWORK DEMO]
+
+           -- [_] [TIC/TAC/TOE] --> [min/max algorthm].
+
+                  -- [_] https://www.geeksforgeeks.org/implementation-of-tic-tac-toe-game/
+
+    -- [_] UDEMY / ANGULAR.
+        
+        -- [_] https://www.udemy.com/topic/angular/free/
+
+
+-- [_] cusotm error handling.
+
+        -- [_] to interface --> [standard label status].
+        -- [_] to log.
+        -- [_] debug console messages.
+        -- [_] asp.net core enable trace.
+
+-- [_] Use custom login.
+
+        -- [_] DYNAMIC FORM.
+        -- [_] DB MODEL.
+
+-- [_] [GENERAR ARCHIVO XLS]
+
+        -- [x] angular interceptors.
+        -- [_] filtro por tipo de log.
+        -- [_] corregir consulta y rango de fechas.
+        -- [_] CORREGIR DATOS ESTADISTICAS.
+        -- [_] Referencia Template Driven/Reactive.
+        -- [_] depurar entradas log.
+
+-- [_] [GENERAR ARCHIVO CSV]
+
+        -- [_] Editar lista de cumpleaños exnacato.
+                -- [_] ANGULA CRUD.
+                -- [_] METRONIC.
+        -- [_] oauth.
+        -- [_] Dynamic forms.
+
+-- [_] node.js.
+
+       -- [_] As backend of sandbox demo.
+       -- [_] As standalone demo with index.
+       -- [_] Angular Hosting|.
+
+-- [_] MISCELANEOUS.
+
+     -- [x] bootstrap menu plegar en entrada a modulo.
+     -- [_] Angular Topics.
+     -- [_] Renovar https somme.com.
+     
+-- [_] CRUD.
+
+       -- [_] oAuth.
+       -- [_] Linkedon Job Alerts "Angular".
+       -- [_] List of previous job alerts ".NET".
+       -- [_] UIX FIX.
+
+-- [_] OBSERVABLE.
+
+       -- [_] https://v17.angular.io/guide/observables.
+       -- [_] "Loading component" (from ngbgrid).
+       -- [_] Curruculum entry.
+
+-- [_] SSR.
+
+-- [_] PWA / SPA.
+
+////////////////////////////////////////////////////////////////////////////////
