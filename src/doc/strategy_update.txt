@@ -649,16 +649,18 @@
 
         -- [_] LANG (iso code).
 
+                -- [_] app v[2.1.x].
 
 -- [>]  TECH SPECS.
 
         -- [_]  BACKEND VERSIONS.
 
-
         -- [_]  techical specs as dynamic list.
  
 
 -- [_] csv / xls + ZIP.
+
+        -- [_] sobre copias de funciones actuales.
 
  ////////////////////////////////////////////////////////////////////////////////
  // LEARNING STRATEGY
