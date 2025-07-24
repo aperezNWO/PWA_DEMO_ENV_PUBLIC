@@ -637,19 +637,11 @@
 
         -- [x] ASP.NET CORE TECHNICAL SPECIFICATIONS / LIBRARY -> DLL.
 
--- [>]  TECH SPECS.
-
-        -- [_]  BACKEND VERSIONS.
-
-        -- [_]  techical specs as dynamic list.
-
 -- [>]  C++ DEMOS -> TESSERACT.      
 
         -- [_]  ONLINE TRANSLATION.
 
 -- [_] REFERENCES AS JSON FILES.
-
--- [_] csv / xls + ZIP.
 
 -- [_] SETTINGS
 
@@ -657,7 +649,18 @@
 
         -- [_] LANG (iso code).
 
-////////////////////////////////////////////////////////////////////////////////
+
+-- [>]  TECH SPECS.
+
+        -- [_]  BACKEND VERSIONS.
+
+
+        -- [_]  techical specs as dynamic list.
+ 
+
+-- [_] csv / xls + ZIP.
+
+ ////////////////////////////////////////////////////////////////////////////////
  // LEARNING STRATEGY
  ////////////////////////////////////////////////////////////////////////////////
 
