@@ -187,7 +187,24 @@
       {
         "log_name"   : "PAGE_DEMOS_CURRICIULUM_INDEX",
         "page_name"  : "[DEMOS - CURRICULUM]",
-        "pages"      : []
+        "pages"      : [
+            { "id": 1, "url" : "/CurriculumAngular"       , "text": "[Referencia - Angular]"               },
+            { "id": 2, "url" : "/CurriculumCpp"           , "text": "[Referencia - C++]"                   }
+         ]
+      },
+      {
+        "log_name"   : "PAGE_CURRICULUM_ANGULAR",
+        "page_name"  : "[REFERENCIA - ANGULAR]",
+        "pages"      : [
+             { "id": 1, "url" : "./assets/demos/angularDemo/angular_Curriculum_base.json"       , "text": ""    }
+        ]
+      },
+      {
+        "log_name"   : "PAGE_CURRICULUM_CPP",
+        "page_name"  : "[REFERENCIA - C++]",
+        "pages"      : [
+             { "id": 1, "url" : "./assets/demos/cppDemo/cpp_Curriculum_base.json"       , "text": ""    }
+        ]
       },
       {
         "log_name"   : "PAGE_DEMOS_MISELANEOUS_INDEX",
@@ -345,13 +362,6 @@
         "page_name"  : "[SOFTWARE CONFIGURATION MANAGEMENT]",
         "pages"      : [
           { "id": 1, "url" : "./assets/config/scm.json"       , "text": ""    }
-        ]
-      },
-      {
-        "log_name"   : "PAGE_CURRICULUM_ANGULAR",
-        "page_name"  : "[ANGULAR - CURRICULUM]",
-        "pages"      : [
-             { "id": 1, "url" : "./assets/demos/angularDemo/angular_Curriculum_base.json"       , "text": ""    }
         ]
       },
       {

@@ -1,12 +1,11 @@
 
 <H4>{{this.pageTitle}}</H4>
 <hr>
-<ul>
-    <li><a routerLink="/CurriculumAngular">[Angular - Referencia]</a></li>
-</ul>
-<ul>
-    <li><a routerLink="/CurriculumCpp">[C++ - Referencia]</a></li>
-</ul>
+<div align="left">
+    <ul *ngFor="let page of this._pages" >
+        <li><a [routerLink]="page.url">{{page.text}}</a></li>
+    </ul>
+</div>
 <hr>
 <div align="right"><a routerLink="/DemosWeb">[Volver al Inicio]</a></div>
 

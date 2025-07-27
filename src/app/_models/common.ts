@@ -87,6 +87,8 @@ export const PAGE_ABOUT_SCM                      = 'PAGE_ABOUT_SCM';
   
 export const PAGE_CURRICULUM_ANGULAR             = 'PAGE_CURRICULUM_ANGULAR';
 
+export const PAGE_CURRICULUM_CPP                 = 'PAGE_CURRICULUM_CPP';
+
 export const PAGE_DEMOS_DJANGO_PYTHON            = 'PAGE_DEMOS_DJANGO_PYTHON';
 
 export const PAGE_DEMOS_SPRING_BOOT_JAVA         = 'PAGE_DEMOS_SPRING_BOOT_JAVA';

@@ -24,7 +24,7 @@ import { Router                                                          } from 
 export class FeaturePagesComponent  extends _SearchComponent  
 {
     //
-    toogleLisCaption: string = "[Ir a Curriculum / Angular...]";
+    toogleLisCaption: string = "[Ir a Referencia / Angular...]";
     //
     constructor(
                 public override searchService         : _SearchService,
