@@ -37,7 +37,7 @@ import { IndexComponent                         } from './_modules/about/index/i
 import { SCMComponent                           } from './_modules/about/scm/scm.component';
 import { LLMListComponent                       } from './_modules/about/llmlist/llmlist.component';
 import { DemosWebComponent                      } from './_modules/_Demos/DemosWeb/demos-web/demos-web.component';
-import { CurriculumComponent                    } from './_modules/_Demos/_DemosCurriculum/curriculumAngular/curriculum.component';
+import { CurriculumAngularComponent             } from './_modules/_Demos/_DemosCurriculum/curriculumAngular/curriculumAngular.component';
 import { DemosFeaturesWebComponent              } from './_modules/_Demos/_DemosFeatures/_demos-features-web/demos-features-web.component';
 import { AlgorithmCollisionComponent            } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-collision/algorithm-collision.component';
 import { AlgorithmDijkstraComponent             } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-dijkstra/algorithm-dijkstra.component';
@@ -50,7 +50,6 @@ import { FilesGenerationCSVComponent } from './_modules/_Demos/_DemosFeatures/fi
 import { FilesGenerationPDFComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-pdf/files-generation-pdf.component';
 import { FilesGenerationWebComponent } from './_modules/_Demos/_DemosFeatures/files-generation/_files-generation-web/files-generation-web.component';
 import { FilesGenerationXLSComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-xls/files-generation-xls.component';
-import { FilesGenerationZIPComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-zip/files-generation-zip.component';
 import { GameHanoiAutoComponent } from './_modules/_Demos/_DemosFeatures/games/game-hanoi-auto/game-hanoi-auto.component';
 import { GameHanoi3dComponent   } from './_modules/_Demos/_DemosFeatures/games/game-hanoi3d/game-hanoi3d.component';
 import { SudokuComponent        } from './_modules/_Demos/_DemosFeatures/games/game-sudoku/game-sudoku.component';
@@ -68,6 +67,7 @@ import { ContactformComponent        } from './_modules/about/contactform/contac
 import { TechnicalSpecsComponent     } from './_modules/about/technicalspecs/technical-specs/technical-specs.component';
 import { DemosLangWebComponent       } from './_modules/_Demos/_DemosLang/_demos-lang-web/demos-lang-web.component';
 import { DemosCurriculumWebComponent } from './_modules/_Demos/_DemosCurriculum/_demos-curriculum-web/demos-curriculum-web.component';
+import { CurriculunmCppComponent     } from './_modules/_Demos/_DemosCurriculum/curriculunm-cpp/curriculunm-cpp.component';
 import { CppDemoComponent        } from './_modules/_Demos/_DemosLang/cpp-demo/cpp-demo.component';
 import { NetcoredemoComponent    } from './_modules/_Demos/_DemosLang/netcoredemo/netcoredemo.component';
 import { NodejsDemoComponent     } from './_modules/_Demos/_DemosLang/nodejs-demo/nodejs-demo.component';
@@ -78,7 +78,7 @@ import { BaseSortableHeader      } from './_directives/sortable.directive';
 import { BaseComponent           } from './_components/base/base.component';
 import { EduResourcesComponent   } from './_modules/about/edu-resources/edu-resources.component';
 import { _SearchComponent        } from './_components/search/_search.component ';
-import { FractalDemoComponent      } from './_modules/_Demos/_DemosFeatures/miscelaneous/fractalDemo/juliaform.component';
+import { FractalDemoComponent    } from './_modules/_Demos/_DemosFeatures/miscelaneous/fractalDemo/juliaform.component';
 //
 export function initialize(_configService: ConfigService) 
 // 
@@ -151,7 +151,6 @@ export class CustomErrorHandler implements ErrorHandler {
         FilesGenerationXLSComponent,
         FilesGenerationCSVComponent,
         FilesGenerationPDFComponent,
-        FilesGenerationZIPComponent,
         TechnicalSpecsComponent,
         UnitTestingComponent,
         SudokuComponent,
@@ -170,13 +169,14 @@ export class CustomErrorHandler implements ErrorHandler {
         GameHanoi3dComponent,
         MathParsingComponent,
         GameTetrisComponent,
-        CurriculumComponent,
+        CurriculumAngularComponent,
         FeaturePagesComponent,
         ContactformComponent,
         DemosFeaturesWebComponent,
         DemosWebComponent,
         DemosLangWebComponent,
         DemosCurriculumWebComponent,
+        CurriculunmCppComponent,
         CppDemoComponent,
         NetcoredemoComponent,
         NodejsDemoComponent,

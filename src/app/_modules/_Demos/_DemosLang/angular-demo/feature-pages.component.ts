@@ -24,7 +24,7 @@ import { Router                                                          } from 
 export class FeaturePagesComponent  extends _SearchComponent  
 {
     //
-    toogleLisCaption: string = "[Ir a Curriculum...]";
+    toogleLisCaption: string = "[Ir a Curriculum / Angular...]";
     //
     constructor(
                 public override searchService         : _SearchService,
@@ -37,7 +37,7 @@ export class FeaturePagesComponent  extends _SearchComponent
     toggleList() 
     {
       //
-      this.router.navigateByUrl('/Curriculum'); // Redirects to '/target-route'
+      this.router.navigateByUrl('/CurriculumAngular'); // Redirects to '/target-route'
     }
 } 
 
