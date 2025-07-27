@@ -677,7 +677,17 @@
         -- [_] REPLICAR EN ORDEN A : JAVA / JAVSACXRIPT / Python
 
         -- [_] Replicar en cada lenguaje a Curriculum. 
+
+
+ -- [_] c# sql curriculum
  
+ -- [_] c++ curriculum.
+
+ -- [_] tensorflow curriculum.
+ 
+ -- [_] datascience curriculum.
+
+
 ////////////////////////////////////////////////////////////////////////////////
 -- [_]  TENSORFLOW FOR c++
 ////////////////////////////////////////////////////////////////////////////////
