@@ -6,8 +6,13 @@ import { AAboutWebComponent              } from './_modules/about/_a-about-web/a
 import { SCMComponent                    } from './_modules/about/scm/scm.component';
 import { LLMListComponent                } from './_modules/about/llmlist/llmlist.component';
 import { TechnicalSpecsComponent         } from './_modules/about/technicalspecs/technical-specs/technical-specs.component';
+import { DemosCurriculumWebComponent     } from './_modules/_Demos/_DemosCurriculum/_demos-curriculum-web/demos-curriculum-web.component';
 import { CurriculumAngularComponent      } from './_modules/_Demos/_DemosCurriculum/curriculumAngular/curriculumAngular.component';
 import { CurriculunmCppComponent         } from './_modules/_Demos/_DemosCurriculum/curriculunm-cpp/curriculunm-cpp.component';
+import { CurriculumDjangoPythonComponent } from './_modules/_Demos/_DemosCurriculum/curriculum-django-python/curriculum-django-python.component';
+import { CurriculumNodeJsComponent       } from './_modules/_Demos/_DemosCurriculum/curriculum-node-js/curriculum-node-js.component';
+import { CurriculumSpringBootCompont     } from './_modules/_Demos/_DemosCurriculum/curriculum-spring-boot/curriculum-spring-boot.component';
+import { CurriculumNetcoreComponent      } from './_modules/_Demos/_DemosCurriculum/curriculum-netcore/curriculum-netcore.component';
 import { DemosFeaturesWebComponent       } from './_modules/_Demos/_DemosFeatures/_demos-features-web/demos-features-web.component';
 import { AlgorithmCollisionComponent     } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-collision/algorithm-collision.component';
 import { AlgorithmDijkstraComponent      } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-dijkstra/algorithm-dijkstra.component';
@@ -34,7 +39,6 @@ import { OcrPhotoCaptureComponent    } from './_modules/_Demos/_DemosFeatures/mi
 import { DemosWebComponent           } from './_modules/_Demos/DemosWeb/demos-web/demos-web.component';
 import { ContactformComponent        } from './_modules/about/contactform/contactform.component';
 import { IndexComponent              } from './_modules/about/index/index.component';
-import { DemosCurriculumWebComponent } from './_modules/_Demos/_DemosCurriculum/_demos-curriculum-web/demos-curriculum-web.component';
 import { DemosLangWebComponent       } from './_modules/_Demos/_DemosLang/_demos-lang-web/demos-lang-web.component';
 import { CppDemoComponent            } from './_modules/_Demos/_DemosLang/cpp-demo/cpp-demo.component';
 import { NetcoredemoComponent        } from './_modules/_Demos/_DemosLang/netcoredemo/netcoredemo.component';
@@ -86,9 +90,13 @@ export const routes: _Route[] = [
   {  id: 0,  path: 'Miscelaneous'          , component: MiscelaneousComponent               , caption: ' Miscelaneous - Main Page'                    },
   {  id: 0,  path: 'DemosFeaturesWeb'      , component: DemosFeaturesWebComponent           , caption: ' Demos / Features - Main Page'                },
   {  id: 0,  path: 'DemosWeb'              , component: DemosWebComponent                   , caption: ' Demos            - Main Page'                },
-  {  id: 0,  path: 'CurriculumAngular'     , component: CurriculumAngularComponent          , caption: ' Curriculum - Angular'                        },
-  {  id: 0,  path: 'CurriculumCpp'         , component: CurriculunmCppComponent             , caption: ' Curriculum - C++'                            },
   {  id: 0,  path: 'DemosCurriculumWeb'    , component: DemosCurriculumWebComponent         , caption: ' Curriculum - Main Page'                      },
+  {  id: 0,  path: 'CurriculumAngular'     , component: CurriculumAngularComponent          , caption: ' Curriculum - Angular    / Typescript'        },
+  {  id: 0,  path: 'CurriculumCpp'         , component: CurriculunmCppComponent             , caption: ' Curriculum - C++'                            },
+  {  id: 0,  path: 'CurriculumNodeJs'      , component: CurriculumNodeJsComponent           , caption: ' Curriculum - Node.js    / Javascript'        },
+  {  id: 0,  path: 'CurriculumSpringBoot'  , component: CurriculumSpringBootCompont         , caption: ' Curriculum - SpringBoot / Java'              },
+  {  id: 0,  path: 'CurriculumDjango'      , component: CurriculumDjangoPythonComponent     , caption: ' Curriculum - Django     / Python'            },
+  {  id: 0,  path: 'CurriculumNetCore'     , component: CurriculumNetcoreComponent          , caption: ' Curriculum - .net core  / c#'                },
   {  id: 0,  path: 'DemosLanguageWeb'      , component: DemosLangWebComponent               , caption: ' Demos / Language - Main Page'                },
   {  id: 0,  path: 'AngularDemo'           , component: FeaturePagesComponent               , caption: ' Demos / Language - Angular'                  },
   {  id: 0,  path: 'CppDemo'               , component: CppDemoComponent                    , caption: ' Demos / Language - C++'                      },

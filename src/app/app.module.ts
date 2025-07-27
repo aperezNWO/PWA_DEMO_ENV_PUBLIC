@@ -37,7 +37,13 @@ import { IndexComponent                         } from './_modules/about/index/i
 import { SCMComponent                           } from './_modules/about/scm/scm.component';
 import { LLMListComponent                       } from './_modules/about/llmlist/llmlist.component';
 import { DemosWebComponent                      } from './_modules/_Demos/DemosWeb/demos-web/demos-web.component';
+import { DemosCurriculumWebComponent            } from './_modules/_Demos/_DemosCurriculum/_demos-curriculum-web/demos-curriculum-web.component';
+import { CurriculunmCppComponent                } from './_modules/_Demos/_DemosCurriculum/curriculunm-cpp/curriculunm-cpp.component';
 import { CurriculumAngularComponent             } from './_modules/_Demos/_DemosCurriculum/curriculumAngular/curriculumAngular.component';
+import { CurriculumDjangoPythonComponent        } from './_modules/_Demos/_DemosCurriculum/curriculum-django-python/curriculum-django-python.component';
+import { CurriculumNodeJsComponent              } from './_modules/_Demos/_DemosCurriculum/curriculum-node-js/curriculum-node-js.component';
+import { CurriculumSpringBootCompont            } from './_modules/_Demos/_DemosCurriculum/curriculum-spring-boot/curriculum-spring-boot.component';
+import { CurriculumNetcoreComponent             } from './_modules/_Demos/_DemosCurriculum/curriculum-netcore/curriculum-netcore.component';
 import { DemosFeaturesWebComponent              } from './_modules/_Demos/_DemosFeatures/_demos-features-web/demos-features-web.component';
 import { AlgorithmCollisionComponent            } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-collision/algorithm-collision.component';
 import { AlgorithmDijkstraComponent             } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-dijkstra/algorithm-dijkstra.component';
@@ -66,8 +72,6 @@ import { OcrPhotoCaptureComponent    } from './_modules/_Demos/_DemosFeatures/mi
 import { ContactformComponent        } from './_modules/about/contactform/contactform.component';
 import { TechnicalSpecsComponent     } from './_modules/about/technicalspecs/technical-specs/technical-specs.component';
 import { DemosLangWebComponent       } from './_modules/_Demos/_DemosLang/_demos-lang-web/demos-lang-web.component';
-import { DemosCurriculumWebComponent } from './_modules/_Demos/_DemosCurriculum/_demos-curriculum-web/demos-curriculum-web.component';
-import { CurriculunmCppComponent     } from './_modules/_Demos/_DemosCurriculum/curriculunm-cpp/curriculunm-cpp.component';
 import { CppDemoComponent        } from './_modules/_Demos/_DemosLang/cpp-demo/cpp-demo.component';
 import { NetcoredemoComponent    } from './_modules/_Demos/_DemosLang/netcoredemo/netcoredemo.component';
 import { NodejsDemoComponent     } from './_modules/_Demos/_DemosLang/nodejs-demo/nodejs-demo.component';
@@ -170,13 +174,17 @@ export class CustomErrorHandler implements ErrorHandler {
         MathParsingComponent,
         GameTetrisComponent,
         CurriculumAngularComponent,
+        CurriculumNodeJsComponent,
+        CurriculumDjangoPythonComponent,
+        CurriculunmCppComponent,
+        CurriculumSpringBootCompont,
+        CurriculumNetcoreComponent,
         FeaturePagesComponent,
         ContactformComponent,
         DemosFeaturesWebComponent,
         DemosWebComponent,
         DemosLangWebComponent,
         DemosCurriculumWebComponent,
-        CurriculunmCppComponent,
         CppDemoComponent,
         NetcoredemoComponent,
         NodejsDemoComponent,

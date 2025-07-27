@@ -188,13 +188,17 @@
         "log_name"   : "PAGE_DEMOS_CURRICIULUM_INDEX",
         "page_name"  : "[DEMOS - CURRICULUM]",
         "pages"      : [
-            { "id": 1, "url" : "/CurriculumAngular"       , "text": "[Referencia - Angular]"               },
-            { "id": 2, "url" : "/CurriculumCpp"           , "text": "[Referencia - C++]"                   }
-         ]
+            { "id": 1, "url" : "/CurriculumAngular"       , "text": "[Referencia - Angular    / TypeScript]"               },
+            { "id": 2, "url" : "/CurriculumCpp"           , "text": "[Referencia - C++]"                                   },
+            { "id": 3, "url" : "/CurriculumNetCore"       , "text": "[Referencia - .net core  / C#]"                       },   
+            { "id": 4, "url" : "/CurriculumNodeJs"        , "text": "[Referencia - Node.js    / Javascript]"               },
+            { "id": 5, "url" : "/CurriculumSpringBoot"    , "text": "[Referencia - SpringBoot / Java]"                     },
+            { "id": 6, "url" : "/CurriculumDjango"        , "text": "[Referencia - django     / Python]"                   }
+          ]
       },
       {
         "log_name"   : "PAGE_CURRICULUM_ANGULAR",
-        "page_name"  : "[REFERENCIA - ANGULAR]",
+        "page_name"  : "[REFERENCIA - ANGULAR / TYPESCRIPT]",
         "pages"      : [
              { "id": 1, "url" : "./assets/demos/angularDemo/angular_Curriculum_base.json"       , "text": ""    }
         ]
@@ -203,7 +207,35 @@
         "log_name"   : "PAGE_CURRICULUM_CPP",
         "page_name"  : "[REFERENCIA - C++]",
         "pages"      : [
-             { "id": 1, "url" : "./assets/demos/cppDemo/cpp_Curriculum_base.json"       , "text": ""    }
+             { "id": 1, "url" : "./assets/demos/cppDemo/cpp_Curriculum_base.json"               , "text": ""    }
+        ]
+      },
+      {
+        "log_name"   : "PAGE_CURRICULUM_NET_CORE",
+        "page_name"  : "[REFERENCIA - .NET CORE / c#]",
+        "pages"      : [
+             { "id": 1, "url" : "./assets/demos/netCoreDemo/netcore_Curriculum_base.json"       , "text": ""    }
+        ]
+      },
+      {
+        "log_name"   : "PAGE_CURRICULUM_NODE_JS",
+        "page_name"  : "[REFERENCIA - NODE.JS / JAVASCRIPT]",
+        "pages"      : [
+             { "id": 1, "url" : "./assets/demos/nodejsDemo/nodejs_Curriculum_base.json"           , "text": ""    }
+        ]
+      },
+      {
+        "log_name"   : "PAGE_CURRICULUM_SPRING_BOOT_JAVA",
+        "page_name"  : "[REFERENCIA - SPRINGBOOT / JAVA ]",
+        "pages"      : [
+             { "id": 1, "url" : "./assets/demos/springBootDemo/springBoot_Curriculum_base.json"     , "text": ""    }
+        ]
+      },
+      {
+        "log_name"   : "PAGE_CURRICULUM_DJANGO_PYTHON",
+        "page_name"  : "[REFERENCIA - DJANGO / PYTHON ]",
+        "pages"      : [
+             { "id": 1, "url" : "./assets/demos/djangoDemo/django_Curriculum_base.json"              , "text": ""    }
         ]
       },
       {
