@@ -193,7 +193,7 @@
             { "id": 3, "url" : "/CurriculumNetCore"       , "text": "[Referencia - .net core  / C#]"                       },   
             { "id": 4, "url" : "/CurriculumNodeJs"        , "text": "[Referencia - Node.js    / Javascript]"               },
             { "id": 5, "url" : "/CurriculumSpringBoot"    , "text": "[Referencia - SpringBoot / Java]"                     },
-            { "id": 6, "url" : "/CurriculumDjango"        , "text": "[Referencia - django     / Python]"                   }
+            { "id": 6, "url" : "/CurriculumDjango"        , "text": "[Referencia - Django     / Python]"                   }
           ]
       },
       {
@@ -398,42 +398,42 @@
       },
       {
         "log_name"   : "PAGE_DEMOS_DJANGO_PYTHON",
-        "page_name"  : "[DEMOS / PYTHON - DJANGO]",
+        "page_name"  : "[DEMOS - PYTHON / DJANGO]",
         "pages"      : [
              { "id": 1, "url" : "./assets/demos/djangoDemo/django_Demos_base.json"             , "text": ""      }
         ]
       },
       {
         "log_name"   : "PAGE_DEMOS_SPRING_BOOT_JAVA",
-        "page_name"  : "[DEMOS / SPRINGBOOT - JAVA]",
+        "page_name"  : "[DEMOS - SPRINGBOOT / JAVA]",
         "pages"      : [
           { "id": 1, "url" : "./assets/demos/springBootDemo/springBoot_Demos_base.json"         , "text": ""      }
         ]
       },
       {
         "log_name"   : "PAGE_DEMOS_NETCORE_CPP",
-        "page_name"  : "[DEMOS / .NET CORE - C++]",
+        "page_name"  : "[DEMOS - C++ / .NET CORE]",
         "pages"      : [
           { "id": 1, "url" : "./assets/demos/cppDemo/cpp_Demos_base.json"                       , "text": ""      }
         ]
       },
       {
         "log_name"   : "PAGE_DEMOS_NETCORE_CSHARP",
-        "page_name"  : "[DEMOS / .NET CORE - C#]",
+        "page_name"  : "[DEMOS - C# / .NET CORE]",
         "pages"      : [
           { "id": 1, "url" : "./assets/demos/netCoreDemo/netcore_demos_base.json"               , "text": ""      }
         ]
       },
       {
         "log_name"   : "PAGE_DEMOS_NODEJS_JAVASCRIPT",
-        "page_name"  : "[DEMOS / NODE.JS - JAVASCRIPT]",
+        "page_name"  : "[DEMOS -  NODE.JS / JAVASCRIPT]",
         "pages"      : [
           { "id": 1, "url" : "./assets/demos/nodejsDemo/nodejs_Demos_base.json"               , "text": ""      }
         ]
       },
       {
         "log_name"   : "PAGE_DEMOS_ANGULAR_JAVASCRIPT",
-        "page_name"  : "[DEMOS / ANGULAR - TYPESCRIPT]",
+        "page_name"  : "[DEMOS - ANGULAR / TYPESCRIPT]",
         "pages"      : [
           { "id": 1, "url" : "./assets/demos/angularDemo/angular_Demos_base.json"              , "text": ""      }
         ]
