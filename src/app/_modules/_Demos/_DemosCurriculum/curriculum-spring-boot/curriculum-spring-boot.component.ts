@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { _SearchComponent } from 'src/app/_components/search/_search.component ';
-import { SearchComponent } from 'src/app/_components/search/search.component';
-import { PAGE_ID, PAGE_CURRICULUM_CPP, PAGE_SIZE, SEARCH_TERM } from 'src/app/_models/common';
+import { PAGE_ID, PAGE_CURRICULUM_SPRING_BOOT_JAVA, PAGE_SIZE, SEARCH_TERM } from 'src/app/_models/common';
 import { ConfigService } from 'src/app/_services/ConfigService/config.service';
 import { _SearchService } from 'src/app/_services/searchService/_search.service';
 
@@ -14,7 +13,7 @@ import { _SearchService } from 'src/app/_services/searchService/_search.service'
   [
       ConfigService,
       _SearchService,
-      { provide: PAGE_ID,     useValue: PAGE_CURRICULUM_CPP     }, // Unique ID for this component
+      { provide: PAGE_ID,     useValue: PAGE_CURRICULUM_SPRING_BOOT_JAVA     }, // Unique ID for this component
       { provide: PAGE_SIZE,   useValue: 8                       },
       { provide: SEARCH_TERM  
            ,  useFactory: (configService: ConfigService) => configService.queryUrlParams("searchTerm")                         
@@ -24,7 +23,7 @@ import { _SearchService } from 'src/app/_services/searchService/_search.service'
 })
 export class CurriculumSpringBootCompont extends _SearchComponent{
       //
-      toogleLisCaption: string = "[Ir a Demos / C++ ...]";
+      toogleLisCaption: string = "[Ir a Demos - SpringBoot / Java  ...]";
       //
       constructor(
                   public override searchService         : _SearchService,
@@ -38,6 +37,6 @@ export class CurriculumSpringBootCompont extends _SearchComponent{
       toggleList() 
       {
         //
-        this.router.navigateByUrl('/CppDemo'); // Redirects to '/target-route'
+        this.router.navigateByUrl('/SpringBootDemo'); // Redirects to '/target-route'
       }
 }

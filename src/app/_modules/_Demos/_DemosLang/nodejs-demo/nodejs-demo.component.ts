@@ -1,11 +1,11 @@
 import { Component                                                     } from '@angular/core';
+import { Router                                                        } from '@angular/router';
 import { _environment                                                  } from 'src/environments/environment';
 import { _BaseModel                                                    } from 'src/app/_models/entity.model';
 import { PAGE_DEMOS_NODEJS_JAVASCRIPT, PAGE_ID, PAGE_SIZE,SEARCH_TERM  } from 'src/app/_models/common';
 import { ConfigService                                                 } from 'src/app/_services/ConfigService/config.service';
 import { _SearchComponent                                              } from 'src/app/_components/search/_search.component ';
 import { _SearchService                                                } from 'src/app/_services/searchService/_search.service';
-
 //
 @Component({
   selector: 'app-nodejs-demo',
@@ -24,14 +24,23 @@ import { _SearchService                                                } from 's
 })
 export class NodejsDemoComponent   extends _SearchComponent  
 {
-  //
-  constructor(
-              public override searchService         : _SearchService,
-  )
-  {
       //
-      super(searchService);
-  }
+      toogleLisCaption: string = "[Ir a Referencia - .node.js / javascript...]";
+      //
+      constructor(
+                  public override searchService         : _SearchService,
+                  public          router                : Router,
+      )
+      {
+          //
+          super(searchService);
+      }
+      //
+      toggleList() 
+      {
+          //
+          this.router.navigateByUrl('/CurriculumNodeJs'); // Redirects to '/target-route'
+      }
 } 
 
 

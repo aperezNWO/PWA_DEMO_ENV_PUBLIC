@@ -5,6 +5,7 @@ import { PAGE_DEMOS_SPRING_BOOT_JAVA, PAGE_ID, PAGE_SIZE,SEARCH_TERM     } from 
 import { ConfigService                                                   } from 'src/app/_services/ConfigService/config.service';
 import { _SearchService                                                  } from 'src/app/_services/searchService/_search.service';
 import { _SearchComponent                                                } from 'src/app/_components/search/_search.component ';
+import { Router } from '@angular/router';
 
 //
 @Component({
@@ -24,13 +25,22 @@ import { _SearchComponent                                                } from 
 })
 export class SpringBootDemoComponent extends _SearchComponent  
 {
-    //
-    constructor(
-                public override searchService         : _SearchService,
-    )
-    {
-        //
-        super(searchService);
-    }
+      //
+      toogleLisCaption: string = "[Ir a Referencia - SpringBoot / Java ...]";
+      //
+      constructor(
+                  public override searchService         : _SearchService,
+                  public          router                : Router,
+      )
+      {
+          //
+          super(searchService);
+      }
+      //
+      toggleList() 
+      {
+          //
+          this.router.navigateByUrl('/CurriculumSpringBoot'); // Redirects to '/target-route'
+      }
 } 
 
