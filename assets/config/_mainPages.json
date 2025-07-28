@@ -189,12 +189,14 @@
         "page_name"  : "[DEMOS - CURRICULUM]",
         "pages"      : [
             { "id": 1, "url" : "/CurriculumAngular"       , "text": "[Referencia - Angular    / TypeScript]"               },
-            { "id": 2, "url" : "/CurriculumCpp"           , "text": "[Referencia - C++]"                                   },
+            { "id": 2, "url" : "/CurriculumCpp"           , "text": "[Referencia - C++]"                                   }
+        ],
+        "_pages" :     [
             { "id": 3, "url" : "/CurriculumNetCore"       , "text": "[Referencia - .net core  / C#]"                       },   
             { "id": 4, "url" : "/CurriculumNodeJs"        , "text": "[Referencia - Node.js    / Javascript]"               },
             { "id": 5, "url" : "/CurriculumSpringBoot"    , "text": "[Referencia - SpringBoot / Java]"                     },
             { "id": 6, "url" : "/CurriculumDjango"        , "text": "[Referencia - Django     / Python]"                   }
-          ]
+        ]
       },
       {
         "log_name"   : "PAGE_CURRICULUM_ANGULAR",
