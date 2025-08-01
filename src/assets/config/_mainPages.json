@@ -106,6 +106,11 @@
         "page_name"  : "[ACERCA DE - EDUCATIONAL RESOURCES]",
         "pages"      : [
               {
+                  "id"  : 0,
+                  "url" : "https://swebok.org/",
+                  "name": "SWEBOK - [Software Engineering Body of Knowledge]"
+              },
+              {
                   "id"  : 1,
                   "url" : "https://angular.dev/",
                   "name": "Angular Main Page"
