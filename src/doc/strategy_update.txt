@@ -81,6 +81,8 @@
 
                 --  [_]  Tensorflow Update Log.
 
+                        --  [_]  https://chat.qwen.ai/c/5ebb0c4c-fc7a-4883-8d27-cdcba22e3afb
+                        
                         --  [_]  Somee admits x32 only arch. for c and c++.
 
                         --  [_]  TryAsp.net admits both x32 and x64.
@@ -117,26 +119,10 @@
 
          --  [_]   OWASP.
         
-////////////////////////////////////////////////////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////
  // SCM STRATEGY
  ////////////////////////////////////////////////////////////////////////////////
       
-   --  [_]  SAVE DISK SPACE
-
-   --  [_]  DEV CONTAINERS.
-
-            -- [_] free docker hosting.
-        
-   --  [_]  FIREBASE STUDIO TEST 
-
-        --  [_]  PWA_DEMO_ENV_PUBLIC   -> SHOW TO PUBLIC
-
-        --  [_]  PWA_DEMO_ENV_DEV      -> TENSORFLOW / DATA SCIENCE 
-
-  -- [_] Cambiar URL : 
+ -- [_] ver archivo "scm.txt"
  
-        PWA_DEMO_ENV_PUBLIC -> ANGULAR_DEMO_ENV_PROD.
-        PWA_DEMO_ENV_DEV    -> ANGJLAR_DEMO_ENV_PUBLIC.
-
-
 ////////////////////////////////////////////////////////////////////////////////

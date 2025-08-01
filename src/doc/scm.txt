@@ -1,3 +1,7 @@
+*********************************************************************
+** Software Configuration Management
+*********************************************************************
+
 =====================================================================
 -- SCM - HOSTING
 =====================================================================
@@ -364,5 +368,26 @@ git commit -m "Application [ANGULAR DEMO - ENV_PUBLIC] v[1.8.3]
 >>1)  Nested Main Pages. " 
 git push 
 git pull
+
+/////////////////////////////////////////////////////////////////
+// SCM STRATEGY
+/////////////////////////////////////////////////////////////////
+
+  --  [_]  SAVE DISK SPACE
+
+   --  [_]  DEV CONTAINERS.
+
+            -- [_] free docker hosting.
+        
+   --  [_]  FIREBASE STUDIO TEST 
+
+        --  [_]  PWA_DEMO_ENV_PUBLIC   -> SHOW TO PUBLIC
+
+        --  [_]  PWA_DEMO_ENV_DEV      -> TENSORFLOW / DATA SCIENCE 
+
+  -- [_] Cambiar URL : 
+ 
+        PWA_DEMO_ENV_PUBLIC -> ANGULAR_DEMO_ENV_PROD.
+        PWA_DEMO_ENV_DEV    -> ANGJLAR_DEMO_ENV_PUBLIC.
 
 /////////////////////////////////////////////////////////////////
