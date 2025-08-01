@@ -1,0 +1,108 @@
+/////////////////////////////////////////////////////////////////
+// STRATEGY DONE 
+/////////////////////////////////////////////////////////////////
+
+-- [x] TESSERACT
+ 
+           --  [x] Get Tesseract Version from C++ Builder Wrapper dll / asp.net core end pont.
+
+           --  [x] Angular Integration.
+
+    --  [x]  Unify C++ Backend / ASP.NET CORE.
+
+                --  [x]  ASP_NET_CORE_CSHARP_DEMO.
+
+                          --  [_]  REMOVE C++ DLL FUNCIONALITY.
+
+                --  [x]  ASP_NET_CORE_CPP_ENTRY.
+
+                          --  [x]  SWAGGER.
+
+                          --  [x]  REDUCE CODE.
+
+                --  [x]  ASP_NET_CORE_EF_SAMPLE.
+                
+         --  [x]  REFERENCES : 
+        
+                --  [x]  c++ library        -> update version
+
+                --  [x]  ASP.NET end point  -> update version
+
+ -- [x] LINK DEMOS|LENGUAGES --> <-- LENGUAES| CURRICULUM
+
+ -- [x]  C++ DEMOS -> ALGORITHM.
+        
+        -- [x] SORT BENCHMARK OUTPUT AS JSON.
+
+ -- [x] botones "Ir a Demo" , "ir a Curriculum".
+
+ -- [x]  asp.net core swagger.
+
+ -- [x]  FRACTAL DEMO.
+
+        -- [x]  PDF EXPORT.
+
+        -- [x]  URL:
+
+                https://tensorflownetcore64.tryasp.net/generatejuliaparams/?maxIterations=500&realPart=-0.4&imagPart=0.6
+
+ -- [x]  C++ STANDARD VERSION FUNCTION.
+
+ -- [x]  C++ DEMOS -> OPEN CV.
+
+        -- [x]  CPP DEMOS ENTRY OPENCV / OCR.
+
+        -- [x]  FIX REFERENCES.
+
+        -- [x]  OOP INHERITANCE THROUGH ALGORITHM.DLL PARENT CLASS 
+
+               -- [_] https://chat.qwen.ai/c/98e5e0ec-6031-46b6-adb0-d7a2ef535c5b
+
+                (A). Read/Write  file parent method.
+                (B). Read Config file parent method.
+        
+-- [x] ASP.NET CORE c++ ENTRY POINT source code link.
+
+        -- [x] swagger for ASP.NET CORE c++ ENTRY POINT.
+
+        -- [x] ASP.NET CORE TECHNICAL SPECIFICATIONS / LIBRARY -> DLL.
+
+--  [x]  Disable C++ BUILDER.
+
+        --  [x]  uninstall.
+        
+        --  [x]  Compatible Toolchain.
+   
+-- [x] Sound init workaround.  
+
+-- [x] button copy to clipborad guid.
+
+-- [x]  Unify C++ Backend / DLLs.
+
+                --  [x]  CPP_CBUILDER_ALGORITHM.
+
+                --  [x]  CPP_CBUILDER_TESSERACT.
+                
+                --  [x]  Split Tesseract / Tensorflow.
+
+                --  [x]  CPP_GCC_TESSERACT.
+
+                        --  [x]  command line and toolchain on header ->  -> C:\msys64\ucrt64\bin.
+
+                        --  [_]  dist files.
+
+                --  [x]  CPP_GCC_ALGORITHM.
+
+                        --  [x]  command line and toolchain on header -> C:\msys64\ucrt64\bin.
+
+                        --  [_]  dist files.
+
+                --  [x]  CPP_GCC_TENSORFLOW.
+
+                        --  [X]  command line and toolchain on header ->  TOOLCHAIN : C:\msys64\ucrt64\bin.
+
+                        --  [_]  dist files.
+
+ -- [X]  c++ -> OOP -> inheritance -> ReadConfigFile();
+
+/////////////////////////////////////////////////////////////////

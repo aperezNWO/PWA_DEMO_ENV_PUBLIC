@@ -2,588 +2,130 @@
 -- STRATEGY UPDATE
 ////////////////////////////////////////////////////////////////////////////////
 
--- [x] Sound init workaround.  
+-- [_] SETTINGS
 
--- [x] button copy to clipborad guid.
+        -- [_] SOUND ON/OFF.
 
---  [_]  Disable C++ BUILDER.
+        -- [_] LANG (iso code).
 
-        --  [_]  uninstall.
-        
-        --  [_]  Compatible Toolchain.
-   
+                -- [_] app v[2.1.x].
 
--- [_] book / resources.
+-- [_]  TECH SPECS.
 
-        -- [_] w3c.
+        -- [_]  BACKEND VERSIONS.
 
-        -- [_] freecodecamp.
-
-        -- [_] mdn.
-
-        -- [_] the art opute programming.
-
-        -- [_] angular.dev.
-
-        -- [_] owasp.
-
-        -- [_] deeplearning.ai.
-
-        -- [_] coursera - algorithms.
-        
-
--- [_] home menu items.
-
-        -- [_] programming languages / backend.
-
-        -- [_] uix libraries.
-
-               -- [_] 2d / 3d.
-
-               -- [_] material.
-
-               -- [_] ng bootstrap.
-               
-        -- [_] export  libraries
-
-               -- [_] epp plus.
-
-               -- [_] jsPdf / iTextSharp.
-
-               -- [_] char js.
-
-        -- [_] miscelaneous
-
-               -- [_] math parsing.
-
-               -- [_] ngb pad.
+        -- [_]  techical specs as dynamic list.
  
-        -- [_] computer visions / machine learning
+-- [_] google translation API. 
 
-                -- [_] tesseract.
+-- [_] LLM api. 
 
-                -- [_] tensorflow.
-   
-                -- [_] opencv.
+-- [_] csv / xls + ZIP.
+
+        -- [_] sobre copias de funciones actuales.
+
+        -- [_] remove zip entry from index.
+
+
+-- [_] grid component. 
+
+-- [_] reference component. 
+
+        -- [_] REFERENCES AS JSON FILES.
+
+ ////////////////////////////////////////////////////////////////////////////////
+ // LEARNING STRATEGY
+ ////////////////////////////////////////////////////////////////////////////////
+
+ -- [_] procedimiento
+
+        -- [_] INVESTIGAR EN C++
+        
+        -- [_] REPLICAR EN ORDEN A : JAVA / JAVSACXRIPT / Python
+
+        -- [_] Replicar en cada lenguaje a Curriculum. 
+
+ -- [_] c# sql curriculum-
+
+         -- [_] sql.
+ 
+ -- [_] c++ curriculum.
+ 
+        -- [_] TESSERACT.      
+
+                -- [_]  ONLINE TRANSLATION.
+
+        -- [_] OPEN CV.
+
+                -- [_]  EXPLORE API.
+
+        -- [_] TENSORFLOW 
+
+                -- [_]  EXPLORE API.
+
+                -- [_]  WORD CLASIFICATION
+
+                        -- [_] https://chat.qwen.ai/c/c70ffaa5-78dc-4eeb-87db-3b8f7879fd77
+
+                -- [_]  MACHINE LEARNING, ARTIFICIAL INTELLIGENCE, NEURAL NETWORKS CONCEPTS.
+
+                        -- [_]  https://chat.qwen.ai/c/2370354d-1564-4778-b141-ca63c678014a
+
+                -- [_]  LICENSE PLATE RECOGNITION
+
+                        -- [_] https://chat.qwen.ai/c/1bd6717f-364c-450d-909d-e67e58088c5c
+
+                        -- [_] https://chat.qwen.ai/c/0ad6b5a1-5d93-4b70-ac12-7067ffaebf9b
+                        
+                        -- [_]  https://chat.qwen.ai/c/c127093a-9ae5-4fcb-8e6e-95b02e739f9c
+
+                --  [_]  Tensorflow Update Log.
+
+                        --  [_]  Somee admits x32 only arch. for c and c++.
+
+                        --  [_]  TryAsp.net admits both x32 and x64.
+
+                        --  [_]  TryAsp.net admit c++ compiled code using basic c++ libraries.
+
+                        --  [_]  TryAsp.net doen't admit c++ compiled code including tensorflow.
+
+                        --  [_]  TryAsp.net admit c generated code for tensorflow x64.
+
+                        --  [_]  TryAsp.net c genrerated Tensorflow code expects *.PB model file.
                 
-    -- [_] scm             
+                        --  [_]  *.pb model files are generated mostly on Python.        
 
-        -- [_] row detail grid.
 
-        -- [_] ngb grid component.
+        -- [_]  Smart Pointers.
 
-        -- [_] AI_PROMPTS.
 
-        -- [_] AI_DEV.
+ -- [_] node.js curriculum 
+ 
+        -- [_] smtp sample / contact form.        
 
-        -- [_] DEV_ENVS.
+ -- [_] tensorflow curriculum.
+ 
+ -- [_] datascience curriculum.
 
-        -- [_] HOSTINGS.
+ --  [_] SWEBOK
+ 
+         -- [_]    arch doc. 
 
-        -- [_] DB.
-
--- [_] hosting files cleanup service.
-
--- [_] SSR.
-
--- [_] PWA / SPA.
-
--- [_] modules / engines.
-
--- [_] CONTACT FORM.
-
-        -- [_] oAuth.
-
-        -- [_] dynamic form.
-
--- [_] computer vision
-
-       -- [_] https://opencv.org/
-
-        -- [_] OPEN CV / JAVASCRIPT.   
-
-        -- [_] OPEN CV / c++ builder.
-
-        -- [_] TESSERACT / JAVASCRIPT / C++ .   
-
--- [_] MACHINE LEARNING.
-
-        -- [_] OPEN CV / JAVASCRIPT.   
-
-        -- [_] OPEN CV / c++ builder.
-
-        -- [_] TENSORFLOW / JAVASCRIPT.  
-        
--- [_] TOPICS.        
-
-        -- [_] index aditional fields.
-
-        -- [_] ngb grid.
-
-                -- [_] voice search.
-
-        -- [_] angular - topics.
-
-                        -- [_] route attribute.
-
-        -- [_] angular - features.
-
-                        -- [_] route attribute.        
-
--- [_] speech service.
-
--- [_] read config from database.
-
--- [_] revisión general.
-
-        -- [x] sudoku button.
-        
-        -- [x] routers caption text correction.
-
-        -- [X] menu items.
-
-                -- [X] computer vision.
-
-                -- [X] amigo secreto.
-
-        -- [_] techical specs revision.
-
-               -- [_] iterate from list.
-
-               -- [_] iterate from DATABASE.
-
-               -- [_] swagger links.
-
-               -- [_] ngb grid.
-
-               -- [_] ngb grid hover detail.
-
-        -- [_] navigation menu display error.
-
-        -- [_] replace topics with index.
-
-                -- [_] router fields : id, source code, topic, feature. 
-
-                -- [_] router from external file. 
-
-                -- [_] master detail field. 
-
-        -- [_] main page menu.
-
-                -- [_] PWA_DEMO / ANGULAR LINK.
-
-                -- [_] menu items.
-
-                -- [_] hover animation.
-
-                -- [_] programming languages links to index.
-
-                        -- [_] query url.
-
--- [_] dynamic title from page _Route.caption.
-
--- [_] fancy home background.
-
-        -- [_] corregir fireworks.
-
--- [_] download csv / xls /pdf file as zip.
-
--- [_] complete header references.
-
--- [_] CORRECT HANOI 3D POSITION.
-
--- [_] join chart / xls / csv.
-               
--- [_] scmlist, llmlist to new ngbgrid schema.
-
--- [_] merghe math demo with collision demo.
-
--- [_] fix ngbgrid sort.
-
--- [_] ngbgrid with voice search.
-
--- [_] opencv.
-
-      -- [_] opencv.js typescript.
-
-      -- [_] python.
-
-      -- [_] c++.
-
-      -- [_] java.      
-
--- [_] tensorflow.
-
-      -- [_] django python backend.
-
-              -- [_] https://code.visualstudio.com/docs/python/tutorial-django
-
-      -- [_]  https://www.freecodecamp.org/learn/machine-learning-with-python/#machine-learning-with-python-projects
-      
-      -- [_] tensorflow.js typescript.
-
-      -- [_] python.
-
-      -- [_] c++.
-
-      -- [_] java.
-  
-
--- [_] sites destination.
-
-        -- [_] env_landing -> marketing.
-
-        -- [_] env_public  -> programming demo.
-
-        -- [_] env_dev     -> tensorflow.
-
-        -- [_] env_prod    -> contact form.
-
-                -- [_]  https://developers.facebook.com/apps
-
-        -- [_] fb account "adam heispaupt" -> Dev / OAutn Accont.
-
--- [_] djanto setup windows  : listado xls / csv
-        https://codesandbox.io/p/github/aperezNWO/django_setup_windows/main
-
-
--- [_] djanto setup linux    : freecode camp curso de ciencia de datos.
-        https://codesandbox.io/p/github/aperezNWO/django_setup_linux/main
-
--- [_] contact form.
-
-        -- [_] https://developers.facebook.com/apps/creation/
-
-        -- [_]  https://developers.facebook.com/apps
-
-        -- [_] dynamic form.
-
-        -- [_] oAuth.
-
-        -- [_] email notification.
-
-        -- [_] log entry.
-
-        -- [_] llm secure tips.
+         --  [_]   Software Pattern. 
          
-        -- [_] isolated url / ENV_LANDING.
- 
-        -- [_] Microsoft Forms.
-       
+         --  [_]   SOLID Principles.
 
--- [x]  Add current contact form.        
-
--- [_]  node js typescript.  
-
--- [x]  ADD JAVA / SPRINGBOOT SAMPLES.  
-
--- [x]  programming samples / DEMOS :      
-
-        -- [x]  by features.        
-
-        -- [x]  by language.        
-
-        -- [x]  curriculum.      
-
--- [x] grid lang cache error :          
-
--- [x] PAGE_<FEATURE>_DEMO --> setLog().
- 
--- [x] demos with query params.  
-
--- [x] Precargar Imagenes Portada.  
-
--- [x] v[1.5.1]. implementar ngb grid.   
-
-        -- [x] name column witout link _blank.  
-
-        -- [x] delete [done] column, replace with [endPoint] column.  
-
-        -- [x] add [tema] column.        
-
- -- [_] change domain PWA_DEMO for ANGULAR_DEMO.    
-
- -- [x] tag effect list .    
-
-        -- [x] references.    
-
-        -- [x] language.    
-
--- [_] asp.net core demo.           
-
--- [_] Page icons.  
-
--- [_] Promise<<type>>.
-
--- [_] <app-search></app-search>
-
--- [_] main page / global search.
-
--- [_] relative path.
-
--- [_] Module federation.
-
-        -- [_] inside.
-
-        -- [_] outside.
-
--- [_] deploymenbt dev / production mode.
-
--- [X] angular deme welcome speech
-
--- [_] ENV_LIBRARY
-
--- [_] ENV_DB
-
--- [>] both ways reference.    
-
-        -- [_] ngb grid  => searchTerm?<search_Term>.    
-
-                -- [_] ngbgrid searchTerm param.
-
-        -- [_] demo page => langName?<lang>.  
-
-                -- [>] SCM ENV_LIBRARY.
-
--- [>] Revision general de funcionalidad.  
-
-        -- [_] mensaje de espera --> signals.  
-
-        -- [x] Error en Index / Games.  
-
-        -- [>] Ver Referencia [Tema].
-
--- [_] source code header comments for github.  
-
--- [_] trends page. 
-  
-        -- [_] Machine Learning. 
-    
-        -- [_] Computer Vision. 
-  
-        -- [_] Data Science. 
-
- -- [_] fix angular curiculum <---> angular reference.    
-
- -- [_] disable sound button.    
-     
- -- [_] base component.    
-     
-        -- [_] signal status message.    
-
-        -- [_] effect.
- 
-        -- [_] backend page log.
-
-        -- [_] <base.component><base-compoent>.
-
-        -- [_] json pages list.
-            
- -- [_] firefox reference uix fix.
-
- -- [_] github permalink.
-
- --  [_] page Number param grid.
-
- --  [_] base component inheritance.
-
- --  [_] canvas component.
-
- --  [_] image capture component.
-  
- --  [_] voice search component - ask A.I.
-   
- --  [_] ROOT PAGES WITH JSON PAGES LIST.
-
- --  [_] LANDING PAGES WITH JSON PAGES LIST.
-
- --  [_] PAGES LIST BASE COMPONENT.
-
- --  [_] ANGULAR ERROR HANDLING BEST PRACTICES.
-
- --  [_] ANGULAR LOG HANDLING BEST PRACTICES.
- 
- --  [_] base compoent pages property.
-
- --  [_] main pages collection.
-     
-     --  [_] title log property.
-     
-     --  [_] title property.
-
-     --  [_] title speech property.
-
-     --  [_] title speech lang roperty.
-
- --  [_] references component.       
-
- --  [_] json pages with multiple schemas / read on demand.   
-
- --  [_] rust samples.
-
- --  [_] global signal.
-
- --  [_] Tetris engine.
-      
- --  [_] Merge isolated lists.
-
- --  [_] check nested lists.
-
- --  [x] merge "jsonList.json" and "mainPages.json".
-
- --  [_] update angular curriculum.
-       
- --  [_] merge page dictionaries.
-
- --  [_] update angular curriculum.
-
- --  [_] COMMENT CODE GITHUB STYLE
-
- --  [_] Chart sample sound.
-
- --  [_] languages / libraries demo.
-
- --  [_] stored procedures.
-
-      --  [_] delete "page_index"... from log entries.
-
- --  [_] recorrido reviison funcionalidad.
-
- --  [_] complete curriculum other languages.
-
- --  [_] languages / libraries tensorflow.
-
- --  [_] curriculum tensorflow.
- 
- --  [_] libraries external resource --> mainPages.json-> pages.
-
-        --  [_] bootstrap.
- 
-        --  [_] tensorflow.
- 
- --  [_] Referrences Angular / uix , Angular / Services.
-
- --  [_] tesseract programming language order usage : 
-
-         --  [_] python.
-
-         --  [_] java.
-
-         --  [_] c++.
-
-  --  [_]  how can I use qwen and python to ask for any list and generate an output in excel?    
-
-  --  [_]  uix library implementation : https://ng-bootstrap.github.io/#/components/table/examples#basic   
-
-  --  [_]  ¿Can you please show me a code exaple of creating a dll using Embarcadero C++ builder and tensorflow OCR capabilities ?
- 
-           --  [_] https://www.tensorflow.org/install/lang_c?spm=a2ty_o01.29997173.0.0.3f3dc921kZ4Z3g&hl=es-419
-
-  --  [_]  Get backend languages version.
-  
-  --  [_]  Split servivces for languages.
-    
-  --  [_]  Babilon.js / 3d collision.
-
-  --  [_]  Kruskal / Prim algos.
-
-  --  [_]  Software Pattern / SOLID Principles.
-
- ////////////////////////////////////////////////////////////////////////////////
- // TENSORFLOW
- ////////////////////////////////////////////////////////////////////////////////
-
-  --  [_]  Tensorflow Update Log.
-
-         --  [_]  Somee admits x32 only arch. for c and c++.
-
-         --  [_]  TryAsp.net admits both x32 and x64.
-
-         --  [_]  TryAsp.net admit c++ compiled code using basic c++ libraries.
-
-         --  [_]  TryAsp.net doen't admit c++ compiled code including tensorflow.
-
-         --  [_]  TryAsp.net admit c generated code for tensorflow x64.
-
-         --  [_]  TryAsp.net c genrerated Tensorflow code expects *.PB model file.
-       
-         --  [_]  *.pb model files are generated mostly on Python.
-
- ////////////////////////////////////////////////////////////////////////////////
- //  TESSERACT
- ////////////////////////////////////////////////////////////////////////////////
-
-    --  [x] Get Tesseract Version from C++ Builder Wrapper dll / asp.net core end pont.
-
-    --  [_] Angular Integration.
-    
- ////////////////////////////////////////////////////////////////////////////////
- //  OPEN CV 
- ////////////////////////////////////////////////////////////////////////////////
-
-    --  [_] C++ SAMPLE.
-
-    --  [_] Angular Integration.
-       
-    --  [_] Reference FIX (Tesseract/Tensorflow/CPP BACKEND).
- 
- ////////////////////////////////////////////////////////////////////////////////
- //  BACKEND STRATEGY
- ////////////////////////////////////////////////////////////////////////////////
-
-   --  [x]  Unify C++ Backend / ASP.NET CORE.
-
-                --  [x]  ASP_NET_CORE_CSHARP_DEMO.
-
-                          --  [_]  REMOVE C++ DLL FUNCIONALITY.
-
-                --  [x]  ASP_NET_CORE_CPP_ENTRY.
-
-                          --  [_]  SWAGGER.
-
-                          --  [_]  REDUCE CODE.
-
-                --  [x]  ASP_NET_CORE_EF_SAMPLE.
-                
-   --  [_]  Unify C++ Backend / DLLs.
-
-                --  [x]  CPP_CBUILDER_ALGORITHM.
-
-                --  [x]  CPP_CBUILDER_TESSERACT.
-                
-                --  [x]  Split Tesseract / Tensorflow.
-
-                --  [x]  CPP_GCC_TESSERACT.
-
-                        --  [x]  command line and toolchain on header ->  -> C:\msys64\ucrt64\bin.
-
-                        --  [_]  dist files.
-
-                --  [x]  CPP_GCC_ALGORITHM.
-
-                        --  [x]  command line and toolchain on header -> C:\msys64\ucrt64\bin.
-
-                        --  [_]  dist files.
-
-                --  [x]  CPP_GCC_TENSORFLOW.
-
-                        --  [X]  command line and toolchain on header ->  TOOLCHAIN : C:\msys64\ucrt64\bin.
-
-                        --  [_]  dist files.
-
-        --  [_]  REFERENCES : 
+         --  [_]   OWASP.
         
-                --  [_]  c++ library        -> update version
-
-                --  [_]  ASP.NET end point  -> update version
-
- ////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
  // SCM STRATEGY
  ////////////////////////////////////////////////////////////////////////////////
       
    --  [_]  SAVE DISK SPACE
 
-   --  [_]  DEV CONTAINERS
+   --  [_]  DEV CONTAINERS.
+
+            -- [_] free docker hosting.
         
    --  [_]  FIREBASE STUDIO TEST 
 
@@ -596,135 +138,5 @@
         PWA_DEMO_ENV_PUBLIC -> ANGULAR_DEMO_ENV_PROD.
         PWA_DEMO_ENV_DEV    -> ANGJLAR_DEMO_ENV_PUBLIC.
 
-  -- [_] free docker hosting.
-
- ////////////////////////////////////////////////////////////////////////////////
- // TODO LIST 
- ////////////////////////////////////////////////////////////////////////////////
-
- -- [x]  C++ DEMOS -> ALGORITHM.
-        
-        -- [x] SORT BENCHMARK OUTPUT AS JSON.
-
- -- [x] botones "Ir a Demo" , "ir a Curriculum".
-
- -- [x]  asp.net core swagger.
-
- -- [x]  FRACTAL DEMO.
-
-        -- [x]  PDF EXPORT.
-
-        -- [x]  URL:
-
-                https://tensorflownetcore64.tryasp.net/generatejuliaparams/?maxIterations=500&realPart=-0.4&imagPart=0.6
-
- -- [x]  C++ STANDARD VERSION FUNCTION.
-
- -- [x]  C++ DEMOS -> OPEN CV.
-
-        -- [x]  CPP DEMOS ENTRY OPENCV / OCR.
-
-        -- [x]  FIX REFERENCES.
-
-        -- [x]  OOP INHERITANCE THROUGH ALGORITHM.DLL PARENT CLASS 
-
-               -- [_] https://chat.qwen.ai/c/98e5e0ec-6031-46b6-adb0-d7a2ef535c5b
-
-                (A). Read/Write  file parent method.
-                (B). Read Config file parent method.
-        
--- [x] ASP.NET CORE c++ ENTRY POINT source code link.
-
-        -- [x] swagger for ASP.NET CORE c++ ENTRY POINT.
-
-        -- [x] ASP.NET CORE TECHNICAL SPECIFICATIONS / LIBRARY -> DLL.
-
--- [>]  C++ DEMOS -> TESSERACT.      
-
-        -- [_]  ONLINE TRANSLATION.
-
--- [_] REFERENCES AS JSON FILES.
-
--- [_] SETTINGS
-
-        -- [_] SOUND ON/OFF.
-
-        -- [_] LANG (iso code).
-
-                -- [_] app v[2.1.x].
-
--- [>]  TECH SPECS.
-
-        -- [_]  BACKEND VERSIONS.
-
-        -- [_]  techical specs as dynamic list.
- 
-
--- [_] csv / xls + ZIP.
-
-        -- [_] sobre copias de funciones actuales.
-
-        -- [_] remove zip entry from index.
-
--- [_] SCM doc 
-
-        -- [_] arch doc. 
-
-        -- [_] SOLID PRINCIPLES.
-
--- [_] node.js smtp sample / contact form. 
-
--- [_] grid component. 
-
--- [_] reference component. 
-
- ////////////////////////////////////////////////////////////////////////////////
- // LEARNING STRATEGY
- ////////////////////////////////////////////////////////////////////////////////
-
- -- [x] LINK DEMOS|LENGUAGES --> <-- LENGUAES| CURRICULUM
-
- -- [_] procedimiento
-
-        -- [_] INVESTIGAR EN C++
-        
-        -- [_] REPLICAR EN ORDEN A : JAVA / JAVSACXRIPT / Python
-
-        -- [_] Replicar en cada lenguaje a Curriculum. 
-
-
- -- [_] c# sql curriculum
- 
- -- [_] c++ curriculum.
-
- -- [_] tensorflow curriculum.
- 
- -- [_] datascience curriculum.
-
-////////////////////////////////////////////////////////////////////////////////
--- [_]  TENSORFLOW FOR c++
-////////////////////////////////////////////////////////////////////////////////
-
--- [_]  WORD CLASIFICATION
-
-        -- [_] https://chat.qwen.ai/c/c70ffaa5-78dc-4eeb-87db-3b8f7879fd77
-
--- [_]  MACHINE LEARNING, ARTIFICIAL INTELLIGENCE, NEURAL NETWORKS CONCEPTS.
-
-        -- [_]  https://chat.qwen.ai/c/2370354d-1564-4778-b141-ca63c678014a
-
--- [_]  CPP CURRICULUM
-
-        -- [_]  Smart Pointers.
-
-        -- [_]  OOP -> inheritance -> ReadConfigFile();
-
--- [_]  LICENSE PLATE RECOGNITION
-
-        -- [_] https://chat.qwen.ai/c/1bd6717f-364c-450d-909d-e67e58088c5c
-
-        -- [_] https://chat.qwen.ai/c/0ad6b5a1-5d93-4b70-ac12-7067ffaebf9b
-        
-        -- [_]  https://chat.qwen.ai/c/c127093a-9ae5-4fcb-8e6e-95b02e739f9c
 
 ////////////////////////////////////////////////////////////////////////////////
