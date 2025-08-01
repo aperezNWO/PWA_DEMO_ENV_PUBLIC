@@ -2,39 +2,14 @@
 -- STRATEGY UPDATE
 ////////////////////////////////////////////////////////////////////////////////
 
--- [_] SETTINGS
-
-        -- [_] SOUND ON/OFF.
-
-        -- [_] LANG (iso code).
-
-                -- [_] app v[2.1.x].
-
--- [_]  TECH SPECS.
-
-        -- [_]  BACKEND VERSIONS.
-
-        -- [_]  techical specs as dynamic list.
- 
--- [_] google translation API. 
-
--- [_] LLM api. 
-
--- [_] csv / xls + ZIP.
-
-        -- [_] sobre copias de funciones actuales.
-
-        -- [_] remove zip entry from index.
-
-
--- [_] grid component. 
-
--- [_] reference component. 
-
-        -- [_] REFERENCES AS JSON FILES.
+ ////////////////////////////////////////////////////////////////////////////////
+ // SCM STRATEGY
+ ////////////////////////////////////////////////////////////////////////////////
+      
+ -- [_] ver archivo "scm.txt"
 
  ////////////////////////////////////////////////////////////////////////////////
- // LEARNING STRATEGY
+ // LEARNING STRATEGY / CURRICULUM
  ////////////////////////////////////////////////////////////////////////////////
 
  -- [_] procedimiento
@@ -45,9 +20,29 @@
 
         -- [_] Replicar en cada lenguaje a Curriculum. 
 
- -- [_] c# sql curriculum-
+ -- [_] ANGULAR CURRICULUM.
+
+        -- [_] Module federation.
+
+        --  [_] ANGULAR LOG HANDLING BEST PRACTICES.
+
+        --  [_] ANGULAR ERROR HANDLING BEST PRACTICES.
+
+        -- [_] SSR.
+
+        -- [_] PWA / SPA.
+
+        --  [_] Tetris engine.
+
+ -- [_] c# sql curriculum.
+
 
          -- [_] sql.
+
+         --  [_] stored procedures.
+
+              --  [_] delete "page_index"... from log entries.
+
  
  -- [_] c++ curriculum.
  
@@ -103,26 +98,129 @@
 
  -- [_] node.js curriculum 
  
-        -- [_] smtp sample / contact form.        
+        -- [_] smtp sample / contact form.       
 
- -- [_] tensorflow curriculum.
+ -- [_] DJANGO / Python
+
+        --  [_]  how can I use qwen and python to ask for any list and generate an output in excel?    
+
+        -- [_] djanto setup windows  : listado xls / csv
+                https://codesandbox.io/p/github/aperezNWO/django_setup_windows/main
+
+
+        -- [_] djanto setup linux    : freecode camp curso de ciencia de datos.
+                https://codesandbox.io/p/github/aperezNWO/django_setup_linux/main
+                
+ -- [_] tensorflow / MACHINGE LEARNING curriculum.
+
+       -- [X]  https://www.freecodecamp.org/learn/machine-learning-with-python/#machine-learning-with-python-projects
  
  -- [_] datascience curriculum.
 
+ -- [_] ALGOITHM curriculum.
+ 
+     --  [_]  Kruskal / Prim algos.
+
  --  [_] SWEBOK
  
-         -- [_]    arch doc. 
+         --  [_] COMMENT CODE GITHUB STYLE    
+
+         --  [_]    arch doc. 
 
          --  [_]   Software Pattern. 
          
          --  [_]   SOLID Principles.
 
          --  [_]   OWASP.
-        
+
  ////////////////////////////////////////////////////////////////////////////////
- // SCM STRATEGY
+ // TODO LIST
  ////////////////////////////////////////////////////////////////////////////////
-      
- -- [_] ver archivo "scm.txt"
+
+ -- [_] techical specs revision.
+
+               -- [_] iterate from list.
+
+               -- [_] iterate from DATABASE.
+
+               -- [_] swagger links.
+
+               -- [_] ngb grid.
+
+               -- [_] ngb grid hover detail.
+
+-- [_] SETTINGS
+
+        -- [_] SOUND ON/OFF.
+
+        -- [_] LANG (iso code).
+
+                -- [_] app v[2.1.x].
+
+                -- [_] backend lang v[2.1.x].
+
+                --  [_] main pages collection.
+                
+                        --  [_] title log property.
+                        
+                        --  [_] title property.
+
+                        --  [_] title speech property.
+
+                        --  [_] title speech lang roperty.
+
+-- [_]  TECH SPECS.
+
+        -- [_]  BACKEND VERSIONS.
+
+        -- [_]  techical specs as dynamic list.
  
+-- [_] google translation API. 
+
+-- [_] LLM api. 
+
+-- [_] csv / xls + ZIP.
+
+        -- [_] sobre copias de funciones actuales.
+
+        -- [_] remove zip entry from index.
+
+--  [_] component.
+
+        --  [_] image capture component.
+
+        -- [_] grid component. 
+
+        -- [_] reference component. 
+
+                --  [_] base compoent pages property.
+
+                --  [_] REFERENCES AS JSON FILES.
+
+        --  [_] voice search component - ask A.I.      
+        
+        --  [_] <app-search></app-search>.|          
+
+ --  [_] recorrido revisión funcionalidad.
+
+         -- [_] read json config files from database.
+
+         --  [_] chart sound.
+
+         --  [_] mensajes de espera / signals.
+
+          -- [_] firefox reference uix fix.
+
+        -- [_]  Babilon.js / 3d collision.
+
+        -- [_] CORRECT HANOI 3D POSITION.
+
+        -- [_] dynamic title from page _Route.caption.
+
+        -- [_] config jsong file reading optimization.
+
+        -- [_] modules / engines.
+
+        -- [_] navigation menu display error.
+
 ////////////////////////////////////////////////////////////////////////////////

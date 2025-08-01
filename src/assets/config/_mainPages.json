@@ -169,6 +169,11 @@
                   "id"  : 12,
                   "url" : "https://owasp.org/",
                   "name": "Open Web Application Security Project (OWASP)"
+              },
+              {
+                  "id"  : 13,
+                  "url" : "https://w3.org/",
+                  "name": "w3c"
               }
          ]
       },

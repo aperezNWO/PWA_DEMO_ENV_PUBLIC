@@ -389,5 +389,25 @@ git pull
  
         PWA_DEMO_ENV_PUBLIC -> ANGULAR_DEMO_ENV_PROD.
         PWA_DEMO_ENV_DEV    -> ANGJLAR_DEMO_ENV_PUBLIC.
+        
+-- [_] sites destination.
+
+        -- [_] env_landing -> marketing.
+
+        -- [_] env_public  -> programming demo.
+
+        -- [_] env_dev     -> tensorflow.
+
+        -- [_] env_prod    -> contact form.
+
+                -- [_]  https://developers.facebook.com/apps
+
+        -- [_] fb account "adam heispaupt" -> Dev / OAutn Accont.        
+
+-- [_] hosting files cleanup service.
+
+-- [_] read json config files from database.
+
+-- [_] deploymenbt dev / production mode.
 
 /////////////////////////////////////////////////////////////////

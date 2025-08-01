@@ -2,6 +2,314 @@
 // STRATEGY DONE 
 /////////////////////////////////////////////////////////////////
 
+-- [x] revisión general.
+
+        -- [x] main page menu.
+
+                -- [x] PWA_DEMO / ANGULAR LINK.
+
+                -- [x] menu items.
+
+                -- [x] hover animation.
+
+-- [x] replace topics with index.
+
+        -- [x] router fields : id, source code, topic, feature. 
+
+        -- [x] router from external file. 
+
+        -- [x] master detail field. 
+
+-- [x] programming languages links to index.
+
+        -- [x] query url.
+
+--  [x] json pages with multiple schemas / read on demand.   
+
+--  [x] global signal.
+      
+--  [x]  Split servivces for languages.
+
+-- [X] fancy home background.
+
+        -- [_] corregir fireworks.
+
+-- [X] download csv / xls /pdf file as zip.
+
+-- [X] complete header references.
+
+-- [X] join chart / xls / csv.
+               
+-- [X] scmlist, llmlist to new ngbgrid schema.
+
+-- [X] merghe math demo with collision demo.
+
+-- [X] fix ngbgrid sort.
+
+-- [X] ngbgrid with voice search.
+
+-- [X] opencv.
+
+      -- [X] opencv.js typescript.
+
+      -- [X] python.
+
+      -- [X] c++.
+
+      -- [X] java.      
+
+-- [X] tensorflow.
+
+      -- [X] django python backend.
+
+              -- [_] https://code.visualstudio.com/docs/python/tutorial-django
+
+      -- [X] tensorflow.js typescript.
+
+      -- [X] python.
+
+      -- [X] c++.
+
+-- [x] computer vision
+
+       -- [x] https://opencv.org/
+
+        -- [x] OPEN CV / JAVASCRIPT.   
+
+        -- [x] OPEN CV / c++ builder.
+
+        -- [x] TESSERACT / JAVASCRIPT / C++ .   
+
+-- [x] MACHINE LEARNING.
+
+        -- [x] OPEN CV / JAVASCRIPT.   
+
+        -- [x] OPEN CV / c++ builder.
+
+        -- [x] TENSORFLOW / JAVASCRIPT.  
+
+-- [x] TOPICS.        
+
+        -- [x] index aditional fields.
+
+        -- [x] ngb grid.
+
+                -- [x] voice search.
+
+        -- [x] angular - topics.
+
+                        -- [x] route attribute.
+
+        -- [x] angular - features.
+
+                        -- [x] route attribute.        
+
+-- [x] speech service.
+
+ -- [X] change domain PWA_DEMO for ANGULAR_DEMO.    
+
+ -- [X] asp.net core demo.           
+
+-- [X] Page icons.  
+
+-- [X] Promise<<type>>.
+
+-- [X] main page / global search.
+
+-- [X] relative path.
+
+-- [X] references component.       
+
+-- [X] ENV_LIBRARY
+
+-- [X] source code header comments for github.  
+
+-- [X] trends page. 
+  
+        -- [X] Machine Learning. 
+    
+        -- [X] Computer Vision. 
+  
+        -- [X] Data Science. 
+
+  --  [X] canvas component.
+
+ --  [X] ROOT PAGES WITH JSON PAGES LIST.
+
+    --  [X] Merge isolated lists.
+
+    --  [X] check nested lists.
+
+   --  [X] LANDING PAGES WITH JSON PAGES LIST.
+
+   --  [X] PAGES LIST BASE COMPONENT.
+
+   -- [X] base component.    
+     
+        -- [X] signal status message.    
+
+        -- [X] effect.
+ 
+        -- [X] backend page log.
+
+        -- [X] <base.component><base-compoent>.
+
+        -- [X] json pages list.
+
+-- [X] fix angular curiculum <---> angular reference.    
+
+ -- [X] disable sound button.    
+     
+ -- [X] github permalink.
+
+ --  [X] page Number param grid.
+
+ --  [X] base component inheritance.
+
+   -- [X] rust samples.
+
+   -- [X] ENV_DB
+
+   -- [x] sudoku button.
+       
+   -- [x] routers caption text correction.
+
+   -- [X] menu items.
+
+              -- [X] computer vision.
+
+              -- [X] amigo secreto.
+
+  -- [X] scm             
+
+        -- [X] row detail grid.
+
+        -- [X] ngb grid component.
+
+        -- [X] AI_PROMPTS.
+
+        -- [X] AI_DEV.
+
+        -- [X] DEV_ENVS.
+
+        -- [X] HOSTINGS.
+
+        -- [X] DB.
+
+  -- [x] tag effect list .    
+
+        -- [x] references.    
+
+        -- [x] language.    
+
+  --  [X] angular deme welcome speech
+
+  --  [x]  uix library implementation : https://ng-bootstrap.github.io/#/components/table/examples#basic   
+
+  --  [X]  ¿Can you please show me a code exaple of creating a dll using Embarcadero C++ builder and tensorflow OCR capabilities ?
+ 
+           --  [X] https://www.tensorflow.org/install/lang_c?spm=a2ty_o01.29997173.0.0.3f3dc921kZ4Z3g&hl=es-419
+
+-- [X] Revision general de funcionalidad.  
+
+        -- [x] mensaje de espera --> signals.  
+
+        -- [x] Error en Index / Games.  
+
+        -- [x] Ver Referencia [Tema].
+
+-- [X] both ways reference.    
+
+        -- [x] ngb grid  => searchTerm?<search_Term>.    
+
+                -- [_] ngbgrid searchTerm param.
+
+        -- [x] demo page => langName?<lang>.  
+
+                -- [>] SCM ENV_LIBRARY.
+
+-- [x]  Add current contact form.        
+
+-- [x]  node js typescript.  
+
+-- [x]  ADD JAVA / SPRINGBOOT SAMPLES.  
+
+-- [x]  programming samples / DEMOS :      
+
+        -- [x]  by features.        
+
+        -- [x]  by language.        
+
+        -- [x]  curriculum.      
+
+-- [x] grid lang cache error :          
+
+-- [x] PAGE_<FEATURE>_DEMO --> setLog().
+ 
+-- [x] demos with query params.  
+
+-- [x] Precargar Imagenes Portada.  
+
+-- [x] v[1.5.1]. implementar ngb grid.   
+
+        -- [x] name column witout link _blank.  
+
+        -- [x] delete [done] column, replace with [endPoint] column.  
+
+        -- [x] add [tema] column.        
+
+-- [x] book / resources.
+
+        -- [x] w3c.
+
+        -- [x] freecodecamp.
+
+        -- [x] mdn.
+
+        -- [x] the art opute programming.
+
+        -- [x] angular.dev.
+
+        -- [x] owasp.
+
+        -- [x] deeplearning.ai.
+
+        -- [x] coursera - algorithms.
+
+-- [x] home menu items.
+
+        -- [x] programming languages / backend.
+
+        -- [x] uix libraries.
+
+               -- [x] 2d / 3d.
+
+               -- [x] material.
+
+               -- [x] ng bootstrap.
+               
+        -- [x] export  libraries
+
+               -- [x] epp plus.
+
+               -- [x] jsPdf / iTextSharp.
+
+               -- [x] char js.
+
+        -- [x] miscelaneous
+
+               -- [x] math parsing.
+
+               -- [x] ngb pad.
+ 
+        -- [_] computer visions / machine learning
+
+                -- [x] tesseract.
+
+                -- [x] tensorflow.
+   
+                -- [x] opencv.
+                
 -- [x] TESSERACT
  
            --  [x] Get Tesseract Version from C++ Builder Wrapper dll / asp.net core end pont.
