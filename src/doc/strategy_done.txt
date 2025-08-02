@@ -2,6 +2,50 @@
 // STRATEGY DONE 
 /////////////////////////////////////////////////////////////////
 
+-- [X] HOSTING  
+
+        -- [X] [somee.com]
+         
+                -- [X] [HELP]
+                        https://somee.com/doka/Help/Article/106/How_to_deploy_Web_project_from_Visual_Studio
+
+                -- [X] [mcsd/angulardemo/webapidemo]
+                -- [X] [db].
+                       -- [_] reset log db #1 / debug content.
+                       -- [_] enbable   db #2 / (CSV DEMO).
+                -- [X] check disabled accounts.
+                       -- [x] https://www.angulardemo.somee.com.
+                       
+-- [x] [CPP DEMO]
+
+    -- [x] performance benchmark [c# / typescript / c++].
+
+
+-- [X] SOURCE github.com        
+
+        -- [X] PUBLIC SOURCES.                        
+                -- [x] [mcsdWebApíTFS] (tff)      -->  (github) "mcsd_public".
+                -- [x] [AngularMCSD]   (github)   -->  (github) "AngularMCSD_public".
+                -- [>] Update sources.
+
+-- [X] [alternativas]
+
+        -- [X] https://xranks.com/es/somee.com
+        
+-- [X] REDUCE FILE SIZE.
+        
+        -- [X] check disable email from "somee.com".
+
+-- [x] DIRECT EMAIL
+
+-- [x] JOB SEARCH MODULE.
+
+-- [X] FREELANCE WEB SITES
+
+                -- [X] WORKANA.
+                -- [X] FIVERR.
+                -- [X] UPWORK.
+
 -- [X] MENU PRINIPAL
 
         --[X] NAVEGACION.

@@ -42,6 +42,9 @@
 
         --  [_] Tetris engine.
 
+        -- [_] Angular CDN.
+
+
  -- [_] c# sql curriculum.
 
 
@@ -129,7 +132,7 @@
 
  -- [_] ALGOITHM curriculum.
  
-     --  [_]  Kruskal / Prim algos.
+     --  [_]  Kruskal / Prim algos / sedgewick / coursera.
      
      --  [_] TAOCP.
 

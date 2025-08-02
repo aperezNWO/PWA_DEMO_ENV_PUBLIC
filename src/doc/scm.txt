@@ -437,4 +437,10 @@ git pull
 
 -- [_] deploymenbt dev / production mode.
 
+-- [_] environments LIST ON DOCUMENT.
+
+        -- [_] LOCAL_IIS.
+        -- [_] WebApi.
+        -- [_] angulardemo.
+
 /////////////////////////////////////////////////////////////////
