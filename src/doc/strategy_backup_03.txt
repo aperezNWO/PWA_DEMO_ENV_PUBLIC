@@ -38,41 +38,10 @@
                 -- [_] check disabled accounts.
                        -- [_] https://www.angulardemo.somee.com.
 
--- [>] webapidemo / service.
-
-       -- [x] remove demo views/controllers.
-       -- [x] enable domain "WebApiDemo".
-       -- [x] mcsdWebApíTFS.
-       -- [x] mcsdBackup.
-
-                -- [x] BACKUP /DELETE BOOK "DELORME".  
-                -- [x] BACKUP /DELETE folder "_angular".  
-                -- [x] turn off domain "mcsdBackup".
-                -- [x] change tfs/github name "mcsdNet48TFS" / "mcsdNet48GitHub".
-                -- [x] change tfs/github name "mcsd" por "mcsdNetCoreBackup".
-
         -- [_] REDUCE FILE SIZE.
                 -- [_] check disable email from "somee.com".
 
-/*
 
-        Your website 'angulardemo.somee.com' was disabled for the following reason: 
-
-        Website's average, per request bandwidth has exceeded a limit that is set for the website hosted with a free hosting package! 
-        Although we do not limit the file size that can be uploaded or downloaded from your website, 
-        we set a limit of [150KByte] on average file size that can be downloaded from the website hosted with free package. 
-
-        The average is calculated every several hours for all files together, including *.html, *.asp, *.aspx, *.jpg, *.png, *.gif, *.mpg 
-        and other text and media files. 
-
-        Your website is scheduled to start again in about 12 hours, or you can start it manually from our control panel any time. 
-
-        But if you will not take actions to decrease the average file size that is sent from your website it will be stopped again 
-        and you are allowed to start it 5 times only. 
-
-        You can also switch to any other hosting package where such maintenance is not performed.
-
-*/
 =====================================================================
 -- STRATEGY - DIFUSION
 =====================================================================
@@ -98,22 +67,7 @@
 -- [_] INSTAGRAM / TK.
 -- [_] NON IT COMPANIES / DIRECT OFFER.
 
-=====================================================================
--- ERRORS
-=====================================================================
 
-   -- [x]  Access to XMLHttpRequest at 'https://mcsd.somee.com/demos/GetConsultaLogStatGet' 
-           from origin 'https://mcsdbackup.somee.com' has been blocked by CORS policy:
-           No 'Access-Control-Allow-Origin' header is present on the requested resource.
-
-   -- [x]  Access to XMLHttpRequest at 'https://mcsd.somee.com/demos/GenerarInformeCSVJsonSTAT' 
-           from origin 'https://mcsdbackup.somee.com' has been blocked by CORS policy: 
-           No 'Access-Control-Allow-Origin' header is present on the requested resource.
-
-   -- [_]  index.js:489 [webpack-dev-server] WARNING
-           E:\pablo.perez\dev\AngularMCSD\AngularMCSD\src\app\_modules\files-generation\files-generation-xls\files-generation-xls.component.ts depends on 'html2canvas'. 
-           CommonJS or AMD dependencies can cause optimization bailouts.
-           For more info see: https://angular.io/guide/build#configuring-commonjs-dependencies
 
 =====================================================================
 -- OBSERVACIONES / REDES SOCIALES
@@ -161,9 +115,6 @@
     -- [x] performance benchmark [c# / typescript / c++].
 
 
--- [x] CORREGIR UIX.
-
-        -- [x] uncontrasted font colors.
 
 -- [_] CHAT GTP.
 
@@ -210,9 +161,7 @@
 
 -- [_] uix --> general.
 
-        -- [x] install bootstrap.
-        -- [x] Bootstrap menu navigation (from .NET CORE).
-        -- [x] implement menu.
+
         -- [_] check uix color/usability.
         -- [_] menu collapse on page entry.
         -- [_] metronic.

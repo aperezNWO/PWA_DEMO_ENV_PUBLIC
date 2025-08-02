@@ -2,6 +2,134 @@
 // STRATEGY DONE 
 /////////////////////////////////////////////////////////////////
 
+
+-- [x] ngb grids.
+
+-- [x] install bootstrap.
+-- [x] Bootstrap menu navigation (from .NET CORE).
+-- [x] implement menu.
+
+-- [x] CORREGIR UIX.
+
+        -- [x] uncontrasted font colors.
+
+-- [>] webapidemo / service.
+
+       -- [x] remove demo views/controllers.
+       -- [x] enable domain "WebApiDemo".
+       -- [x] mcsdWebApíTFS.
+       -- [x] mcsdBackup.
+
+                -- [x] BACKUP /DELETE BOOK "DELORME".  
+                -- [x] BACKUP /DELETE folder "_angular".  
+                -- [x] turn off domain "mcsdBackup".
+                -- [x] change tfs/github name "mcsdNet48TFS" / "mcsdNet48GitHub".
+                -- [x] change tfs/github name "mcsd" por "mcsdNetCoreBackup".
+
+
+-- [x]  Access to XMLHttpRequest at 'https://mcsd.somee.com/demos/GetConsultaLogStatGet' 
+        from origin 'https://mcsdbackup.somee.com' has been blocked by CORS policy:
+        No 'Access-Control-Allow-Origin' header is present on the requested resource.
+
+-- [x]  Access to XMLHttpRequest at 'https://mcsd.somee.com/demos/GenerarInformeCSVJsonSTAT' 
+        from origin 'https://mcsdbackup.somee.com' has been blocked by CORS policy: 
+        No 'Access-Control-Allow-Origin' header is present on the requested resource.
+
+-- [x] read pages from json file.
+
+-- [x] Pasar contenido por tema a pagina principal.
+
+-- [x] Angular End Points / Param Url.
+
+-- [x] Change DEV_DEMO por SE_DEMO.
+
+-- [x] datagrid theming.
+
+-- [x] Table Check field.
+
+-- [x] Pending OnSort.
+
+-- [x] Angular Submeno.
+
+-- [x] Marketing strategy table. 
+
+-- [x] Angular Directives. 
+
+-- [x] hide repo links from demo info.  
+
+-- [x] inheritance / interfaces.
+
+        -- [x] ng grid service
+
+        -- [x] Models.
+
+
+-- [x] Enum Angular.
+
+-- [x] About Module.
+
+-- [x] export type _NodeJsFeatureSortColumn    = keyof <FatherClass>      | ''; (inheritance)
+
+
+ -- [x] load config as dictionary. 
+
+      -- [x] function appModule.ts LoadxxxData() as single function.
+
+      -- [x] load dictionary from external list.
+
+ -- [x] Implement base service.
+
+      -- [x] Eliminate services.
+
+      -- [x] Eliminate directives.
+
+      -- [x] Eliminate models.
+
+
+ -- [x] Sotable Grid Inheritance.      
+
+ -- [x] Sotable Grid Component.      
+
+-- [x] clear base service cache.  
+
+-- [x] load grid info at request.  
+
+-- [x] about info
+
+       -- [x] A.I. PROMT LIST.  
+
+-- [x] spring boot menu entry.
+
+-- [x] MENSAJE DE ESPERA EN BOTON DE ALGORITMO DE DISTANCIA CORTA.
+
+-- [X] OCR PHOTO CAPTURE.
+
+-- [x] material grid theme.
+
+-- [x] delete word mcsd.
+
+-- [x] opencv.js basic shape recognition.
+
+-- [x] miscelaneous file genration - chart.
+
+-- [x] ngb pad instructions.
+
+-- [x] Agular / Features.       
+
+-- [x] angular pensum.
+
+-- [x] Speech Panel component. 
+ 
+-- [x] Fix sort functionality.  
+
+-- [x] Implement grid component / service. 
+
+-- [x] random guid generator.
+
+-- [x] LANG LIST UL/LI.
+
+-- [x] ////console.log replace
+
 -- [x] revisión general.
 
         -- [x] main page menu.

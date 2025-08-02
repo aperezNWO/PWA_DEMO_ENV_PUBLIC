@@ -84,9 +84,7 @@
 
 -- [_] uix --> general.
 
-        -- [x] install bootstrap.
-        -- [x] Bootstrap menu navigation (from .NET CORE).
-        -- [x] implement menu.
+
         -- [_] check uix color/usability.
         -- [_] menu collapse on page entry.
         -- [_] metronic.
@@ -175,42 +173,6 @@
        -- [_] https://v17.angular.io/guide/observables.
        -- [_] "Loading component" (from ngbgrid).
        -- [_] Curruculum entry.
-
--- [x] ngb grids.
-
-////////////////////////////////////////////////////////////////////////////////
-
--- [x] spring boot menu entry.
-
--- [x] MENSAJE DE ESPERA EN BOTON DE ALGORITMO DE DISTANCIA CORTA.
-
--- [X] OCR PHOTO CAPTURE.
-
--- [x] material grid theme.
-
--- [x] delete word mcsd.
-
--- [x] opencv.js basic shape recognition.
-
--- [x] miscelaneous file genration - chart.
-
--- [x] ngb pad instructions.
-
--- [x] Agular / Features.       
-
--- [x] angular pensum.
-
--- [x] Speech Panel component. 
- 
--- [x] Fix sort functionality.  
-
--- [x] Implement grid component / service. 
-
--- [x] random guid generator.
-
--- [x] LANG LIST UL/LI.
-
--- [x] ////console.log replace
 
 ////////////////////////////////////////////////////////////////////////////////
 
