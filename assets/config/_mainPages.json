@@ -12,12 +12,12 @@
         "log_name"   : "PAGE_ABOUT_INDEX",
         "page_name"  : "[ACERCA DE]",
         "pages"      : [
-          { "id": 1, "url" : "/TechnicalSpecs"      , "text": "[ESPECIFICACIONES TECNICAS]"               },
-          { "id": 2, "url" : "/SCM"                 , "text": "[SOFTWARE CONFIGURATION MANAGEMENT]"       },
-          { "id": 3, "url" : "/LLMList"             , "text": "[LARGE LANGUAGE MODELS LIST]"              },
-          { "id": 4, "url" : "/EduResources"        , "text": "[EDUCATIONAL RESOURCES]"                   },
-          { "id": 5, "url" : "/ContactForm"         , "text": "[CONTACT FORM]"                            },
-          { "id": 6, "url" : "/Index"               , "text": "[INDEX]"                                   }
+          { "id": 1, "url" : "/TechnicalSpecs"                                           , "text": "[ESPECIFICACIONES TECNICAS]"               },
+          { "id": 2, "url" : "/SCM"                                                      , "text": "[SOFTWARE CONFIGURATION MANAGEMENT]"       },
+          { "id": 3, "url" : "/LLMList"                                                  , "text": "[LARGE LANGUAGE MODELS LIST]"              },
+          { "id": 4, "url" : "/EduResources"                                             , "text": "[EDUCATIONAL RESOURCES]"                   },
+          { "id": 5, "url" : "/ContactForm"                                              , "text": "[CONTACT FORM]"                            },
+          { "id": 6, "url" : "/Index"                                                    , "text": "[INDEX]"                                                                        }
         ]
       },
       {
@@ -169,6 +169,11 @@
                   "id"  : 12,
                   "url" : "https://owasp.org/",
                   "name": "Open Web Application Security Project (OWASP)"
+              },
+              {
+                  "id"  : 13,
+                  "url" : "https://w3.org/",
+                  "name": "w3c"
               }
          ]
       },
