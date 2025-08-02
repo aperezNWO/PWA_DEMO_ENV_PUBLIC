@@ -180,21 +180,6 @@
             -- [_] oauth.        
         -- [_] [seccion comentarios]
             -- [_] oauth.
-    
-    -- [_] [LOGIN]            
-            -- [_] CUSTOM.
-            -- [_] oauth.
-            -- [_] DYNAMIC FORM.
-
-    -- [_] [AI/ NEURAL NETWORK DEMO]
-
-           -- [_] [TIC/TAC/TOE] --> [min/max algorthm].
-
-                  -- [_] https://www.geeksforgeeks.org/implementation-of-tic-tac-toe-game/
-
-    -- [_] UDEMY / ANGULAR.
-        
-        -- [_] https://www.udemy.com/topic/angular/free/
 
 
 -- [_] cusotm error handling.
@@ -203,11 +188,6 @@
         -- [_] to log.
         -- [_] debug console messages.
         -- [_] asp.net core enable trace.
-
--- [_] Use custom login.
-
-        -- [_] DYNAMIC FORM.
-        -- [_] DB MODEL.
 
 -- [_] [GENERAR ARCHIVO XLS]
 
@@ -232,12 +212,6 @@
        -- [_] As standalone demo with index.
        -- [_] Angular Hosting|.
 
--- [_] MISCELANEOUS.
-
-     -- [x] bootstrap menu plegar en entrada a modulo.
-     -- [_] Angular Topics.
-     -- [_] Renovar https somme.com.
-     
 -- [_] CRUD.
 
        -- [_] oAuth.
@@ -245,14 +219,5 @@
        -- [_] List of previous job alerts ".NET".
        -- [_] UIX FIX.
 
--- [_] OBSERVABLE.
-
-       -- [_] https://v17.angular.io/guide/observables.
-       -- [_] "Loading component" (from ngbgrid).
-       -- [_] Curruculum entry.
-
--- [_] SSR.
-
--- [_] PWA / SPA.
 
 ////////////////////////////////////////////////////////////////////////////////

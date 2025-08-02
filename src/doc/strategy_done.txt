@@ -2,6 +2,120 @@
 // STRATEGY DONE 
 /////////////////////////////////////////////////////////////////
 
+-- [X] architectural changes.
+
+-- [X] General Error Handling.
+
+-- [X] Service Architecture.
+
+-- [X] uv_apidigitacion / [nuevo ruv].
+
+-- [x] Referencia Template Driven/Reactive.
+
+-- [x] A.I. Apps
+        -- [x] C# Accord
+        -- [x] C++ OpenCV
+        -- [x] Machine Learning
+
+-- [x] Backend
+        -- [x] C#
+        -- [x] C++
+        -- [x] Node Js
+        -- [x] Python
+
+-- [x] Environments
+        -- [x] CodeSandbox
+        -- [x] Git Hub CodeSpaces
+        -- [x] Docker
+
+-- [x] Games
+        -- [x] tic tac toe
+        -- [x] hanoi towers
+        -- [x] sudoku
+
+-- [x] UIX --> check.
+
+     -- [x] [GENERAR ARCHIVO]
+ 
+     -- [x] [ACERCA DE]
+    
+        -- [x] [contacto]
+        -- [x] [technical specs]
+        -- [x] [job search]  
+            -- [x] oauth.        
+        -- [x] [seccion comentarios]
+            -- [x] oauth.
+  
+-- [x] angular interceptors.
+
+-- [x] uix --> general.
+
+
+        -- [x] check uix color/usability.
+        -- [x] menu collapse on page entry.
+        -- [x] metronic.
+        -- [x] [daniel sevilla]         https://primeng.org/installation.
+        
+-- [x] ANGULAR TOPICS.
+
+    -- [x] https://angular.io/docs
+
+-- [x] CORREGIR UIX.
+
+       -- [x] uncontrasted font colors.
+
+-- [x] [CPP DEMO]
+
+    -- [x] performance benchmark [c# / typescript / c++].
+
+-- [x] CHAT GTP.
+
+    -- [x]  https://www.businessinsider.es/chatgpt-codigos-impresionantes-prompts-debes-usar-expertos-1288236
+
+-- [x] Use custom login.
+
+        -- [x] DYNAMIC FORM.
+        -- [x] DB MODEL.
+
+-- [x] node.js.
+
+       -- [x] As backend of sandbox demo.
+       -- [x] As standalone demo with index.
+       -- [x] Angular Hosting.
+
+    -- [x] [LOGIN]            
+         
+            -- [x] CUSTOM.
+            -- [x] oauth.
+            -- [x] DYNAMIC FORM.
+
+    -- [x] [AI/ NEURAL NETWORK DEMO]
+
+           -- [x] [TIC/TAC/TOE] --> [min/max algorthm].
+
+                  -- [x] https://www.geeksforgeeks.org/implementation-of-tic-tac-toe-game/
+
+    -- [x] UDEMY / ANGULAR.
+        
+        -- [x] https://www.udemy.com/topic/angular/free/
+
+-- [x] Use custom login.
+
+        -- [x] DYNAMIC FORM.
+        -- [x] DB MODEL.
+
+
+-- [x] MISCELANEOUS.
+
+     -- [x] bootstrap menu plegar en entrada a modulo.
+     -- [x] Angular Topics.
+     -- [x] Renovar https somme.com.
+     
+-- [x] OBSERVABLE.
+
+       -- [x] https://v17.angular.io/guide/observables.
+       -- [x] "Loading component" (from ngbgrid).
+       -- [x] Curruculum entry.
 
 -- [x] ngb grids.
 

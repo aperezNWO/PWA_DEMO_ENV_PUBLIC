@@ -22,6 +22,14 @@
 
  -- [_] ANGULAR CURRICULUM.
 
+        -- [_] scss.
+
+        -- [_] @Input, @Eventemitter.
+        
+        -- [_] i18n.
+        
+        -- [_] Dynamic Forms.
+
         -- [_] Module federation.
 
         --  [_] ANGULAR LOG HANDLING BEST PRACTICES.
@@ -55,6 +63,8 @@
                 -- [_]  EXPLORE API.
 
         -- [_] TENSORFLOW 
+
+                -- [_] Neural Networks.
 
                 -- [_]  EXPLORE API.
 
@@ -120,6 +130,8 @@
  -- [_] ALGOITHM curriculum.
  
      --  [_]  Kruskal / Prim algos.
+     
+     --  [_] TAOCP.
 
  --  [_] SWEBOK
  
@@ -136,6 +148,16 @@
  ////////////////////////////////////////////////////////////////////////////////
  // TODO LIST
  ////////////////////////////////////////////////////////////////////////////////
+
+ -- [_] jwt -> comm cypher.
+
+ -- [_] CRUD.
+
+         -- [_] Editar lista de cumpleaños exnacato.
+                -- [_] ANGULA CRUD.
+                -- [_] METRONIC.
+        -- [_] oauth.
+        -- [_] Dynamic forms.
 
  -- [_] techical specs revision.
 
@@ -155,6 +177,10 @@
 
         -- [_] LANG (iso code).
 
+                -- [_] paquete de idiomas/localizacion (en/us).
+           
+                -- [_] angular i18n.
+
                 -- [_] app v[2.1.x].
 
                 -- [_] backend lang v[2.1.x].
@@ -168,6 +194,8 @@
                         --  [_] title speech property.
 
                         --  [_] title speech lang roperty.
+                        
+                        
 
 -- [_]  TECH SPECS.
 
@@ -225,4 +253,20 @@
 
         -- [_] navigation menu display error.
 
+
+-- [_] [GENERAR ARCHIVO XLS]
+
+
+        -- [_] filtro por tipo de log.
+        -- [_] corregir consulta y rango de fechas.
+        -- [_] CORREGIR DATOS ESTADISTICAS.
+        -- [_] depurar entradas log.
+
+-- [_] cusotm error handling.
+
+        -- [_] to interface --> [standard label status].
+        -- [_] to log.
+        -- [_] debug console messages.
+        -- [_] asp.net core enable trace.
+        
 ////////////////////////////////////////////////////////////////////////////////
