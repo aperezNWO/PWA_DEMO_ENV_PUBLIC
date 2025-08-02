@@ -97,10 +97,21 @@
 -- [_] NON IT COMPANIES / DIRECT OFFER.
 
 =====================================================================
--- ERRORS
+-- CSS FRAMEWORKS FOR ANGULAR / UIX HOSTING
 =====================================================================
 
--- [_]
+      --[_] ng bootstrap. 
+
+      --[_] Material
+
+      --[_]  Zorro_ng, 
+
+      --[_]  Tailwind
+            -- [_] tailwind dark mode.
+      --[_]  NgBootstrap
+      --[_]  PrimeNg.
+      --[_]  Ionic.
+      --[_]  https://bulma.io/
 
 =====================================================================
 -- OBSERVACIONES / REDES SOCIALES
@@ -405,8 +416,20 @@ git pull
    --  [_]  DEV CONTAINERS.
 
             -- [_] free docker hosting.
+
+            -- [_] vercel, huroku, others.
         
    --  [_]  FIREBASE STUDIO TEST 
+
+         --{_} I.A. Styudio.
+        
+         --{_} Google cloud dev.
+
+        --[_]  google idx.
+
+        --[_]  firebase hosting.
+
+                --[_] https://pwa-demo-env-prod.web.app/
 
         --  [_]  PWA_DEMO_ENV_PUBLIC   -> SHOW TO PUBLIC
 
@@ -443,4 +466,24 @@ git pull
         -- [_] WebApi.
         -- [_] angulardemo.
 
+--[_] CI / CD.
+
+--[_] Microfrontend / Microservices.
+
+-- [_] GIT HUB SETTINGS
+
+        -- [_] CODESPACES.
+
+        -- [_] PROJECTS.
+
+        --[_]  git hub landing page / md file
+
+                --[_] https://github.github.com/gfm/
+
+ --[_] CHECK ANGULAR warnings.
+
+ -- [_] owasp online check for vulnerabilities.
+
+        --[_]  https://www.veracode.com
+               
 /////////////////////////////////////////////////////////////////

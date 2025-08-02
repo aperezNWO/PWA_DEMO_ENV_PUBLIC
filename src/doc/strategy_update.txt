@@ -22,6 +22,8 @@
 
  -- [_] ANGULAR CURRICULUM.
 
+        --[_] ng generate enum.
+
         -- [_] scss.
 
         -- [_] @Input, @Eventemitter.
@@ -36,7 +38,9 @@
 
         --  [_] ANGULAR ERROR HANDLING BEST PRACTICES.
 
-        -- [_] SSR.
+        --  [_] Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering).
+
+        --  [_] Angular Unit Testing.
 
         -- [_] PWA / SPA.
 
@@ -44,9 +48,9 @@
 
         -- [_] Angular CDN.
 
-
  -- [_] c# sql curriculum.
 
+        -- [_] c# certification / curriculum  freecodecamp.
 
          -- [_] sql.
 
@@ -54,7 +58,6 @@
 
               --  [_] delete "page_index"... from log entries.
 
- 
  -- [_] c++ curriculum.
  
         -- [_] TESSERACT.      
@@ -140,13 +143,15 @@
  
          --  [_] COMMENT CODE GITHUB STYLE    
 
-         --  [_]    arch doc. 
+         --  [_]   arch doc. 
 
          --  [_]   Software Pattern. 
          
          --  [_]   SOLID Principles.
 
          --  [_]   OWASP.
+
+         --  [_]   PWA.
 
  ////////////////////////////////////////////////////////////////////////////////
  // TODO LIST
@@ -260,6 +265,7 @@
 -- [_] [GENERAR ARCHIVO XLS]
 
         -- [_] filtro por tipo de log.
+                --[_] Consulta Log Errores.
         -- [_] corregir consulta y rango de fechas.
         -- [_] CORREGIR DATOS ESTADISTICAS.
         -- [_] depurar entradas log.
@@ -272,5 +278,12 @@
         -- [_] asp.net core enable trace.
 
 -- [_] paypal button.
+
+-- [_] Games
+
+        --[_] Tic Tac Toe online.
+        --[_] Sudoku OCR.
+
+--[_] Dynamic Password / chat.
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -2,6 +2,26 @@
 // STRATEGY DONE 
 /////////////////////////////////////////////////////////////////
 
+
+--[X] Bootstrap Mobile / Desktop.
+--[X] Referencia c++ Regex / Geek for geeks.
+--[X] Sudoku split board -> Generated / Solved.
+--[x] Plaground env -> source.
+--[x] CSV / XLS / ZIP Option.
+--[x] c# accord.
+--[x] Hanoid 3d.
+--[x] Angular.dev / Certification / Community.
+--[x] mongodb demo / backend source.
+--[x] django  demo / backend source.
+--[x] chatgtp / xls demo / node.js.  
+--[x]  ofrecer directamente a angular community.
+--[x] Angular Job Alert / Social.
+--[x] Paypal link button.
+--[x] node.js gemini.
+--[x] PWA / ANGULAR.DEV / WEB.DEV / MDN / W3C.
+--[x] Select your language.
+--[x] Topics end point.
+
 -- [X] HOSTING  
 
         -- [X] [somee.com]
