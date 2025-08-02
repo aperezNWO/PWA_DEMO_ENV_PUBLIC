@@ -123,7 +123,7 @@
                 
  -- [_] tensorflow / MACHINGE LEARNING curriculum.
 
-       -- [X]  https://www.freecodecamp.org/learn/machine-learning-with-python/#machine-learning-with-python-projects
+       -- [_]  https://www.freecodecamp.org/learn/machine-learning-with-python/#machine-learning-with-python-projects
  
  -- [_] datascience curriculum.
 
@@ -256,7 +256,6 @@
 
 -- [_] [GENERAR ARCHIVO XLS]
 
-
         -- [_] filtro por tipo de log.
         -- [_] corregir consulta y rango de fechas.
         -- [_] CORREGIR DATOS ESTADISTICAS.
@@ -268,5 +267,7 @@
         -- [_] to log.
         -- [_] debug console messages.
         -- [_] asp.net core enable trace.
-        
+
+-- [_] paypal button.
+
 ////////////////////////////////////////////////////////////////////////////////

@@ -2,6 +2,143 @@
 // STRATEGY DONE 
 /////////////////////////////////////////////////////////////////
 
+-- [X] MENU PRINIPAL
+
+        --[X] NAVEGACION.
+
+                --[X] LOGIN / OAUTH.
+
+                --[X] TEMARIO.
+
+                --[X] PAGINAS.
+
+-- [X] LISTADO DE URLS
+
+-- [X] Config Module.
+
+--[X] RESTRINGIR ACCESO A REGISTROS VIA ROLES / OAUTH. 
+
+--[x] NG BOOTRSRAP ** SAMPLE ** .
+
+--[X] NG BOOTRSRAP TABLE
+
+        --[x] _sevices, _modules,_models.
+
+        --[X] Tipo de registro "Enlace / Link".
+
+                --[X] descripcion.
+
+                --[X] url.
+
+                --[X] nivel de encabezado.
+
+        --[X] leer archivo externo de paginas .json (HOW TO PUBLISH A SINGLE ELEMNT VIA NPX NGH).
+
+        --[X] Estrategia de Duplicacion.
+
+                --[X] utilzar herencia.
+
+                --[X] Duplicar objetos .ts.
+        
+                --[X] Cambiar referencia a objetos .ts.
+
+-- [X] LEER ARCHIVO CONFIG / VERSION.
+
+-- [X] codedandbox contingency.
+
+      -- [X] check df149032@outlook.com.
+
+      -- [X] set github account
+
+      -- [X] upload node.js source code.
+
+      -- [X] set codesandbox account.
+
+-- [X] promise exception handling.    
+
+-- [X] ngb grid on public csv query.
+
+-- [X] Angular curriculum re-order.
+
+-- [X] ngb grid login link on repo column.
+
+-- [X] MARKETING GRID CRUD.
+
+-- [X] JWT.
+
+-- [X] OWASP.
+
+-- [x] Small Icon on NAV MENU. 
+
+-- [x] Fix Menu behaviour.
+
+-- [x] fron icon as link.
+
+-- [x] nodejs demo, backend url demo.
+
+-- [x] page not found triggers logout. 
+
+-- [x] sortirection dictionary;
+
+-- [x] Datagrid row detail / relacion unos a muchos json.
+
+-- [x] OAUTH. 
+
+-- [x] Edu link group.
+
+      -- [x] Database.
+
+      -- [x] Programming References.
+
+      -- [x] Patterns.
+      
+      -- [x] SOLID.
+
+-- [x] php mdemo.
+
+-- [x] datagrid record number.  
+
+ -- [x] Angular curriculum.
+
+ -- [x] Contact Form 
+ 
+       -- [x] Dynamic Form.  
+
+       -- [x] Read json pages from somee.com / database.
+
+  -- [x] RXJS
+
+       -- [x]  https://v17.angular.io/guide/rx-library      
+
+
+-- [x] NBX GRID.      
+
+      -- [x] fix onload data.      
+
+            -- [x] basarse en concacform admin grid.      
+
+      -- [x] fix onsort.      
+
+-- [x] SpeechService as Service onLoad.    
+
+-- [x] scm list.     
+
+      -- [x] scm list data from database.     
+
+      -- [x] modify tesch specs list.
+
+-- [x] merge demos_lang with env_prod.     
+
+      -- [x] end_prod add submenu demos_lang.          
+
+      -- [x] end_prod add submenu demos_feature.
+ 
+      -- [x] end_prod add submenu demos_curriculum.
+  
+      -- [x] end_prod add contact form.
+
+      -- [x] end_prod modify tesch specs list.
+
 -- [X] architectural changes.
 
 -- [X] General Error Handling.

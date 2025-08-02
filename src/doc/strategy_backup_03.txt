@@ -219,5 +219,87 @@
        -- [_] List of previous job alerts ".NET".
        -- [_] UIX FIX.
 
+--[_] Big Icons Nav.
+--[_] Plaground env -> source.
+--[_] CSV / XLS / ZIP Option.
+--[_] c# accord.
+--[_] Hanoid 3d.
+--[_] Angular.dev / Certification / Community.
+--[_] Bootstrap Mobile / Desktop.
+--[_] Angular Job Alert / Social.
+--[_] Direct Job offer / angular.
+--[_] Bootstrap Mobile / Desktop.
+--[_] ng generate enum.
+--[_] node.js gemini.
+--[_] PWA / ANGULAR.DEV / WEB.DEV / MDN / W3C.
+--[_] Select your language.
+--[_] Topics end point.
+--[_] Angular Job Alert / Social.
+--[_] Paypal link button.
+--[_] Git Hub readme / topic list.
+--[_] Uix load template dinamically.
+--[_] SCSS.
+--[_] Angular Topics / Pending / Current.
+--[_] Technical doc / swebok doc / flow chart.
+--[_] CI / CD.
+--[_] Techblog / linkeding / IEEE standard.
+--[_] Tic Tac Toe online.
+--[_] Sudoku OCR.
+--[_] oAuth.
+--[_] Dynamic Password / chat.
+--[_] Consulta Log Errores.
+--[_] CRUD.
+--[_] Read specs from config file.
+--[_] compile warnings.
+--[_] Sudoku split board -> Generated / Solved.
+--[_] Consolta log de errores.
+--[_] Marketling List -> (former employees / non it companies).
+--[_] Branch Protect.
+--[_] Referencia c++ Regex / Geek for geeks.
+--[_] UIX : PrimeNG, Material, Zorro_ng, IONIC as separated projects.
+--[_] Software engigeering topics : SOLID / CLEAN / PATTERNS / PWA.
+--[_] EPPPlus referene. Complete references.
+--[_] Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering).
+--[_] Microfrontend.
+--[_] Angular Unit Testing.
+--[_] https://vercel.com/apereznwos-projects/~/integrations
+--[_] angular academy.
+--[_] angular certification.
+--[_] React demo like PWA_DEMO.
+--[_] ionic demo like PWA_DEMO.
+--[_] mongodb demo / backend source.
+--[_] django  demo / backend source.
+--[_] chatgtp / xls demo / node.js.      
+--[_] c# certification.      
+--[_] php laravel, python, ionic.
+      --[_]https://replit.com/
+--[_] google dev initiatives. 
+      --[_] appscript / microsoft material.
+      --{_} flutter.
+      --[_] Kottling.
+      --{_} https://idx.dev/#introduction
+      --{_} I.A. Styudio.
+      --{_} Google cloud dev.
+--[_]  somee entry point
+--[_]  google idx.
+--[_]  firebase hosting.
+      --[_] https://pwa-demo-env-prod.web.app/
+--[_]  https://smartalentit.com/
+--[_]  git hub landing page.
+--[_]  community based job search.
+--[_]  md file
+       --[_] https://github.github.com/gfm/
+--[_]  Angular Multiple file Intro.
+       --[_] index with param url.
+--[_]  https://www.veracode.com
+--[_]  ofrecer directamente a angular community.
+--[_]  Tailwind
+      -- [_] tailwind dark mode.
+--[_]  NgBootstrap
+--[_]  PrimeNg.
+--[_]  Ionic.
+--[_]  https://bulma.io.
+--[_] Modules from previous todo list.
+     
 
 ////////////////////////////////////////////////////////////////////////////////
