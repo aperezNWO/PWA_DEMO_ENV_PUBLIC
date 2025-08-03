@@ -70,8 +70,6 @@
 
         -- [_] TENSORFLOW 
 
-                -- [_] Neural Networks.
-
                 -- [_]  EXPLORE API.
 
                 -- [_]  WORD CLASIFICATION
@@ -127,10 +125,10 @@
         -- [_] djanto setup linux    : freecode camp curso de ciencia de datos.
                 https://codesandbox.io/p/github/aperezNWO/django_setup_linux/main
                 
- -- [_] tensorflow / MACHINGE LEARNING curriculum.
+        -- [_] MACHINGE LEARNING / neural networks -> curriculum.
 
-       -- [_]  https://www.freecodecamp.org/learn/machine-learning-with-python/#machine-learning-with-python-projects
- 
+        -- [_]  https://www.freecodecamp.org/learn/machine-learning-with-python/#machine-learning-with-python-projects
+        
  -- [_] datascience curriculum.
 
  -- [_] ALGOITHM curriculum.
@@ -139,9 +137,12 @@
      
      --  [_] TAOCP.
 
+     --  [_] neural networks.
+     
+
  --  [_] SWEBOK
  
-         --  [_] COMMENT CODE GITHUB STYLE    
+         --  [_]   COMMENT CODE GITHUB STYLE    
 
          --  [_]   arch doc. 
 
@@ -157,14 +158,18 @@
  // TODO LIST
  ////////////////////////////////////////////////////////////////////////////////
 
- -- [_] jwt -> comm cypher.
-
  -- [_] CRUD.
 
-         -- [_] Editar lista de cumpleaños exnacato.
-                -- [_] ANGULA CRUD.
+         -- [_] Editar lista exnacato.
+
+                -- [_] ngb table.
+         
                 -- [_] METRONIC.
+        
         -- [_] oauth.
+        
+        -- [_] JSON WEB TOKEN
+
         -- [_] Dynamic forms.
 
  -- [_] techical specs revision.
@@ -191,9 +196,7 @@
 
                 -- [_] app v[2.1.x].
 
-                -- [_] backend lang v[2.1.x].
-
-                --  [_] main pages collection.
+                --  [_] main pages collection / base component.
                 
                         --  [_] title log property.
                         
@@ -202,12 +205,14 @@
                         --  [_] title speech property.
 
                         --  [_] title speech lang roperty.
-                        
-                        
 
+                        --  [_] site lang roperty.
+                        
 -- [_]  TECH SPECS.
 
-        -- [_]  BACKEND VERSIONS.
+        -- [_] BACKEND app  v[x.x.x].
+
+        -- [_] backend lang v[x.x.x].
 
         -- [_]  techical specs as dynamic list.
  
@@ -223,9 +228,9 @@
 
 --  [_] component.
 
-         -- [_] ngb grid master detail.
+        -- [_] ngb grid master detail.
 
-}        --  [_] image capture component.
+}       -- [_] image capture component.
 
         -- [_] grid component. 
 
@@ -241,13 +246,13 @@
 
  --  [_] recorrido revisión funcionalidad.
 
-         -- [_] read json config files from database.
+        -- [_] read json config files from database.
 
-         --  [_] chart sound.
+        -- [_] chart sound.
 
-         --  [_] mensajes de espera / signals.
+        -- [_] mensajes de espera / signals.
 
-          -- [_] firefox reference uix fix.
+        -- [_] firefox reference uix fix.
 
         -- [_]  Babilon.js / 3d collision.
 

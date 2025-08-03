@@ -2,231 +2,8 @@
 ** Software Configuration Management
 *********************************************************************
 
-=====================================================================
--- SCM - HOSTING
-=====================================================================
-
--- [x] environments.
-
-        -- [_] LOCAL_IIS.
-        -- [_] WebApi.
-        -- [_] angulardemo.
-
--- [>] SOURCE github.com        
-
-        -- [_] PUBLIC SOURCES.                        
-                -- [x] [mcsdWebApíTFS] (tff)      -->  (github) "mcsd_public".
-                -- [>] Update sources.
-
--- [>] HOSTING  
-
-        -- [_] [alternativas]
-
-                -- [_] https://xranks.com/es/somee.com
-
-        -- [_] [somee.com]
-         
-                -- [_] [HELP]
-                        https://somee.com/doka/Help/Article/106/How_to_deploy_Web_project_from_Visual_Studio
-
-                -- [_] [mcsd/angulardemo/webapidemo]
-                -- [_] [db].
-                       -- [_] reset log db #1 / debug content.
-                       -- [_] enbable   db #2 / (CSV DEMO).
-                -- [_] check disabled accounts.
-                       -- [_] https://www.angulardemo.somee.com.
-
--- [>] webapidemo / service.
-
-       -- [x] remove demo views/controllers.
-       -- [x] enable domain "WebApiDemo".
-       -- [x] mcsdWebApíTFS.
-       -- [x] mcsdBackup.
-
-                -- [x] BACKUP /DELETE BOOK "DELORME".  
-                -- [x] BACKUP /DELETE folder "_angular".  
-                -- [x] turn off domain "mcsdBackup".
-                -- [x] change tfs/github name "mcsdNet48TFS" / "mcsdNet48GitHub".
-                -- [x] change tfs/github name "mcsd" por "mcsdNetCoreBackup".
-
-        -- [_] REDUCE FILE SIZE.
-                -- [_] check disable email from "somee.com".
-
-/*
-
-        Your website 'angulardemo.somee.com' was disabled for the following reason: 
-
-        Website's average, per request bandwidth has exceeded a limit that is set for the website hosted with a free hosting package! 
-        Although we do not limit the file size that can be uploaded or downloaded from your website, 
-        we set a limit of [150KByte] on average file size that can be downloaded from the website hosted with free package. 
-
-        The average is calculated every several hours for all files together, including *.html, *.asp, *.aspx, *.jpg, *.png, *.gif, *.mpg 
-        and other text and media files. 
-
-        Your website is scheduled to start again in about 12 hours, or you can start it manually from our control panel any time. 
-
-        But if you will not take actions to decrease the average file size that is sent from your website it will be stopped again 
-        and you are allowed to start it 5 times only. 
-
-        You can also switch to any other hosting package where such maintenance is not performed.
-
-*/
-=====================================================================
--- STRATEGY - DIFUSION
-=====================================================================
-
--- [_] FREELANCE WEB SITES
-
-                -- [_] WORKANA.
-                -- [_] FIVERR.
-                -- [_] UPWORK.
-
--- [_] LINKEDIN
-
--- [_] facebook
-
-        -- [_] .NET COMMUNITY
-        -- [_] ANGULAR COMMUNITY
-
--- [_] DIRECT EMAIL
-
-        -- [_] JOB SEARCH MODULE
-
--- [_] TWITTER /
--- [_] INSTAGRAM / TK.
--- [_] NON IT COMPANIES / DIRECT OFFER.
-
-=====================================================================
--- CSS FRAMEWORKS FOR ANGULAR / UIX HOSTING
-=====================================================================
-
-      --[_] ng bootstrap. 
-
-      --[_] Material
-
-      --[_]  Zorro_ng, 
-
-      --[_]  Tailwind
-            -- [_] tailwind dark mode.
-      --[_]  NgBootstrap
-      --[_]  PrimeNg.
-      --[_]  Ionic.
-      --[_]  https://bulma.io/
-
-=====================================================================
--- OBSERVACIONES / REDES SOCIALES
-=====================================================================
--- [daniel sevilla]         
-
-    -- [_]              https://primeng.org/installation.
-
-=====================================================================
 /////////////////////////////////////////////////////////////////
-// SCM STRATEGY
-/////////////////////////////////////////////////////////////////
-
--- [_] staring url:
-
-      -- [x] https://mcsd.somee.com
-
-      -- [x] https://angulardemo.somee.com
-
-      -- [x] http://webapidemo.somee.com
-
-      -- [x] https://angulardemo.somee.com/wwwroot/_angular/_angularMCSD/#/Home
-
-      -- [x] https://mcsd.somee.com/wwwroot/_angular/_angularMCSD/#/Home
-
-/////////////////////////////////////////////////////////////////
-// VSTUDIO SETUP / BROWSER
-/////////////////////////////////////////////////////////////////
-
--- [x] disable chorome security.
-        -- [x] "C:\Program Files\Google\Chrome\Application\"
-        -- [x] chrome.exe --user-data-dir="C://Chrome dev session" --disable-web-security
-
--- [x] VISUAL STUDIO POWER SHELL SETUP 
-        -- [_] Set-ExecutionPolicy -Scope CurrentUser unrestricted
-
-/////////////////////////////////////////////////////////////////
-// environments
-/////////////////////////////////////////////////////////////////
-
--- [_] https://angular.io/guide/build
-
--- [_] env list
-        -- [_] serve       port 4200
-        -- [_] serve/build port 83
-        -- [_]       build mcsd
-        -- [_]       build angulardemo
-
-
--- [_] angular.json
-
-"configurations": {
-  "development": { … },
-  "production": { … },
-  "<env_name>": {
-    "fileReplacements": [
-      {
-        "replace": "src/environments/environment.ts",
-        "with": "src/environments/environment.<env_name>.ts"
-      }
-    ]
-  }
-}
-
--- [_] ng build
-
-ng build --configuration=IIS_LOCAL
-
-ng build --configuration=mcsd
-
-ng build --configuration=angulardemo
-
-"serve": {
-  "builder": "@angular-devkit/build-angular:dev-server",
-  "options": {
-    "browserTarget": "your-project-name:build"
-  },
-  "configurations": {
-    "development": {
-      "browserTarget": "your-project-name:build:development"
-    },
-    "production": {
-      "browserTarget": "your-project-name:build:production"
-    },
-    "<env_name>": {
-      "browserTarget": "your-project-name:build:<env_name>"
-    }
-  }
-},
-
--- [_] ng serve
-
-ng serve --configuration=IIS_LOCAL
-
-ng serve --configuration=mcsd
-
-ng serve --configuration=angulardemo
-
-
--- [_] config.json
-
-{
-    "baseUrl": "<ENV_URL>"
-}
-
--- [_] environment.<ENV_NAME>.ts
-
-export class environment {
-   static baseUrl        : string | undefined   = '<ENV_URL>';
-   static serviceName    : string | undefined   = '<ENV_MAME>';
-};
-
-
-/////////////////////////////////////////////////////////////////
-// SCM PACKAGES
+// NPM PACKAGES
 /////////////////////////////////////////////////////////////////
 
 -- [x] npm packages
@@ -272,100 +49,94 @@ export class environment {
 ├── @angular/platform-browser@16.1.2
 ├── @angular/router@16.1.2 
 
-/////////////////////////////////////////////////////////////////
-// GIT HUB CODESPACES / PAGES
-/////////////////////////////////////////////////////////////////
 
--- [_] clone repository
-
--- [_] instal angular CLI 
-
-      -- [_] npm install  --force 
-
--- [_] Build your Angular application: 
-
--- Create a production build of your Angular application using the Angular CLI:
-
-   (skip) ng build --c=production
-
-   (skip) ng build --c=production --base-href="https://apereznwo.github.io/AngularMCSD_Public/"
-
-   npm run deploy
-
--- (skip) Corregir <base href="/"> en archivo "dist\<your-angular-app>\index.html":   
-
-   https://apereznwo.github.io/AngularMCSD_Public/
-
--- Deploy to GitHub Pages: You can create a GitHub Pages branch or use the gh-pages package to automate the deployment process. 
-
-  Here's an example using the angular-cli-ghpages package:
-
-  # (skip) Install the angular-cli-ghpages package globally
-  (skip) npm install -g angular-cli-ghpages
-
-  # Deploy the built application to GitHub Pages
-  (skip) npx ngh --dir=dist/angular-dijkstra
-  (skip) ngh --dir=dist/angular-dijkstra
-  (skip) npm run publish
-
--- Replace your-angular-app with the name of your Angular app's directory where the build artifacts are located.
-
--- Configure GitHub Pages: 
-
-   Go to your GitHub repository settings, navigate to the GitHub Pages section, 
-   and set the source branch to the one you used for deployment (e.g., gh-pages). GitHub will provide you with a URL where your Angular application will be hosted.
-
--- Remember, this method will make your Angular application available at a URL like https://username.github.io/repository-name. 
-
-   npm run build-and-deploy
-
-   This URL will be accessible publicly,  providing a permanent link to your deployed application.
-   https://apereznwo.github.io/AngularMCSD_Public/
-
--- (confirmation) Configure GitHub Actions:    
-
-   See workflow : "pages build and deployment". 
+*****************************************************************
+*********** HOSTING *********************************************
+*****************************************************************
 
 /////////////////////////////////////////////////////////////////
-// OCR
+// ENVINRONMENT LIST
 /////////////////////////////////////////////////////////////////
 
-npm install @eve-sama/ngx-signature-pad --force 
 
-/////////////////////////////////////////////////////////////////
-// PWD
-/////////////////////////////////////////////////////////////////
--- [_] npm update --force 
--- [_] npm install @angular/pwa 
--- [_] ng add @angular/pwa --project=AngularDijkstra 
-
-/////////////////////////////////////////////////////////////////
-
--- [>] hosting maintenance (ver scm).
-
-        -- [>] credits.
-
-               -- [>] apereznwo           (alejandro.perez.acosta@hotmail.com)   : 22 November      – 22 December 2024
-
-               -- [>]apereznwogmai_lbackup  (alejandro.perez.acosta@gmail.com)   :  13 December 2024 – 13 January 2025
-
-               -- [>] Exam70386             (df149032@outlook.com)               : (deleted account)
-
-        -- [>] hard disk / db space.
-
-               -- [>] somee.com
-
-               -- [>] codesandbox.io
-
-/////////////////////////////////////////////////////////////////
-
--- [_] git hub source.        
+-- [>] SOURCE CODE / GIT HUB :         
 
       -- [_] aperezNWO      -> PRIVATE.        
 
       -- [_] aperezNWOGmail -> PUBLIC.        
 
       -- [_] EXAM486        -> PUBLIC.       
+     
+
+-- [>] HOSTING  
+
+        -- [_] BACKEND
+
+                -- [_] LOCAL_IIS.
+
+                -- [_] [CODESANDBOX]
+
+                        -- [_] https://xranks.com/es/somee.com
+
+                -- [_] [somee.com]
+                
+                        -- [_] [HELP]
+                                https://somee.com/doka/Help/Article/106/How_to_deploy_Web_project_from_Visual_Studio
+
+                        -- [_] [mcsd/angulardemo/webapidemo]
+                        -- [_] [db].
+                        -- [_] reset log db #1 / debug content.
+                        -- [_] enbable   db #2 / (CSV DEMO).
+                        -- [_] check disabled accounts.
+                        -- [_] https://www.angulardemo.somee.com.
+
+
+        -- [_] FRONTEND
+
+                -- [_] GIT HUB PAGES.
+       
+/////////////////////////////////////////////////////////////////
+// hosting maintenance (ver scm).
+/////////////////////////////////////////////////////////////////
+
+        -- [>] CODE SANDBOX LOGIN / credits.
+
+               -- [>] apereznwo           (alejandro.perez.acosta@hotmail.com)   : 22 November      – 22 December 2024
+
+               -- [>] apereznwogmaiL       (alejandro.perez.acosta@gmail.com)   :  13 December 2024 – 13 January 2025
+
+               -- [>] Exam70386             (df149032@outlook.com)               : (deleted account)
+
+        -- [>] hard disk / db space -> CLIEANUP.
+
+               -- [>] somee.com
+
+               -- [>] codesandbox.io
+
+***********************************************************
+************** GIT ****************************************
+***********************************************************
+
+/////////////////////////////////////////////////////////////////
+// GIT COMMANDS
+/////////////////////////////////////////////////////////////////
+
+git add * 
+git commit -m "Application [ANGULAR DEMO - ENV_PUBLIC] v[1.8.3]
+>>1)  Nested Main Pages. " 
+git push 
+git pull
+
+
+/////////////////////////////////////////////////////////////////
+// GIT HUB PAGES
+/////////////////////////////////////////////////////////////////
+
+  # Deploy the built application to GitHub Pages
+  (_) npx ngh --dir=dist/angular-dijkstra
+  (_) ngh --dir=dist/angular-dijkstra
+  (_) npm run publish              (custom task).
+  (_) npm run package-and-publish  (custom task).
 
 /////////////////////////////////////////////////////////////////
 
@@ -398,14 +169,6 @@ npm install @eve-sama/ngx-signature-pad --force
         and you are allowed to start it 5 times only. 
 
         You can also switch to any other hosting package where such maintenance is not performed.
-
-/////////////////////////////////////////////////////////////////
-
-git add * 
-git commit -m "Application [ANGULAR DEMO - ENV_PUBLIC] v[1.8.3]
->>1)  Nested Main Pages. " 
-git push 
-git pull
 
 /////////////////////////////////////////////////////////////////
 // SCM STRATEGY
