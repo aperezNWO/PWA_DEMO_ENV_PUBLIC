@@ -314,6 +314,8 @@
 
         -- [_] PageUrlsList. 
 
+                -- [_] modify basecomponent. if page_id == empty, get from QueryParams 
+        
         -- [_] gridParam.
 
         -- [_] gridCrud.
