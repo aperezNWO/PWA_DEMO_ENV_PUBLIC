@@ -3,6 +3,12 @@
 ////////////////////////////////////////////////////////////////////////////////
 
  ////////////////////////////////////////////////////////////////////////////////
+ // MARKTETING STRATEGY
+ ////////////////////////////////////////////////////////////////////////////////
+
+-- [_]  https://github.com/aperezNWO/PWA_DEMO_ENV_ADMIN/blob/main/doc/marketing.txt
+
+ ////////////////////////////////////////////////////////////////////////////////
  // SCM STRATEGY
  ////////////////////////////////////////////////////////////////////////////////
       
@@ -19,6 +25,8 @@
         -- [_] REPLICAR EN ORDEN A : JAVA / JAVSACXRIPT / Python
 
         -- [_] Replicar en cada lenguaje a Curriculum. 
+
+        -- [_] Replicate to docs and social media. 
 
  -- [_] ANGULAR CURRICULUM.
 
@@ -59,6 +67,8 @@
               --  [_] delete "page_index"... from log entries.
 
  -- [_] c++ curriculum.
+
+         -- [_]  Smart Pointers.
  
         -- [_] TESSERACT.      
 
@@ -106,8 +116,6 @@
                 
                         --  [_]  *.pb model files are generated mostly on Python.        
 
-
-        -- [_]  Smart Pointers.
 
 
  -- [_] node.js curriculum 
@@ -226,48 +234,7 @@
 
         -- [_] remove zip entry from index.
 
---  [_] component.
-
-        -- [_] ngb grid master detail.
-
-}       -- [_] image capture component.
-
-        -- [_] grid component. 
-
-        -- [_] reference component. 
-
-                --  [_] base compoent pages property.
-
-                --  [_] REFERENCES AS JSON FILES.
-
-        --  [_] voice search component - ask A.I.      
-        
-        --  [_] <app-search></app-search>.|          
-
- --  [_] recorrido revisión funcionalidad.
-
-        -- [_] read json config files from database.
-
-        -- [_] chart sound.
-
-        -- [_] mensajes de espera / signals.
-
-        -- [_] firefox reference uix fix.
-
-        -- [_]  Babilon.js / 3d collision.
-
-        -- [_] CORRECT HANOI 3D POSITION.
-
-        -- [_] dynamic title from page _Route.caption.
-
-        -- [_] config jsong file reading optimization.
-
-        -- [_] modules / engines.
-
-        -- [_] navigation menu display error.
-
-
--- [_] [GENERAR ARCHIVO XLS]
+ -- [_] [GENERAR ARCHIVO XLS]
 
         -- [_] filtro por tipo de log.
                 --[_] Consulta Log Errores.
@@ -289,6 +256,52 @@
         --[_] Tic Tac Toe online.
         --[_] Sudoku OCR.
 
---[_] Dynamic Password / chat.
+--  [_] Dynamic Password / chat.
+
+--  [_] recorrido revisión funcionalidad.
+
+        -- [_] read json config files from database.
+
+        -- [_] chart sound.
+
+        -- [_] mensajes de espera / signals.
+
+        -- [_] firefox reference uix fix.
+
+        -- [_] Babilon.js / 3d collision.
+
+        -- [_] CORRECT HANOI 3D POSITION.
+
+        -- [_] dynamic title from page _Route.caption.
+
+        -- [_] config jsong file reading optimization.
+
+        -- [_] modules / engines.
+
+        -- [_] navigation menu display error.
+
+--  [_] component.
+
+        -- [_] ngb grid master detail.
+
+}       -- [_] image capture component.
+
+        -- [_] grid component. 
+
+        -- [_] reference component. 
+
+                --  [_] base compoent pages property.
+
+                --  [_] REFERENCES AS JSON FILES.
+
+        --  [_] voice search component - ask A.I.      
+        
+        --  [_] <app-search></app-search>.
+
+        --  [_] dynamic form.
+
+                --  [_] grid curriculum.
+
+                --  [_] grid lang .
 
 ////////////////////////////////////////////////////////////////////////////////
