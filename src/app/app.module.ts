@@ -51,6 +51,7 @@ import { AlgorithmRegExComponent                } from './_modules/_Demos/_Demos
 import { AlgorithmSortComponent                 } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-sort/algorithm-sort.component';
 import { AlgorithmWebComponent                  } from './_modules/_Demos/_DemosFeatures/algorithm/_algorithm-web/algorithm-web.component';
 import { FeaturePagesComponent                  } from './_modules/_Demos/_DemosLang/angular-demo/feature-pages.component';
+import { DemosLangWebComponent                  } from './_modules/_Demos/_DemosLang/_demos-lang-web/demos-lang-web.component';
 import { ChartComponent                         } from './_modules/_Demos/_DemosFeatures/files-generation/chart/chart.component';
 import { FilesGenerationCSVComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-csv/files-generation-csv.component';
 import { FilesGenerationPDFComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-pdf/files-generation-pdf.component';
@@ -71,18 +72,19 @@ import { MiscelaneousComponent       } from './_modules/_Demos/_DemosFeatures/mi
 import { OcrPhotoCaptureComponent    } from './_modules/_Demos/_DemosFeatures/miscelaneous/ocr-photo-capture/ocr-photo-capture.component';
 import { ContactformComponent        } from './_modules/about/contactform/contactform.component';
 import { TechnicalSpecsComponent     } from './_modules/about/technicalspecs/technical-specs/technical-specs.component';
-import { DemosLangWebComponent       } from './_modules/_Demos/_DemosLang/_demos-lang-web/demos-lang-web.component';
+import { EduResourcesComponent       } from './_modules/about/edu-resources/edu-resources.component';
 import { CppDemoComponent        } from './_modules/_Demos/_DemosLang/cpp-demo/cpp-demo.component';
+import { FractalDemoComponent    } from './_modules/_Demos/_DemosFeatures/miscelaneous/fractalDemo/juliaform.component';
 import { NetcoredemoComponent    } from './_modules/_Demos/_DemosLang/netcoredemo/netcoredemo.component';
 import { NodejsDemoComponent     } from './_modules/_Demos/_DemosLang/nodejs-demo/nodejs-demo.component';
 import { SpringBootDemoComponent } from './_modules/_Demos/_DemosLang/spring-boot-demo/spring-boot-demo.component';
 import { DjangoDemoComponent     } from './_modules/_Demos/_DemosLang/django-demo/django-demo.component';
-import { SpeechPanelComponent    } from './_components/speech-panel/speech-panel.component';
 import { BaseSortableHeader      } from './_directives/sortable.directive';
+import { SpeechPanelComponent    } from './_components/speech-panel/speech-panel.component';
 import { BaseComponent           } from './_components/base/base.component';
-import { EduResourcesComponent   } from './_modules/about/edu-resources/edu-resources.component';
 import { _SearchComponent        } from './_components/search/_search.component ';
-import { FractalDemoComponent    } from './_modules/_Demos/_DemosFeatures/miscelaneous/fractalDemo/juliaform.component';
+import { GridParamComponent      } from './_components/grid-param/grid-param.component';
+import { PageUrlListComponent    } from './_components/page-url-list/page-url-list.component';
 //
 export function initialize(_configService: ConfigService) 
 // 
@@ -195,6 +197,8 @@ export class CustomErrorHandler implements ErrorHandler {
         BaseComponent,
         EduResourcesComponent,
         _SearchComponent,
+        GridParamComponent,
+        PageUrlListComponent
     ],
     exports: [RouterModule],
     providers: [

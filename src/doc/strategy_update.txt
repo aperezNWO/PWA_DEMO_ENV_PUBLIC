@@ -304,4 +304,32 @@
 
                 --  [_] grid lang .
 
+-- [_] PWA + SSR + JWT - DYNAMIC FORM
+
+        -- [_] PWA_DEMO_ENV_ADMIN. 
+
+        -- [_] PWA_DEMO_ENV_CONTACT. 
+
+-- [_] CMS 
+
+        -- [_] PageUrlsList. 
+
+        -- [_] gridParam.
+
+        -- [_] gridCrud.
+         
+        -- [_] <appName></appName> entry.
+         
+        -- [_] routerlist name+param. 
+
+        -- [_] Dynamic Form. 
+
+        -- [_] last url -> back to menu. 
+
+        -- [_] data from database.
+
+        -- [_] schema from database.
+                
+        -- [_] uix list type from database .
+        
 ////////////////////////////////////////////////////////////////////////////////
