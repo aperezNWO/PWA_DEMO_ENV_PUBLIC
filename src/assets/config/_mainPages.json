@@ -3,9 +3,9 @@
         "log_name"   : "PAGE_ANGULAR_DEMO_INDEX",
         "page_name"  : "Bienvenidos a [Angular Demo]",
         "pages"      : [
-          { "id": 1, "url" : "/DemosFeaturesWeb"    , "text": "[CARACTERISTICAS]" },
-          { "id": 2, "url" : "/DemosLanguageWeb"    , "text": "[LENGUAJES]"       },
-          { "id": 3, "url" : "/DemosCurriculumWeb"  , "text": "[CURRICULUM]"      }
+          { "id": 1, "url" : "/DemosFeaturesWeb"                                          , "text": "[CARACTERISTICAS]"                                                          },
+          { "id": 2, "url" : "/DemosLanguageWeb"                                          , "text": "[LENGUAJES]"                                                                },
+          { "id": 3, "url" : "/PageUrlList"                                               , "text": "[CURRICULUM]"      , "queryParams" : "PAGE_DEMOS_CURRICULUM_INDEX"          }
         ]
       },
       {
@@ -195,7 +195,7 @@
         ]
       },
       {
-        "log_name"   : "PAGE_DEMOS_CURRICIULUM_INDEX",
+        "log_name"   : "PAGE_DEMOS_CURRICULUM_INDEX",
         "page_name"  : "[DEMOS - CURRICULUM]",
         "pages"      : [
             { "id": 1, "url" : "/CurriculumAngular"       , "text": "[Referencia - Angular    / TypeScript]"               }

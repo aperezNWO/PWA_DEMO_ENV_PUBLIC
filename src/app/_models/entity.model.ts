@@ -161,6 +161,7 @@ export interface PageInfo
     id           : number;
     url          : string;
     text         : string;
+    queryParams  : string;
 }
 export interface MainPage {
     log_name    : string;

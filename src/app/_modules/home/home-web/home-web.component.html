@@ -52,7 +52,7 @@
     <hr>
     <span *ngFor="let page of this._pages">
         <span *ngIf="page" style="padding:5px;">
-            <a routerLink="/{{page.url}}"><span align="left">{{page.text}}</span></a>
+            <a [routerLink]="[page.url]" [queryParams]="{ pageName: page.queryParams}"><span align="left">{{page.text}}</span></a>
         </span>
     </span>
 </div>

@@ -16,7 +16,7 @@ export class HomeWebComponent extends BaseComponent implements OnInit, AfterView
   //
   public get _appBrand()            : string
   {
-      return `Bienvenidos a ${this.configService.getConfigValue('appBrand')}`;
+      return `Welcome to ${this.configService.getConfigValue('appBrand')}`;
   }
   //
   constructor(public  override configService  : ConfigService, 
@@ -40,6 +40,6 @@ export class HomeWebComponent extends BaseComponent implements OnInit, AfterView
   //
   ngAfterViewInit():void
   {  
-
+      //
   }
 }

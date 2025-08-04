@@ -47,6 +47,8 @@ import { SpringBootDemoComponent     } from './_modules/_Demos/_DemosLang/spring
 import { DjangoDemoComponent         } from './_modules/_Demos/_DemosLang/django-demo/django-demo.component';
 import { EduResourcesComponent       } from './_modules/about/edu-resources/edu-resources.component';
 import { FractalDemoComponent        } from './_modules/_Demos/_DemosFeatures/miscelaneous/fractalDemo/juliaform.component';
+import { PageUrlListComponent        } from './_components/page-url-list/page-url-list.component';
+import { GridParamComponent          } from './_components/grid-param/grid-param.component';
 
 export interface _Route extends Route
 {  
@@ -104,6 +106,8 @@ export const routes: _Route[] = [
   {  id: 0,  path: 'NodeJsDemo'            , component: NodejsDemoComponent                 , caption: ' Demos / Language - Node.js / Javascript'     },
   {  id: 0,  path: 'SpringBootDemo'        , component: SpringBootDemoComponent             , caption: ' Demos / Language - SpringBoot / Java'        },
   {  id: 0,  path: 'DjangoDemo'            , component: DjangoDemoComponent                 , caption: ' Demos / Language - Django / Python'          },
+  {  id: 0,  path: 'PageUrlList'           , component: PageUrlListComponent                , caption: ''                                             },
+  {  id: 0,  path: 'GridParam'             , component: GridParamComponent                  , caption: ''                                             }, 
   {  id: 0,  path: '**'                    , component: PageNotFoundComponent               , caption: ''                                             },
 ];
 
