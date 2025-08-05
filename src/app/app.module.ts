@@ -82,9 +82,11 @@ import { DjangoDemoComponent     } from './_modules/_Demos/_DemosLang/django-dem
 import { BaseSortableHeader      } from './_directives/sortable.directive';
 import { SpeechPanelComponent    } from './_components/speech-panel/speech-panel.component';
 import { BaseComponent           } from './_components/base/base.component';
+import { _BaseComponent          } from './_components/base/_base.component';
 import { _SearchComponent        } from './_components/search/_search.component ';
 import { GridParamComponent      } from './_components/grid-param/grid-param.component';
 import { PageUrlListComponent    } from './_components/page-url-list/page-url-list.component';
+
 //
 export function initialize(_configService: ConfigService) 
 // 
@@ -195,6 +197,7 @@ export class CustomErrorHandler implements ErrorHandler {
         SpeechPanelComponent,
         BaseSortableHeader,
         BaseComponent,
+        _BaseComponent,
         EduResourcesComponent,
         _SearchComponent,
         GridParamComponent,
