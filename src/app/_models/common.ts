@@ -10,6 +10,7 @@ export const PAGE_SIZE       = new InjectionToken<number>('PAGE_SIZE');
 export const PAGE_TITLE      = new InjectionToken<number>('PAGE_TITLE');
 export const PAGE_TITLE_LOG  = new InjectionToken<number>('PAGE_TITLE_LOG');
 export const SEARCH_TERM     = new InjectionToken<string>('SEARCH_TERM');  
+export const PAGE_NAME       = new InjectionToken<string>('PAGE_NAME'); 
 
 ////////////////////////////////////////////////////////////////////////////
 
