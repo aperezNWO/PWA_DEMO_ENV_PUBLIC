@@ -38,18 +38,6 @@
     {
 		"id"               : 4,
         "done"             : true,
-        "name"             : "Generar archivos ZIP",
-        "description"      : "Generar archivos ZIP",
-        "field_1"          : ".net core, ZIP, GZIP",
-        "field_2"          : "#",
-        "field_3"          : "https://github.com/aperezNWO/mcsdNetCoreBackup/blob/main/mcsd.Core.Library/Managers/FileManager.cs",
-        "field_4"          : "#",
-        "field_5"          : "https://learn.microsoft.com/en-us/dotnet/api/system.io.compression?view=net-9.0",
-        "field_10"         : "59887bfa-a8cc-40c5-a2fe-92698d4c05a2"
-	},
-    {
-		"id"               : 5,
-        "done"             : true,
         "name"             : "Algoritmo de Ordenamiento",
         "description"      : "Algoritmo de Ordenamiento",
         "field_1"          : ".net core, sql server, api rest, QuickSort, Bubble Sort",
@@ -60,7 +48,7 @@
         "field_10"         : "2f631080-b28c-4973-add6-0d26cb30e2c1"
 	},
     {
-		"id"               : 6,
+		"id"               : 5,
         "done"             : true,
         "name"             : "Algoritmo de Dijkstra / .net core backend",
         "description"      : "Algoritmo de Dijkstra / .net core backend",
@@ -72,7 +60,7 @@
         "field_10"         : "292ed965-b158-45a6-900e-78a5dc8ed1bd"
 	},
     {
-		"id"               : 7,
+		"id"               : 6,
         "done"             : true,
         "name"             : "Algoritmos - Expresiones Regulares",
         "description"      : "Algoritmos - Expresiones Regulares",
@@ -84,7 +72,7 @@
         "field_10"         : "2c8741f0-d7b9-4cef-8aae-e5b2aa4cc0e4"
 	},
     {
-		"id"               : 8,
+		"id"               : 7,
         "done"             : true,
         "name"             : "Generar Archivos - Chart",
         "description"      : "Generar Archivos - Chart",
