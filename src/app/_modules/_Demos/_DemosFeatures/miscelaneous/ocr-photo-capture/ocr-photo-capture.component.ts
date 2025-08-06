@@ -152,6 +152,7 @@ export class OcrPhotoCaptureComponent extends BaseComponent implements AfterView
   saveSignature():void {
      //
      //console.log("Saving signature...");
+     this.status_message.set("[...parsing...]");
      //
      let base64ImageString : string  = this.signature?.toDataURL()!;
      //
@@ -189,8 +190,8 @@ export class OcrPhotoCaptureComponent extends BaseComponent implements AfterView
   uploadImageNodeJs(base64ImageString : string):void {
     // Replace 'yourBase64ImageString' with the actual base64 image string
     //const base64ImageString = 'yourBase64ImageString';
-    this.statusButton          = '..parsing..';
-    this.statusButtonSaveImage = '..parsing..';
+    this.statusButton          = '[...parsing...]';
+    this.statusButtonSaveImage = '[...parsing...]';
 
     this.capturedImageHidden     = false;
     this.captureButtonDisabled   = true;
@@ -223,9 +224,9 @@ export class OcrPhotoCaptureComponent extends BaseComponent implements AfterView
   uploadImageCPP(base64ImageString : string):void {
     // Replace 'yourBase64ImageString' with the actual base64 image string
     //const base64ImageString = 'yourBase64ImageString';
-    this.statusButton          = '..parsing..';
-    this.statusButtonSaveImage = '..parsing..';
-
+    this.statusButton          = '[...parsing...]';
+    this.statusButtonSaveImage = '[...parsing...]';
+    //
     this.capturedImageHidden     = false;
     this.captureButtonDisabled   = true;
     this.saveImageButtonDisabled = true;
@@ -307,6 +308,8 @@ export class OcrPhotoCaptureComponent extends BaseComponent implements AfterView
   }
   //
   saveImage() {
+       //
+       this.status_message.set("[..parsing...]");
        //
        this.selectionChangeEngines();
        //   

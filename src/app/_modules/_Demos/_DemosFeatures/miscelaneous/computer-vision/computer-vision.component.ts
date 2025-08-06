@@ -163,6 +163,7 @@ export class ComputerVisionComponent extends BaseComponent implements AfterViewI
   saveSignature():void {
      //
      //console.log("Saving signature..., option : " + this.selectedIndexEngines);
+     this.status_message.set("[..parsing...]");
      //
      this.selectionChangeEngines();
      //   
@@ -264,6 +265,8 @@ export class ComputerVisionComponent extends BaseComponent implements AfterViewI
   }
   //
   saveImage() {
+       //
+       this.status_message.set("[..parsing...]") ;    
        //
        this.selectionChangeEngines();
        //   
