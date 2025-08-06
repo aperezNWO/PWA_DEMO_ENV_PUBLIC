@@ -144,32 +144,8 @@ git pull
 -- ERRORS
 =====================================================================
 
-   -- [_]  index.js:489 [webpack-dev-server] WARNING
-           E:\pablo.perez\dev\AngularMCSD\AngularMCSD\src\app\_modules\files-generation\files-generation-xls\files-generation-xls.component.ts depends on 'html2canvas'. 
-           CommonJS or AMD dependencies can cause optimization bailouts.
-           For more info see: https://angular.io/guide/build#configuring-commonjs-dependencies
-
-   -- [_] Could not find a declaration file for module 'three/examples/jsm/controls/OrbitControls'. 'c:/Users/pablo.perez/dev/_Angular/BaseLine/PWA_DEMO_ENV_PUBLIC/node_modules/three/examples/jsm/controls/OrbitControls.js' implicitly has an 'any' type.
-  
-          Try `npm i --save-dev @types/three` if it exists or add a new declaration (.d.ts) file containing `declare module 'three/examples/jsm/controls/OrbitControls';`
-
-
-   -- [_]     Your website 'angulardemo.somee.com' was disabled for the following reason: 
-
-        Website's average, per request bandwidth has exceeded a limit that is set for the website hosted with a free hosting package! 
-        Although we do not limit the file size that can be uploaded or downloaded from your website, 
-        we set a limit of [150KByte] on average file size that can be downloaded from the website hosted with free package. 
-
-        The average is calculated every several hours for all files together, including *.html, *.asp, *.aspx, *.jpg, *.png, *.gif, *.mpg 
-        and other text and media files. 
-
-        Your website is scheduled to start again in about 12 hours, or you can start it manually from our control panel any time. 
-
-        But if you will not take actions to decrease the average file size that is sent from your website it will be stopped again 
-        and you are allowed to start it 5 times only. 
-
-        You can also switch to any other hosting package where such maintenance is not performed.
-
+-- [_] check compiler warnings.
+ 
 /////////////////////////////////////////////////////////////////
 // SCM STRATEGY
 /////////////////////////////////////////////////////////////////
