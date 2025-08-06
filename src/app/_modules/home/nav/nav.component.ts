@@ -32,16 +32,19 @@ export class NavComponent {
     //
     pages =[
     {
-      'url' : '/Home',
-      'text': '[HOME]',
+      'url'         : '/Home',
+      'text'        : '[HOME]',
+      'queryParams' : 'PAGE_ANGULAR_DEMO_INDEX'
     },
     {
-      'url': '/DemosWeb', 
-      'text': '[DEMOS]',
+      'url'          : '/PageUrlList', 
+      'text'         : '[DEMOS]',
+      'queryParams'  : 'PAGE_DEMOS_INDEX'
     },  
     {
-      'url' : '/AAboutWeb', 
-      'text': '[ACERCA DE]',
+      'url'          : '/PageUrlList', 
+      'text'         : '[ACERCA DE]',
+      'queryParams'  : 'PAGE_ABOUT_INDEX'
     },    
   ];
     //-----------------------------------------------------------------------------------------------------

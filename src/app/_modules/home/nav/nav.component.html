@@ -28,7 +28,7 @@
             [ngbCollapse]="this._NavbarCollapsed" align="left">
             <ul class="navbar-nav" *ngFor="let page of pages">
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/{{page.url}}" (click)="this._navbarCollapsed = true;"><div align="left">{{page.text}}</div></a>
+                    <a class="nav-link" [routerLink]="[page.url]" [queryParams]="{pageName:page.queryParams}" (click)="this._navbarCollapsed = true;"><div align="left">{{page.text}}</div></a>
                 </li>
             </ul>
         </div>

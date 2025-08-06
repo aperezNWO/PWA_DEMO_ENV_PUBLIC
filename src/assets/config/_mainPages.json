@@ -3,8 +3,13 @@
         "log_name"   : "PAGE_ANGULAR_DEMO_INDEX",
         "page_name"  : "Bienvenidos a [Angular Demo]",
         "pages"      : [
-          { "id": 1, "url" : "/DemosFeaturesWeb"                                          , "text": "[CARACTERISTICAS]"                                                          },
-          { "id": 2, "url" : "/DemosLanguageWeb"                                          , "text": "[LENGUAJES]"                                                                },
+          { "id": 1, "url" : "/PageUrlList"                                               , "text": "[CARACTERISTICAS]" , "queryParams" : "PAGE_DEMOS_CARACTERISTICAS_INDEX"     },
+          { "id": 2, "url" : "/PageUrlList"                                               , "text": "[LENGUAJES]"       , "queryParams" : "PAGE_DEMOS_LENGUAJES_INDEX"           },
+          { "id": 3, "url" : "/PageUrlList"                                               , "text": "[CURRICULUM]"      , "queryParams" : "PAGE_DEMOS_CURRICULUM_INDEX"          }
+        ],
+       "_pages"      : [
+          { "id": 1, "url" : "/DemosFeaturesWeb"                                          , "text": "[CARACTERISTICAS]" , "queryParams" : "PAGE_DEMOS_CARACTERISTICAS_INDEX"     },
+          { "id": 2, "url" : "/DemosLanguageWeb"                                          , "text": "[LENGUAJES]"       , "queryParams" : "PAGE_DEMOS_LENGUAJES_INDEX"           },
           { "id": 3, "url" : "/PageUrlList"                                               , "text": "[CURRICULUM]"      , "queryParams" : "PAGE_DEMOS_CURRICULUM_INDEX"          }
         ]
       },
@@ -395,6 +400,11 @@
       {
         "log_name"   : "PAGE_DEMOS_INDEX",
         "page_name"  : "[DEMOS]",
+        "_pages"      : [
+          { "id": 1, "url" : "/PageUrlList"                                               , "text": "[CARACTERISTICAS]" , "queryParams" : "PAGE_DEMOS_CARACTERISTICAS_INDEX"     },
+          { "id": 2, "url" : "/PageUrlList"                                               , "text": "[LENGUAJES]"       , "queryParams" : "PAGE_DEMOS_LENGUAJES_INDEX"           },
+          { "id": 3, "url" : "/PageUrlList"                                               , "text": "[CURRICULUM]"      , "queryParams" : "PAGE_DEMOS_CURRICULUM_INDEX"          }
+        ],
         "pages"      : [
           { "id": 1, "url" : "/DemosFeaturesWeb"            , "text": "[DEMOS - CARACTERISTICAS]"                   },
           { "id": 1, "url" : "/DemosLanguageWeb"            , "text": "[DEMOS - LENGUAJES]"                         },

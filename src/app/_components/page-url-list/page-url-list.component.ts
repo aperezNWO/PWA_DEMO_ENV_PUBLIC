@@ -1,6 +1,5 @@
 import { Component                                } from '@angular/core';
 import { ActivatedRoute                           } from '@angular/router';
-import { PAGE_DEMOS_CURRICULUM_INDEX, PAGE_NAME   } from 'src/app/_models/common';
 import { BackendService                           } from 'src/app/_services/BackendService/backend.service';
 import { ConfigService                            } from 'src/app/_services/ConfigService/config.service';
 import { SpeechService                            } from 'src/app/_services/speechService/speech.service';

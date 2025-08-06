@@ -3,8 +3,8 @@
 <hr>
 <div align="left">
     <ul *ngFor="let page of this._pages" >
-        <li><a [routerLink]="page.url">{{page.text}}</a></li>
+        <li><a [routerLink]="[page.url]" [queryParams]="{pageName: page.queryParams}">{{page.text}}</a></li>
     </ul>
 </div>
 <hr>
-<div align="right"><a routerLink="/DemosWeb">[Volver al Inicio]</a></div>
+<div align="right"><a routerLink="/Home">[Volver al Inicio]</a></div>
