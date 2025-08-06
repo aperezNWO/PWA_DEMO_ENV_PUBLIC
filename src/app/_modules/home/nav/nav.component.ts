@@ -37,14 +37,14 @@ export class NavComponent {
       'queryParams' : 'PAGE_ANGULAR_DEMO_INDEX'
     },
     {
-      'url'          : '/PageUrlList', 
+      'url'          : '/DemosWeb', 
       'text'         : '[DEMOS]',
       'queryParams'  : 'PAGE_DEMOS_INDEX'
     },  
     {
       'url'          : '/AAboutWeb', 
       'text'         : '[ACERCA DE]',
-      'queryParams'  : ''
+      'queryParams'  : 'PAGE_ABOUT_INDEX'
     },    
   ];
   //
@@ -55,9 +55,9 @@ export class NavComponent {
       'queryParams' : 'PAGE_ANGULAR_DEMO_INDEX'
     },
     {
-      'url'          : '/DemosWeb', 
+      'url'          : '/PageUrlList', 
       'text'         : '[DEMOS]',
-      'queryParams'  : ''
+      'queryParams'  : 'PAGE_DEMOS_INDEX'
     },  
     {
       'url'          : '/PageUrlList', 
