@@ -6,7 +6,7 @@ import { SpeechService                              } from 'src/app/_services/sp
 import { _environment                               } from 'src/environments/environment';
 
 @Component({
-  selector: 'app-base',
+  selector: 'app-base-custom',
   templateUrl: './base.component.html',
   styleUrl: './base.component.css',
 })
