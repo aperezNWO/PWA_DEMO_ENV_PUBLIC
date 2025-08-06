@@ -30,7 +30,7 @@ export class NavComponent {
         this._navbarCollapsed = p_navbarCollapsed;
     }
     //
-    pages =[
+    _pages =[
     {
       'url'         : '/Home',
       'text'        : '[HOME]',
@@ -42,19 +42,37 @@ export class NavComponent {
       'queryParams'  : 'PAGE_DEMOS_INDEX'
     },  
     {
+      'url'          : '/AAboutWeb', 
+      'text'         : '[ACERCA DE]',
+      'queryParams'  : ''
+    },    
+  ];
+  //
+  pages =[
+    {
+      'url'         : '/Home',
+      'text'        : '[HOME]',
+      'queryParams' : 'PAGE_ANGULAR_DEMO_INDEX'
+    },
+    {
+      'url'          : '/DemosWeb', 
+      'text'         : '[DEMOS]',
+      'queryParams'  : ''
+    },  
+    {
       'url'          : '/PageUrlList', 
       'text'         : '[ACERCA DE]',
       'queryParams'  : 'PAGE_ABOUT_INDEX'
-    },    
-  ];
-    //-----------------------------------------------------------------------------------------------------
-    constructor(
+    },   
+  ]
+  //-----------------------------------------------------------------------------------------------------
+  constructor(
                 private _customErrorHandler : CustomErrorHandler, 
-                private backendService         : BackendService, 
+                private backendService      : BackendService, 
                 private _configService      : ConfigService,
                 private titleService        : Title
-               ) 
-    {
+             ) 
+  {
       //
       ////console.log("Loading AppComponent...");
       // IMPLEMENT AS MAP AND ITERATE
