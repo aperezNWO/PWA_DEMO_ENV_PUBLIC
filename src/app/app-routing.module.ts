@@ -12,7 +12,6 @@ import { CurriculumDjangoPythonComponent } from './_modules/_Demos/_DemosCurricu
 import { CurriculumNodeJsComponent       } from './_modules/_Demos/_DemosCurriculum/curriculum-node-js/curriculum-node-js.component';
 import { CurriculumSpringBootCompont     } from './_modules/_Demos/_DemosCurriculum/curriculum-spring-boot/curriculum-spring-boot.component';
 import { CurriculumNetcoreComponent      } from './_modules/_Demos/_DemosCurriculum/curriculum-netcore/curriculum-netcore.component';
-import { DemosFeaturesWebComponent       } from './_modules/_Demos/_DemosFeatures/_demos-features-web/demos-features-web.component';
 import { AlgorithmCollisionComponent     } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-collision/algorithm-collision.component';
 import { AlgorithmDijkstraComponent      } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-dijkstra/algorithm-dijkstra.component';
 import { AlgorithmRegExComponent         } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-reg-ex/algorithm-reg-ex.component';
@@ -89,7 +88,6 @@ export const routes: _Route[] = [
   {  id: 0,  path: 'MathParsing'           , component: MathParsingComponent                , caption: ' Miscelaneous - Math Parsing'                 },
   {  id: 0,  path: 'FractalDemo'           , component: FractalDemoComponent                , caption: ' Miscelaneous - Fractal Demo'                 },
   {  id: 0,  path: 'Miscelaneous'          , component: MiscelaneousComponent               , caption: ' Miscelaneous - Main Page'                    },
-  {  id: 0,  path: 'DemosFeaturesWeb'      , component: DemosFeaturesWebComponent           , caption: ' Demos / Features - Main Page'                },
   {  id: 0,  path: 'DemosWeb'              , component: DemosWebComponent                   , caption: ' Demos            - Main Page'                },
   {  id: 0,  path: 'CurriculumAngular'     , component: CurriculumAngularComponent          , caption: ' Curriculum - Angular    / Typescript'        },
   {  id: 0,  path: 'CurriculumCpp'         , component: CurriculunmCppComponent             , caption: ' Curriculum - C++'                            },

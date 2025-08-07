@@ -43,7 +43,6 @@ import { CurriculumDjangoPythonComponent        } from './_modules/_Demos/_Demos
 import { CurriculumNodeJsComponent              } from './_modules/_Demos/_DemosCurriculum/curriculum-node-js/curriculum-node-js.component';
 import { CurriculumSpringBootCompont            } from './_modules/_Demos/_DemosCurriculum/curriculum-spring-boot/curriculum-spring-boot.component';
 import { CurriculumNetcoreComponent             } from './_modules/_Demos/_DemosCurriculum/curriculum-netcore/curriculum-netcore.component';
-import { DemosFeaturesWebComponent              } from './_modules/_Demos/_DemosFeatures/_demos-features-web/demos-features-web.component';
 import { AlgorithmCollisionComponent            } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-collision/algorithm-collision.component';
 import { AlgorithmDijkstraComponent             } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-dijkstra/algorithm-dijkstra.component';
 import { AlgorithmRegExComponent                } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-reg-ex/algorithm-reg-ex.component';
@@ -184,7 +183,6 @@ export class CustomErrorHandler implements ErrorHandler {
         CurriculumNetcoreComponent,
         FeaturePagesComponent,
         ContactformComponent,
-        DemosFeaturesWebComponent,
         DemosWebComponent,
         DemosLangWebComponent,
         CppDemoComponent,
