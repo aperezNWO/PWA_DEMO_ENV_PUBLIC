@@ -37,7 +37,6 @@ import { IndexComponent                         } from './_modules/about/index/i
 import { SCMComponent                           } from './_modules/about/scm/scm.component';
 import { LLMListComponent                       } from './_modules/about/llmlist/llmlist.component';
 import { DemosWebComponent                      } from './_modules/_Demos/DemosWeb/demos-web/demos-web.component';
-import { DemosCurriculumWebComponent            } from './_modules/_Demos/_DemosCurriculum/_demos-curriculum-web/demos-curriculum-web.component';
 import { CurriculunmCppComponent                } from './_modules/_Demos/_DemosCurriculum/curriculunm-cpp/curriculunm-cpp.component';
 import { CurriculumAngularComponent             } from './_modules/_Demos/_DemosCurriculum/curriculumAngular/curriculumAngular.component';
 import { CurriculumDjangoPythonComponent        } from './_modules/_Demos/_DemosCurriculum/curriculum-django-python/curriculum-django-python.component';
@@ -188,7 +187,6 @@ export class CustomErrorHandler implements ErrorHandler {
         DemosFeaturesWebComponent,
         DemosWebComponent,
         DemosLangWebComponent,
-        DemosCurriculumWebComponent,
         CppDemoComponent,
         NetcoredemoComponent,
         NodejsDemoComponent,
