@@ -312,7 +312,7 @@
 
         -- [_] ngb grid master detail.
 
-}       -- [_] image capture component.
+        -- [_] image capture component.
 
         -- [_] grid component. 
 
