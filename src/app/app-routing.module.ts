@@ -37,7 +37,6 @@ import { OcrPhotoCaptureComponent    } from './_modules/_Demos/_DemosFeatures/mi
 import { DemosWebComponent           } from './_modules/_Demos/DemosWeb/demos-web/demos-web.component';
 import { ContactformComponent        } from './_modules/about/contactform/contactform.component';
 import { IndexComponent              } from './_modules/about/index/index.component';
-import { DemosLangWebComponent       } from './_modules/_Demos/_DemosLang/_demos-lang-web/demos-lang-web.component';
 import { CppDemoComponent            } from './_modules/_Demos/_DemosLang/cpp-demo/cpp-demo.component';
 import { NetcoredemoComponent        } from './_modules/_Demos/_DemosLang/netcoredemo/netcoredemo.component';
 import { NodejsDemoComponent         } from './_modules/_Demos/_DemosLang/nodejs-demo/nodejs-demo.component';
@@ -95,7 +94,6 @@ export const routes: _Route[] = [
   {  id: 0,  path: 'CurriculumSpringBoot'  , component: CurriculumSpringBootCompont         , caption: ' Curriculum - SpringBoot / Java'              },
   {  id: 0,  path: 'CurriculumDjango'      , component: CurriculumDjangoPythonComponent     , caption: ' Curriculum - Django     / Python'            },
   {  id: 0,  path: 'CurriculumNetCore'     , component: CurriculumNetcoreComponent          , caption: ' Curriculum - .net core  / c#'                },
-  {  id: 0,  path: 'DemosLanguageWeb'      , component: DemosLangWebComponent               , caption: ' Demos / Language - Main Page'                },
   {  id: 0,  path: 'AngularDemo'           , component: FeaturePagesComponent               , caption: ' Demos / Language - Angular'                  },
   {  id: 0,  path: 'CppDemo'               , component: CppDemoComponent                    , caption: ' Demos / Language - C++'                      },
   {  id: 0,  path: 'NetCoreDemo'           , component: NetcoredemoComponent                , caption: ' Demos / Language - .NET CORE / C#'           },

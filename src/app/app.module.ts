@@ -49,7 +49,6 @@ import { AlgorithmRegExComponent                } from './_modules/_Demos/_Demos
 import { AlgorithmSortComponent                 } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-sort/algorithm-sort.component';
 import { AlgorithmWebComponent                  } from './_modules/_Demos/_DemosFeatures/algorithm/_algorithm-web/algorithm-web.component';
 import { FeaturePagesComponent                  } from './_modules/_Demos/_DemosLang/angular-demo/feature-pages.component';
-import { DemosLangWebComponent                  } from './_modules/_Demos/_DemosLang/_demos-lang-web/demos-lang-web.component';
 import { ChartComponent                         } from './_modules/_Demos/_DemosFeatures/files-generation/chart/chart.component';
 import { FilesGenerationCSVComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-csv/files-generation-csv.component';
 import { FilesGenerationPDFComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-pdf/files-generation-pdf.component';
@@ -184,7 +183,6 @@ export class CustomErrorHandler implements ErrorHandler {
         FeaturePagesComponent,
         ContactformComponent,
         DemosWebComponent,
-        DemosLangWebComponent,
         CppDemoComponent,
         NetcoredemoComponent,
         NodejsDemoComponent,
