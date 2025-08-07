@@ -406,7 +406,7 @@
           { "id": 3, "url" : "/PageUrlList"                                               , "text": "[CURRICULUM]"      , "queryParams" : "PAGE_DEMOS_CURRICULUM_INDEX"          }
         ],
         "pages"      : [
-          { "id": 1, "url" : "/DemosFeaturesWeb"            , "text": "[DEMOS - CARACTERISTICAS]"                 , "queryParams" : ""  },
+          { "id": 1, "url" : "/PageUrlList"                 , "text": "[CARACTERISTICAS]"                         , "queryParams" : "PAGE_DEMOS_CARACTERISTICAS_INDEX"     },
           { "id": 1, "url" : "/DemosLanguageWeb"            , "text": "[DEMOS - LENGUAJES]"                       , "queryParams" : ""  },
           { "id": 1, "url" : "/PageUrlList"                 , "text": "[DEMOS - CURRICULUM]"                      , "queryParams" : "PAGE_DEMOS_CURRICULUM_INDEX"  }
         ] 
