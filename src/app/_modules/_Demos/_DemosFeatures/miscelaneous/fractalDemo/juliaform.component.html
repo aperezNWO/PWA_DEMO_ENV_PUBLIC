@@ -70,8 +70,9 @@
         <img [src]="imageUrl" alt="Julia Fractal" width="400px" height="400px"/>
     </div>
     <!-- IMAGE FIN          -->
-        <hr>
-        <div align="right">
-            <a routerLink="/Miscelaneous">[Volver al Menu]</a>      
-        </div>  
+    <hr>
+    <!-- FORMULARIO FIN -->
+    <div align="right">
+        <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_MISELANEOUS_INDEX'}" >[Volver al Menu]</a>
+    </div> 
 </div>   

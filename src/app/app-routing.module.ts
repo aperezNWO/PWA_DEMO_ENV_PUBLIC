@@ -2,7 +2,6 @@ import { NgModule                        } from '@angular/core';
 import { Route, RouterModule             } from '@angular/router';
 import { HomeWebComponent                } from './_modules/home/home-web/home-web.component';
 import { PageNotFoundComponent           } from './_modules/home/page-not-found/page-not-found.component';
-import { AAboutWebComponent              } from './_modules/about/_a-about-web/a-about-web.component';
 import { SCMComponent                    } from './_modules/about/scm/scm.component';
 import { LLMListComponent                } from './_modules/about/llmlist/llmlist.component';
 import { TechnicalSpecsComponent         } from './_modules/about/technicalspecs/technical-specs/technical-specs.component';
@@ -32,9 +31,7 @@ import { GameWebComponent            } from './_modules/_Demos/_DemosFeatures/ga
 import { ChatComponent               } from './_modules/_Demos/_DemosFeatures/miscelaneous/chat/chat/chat.component';
 import { ComputerVisionComponent     } from './_modules/_Demos/_DemosFeatures/miscelaneous/computer-vision/computer-vision.component';
 import { MathParsingComponent        } from './_modules/_Demos/_DemosFeatures/miscelaneous/math-parsing/math-parsing.component';
-import { MiscelaneousComponent       } from './_modules/_Demos/_DemosFeatures/miscelaneous/_miscelaneous/miscelaneous.component';
 import { OcrPhotoCaptureComponent    } from './_modules/_Demos/_DemosFeatures/miscelaneous/ocr-photo-capture/ocr-photo-capture.component';
-import { DemosWebComponent           } from './_modules/_Demos/DemosWeb/demos-web/demos-web.component';
 import { ContactformComponent        } from './_modules/about/contactform/contactform.component';
 import { IndexComponent              } from './_modules/about/index/index.component';
 import { CppDemoComponent            } from './_modules/_Demos/_DemosLang/cpp-demo/cpp-demo.component';
@@ -58,7 +55,6 @@ export const routes: _Route[] = [
   {  id: 0,  path: 'Home'                  , component: HomeWebComponent                    , caption: ' Home'                                        },
   {  id: 0,  path: 'Index'                 , component: IndexComponent                      , caption: ' Index'                                       },
   {  id: 0,  path:  ''                     , component: HomeWebComponent                    , caption: ''                                             },
-  {  id: 0,  path: 'AAboutWeb'             , component: AAboutWebComponent                  , caption: ' About  - Main Page'                          },
   {  id: 0,  path: 'SCM'                   , component: SCMComponent                        , caption: ' About  - SCM'                                },
   {  id: 0,  path: 'LLMList'               , component: LLMListComponent                    , caption: ' About  - LLM List'                           },
   {  id: 0,  path: 'EduResources'          , component: EduResourcesComponent               , caption: ' About  - Educational Resources'              },
@@ -86,8 +82,6 @@ export const routes: _Route[] = [
   {  id: 0,  path: 'ComputerVision'        , component: ComputerVisionComponent             , caption: ' Miscelaneous - Computer Vision'              },
   {  id: 0,  path: 'MathParsing'           , component: MathParsingComponent                , caption: ' Miscelaneous - Math Parsing'                 },
   {  id: 0,  path: 'FractalDemo'           , component: FractalDemoComponent                , caption: ' Miscelaneous - Fractal Demo'                 },
-  {  id: 0,  path: 'Miscelaneous'          , component: MiscelaneousComponent               , caption: ' Miscelaneous - Main Page'                    },
-  {  id: 0,  path: 'DemosWeb'              , component: DemosWebComponent                   , caption: ' Demos            - Main Page'                },
   {  id: 0,  path: 'CurriculumAngular'     , component: CurriculumAngularComponent          , caption: ' Curriculum - Angular    / Typescript'        },
   {  id: 0,  path: 'CurriculumCpp'         , component: CurriculunmCppComponent             , caption: ' Curriculum - C++'                            },
   {  id: 0,  path: 'CurriculumNodeJs'      , component: CurriculumNodeJsComponent           , caption: ' Curriculum - Node.js    / Javascript'        },

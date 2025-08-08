@@ -1,4 +1,4 @@
-import { Component, effect, Inject, signal          } from '@angular/core';
+import { Component, effect, signal ,OnInit          } from '@angular/core';
 import { ActivatedRoute                             } from '@angular/router';
 import { BackendService                             } from 'src/app/_services/BackendService/backend.service';
 import { ConfigService                              } from 'src/app/_services/ConfigService/config.service';
@@ -10,7 +10,7 @@ import { _environment                               } from 'src/environments/env
   templateUrl: './base.component.html',
   styleUrl: './base.component.css',
 })
-export class _BaseComponent {
+export class _BaseComponent implements OnInit {
   /////////////////////////////////////////////////////////
   // PROPERTIES
   /////////////////////////////////////////////////////////
@@ -38,34 +38,74 @@ export class _BaseComponent {
                   public backendService                           : BackendService, 
                   public route                                    : ActivatedRoute,
                   public speechService                            : SpeechService,
-
              ) 
   {
-      let _PAGE_NAME     = configService.queryUrlParams("pageName");
+    //
+    effect(() => {
+      if (this.status_message())
+          this.speechService.speakTextCustom(this.status_message());
+    });
+  }
+  /////////////////////////////////////////////////////////
+  // EVENT HANDLERRS
+  /////////////////////////////////////////////////////////
+  ngOnInit(): void {
+
+    // Subscribe to query param changes
+    this.route.queryParams.subscribe(params => {
       //
-      console.log(` PAGE NAME : ${_PAGE_NAME}`);
-      // Define an effect to react to changes in the signal
-      effect(() => {
-        if (this.status_message())
-            this.speechService.speakTextCustom(this.status_message());
-      });
-      //      
-      this.configService._loadMainPages().then( ()=> 
-      {
-            //
-            this.pageTitle = _environment.mainPageListDictionary[_PAGE_NAME].page_name;
-            //
-            this.speechService.speakTextCustom(this.pageTitle);
-            //
-            this.backendService.SetLog(this._pageTitle,_PAGE_NAME);
-            //
-            if (_environment.mainPageListDictionary[_PAGE_NAME].pages)
-                 this._pages    = _environment.mainPageListDictionary[_PAGE_NAME].pages;
-      });
+      const pageName = params['pageName'];
+      //
+      if (!pageName) {
+        console.warn('No pageName provided in query params');
+        return;
+      }
+      //
+      console.log(`PAGE NAME: ${pageName}`);
+      // Update title and pages based on pageName
+      this.updatePageContent(pageName);
+    });
   }
   /////////////////////////////////////////////////////////
   // METHODS
   /////////////////////////////////////////////////////////
+  //
+  private async updatePageContent(pageName: string) {
+    // Clear previous state
+    this._pages = [];
+    //
+    try 
+    {
+      //
+      await this.configService._loadMainPages(); // Ensure data is loaded
+      //
+      if (_environment.mainPageListDictionary[pageName]) {
+        //
+        this.pageTitle = _environment.mainPageListDictionary[pageName].page_name;
+        //  
+        this.speechService.speakTextCustom(this.pageTitle);
+        //  
+        this.backendService.SetLog(this.pageTitle, pageName);
+        //  
+        if (_environment.mainPageListDictionary[pageName].pages) 
+        {
+          this._pages = _environment.mainPageListDictionary[pageName].pages;
+        }
+      } 
+      else 
+      {
+        //
+        console.error(`Unknown pageName: ${pageName}`);
+        //
+        this.pageTitle = 'Página no encontrada';
+      }
+    } 
+    catch (error) 
+    {
+      //
+      console.error('Failed to load pages', error);
+    }
+  }
   //
   toggleList() {
     //

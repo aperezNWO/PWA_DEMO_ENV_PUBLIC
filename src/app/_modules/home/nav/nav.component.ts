@@ -37,34 +37,16 @@ export class NavComponent {
       'queryParams' : 'PAGE_ANGULAR_DEMO_INDEX'
     },
     {
-      'url'          : '/DemosWeb', 
+      'url'          : '/PageUrlList', 
       'text'         : '[DEMOS]',
       'queryParams'  : 'PAGE_DEMOS_INDEX'
     },  
     {
-      'url'          : '/AAboutWeb', 
+      'url'          : '/PageUrlList', 
       'text'         : '[ACERCA DE]',
       'queryParams'  : 'PAGE_ABOUT_INDEX'
     },    
   ];
-  //
-  _pages =[
-    {
-      'url'         : '/Home',
-      'text'        : '[HOME]',
-      'queryParams' : 'PAGE_ANGULAR_DEMO_INDEX'
-    },
-    {
-      'url'          : '/PageUrlList', 
-      'text'         : '[DEMOS]',
-      'queryParams'  : 'PAGE_DEMOS_INDEX'
-    },  
-    {
-      'url'          : '/PageUrlList', 
-      'text'         : '[ACERCA DE]',
-      'queryParams'  : 'PAGE_ABOUT_INDEX'
-    },   
-  ]
   //-----------------------------------------------------------------------------------------------------
   constructor(
                 private _customErrorHandler : CustomErrorHandler, 

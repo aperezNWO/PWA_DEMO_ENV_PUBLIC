@@ -24,6 +24,8 @@
     <tr><td>Random GUID <b><button (click)="this.generateNewGuid()">[GENERATE & COPY]</button></b></td><td><b>{{guid()}}    </b></td></tr>
 </table>
 <hr>
-<div align="right"><a routerLink="/AAboutWeb">[Volver al Menú]</a></div>
+<div align="right">
+    <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_ABOUT_INDEX'}" >[Volver al Menu]</a>
+</div>
  
 

@@ -391,20 +391,15 @@
         "log_name"   : "PAGE_DEMOS_CARACTERISTICAS_INDEX",
         "page_name"  : "[DEMOS - CARACTERISTICAS]",
         "pages"      : [
-          { "id": 1, "url" : "/Miscelaneous"            , "text": "[MISCELANEOUS]"                      },
-          { "id": 2, "url" : "/GamesWeb"                , "text": "[GAMES]"                             },
-          { "id": 3, "url" : "/AlgorithmWeb"            , "text": "[ALGORITHMS]"                        },
-          { "id": 1, "url" : "/FilesGenerationWeb"      , "text": "[FILE GENERATION]"                   }      
+          { "id": 1, "url" : "/PageUrlList"             , "text": "[MISCELANEOUS]"                    , "queryParams" : "PAGE_DEMOS_MISELANEOUS_INDEX"     },
+          { "id": 2, "url" : "/GamesWeb"                , "text": "[GAMES]"                           , "queryParams" : ""     },
+          { "id": 3, "url" : "/AlgorithmWeb"            , "text": "[ALGORITHMS]"                      , "queryParams" : ""     },
+          { "id": 1, "url" : "/FilesGenerationWeb"      , "text": "[FILE GENERATION]"                 , "queryParams" : ""     }     
         ]
       },
       {
         "log_name"   : "PAGE_DEMOS_INDEX",
         "page_name"  : "[DEMOS]",
-        "_pages"      : [
-          { "id": 1, "url" : "/PageUrlList"                                               , "text": "[CARACTERISTICAS]" , "queryParams" : "PAGE_DEMOS_CARACTERISTICAS_INDEX"     },
-          { "id": 2, "url" : "/PageUrlList"                                               , "text": "[LENGUAJES]"       , "queryParams" : "PAGE_DEMOS_LENGUAJES_INDEX"           },
-          { "id": 3, "url" : "/PageUrlList"                                               , "text": "[CURRICULUM]"      , "queryParams" : "PAGE_DEMOS_CURRICULUM_INDEX"          }
-        ],
         "pages"      : [
           { "id": 1, "url" : "/PageUrlList"                 , "text": "[DEMOS - CARACTERISTICAS]"                 , "queryParams" : "PAGE_DEMOS_CARACTERISTICAS_INDEX"     },
           { "id": 1, "url" : "/PageUrlList"                 , "text": "[DEMOS - LENGUAJES]"                       , "queryParams" : "PAGE_DEMOS_LENGUAJES_INDEX"           },

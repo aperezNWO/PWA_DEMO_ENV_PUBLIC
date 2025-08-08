@@ -23,7 +23,6 @@ import { AppComponent                    } from './app.component';
 import { HomeWebComponent                } from './_modules/home/home-web/home-web.component';
 import { PageNotFoundComponent           } from './_modules/home/page-not-found/page-not-found.component';
 import { NavComponent                    } from './_modules/home/nav/nav.component';
-import { AAboutWebComponent              } from './_modules/about/_a-about-web/a-about-web.component';
 import { UnitTestingComponent            } from './_modules/_unitttesting/unit-testing.component';
 import { LogType                         } from './_models/entity.model';
 import { BackendService                  } from './_services/BackendService/backend.service';
@@ -36,7 +35,6 @@ import { NgbPaginationModule, NgbAlertModule    } from '@ng-bootstrap/ng-bootstr
 import { IndexComponent                         } from './_modules/about/index/index.component';
 import { SCMComponent                           } from './_modules/about/scm/scm.component';
 import { LLMListComponent                       } from './_modules/about/llmlist/llmlist.component';
-import { DemosWebComponent                      } from './_modules/_Demos/DemosWeb/demos-web/demos-web.component';
 import { CurriculunmCppComponent                } from './_modules/_Demos/_DemosCurriculum/curriculunm-cpp/curriculunm-cpp.component';
 import { CurriculumAngularComponent             } from './_modules/_Demos/_DemosCurriculum/curriculumAngular/curriculumAngular.component';
 import { CurriculumDjangoPythonComponent        } from './_modules/_Demos/_DemosCurriculum/curriculum-django-python/curriculum-django-python.component';
@@ -65,7 +63,6 @@ import { GameWebComponent       } from './_modules/_Demos/_DemosFeatures/games/_
 import { ChatComponent          } from './_modules/_Demos/_DemosFeatures/miscelaneous/chat/chat/chat.component';
 import { ComputerVisionComponent     } from './_modules/_Demos/_DemosFeatures/miscelaneous/computer-vision/computer-vision.component';
 import { MathParsingComponent        } from './_modules/_Demos/_DemosFeatures/miscelaneous/math-parsing/math-parsing.component';
-import { MiscelaneousComponent       } from './_modules/_Demos/_DemosFeatures/miscelaneous/_miscelaneous/miscelaneous.component';
 import { OcrPhotoCaptureComponent    } from './_modules/_Demos/_DemosFeatures/miscelaneous/ocr-photo-capture/ocr-photo-capture.component';
 import { ContactformComponent        } from './_modules/about/contactform/contactform.component';
 import { TechnicalSpecsComponent     } from './_modules/about/technicalspecs/technical-specs/technical-specs.component';
@@ -146,7 +143,6 @@ export class CustomErrorHandler implements ErrorHandler {
         HomeWebComponent,
         SCMComponent,
         LLMListComponent,
-        AAboutWebComponent,
         AlgorithmWebComponent,
         AlgorithmRegExComponent,
         AlgorithmSortComponent,
@@ -166,7 +162,6 @@ export class CustomErrorHandler implements ErrorHandler {
         ChatComponent,
         ChartComponent,
         FractalDemoComponent,
-        MiscelaneousComponent,
         NavComponent,
         PageNotFoundComponent,
         IndexComponent,
@@ -182,7 +177,6 @@ export class CustomErrorHandler implements ErrorHandler {
         CurriculumNetcoreComponent,
         FeaturePagesComponent,
         ContactformComponent,
-        DemosWebComponent,
         CppDemoComponent,
         NetcoredemoComponent,
         NodejsDemoComponent,
