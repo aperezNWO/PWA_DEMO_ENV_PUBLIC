@@ -25,7 +25,8 @@
     <canvas #ballCanvas width="300" height="300"></canvas>
     <hr>
     <button (click)="restart()">[RESTART]</button>
-    <hr />
     <hr>
+    <div align="right">
+      <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_ALGORITMOS_INDEX'}" >[Volver al Menu]</a>
+    </div>
 </div>
-<div align="right"><a routerLink="/AlgorithmWeb">Volver al Menú</a></div>

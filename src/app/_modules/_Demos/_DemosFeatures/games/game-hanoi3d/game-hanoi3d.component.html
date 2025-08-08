@@ -30,7 +30,7 @@
     <hr>
     <button (click)="restart()">[RESTART]</button>
     <hr />
-</div>
-<div align="right">
-<a routerLink="/GamesWeb">[Volver al Menú]</a>
+    <div align="right">
+        <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_GAMES_INDEX'}" >[Volver al Menu]</a>
+    </div>
 </div>

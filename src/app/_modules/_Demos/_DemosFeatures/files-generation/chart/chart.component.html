@@ -73,5 +73,7 @@
         </mat-tab>
     </mat-tab-group>
     <hr/>
-    <div align="right"><a routerLink="/FilesGenerationWeb">[Volver al Menú]</a></div>
+    <div align="right">
+        <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_FILE_GENREATION_INDEX'}" >[Volver al Menu]</a>
+    </div>
 </div>

@@ -45,12 +45,10 @@ import { AlgorithmCollisionComponent            } from './_modules/_Demos/_Demos
 import { AlgorithmDijkstraComponent             } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-dijkstra/algorithm-dijkstra.component';
 import { AlgorithmRegExComponent                } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-reg-ex/algorithm-reg-ex.component';
 import { AlgorithmSortComponent                 } from './_modules/_Demos/_DemosFeatures/algorithm/algorithm-sort/algorithm-sort.component';
-import { AlgorithmWebComponent                  } from './_modules/_Demos/_DemosFeatures/algorithm/_algorithm-web/algorithm-web.component';
 import { FeaturePagesComponent                  } from './_modules/_Demos/_DemosLang/angular-demo/feature-pages.component';
 import { ChartComponent                         } from './_modules/_Demos/_DemosFeatures/files-generation/chart/chart.component';
 import { FilesGenerationCSVComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-csv/files-generation-csv.component';
 import { FilesGenerationPDFComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-pdf/files-generation-pdf.component';
-import { FilesGenerationWebComponent } from './_modules/_Demos/_DemosFeatures/files-generation/_files-generation-web/files-generation-web.component';
 import { FilesGenerationXLSComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-xls/files-generation-xls.component';
 import { GameHanoiAutoComponent } from './_modules/_Demos/_DemosFeatures/games/game-hanoi-auto/game-hanoi-auto.component';
 import { GameHanoi3dComponent   } from './_modules/_Demos/_DemosFeatures/games/game-hanoi3d/game-hanoi3d.component';
@@ -59,7 +57,6 @@ import { GameTetrisComponent    } from './_modules/_Demos/_DemosFeatures/games/g
 import { BoardComponent         } from './_modules/_Demos/_DemosFeatures/games/game-tictactoe/board/board.component';
 import { GameTictactoeComponent } from './_modules/_Demos/_DemosFeatures/games/game-tictactoe/game-tictactoe.component';
 import { SquareComponent        } from './_modules/_Demos/_DemosFeatures/games/game-tictactoe/square/square.component';
-import { GameWebComponent       } from './_modules/_Demos/_DemosFeatures/games/_game-web/game-web.component';
 import { ChatComponent          } from './_modules/_Demos/_DemosFeatures/miscelaneous/chat/chat/chat.component';
 import { ComputerVisionComponent     } from './_modules/_Demos/_DemosFeatures/miscelaneous/computer-vision/computer-vision.component';
 import { MathParsingComponent        } from './_modules/_Demos/_DemosFeatures/miscelaneous/math-parsing/math-parsing.component';
@@ -143,12 +140,10 @@ export class CustomErrorHandler implements ErrorHandler {
         HomeWebComponent,
         SCMComponent,
         LLMListComponent,
-        AlgorithmWebComponent,
         AlgorithmRegExComponent,
         AlgorithmSortComponent,
         AlgorithmDijkstraComponent,
         AlgorithmCollisionComponent,
-        FilesGenerationWebComponent,
         FilesGenerationXLSComponent,
         FilesGenerationCSVComponent,
         FilesGenerationPDFComponent,
@@ -157,7 +152,6 @@ export class CustomErrorHandler implements ErrorHandler {
         SudokuComponent,
         GameTictactoeComponent,
         GameHanoiAutoComponent,
-        GameWebComponent,
         OcrPhotoCaptureComponent,
         ChatComponent,
         ChartComponent,

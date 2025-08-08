@@ -106,10 +106,11 @@
                          || (this.selectedIndex           == 0)">
         </div>
         <!-- BOTONES / FIN    -->                 
-    </div>
     <hr />
-    <div align="right"><a routerLink="/AlgorithmWeb">Volver al Menú</a></div>
-
+    <div align="right">
+        <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_ALGORITMOS_INDEX'}" >[Volver al Menu]</a>
+    </div>
+</div>>
 
 
 

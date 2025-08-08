@@ -6,11 +6,6 @@
           { "id": 1, "url" : "/PageUrlList"                                               , "text": "[CARACTERISTICAS]" , "queryParams" : "PAGE_DEMOS_CARACTERISTICAS_INDEX"     },
           { "id": 2, "url" : "/PageUrlList"                                               , "text": "[LENGUAJES]"       , "queryParams" : "PAGE_DEMOS_LENGUAJES_INDEX"           },
           { "id": 3, "url" : "/PageUrlList"                                               , "text": "[CURRICULUM]"      , "queryParams" : "PAGE_DEMOS_CURRICULUM_INDEX"          }
-        ],
-       "_pages"      : [
-          { "id": 1, "url" : "/DemosFeaturesWeb"                                          , "text": "[CARACTERISTICAS]" , "queryParams" : "PAGE_DEMOS_CARACTERISTICAS_INDEX"     },
-          { "id": 2, "url" : "/DemosLanguageWeb"                                          , "text": "[LENGUAJES]"       , "queryParams" : "PAGE_DEMOS_LENGUAJES_INDEX"           },
-          { "id": 3, "url" : "/PageUrlList"                                               , "text": "[CURRICULUM]"      , "queryParams" : "PAGE_DEMOS_CURRICULUM_INDEX"          }
         ]
       },
       {
@@ -391,10 +386,10 @@
         "log_name"   : "PAGE_DEMOS_CARACTERISTICAS_INDEX",
         "page_name"  : "[DEMOS - CARACTERISTICAS]",
         "pages"      : [
-          { "id": 1, "url" : "/PageUrlList"             , "text": "[MISCELANEOUS]"                    , "queryParams" : "PAGE_DEMOS_MISELANEOUS_INDEX"     },
-          { "id": 2, "url" : "/GamesWeb"                , "text": "[GAMES]"                           , "queryParams" : ""     },
-          { "id": 3, "url" : "/AlgorithmWeb"            , "text": "[ALGORITHMS]"                      , "queryParams" : ""     },
-          { "id": 1, "url" : "/FilesGenerationWeb"      , "text": "[FILE GENERATION]"                 , "queryParams" : ""     }     
+          { "id": 1, "url" : "/PageUrlList"             , "text": "[MISCELANEOUS]"                    , "queryParams" : "PAGE_DEMOS_MISELANEOUS_INDEX"      },
+          { "id": 2, "url" : "/PageUrlList"             , "text": "[GAMES]"                           , "queryParams" : "PAGE_DEMOS_GAMES_INDEX"            },
+          { "id": 3, "url" : "/PageUrlList"             , "text": "[ALGORITHMS]"                      , "queryParams" : "PAGE_ALGORITMOS_INDEX"             },
+          { "id": 1, "url" : "/PageUrlList"             , "text": "[FILE GENERATION]"                 , "queryParams" : "PAGE_DEMOS_FILE_GENREATION_INDEX"  }     
         ]
       },
       {
