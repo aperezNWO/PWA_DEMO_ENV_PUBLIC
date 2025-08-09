@@ -186,10 +186,10 @@
         "log_name"   : "PAGE_DEMOS_LENGUAJES_INDEX",
         "page_name"  : "[DEMOS - LENGUAJES / LIBRERIAS]",
         "pages"      : [
-          { "id": 1, "url" : "/AngularDemo"       , "text": "[ANGULAR / TYPESCRIPT]"   , "queryParams" : "PAGE_DEMOS_ANGULAR_JAVASCRIPT"    },
-          { "id": 2, "url" : "/CppDemo"           , "text": "[.NET CORE / C++]"        , "queryParams" : "PAGE_DEMOS_NETCORE_CPP"           },
-          { "id": 3, "url" : "/NetCoreDemo"       , "text": "[.NET CORE / C#]"         , "queryParams" : "PAGE_DEMOS_NETCORE_CSHARP"        },
-          { "id": 4, "url" : "/NodeJsDemo"        , "text": "[NODE.JS / JAVASCRIPT]"   , "queryParams" : "PAGE_DEMOS_NODEJS_JAVASCRIPT"     },
+          { "id": 1, "url" : "/GridParam"         , "text": "[ANGULAR / TYPESCRIPT]"   , "queryParams" : "PAGE_DEMOS_ANGULAR_JAVASCRIPT"    },
+          { "id": 2, "url" : "/GridParam"         , "text": "[.NET CORE / C++]"        , "queryParams" : "PAGE_DEMOS_NETCORE_CPP"           },
+          { "id": 3, "url" : "/GridParam"         , "text": "[.NET CORE / C#]"         , "queryParams" : "PAGE_DEMOS_NETCORE_CSHARP"        },
+          { "id": 4, "url" : "/GridParam"         , "text": "[NODE.JS / JAVASCRIPT]"   , "queryParams" : "PAGE_DEMOS_NODEJS_JAVASCRIPT"     },
           { "id": 4, "url" : "/GridParam"         , "text": "[SPRING BOOT / JAVA]"     , "queryParams" : "PAGE_DEMOS_SPRING_BOOT_JAVA"      },
           { "id": 4, "url" : "/GridParam"         , "text": "[PYTHON / DJANGO]"        , "queryParams" : "PAGE_DEMOS_DJANGO_PYTHON"         }
         ]

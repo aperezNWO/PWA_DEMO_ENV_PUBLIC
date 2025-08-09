@@ -226,6 +226,8 @@
 
         -- [_] LANG (iso code).
 
+                -- [_] json lang subfolder (iso, ej : esCO / enUS).
+
                 -- [_] paquete de idiomas/localizacion (en/us).
            
                 -- [_] angular i18n.
