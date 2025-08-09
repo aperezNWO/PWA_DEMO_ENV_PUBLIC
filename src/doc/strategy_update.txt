@@ -316,6 +316,7 @@
 
         -- [_] grid component. 
 
+
         -- [_] reference component. 
 
                 --  [_] base compoent pages property.
@@ -330,8 +331,12 @@
 
                 --  [_] grid curriculum.
 
+                        --  [_] back url param.
+
                 --  [_] grid lang .
 
+                        --  [_] back url param.
+                        
 -- [_] PWA + SSR + JWT - DYNAMIC FORM
 
         -- [_] PWA_DEMO_ENV_ADMIN. 

@@ -1,1 +1,101 @@
-<p>grid-param works!</p>
+<div align="left">
+    <h1>{{this.searchService.pageTitle}}</h1>
+    <!--<hr>
+    <div class="reference" align="right">
+        <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
+    </div>-->
+    <hr>
+	<form>
+		<div class="mb-3 row">
+			<label for="table-complete-search" class="col-xs-3 col-sm-auto col-form-label">Busqueda de Texto Completo:</label>
+			<div class="col-xs-3 col-sm-auto">
+				<input
+					id="table-complete-search"
+					type="text"
+					class="form-control"
+					name="searchTerm"
+					[(ngModel)]="this.searchService.searchTerm"
+				/>
+			</div>
+			<span class="col-sm-auto">
+					<div>
+						<app-speech-panel 
+							(clickEventSpeak)="this.searchService.speakText($event)"
+							(clickEventClearText)="this.searchService.clearText()">
+						</app-speech-panel>
+					</div>
+			</span>
+			@if (this.searchService.loading | async) {
+				<span class="col col-form-label">[Cargando...]</span>
+			}
+		</div>
+
+		<table class="table table-striped table-dark">
+			<thead>
+				<tr>
+					<th scope="col" sortable="id"             (sortevent)="onSort($event)"  >#</th>
+					<th scope="col" sortable="name"           (sortevent)="onSort($event)" >Nombre</th>
+					<th scope="col" sortable="field_2"        (sortevent)="onSort($event)"  >Demo</th>
+					<th scope="col" sortable="field_3"        (sortevent)="onSort($event)"  >Repo</th>
+					<th scope="col" sortable="field_4"        (sortevent)="onSort($event)"  >EndPoint</th>
+					<th scope="col" sortable="field_6"        (sortevent)="onSort($event)"  >Tema</th>
+					<th scope="col" sortable="field_1"        (sortevent)="onSort($event)"  >P. Clave</th>
+					<th scope="col" sortable="description"    (sortevent)="onSort($event)"  >Descripción</th>
+				</tr>
+			</thead>
+			<tbody>
+				@for (featurePage of this.__pages | async; track featurePage.id) {
+					<tr>
+						<th scope="row">{{ featurePage.id }}</th>
+						<td>
+							<a [href]="featurePage.field_2">
+								<ngb-highlight [result]="featurePage.name" [term]="this.searchService.searchTerm" />
+							</a>
+						</td>
+						<td>
+							<a ngb-highlight [href]="featurePage.field_2">
+								[Demo]
+							</a>
+						</td>
+						<td>
+							<a ngb-highlight [href]="featurePage.field_3" target="_blank">
+								[Repo]
+							</a>
+						</td>
+						<td>
+							<a ngb-highlight [href]="featurePage.field_4" target="_blank">
+								[EndPoint]
+							</a>
+						</td>
+						<td>
+							<a ngb-highlight [href]="featurePage.field_6" target="_blank">
+								[Tema]
+							</a>
+						</td>
+						<td><ngb-highlight [result]="featurePage.field_1"               [term]="this.searchService.searchTerm" /></td>
+						<td><ngb-highlight [result]="featurePage.description"           [term]="this.searchService.searchTerm" /></td>
+					</tr>
+				} @empty {
+					<tr>
+						<td colspan="4" style="text-align: center">[NO SE ENCONTRARON DATOS]</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+
+		<div class="d-flex justify-content-between p-2">
+			<ngb-pagination [collectionSize]="(this.searchService.total | async)!" [(page)]="this.searchService.page" [pageSize]="this.searchService.pageSize">
+			</ngb-pagination>
+
+			<select class="form-select" style="width: auto" name="pageSize" [(ngModel)]="this.searchService.pageSize">
+				<option [ngValue]="2">2 items por Pagina</option>
+				<option [ngValue]="4">4 items por Pagina</option>
+				<option [ngValue]="6">6 items por Pagina</option>
+			</select>
+		</div>
+	</form>
+	<hr>
+</div>
+<div align="right">
+    <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_LENGUAJES_INDEX'}" >[Volver al Menu]</a>
+</div>
