@@ -67,7 +67,6 @@ import { CppDemoComponent        } from './_modules/_Demos/_DemosLang/cpp-demo/c
 import { FractalDemoComponent    } from './_modules/_Demos/_DemosFeatures/miscelaneous/fractalDemo/juliaform.component';
 import { NetcoredemoComponent    } from './_modules/_Demos/_DemosLang/netcoredemo/netcoredemo.component';
 import { NodejsDemoComponent     } from './_modules/_Demos/_DemosLang/nodejs-demo/nodejs-demo.component';
-import { SpringBootDemoComponent } from './_modules/_Demos/_DemosLang/spring-boot-demo/spring-boot-demo.component';
 import { BaseSortableHeader      } from './_directives/sortable.directive';
 import { SpeechPanelComponent    } from './_components/speech-panel/speech-panel.component';
 import { BaseComponent           } from './_components/base/base.component';
@@ -171,7 +170,6 @@ export class CustomErrorHandler implements ErrorHandler {
         CppDemoComponent,
         NetcoredemoComponent,
         NodejsDemoComponent,
-        SpringBootDemoComponent,
         SpeechPanelComponent,
         BaseSortableHeader,
         BaseComponent,

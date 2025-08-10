@@ -33,7 +33,7 @@
         style="width: 50px"
         />
     </a>
-    <a routerLink="/SpringBootDemo">
+    <a [routerLink]="'/GridParam'" [queryParams]="{ pageName : 'PAGE_DEMOS_SPRING_BOOT_JAVA'}">
         <img
         [src]="'./assets/images/logos/Microsoft.VisualStudio.Services.Icons.Default'"
         [alt]="'SPRING BOOT Logo'"

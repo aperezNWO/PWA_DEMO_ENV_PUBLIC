@@ -36,7 +36,11 @@ export class CurriculumSpringBootCompont extends _SearchComponent{
       }
       toggleList() 
       {
-        //
-        this.router.navigateByUrl('/SpringBootDemo'); // Redirects to '/target-route'
+          //
+          this.router.navigate(['/GridParam'], {
+              queryParams: {
+                pageName: 'PAGE_DEMOS_SPRING_BOOT_JAVA'
+              }
+          });
       }
 }
