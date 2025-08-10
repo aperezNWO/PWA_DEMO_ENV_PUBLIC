@@ -68,7 +68,6 @@ import { FractalDemoComponent    } from './_modules/_Demos/_DemosFeatures/miscel
 import { NetcoredemoComponent    } from './_modules/_Demos/_DemosLang/netcoredemo/netcoredemo.component';
 import { NodejsDemoComponent     } from './_modules/_Demos/_DemosLang/nodejs-demo/nodejs-demo.component';
 import { SpringBootDemoComponent } from './_modules/_Demos/_DemosLang/spring-boot-demo/spring-boot-demo.component';
-import { DjangoDemoComponent     } from './_modules/_Demos/_DemosLang/django-demo/django-demo.component';
 import { BaseSortableHeader      } from './_directives/sortable.directive';
 import { SpeechPanelComponent    } from './_components/speech-panel/speech-panel.component';
 import { BaseComponent           } from './_components/base/base.component';
@@ -173,7 +172,6 @@ export class CustomErrorHandler implements ErrorHandler {
         NetcoredemoComponent,
         NodejsDemoComponent,
         SpringBootDemoComponent,
-        DjangoDemoComponent,
         SpeechPanelComponent,
         BaseSortableHeader,
         BaseComponent,

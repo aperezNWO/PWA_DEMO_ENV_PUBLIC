@@ -41,7 +41,7 @@
         style="width: 50px"
         />
     </a>
-    <a routerLink="/DjangoDemo">
+    <a [routerLink]="'/GridParam'" [queryParams]="{ pageName : 'PAGE_DEMOS_DJANGO_PYTHON' }">
         <img
         [src]="'./assets/images/logos/Python-logo-notext.svg'"
         [alt]="'python Logo'"

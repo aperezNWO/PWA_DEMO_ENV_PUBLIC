@@ -36,8 +36,11 @@ export class CurriculumDjangoPythonComponent extends _SearchComponent {
       }
       toggleList() 
       {
-        //
-        this.router.navigateByUrl('/DjangoDemo'); // Redirects to '/target-route'
+          this.router.navigate(['/GridParam'], {
+            queryParams: {
+              pageName: 'PAGE_DEMOS_DJANGO_PYTHON'
+            }
+          });
       }
 
 }

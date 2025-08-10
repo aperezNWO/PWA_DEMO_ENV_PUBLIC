@@ -34,7 +34,6 @@ import { CppDemoComponent            } from './_modules/_Demos/_DemosLang/cpp-de
 import { NetcoredemoComponent        } from './_modules/_Demos/_DemosLang/netcoredemo/netcoredemo.component';
 import { NodejsDemoComponent         } from './_modules/_Demos/_DemosLang/nodejs-demo/nodejs-demo.component';
 import { SpringBootDemoComponent     } from './_modules/_Demos/_DemosLang/spring-boot-demo/spring-boot-demo.component';
-import { DjangoDemoComponent         } from './_modules/_Demos/_DemosLang/django-demo/django-demo.component';
 import { EduResourcesComponent       } from './_modules/about/edu-resources/edu-resources.component';
 import { FractalDemoComponent        } from './_modules/_Demos/_DemosFeatures/miscelaneous/fractalDemo/juliaform.component';
 import { PageUrlListComponent        } from './_components/page-url-list/page-url-list.component';
@@ -86,7 +85,7 @@ export const routes: _Route[] = [
   {  id: 0,  path: 'NetCoreDemo'           , component: NetcoredemoComponent                , caption: ' Demos / Language - .NET CORE / C#'           , queryParams : '' },
   {  id: 0,  path: 'NodeJsDemo'            , component: NodejsDemoComponent                 , caption: ' Demos / Language - Node.js / Javascript'     , queryParams : '' },
   {  id: 0,  path: 'SpringBootDemo'        , component: SpringBootDemoComponent             , caption: ' Demos / Language - SpringBoot / Java'        , queryParams : '' },
-  {  id: 0,  path: 'DjangoDemo'            , component: DjangoDemoComponent                 , caption: ' Demos / Language - Django / Python'          , queryParams : '' },
+  {  id: 0,  path: 'GridParam'             , component: GridParamComponent                  , caption: ' Demos / Language - Django / Python'          , queryParams : 'PAGE_DEMOS_DJANGO_PYTHON' },
   {  id: 0,  path: 'PageUrlList'           , component: PageUrlListComponent                , caption: ''                                             , queryParams : '' },
   {  id: 0,  path: 'GridParam'             , component: GridParamComponent                  , caption: ''                                             , queryParams : '' }, 
   {  id: 0,  path: '**'                    , component: PageNotFoundComponent               , caption: ''                                             , queryParams : '' },
