@@ -58,9 +58,9 @@
 
  -- [_] c# sql curriculum.
 
-        -- [_] c# certification / curriculum  freecodecamp.
+         --  [_]  (freecodecamp) c# certification.
 
-         -- [_] sql.
+         --  [_] sql.
 
          --  [_] stored procedures.
 
@@ -124,9 +124,11 @@
 
  -- [_] DJANGO / Python
 
+        --  [_]  (freecodecamp) Datascience.    
+
         --  [_]  how can I use qwen and python to ask for any list and generate an output in excel?    
 
-        -- [_] djanto setup windows  : listado xls / csv
+        --  [_] djanto setup windows  : listado xls / csv
                 https://codesandbox.io/p/github/aperezNWO/django_setup_windows/main
 
 
