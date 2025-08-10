@@ -37,7 +37,10 @@ export class CurriculumAngularComponent extends _SearchComponent
     }
     toggleList() 
     {
-      //
-      this.router.navigateByUrl('/AngularDemo'); // Redirects to '/target-route'
+      this.router.navigate(['/GridParam'], {
+        queryParams: {
+          pageName: 'PAGE_DEMOS_ANGULAR_JAVASCRIPT'
+        }
+      });
     }
 } 

@@ -37,7 +37,7 @@
 					<tr *ngIf="!((featurePage.path == '') && (featurePage.caption == ''))">
 						<th scope="row">{{ featurePage.id }}</th>
 						<td>
-							<a [routerLink]="'/' + featurePage.path">
+							<a [routerLink]="'/' + featurePage.path" [queryParams]="{pageName : featurePage.queryParams}">
 								<ngb-highlight [result]="featurePage.caption" [term]="searchTerm" />
 							</a>
 						</td>

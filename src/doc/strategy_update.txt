@@ -338,6 +338,8 @@
                 --  [_] grid lang .
 
                         --  [_] back url param.
+
+                        --  [_] go to curriculum -> go to demos , dynamic link.           
                         
 -- [_] PWA + SSR + JWT - DYNAMIC FORM
 
