@@ -10,7 +10,7 @@
     "test": "ng test",
     "package": "ng build --c=production --base-href=\"https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/\"",
     "publish": "npx ngh --dir=dist\\angular-dijkstra",
-    "package-and-publish": "git push && pull && ng build --c=production --base-href=\"https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/\" && npx ngh --dir=dist\\angular-dijkstra",
+    "package-and-publish": "git push && git pull && ng build --c=production --base-href=\"https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/\" && npx ngh --dir=dist\\angular-dijkstra",
     "git-update": "git add . && git commit -m \"strategy update\" -a && git push && git pull"
   },
   "private": true,
