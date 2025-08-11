@@ -9,7 +9,7 @@
         style="width: 50px"
         />
     </a>
-    <a routerLink="/NodeJsDemo">
+    <a [routerLink]="'/GridParam'" [queryParams]="{ pageName : 'PAGE_DEMOS_NODEJS_JAVASCRIPT'}">
         <img
         [src]="'./assets/images/logos/Node.js_logo.svg.png'"
         [alt]="'NodeJs Logo'"

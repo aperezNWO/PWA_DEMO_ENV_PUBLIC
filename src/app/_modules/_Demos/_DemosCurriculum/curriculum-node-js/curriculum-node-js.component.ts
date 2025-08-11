@@ -36,7 +36,10 @@ export class CurriculumNodeJsComponent extends _SearchComponent{
       }
       toggleList() 
       {
-        //
-        this.router.navigateByUrl('/NodeJsDemo'); // Redirects to '/target-route'
+          this.router.navigate(['/GridParam'], {
+            queryParams: {
+              pageName: 'PAGE_DEMOS_NODEJS_JAVASCRIPT'
+            }
+          });
       }
 }
