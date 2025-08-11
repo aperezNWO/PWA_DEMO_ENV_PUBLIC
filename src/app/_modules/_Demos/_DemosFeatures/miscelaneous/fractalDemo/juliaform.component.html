@@ -9,15 +9,15 @@
       <ul *ngIf="isListVisible" align="left" widdth="10px">
           <li> [Frontend]
             <ul>
-              <li><a routerLink="/GridParam"     [queryParams]="{ searchTerm: 'ace5fb03-bc8c-43c5-8650-181bf581b2a4' , pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT' }">[Angular]</a></li>
+              <li><a [routerLink]="'/GridParam'"         [queryParams]="{ searchTerm: 'ace5fb03-bc8c-43c5-8650-181bf581b2a4' , pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT' }">[Angular]</a></li>
             </ul>
           </li>
           <li>[Backend]
             <ul>
-              <li><a routerLink="/CppDemo"         [queryParams]="{ searchTerm: '5e5bfdf8-6876-43a5-a2ea-858628bf0dae' }">[c++ / dll source]</a></li>
+              <li><a [routerLink]="'/GridParam'"         [queryParams]="{ searchTerm: '5e5bfdf8-6876-43a5-a2ea-858628bf0dae' , pageName : 'PAGE_DEMOS_NETCORE_CPP'        }">[c++ / dll source]</a></li>
             </ul>
             <UL>
-              <LI><a routerLink="/CppDemo"         [queryParams]="{ searchTerm: '97411cbf-d80a-4d7a-92dc-f88d158ae552' }">[c++ / .net core dll import]</a></LI>
+              <LI><a [routerLink]="'/GridParam'"         [queryParams]="{ searchTerm: '97411cbf-d80a-4d7a-92dc-f88d158ae552' , pageName : 'PAGE_DEMOS_NETCORE_CPP'        }">[c++ / .net core dll import]</a></LI>
             </UL>
           </li>
           <li>[Libraries]

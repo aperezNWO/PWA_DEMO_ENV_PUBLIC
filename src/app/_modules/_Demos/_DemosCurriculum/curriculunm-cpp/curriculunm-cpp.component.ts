@@ -37,7 +37,11 @@ export class CurriculunmCppComponent extends _SearchComponent{
       }
       toggleList() 
       {
-        //
-        this.router.navigateByUrl('/CppDemo'); // Redirects to '/target-route'
+          //
+          this.router.navigate(['/GridParam'], {
+            queryParams: {
+              pageName: 'PAGE_DEMOS_NETCORE_CPP'
+            }
+          });
       }
 }

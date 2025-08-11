@@ -30,8 +30,6 @@ import { MathParsingComponent        } from './_modules/_Demos/_DemosFeatures/mi
 import { OcrPhotoCaptureComponent    } from './_modules/_Demos/_DemosFeatures/miscelaneous/ocr-photo-capture/ocr-photo-capture.component';
 import { ContactformComponent        } from './_modules/about/contactform/contactform.component';
 import { IndexComponent              } from './_modules/about/index/index.component';
-import { CppDemoComponent            } from './_modules/_Demos/_DemosLang/cpp-demo/cpp-demo.component';
-import { NetcoredemoComponent        } from './_modules/_Demos/_DemosLang/netcoredemo/netcoredemo.component';
 import { EduResourcesComponent       } from './_modules/about/edu-resources/edu-resources.component';
 import { FractalDemoComponent        } from './_modules/_Demos/_DemosFeatures/miscelaneous/fractalDemo/juliaform.component';
 import { PageUrlListComponent        } from './_components/page-url-list/page-url-list.component';
@@ -79,8 +77,8 @@ export const routes: _Route[] = [
   {  id: 0,  path: 'CurriculumDjango'      , component: CurriculumDjangoPythonComponent     , caption: ' Curriculum - Django     / Python'            , queryParams : '' },
   {  id: 0,  path: 'CurriculumNetCore'     , component: CurriculumNetcoreComponent          , caption: ' Curriculum - .net core  / c#'                , queryParams : '' },
   {  id: 0,  path: 'GridParam'             , component: GridParamComponent                  , caption: ' Demos / Language - Angular'                  , queryParams : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT'   },
-  {  id: 0,  path: 'CppDemo'               , component: CppDemoComponent                    , caption: ' Demos / Language - C++'                      , queryParams : '' },
-  {  id: 0,  path: 'NetCoreDemo'           , component: NetcoredemoComponent                , caption: ' Demos / Language - .NET CORE / C#'           , queryParams : '' },
+  {  id: 0,  path: 'GridParam'             , component: GridParamComponent                  , caption: ' Demos / Language - C++'                      , queryParams : 'PAGE_DEMOS_NETCORE_CPP'          },
+  {  id: 0,  path: 'GridParam'             , component: GridParamComponent                  , caption: ' Demos / Language - .NET CORE / C#'           , queryParams : 'PAGE_DEMOS_NETCORE_CSHARP'       },
   {  id: 0,  path: 'GridParam'             , component: GridParamComponent                  , caption: ' Demos / Language - Node.js / Javascript'     , queryParams : 'PAGE_DEMOS_NODEJS_JAVASCRIPT'    },
   {  id: 0,  path: 'GridParam'             , component: GridParamComponent                  , caption: ' Demos / Language - SpringBoot / Java'        , queryParams : 'PAGE_DEMOS_SPRING_BOOT_JAVA'     },
   {  id: 0,  path: 'GridParam'             , component: GridParamComponent                  , caption: ' Demos / Language - Django / Python'          , queryParams : 'PAGE_DEMOS_DJANGO_PYTHON'        },

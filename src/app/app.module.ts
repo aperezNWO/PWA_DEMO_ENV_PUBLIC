@@ -63,9 +63,7 @@ import { OcrPhotoCaptureComponent    } from './_modules/_Demos/_DemosFeatures/mi
 import { ContactformComponent        } from './_modules/about/contactform/contactform.component';
 import { TechnicalSpecsComponent     } from './_modules/about/technicalspecs/technical-specs/technical-specs.component';
 import { EduResourcesComponent       } from './_modules/about/edu-resources/edu-resources.component';
-import { CppDemoComponent        } from './_modules/_Demos/_DemosLang/cpp-demo/cpp-demo.component';
 import { FractalDemoComponent    } from './_modules/_Demos/_DemosFeatures/miscelaneous/fractalDemo/juliaform.component';
-import { NetcoredemoComponent    } from './_modules/_Demos/_DemosLang/netcoredemo/netcoredemo.component';
 import { BaseSortableHeader      } from './_directives/sortable.directive';
 import { SpeechPanelComponent    } from './_components/speech-panel/speech-panel.component';
 import { BaseComponent           } from './_components/base/base.component';
@@ -166,8 +164,6 @@ export class CustomErrorHandler implements ErrorHandler {
         CurriculumSpringBootCompont,
         CurriculumNetcoreComponent,
         ContactformComponent,
-        CppDemoComponent,
-        NetcoredemoComponent,
         SpeechPanelComponent,
         BaseSortableHeader,
         BaseComponent,

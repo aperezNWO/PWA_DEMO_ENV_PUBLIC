@@ -36,7 +36,11 @@ export class CurriculumNetcoreComponent extends _SearchComponent {
       }
       toggleList() 
       {
-        //
-        this.router.navigateByUrl('/NetCoreDemo'); // Redirects to '/target-route'
+          //
+          this.router.navigate(['/GridParam'], {
+            queryParams: {
+              pageName: 'PAGE_DEMOS_NETCORE_CSHARP'
+            }
+          });
       }
 }

@@ -17,7 +17,7 @@
         style="width: 50px"
         />
     </a>
-    <a routerLink="/NetCoreDemo">
+    <a [routerLink]="'/GridParam'" [queryParams] = "{ pageName : 'PAGE_DEMOS_NETCORE_CSHARP' }" >
         <img
         [src]="'./assets/images/logos/C_Sharp_Logo_2023.svg'"
         [alt]="'C# Logo'"
@@ -25,7 +25,7 @@
         style="width: 50px"
         />
     </a>
-    <a routerLink="/CppDemo">
+    <a [routerLink]="'/GridParam'" [queryParams] = "{ pageName : 'PAGE_DEMOS_NETCORE_CPP'  }">
         <img
         [src]="'./assets/images/logos/ISO_C%2B%2B_Logo.svg.png'"
         [alt]="'C++ Logo'"
