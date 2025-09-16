@@ -10,7 +10,7 @@
     "test": "ng test",
     "_package": "ng build --c=production --base-href=\"/PWA_DEMO_ENV_PUBLIC/\"",
     "_publish" : "npx angular-cli-ghpages --dir=dist/PWA_DEMO_ENV_PUBLIC",
-    "package-and-publish": "git push && git pull && ng build --c=production --base-href=\"https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/\" && npx ngh --dir=dist\\angular-dijkstra",
+    "package-and-publish": "git push && git pull && ng build --c=production --base-href=\"/PWA_DEMO_ENV_PUBLIC/\" && npx ngh --dir=dist\\PWA_DEMO_ENV_PUBLIC",
     "git-update": "git add . && git commit -m \"strategy update\" -a && git push && git pull"
   },
   "private": true,
