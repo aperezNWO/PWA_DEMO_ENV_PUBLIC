@@ -82,6 +82,8 @@
 
                 -- [_]  EXPLORE API.
 
+                -- [_]  https://www.freecodecamp.org/news/tag/tensorflow/
+
                 -- [_]  WORD CLASIFICATION
 
                         -- [_] https://chat.qwen.ai/c/c70ffaa5-78dc-4eeb-87db-3b8f7879fd77
@@ -167,6 +169,10 @@
  ////////////////////////////////////////////////////////////////////////////////
  // TODO LIST
  ////////////////////////////////////////////////////////////////////////////////
+
+-- [_] programa omar -> owasp.
+
+-- [_] replicar en pwa_demo_env_prod en pwa_demo_env_public.
 
 -- [_] CMS 
 
@@ -312,14 +318,21 @@
 
         -- [_] navigation menu display error.
 
+-- [_] PWA + SSR + JWT - DYNAMIC FORM
+
+        -- [_] PWA_DEMO_ENV_ADMIN. 
+
+        -- [_] PWA_DEMO_ENV_CONTACT. 
+
 --  [_] component.
 
-        -- [_] ngb grid master detail.
+        -- [_] Landing Page (PageUrlList).
 
+               --  [_] back url param.       
+ 
         -- [_] image capture component.
 
-        -- [_] grid component. 
-
+        -- [_] dynamic form. 
 
         -- [_] reference component. 
 
@@ -327,11 +340,17 @@
 
                 --  [_] REFERENCES AS JSON FILES.
 
-        --  [_] voice search component - ask A.I.      
+        --  [_] voice search component    
+
+                --  [_] app-speech-panel.
+
+                --  [_] ask A.I.   
         
         --  [_] <app-search></app-search>.
 
-        --  [_] dynamic form.
+        --  [_] grid component.
+
+                -- [_] ngb grid master detail.
 
                 --  [_] grid curriculum.
 
@@ -342,15 +361,11 @@
                         --  [_] back url param.
 
                         --  [_] go to curriculum -> go to demos , dynamic link.           
-                        
--- [_] PWA + SSR + JWT - DYNAMIC FORM
 
-        -- [_] PWA_DEMO_ENV_ADMIN. 
+--  [_] scm .
 
-        -- [_] PWA_DEMO_ENV_CONTACT. 
+        --  [_] git landing doc as onedrive doc.
 
--- [_] programa omar -> owasp.
-
--- [_] pwa_demo_env_dev.
+        --  [_] angular entry types : TYPE_FORM, TYPE_COMPONENT, TYPE_LIBRARY.
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -8,8 +8,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "package": "ng build --c=production --base-href=\"https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/\"",
-    "publish": "npx ngh --dir=dist\\angular-dijkstra",
+    "_package": "ng build --c=production --base-href=\"/PWA_DEMO_ENV_PUBLIC/\"",
+    "_publish" : "npx angular-cli-ghpages --dir=dist/PWA_DEMO_ENV_PUBLIC",
     "package-and-publish": "git push && git pull && ng build --c=production --base-href=\"https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/\" && npx ngh --dir=dist\\angular-dijkstra",
     "git-update": "git add . && git commit -m \"strategy update\" -a && git push && git pull"
   },
