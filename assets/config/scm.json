@@ -472,7 +472,7 @@
         "done"        : true,
         "name"        : "[.NET CORE / C++ - FRACTAL]",
         "description" : "ENV_ONLINE_HOSTING",
-        "field_1"     : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/miscelaneous/fractalDemo/juliaform.component.ts",
+        "field_1"     : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/#/FractalDemo",
         "field_2"     : "[Repo]",
         "field_3"     : "https://github.com/aperezNWO/CPP_GCC_OPEN_CV/blob/4d162f3c80cf1ec28bbcf50321ff997a8fbc8efd/mingwin/OpenCvDll.cpp#L342",
         "field_4"     : "[Hosting]",
