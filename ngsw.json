@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1758002313106,
+  "timestamp": 1758005391650,
   "index": "/PWA_DEMO_ENV_PUBLIC/index.html",
   "assetGroups": [
     {
@@ -15,7 +15,7 @@
         "/PWA_DEMO_ENV_PUBLIC/896.4519226224848d4d.js",
         "/PWA_DEMO_ENV_PUBLIC/favicon.ico",
         "/PWA_DEMO_ENV_PUBLIC/index.html",
-        "/PWA_DEMO_ENV_PUBLIC/main.77f3407365c9da34.js",
+        "/PWA_DEMO_ENV_PUBLIC/main.a8d5d31b601a50bb.js",
         "/PWA_DEMO_ENV_PUBLIC/manifest.webmanifest",
         "/PWA_DEMO_ENV_PUBLIC/polyfills.77586c43fe67260d.js",
         "/PWA_DEMO_ENV_PUBLIC/runtime.513bb11c4dc7e0ae.js",
@@ -31,8 +31,8 @@
         "ignoreVary": true
       },
       "urls": [
-        "/PWA_DEMO_ENV_PUBLIC/assets/config/_config.json",
-        "/PWA_DEMO_ENV_PUBLIC/assets/config/_mainPages.json",
+        "/PWA_DEMO_ENV_PUBLIC/assets/config/config.json",
+        "/PWA_DEMO_ENV_PUBLIC/assets/config/mainPages.json",
         "/PWA_DEMO_ENV_PUBLIC/assets/config/scm.json",
         "/PWA_DEMO_ENV_PUBLIC/assets/demos/angularDemo/angular_Curriculum_base.json",
         "/PWA_DEMO_ENV_PUBLIC/assets/demos/angularDemo/angular_Demos_base.json",
@@ -74,8 +74,8 @@
   "hashTable": {
     "/PWA_DEMO_ENV_PUBLIC/484.8cdd85cefc5a3b51.js": "5917412f8e7d284347e02b3e88949a4901e355de",
     "/PWA_DEMO_ENV_PUBLIC/896.4519226224848d4d.js": "b78fb0b014bc156bc77299cc45560d056ef29bac",
-    "/PWA_DEMO_ENV_PUBLIC/assets/config/_config.json": "bef27474cdbc2cb2fc3252d929df125d80bedff0",
-    "/PWA_DEMO_ENV_PUBLIC/assets/config/_mainPages.json": "a3809dd7248a1498fce7385460812b604464e2bc",
+    "/PWA_DEMO_ENV_PUBLIC/assets/config/config.json": "bef27474cdbc2cb2fc3252d929df125d80bedff0",
+    "/PWA_DEMO_ENV_PUBLIC/assets/config/mainPages.json": "a3809dd7248a1498fce7385460812b604464e2bc",
     "/PWA_DEMO_ENV_PUBLIC/assets/config/scm.json": "213347aa6eed79751a08ab13a103aa830b93d40f",
     "/PWA_DEMO_ENV_PUBLIC/assets/demos/angularDemo/angular_Curriculum_base.json": "28387cc2d7828d175bb533fff80a2ad1cfd8fc4d",
     "/PWA_DEMO_ENV_PUBLIC/assets/demos/angularDemo/angular_Demos_base.json": "1f03b80709aaadaab8a45df8647eb7cf55c6a905",
@@ -110,8 +110,8 @@
     "/PWA_DEMO_ENV_PUBLIC/assets/opencv.js": "9c25f0d869689b62b0834b7f938896a4ecfae698",
     "/PWA_DEMO_ENV_PUBLIC/assets/sudoku.txt": "a11677cdf143c6ab92080e8a4247c50083c14e71",
     "/PWA_DEMO_ENV_PUBLIC/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/PWA_DEMO_ENV_PUBLIC/index.html": "f076cce050909aab536e1545f4505516be590aa6",
-    "/PWA_DEMO_ENV_PUBLIC/main.77f3407365c9da34.js": "b80dd56448c520dc51cc4ab2724cbb9e4afacd4b",
+    "/PWA_DEMO_ENV_PUBLIC/index.html": "5fc03d3d942e96f41a57d5ae39f173910e704e38",
+    "/PWA_DEMO_ENV_PUBLIC/main.a8d5d31b601a50bb.js": "b81ab19920292e8d94204ac46f80da6e6a5c2b13",
     "/PWA_DEMO_ENV_PUBLIC/manifest.webmanifest": "4c4fda145c554fe9a7ed086f63fa914267022e67",
     "/PWA_DEMO_ENV_PUBLIC/polyfills.77586c43fe67260d.js": "9e2a9f992517e511f5c0d93f45b293a46678cb36",
     "/PWA_DEMO_ENV_PUBLIC/runtime.513bb11c4dc7e0ae.js": "0d34af7dafc44c339f542dfaf83972a20ab6c1d7",
