@@ -33,7 +33,7 @@ export class ConfigService {
   }  
   // ONLY HAPPENS ONCE ON APPMODULE LOADING
   loadConfig() {
-    return this.http.get('./assets/config/_config.json').toPromise()
+    return this.http.get('./assets/config/config.json').toPromise()
       .then((data: any) => {
           //
           ////console.log("loading configuration...");
@@ -50,7 +50,7 @@ export class ConfigService {
     return new Promise((resolve) => 
     {
         //
-        this.http.get('./assets/config/_mainPages.json').toPromise()
+        this.http.get('./assets/config/mainPages.json').toPromise()
         .then((data: any) => {
             //
             _environment.mainPageList = data; // Assign loaded data to environment variable
