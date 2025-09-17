@@ -122,11 +122,11 @@
 /////////////////////////////////////////////////////////////////
 
 git add * 
-git commit -m "c
->>1)  Nested Main Pages. " 
+git commit -m"Application [ANGULAR DEMO - ENV_PUBLIC] v[2.3.5]" -m"1) LLM LIS UPDATE. " -a
 git push 
 git pull
 
+npm run package-and-publish 
 
 /////////////////////////////////////////////////////////////////
 // GIT HUB PAGES
