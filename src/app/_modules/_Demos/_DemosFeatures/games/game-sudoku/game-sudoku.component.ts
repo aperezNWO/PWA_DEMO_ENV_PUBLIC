@@ -32,7 +32,7 @@ export class SudokuComponent extends BaseComponent implements OnInit, AfterViewI
   @ViewChild('_SourceList')   _sourceList     : any;
   @ViewChild('_fileUpload')   _fileUpload     : any;
   @ViewChild('_sudoku_board')  _sudoku_board  : any;
-    //
+  //
   public __languajeList: any;  
   //
   public __generateSourceList : any;
@@ -92,10 +92,6 @@ export class SudokuComponent extends BaseComponent implements OnInit, AfterViewI
   queryParams():void{
     //
     this.route.queryParams.subscribe(params => {
-      //-----------------------------------------------------------------------------
-      // LENGUAJES DE PROGRAMACION
-      //-----------------------------------------------------------------------------
-      this.__languajeList = new Array();
       //-----------------------------------------------------------------------------
       // LENGUAJES DE PROGRAMACION
       //-----------------------------------------------------------------------------

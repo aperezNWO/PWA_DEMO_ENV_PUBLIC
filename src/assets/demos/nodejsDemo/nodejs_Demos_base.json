@@ -4,12 +4,11 @@
         "done"             : true,
         "name"             : "OCR DEMO",
         "description"      : "OCR DEMO",
-        "field_6"          : "Nodejs",
         "field_1"          : "NodeJs, codesandbox, OCR, Tesseract",
         "field_2"          : "./#/OcrPhotoCapture?langName=JS",
-        "field_3"          : "https://github.com/aperezNWO/cs_nodejs_ocr_/blob/main/index.js",
-        "field_4"          : "https://github.com/tesseract-ocr/tesseract",
-        "field_5"          : "https://9tvpj7-3000.csb.app/upload",
+        "field_3"          : "https://github.com/aperezNWO/cs_nodejs_ocr_/blob/f5ceb18113f44880c70fe6592e6d1ab97d0a1ecd/index.js#L19",
+        "field_4"          : "https://9tvpj7-3000.csb.app/upload",
+        "field_6"          : "https://github.com/tesseract-ocr/tesseract",
         "field_10"         : "894ab07b-45d4-4a87-b9d7-a59e78a73e79" 
     },
     {
@@ -17,12 +16,11 @@
         "done"             : true,
         "name"             : "CHAT DEMO",
         "description"      : "CHAT DEMO",
-        "field_6"          : "Nodejs",
         "field_1"          : "NodeJs, codesandbox, Chat, Socket.io",
         "field_2"          : "./#/Chat",
-        "field_3"          : "https://github.com/aperezNWO/cs_node_js_test_chat/blob/main/index.js",
-        "field_4"          : "https://socket.io/",
-        "field_5"          : "https://v3mf3v-3000.csb.app/",
+        "field_3"          : "https://github.com/aperezNWO/cs_node_js_test_chat/blob/048868fdf1a3f770233dab4493df296e37ec2d61/index.js#L61",
+        "field_4"          : "https://v3mf3v-3000.csb.app/",
+        "field_6"          : "https://socket.io/",
         "field_10"         : "1996fa99-4e01-42eb-ac45-98e2918208d9"   
     },
     {
@@ -30,12 +28,11 @@
         "done"             : true,
         "name"             : "CSV DEMO",
         "description"      : "CSV DEMO",
-        "field_6"          : "Nodejs",
         "field_1"          : "NodeJs, codesandbox, ms sql server",
         "field_2"          : "./#/FilesGenerationCSV?langName=JS",
-        "field_3"          : "https://github.com/aperezNWO/CS_NodeJs/blob/main/modules/database.js",
-        "field_4"          : "https://www.npmjs.com/package/mssql"  ,
-        "field_5"          : "https://9rfn3t-4000.csb.app/GenerarInformeCSVJson",
+        "field_3"          : "https://github.com/aperezNWO/CS_NodeJs/blob/babba6e5072737f5e95c3364205a11ccb2485e76/modules/database.js#L44",
+        "field_4"          : "https://9rfn3t-4000.csb.app/GenerarInformeCSVJson"  ,
+        "field_6"          : "https://www.npmjs.com/package/mssql",
         "field_10"         : "f58efe4e-fc26-4f9c-b11b-0e148b3ffb2e"
     },
     {
@@ -43,12 +40,11 @@
         "done"             : true,
         "name"             : "XLS DEMO",
         "description"      : "XLS DEMO",
-        "field_6"          : "Nodejs",
         "field_1"          : "NodeJs, codesandbox, ms sql server",
         "field_2"          : "./#/FilesGenerationXLS?langName=JS",
-        "field_3"          : "https://github.com/aperezNWO/CS_NodeJs/blob/main/modules/database.js",
-        "field_4"          : "https://www.npmjs.com/package/mssql" ,
-        "field_5"          : "https://9rfn3t-4000.csb.app/generarinformejson",
+        "field_3"          : "https://github.com/aperezNWO/CS_NodeJs/blob/babba6e5072737f5e95c3364205a11ccb2485e76/modules/database.js#L16",
+        "field_4"          : "https://9rfn3t-4000.csb.app/generarinformejson" ,
+        "field_6"          : "https://www.npmjs.com/package/mssql",
         "field_10"         : "e109d2d1-64dc-41ac-bee2-3820bc571a97"
     },
     {
@@ -56,12 +52,11 @@
         "done"             : true,
         "name"             : "SUDOKU GAME",
         "description"      : "SUDOKU GAME",
-        "field_6"          : "Nodejs",
         "field_1"          : "NodeJs, SUDOKU",
         "field_2"          : "./#/GamesSudoku?langName=JS",
-        "field_3"          : "https://github.com/aperezNWO/CS_NodeJs/blob/main/modules/sudoku.js",
-        "field_4"          : "https://www.geeksforgeeks.org/sudoku-backtracking-7/",
-        "field_5"          : "https://9rfn3t-4000.csb.app/Sudoku_Solve_NodeJS?p_matrix=[{0,0,0,0,0,7,8,0,6},{0,0,9,2,6,8,5,0,3},{0,6,8,5,9,3,4,2,7},{3,1,2,8,4,9,6,0,5},{8,9,0,1,0,5,2,3,4},{5,4,7,3,0,0,9,8,1},{0,5,0,7,8,2,3,4,9},{9,8,4,6,3,1,0,5,2},{0,0,3,9,5,4,1,6,8",
+        "field_3"          : "https://github.com/aperezNWO/CS_NodeJs/blob/babba6e5072737f5e95c3364205a11ccb2485e76/modules/sudoku.js#L151",
+        "field_4"          : "https://9rfn3t-4000.csb.app/Sudoku_Solve_NodeJS?p_matrix=[{0,0,0,0,0,7,8,0,6},{0,0,9,2,6,8,5,0,3},{0,6,8,5,9,3,4,2,7},{3,1,2,8,4,9,6,0,5},{8,9,0,1,0,5,2,3,4},{5,4,7,3,0,0,9,8,1},{0,5,0,7,8,2,3,4,9},{9,8,4,6,3,1,0,5,2},{0,0,3,9,5,4,1,6,8}]",
+        "field_6"          : "https://www.geeksforgeeks.org/sudoku-backtracking-7/",
         "field_10"         : "f1f0af0b-4032-49b7-9df0-80e578168fa3"
     }
 ]	

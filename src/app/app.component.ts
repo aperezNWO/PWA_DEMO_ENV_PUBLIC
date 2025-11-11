@@ -1,5 +1,5 @@
-import { Component, OnInit, VERSION    } from '@angular/core';
-import { ActivatedRoute, Router        } from '@angular/router';
+import { Component                     } from '@angular/core';
+import { ActivatedRoute                } from '@angular/router';
 import { Title                         } from '@angular/platform-browser';
 import { CustomErrorHandler            } from './app.module';
 import { BackendService                } from './_services/BackendService/backend.service';
@@ -14,7 +14,7 @@ export { CustomErrorHandler            };
 })
 
 //
-export class AppComponent implements OnInit {
+export class AppComponent  {
     // propiedades publicas
     public readonly _title                                       : string | undefined  = "";
     public readonly _appBrand                                    : string | undefined  = "";
@@ -22,7 +22,6 @@ export class AppComponent implements OnInit {
                     redirectPage                                 : string | null       = null;
     //-----------------------------------------------------------------------------------------------------
     constructor(
-                private router              : Router,
                 public  route               : ActivatedRoute,  
                 private backendService      : BackendService, 
                 private _configService      : ConfigService,
@@ -63,9 +62,5 @@ export class AppComponent implements OnInit {
       //
       this.titleService.setTitle(title);
     }   
-    //-----------------------------------------------------------------------------------------------------
-    ngOnInit() {
-        //
-    }
   }   
 //-----------------------------------------------------------------------------------------------------

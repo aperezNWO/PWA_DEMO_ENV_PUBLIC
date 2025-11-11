@@ -1,0 +1,145 @@
+/* Full container – centers content horizontally and vertically */
+.game-container {
+  display: flex;
+  font-size: x-small;
+  flex-direction: column;
+  align-items: center;           /* Center children horizontally */
+  justify-content: flex-start;   /* Stack from top, but centered */
+  /*min-height: 80vh;*/              /* Occupy most of screen */
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 600px;              /* Prevents stretching on large screens */
+  text-align: center;            /* Center text */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Title and controls */
+h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.controls label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 14px;
+}
+
+/* Board wrapper – this is what centers the grid */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 70px);
+  grid-template-rows: repeat(3, 70px);
+  gap: 2px;
+  margin: 20px auto;              /* Auto margins + flex parent = center */
+  background-color: #ccc;
+  padding: 5px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: fit-content;             /* Shrink to content size */
+}
+
+/* Individual cell */
+.cell {
+  width: 70px;
+  height: 70px;
+  border: 2px solid #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  cursor: default;
+  transition: all 0.2s ease;
+  background-color: white;
+  user-select: none;
+}
+
+.x-cell { 
+  background-color: #bbdefb; 
+  color: #1565c0; 
+}
+
+.o-cell { 
+  background-color: #f8bbd0; 
+  color: #c62828; 
+}
+
+.empty-cell { 
+  background-color: #f0f0f0; 
+  color: #ddd; 
+}
+
+/* Button styling */
+.button_tictactoe {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #43a047;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: background-color 0.2s;
+}
+
+button:hover:not(:disabled) {
+  background-color: #388e3c;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive: Smaller cells on mobile */
+@media (max-width: 480px) {
+  .board {
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(3, 50px);
+    gap: 1px;
+    padding: 4px;
+  }
+
+  .cell {
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Game info below board */
+.game-info {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Error & loading messages */
+.error, .loading {
+  margin: 1rem 0;
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+.loading {
+  color: #555;
+  font-style: italic;
+}

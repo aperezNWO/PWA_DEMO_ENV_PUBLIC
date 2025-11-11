@@ -23,7 +23,6 @@ import { AppComponent                    } from './app.component';
 import { HomeWebComponent                } from './_modules/home/home-web/home-web.component';
 import { PageNotFoundComponent           } from './_modules/home/page-not-found/page-not-found.component';
 import { NavComponent                    } from './_modules/home/nav/nav.component';
-import { UnitTestingComponent            } from './_modules/_unitttesting/unit-testing.component';
 import { LogType                         } from './_models/entity.model';
 import { BackendService                  } from './_services/BackendService/backend.service';
 import { ConfigService                   } from './_services/ConfigService/config.service';
@@ -49,28 +48,30 @@ import { ChartComponent                         } from './_modules/_Demos/_Demos
 import { FilesGenerationCSVComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-csv/files-generation-csv.component';
 import { FilesGenerationPDFComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-pdf/files-generation-pdf.component';
 import { FilesGenerationXLSComponent } from './_modules/_Demos/_DemosFeatures/files-generation/files-generation-xls/files-generation-xls.component';
-import { GameHanoiAutoComponent } from './_modules/_Demos/_DemosFeatures/games/game-hanoi-auto/game-hanoi-auto.component';
-import { GameHanoi3dComponent   } from './_modules/_Demos/_DemosFeatures/games/game-hanoi3d/game-hanoi3d.component';
-import { SudokuComponent        } from './_modules/_Demos/_DemosFeatures/games/game-sudoku/game-sudoku.component';
-import { GameTetrisComponent    } from './_modules/_Demos/_DemosFeatures/games/game-tetris/game-tetris.component';
-import { BoardComponent         } from './_modules/_Demos/_DemosFeatures/games/game-tictactoe/board/board.component';
-import { GameTictactoeComponent } from './_modules/_Demos/_DemosFeatures/games/game-tictactoe/game-tictactoe.component';
-import { SquareComponent        } from './_modules/_Demos/_DemosFeatures/games/game-tictactoe/square/square.component';
-import { ChatComponent          } from './_modules/_Demos/_DemosFeatures/miscelaneous/chat/chat/chat.component';
+import { GameHanoiAutoComponent      } from './_modules/_Demos/_DemosFeatures/games/game-hanoi-auto/game-hanoi-auto.component';
+import { GameHanoi3dComponent        } from './_modules/_Demos/_DemosFeatures/games/game-hanoi3d/game-hanoi3d.component';
+import { SudokuComponent             } from './_modules/_Demos/_DemosFeatures/games/game-sudoku/game-sudoku.component';
+import { GameTetrisComponent         } from './_modules/_Demos/_DemosFeatures/games/game-tetris/game-tetris.component';
+import { GameTetrisAIComponent       } from './_modules/_Demos/_DemosFeatures/games/game-tetris-ai/game-tetris-ai.component';
+import { BoardComponent              } from './_modules/_Demos/_DemosFeatures/games/game-tictactoe/board/board.component';
+import { GameTictactoeComponent      } from './_modules/_Demos/_DemosFeatures/games/game-tictactoe/game-tictactoe.component';
+import { TicTacToeBoardAiComponent   } from './_modules/_Demos/_DemosFeatures/games/tic-tac-toe-board-ai/tic-tac-toe-board-ai.component';
+import { SquareComponent             } from './_modules/_Demos/_DemosFeatures/games/game-tictactoe/square/square.component';
+import { ChatComponent               } from './_modules/_Demos/_DemosFeatures/miscelaneous/chat/chat/chat.component';
 import { ComputerVisionComponent     } from './_modules/_Demos/_DemosFeatures/miscelaneous/computer-vision/computer-vision.component';
 import { MathParsingComponent        } from './_modules/_Demos/_DemosFeatures/miscelaneous/math-parsing/math-parsing.component';
 import { OcrPhotoCaptureComponent    } from './_modules/_Demos/_DemosFeatures/miscelaneous/ocr-photo-capture/ocr-photo-capture.component';
 import { ContactformComponent        } from './_modules/about/contactform/contactform.component';
 import { TechnicalSpecsComponent     } from './_modules/about/technicalspecs/technical-specs/technical-specs.component';
 import { EduResourcesComponent       } from './_modules/about/edu-resources/edu-resources.component';
-import { FractalDemoComponent    } from './_modules/_Demos/_DemosFeatures/miscelaneous/fractalDemo/juliaform.component';
-import { BaseSortableHeader      } from './_directives/sortable.directive';
-import { SpeechPanelComponent    } from './_components/speech-panel/speech-panel.component';
-import { BaseComponent           } from './_components/base/base.component';
-import { _BaseComponent          } from './_components/base/_base.component';
-import { _SearchComponent        } from './_components/search/_search.component ';
-import { GridParamComponent      } from './_components/grid-param/grid-param.component';
-import { PageUrlListComponent    } from './_components/page-url-list/page-url-list.component';
+import { FractalDemoComponent        } from './_modules/_Demos/_DemosFeatures/miscelaneous/fractalDemo/juliaform.component';
+import { BaseSortableHeader          } from './_directives/sortable.directive';
+import { SpeechPanelComponent        } from './_components/speech-panel/speech-panel.component';
+import { BaseComponent               } from './_components/base/base.component';
+import { _BaseComponent              } from './_components/base/_base.component';
+import { _SearchComponent            } from './_components/search/_search.component ';
+import { GridParamComponent          } from './_components/grid-param/grid-param.component';
+import { PageUrlListComponent        } from './_components/page-url-list/page-url-list.component';
 
 //
 export function initialize(_configService: ConfigService) 
@@ -142,9 +143,9 @@ export class CustomErrorHandler implements ErrorHandler {
         FilesGenerationCSVComponent,
         FilesGenerationPDFComponent,
         TechnicalSpecsComponent,
-        UnitTestingComponent,
         SudokuComponent,
         GameTictactoeComponent,
+        TicTacToeBoardAiComponent,
         GameHanoiAutoComponent,
         OcrPhotoCaptureComponent,
         ChatComponent,
@@ -157,6 +158,7 @@ export class CustomErrorHandler implements ErrorHandler {
         GameHanoi3dComponent,
         MathParsingComponent,
         GameTetrisComponent,
+        GameTetrisAIComponent,
         CurriculumAngularComponent,
         CurriculumNodeJsComponent,
         CurriculumDjangoPythonComponent,

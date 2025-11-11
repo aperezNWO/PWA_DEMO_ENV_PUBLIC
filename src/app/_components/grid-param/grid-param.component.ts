@@ -2,7 +2,7 @@ import { Component                                                     } from '@
 import { Router                                                        } from '@angular/router';
 import { _environment                                                  } from 'src/environments/environment';
 import { _BaseModel                                                    } from 'src/app/_models/entity.model';
-import { PAGE_DEMOS_DJANGO_PYTHON, PAGE_ID, PAGE_SIZE,SEARCH_TERM      } from 'src/app/_models/common';
+import { PAGE_ID, PAGE_SIZE,SEARCH_TERM                                } from 'src/app/_models/common';
 import { ConfigService                                                 } from 'src/app/_services/ConfigService/config.service';
 import { __SearchComponent                                             } from '../search/__search.component';
 import { __SearchService                                               } from 'src/app/_services/searchService/__search.service';
@@ -29,7 +29,7 @@ import { __SearchService                                               } from 's
 export class GridParamComponent extends __SearchComponent  
 {
       //
-      toogleLisCaption: string = "[Ir a Referencia - Django / Python ...]";
+      toogleLisCaption: string = "[Ir a Referencia - <page_nanme>...]";
       //
       constructor(
                   public override searchService         : __SearchService,
@@ -43,7 +43,7 @@ export class GridParamComponent extends __SearchComponent
       toggleList() 
       {
           //
-          this.router.navigateByUrl('/CurriculumDjango'); // Redirects to '/target-route'
+          this.router.navigateByUrl('/<pageName>'); // Redirects to '/target-route'
       }
 
 } 

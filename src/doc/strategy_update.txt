@@ -320,6 +320,8 @@
 
 -- [_] PWA + SSR + JWT - DYNAMIC FORM
 
+        -- [_] SSR on dynamic hosting with Node.js. 
+
         -- [_] PWA_DEMO_ENV_ADMIN. 
 
         -- [_] PWA_DEMO_ENV_CONTACT. 
@@ -366,6 +368,71 @@
 
         --  [_] git landing doc as onedrive doc.
 
-        --  [_] angular entry types : TYPE_FORM, TYPE_COMPONENT, TYPE_LIBRARY.
+        --  [_] angular features grid entry types : TYPE_FORM (current), TYPE_COMPONENT (pending), TYPE_LIBRARY (pending).
+
+--  [_] Machine Learning and A.I.
+
+        --  [_] Dymaic Maze solving.
+
+                  --  [_] Deterministic.
+
+                  --  [_] Non-deterministic.
+
+                          --  [_] simple neural network (visualice training/learning).
+
+                          --  [_] load trained model, Tensorflow C++.
+                  
+        --  [_] Solve the curent games/algos/challenges same way.
+ 
+              --  [_] Major version v[x.x.x].
+         
+              --  [_] Machine against machine.
+
+              --  [_] load save textplain N.N. model.
+
+              --  [_] load save tensorflow model.
+
+        -- [_] APPS : 
+
+                --  [_] sudoku.
+
+                --  [_] haoni.
+
+                --  [_] shortest path.
+
+                --  [_] Tetris.
+
+                --  [_] Chess.
+
+                --  [_] tictactoe.
+
+ -- [_] TIC-TAC-TOE DEMO.
+ 
+        --  [x] c++ neural network which learns to play tictactoe against itself.
+
+                --  [x] https://chat.qwen.ai/c/7d46d2ce-70a5-4c9f-ba4c-d7ce475527ed
+
+        -- [x] param link to specific lang.        
+
+
+ -- [_] OPENCV DEMO.
+        
+         -- [_] WITH TENSORFLOW.
+
+         -- [_] WITH PYTORCH.
+ 
+ -- [_] OCR DEMO.
+        
+         -- [_] WITH TENSORFLOW.
+
+         -- [_] WITH PYTORCH.
+
+ -- [_] fix json pages.
+
+ -- [_] c++ curriculum.
+
+ -- [_] TETRIS DEMO
+
+        -- [_]  https://github.com/nuno-faria/tetris-ai
 
 ////////////////////////////////////////////////////////////////////////////////

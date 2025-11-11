@@ -1,0 +1,67 @@
+<div align="center">
+    <!-- ENCABEZADO / INICIO  -->  
+    <div align="center">
+      <h1>{{  this.pageTitle }}</h1>
+    </div>
+    <hr> 
+    <div class="reference" align="right">
+   <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
+   <ul *ngIf="isListVisible" align="left" widdth="10px">
+      <li> [Frontend]
+          <ul>
+              <li><a routerLink="/GridParam" [queryParams]="{ searchTerm: '' , pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT' }">[Angular]</a></li>
+          </ul>
+      </li>
+      <li>[Librerias]
+          <ul>
+              <li><a href="https://v17.angular.io/guide/observables" target="_blank">[Observable]</a></li>
+          </ul>
+      </li>
+      <li>[Temas]
+          <ul>
+              <li><a href="https://en.wikipedia.org/wiki/Tetris" target="_blank">[Tetris]</a></li>
+          </ul>
+      </li>
+    </ul>
+    </div>  
+    <!-- ENCABEZADO / FIN -->  
+    <hr>
+    <!-- TABLERO INICIO -->
+  <div class="tetris-container">
+  
+    <!-- Tablero -->
+      <div class="board">
+        <div *ngFor="let row of board; let y = index" class="row">
+          <div *ngFor="let cell of row; let x = index"
+              [class.cell]="true"
+              [class.filled]="cell === 1">
+          </div>
+        </div>
+      </div>
+
+      <!-- Estado de la IA -->
+      <div *ngIf="aiSuggestion" class="ai-info">
+        <p><strong>Acción:</strong> {{ ['←', '→', '↻', '↓', '·'][aiSuggestion.action] }}</p>
+        <p><small>Q: [{{ qValuesFormatted }}]</small></p>
+      </div>
+
+      <!-- Estado del juego -->
+      <div class="status">
+        <p><strong>Puntuación:</strong> {{ score }}</p>
+        <p *ngIf="gameOver" class="game-over">💥 ¡Juego terminado!</p>
+      </div>
+
+      <!-- Único botón: Reiniciar -->
+      <button (click)="resetGame()" class="reset-btn">
+        🔄 Reiniciar
+      </button>
+  
+  </div>
+    <!-- TABLERO FIN    -->
+    <hr />
+     <!-- RETURN TO HOME PAGE - INIT -->
+     <div align="right">
+         <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_GAMES_INDEX'}" >[Volver al Menu]</a>
+     </div>
+     <!-- RETURN TO HOME PAGE - END   -->  
+</div>

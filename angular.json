@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/PWA_DEMO_ENV_PUBLIC",
+            "outputPath": "dist/PWA_DEMO_ENV_PROD/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -42,7 +42,7 @@
                 {
                   "type": "initial",
                   "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+                  "maximumError": "25mb"
                 },
                 {
                   "type": "anyComponentStyle",

@@ -41,13 +41,13 @@
         <td *ngFor="let cell of col; let cellIndex = index">
             <div [className]="( 
                                 ( (cellIndex>=3) && (cellIndex<=5) ) && ((rowIndex>= 0) && (rowIndex <  3)   ) ||
-                            !( (cellIndex>=3) && (cellIndex<=5) ) && ((rowIndex>= 3) && (rowIndex <= 5)   ) ||
+                               !( (cellIndex>=3) && (cellIndex<=5) ) && ((rowIndex>= 3) && (rowIndex <= 5)   ) ||
                                 ( (cellIndex>=3) && (cellIndex<=5) ) && ((rowIndex>  5) && (rowIndex <= 8)   ) 
                             ) ?('sudoku-cell_bright'):('sudoku-cell_dark')">{{ cell }}</div>
         </td>
         </tr>
     </tbody>
-    </table>
+    </table> 
     </div>
     <!-- TABLERO / FIN      --> 
     <hr />
