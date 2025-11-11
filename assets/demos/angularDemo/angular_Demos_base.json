@@ -134,6 +134,18 @@
     {
 		"id"               : 12,
         "done"             : true,
+        "name"             : "Games - Tic Tac Toe - AI",
+        "description"      : "Neural Networks",
+        "field_1"          : "v17, Neural Networks, Tic Tac Toe, A.I.",
+        "field_2"          : "./#/GamesTicTacToeAI",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PROD/blob/main/src/app/_modules/_Demos/_DemosFeatures/games/tic-tac-toe-board-ai/tic-tac-toe-board-ai.component.ts",
+        "field_4"          : "./#/GamesTicTacToeAI",
+        "field_6"          : "https://en.wikipedia.org/wiki/Neural_network_(machine_learning)"  ,
+        "field_10"         : "e9ee9d64-65ad-49a3-8595-5479300b4264"
+    },
+    {
+		"id"               : 13,
+        "done"             : true,
         "name"             : "Games - Torres de Hanoi 2d",
         "description"      : "Games - Torres de Nanoi 2d",
         "field_1"          : "v17, Algoritmo recursión, observable,",
@@ -144,7 +156,7 @@
         "field_10"         : "85fbe9be-c748-4754-bd71-daf1a40d3fb9" 
     },
     {
-		"id"               : 13,
+		"id"               : 14,
         "done"             : true,
         "name"             : "Games - Torres de Hanoi 3d",
         "description"      : "Games - Torres de Nanoi 3d",
@@ -156,7 +168,7 @@
         "field_10"         : "7bd14d49-9fc4-4657-86b8-d16132a8c3e1" 
     },
     {
-		"id"               : 14,
+		"id"               : 15,
         "done"             : true,
         "name"             : "Games - Tetris",
         "description"      : "Games - Tetris",
@@ -168,7 +180,7 @@
         "field_10"         : "67431c50-5240-4889-81df-84270075fed8" 
     },
     {
-		"id"               : 15,
+		"id"               : 16,
         "done"             : true,
         "name"             : "Algoritmo - Distancia mas corta",
         "description"      : "Algoritmo - Distancia mas corta",
@@ -180,7 +192,7 @@
         "field_10"         : "a819d617-74fe-41f0-8f58-0f62377d15e6"  
     },
     {
-		"id"               : 16,
+		"id"               : 17,
         "done"             : true,
         "name"             : "Algoritmos - Ordenamiento",
         "description"      : "Algoritmos - Ordenamiento",
@@ -192,7 +204,7 @@
         "field_10"         : "6bfa047d-dbd7-4991-a4d6-b9786c601285" 
     },
     {
-		"id"               : 17,
+		"id"               : 18,
         "done"             : true,
         "name"             : "Algoritmos - Expresiones Regulares",
         "description"      : "Algoritmos - Expresiones Regulares",
@@ -204,7 +216,7 @@
         "field_10"         : "756e8939-bca0-45f7-b581-63e417b6a2d5" 
     },
     {
-		"id"               : 18,
+		"id"               : 19,
         "done"             : true,
         "name"             : "Algoritmos - Colisión",
         "description"      : "Algoritmos - Colisión",

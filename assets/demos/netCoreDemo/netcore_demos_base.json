@@ -6,9 +6,9 @@
         "description"      : "Generar archivos CSV",
         "field_1"          : ".net core, sql server, api rest, CSV",
         "field_2"          : "./#/FilesGenerationCSV?langName=CS",
-        "field_3"          : "https://github.com/aperezNWO/mcsdNetCoreBackup/blob/main/mcsd.Core.Library/Managers/CSVManager.cs",
+        "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CSHARP_DEMO/blob/main/mcsd.Core.Library/Managers/CSVManager.cs#L245",
         "field_4"          : "https://angularwebapidemo.somee.com/demos/GenerarInformeCSVJson",
-        "field_5"          : "https://learn.microsoft.com/es-es/dotnet/api/system.text.stringbuilder?view=net-6.0",
+        "field_6"          : "https://learn.microsoft.com/es-es/dotnet/api/system.text.stringbuilder?view=net-6.0",
         "field_10"         : "ea0a96ee-2278-48c2-9ac6-8ea29c77f925"
 	},
     {
@@ -18,9 +18,9 @@
         "description"      : "Generar archivos XLS",
         "field_1"          : ".net core, sql server, api rest, XLS",
         "field_2"          : "./#/FilesGenerationXLS?langName=CS",
-        "field_3"          : "https://github.com/aperezNWO/mcsdNetCoreBackup/blob/main/mcsd.Core.Library/Managers/XlsManager.cs",
+        "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CSHARP_DEMO/blob/main/mcsd.Core.Library/Managers/XlsManager.cs#L70",
         "field_4"          : "https://angularwebapidemo.somee.com/demos/generarinformejson",
-        "field_5"          : "https://www.epplussoftware.com/",
+        "field_6"          : "https://www.epplussoftware.com/",
         "field_10"         : "75310400-5648-43c1-8bdd-bc3f5cf75e82"
 	},
     {
@@ -30,9 +30,9 @@
         "description"      : "Generar archivos PDF",
         "field_1"          : ".net core, sql server, api rest, EPPPlus",
         "field_2"          : "./#/FilesGenerationPDF/",
-        "field_3"          : "https://github.com/aperezNWO/mcsdNetCoreBackup/blob/main/mcsd.Core.Library/Managers/PDFManager.cs",
+        "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CSHARP_DEMO/blob/c82bc7d07a491f3292161be872da3d7ea0433830/mcsd.Core.Library/Managers/PDFManager.cs#L31",
         "field_4"          : "https://angularwebapidemo.somee.com/demos/_GetPdf?subjectName=taty",
-        "field_5"          : "https://itextpdf.com/products/itextsharp",
+        "field_6"          : "https://itextpdf.com/products/itextsharp",
         "field_10"         : "0cd41eee-f54c-44be-b03a-422769b1a8f2"
 	},
     {
@@ -42,9 +42,9 @@
         "description"      : "Algoritmo de Ordenamiento",
         "field_1"          : ".net core, sql server, api rest, QuickSort, Bubble Sort",
         "field_2"          : "./#/AlgorithmSort?langName=CS",
-        "field_3"          : "https://github.com/aperezNWO/mcsdNetCoreBackup/blob/main/mcsd.Core.Library/Managers/AlgorithmManager.cs",
+        "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CSHARP_DEMO/blob/c82bc7d07a491f3292161be872da3d7ea0433830/mcsd.Core.Library/Managers/AlgorithmManager.cs#L179",
         "field_4"          : "https://angularwebapidemo.somee.com/demos/_GetSort?p_sortAlgoritm=2&p_unsortedList=16|1|20|15|12|8|19|6|11|14|23|5|2|10|9|13|24|7|22|18|0|17|3|21|4",
-        "field_5"          : "https://www.geeksforgeeks.org/quick-sort-algorithm/",
+        "field_6"          : "https://www.geeksforgeeks.org/quick-sort-algorithm/",
         "field_10"         : "2f631080-b28c-4973-add6-0d26cb30e2c1"
 	},
     {
@@ -54,9 +54,9 @@
         "description"      : "Algoritmo de Dijkstra / .net core backend",
         "field_1"          : ".net core, api rest, Dijkstra, Distancia más corta",
         "field_2"          : "./#/AlgorithmDijkstra?langMame=CS",
-        "field_3"          : "https://github.com/aperezNWO/mcsdNetCoreBackup/blob/main/mcsd.Core.Library/Managers/AlgorithmManager.cs",
+        "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CSHARP_DEMO/blob/c82bc7d07a491f3292161be872da3d7ea0433830/mcsd.Core.Library/Managers/AlgorithmManager.cs#L349",
         "field_4"          : "https://angularwebapidemo.somee.com/demos/GenerateRandomVertex?p_vertexSize=9&p_sourcePoint=0",
-        "field_5"          : "https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/",
+        "field_6"          : "https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/",
         "field_10"         : "292ed965-b158-45a6-900e-78a5dc8ed1bd"
 	},
     {
@@ -66,9 +66,9 @@
         "description"      : "Algoritmos - Expresiones Regulares",
         "field_1"          : ".net core, Regular Expresions",
         "field_2"          : "./#/AlgorithmRegEx?langName=CS",
-        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/algorithm/algorithm-reg-ex/algorithm-reg-ex.component.ts",
+        "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CSHARP_DEMO/blob/c82bc7d07a491f3292161be872da3d7ea0433830/mcsd.Core.Library/Managers/RegExManager.cs#L43",
         "field_4"          : "https://angularwebapidemo.somee.com/demos/_RegExEval?p_tagSearch=company&p_textSearch=bmg",
-        "field_5"          : "https://en.wikipedia.org/wiki/Regular_expression",
+        "field_6"          : "https://en.wikipedia.org/wiki/Regular_expression",
         "field_10"         : "2c8741f0-d7b9-4cef-8aae-e5b2aa4cc0e4"
 	},
     {
@@ -80,7 +80,7 @@
         "field_2"          : "./#/Chart",
         "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PUBLIC/blob/main/src/app/_modules/_Demos/_DemosFeatures/files-generation/chart/chart.component.ts",
         "field_4"          : "https://angularwebapidemo.somee.com/demos/GetConsultaLogStatPost",
-        "field_5"          : "https://www.chartjs.org/",
+        "field_6"          : "https://www.chartjs.org/",
         "field_10"         : "0b0b083f-bda7-44b8-9922-2365317ee934"
 	}
 ]  

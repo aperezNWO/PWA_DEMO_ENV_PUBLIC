@@ -22,5 +22,17 @@
         "field_4"          : "https://n96q4t-8000.csb.app/getAllLogs?format=json"  ,
         "field_6"          : "https://pypi.org/project/mssql-django/",		
         "field_10"         : "f1ba13c3-131f-4517-aa72-ca9899058317"	
+    },
+    {
+		"id"               : 3,
+        "done"             : true,
+        "name"             : "[TIC TAC TOE GAME - A.I.]",
+        "description"      : "TIC TAC TOE GAME, A.I, Machine Learning, Tensorflow",
+        "field_1"          : "Django, Python, REST Service, Tensorflow",
+        "field_2"          : "./#/GamesTicTacToeAI?langName=PY",
+        "field_3"          : "https://github.com/aperezNWO/django_setup_linux/blob/38165d9766e6fa7f9ad84b4ef1133aae2fbea499/hello/views.py#L69",
+        "field_4"          : "https://sxcqd6-8000.csb.app/train_tictactoe_model"  ,
+        "field_6"          : "https://www.tensorflow.org/install/pip?hl=es",		
+        "field_10"         : "84b09d01-71ef-47e6-acd8-f0719d1a8949"	
     }
 ]       

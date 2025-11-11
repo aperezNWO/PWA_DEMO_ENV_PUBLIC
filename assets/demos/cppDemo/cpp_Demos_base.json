@@ -166,5 +166,29 @@
         "field_4"          : "https://tensorflownetcore64.tryasp.net/generatejuliaparams/?maxIterations=500&realPart=-0.4&imagPart=0.6",
         "field_6"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
         "field_10"         : "97411cbf-d80a-4d7a-92dc-f88d158ae552"
+    },
+    {
+		"id"               : 15,
+        "done"             : true,
+        "name"             : "Tic Tac Toe Game A.I. / c++ dll",
+        "description"      : "Tic Tac Toe Game A.I. / c++ dll",
+        "field_1"          : "TicTacToe Game, A.I., c++, Tensorflow",
+        "field_2"          : "./#/GamesTicTacToeAI?langName=CPP",
+        "field_3"          : "https://github.com/aperezNWO/CPP_GCC_TENSORFLOW/blob/88562d65d2797daf55bce4ce6ba7606c46985614/src/_tensorflow_cpp/include/tictactoe.h#L686",
+        "field_4"          : "https://tensorflownetcore64.tryasp.net/api/tictactoe/play?aiMode=1" ,
+        "field_6"          : "https://en.wikipedia.org/wiki/Neural_network_(machine_learning)",
+        "field_10"         : "b3ef5370-9841-46da-86bb-664c7880be6a"  
+    },
+    {
+		"id"               : 16,
+        "done"             : true,
+        "name"             : "Tic Tac Toe Game A.I. / .net core endpoint",
+        "description"      : "Tic Tac Toe Game A.I. / .net core endpoint",
+        "field_1"          : "Tic Tac Toe Game, A.I., C++, .net core, dllimport",
+        "field_2"          : "./#/GamesTicTacToeAI?langName=CPP",
+        "field_3"          : "https://github.com/aperezNWO/CPP_GCC_TENSORFLOW/blob/main/src/_tensorflow_cpp/include/tictactoe.h#L708",
+        "field_4"          : "https://tensorflownetcore64.tryasp.net/api/tictactoe/play?aiMode=1" ,
+        "field_6"          : "https://en.wikipedia.org/wiki/Neural_network_(machine_learning)",
+        "field_10"         : "ca7ac509-59bc-4a9b-b1e1-24362db33e17"  
     }
 ]	
