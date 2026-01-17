@@ -2,37 +2,37 @@
    {
 		"id"               : 1,
         "done"             : true,
-        "name"             : "Listado desde MS SQL Server - CSV",
-        "description"      : "Listado desde MS SQL Server - CSV",
+        "name"             : "Generating CSV files from MS SQL Server",
+        "description"      : "Generating CSV files from MS SQL Server",
         "field_1"          : "Spring Boot, REST Service, MS SQL SERVER",
         "field_2"          : ".#/FilesGenerationCSV?langName=JAVA",
         "field_3"          : "https://github.com/aperezNWO/JAVA2_EE_SB_DEMO/blob/583c48d8150d4fe84bd9f074a7fd53b2e64a86ac/src/main/java/com/example/DAO/personasDAO.java#L23",
-        "field_4"          : "https://r9ls6q-8080.csb.app/getAllPersons"  ,
+        "field_4"          : "{{baseUrlSpringBootJava}}getAllPersons"  ,
         "field_6"          : "https://docs.spring.io/spring-boot/docs/2.1.x/reference/html/boot-features-sql.html",
         "field_10"         : "b9d33b9d-4f94-4f95-a437-b4544ff478ca"		
     },
     {
         "id"               : 2,
         "done"             : true,
-        "name"             : "Listado desde MS SQL Server - XLS",
-        "description"      : "Listado desde MS SQL Server - XLS",
+        "name"             : "Generating XLS files from MS SQL Server",
+        "description"      : "Generating XLS files from MS SQL Server",
         "field_1"          : "Spring Boot, REST Service, MS SQL SERVER",
         "field_2"          : "./#/FilesGenerationXLS?langName=JAVA",
         "field_3"          : "https://github.com/aperezNWO/JAVA2_EE_SB_DEMO/blob/583c48d8150d4fe84bd9f074a7fd53b2e64a86ac/src/main/java/com/example/DAO/AccessLogDAO.java#L24",
-        "field_4"          : "https://r9ls6q-8080.csb.app/getAllLogs"  ,
+        "field_4"          : "{{baseUrlSpringBootJava}}getAllLogs"  ,
         "field_6"          : "https://docs.spring.io/spring-boot/docs/2.1.x/reference/html/boot-features-sql.html",
         "field_10"         : "4cb9a915-ad62-4ba1-ad34-351112d50343"			
     },
     {
 		"id"               : 3,
         "done"             : true,
-        "name"             : "Algoritmo distancia mas corta",
-        "description"      : "Algoritmo distancia mas corta",
+        "name"             : "Shortest Path Algorithm",
+        "description"      : "Shortest Path Algorithm",
         "field_1"          : "Spring Boot, REST service, Dijkstra",
         "field_2"          : "./#/AlgorithmDijkstra?langName=JAVA",
         "field_3"          : "https://github.com/aperezNWO/JAVA2_EE_SB_DEMO/blob/master/src/main/java/com/example/demo/AlgorithmManager.java",
-        "field_4"          : "https://r9ls6q-8080.csb.app/GenerateRandomVertex_SpringBoot",
         "field_6"          : "https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/",
+        "field_4"          : "{{baseUrlSpringBootJava}}GenerateRandomVertex_SpringBoot",
         "field_10"         : "1e32e88d-da6c-429a-b326-22056574e8a4"			
     }
 ]       
