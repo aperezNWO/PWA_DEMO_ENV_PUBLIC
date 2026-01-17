@@ -1,21 +1,29 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit    } from '@angular/core';
+import { ActivatedRoute                                             } from '@angular/router';
+import { BackendService                                             } from 'src/app/_services/BackendService/backend.service';
+import { SpeechService                                              } from 'src/app/_services/__Utils/SpeechService/speech.service';
+import { BaseReferenceComponent                                     } from 'src/app/_components/base-reference/base-reference.component';
+import { ConfigService                                              } from 'src/app/_services/__Utils/ConfigService/config.service';
+import { PAGE_TITLE_LOG, PAGE_TITLE_NO_SOUND, PAGE_GAMES_HANOI_3D   } from 'src/app/_models/common';
+import { OrbitControls                                              } from 'three/examples/jsm/controls/OrbitControls';
 import * as THREE from 'three';
 import * as TWEEN from 'tween';
-import { PageRestartService } from 'src/app/_services/pageRestart/page-restart.service';
-import { ActivatedRoute } from '@angular/router';
-import { BackendService } from 'src/app/_services/BackendService/backend.service';
-import { SpeechService } from 'src/app/_services/speechService/speech.service';
-import { BaseComponent } from 'src/app/_components/base/base.component';
-import { PAGES_GAMES_HANOI_3D } from 'src/app/_models/common';
-import { ConfigService } from 'src/app/_services/ConfigService/config.service';
+//import '@tweenjs/tween.js';
+//declare var TWEEN: any;
 
 @Component({
   selector: 'app-game-hanoi3d',
   templateUrl: './game-hanoi3d.component.html',
-  styleUrl: './game-hanoi3d.component.css'
+  styleUrl: './game-hanoi3d.component.css' ,
+  providers   : [
+    { 
+      provide : PAGE_TITLE_LOG, 
+      useValue: PAGE_GAMES_HANOI_3D 
+    },
+  ]
 })
-export class GameHanoi3dComponent extends BaseComponent implements OnInit, AfterViewInit {
+export class GameHanoi3dComponent extends BaseReferenceComponent implements OnInit, AfterViewInit {
+  //
   @ViewChild('rendererContainer', { static: false }) rendererContainer!: ElementRef;
   scene!: THREE.Scene;
   camera!: THREE.PerspectiveCamera;
@@ -29,26 +37,24 @@ export class GameHanoi3dComponent extends BaseComponent implements OnInit, After
   isAnimating = false;
 
   //
+  private animationFrameId: number | null = null;
+  //
   constructor(
-                  public  pageRestartService        : PageRestartService,
                   public  override configService    : ConfigService,
+                  public  override backendService   : BackendService,
                   public  override route            : ActivatedRoute,
-                  public  override speechService    : SpeechService,
-                  public  override backendService   : BackendService) 
+                  public  override speechService    : SpeechService)
+                  
   { 
       //
       super(configService,
             backendService,
             route,
             speechService,
-            PAGES_GAMES_HANOI_3D,
+            PAGE_TITLE_NO_SOUND,
       )
   }
 
-  restart() {
-    this.pageRestartService.reloadPage(); // or use any other method
-  }
-    
   ngOnInit(): void {
 
   }
@@ -59,6 +65,10 @@ export class GameHanoi3dComponent extends BaseComponent implements OnInit, After
     this.createDisks();
     this.solveHanoi(this.numDisks, 0, 2, 1); // Solve the Hanoi puzzle
     this.animate();
+  }
+
+  restart() {
+    this.resetGame();
   }
 
   initScene() {
@@ -116,11 +126,19 @@ export class GameHanoi3dComponent extends BaseComponent implements OnInit, After
       const move = this.moves[this.currentMove];
 
       // Correct Disk Selection: Find the top disk on the source tower
-      const disksOnSource = this.disks.filter(d => Math.abs(d.position.x - this.towers[move.from].position.x) < 0.1).sort((a, b) => b.position.y - a.position.y);
+      const disksOnSource = this.disks.filter(d => 
+        Math.abs(d.position.x - this.towers[move.from].position.x) < 0.1
+      ).sort((a, b) => b.position.y - a.position.y);
+      
       if (disksOnSource.length > 0) {
         const diskToMove = disksOnSource[0];
-
-        const targetY = this.towers[move.to].position.y + 0.25 + this.disks.filter(d => Math.abs(d.position.x - this.towers[move.to].position.x) < 0.1).length * 0.5;
+        
+        // CORRECTED: Calculate target Y based on tower base (Y=0), not tower center (Y=2.5)
+        const disksOnTarget = this.disks.filter(d => 
+          Math.abs(d.position.x - this.towers[move.to].position.x) < 0.1
+        );
+        const diskIndex = disksOnTarget.length; // This is the index of the new disk
+        const targetY = diskIndex * 0.5 + 0.25; // Position the center of the disk
         
         new TWEEN.Tween(diskToMove.position)
           .to({ y: diskToMove.position.y + 3 }, 500) // Move up
@@ -129,7 +147,7 @@ export class GameHanoi3dComponent extends BaseComponent implements OnInit, After
               .to({ x: this.towers[move.to].position.x }, 500) // Move across
               .onComplete(() => {
                 new TWEEN.Tween(diskToMove.position)
-                  .to({ y: targetY }, 500) // Move down
+                  .to({ y: targetY }, 500) // Move down to CORRECT position
                   .onComplete(() => {
                     this.currentMove++;
                     this.isAnimating = false;
@@ -152,5 +170,104 @@ export class GameHanoi3dComponent extends BaseComponent implements OnInit, After
       this.controls.update();
       if (this.currentMove < this.moves.length) this.animateMove();
       this.renderer.render(this.scene, this.camera);
+  }
+
+  resetGame() {
+    // 1. Stop animation loop
+    if (this.animationFrameId) {
+      cancelAnimationFrame(this.animationFrameId);
+    }
+  
+    // 2. Stop any ongoing tweens
+    TWEEN.removeAll();
+    
+    // 3. Clean up old scene objects
+    this.cleanupScene();
+    
+    // 4. Reset game state
+    this.currentMove = 0;
+    this.isAnimating = false;
+    this.moves = [];
+    
+    // 5. Reinitialize everything
+    this.initScene();
+    this.createTowers();
+    this.createDisks();
+    this.solveHanoi(this.numDisks, 0, 2, 1);
+    
+    // 6. Restart animation
+    this.startAnimation();
+  }
+
+  // Helper to clean up old scene objects
+  private cleanupScene() {
+    // Remove all disks
+    this.disks.forEach(disk => {
+      this.scene.remove(disk);
+      if (disk.geometry) disk.geometry.dispose();
+      if (disk.material) {
+        if (Array.isArray(disk.material)) {
+          disk.material.forEach(m => m.dispose());
+        } else {
+          disk.material.dispose();
+        }
+      }
+    });
+    this.disks = [];
+    
+    // Remove all towers
+    this.towers.forEach(tower => {
+      this.scene.remove(tower);
+      if (tower.geometry) tower.geometry.dispose();
+      if (tower.material) {
+        if (Array.isArray(tower.material)) {
+          tower.material.forEach(m => m.dispose());
+        } else {
+          tower.material.dispose();
+        }
+      }
+    });
+    this.towers = [];
+    
+    // Dispose renderer
+    if (this.renderer) {
+      this.renderer.dispose();
+      this.renderer.forceContextLoss();
+      const gl = this.renderer.domElement.getContext('webgl');
+      if (gl) {
+        // Clean up WebGL resources
+        gl.getExtension('WEBGL_lose_context')?.loseContext();
+      }
+      
+      // Remove renderer element
+      if (this.renderer.domElement && this.rendererContainer?.nativeElement) {
+        this.rendererContainer.nativeElement.removeChild(this.renderer.domElement);
+      }
+    }
+  
+    // Remove controls
+    if (this.controls) {
+      this.controls.dispose();
+    }
+  }
+
+  // Helper to start animation loop
+  private startAnimation() {
+    // Create a new animation loop
+    const animate = () => {
+      this.animationFrameId = requestAnimationFrame(animate);
+      
+      TWEEN.update();
+      this.controls.update();
+      
+      if (this.currentMove < this.moves.length) {
+        this.animateMove();
+      }
+      
+      this.renderer.render(this.scene, this.camera);
+    };
+    
+    // Start the animation
+    animate();
   }
 }

@@ -1,46 +1,8 @@
 <div class="content" align="center">
-    <h1>{{this.pageTitle}}</h1>
-    <hr>
-    <div class="reference" align="right">
-      <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
-      <ul *ngIf="isListVisible" align="left" widdth="10px">
-          <li> [Frontend]
-            <ul>
-              <li><a [routerLink]="'/GridParam'"         [queryParams]="{ searchTerm: 'c094e0c5-c29b-4bdf-91ea-8204bb6e8942' , pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT' }">[Angular]</a></li>
-            </ul>
-          </li>
-          <li>[Backend]
-            <ul>
-              <li><a [routerLink]="'/GridParam'"         [queryParams]="{ searchTerm: '40dd1cce-91b6-4fa3-bb64-053130fd1ff6' , pageName : 'PAGE_DEMOS_NETCORE_CPP'        }">[c++ / dll source]</a></li>
-            </ul>
-            <UL>
-              <LI><a [routerLink]="'/GridParam'"         [queryParams]="{ searchTerm: 'ae1c7a78-3fd5-4e41-965f-0bfd091c4a1d' , pageName : 'PAGE_DEMOS_NETCORE_CPP'        }">[c++ / .net core dll import]</a></LI>
-            </UL>
-          </li>
-          <li>[Librerias]
-              <ul>
-                <li><a href="https://www.npmjs.com/package/ngx-signaturepad" target="_blank">[ngx-signaturepad]</a></li>
-              </ul>
-              <ul>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" target="_blank">[HTML Video]</a></li>
-              </ul>
-              <ul>
-                <li><a href="https://docs.opencv.org/4.x/d5/d10/tutorial_js_root.html" target="_blank">[OpenCv / Javascript]</a></li>
-              </ul>
-              <ul>
-                <li><a href="https://docs.opencv.org/4.x/dc/da3/tutorial_copyMakeBorder.html" target="_blank">[OpenCv / C++]</a></li>
-              </ul>
-            </li>
-          <li>[Temas]
-              <ul>
-                <li><a href="https://en.wikipedia.org/wiki/Computer_vision" target="_blank">[Computer Vision]</a></li>
-              </ul>
-          </li>
-      </ul>
-  </div>  
-   <!-- [hidden]="this.hiddenCanvasContainer"-->
+    <app-base-reference></app-base-reference>
+    <hr/>
+    <!-- [hidden]="this.hiddenCanvasContainer"-->
     <div id="canvasContainer" [hidden]="this.hiddenCanvasContainer">
-        <hr/>
         <!-- CANVAS INICIO   -->
         <div aling="center">Please use the finger or the mouse pointer to draw</div>
         <br>
@@ -108,9 +70,9 @@
     </div>
     <!-- FORMULARIO FIN -->
     <div align="right">
-        <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_MISELANEOUS_INDEX'}" >[Volver al Menu]</a>
+        <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_MISCELLANEOUS_INDEX'}" >[Back to Menu]</a>
     </div>
-  </div>
+</div>
   
   
 

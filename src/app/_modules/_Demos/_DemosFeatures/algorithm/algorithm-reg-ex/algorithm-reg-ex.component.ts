@@ -1,19 +1,26 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute                              } from '@angular/router';
-import { Observable                                  } from 'rxjs';
+import { AfterViewInit, Component, OnInit, ViewChild                 } from '@angular/core';
+import { ActivatedRoute                                              } from '@angular/router';
+import { Observable                                                  } from 'rxjs';
+import { PAGE_ALGORITMOS_REGEX, PAGE_TITLE_LOG, PAGE_TITLE_NO_SOUND  } from 'src/app/_models/common';
 import { _languageName                               } from 'src/app/_models/entity.model';
 import { UtilManager                                 } from 'src/app/_engines/util.engine';
 import { BackendService                              } from 'src/app/_services/BackendService/backend.service';
-import { SpeechService                               } from 'src/app/_services/speechService/speech.service';
+import { SpeechService                               } from 'src/app/_services/__Utils/SpeechService/speech.service';
 import { BaseComponent                               } from 'src/app/_components/base/base.component';
-import { ConfigService                               } from 'src/app/_services/ConfigService/config.service';
-import { PAGE_ALGORITMOS_REGEX                       } from 'src/app/_models/common';
+import { ConfigService                               } from 'src/app/_services/__Utils/ConfigService/config.service';
+import { AlgorithmService                            } from 'src/app/_services/AlgorithmService/algorithm.service';
 
 //
 @Component({
-  selector: 'app-algorithm-reg-ex',
-  templateUrl: './algorithm-reg-ex.component.html',
-  styleUrls: ['./algorithm-reg-ex.component.css']
+  selector    : 'app-algorithm-reg-ex',
+  templateUrl : './algorithm-reg-ex.component.html',
+  styleUrls   : ['./algorithm-reg-ex.component.css'],
+  providers   : [
+      { 
+        provide : PAGE_TITLE_LOG, 
+        useValue: PAGE_ALGORITMOS_REGEX 
+      },
+  ]
 })
 //
 export class AlgorithmRegExComponent extends BaseComponent implements OnInit, AfterViewInit {
@@ -31,10 +38,11 @@ export class AlgorithmRegExComponent extends BaseComponent implements OnInit, Af
     @ViewChild('regExSearch')     regExSearch    : any;
     @ViewChild('_languajeList')   _languajeList  : any;
     //
-    constructor(public override configService : ConfigService,
-                public override backendService: BackendService, 
-                public override speechService : SpeechService,
-                public override route         : ActivatedRoute)
+    constructor(public override configService    : ConfigService,
+                public override backendService   : BackendService, 
+                public override speechService    : SpeechService,
+                public override route            : ActivatedRoute,
+                public          algorithmService : AlgorithmService)
     {
         //
         super(
@@ -42,7 +50,7 @@ export class AlgorithmRegExComponent extends BaseComponent implements OnInit, Af
                 backendService,
                 route,
                 speechService,
-                PAGE_ALGORITMOS_REGEX
+                PAGE_TITLE_NO_SOUND
         );
     }
     //
@@ -67,7 +75,7 @@ export class AlgorithmRegExComponent extends BaseComponent implements OnInit, Af
             //-----------------------------------------------------------------------------
             this.__languajeList = new Array();
             //
-            this.__languajeList.push( new _languageName(0,"(SELECCIONE OPCION..)",false ,""   ));        
+            this.__languajeList.push( new _languageName(0,"(CHOOSE OPTION...)"   ,false ,""   ));        
             this.__languajeList.push( new _languageName(1,"(.NET CORE/C#)"       ,true  ,"CS" ));        
             this.__languajeList.push( new _languageName(2,"(.NET CORE/C++)"      ,false ,"CPP"));  
             //
@@ -90,11 +98,13 @@ export class AlgorithmRegExComponent extends BaseComponent implements OnInit, Af
     }
     _GetXMLData():void {
         //
-        let xmlInfo!  : Observable<string>;
+        let xmlInfo!                        : Observable<string>;
         //
-        xmlInfo       = this.backendService._GetXmlData();
+        xmlInfo                             = this.algorithmService._GetXmlData();
         //
-        this.status_message.set("[..CARGANDO POR FAVOR ESPERERE...]");
+        this.textSearch.nativeElement.value = "";
+        //
+        this.status_message.set("[...LOADING PLEASE WAIT...]");
         //
         const xmlInfoObserver   = {
             //
@@ -112,13 +122,13 @@ export class AlgorithmRegExComponent extends BaseComponent implements OnInit, Af
                 //
                 this.mensajes.nativeElement.innerHTML = this.xmlData;
                 //
-                this.status_message.set("[REINICIO EXITOSO]")                 
+                this.status_message.set("[RESTART SUCCESFUL]")                 
                 //
                 this.pattern   = "";
             },
             error: (err: Error) => {
                 //
-                this.status_message.set("[HA OCURRIDO UN ERROR]");
+                this.status_message.set("[An error ocurred]");
                 //
                 this.pattern   = "";
                 //
@@ -139,24 +149,31 @@ export class AlgorithmRegExComponent extends BaseComponent implements OnInit, Af
         let selectedIndex   : number = this.tagSearch.nativeElement.options.selectedIndex;
         let tagSearchIndex  : number = this.tagSearch.nativeElement.options[selectedIndex].value;
         let textSearchValue : string = this.textSearch.nativeElement.value;
+        let _progLangId     : number = Number.parseInt(this._languajeList.nativeElement.value);
+        //
+        if (_progLangId == 0)
+        {
+            //
+            this.status_message.set("PLEASE SELECT A LANGUAGE") ;
+            //
+            return;
+        }
         //
         if (tagSearchIndex == 0) {
             //
-            this.status_message.set("FAVOR SELECCIONE UN [ELEMENTO A BUSCAR]") ;
+            this.status_message.set("PLEASE SELECT AN ELEMENT TO SEARCH") ;
             //
             return;
         }
         //
         if (textSearchValue == "") {
             //
-            this.status_message.set("FAVOR INGRESE UN VALOR EN EL CAMPO [CONTENIDO]");
+            this.status_message.set("PLEASE ENTER A VALUE IN THE FILED [CONTENT]");
             //
             return;
         }
         //
         let regExInfo!         : Observable<string>;
-        //
-        let _progLangId        : number = Number.parseInt(this._languajeList.nativeElement.value);
         //
         switch(_progLangId)    
         {
@@ -165,11 +182,11 @@ export class AlgorithmRegExComponent extends BaseComponent implements OnInit, Af
             break;
             case 1 : // C#
                 //
-                regExInfo       = this.backendService._RegExEval(tagSearchIndex,textSearchValue);
+                regExInfo       = this.algorithmService._RegExEval(tagSearchIndex,textSearchValue);
             break;
             case 2: // C++
                 //
-                regExInfo       = this.backendService._RegExEval_CPP(tagSearchIndex,textSearchValue);
+                regExInfo       = this.algorithmService._RegExEval_CPP(tagSearchIndex,textSearchValue);
             break;
         }
         //
@@ -201,7 +218,7 @@ export class AlgorithmRegExComponent extends BaseComponent implements OnInit, Af
                     //
                     this.mensajes.nativeElement.innerHTML = xmlHighlighted;
                     //
-                    this.status_message.set('SE ENCONTRARON (' + matchAmt + ') COINCIDENCIAS');
+                    this.status_message.set('[' + matchAmt + '] MATCHES FOUND');
                 }
             },
             error: (err: Error) => {

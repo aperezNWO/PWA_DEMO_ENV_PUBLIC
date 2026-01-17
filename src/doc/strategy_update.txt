@@ -170,9 +170,28 @@
  // TODO LIST
  ////////////////////////////////////////////////////////////////////////////////
 
+ -- [_] LANGUAGES curriculum.
+
+         -- [_] UNIFY curriculum  -> GRIDPARAM.
+
+         -- [_] DELETE curriculum FOLDER.
+
+         -- [_] official web reference [backend]  as first  item.
+
+         -- [_] official web reference [language] as second item.
+
+         -- [_] ./#/GridParam?searchTerm=bfecb7a6-0d40-48c5-8ee4-3c7fc13ad1e0&pageName=PAGE_CURRICULUM_ANGULAR
+
+         -- [_] Link Refernces <- -> Demos.
+
+         -- [_] Link Demos     <- -> SCM (GridParam).
+
+         -- [_] Grid Param redirect error.
+
+         -- [_] Grid Index empty rows error.
+         
 -- [_] programa omar -> owasp.
 
--- [_] replicar en pwa_demo_env_prod en pwa_demo_env_public.
 
 -- [_] CMS 
 
@@ -189,6 +208,10 @@
         -- [_] routerlist name+param. 
 
         -- [_] Dynamic Form. 
+
+                -- [_] angular curriculum. 
+
+                        -- [_] change /PWA_DEMO_ENV_PROD/ to /PWA_DEMO_ENV_PROD/ 
 
         -- [_] last url -> back to menu. 
 
@@ -394,19 +417,20 @@
 
         -- [_] APPS : 
 
+                --  [x] Tetris.
+
+                --  [x] tictactoe.
+
                 --  [_] sudoku.
 
                 --  [_] haoni.
 
                 --  [_] shortest path.
 
-                --  [_] Tetris.
-
                 --  [_] Chess.
 
-                --  [_] tictactoe.
 
- -- [_] TIC-TAC-TOE DEMO.
+ -- [x] TIC-TAC-TOE DEMO.
  
         --  [x] c++ neural network which learns to play tictactoe against itself.
 
@@ -414,6 +438,9 @@
 
         -- [x] param link to specific lang.        
 
+-- [x] TETRIS DEMO
+
+        -- [x]  https://github.com/nuno-faria/tetris-ai
 
  -- [_] OPENCV DEMO.
         
@@ -423,16 +450,346 @@
  
  -- [_] OCR DEMO.
         
-         -- [_] WITH TENSORFLOW.
+         -- [_] WITH TENSORFLOW / python.
+
+         -- [_] WITH TENSORFLOW / c++.
 
          -- [_] WITH PYTORCH.
 
- -- [_] fix json pages.
+ -- [x] fix json pages.
 
- -- [_] c++ curriculum.
+ -- [_] DOCKER.
 
- -- [_] TETRIS DEMO
+        -- [_] PYTHON. 
+        
+        -- [_] SPRINGBOOT.
+ 
+ -- [_] Artificial Inteligence curriculum.
 
-        -- [_]  https://github.com/nuno-faria/tetris-ai
+        -- [_] http://localhost:4200/#/GridParam?searchTerm=06f33ccf-68be-4fbe-b9af-4ba5cc9535f2&pageName=PAGE_CURRICULUM_AI
+
+        -- [_] articles *.md.
+
+                -- [_] ai. / ml.
+
+                -- [_] angular.
+
+        -- [_] neural network     -> tic tac toe autoplay.
+
+        -- [_] generic algorithm  -> tetris autoplay.
+
+        -- [_] Machine Learning.
+        
+                -- [_] Linear Regression.
+
+                        -- [_] I can identify that many of the linear regression applications can be to predict prizes based up on historical behaviour (taxi fees, hojuse prices, etc)
+                
+                -- [_] Clasification.
+
+                -- [_] ...
+
+ -- [_] CREATE A.I. APP.
+
+         -- [_] RYTHM.
+
+         -- [_] INTEGRATION.
+
+         -- [_] CONNECTION.
+
+ -- [_] MACHINE LEARNING APPROACH
+
+         -- [_] FREECODECAMP.
+
+                -- [_] https://www.freecodecamp.org/learn/machine-learning-with-python/#tensorflow
+
+                -- [_] https://www.freecodecamp.org/news/tag/machine-learning/
+
+                -- [_] https://www.youtube.com/watch?v=0oyDqO8PjIg
+
+                -- [_] https://www.youtube.com/watch?v=bmmQA8A-yUA
+
+      -- [_] CONCEPT.
+          
+	      -- [_] C++ CODE.
+
+                        -- [_] compile tensorflow for c++ package.
+
+                        -- [_] c++ curriculum.
+
+	      -- [_] TENSORFLOW FOR PYTHON CODE.
+	
+	      -- [_] HISTORY OF THE ALGORITHM.
+	      
+	      -- [_] REAL WORLD SOLUTION (language, models and infrastructure may vary).
+
+      -- [_] LINEAR REGRESSION.
+
+              -- [_] ANGULAR GRAPHIC.
+
+              -- [_] TENSORFLOW FOR PYTHON LOGIC.
+
+              -- [_] TENSORFLOW FOR PYTHON BACKEND.
+
+              -- [_] C++ LOGIC.
+
+              -- [_] C++ / NET CORE BACKEND.                                 
+
+////////////////////////////////////////////////////////////////////////////////
+
+-- [_] ENGLISH LANGUAGE.
+
+////////////////////////////////////////////////////////////////////////////////
+
+  -- [x] landing component
+
+        -- [x] dymamic intro / .
+
+                -- [x] by language.
+
+                -- [x] by libraries.
+
+                -- [x] both includes Angular.
+
+        -- [x] libraries intro.
+
+                -- [x] opencv demo.
+                
+                -- [x] tesseract demo.
+
+                -- [x] tensorflow demo.
+
+                -- [x] Pdf, xls, chart demo
+
+
+        -- [x] root bottom menu items -> libraries.
+
+        -- [x] narrow market -> offer by library (additional to languages).
+
+  -- [x] SCM (SECTION).
+
+        -- [x] fractal demo repo path fix.
+
+        -- [x] Delete Tailwind.
+
+        -- [x] https://apereznwo.github.io/PWA_DEMO_ENV_PROD/#/PageUrlList?pageName=PAGE_DEMOS_MACHINE_LEARNING_INDEX
+
+                -- [x] Add m.l. pending items. 
+                
+                -- [x] TOPICS -> FREECODECAMP. 
+
+        -- [X] Somee list.    
+
+        -- [X] DB LIST.
+
+        -- [X] Fix codesandbox data. Put 3 codesandbox accounts + root account.
+
+        -- [X] ENV_ONLINE_HOSTING -> ENV_ONLINE_BACKEND.  
+
+        -- [>] SCM TRANSLATE TO ENGLISH.  
+
+        -- [x] Azure devops list.
+
+        -- [X] Monster ASP.NET list.   
+
+ -- [x] base component.
+
+        -- [x] title.
+
+        -- [x] error: double sound on title.
+ 
+        -- [x] reference list.
+
+-- [>]  TypeError: Cannot read properties of undefined (reading 'page_name')   : BaseComponent : csv generation.
+
+-- [x] OCR DEMO.
+
+        -- [x] VOICE IN ENGLISH.
+
+        -- [x] ASP.NET CORE SPLIT CONTROLLERS.
+
+        -- [x] VALIDATIONS.
+
+        -- [x] OCR SERVICE.
+
+-- [x] CV DEMO.
+
+        -- [x] Service.
+
+        -- [x] ENG LANGUAGE.
+
+        -- [x] Fractal Demo Path.
+
+-- [x] TENSORFLOW DEMO.
+
+        -- [x] Base Service.
+
+        -- [x] check repeated sound on title.
+
+        -- [x] tensorflow controller.
+
+        -- [_] springboot self playing tictactoe.
+
+        -- [_] django self playing tictactoe.
+
+
+ -- [_] check error install TWEEN module.   
+
+ -- [_] Check logic TETRIS -- A.I.   
+
+ -- [_] architecture overhauling.
+
+        -- [_] jwt and security.
+
+        -- [_] angular solid principles.
+ 
+-- [_] chat demo exception handling.
+
+-- [_] curriculum update.
+
+        -- [_] Angular.
+
+                -- [x] typescript reference.
+                
+                -- [x] effect.
+                
+                -- [x] sound wtk.
+
+                -- [_] ngFor, ngIf (other) directives.
+
+                -- [_] interpolation {{}}.
+
+                -- [_] Param.
+
+                -- [_] Component, Service, Application.
+
+                -- [_] OOP : Properties, Inheritance.
+
+                -- [_] Split content by topics.
+
+                -- [_] @INPUT / @OUTPUT.
+                                        
+        -- [_] backend->create sql query.
+        
+        -- [_] backend->create restful point.
+
+        -- [_] python tensorflow create/train model.
+        
+        -- [_] node.js smpt.
+
+        -- [_] .NET dllimport.
+
+        -- [_] c++ .
+
+                -- [_] main feature by std release.
+ 
+ -- [_] TRANSLATE DATABASE FIELDS TO ENGLISH.      
+ 
+ -- [_] Go lang / rust demo.
+ 
+ -- [_] Fractal Demo. change text with gauges (tictactoe-ai example).  
+
+ -- [_] backend url standarization / .net controller standarization. 
+
+        -- [_] ABOUT TECH SPECS
+
+                -- [_] .NET CORE FREE SPACE BUTTON.  
+
+                -- [_]  END POINT RESTFUL VERSIONS.       
+
+        -- [_] Algorithm, FileManager .NET core Controllers.  
+
+        -- [_] move somee.com to monsterasp.net. leave dbs only. 
+
+        -- [_] docker hosting.
+
+                -- [_] render.
+
+                -- [_] vercel.
+
+                -- [_] unique restful endpoint.
+
+                -- [_] google antigravity.
+
+                -- [_] google idx / firebase.
+
+
+-- [_] caching STRATEGY
+
+        -- [_] diagnose internet connection.
+
+        -- [_] caching objects.
+
+
+-- [_] TRANSLATE FORMS TO ENGLISH.  
+
+
+         -- [x] correct text "miscellaneous","manus","tictactoe".
+
+         -- [x] chart pdf wait message.
+
+         -- [x] dijkstra uber reference.      
+
+         -- [x] DISABLE CONTROLS.    
+
+                 -- [x] DIJKSTRA.    
+
+                 -- [x] FRACTAL.    
+
+         -- [x] base reference component implementation.
+
+                  -- [x] check grid .config links.
+
+         -- [_] missing status messages.
+
+         -- [_] .zip demo.
+
+         -- [_] pdf demo.
+
+                  -- [x] NG STATUS BAR / HttpEventType.DownloadProgress.
+
+                  -- [x] ITEXTPDF.
+
+                  -- [_] missing jspdf references.
+
+                  -- [_] PDF TOPICS.
+
+
+         -- [>] complete scm config info (see section).
+
+                -- [x] Codesandbox list.  
+                
+                -- [_] deployment doc.
+
+                        -- [_] BY CONTAINER / LANGUAGE.
+
+                -- [_] GIT HUB README.
+
+                -- [_] Grid modifications.    
+
+                        -- [x] restart grid numbers at start.
+
+                        -- [x] Codesadbox dynamic refernce of endpoints inside datagrids.      
+
+                        -- [x] dynamic codesandbox values {{}}.     
+
+                        -- [_] datagrids row master / detail.     
+
+         -- [>] LANDING COMPONENT (see section).
+
+                -- [x] languages bottom menu.
+
+                -- [x] LANDING PAGE AS QUERY PARAM (for email market).
+
+                        -- [_] DEMOS LIBRARIES.
+
+                                -- [_] tensorflow section as datagrid.
+
+                                -- [_] pdf demo as datagrid (both jsPDF and iTextSharp).
+
+                -- [_] publish single codebase (param by dymamic intro) on multiple hosting.
+
+                -- [_] Offer to communities
+
+-- [_] PUBLISH ENV_PROD.  
 
 ////////////////////////////////////////////////////////////////////////////////

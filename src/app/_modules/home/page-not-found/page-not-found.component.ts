@@ -3,8 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { BaseComponent  } from 'src/app/_components/base/base.component';
 import { PAGE_NOT_FOUND } from 'src/app/_models/common';
 import { BackendService } from 'src/app/_services/BackendService/backend.service';
-import { ConfigService  } from 'src/app/_services/ConfigService/config.service';
-import { SpeechService  } from 'src/app/_services/speechService/speech.service';
+import { ConfigService  } from 'src/app/_services/__Utils/ConfigService/config.service';
+import { SpeechService  } from 'src/app/_services/__Utils/SpeechService/speech.service';
 //
 @Component({
   selector: 'app-page-not-found',

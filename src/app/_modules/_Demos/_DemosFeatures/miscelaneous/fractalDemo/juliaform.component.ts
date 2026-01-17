@@ -1,30 +1,38 @@
 import { HttpClient                     } from '@angular/common/http';
-import { Component, ViewChild                      } from '@angular/core';
+import { Component, ViewChild           } from '@angular/core';
 import { ActivatedRoute                 } from '@angular/router';
-import { BaseComponent                  } from 'src/app/_components/base/base.component';
-import { PdfService } from 'src/app/_engines/pdf.engine';
-import { PAGE_MISCELANEOUS_FRACTAL_DEMO } from 'src/app/_models/common';
+import { PAGE_MISCELANEOUS_FRACTAL_DEMO, PAGE_TITLE_LOG, PAGE_TITLE_NO_SOUND } from 'src/app/_models/common';
 import { BackendService                 } from 'src/app/_services/BackendService/backend.service';
-import { ConfigService                  } from 'src/app/_services/ConfigService/config.service';
-import { ShapeDetectionService          } from 'src/app/_services/ShapeDetection/shape-detection.service';
-import { SpeechService                  } from 'src/app/_services/speechService/speech.service';
+import { ConfigService                  } from 'src/app/_services/__Utils/ConfigService/config.service';
+import { ComputerVisionService          } from 'src/app/_services/__AI/ComputerVisionService/Computer-Vision.service';
+import { SpeechService                  } from 'src/app/_services/__Utils/SpeechService/speech.service';
+import { PdfService                     } from 'src/app/_services/__FileGeneration/pdf.service';
+import { BaseReferenceComponent         } from 'src/app/_components/base-reference/base-reference.component';
 
 @Component({
-  selector: 'app-juliaform',
-  templateUrl: './juliaform.component.html',
-  styleUrl: './juliaform.component.css'
+  selector    : 'app-juliaform',
+  templateUrl : './juliaform.component.html',
+  styleUrl    : './juliaform.component.css',
+  providers   : [
+    { 
+      provide : PAGE_TITLE_LOG, 
+      useValue: PAGE_MISCELANEOUS_FRACTAL_DEMO 
+    },
+  ]
 })
-export class FractalDemoComponent  extends BaseComponent {
+export class FractalDemoComponent  extends BaseReferenceComponent {
   //
-  maxIterations: number = 500;
-  realPart: number = -0.4;
-  imagPart: number = 0.6;
-  imageUrl: string | null = null;
-  submitTitle : string = "Generate Fractal";
+  maxIterations    : number        = 500;
+  realPart         : number        = -0.4;
+  imagPart         : number        = 0.6;
+  imageUrl         : string | null = null;
+  submitTitle      : string        = "[Generate Fractal]";
+  pdfButtonCaption : string        = "[Generate PDF]"
+
   //
   @ViewChild('_fractal_image')  _fractal_image  : any;
   //
-  constructor(public          shapeDetectionService   : ShapeDetectionService,
+  constructor(public          computervisionService   : ComputerVisionService,
               public override configService           : ConfigService,
               public override backendService          : BackendService,
               public override route                   : ActivatedRoute,
@@ -38,22 +46,20 @@ export class FractalDemoComponent  extends BaseComponent {
             backendService,
             route,
             speechService,
-            PAGE_MISCELANEOUS_FRACTAL_DEMO);
+            PAGE_TITLE_NO_SOUND);
   }
   // 
   onSubmit() {
     //
-    const url        = `${this.configService.getConfigValue('baseUrlNetCoreCPPEntry')}generatejuliaparams/?maxIterations=${this.maxIterations}&realPart=${this.realPart}&imagPart=${this.imagPart}`;
-    //
-    this.status_message.set("[generando por favor espere..]");
+    this.status_message.set("[Generating please wait...]");
     //
     // Fetch the image as a blob
-    this.http.get(url, { responseType: 'blob' }).subscribe(
+    this.computervisionService._OpenCv_GetFractal(this.maxIterations,this.realPart,this.imagPart).subscribe(
       (response: Blob) => {
         // Convert the blob into an object URL
         this.imageUrl = URL.createObjectURL(response);
         //
-        this.status_message.set("[Se generó correctamente la imagen]");
+        this.status_message.set("[Image generated correctly]");
       },
       (error) => {
         //
@@ -61,7 +67,7 @@ export class FractalDemoComponent  extends BaseComponent {
         //
         this.imageUrl = null;
         //
-        this.status_message.set("[Ha ocurrido un error, favor intente de nuevo]");
+        this.status_message.set("[An error occurrued, plase try again]");
       }
     );
   }
@@ -70,8 +76,6 @@ export class FractalDemoComponent  extends BaseComponent {
     //
     let fileName_input  : string     = `FRACTAL_IMAGE`;
     let fileName_output : string     = '';
-    //
-    this.status_message.set('Generando PDF');
     //
     this.pdfEngine._GetPDF
       (
@@ -84,15 +88,20 @@ export class FractalDemoComponent  extends BaseComponent {
       {
         next: (fileName: string) =>{
           //
+          this.status_message.set('[...Generating PDF...]');
+          this.pdfButtonCaption = '[...Generating PDF...]'
+          //
           fileName_output = fileName;
         },
         error: (error: { message: string; }) => {
             //
-            this.status_message.set('ha ocurrido un error : ' + error.message);
+            this.status_message.set('An error occured : ' + error.message);
+            this.pdfButtonCaption  = "[Generate PDF]";
         },
         complete: () => {
             //
-            this.status_message.set(`[Se ha generado el archivo PDF]`);
+            this.status_message.set(`[PDF File generated correctly]`);
+            this.pdfButtonCaption  = "[Generate PDF]";
         }
       }
     );      

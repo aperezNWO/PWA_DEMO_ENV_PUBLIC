@@ -1,12 +1,13 @@
 import { Component, OnInit         } from '@angular/core';
 import { ActivatedRoute            } from '@angular/router';
-import { BaseComponent             } from 'src/app/_components/base/base.component';
-import { PAGE_GAMES_TIC_TAC_TOE_AI } from 'src/app/_models/common';
-import { _languageName } from 'src/app/_models/entity.model';
+import { BaseReferenceComponent    } from 'src/app/_components/base-reference/base-reference.component';
+import { _languageName             } from 'src/app/_models/entity.model';
 import { BackendService            } from 'src/app/_services/BackendService/backend.service';
-import { ConfigService             } from 'src/app/_services/ConfigService/config.service';
-import { SpeechService             } from 'src/app/_services/speechService/speech.service';
+import { ConfigService             } from 'src/app/_services/__Utils/ConfigService/config.service';
+import { SpeechService             } from 'src/app/_services/__Utils/SpeechService/speech.service';
 import { _environment              } from 'src/environments/environment';
+import { PAGE_GAMES_TIC_TAC_TOE_AI, PAGE_TITLE_LOG, PAGE_TITLE_NO_SOUND } from 'src/app/_models/common';
+
 
 export interface TicTacToeResponse {
   finalBoard: number[];
@@ -20,12 +21,19 @@ export interface TicTacToeResponse {
 @Component({
   selector: 'app-tic-tac-toe-board-ai',
   templateUrl: './tic-tac-toe-board-ai.component.html',
-  styleUrl: './tic-tac-toe-board-ai.component.css'
+  styleUrl: './tic-tac-toe-board-ai.component.css',
+  providers   : [
+      { 
+        provide : PAGE_TITLE_LOG, 
+        useValue: PAGE_GAMES_TIC_TAC_TOE_AI 
+      },
+  ]
 })
-export class TicTacToeBoardAiComponent extends BaseComponent implements OnInit {
+export class TicTacToeBoardAiComponent extends BaseReferenceComponent implements OnInit {
   //
   gameHistory: number[][] = [];
   currentStep  = 0;
+  winner       = 'In Progress';
   loading      = true;
   error        = '';
   aiMode       = 3; 
@@ -48,7 +56,7 @@ export class TicTacToeBoardAiComponent extends BaseComponent implements OnInit {
             backendService,
             route,
             speechService,
-            PAGE_GAMES_TIC_TAC_TOE_AI,
+            PAGE_TITLE_NO_SOUND,
       )
   }
   //
@@ -68,7 +76,7 @@ export class TicTacToeBoardAiComponent extends BaseComponent implements OnInit {
         this.__languajeList.push(new _languageName(1, '(.NET Core/C++ -> Creative      ) '  , false,  "CPP"  ));
         this.__languajeList.push(new _languageName(2, '(.NET Core/C++ -> Min Max       ) '  , false,  "CPP"  ));
         this.__languajeList.push(new _languageName(3, '(.NET Core/C++ -> Random Player ) '  , false,  "CPP"  ));
-        this.__languajeList.push(new _languageName(4, '(Python        -> Tensorflow    ) '  , false,  "PY"   ));
+        this.__languajeList.push(new _languageName(4, '(.NET Core/C++ -> Tensorflow    ) '  , false,  "PY"   ));
         //
         let langName = params['langName'] ? params['langName'] : "" ;
         //
@@ -114,6 +122,7 @@ export class TicTacToeBoardAiComponent extends BaseComponent implements OnInit {
     this.loading     = true;
     this.error       = '';
     this.currentStep = 0;
+    this.winner      = 'In Progress';
     //
     if (this.animationInterval) clearInterval(this.animationInterval);
     //
@@ -145,9 +154,11 @@ export class TicTacToeBoardAiComponent extends BaseComponent implements OnInit {
 
   animateGame() {
     this.currentStep = 0;
+    this.winner      = 'In Progress';
     this.animationInterval = setInterval(() => {
       if (this.currentStep < this.gameHistory.length - 1) {
         this.currentStep++;
+        this.getCurrentWinner();
       } else {
         clearInterval(this.animationInterval);
       }
@@ -183,9 +194,9 @@ onTempChange(event: Event): void {
     this.temperature = parseFloat(input.value);
   }
 }
-
-  getCurrentWinner(): string {
-    const board = this.gameHistory[this.currentStep];
+getCurrentWinner(): string {
+    const _speechService = this.speechService;
+    const board          = this.gameHistory[this.currentStep];
     const wins = [
       [0,1,2], [3,4,5], [6,7,8],
       [0,3,6], [1,4,7], [2,5,8],
@@ -194,14 +205,21 @@ onTempChange(event: Event): void {
 
     for (const [a,b,c] of wins) {
       if (board[a] !== 0 && board[a] === board[b] && board[b] === board[c]) {
-        return board[a] === 1 ? 'X' : 'O';
+        this.winner    = `Winner : ${(board[a] === 1 ? 'X' : 'O')}`; 
+        this.status_message.set(this.winner);
+        return this.winner;
       }
     }
 
     // Draw?
-    if (board.every(cell => cell !== 0)) return 'Draw';
+    if (board.every(cell => cell !== 0)) {
+        this.winner = 'Winner: Draw';
+        this.status_message.set(this.winner);
+        return this.winner;
+    } 
 
-    return 'In Progress';
+    //
+    return this.winner;
   }
 }
 

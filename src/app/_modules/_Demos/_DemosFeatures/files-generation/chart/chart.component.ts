@@ -1,20 +1,27 @@
 import { Component, effect, OnInit, signal, ViewChild } from '@angular/core';
-import { PdfService                   } from 'src/app/_engines/pdf.engine';
 import { BackendService               } from 'src/app/_services/BackendService/backend.service';
-import { SpeechService                } from 'src/app/_services/speechService/speech.service';
+import { SpeechService                } from 'src/app/_services/__Utils/SpeechService/speech.service';
+import { PdfService                   } from 'src/app/_services/__FileGeneration/pdf.service';
 import { Chart, registerables         } from 'chart.js';
 import { Observable                   } from 'rxjs';
-import { BaseComponent                } from 'src/app/_components/base/base.component';
 import { ActivatedRoute               } from '@angular/router';
-import { PAGE_FILE_GENERATION_CHART   } from 'src/app/_models/common';
-import { ConfigService                } from 'src/app/_services/ConfigService/config.service';
+import { BaseReferenceComponent       } from 'src/app/_components/base-reference/base-reference.component';
+import { PAGE_FILE_GENERATION_CHART, PAGE_TITLE_LOG, PAGE_TITLE_NO_SOUND   } from 'src/app/_models/common';
+import { ConfigService                } from 'src/app/_services/__Utils/ConfigService/config.service';
+
 
 @Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
-  styleUrl: './chart.component.css'
+  styleUrl: './chart.component.css',
+  providers   : [
+    { 
+      provide : PAGE_TITLE_LOG, 
+      useValue: PAGE_FILE_GENERATION_CHART 
+    },
+  ]
 })
-export class ChartComponent extends BaseComponent implements OnInit  {
+export class ChartComponent extends BaseReferenceComponent implements OnInit  {
     //--------------------------------------------------------------------------
     // PROPIEDADES COMUNES
     //--------------------------------------------------------------------------
@@ -54,7 +61,7 @@ export class ChartComponent extends BaseComponent implements OnInit  {
             backendService,
             route,
             speechService,
-            PAGE_FILE_GENERATION_CHART
+            PAGE_TITLE_NO_SOUND
       )
       //
       Chart.register(...registerables);
@@ -141,7 +148,7 @@ export class ChartComponent extends BaseComponent implements OnInit  {
             const data = {
               labels: statLabels,
               datasets: [{
-                  label: 'CIUDADES',
+                  label: 'CITIES',
                   data: statData,
                   backgroundColor: statBackgroundColor,
                   hoverOffset: 4
@@ -161,7 +168,7 @@ export class ChartComponent extends BaseComponent implements OnInit  {
                           },
                           title: {
                               display: true,
-                              text: 'CIUDADES'
+                              text: 'CITIES'
                           }
                       }
                   }
@@ -220,7 +227,7 @@ export class ChartComponent extends BaseComponent implements OnInit  {
           const data = {
             labels              : statLabels,
             datasets            : [{
-                label           : 'CONTEO DE SESIONES',
+                label           : 'SESSION COUNT',
                 data            : statData,
                 backgroundColor : statBackgroundColor,
                 hoverOffset     : 4
@@ -241,7 +248,7 @@ export class ChartComponent extends BaseComponent implements OnInit  {
                             },
                             title       : {
                                 display : true,
-                                text    : 'CONTEO DE SESIONES'
+                                text    : 'SESSION COUNT'
                               }
                           }
                 }
@@ -258,7 +265,7 @@ export class ChartComponent extends BaseComponent implements OnInit  {
     GetPDF(P_fileName : string):void
     {
         //
-        (P_fileName == '[PIE CHART]')? this.pdf_message_csv.set('[...Generando PDF...]') : this.pdf_message_xls.set('[...Generando PDF...]');
+        (P_fileName == '[PIE CHART]')? this.pdf_message_csv.set('[...Generating PDF...]') : this.pdf_message_xls.set('[...Generating PDF...]');
         //
         let fileName_output  : string     = '';
         //
@@ -275,13 +282,13 @@ export class ChartComponent extends BaseComponent implements OnInit  {
             },
             error: (error: Error) => {
                 //
-                let msg = 'ha ocurrido un error : ' + error.message;
+                let msg = 'An error occurred : ' + error.message;
                 (P_fileName == '[PIE CHART]')? this.pdf_message_csv.set(msg)   : this.pdf_message_xls.set(msg);
             },
             complete: () => {
                 //
                 //let msg = `Se ha generado el archivo [${fileName_output}]`;
-                let msg = `Se ha generado el archivo PDF corrctamente`;
+                let msg = `PDF file generated correctly`;
                 (P_fileName == '[PIE CHART]')? this.pdf_message_csv.set(msg)   : this.pdf_message_xls.set(msg);
             }
           }

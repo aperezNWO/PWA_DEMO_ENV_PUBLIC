@@ -3,7 +3,8 @@ import { ActivatedRoute                } from '@angular/router';
 import { Title                         } from '@angular/platform-browser';
 import { CustomErrorHandler            } from './app.module';
 import { BackendService                } from './_services/BackendService/backend.service';
-import { ConfigService                 } from './_services/ConfigService/config.service';
+import { AlgorithmService              } from './_services/AlgorithmService/algorithm.service';
+import { ConfigService                 } from './_services/__Utils/ConfigService/config.service';
 export { CustomErrorHandler            };
 
 //
@@ -26,27 +27,19 @@ export class AppComponent  {
                 private backendService      : BackendService, 
                 private _configService      : ConfigService,
                 private titleService        : Title,
+                private algorithmService    : AlgorithmService,
                ) 
     {
       // TODO:IMPLEMENT AS MAP AND ITERATE
       this._appBrand          = this._configService.getConfigValue('appBrand');
       this._appVersion        = this._configService.getConfigValue('appVersion');
       let __baseUrlNetCore    = this._configService.getConfigValue('baseUrlNetCore');
-      let __baseUrlNodeJs     = this._configService.getConfigValue('baseUrlNodeJs');
-      let __baseUrlNodeJsOcr  = this._configService.getConfigValue('baseUrlNodeJsOcr');
-      let __baseUrlSpringBoot = this._configService.getConfigValue('baseUrlSpringBootJava');
-      //
-      this.backendService._baseUrlNetCore    = __baseUrlNetCore;
-      this.backendService._baseUrlNodeJs     = __baseUrlNodeJs;
-      this.backendService._baseUrlNodeJs     = __baseUrlNodeJs;
-      this.backendService._baseUrlNodeJsOcr  = __baseUrlNodeJsOcr;
-      this.backendService._baseUrlSpringBoot = __baseUrlSpringBoot;
       //
       //////////////////////////////////////////////////////
       // CACHE PARA XML
       ///////////////////////////////////////////////////////
       //
-      this.backendService._SetXmlDataToCache(__baseUrlNetCore);
+      this.algorithmService._SetXmlDataToCache(__baseUrlNetCore);
       ///////////////////////////////////////////////////////
       // CACHE PARA PIE CHART
       ///////////////////////////////////////////////////////

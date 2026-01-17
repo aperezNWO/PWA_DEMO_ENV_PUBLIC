@@ -1,42 +1,7 @@
-<div class="content">
+<div class="content" align="left">
         <!-- ENCABEZADO INICIO   -->
-        <div align="center">
-            <h1>{{this.pageTitle}}</h1>
-        </div>
-        <hr>
-        <div class="reference" align="right">
-            <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
-            <ul *ngIf="isListVisible" align="left" width="10px">
-                <li> [Frontend]
-                  <ul>
-                    <li><a routerLink="/GridParam" [queryParams]="{ searchTerm: 'a819d617-74fe-41f0-8f58-0f62377d15e6', pageName: 'PAGE_DEMOS_ANGULAR_JAVASCRIPT' }">[Angular]</a></li>
-                  </ul>
-                </li>
-                <li>[Backend]
-                  <ul>
-                    <li><a routerLink="/GridParam"         [queryParams]="{ searchTerm: '292ed965-b158-45a6-900e-78a5dc8ed1bd', pageName : 'PAGE_DEMOS_NETCORE_CSHARP'   }">[.netcore/c#]</a></li>
-                    <li><a routerLink="/GridParam"         [queryParams]="{ searchTerm: '8a33d9c8-708b-43a8-be1e-dae42606f2a0', pageName : 'PAGE_DEMOS_NETCORE_CPP'      }">[c++ / dll source]</a></li>
-                    <li><a routerLink="/GridParam"         [queryParams]="{ searchTerm: '45feb969-2879-4f5f-8d2b-adccb9b187b5', pageName : 'PAGE_DEMOS_NETCORE_CPP'      }">[c++ / .net core endpoint]</a></li>
-                    <li><a routerLink="/GridParam"         [queryParams]="{ searchTerm: '1e32e88d-da6c-429a-b326-22056574e8a4', pageName : 'PAGE_DEMOS_SPRING_BOOT_JAVA' }">[Springboot/Java]</a></li>
-                </ul>
-                </li>
-                <li>[Librerias]
-                    <ul>
-                        <li>
-                            <a href="javascript: void window.open('https://www.npmjs.com/package/jspdf')">[jsPDF]</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>[Temática]
-                    <ul>
-                        <li>
-                            <a href="javascript: void window.open('https://en.wikipedia.org/wiki/Dijkstra\'s_algorithm')">[Algoritmo Dijkstra]</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>       
-         <!-- ENCABEZADO FIN    -->
+        <app-base-reference></app-base-reference>
+        <!-- ENCABEZADO FIN    -->
         <hr />
         <!-- PANEL GRAFICO / INICIO -->
         <div align="center">
@@ -60,19 +25,21 @@
        </div>
         <!-- CANTIDA DE PUNTOS       -->
         <div class="form-group" align="left">
-            <label for="_vertexSizeList">Cantidad de Puntos:</label>
+            <label for="_vertexSizeList">Points Amount:</label>
             <select     id="_vertexSizeList"
                         name="_vertexSizeList"
-                        #_vertexSizeList>                    
+                        #_vertexSizeList
+                        disabled="disabled">                    
             <option *ngFor="let _vertexSize of __vertexSizeList" [value]="_vertexSize._index">{{_vertexSize._value}}</option>
             </select>
         </div>
         <!-- PUNTO DE ORIGEN        -->
         <div class="form-group" align="left">
-            <label for="_sourcePointList">Punto de Origen:</label>
+            <label for="_sourcePointList">Source Point:</label>
             <select     id="_sourcePointList"
                         name="_sourcePointList"
-                        #_sourcePointList>                    
+                        #_sourcePointList
+                        disabled="disabled">                    
             <option *ngFor="let _vertexSize of __sourcePointList" [value]="_vertexSize._index">{{_vertexSize._value}}</option>
             </select>
         </div>
@@ -94,13 +61,13 @@
         <hr />
         <!-- BOTONES / INICIO -->
         <div class="form-group" align="right">
-            <input class="btn btn-primary"    id="GetGraph" type="button" title="[GENERAR]"   value="[GENERAR]"   (click)="this._GetGraph()" 
+            <input class="btn btn-primary"    id="GetGraph" type="button" title="[GENERATE]"   value="[GENERATE]"   (click)="this._GetGraph()" 
             [disabled]="(this.getGraphIdle == true)">
             |
-            <input class="btn btn-secondary"  id="NewGraph" type="button" title="[REINICIAR]" value="[REINICIAR]" (click)="this._ResetControls()"
+            <input class="btn btn-secondary"  id="NewGraph" type="button" title="[RESTART]" value="[RESTART]" (click)="this._ResetControls()"
             [disabled]="((this.PointListHidden.length == 0) && (this.MatrixListHidden.length == 0))">
             |
-            <input class="btn btn-success"    id="GetPDF" type="button" title="[GENERAR PDF]" value="[GENERAR PDF]" (click)="this._GetPDF()"
+            <input class="btn btn-success"    id="GetPDF" type="button" title="[GENERATE PDF]" value="[GENERATE PDF]" (click)="this._GetPDF()"
             [disabled]="  ( (this.PointListHidden.length  == 0) 
                          && (this.MatrixListHidden.length == 0))
                          || (this.selectedIndex           == 0)">
@@ -108,9 +75,9 @@
         <!-- BOTONES / FIN    -->                 
     <hr />
     <div align="right">
-        <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_ALGORITMOS_INDEX'}" >[Volver al Menu]</a>
+        <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_ALGORITMOS_INDEX'}" >[Back to Menu]</a>
     </div>
-</div>>
+</div>
 
 
 

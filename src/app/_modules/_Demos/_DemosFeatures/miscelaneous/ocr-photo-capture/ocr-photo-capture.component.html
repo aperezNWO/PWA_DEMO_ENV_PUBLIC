@@ -1,40 +1,7 @@
 <div class="content" align="center">
-    <div>
-        <h1>{{this.pageTitle}}</h1>
-    </div>
-    <hr> 
-    <div class="reference" align="right">
-      <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
-      <ul *ngIf="isListVisible" align="left" widdth="10px">
-          <li> [Frontend]
-            <ul>
-              <li><a routerLink="/GridParam"      [queryParams]="{ searchTerm: '5640c548-8aa6-4f15-bcf9-b10b8cb7fd0d' , pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT' }">[Angular]</a></li>
-            </ul>
-          </li>
-          <li>[Backend]
-            <ul>
-              <li><a [routerLink]="'/GridParam'"         [queryParams]="{ searchTerm: '894ab07b-45d4-4a87-b9d7-a59e78a73e79', pageName : 'PAGE_DEMOS_NODEJS_JAVASCRIPT' }">[Node.Js/Javascript]</a></li>
-            </ul>
-            <ul>
-              <li><a [routerLink]="'/GridParam'"         [queryParams]="{ searchTerm: '59c5ba46-4a63-4468-b8e4-409ace1f025e', pageName : 'PAGE_DEMOS_NETCORE_CPP'       }">[c++ / DLL source]</a></li>
-            </ul>
-            <ul>
-              <li><a [routerLink]="'/GridParam'"         [queryParams]="{ searchTerm: '9d7836ed-cd9b-4152-b298-18be6ed9b437', pageName : 'PAGE_DEMOS_NETCORE_CPP'       }">[c++ / .net core endpoint]</a></li>
-            </ul>
-          </li>
-          <li>[Libraries]
-            <ul>
-              <li><a href="https://www.npmjs.com/package/tesseract.js/v/2.1.1" target="_blank">[Tesseract / Node.js]</a></li>
-            </ul>
-              <ul>
-                <li><a href="https://github.com/tesseract-ocr/tesseract" target="_blank">[Tesseract / C++]</a></li>
-              </ul>
-          </li>
-      </ul>
-    </div>
+    <app-base-reference></app-base-reference>
     <hr>  
     <div id="canvasContainer" [hidden]="this.hiddenCanvasContainer">
-        <hr/>
         <!-- CANVAS INICIO   -->
         <div aling="center">Please use the finger or the mouse pointer to draw</div>
         <br>
@@ -54,7 +21,6 @@
         <!-- BOTONES FIN      -->
     </div> 
     <div id ="cameraContainer" [hidden]="this.hiddenCameraContainer">
-        <hr>
        <div class="camera-container" [hidden]="this.cameraContainerHidden">
             <video #video autoplay [style]="this.videoStyle"></video>
             <canvas #canvas hidden ></canvas>
@@ -99,7 +65,7 @@
     </div>
     <!-- FORMULARIO FIN -->
     <div align="right">
-        <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_MISELANEOUS_INDEX'}" >[Volver al Menu]</a>
+        <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_MISCELLANEOUS_INDEX'}" >[Back to Menu]</a>
     </div>
 </div>
 

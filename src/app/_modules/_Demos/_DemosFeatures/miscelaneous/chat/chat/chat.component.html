@@ -1,28 +1,20 @@
-<div class="content">
-        <div align="center">
-                <h1>{{ this.pageTitle }}</h1>
-        </div>
+<div class="content" align="center">
+        <app-base-reference></app-base-reference>
+        <!--
         <hr/>
         <div class="reference" align="right">
                 <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
                 <ul *ngIf="isListVisible" align="left" widdth="10px">
-                    <li> [Frontend]
-                      <ul>
-                        <li><a routerLink="/GridParam"     [queryParams]="{ searchTerm: '415b3965-c5ef-4953-8484-080c34df691f' , pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT' }">[Angular]</a></li>
-                      </ul>
-                    </li>
+
                     <li>[Backend]
                       <ul>
-                        <li><a routerLink="/GridParam"      [queryParams]="{ searchTerm: '1996fa99-4e01-42eb-ac45-98e2918208d9', pageName : 'PAGE_DEMOS_NODEJS_JAVASCRIPT' }">[Node.Js/Javascript]</a></li>
+                        <li><a routerLink="/GridParam"      [queryParams]="{ searchTerm: '', pageName : '' }"></a></li>
                       </ul>
                     </li>
-                    <li>[Libraries]
-                        <ul>
-                          <li><a href="https://socket.io/get-started/chat/" target="_blank">[socket.io]</a></li>
-                        </ul>
-                    </li>
+
                 </ul>
         </div>   
+        -->
         <hr/>
         <div id="divMessageInput" align="left">
         <form #messageinputform="ngForm" (ngSubmit)="submitForm(messageinputform);">
@@ -56,9 +48,9 @@
         </div>
         <!-- MESSAGES / FIN    -->
         <hr>
-        <!-- FORMULARIO FIN -->
+        <!-- FORMULARIO FIN    -->
         <div align="right">
-                <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_MISELANEOUS_INDEX'}" >[Volver al Menu]</a>
+                <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_MISCELLANEOUS_INDEX'}" >[Back to Menu]</a>
         </div>
 </div>
 

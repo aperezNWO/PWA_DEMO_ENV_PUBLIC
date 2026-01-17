@@ -1,37 +1,6 @@
 <div class="content" align="center">
-    <div>
-        <h1>{{this.pageTitle}}</h1>
-    </div>
-    <hr>
     <!-- REFERENCIAS INICIO -->
-    <div class="reference" align="right">
-      <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
-      <ul *ngIf="isListVisible" align="left" widdth="10px">
-          <li> [Frontend]
-            <ul>
-              <li><a [routerLink]="'/GridParam'"         [queryParams]="{ searchTerm: 'ace5fb03-bc8c-43c5-8650-181bf581b2a4' , pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT' }">[Angular]</a></li>
-            </ul>
-          </li>
-          <li>[Backend]
-            <ul>
-              <li><a [routerLink]="'/GridParam'"         [queryParams]="{ searchTerm: '5e5bfdf8-6876-43a5-a2ea-858628bf0dae' , pageName : 'PAGE_DEMOS_NETCORE_CPP'        }">[c++ / dll source]</a></li>
-            </ul>
-            <UL>
-              <LI><a [routerLink]="'/GridParam'"         [queryParams]="{ searchTerm: '97411cbf-d80a-4d7a-92dc-f88d158ae552' , pageName : 'PAGE_DEMOS_NETCORE_CPP'        }">[c++ / .net core dll import]</a></LI>
-            </UL>
-          </li>
-          <li>[Libraries]
-            <ul>
-              <li><a href="https://opencv.org/" target="_blank">[Open CV/ C++]</a></li>
-            </ul>
-          </li>
-          <li>[Tema]
-            <ul>
-              <li><a href="https://en.wikipedia.org/wiki/Fractal" target="_blank">[Fractal]</a></li>
-            </ul>
-          </li>
-      </ul>
-    </div>
+    <app-base-reference></app-base-reference>
     <!-- REFERENCIAS FIN -->
     <!-- FORM8ULARIO INICIO -->
     <hr>
@@ -40,39 +9,38 @@
         <form (ngSubmit)="onSubmit()">
         <div>
             <label for="maxIterations">Max Iterations:</label>
-            <input type="number" id="maxIterations" name="maxIterations"    [(ngModel)]="maxIterations" required>
+            <input type="number" id="maxIterations" name="maxIterations"    [(ngModel)]="maxIterations" required readonly="readonly">
         </div>
         <div>
             <label for="realPart">Real Part:</label>
-            <input type="number" step="0.01" id="realPart" name="realPart"  [(ngModel)]="realPart"     required>
+            <input type="number" step="0.01" id="realPart" name="realPart"  [(ngModel)]="realPart"     required readonly="readonly">
         </div>
         <div>
             <label for="imagPart">Imaginary Part:</label>
-            <input type="number" step="0.01" id="imagPart" name="imagPart"  [(ngModel)]="imagPart"     required>
+            <input type="number" step="0.01" id="imagPart" name="imagPart"  [(ngModel)]="imagPart"     required readonly="readonly">
         </div>
+        <!-- BOTONES INICIO   -->
+        <button type="submit" class="btn btn-primary"   [disabled]="( this.status_message() == '[...Generating please wait...]')"                                                   >{{this.submitTitle}}</button>
+        <button type="button" class="btn btn-secondary" [disabled]="( this.status_message() == '[...Generating PDF...]')" *ngIf="imageUrl" (click)="this.GeneratePDF()">{{this.pdfButtonCaption}}</button>
+        <!-- BOTONES FIN      -->  
         <hr>
         <!--STATUS / INICIO -->
         <div *ngIf="this.status_message" class="alert alert-secondary" role="alert" align="center" >
             {{ this.status_message() }}
         </div>
         <!-- STATUS / FIN     -->
-        <!-- BOTONES INICIO   -->
-        <button type="button" class="btn btn-secondary" *ngIf="imageUrl" (click)="this.GeneratePDF()">[Generate PDF]</button>
-        <button type="submit" class="btn btn-primary"   [disabled]="( this.status_message() == '[generando por favor espere..]')" >{{this.submitTitle}}</button>
-        <!-- BOTONES FIN      -->  
       </form>
+      <hr>
+      <!-- IMAGEN INICIO      -->
+      <div *ngIf="imageUrl" #_fractal_image>
+          <h3>Generated Fractal Image:</h3>
+          <img [src]="imageUrl" alt="Julia Fractal" width="350px" height="350px"/>
+      </div>
+      <!-- IMAGE FIN          -->
     </div>
-    <hr>
-    <!-- FORMULARIO FIN     -->
-    <!-- IMAGEN INICIO      -->
-    <div *ngIf="imageUrl" #_fractal_image>
-        <h3>Generated Fractal Image:</h3>
-        <img [src]="imageUrl" alt="Julia Fractal" width="400px" height="400px"/>
-    </div>
-    <!-- IMAGE FIN          -->
     <hr>
     <!-- FORMULARIO FIN -->
     <div align="right">
-        <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_MISELANEOUS_INDEX'}" >[Volver al Menu]</a>
+        <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_MISCELLANEOUS_INDEX'}" >[Back to Menu]</a>
     </div> 
 </div>   

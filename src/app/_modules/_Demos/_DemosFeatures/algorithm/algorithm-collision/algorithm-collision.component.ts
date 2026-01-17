@@ -1,18 +1,25 @@
+import { Injectable                                                      } from "@angular/core";
+import { Router                                                          } from "@angular/router";
 import { Component, ViewChild, ElementRef, AfterViewInit                 } from '@angular/core';
 import { ActivatedRoute                                                  } from '@angular/router';
-import { BaseComponent                                                   } from 'src/app/_components/base/base.component';
-import { PAGE_ALGORITMOS_COLISION                                        } from 'src/app/_models/common';
+import { BaseReferenceComponent                                          } from "src/app/_components/base-reference/base-reference.component";
+import { PAGE_ALGORITMOS_COLISION, PAGE_TITLE_LOG, PAGE_TITLE_NO_SOUND   } from 'src/app/_models/common';
 import { BackendService                                                  } from 'src/app/_services/BackendService/backend.service';
-import { ConfigService                                                   } from 'src/app/_services/ConfigService/config.service';
-import { PageRestartService                                              } from 'src/app/_services/pageRestart/page-restart.service';
-import { SpeechService                                                   } from 'src/app/_services/speechService/speech.service';
+import { ConfigService                                                   } from 'src/app/_services/__Utils/ConfigService/config.service';
+import { SpeechService                                                   } from 'src/app/_services/__Utils/SpeechService/speech.service';
 
 @Component({
   selector: 'app-algorithm-collision',
   templateUrl: './algorithm-collision.component.html',
-  styleUrl: './algorithm-collision.component.css'
+  styleUrl: './algorithm-collision.component.css',
+  providers   : [
+    { 
+      provide : PAGE_TITLE_LOG, 
+      useValue: PAGE_ALGORITMOS_COLISION 
+    },
+    ]
 })
-export class AlgorithmCollisionComponent extends BaseComponent implements AfterViewInit {
+export class AlgorithmCollisionComponent extends BaseReferenceComponent implements AfterViewInit {
   //
   @ViewChild('ballCanvas', { static: false }) canvas!: ElementRef<HTMLCanvasElement> | null;
   //
@@ -29,7 +36,7 @@ export class AlgorithmCollisionComponent extends BaseComponent implements AfterV
   private friction    = 0.98; // Friction to slow down the ball
   private restitution = 0.8; // Bounce factor, 1 = perfect elastic collision, <1 = energy loss
   //
-  constructor(private pageRestartService: PageRestartService,
+  constructor(private pageRestartService         : PageRestartService,
               public  override configService     : ConfigService,
               public  override speechService     : SpeechService,
               public  override backendService    : BackendService,
@@ -40,7 +47,7 @@ export class AlgorithmCollisionComponent extends BaseComponent implements AfterV
             backendService,
             route,
             speechService,
-            PAGE_ALGORITMOS_COLISION);
+            PAGE_TITLE_NO_SOUND);
   }
   
   restart() {
@@ -85,5 +92,30 @@ export class AlgorithmCollisionComponent extends BaseComponent implements AfterV
     } else {
       requestAnimationFrame(this.animate);
     }
+  }
+}
+
+@Injectable({
+  providedIn: 'root',
+})
+class PageRestartService {
+  constructor(private router: Router) {}
+
+  // Method 1: Simple page reload
+  reloadPage() {
+    window.location.reload();
+  }
+
+  // Method 2: Reload current route
+  async reloadCurrentRoute() {
+    const currentUrl = this.router.url;
+    await this.router.navigateByUrl('/', { skipLocationChange: true });
+    return this.router.navigateByUrl(currentUrl);
+  }
+
+  // Method 3: Reload with query params refresh
+  reloadWithQueryParamsRefresh() {
+    const currentUrl = window.location.href;
+    window.location.href = currentUrl;
   }
 }

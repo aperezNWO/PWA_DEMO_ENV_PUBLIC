@@ -7,7 +7,7 @@
         "field_1"          : "Sudoku Game",
         "field_2"          : "./#/GamesSudoku?langName=CPP",
         "field_3"          : "https://github.com/aperezNWO/CPP_GCC_ALGORITHM/blob/c2966f93059d84b5c129dbd4e81bbaa1c5daa634/Algorithm.cpp#L247",
-        "field_4"          : "https://tensorflownetcore64.tryasp.net/Sudoku_Solve_CPP?p_matrix=[{7,3,9,1,4,2,0,6,8},{0,4,0,3,8,5,7,9,1},{1,8,0,6,9,7,3,2,4},{2,0,3,5,7,8,4,0,6},{0,1,0,9,3,6,2,8,5},{8,0,0,4,2,1,0,7,3},{0,0,0,0,5,4,0,3,7},{3,7,4,8,1,9,6,0,2},{0,2,1,0,0,3,8,4,9" ,
+        "field_4"          : "{{baseUrlNetCoreCPPEntry}}Sudoku_Solve_CPP?p_matrix=[{7,3,9,1,4,2,0,6,8},{0,4,0,3,8,5,7,9,1},{1,8,0,6,9,7,3,2,4},{2,0,3,5,7,8,4,0,6},{0,1,0,9,3,6,2,8,5},{8,0,0,4,2,1,0,7,3},{0,0,0,0,5,4,0,3,7},{3,7,4,8,1,9,6,0,2},{0,2,1,0,0,3,8,4,9" ,
         "field_6"          : "https://www.geeksforgeeks.org/program-sudoku-generator/",
         "field_10"         : "dbda4780-50c8-4a97-8617-cf2a60bf9b32"  
     },
@@ -19,7 +19,7 @@
         "field_1"          : "Sudoku Game, C++, .net core, dllimport",
         "field_2"          : "./#/GamesSudoku?langName=CPP",
         "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/8a465f7d3c40159b1d75c528291da7dcf764868a/ASP_NET_CORE_CPP_ENTRY/Controllers/HomeController.cs#L658",
-        "field_4"          : "https://tensorflownetcore64.tryasp.net/Sudoku_Solve_CPP?p_matrix=[{7,3,9,1,4,2,0,6,8},{0,4,0,3,8,5,7,9,1},{1,8,0,6,9,7,3,2,4},{2,0,3,5,7,8,4,0,6},{0,1,0,9,3,6,2,8,5},{8,0,0,4,2,1,0,7,3},{0,0,0,0,5,4,0,3,7},{3,7,4,8,1,9,6,0,2},{0,2,1,0,0,3,8,4,9" ,
+        "field_4"          : "{{baseUrlNetCoreCPPEntry}}Sudoku_Solve_CPP?p_matrix=[{7,3,9,1,4,2,0,6,8},{0,4,0,3,8,5,7,9,1},{1,8,0,6,9,7,3,2,4},{2,0,3,5,7,8,4,0,6},{0,1,0,9,3,6,2,8,5},{8,0,0,4,2,1,0,7,3},{0,0,0,0,5,4,0,3,7},{3,7,4,8,1,9,6,0,2},{0,2,1,0,0,3,8,4,9" ,
         "field_6"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
         "field_10"         : "945b42ca-17b7-44a0-a1c4-2cfec480ef2a"  
     },
@@ -31,7 +31,7 @@
         "field_1"          : "Sort Algorithm, Bubble Sort, Quick Sort",
         "field_2"          : "./#/AlgorithmSort?langName=CPP",
         "field_3"          : "https://github.com/aperezNWO/CPP_GCC_ALGORITHM/blob/c2966f93059d84b5c129dbd4e81bbaa1c5daa634/Algorithm.cpp#L212",
-        "field_4"          : "https://tensorflownetcore64.tryasp.net/_GetSort_CPP?p_sortAlgoritm=2&p_unsortedList=10|5|1|23|2|19|13|14|3|0|8|22|18|9|17|7|16|12|11|4|21|24|6|20|15",
+        "field_4"          : "{{baseUrlNetCoreCPPEntry}}_GetSort_CPP?p_sortAlgoritm=2&p_unsortedList=10|5|1|23|2|19|13|14|3|0|8|22|18|9|17|7|16|12|11|4|21|24|6|20|15",
         "field_6"          : "https://en.wikipedia.org/wiki/Quicksort",
         "field_10"         : "bf4b9c6d-3cac-4585-885e-4b8e29420010"   
     },
@@ -43,7 +43,7 @@
         "field_1"          : "Sort Algorithm, Bubble Sort, Quick Sort",
         "field_2"          : "./#/AlgorithmSort?langName=CPP",
         "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/8a465f7d3c40159b1d75c528291da7dcf764868a/ASP_NET_CORE_CPP_ENTRY/Controllers/HomeController.cs#L558",
-        "field_4"          : "https://tensorflownetcore64.tryasp.net/_GetSort_CPP?p_sortAlgoritm=2&p_unsortedList=10|5|1|23|2|19|13|14|3|0|8|22|18|9|17|7|16|12|11|4|21|24|6|20|15",
+        "field_4"          : "{{baseUrlNetCoreCPPEntry}}_GetSort_CPP?p_sortAlgoritm=2&p_unsortedList=10|5|1|23|2|19|13|14|3|0|8|22|18|9|17|7|16|12|11|4|21|24|6|20|15",
         "field_6"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
         "field_10"         : "b48fc53c-e37a-433c-9ece-773500c5f72f"   
     },
@@ -55,7 +55,7 @@
         "field_1"          : "Shortest Path, Graph, Dijkstra",
         "field_2"          : "./#/AlgorithmDijkstra?langName=CPP",
         "field_3"          : "https://github.com/aperezNWO/CPP_GCC_ALGORITHM/blob/c2966f93059d84b5c129dbd4e81bbaa1c5daa634/Algorithm.cpp#L203",
-        "field_4"          : "https://tensorflownetcore64.tryasp.net/GenerateRandomVertex_CPP?p_vertexSize=9&p_sourcePoint=0",
+        "field_4"          : "{{baseUrlNetCoreCPPEntry}}GenerateRandomVertex_CPP?p_vertexSize=9&p_sourcePoint=0",
         "field_6"          : "https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/",
         "field_10"         : "8a33d9c8-708b-43a8-be1e-dae42606f2a0"  
     },
@@ -67,7 +67,7 @@
         "field_1"          : "Shortest Path, Graph, Dijkstra",
         "field_2"          : "./#/AlgorithmDijkstra?langName=CPP",
         "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/8a465f7d3c40159b1d75c528291da7dcf764868a/ASP_NET_CORE_CPP_ENTRY/Controllers/HomeController.cs#L531",
-        "field_4"          : "https://tensorflownetcore64.tryasp.net/GenerateRandomVertex_CPP?p_vertexSize=9&p_sourcePoint=0",
+        "field_4"          : "{{baseUrlNetCoreCPPEntry}}GenerateRandomVertex_CPP?p_vertexSize=9&p_sourcePoint=0",
         "field_6"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
         "field_10"         : "45feb969-2879-4f5f-8d2b-adccb9b187b5"  
     },
@@ -79,7 +79,7 @@
         "field_1"          : "Regular Expressions",
         "field_2"          : "./#/AlgorithmRegEx?langName=CPP",
         "field_3"          : "https://github.com/aperezNWO/CPP_GCC_ALGORITHM/blob/c2966f93059d84b5c129dbd4e81bbaa1c5daa634/Algorithm.cpp#L218",
-        "field_4"          : "https://tensorflownetcore64.tryasp.net/_RegExEval_CPP?p_tagSearch=company&p_textSearch=bmg",
+        "field_4"          : "{{baseUrlNetCoreCPPEntry}}_RegExEval_CPP?p_tagSearch=company&p_textSearch=bmg",
         "field_6"          : "https://en.cppreference.com/w/cpp/regex/regex_search",
         "field_10"         : "82ffb387-0aee-4849-9594-75fc2898cf1e"  
     },
@@ -91,7 +91,7 @@
         "field_1"          : "Regular Expressions, c++, dllimport",
         "field_2"          : "./#/AlgorithmRegEx?langName=CPP",
         "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/8a465f7d3c40159b1d75c528291da7dcf764868a/ASP_NET_CORE_CPP_ENTRY/Controllers/HomeController.cs#L626",
-        "field_4"          : "https://tensorflownetcore64.tryasp.net/_RegExEval_CPP?p_tagSearch=company&p_textSearch=bmg",
+        "field_4"          : "{{baseUrlNetCoreCPPEntry}}_RegExEval_CPP?p_tagSearch=company&p_textSearch=bmg",
         "field_6"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
         "field_10"         : "830faf00-71cb-45a0-babd-5bcf5dbf9ccd"  
     },
@@ -103,8 +103,8 @@
         "field_1"          : "OCR, Tesseract",
         "field_2"          : "./#/OcrPhotoCapture?langName=CPP",
         "field_3"          : "https://github.com/aperezNWO/CPP_GCC_TESSERACT/blob/e57058e7e388ae09fc535fcb9379a7a8229ed5e9/tesseractApp.cpp#L176",
-        "field_4"          : "https://tensorflownetcore64.tryasp.net/GetTesseractOcrOutput",
-        "field_6"          : "https://en.wikipedia.org/wiki/Optical_character_recognition",
+        "field_4"          : "{{baseUrlNetCoreCPPEntry}}api/ocr/GetTesseractOcrOutput",
+        "field_6"          : "https://github.com/tesseract-ocr/tesseract",
         "field_10"         : "59c5ba46-4a63-4468-b8e4-409ace1f025e"  
     },
     {
@@ -115,7 +115,7 @@
         "field_1"          : "OCR, Tesseract, C++, .net core, DLLImport",
         "field_2"          : "./#/OcrPhotoCapture?langName=CPP",
         "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/8a465f7d3c40159b1d75c528291da7dcf764868a/ASP_NET_CORE_CPP_ENTRY/Controllers/HomeController.cs#L166",
-        "field_4"          : "https://tensorflownetcore64.tryasp.net/GetTesseractOcrOutput",
+        "field_4"          : "{{baseUrlNetCoreCPPEntry}}api/ocr/GetTesseractOcrOutput",
         "field_6"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
         "field_10"         : "9d7836ed-cd9b-4152-b298-18be6ed9b437"  
     },
@@ -127,8 +127,8 @@
         "field_1"          : "Computer Vision, OPEN CV, C++",
         "field_2"          : "./#/ComputerVision?langName=CPP",
         "field_3"          : "https://github.com/aperezNWO/CPP_GCC_OPEN_CV/blob/92076cb4b69103b4e2015ff838c0d46d4c740439/mingwin/OpenCvDll.cpp#L252",
-        "field_4"          : "https://tensorflownetcore64.tryasp.net/OpenCvReadImage",
-        "field_6"          : "https://en.wikipedia.org/wiki/Computer_vision",
+        "field_4"          : "{{baseUrlNetCoreCPPEntry}}api/computervision/OpenCvReadImage",
+        "field_6"          : "https://docs.opencv.org/4.x/d1/dfb/intro.html",
         "field_10"         : "40dd1cce-91b6-4fa3-bb64-053130fd1ff6"  
     },
     {
@@ -139,7 +139,7 @@
         "field_1"          : "Computer Vision, OPEN CV, .net core",
         "field_2"          : "./#/ComputerVision?langName=CPP",
         "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/8a465f7d3c40159b1d75c528291da7dcf764868a/ASP_NET_CORE_CPP_ENTRY/Controllers/HomeController.cs#L307",
-        "field_4"          : "https://tensorflownetcore64.tryasp.net/OpenCvReadImage",
+        "field_4"          : "{{baseUrlNetCoreCPPEntry}}api/computervision/OpenCvReadImage",
         "field_6"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
         "field_10"         : "ae1c7a78-3fd5-4e41-965f-0bfd091c4a1d"  
     },
@@ -151,7 +151,7 @@
         "field_1"          : "Fractal , Julia",
         "field_2"          : "./#/FractalDemo",
         "field_3"          : "https://github.com/aperezNWO/CPP_GCC_OPEN_CV/blob/4d162f3c80cf1ec28bbcf50321ff997a8fbc8efd/mingwin/OpenCvDll.cpp#L436",
-        "field_4"          : "https://tensorflownetcore64.tryasp.net/generatejuliaparams/?maxIterations=500&realPart=-0.4&imagPart=0.6",
+        "field_4"          : "{{baseUrlNetCoreCPPEntry}}api/computervision/generatejuliaparams/?maxIterations=500&realPart=-0.4&imagPart=0.6",
         "field_6"          : "https://en.wikipedia.org/wiki/Fractal",
         "field_10"         : "5e5bfdf8-6876-43a5-a2ea-858628bf0dae"  
     },
@@ -163,32 +163,80 @@
         "field_1"          : ".net core, c++, Fractal, opencv, julia",
         "field_2"          : "./#/FractalDemo",
         "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/8a465f7d3c40159b1d75c528291da7dcf764868a/ASP_NET_CORE_CPP_ENTRY/Controllers/HomeController.cs#L497",
-        "field_4"          : "https://tensorflownetcore64.tryasp.net/generatejuliaparams/?maxIterations=500&realPart=-0.4&imagPart=0.6",
+        "field_4"          : "{{baseUrlNetCoreCPPEntry}}api/computervision/generatejuliaparams/?maxIterations=500&realPart=-0.4&imagPart=0.6",
         "field_6"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
         "field_10"         : "97411cbf-d80a-4d7a-92dc-f88d158ae552"
     },
     {
 		"id"               : 15,
         "done"             : true,
-        "name"             : "Tic Tac Toe Game A.I. / c++ dll",
-        "description"      : "Tic Tac Toe Game A.I. / c++ dll",
-        "field_1"          : "TicTacToe Game, A.I., c++, Tensorflow",
+        "name"             : "Tic-Tac Toe Game A.I. / c++ dll",
+        "description"      : "Tic-Tac Toe Game A.I. / c++ dll",
+        "field_1"          : "TicTacToe Game, A.I., c++, Tensorflow, Neural Network",
         "field_2"          : "./#/GamesTicTacToeAI?langName=CPP",
         "field_3"          : "https://github.com/aperezNWO/CPP_GCC_TENSORFLOW/blob/88562d65d2797daf55bce4ce6ba7606c46985614/src/_tensorflow_cpp/include/tictactoe.h#L686",
-        "field_4"          : "https://tensorflownetcore64.tryasp.net/api/tictactoe/play?aiMode=1" ,
+        "field_4"          : "{{baseUrlNetCoreCPPEntry}}api/tictactoe/play?aiMode=1" ,
         "field_6"          : "https://en.wikipedia.org/wiki/Neural_network_(machine_learning)",
         "field_10"         : "b3ef5370-9841-46da-86bb-664c7880be6a"  
     },
     {
 		"id"               : 16,
         "done"             : true,
-        "name"             : "Tic Tac Toe Game A.I. / .net core endpoint",
-        "description"      : "Tic Tac Toe Game A.I. / .net core endpoint",
-        "field_1"          : "Tic Tac Toe Game, A.I., C++, .net core, dllimport",
+        "name"             : "Tic-Tac-Toe Game A.I. / .net core endpoint",
+        "description"      : "Tic-Tac-Toe Game A.I. / .net core endpoint",
+        "field_1"          : "Tic-Tac-Toe Game, A.I., C++, .net core, dllimport",
         "field_2"          : "./#/GamesTicTacToeAI?langName=CPP",
-        "field_3"          : "https://github.com/aperezNWO/CPP_GCC_TENSORFLOW/blob/main/src/_tensorflow_cpp/include/tictactoe.h#L708",
-        "field_4"          : "https://tensorflownetcore64.tryasp.net/api/tictactoe/play?aiMode=1" ,
-        "field_6"          : "https://en.wikipedia.org/wiki/Neural_network_(machine_learning)",
+        "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/3fdd99e8a8c670c16718b428f746984e99dcdc56/ASP_NET_CORE_CPP_ENTRY/Controllers/TicTacToeController.cs#L17",
+        "field_4"          : "{{baseUrlNetCoreCPPEntry}}api/tictactoe/play?aiMode=1" ,
+        "field_6"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
+        "field_10"         : "924c1431-2c6e-40a2-9664-f8191235d8a6"  
+    },
+        {
+		"id"               : 17,
+        "done"             : true,
+        "name"             : "Tetris Game A.I. / c++ dll",
+        "description"      : "Tetrus Game A.I. / c++ dll",
+        "field_1"          : "Tetris Game, A.I., c++, Tensorflow, Genetic Algorithm",
+        "field_2"          : "./#/GamesTetrisAI",
+        "field_3"          : "https://github.com/aperezNWO/CPP_GCC_TENSORFLOW/blob/d69cb8942b8c6548098f93ad79cc69df9717f958/src/_tensorflow_cpp/_tensorflow/tensorFlowApp.cpp#L141",
+        "field_4"          : "{{baseUrlNetCoreCPPEntry}}api/tetris/health" ,
+        "field_6"          : "https://en.wikipedia.org/wiki/Genetic_algorithm",
+        "field_10"         : "36fb7939-88da-4a5c-bb38-164062fbaf67"  
+    },
+    {
+		"id"               : 18,
+        "done"             : true,
+        "name"             : "Tetris Game  A.I. / .net core endpoint",
+        "description"      : "Tetris Game  A.I. / .net core endpoint",
+        "field_1"          : "Tetris Game, A.I., C++, .net core, dllimport",
+        "field_2"          : "./#/GamesTetrisAI",
+        "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/8d2049c74c1afb770abb83e718d91568f72b9f76/ASP_NET_CORE_CPP_ENTRY/Controllers/TetrisController.cs#L92",
+        "field_4"          : "{{baseUrlNetCoreCPPEntry}}api/tetris/health" ,
+        "field_6"          : "https://en.wikipedia.org/wiki/Genetic_algorithm",
         "field_10"         : "ca7ac509-59bc-4a9b-b1e1-24362db33e17"  
+    },
+    {
+		"id"               : 19,
+        "done"             : true,
+        "name"             : "Linear Regression / C++ DLL",
+        "description"      : "Linear Regression / C++ DLL",
+        "field_1"          : "Linear Regression, C++, Machine Learning",
+        "field_2"          : "./#/LinearRegression?langeName=CPP",
+        "field_3"          : "https://github.com/aperezNWO/CPP_GCC_TENSORFLOW/blob/ca60dd4427167e74d05ec1e03a76df39bc03f099/src/_tensorflow_cpp/_tensorflow/tensorFlowApp.cpp#L100",
+        "field_4"          : "{{baseUrlNetCoreCPPEntry}}api/linearregression/predict?missionNumberToPredict=18" ,
+        "field_6"          : "https://en.wikipedia.org/wiki/Linear_regression",
+        "field_10"         : "ddfc8e21-fc68-4531-b176-62a7589a3cb1"  
+    },
+    {
+		"id"               : 20,
+        "done"             : true,
+        "name"             : "Linear Regression / .net core entry point",
+        "description"      : "Linear Regression / .net core entry pointL",
+        "field_1"          : "Linear Regression, C++, .net core, dllimport",
+        "field_2"          : "./#/LinearRegression?langeName=CPP",
+        "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/91e093fdda37674e188dfbd61ce600ac51150ac3/ASP_NET_CORE_CPP_ENTRY/Controllers/LinearRegressionController.cs#L43",
+        "field_4"          : "{{baseUrlNetCoreCPPEntry}}api/linearregression/predict?missionNumberToPredict=18" ,
+        "field_6"          : "https://en.wikipedia.org/wiki/Linear_regression",
+        "field_10"         : "e24429ce-2b9a-42a4-8690-1edcf09c1b72"  
     }
 ]	

@@ -140,18 +140,12 @@ console.log('After draw:', { position: this.currentPiece?.position, boardTop: th
 
                 --[_] https://pwa-demo-env-prod.web.app/
 
-        --  [_]  PWA_DEMO_ENV_PUBLIC   -> SHOW TO PUBLIC
-
         --  [_]  PWA_DEMO_ENV_DEV      -> TENSORFLOW / DATA SCIENCE 
 
-  -- [_] Cambiar URL : 
- 
-        PWA_DEMO_ENV_PUBLIC -> ANGULAR_DEMO_ENV_PROD.
-        PWA_DEMO_ENV_DEV    -> ANGJLAR_DEMO_ENV_PUBLIC.
         
 -- [_] sites destination.
 
-        -- [_] env_landing -> marketing.
+        -- [_] env_admin    -> marketing.
 
         -- [_] env_public  -> programming demo.
 

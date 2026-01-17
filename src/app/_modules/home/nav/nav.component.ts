@@ -2,7 +2,7 @@ import { Component, OnInit, VERSION    } from '@angular/core';
 import { Title                         } from '@angular/platform-browser';
 import { CustomErrorHandler            } from 'src/app/app.component';
 import { BackendService                } from 'src/app/_services/BackendService/backend.service';
-import { ConfigService                 } from 'src/app/_services/ConfigService/config.service';
+import { ConfigService                 } from 'src/app/_services/__Utils/ConfigService/config.service';
 //
 @Component({
   selector: 'app-nav',
@@ -39,11 +39,11 @@ export class NavComponent {
     {
       'url'          : '/PageUrlList', 
       'text'         : '[DEMOS]',
-      'queryParams'  : 'PAGE_DEMOS_INDEX'
+      'queryParams'  : 'PAGE_ANGULAR_DEMO_INDEX'
     },  
     {
       'url'          : '/PageUrlList', 
-      'text'         : '[ACERCA DE]',
+      'text'         : '[ABOUT]',
       'queryParams'  : 'PAGE_ABOUT_INDEX'
     },    
   ];
@@ -72,26 +72,6 @@ export class NavComponent {
       keyName          = 'appVersion';
       keyValue         = this._configService.getConfigValue(keyName);
       this._appVersion = keyValue;
-      //
-      let __baseUrlNetCore = this._configService.getConfigValue('baseUrlNetCore');
-      let __baseUrlNodeJs  = this._configService.getConfigValue('baseUrlNodeJs');
-      //
-      this.backendService._baseUrlNetCore = __baseUrlNetCore;
-      this.backendService._baseUrlNodeJs  = __baseUrlNodeJs;
-      //
-      //////////////////////////////////////////////////////
-      // CACHE PARA XML
-      ///////////////////////////////////////////////////////
-      //
-      this.backendService._SetXmlDataToCache(__baseUrlNetCore);
-      ///////////////////////////////////////////////////////
-      // CACHE PARA PIE CHART
-      ///////////////////////////////////////////////////////
-      this.backendService._SetSTATPieCache(__baseUrlNetCore);
-      ///////////////////////////////////////////////////////
-      // CACHE PARA BARCHART
-      ///////////////////////////////////////////////////////
-      this.backendService._SetSTATBarCache(__baseUrlNetCore);
       //
       let title : string = `${this._appBrand} -- ${this._appEnv} -- ${this._appVersion}`;
       //

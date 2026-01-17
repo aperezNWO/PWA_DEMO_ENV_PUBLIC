@@ -2,21 +2,28 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { DatePipe                     } from '@angular/common';
 import { NgForm                       } from '@angular/forms'
-import { ActivatedRoute               } from '@angular/router';;
-import { ChatService                  } from 'src/app/_services/ChatService/chat.service';
-import { BaseComponent                } from 'src/app/_components/base/base.component';
-import { BackendService               } from 'src/app/_services/BackendService/backend.service';
-import { SpeechService                } from 'src/app/_services/speechService/speech.service';
-import { ConfigService                } from 'src/app/_services/ConfigService/config.service';
-import { PAGE_MISCELANEOUS_CHAT       } from 'src/app/_models/common';
+import { ActivatedRoute               } from '@angular/router';
+import { PAGE_MISCELANEOUS_CHAT, PAGE_TITLE_LOG, PAGE_TITLE_NO_SOUND       } from 'src/app/_models/common';
+import { BackendService                               } from 'src/app/_services/BackendService/backend.service';
+import { SpeechService                                } from 'src/app/_services/__Utils/SpeechService/speech.service';
+import { ConfigService                                } from 'src/app/_services/__Utils/ConfigService/config.service';
+import { ChatService                                  } from 'src/app/_services/__Utils/ChatService/chat.service';
+import { BaseReferenceComponent                       } from 'src/app/_components/base-reference/base-reference.component';
+
 //
 @Component({
-  selector: 'app-chat',
-  templateUrl: './chat.component.html',
-  styleUrls: ['./chat.component.css']
+  selector     : 'app-chat',
+  templateUrl  : './chat.component.html',
+  styleUrls    : ['./chat.component.css'],
+  providers    : [
+      { 
+        provide  : PAGE_TITLE_LOG, 
+        useValue : PAGE_MISCELANEOUS_CHAT 
+      },
+  ]
 })
 //
-export class ChatComponent extends BaseComponent implements OnInit  {
+export class ChatComponent extends BaseReferenceComponent implements OnInit  {
   parentData: any[] = [];
   @ViewChild("_txtName")    txtName:any;
   @ViewChild("_txtMessage") txtMessage:any;
@@ -33,7 +40,7 @@ export class ChatComponent extends BaseComponent implements OnInit  {
             backendService,
             route,
             speechService,
-            PAGE_MISCELANEOUS_CHAT);
+            PAGE_TITLE_NO_SOUND);
 
   }
   ngOnInit() {
@@ -60,14 +67,16 @@ export class ChatComponent extends BaseComponent implements OnInit  {
   }
   //  
   sendMessage(name : string ,message: string) {
-    //
-    const currentDate = new Date();
-    let formattedDate = this.datePipe.transform(currentDate, 'yyyy-MM-dd HH:mm:ss');
-    //
-    let messageToSend : string = `[${formattedDate}] -[${name}] Says: "${message}"`;
-    //
-    this.status_message.set(message);
-    //
-    this.chatService.sendMessage(messageToSend);
+      //
+      const currentDate = new Date();
+      let formattedDate = this.datePipe.transform(currentDate, 'yyyy-MM-dd HH:mm:ss');
+      //
+      let messageToSend : string = `[${formattedDate}] -[${name}] Says: "${message}"`;
+      //
+      this.chatService.sendMessage(messageToSend);
+      //
+      this.status_message.set(message);
+      //
+      return;
   }
 }

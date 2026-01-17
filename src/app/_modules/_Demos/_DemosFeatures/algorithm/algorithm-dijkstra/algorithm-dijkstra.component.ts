@@ -1,23 +1,30 @@
-import { AfterViewInit, Component, OnInit, ViewChild,signal,effect  } from '@angular/core';
-import { ActivatedRoute                                             } from '@angular/router';
-import { Observable                                                 } from 'rxjs';
-import { _languageName, _vertexSize                                 } from 'src/app/_models/entity.model';
-import { PdfService                                                 } from 'src/app/_engines/pdf.engine';
+import { AfterViewInit, Component, OnInit, ViewChild,signal,effect       } from '@angular/core';
+import { ActivatedRoute                                                  } from '@angular/router';
+import { Observable                                                      } from 'rxjs';
+import { _languageName, _vertexSize                                      } from 'src/app/_models/entity.model';
+import { PAGE_ALGORITHMS_DIJKSTRA, PAGE_TITLE_LOG, PAGE_TITLE_NO_SOUND   } from 'src/app/_models/common';
 import { UtilManager                                                } from 'src/app/_engines/util.engine';
 import { BackendService                                             } from 'src/app/_services/BackendService/backend.service';
-import { SpeechService                                              } from 'src/app/_services/speechService/speech.service';
-import { BaseComponent                                              } from 'src/app/_components/base/base.component';
-import { ConfigService                                              } from 'src/app/_services/ConfigService/config.service';
-import { PAGE_ALGORITMOS_DIJKSTRA                                   } from 'src/app/_models/common';
+import { SpeechService                                              } from 'src/app/_services/__Utils/SpeechService/speech.service';
+import { ConfigService                                              } from 'src/app/_services/__Utils/ConfigService/config.service';
+import { PdfService                                                 } from 'src/app/_services/__FileGeneration/pdf.service';
+import { AlgorithmService                                           } from 'src/app/_services/AlgorithmService/algorithm.service';
+import { BaseReferenceComponent                                     } from 'src/app/_components/base-reference/base-reference.component';
 
 
 @Component({
   selector       : 'app-algorithm-dijkstra',
   templateUrl    : './algorithm-dijkstra.component.html',
-  styleUrls      : ['./algorithm-dijkstra.component.css']
+  styleUrls      : ['./algorithm-dijkstra.component.css'],
+  providers   : [
+    { 
+      provide : PAGE_TITLE_LOG, 
+      useValue: PAGE_ALGORITHMS_DIJKSTRA 
+    },
+    ]
 })
 //
-export class AlgorithmDijkstraComponent extends BaseComponent implements OnInit, AfterViewInit  {
+export class AlgorithmDijkstraComponent extends BaseReferenceComponent implements OnInit, AfterViewInit  {
   ////////////////////////////////////////////////////////////////
   // PROPERTIES //////////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////
@@ -59,14 +66,14 @@ export class AlgorithmDijkstraComponent extends BaseComponent implements OnInit,
               public override route              : ActivatedRoute,
               public override speechService      : SpeechService,
               public pdfService                  : PdfService,
-              //public customErrorHandler           : CustomErrorHandler, 
+              public algorithmService            : AlgorithmService, 
             ) 
   {
       super(configService,
             backendService,
             route,
             speechService,
-            PAGE_ALGORITMOS_DIJKSTRA
+            PAGE_TITLE_NO_SOUND
 
       );
   }
@@ -97,7 +104,7 @@ export class AlgorithmDijkstraComponent extends BaseComponent implements OnInit,
       this.__languajeList = new Array();
       //
       this.__languajeList.push(
-        new _languageName(0, '(SELECCIONE OPCION..)', false,""),
+        new _languageName(0, '(CHOOSE OPTION...)', false,""),
       );
       //
       this.__languajeList.push(new _languageName(1, '(.Net Core   / C#)'             , false ,"CS" ));
@@ -205,7 +212,7 @@ export class AlgorithmDijkstraComponent extends BaseComponent implements OnInit,
       //[X]
       this.DrawGrid();
       //
-      this.status_message.set(`Se reinició correctamente el gráfico`);
+      this.status_message.set(`[Graph reseted correctly]`);
   };
   // 
   _GetGraph():void
@@ -219,7 +226,7 @@ export class AlgorithmDijkstraComponent extends BaseComponent implements OnInit,
         //
         let _progLangId        : number = Number.parseInt(this._languajeList.nativeElement.value);
         //
-        this.status_message.set('[Generando Gráfico por favor espere]');
+        this.status_message.set('[Generating graph. Please wait...]');
         //
         switch(_progLangId)    
         {
@@ -227,13 +234,13 @@ export class AlgorithmDijkstraComponent extends BaseComponent implements OnInit,
                   return;
             break;
             case 1 :  // c#
-              randomVertexInfo       = this.backendService.getRandomVertex(_vertexSize,_sourcePoint);
+              randomVertexInfo       = this.algorithmService.getRandomVertex(_vertexSize,_sourcePoint);
             break;
             case 2:   // c++
-              randomVertexInfo       = this.backendService.getRandomVertexCpp(_vertexSize,_sourcePoint);
+              randomVertexInfo       = this.algorithmService.getRandomVertexCpp(_vertexSize,_sourcePoint);
             break;
             case 3:   // springboot
-              randomVertexInfo       = this.backendService.getRandomVertexSpringBoot(_vertexSize,_sourcePoint);
+              randomVertexInfo       = this.algorithmService.getRandomVertexSpringBoot(_vertexSize,_sourcePoint);
             break;
         }
         //
@@ -287,9 +294,9 @@ export class AlgorithmDijkstraComponent extends BaseComponent implements OnInit,
                 //-------------------------------------------------------------
                 //
                 let _sourcePoint        : number = Number.parseInt(this._sourcePointList.nativeElement.value);
-                this.tituloListadoDistancias     = "DISTANCIAS DESDE [" + _sourcePoint.toString() + "]:";
+                this.tituloListadoDistancias     = "DISTANCE FROM [" + _sourcePoint.toString() + "]:";
                 //
-                this.status_message.set("[Se generó correctamente el gráfico]");
+                this.status_message.set("[Graph generated correctly]");
                 //
                 this.DrawDistanceList(false,vertexString);
             },
@@ -299,7 +306,7 @@ export class AlgorithmDijkstraComponent extends BaseComponent implements OnInit,
                 //
                 this._ResetControls();
                 //
-                this.status_message.set('[Ha ocurrido un error favor intente de nuevo]');
+                this.status_message.set('[An error occured. Please try again]');
             },       
             complete: ()        => {
                 //
@@ -498,7 +505,7 @@ export class AlgorithmDijkstraComponent extends BaseComponent implements OnInit,
     if (clearItems == false)
     {
         //
-        let _vertexSizeInitial : _vertexSize = new _vertexSize(0,"(SELECCIONE DISTANCIA)");
+        let _vertexSizeInitial : _vertexSize = new _vertexSize(0,"(SELECT DISTANCE)");
         this.__distanceList.push(_vertexSizeInitial);
         //
         let stringItems : string[] = Items.split("<br/>");
@@ -559,7 +566,7 @@ export class AlgorithmDijkstraComponent extends BaseComponent implements OnInit,
   _GetPDF():void
   {
       //
-      this.status_message.set('[...Generando PDF...]');
+      this.status_message.set('[...Generating PDF...]');
       //
       let fileName         : string     = "DIJKSTRA";
       let fileName_output  : string     = '';
@@ -577,11 +584,11 @@ export class AlgorithmDijkstraComponent extends BaseComponent implements OnInit,
           },
           error: (error: Error) => {
               //
-              this.status_message.set('ha ocurrido un error : ' + error.message);
+              this.status_message.set('An error occurred : ' + error.message);
           },
           complete: () => {
               //
-              this.status_message.set(`Se ha generado el archivo pdf correctamente`);
+              this.status_message.set(`[PDF file generated correctly]`);
           }
         }
       );

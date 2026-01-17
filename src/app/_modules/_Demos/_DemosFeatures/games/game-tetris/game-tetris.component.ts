@@ -1,24 +1,30 @@
 // tetris.component.ts
-import { Component, HostListener, OnInit } from '@angular/core';
-import { ActivatedRoute                  } from '@angular/router';
-import { interval, Subscription          } from 'rxjs';
-import { BaseComponent                   } from 'src/app/_components/base/base.component';
-import { BackendService                  } from 'src/app/_services/BackendService/backend.service';
-import { PageRestartService              } from 'src/app/_services/pageRestart/page-restart.service';
-import { SpeechService                   } from 'src/app/_services/speechService/speech.service';
-import { ConfigService                   } from 'src/app/_services/ConfigService/config.service';
-import { PAGE_GAMES_TETRIS               } from 'src/app/_models/common';
+import { Component, HostListener, Injectable, OnInit } from '@angular/core';
+import { ActivatedRoute, Router                      } from '@angular/router';
+import { BaseReferenceComponent                      } from 'src/app/_components/base-reference/base-reference.component';
+import { BackendService                              } from 'src/app/_services/BackendService/backend.service';
+import { SpeechService                               } from 'src/app/_services/__Utils/SpeechService/speech.service';
+import { ConfigService                               } from 'src/app/_services/__Utils/ConfigService/config.service';
+import { PAGE_GAMES_TETRIS, PAGE_TITLE_LOG, PAGE_TITLE_NO_SOUND } from 'src/app/_models/common';
+import { interval, Subscription                      } from 'rxjs';
+
 interface Position {
   x: number;
   y: number;
 }
 
 @Component({
-  selector: 'app-game-tetris',
-  templateUrl: './game-tetris.component.html',
-  styleUrl: './game-tetris.component.css'
+  selector    : 'app-game-tetris',
+  templateUrl : './game-tetris.component.html',
+  styleUrl    : './game-tetris.component.css',
+  providers   : [
+    { 
+      provide : PAGE_TITLE_LOG, 
+      useValue: PAGE_GAMES_TETRIS 
+    },
+  ]
 })
-export class GameTetrisComponent  extends BaseComponent implements OnInit  {
+export class GameTetrisComponent  extends BaseReferenceComponent implements OnInit  {
   readonly BOARD_WIDTH = 10;
   readonly BOARD_HEIGHT = 20;
   readonly TICK_INTERVAL = 1000;
@@ -46,18 +52,18 @@ export class GameTetrisComponent  extends BaseComponent implements OnInit  {
 
 //
   constructor(
-                  private pageRestartService        : PageRestartService,
-                  public  override configService    : ConfigService,
-                  public  override route            : ActivatedRoute,
-                  public  override speechService    : SpeechService,
-                  public  override backendService   : BackendService) 
+                  public           pageRestartService : PageRestartService,
+                  public  override configService      : ConfigService,
+                  public  override route              : ActivatedRoute,
+                  public  override speechService      : SpeechService,
+                  public  override backendService     : BackendService) 
   { 
       //
       super(configService,
             backendService,
             route,
             speechService,
-            PAGE_GAMES_TETRIS
+            PAGE_TITLE_NO_SOUND
       )
   }
   //
@@ -239,7 +245,7 @@ export class GameTetrisComponent  extends BaseComponent implements OnInit  {
         y++; // Check the same line again
       }
     }
-    
+
     if (linesCleared > 0) {
       this.score += Math.pow(2, linesCleared - 1) * 100;
     }
@@ -251,5 +257,31 @@ export class GameTetrisComponent  extends BaseComponent implements OnInit  {
     if (this.gameLoop$) {
       this.gameLoop$.unsubscribe();
     }
+  }
+}
+
+
+@Injectable({
+  providedIn: 'root',
+})
+class PageRestartService {
+  constructor(private router: Router) {}
+
+  // Method 1: Simple page reload
+  reloadPage() {
+    window.location.reload();
+  }
+
+  // Method 2: Reload current route
+  async reloadCurrentRoute() {
+    const currentUrl = this.router.url;
+    await this.router.navigateByUrl('/', { skipLocationChange: true });
+    return this.router.navigateByUrl(currentUrl);
+  }
+
+  // Method 3: Reload with query params refresh
+  reloadWithQueryParamsRefresh() {
+    const currentUrl = window.location.href;
+    window.location.href = currentUrl;
   }
 }

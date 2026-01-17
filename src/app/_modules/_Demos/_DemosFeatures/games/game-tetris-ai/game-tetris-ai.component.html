@@ -1,67 +1,90 @@
 <div align="center">
     <!-- ENCABEZADO / INICIO  -->  
-    <div align="center">
-      <h1>{{  this.pageTitle }}</h1>
-    </div>
-    <hr> 
-    <div class="reference" align="right">
-   <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
-   <ul *ngIf="isListVisible" align="left" widdth="10px">
-      <li> [Frontend]
-          <ul>
-              <li><a routerLink="/GridParam" [queryParams]="{ searchTerm: '' , pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT' }">[Angular]</a></li>
-          </ul>
-      </li>
-      <li>[Librerias]
-          <ul>
-              <li><a href="https://v17.angular.io/guide/observables" target="_blank">[Observable]</a></li>
-          </ul>
-      </li>
-      <li>[Temas]
-          <ul>
-              <li><a href="https://en.wikipedia.org/wiki/Tetris" target="_blank">[Tetris]</a></li>
-          </ul>
-      </li>
-    </ul>
-    </div>  
+    <app-base-reference></app-base-reference>
     <!-- ENCABEZADO / FIN -->  
     <hr>
     <!-- TABLERO INICIO -->
-  <div class="tetris-container">
-  
-    <!-- Tablero -->
-      <div class="board">
-        <div *ngFor="let row of board; let y = index" class="row">
-          <div *ngFor="let cell of row; let x = index"
-              [class.cell]="true"
-              [class.filled]="cell === 1">
+   <div class="tetris-container" *ngIf="isGameReady(); else loadingTemplate">
+    <div class="board-section">
+      <div class="board" *ngIf="state.boardMatrix.length > 0">
+          <!-- Preview row with animation -->
+          <div class="preview-row" *ngIf="!state.gameOver">
+            <div class="cell preview" *ngFor="let cell of state.boardMatrix[0]">
+              <div *ngIf="cell !== 0" class="preview-piece"></div>
+            </div>
+          </div>
+          <div class="row" *ngFor="let row of state.boardMatrix; let y = index">
+          <div class="cell" 
+              *ngFor="let cell of row; let x = index"
+              [class.empty]="cell === 0"
+              [class.piece-1]="cell === 1"
+              [class.piece-2]="cell === 2"
+              [class.piece-3]="cell === 3"
+              [class.piece-4]="cell === 4"
+              [class.piece-5]="cell === 5"
+              [class.piece-6]="cell === 6"
+              [class.piece-7]="cell === 7"
+              [title]="'Cell (' + x + ',' + y + ') = ' + cell">
           </div>
         </div>
       </div>
-
-      <!-- Estado de la IA -->
-      <div *ngIf="aiSuggestion" class="ai-info">
-        <p><strong>Acción:</strong> {{ ['←', '→', '↻', '↓', '·'][aiSuggestion.action] }}</p>
-        <p><small>Q: [{{ qValuesFormatted }}]</small></p>
+     
+      <!-- Controls -->
+      <div class="controls">
+        <!--<button (click)="step()">Step AI</button>-->
+        <button (click)="reset()">Reset</button>
+        <button (click)="toggleAutoPlay()">
+          {{ tetrisService.isAutoPlaying() ? 'Stop' : 'Start' }} Auto-Play
+        </button>
       </div>
 
-      <!-- Estado del juego -->
-      <div class="status">
-        <p><strong>Puntuación:</strong> {{ score }}</p>
-        <p *ngIf="gameOver" class="game-over">💥 ¡Juego terminado!</p>
+      <!-- Stats -->
+      <div class="info">
+        <h3>Score: {{ state.score }}</h3>
+        <h3>Lines: {{ state.lines }}</h3>
+        <h3>Level: {{ state.level }}</h3>
+        <h3>Next: {{ getPieceName(state.nextPiece) }}</h3>
+        <h3 *ngIf="state.gameOver" class="game-over">GAME OVER</h3>
       </div>
+    </div>
 
-      <!-- Único botón: Reiniciar -->
-      <button (click)="resetGame()" class="reset-btn">
-        🔄 Reiniciar
-      </button>
-  
-  </div>
+    <!-- AI Controls -->
+
+    <div class="ai-section">
+      <h3>AI Configuration</h3>
+      <button (click)="trainAI()">Train New AI</button>
+      <button (click)="loadAIWeights()">Refresh Weights</button>
+
+      <div class="weights">
+        <label>Lines Weight: <input type="number" [(ngModel)]="aiWeights.linesWeight" step="0.1"></label>
+        <label>Height Weight: <input type="number" [(ngModel)]="aiWeights.heightWeight" step="0.1"></label>
+        <label>Holes Weight: <input type="number" [(ngModel)]="aiWeights.holesWeight" step="0.1"></label>
+        <label>Bumpiness Weight: <input type="number" [(ngModel)]="aiWeights.bumpinessWeight" step="0.1"></label>
+        <button (click)="updateAIWeights()">Update Weights</button>
+      </div>
+    </div>
+   </div>
     <!-- TABLERO FIN    -->
+    <!-- STATUS INICIO -->
+    <ng-template #loadingTemplate>
+    <div class="loading-container">
+      <h2>🎮 Initializing Tetris AI...</h2>
+      <p>Please wait while we load the game engine.</p>
+      <div class="spinner"></div>
+      <button (click)="initializeGame()" *ngIf="!initializationAttempted">
+        Retry Initialization
+      </button>
+      <p class="error" *ngIf="initializationAttempted">
+        ⚠️ If this persists, check the console (F12) and ensure TensorFlowAppCPP.dll
+        is in the API directory (same folder as your ASP.NET .exe).
+      </p>
+    </div>
+    </ng-template>
+    <!-- STATUS FIN     -->
     <hr />
      <!-- RETURN TO HOME PAGE - INIT -->
      <div align="right">
-         <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_GAMES_INDEX'}" >[Volver al Menu]</a>
+         <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_GAMES_INDEX'}" >[Back to Menu]</a>
      </div>
      <!-- RETURN TO HOME PAGE - END   -->  
 </div>

@@ -1,10 +1,8 @@
 import { Component                                                      } from '@angular/core';
 import { _environment                                                   } from 'src/environments/environment';
 import { _BaseModel                                                     } from 'src/app/_models/entity.model';
-import { SpeechService                                                  } from 'src/app/_services/speechService/speech.service';
-import { BackendService                                                 } from 'src/app/_services/BackendService/backend.service';
 import { PAGE_ABOUT_SCM, PAGE_ID, PAGE_SIZE, SEARCH_TERM                } from 'src/app/_models/common';
-import { _SearchService                                                 } from 'src/app/_services/searchService/_search.service';
+import { _SearchService                                                 } from 'src/app/_services/__Utils/SearchService/_search.service';
 import { _SearchComponent                                               } from 'src/app/_components/search/_search.component ';
 
 //

@@ -1,44 +1,14 @@
-<div class="content">
+<div align="center">
     <!-- ENCABEZADO / INICIO -->
-    <div align="center"><H1>{{this.pageTitle}}</H1></div>
-    <hr>
-    <div class="reference" align="right">
-        <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
-        <ul *ngIf="isListVisible" align="left" widdth="10px">
-            <li> [Frontend]
-                <ul>
-                    <li><a routerLink="/GridParam" [queryParams]="{ searchTerm: '6bfa047d-dbd7-4991-a4d6-b9786c601285' , pageName: 'PAGE_DEMOS_ANGULAR_JAVASCRIPT' }">[Angular]</a></li>
-                </ul>
-            </li>
-            <li>[Backend]
-                <ul>
-                <li><a [routerLink]="'/GridParam'"             [queryParams]="{ searchTerm: 'bf4b9c6d-3cac-4585-885e-4b8e29420010' , pageName : 'PAGE_DEMOS_NETCORE_CPP'    }">[c++ / dll source]</a></li>
-                <li><a [routerLink]="'/GridParam'"             [queryParams]="{ searchTerm: 'b48fc53c-e37a-433c-9ece-773500c5f72f' , pageName : 'PAGE_DEMOS_NETCORE_CPP'    }">[c++ / .net core endpoint]</a></li>
-                <li><a [routerLink]="'/GridParam'"             [queryParams]="{ searchTerm: '2f631080-b28c-4973-add6-0d26cb30e2c1' , pageName : 'PAGE_DEMOS_NETCORE_CSHARP' }">[.netcore/c#]</a></li>
-                </ul>
-            </li>
-            <li>[Librerias]
-                <ul>
-                    <li><a href="https://developer.mozilla.org/es/docs/Web/API/Canvas_API" target="_blank">[canvas]</a></li>
-                </ul>
-            </li>
-            <li>[Temas]
-                <ul>
-                    <li><a href="javascript: void window.open('https://en.wikipedia.org/wiki/Bubble_sort')">[BUBBLE SORT]</a></li>
-                    <li><a href="javascript: void window.open('https://en.wikipedia.org/wiki/Quicksort')">[QUICK SORT]</a></li>
-                    <li><a href="javascript: void window.open('https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle')">[FISHER/YATES SHUFFLE]</a></li>
-                </ul>
-            </li>
-        </ul>
-        </div>  
+    <app-base-reference></app-base-reference>
     <!-- ENCABEZADO / FIN   -->
     <hr>
     <!--  BOARD / INICIO   -->
-    <p>Listado a Ordenar</p>
+    <p>List to Sort</p>
         <div id="mensajes_1" #mensajes_1 class="mensajes">
         </div>
     <br/>            
-    <p>Listado Oredenado</p>        
+    <p>Sorted list</p>        
         <div id="mensajes_2" #mensajes_2 class="mensajes">
         </div>
     <div id="mensajes" #mensajes style="visibility: hidden;height:0px;">
@@ -62,16 +32,19 @@
             </select>
         </div>
             <div class="form-group" align="left">
-                <label for="SortAlgorithmList">[ALGORITMO] : </label> 
+                <label for="SortAlgorithmList">[ALGORITHM] : </label> 
                 <select id="SortAlgorithmList" #SortAlgorithmList
                 [disabled]="!((this.GetSortLabel != '[...ordenando...]') && (this.GetSortLabel != '[...ordenado...]'))">
-                    <option value="0">[SELECCIONE_OPCION]</option>
+                    <option value="0">[CHOOOSE OPTION]</option>
                     <option value="1">BUBBLE SORT</option>
                     <option value="2">QUICK SORT</option>
                 </select>
             </div>
             <hr>
             <!--STATUS / INICIO   -->
+            <div  *ngIf="this.status_message" class="form-group alert alert-secondary" align="center" role="alert">
+                {{ this.status_message() }}
+            </div>
             <div  *ngIf="this.lblStatus" class="form-group alert alert-secondary" align="center" role="alert">
                 {{ this.lblStatus() }}
             </div>
@@ -79,19 +52,19 @@
             <hr />
             <!-- BOTONES / INICIO  -->
             <div class="form-group" align="left" >
-                <input class="btn btn-primary"   id="NewSort" type="button" title="[REINICIAR]" value="[REINICIAR]" 
+                <input class="btn btn-primary"   id="NewSort" type="button" title="[RESTART]" value="[RESTART]" 
                 (click)="this.GetNewSort()" 
                 [disabled]=" (this.GetSortLabel  == '[...ordenando...]')  ">
                 |
                 <input class="btn btn-success"   id="GetSort" type="button" title="[ORDENAR]" value={{this.GetSortLabel}} 
                 (click)="this.GetSort()"
-                [disabled]=" !( (this.GetSortLabel != '[...ordenando...]') && (this.GetSortLabel != '[...ordenado...]') )">
+                [disabled]=" !( (this.GetSortLabel != '[...ordenando...]') && (this.GetSortLabel != '[...sorting...]') )">
             </div>
             <!-- BOTONES / FIN     -->
     </form>
     <!-- FIN FORMULARIO    -->
     <hr>
     <div align="right">
-        <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_ALGORITMOS_INDEX'}" >[Volver al Menu]</a>
+        <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_ALGORITMOS_INDEX'}" >[Back to Menu]</a>
     </div>
 </div>

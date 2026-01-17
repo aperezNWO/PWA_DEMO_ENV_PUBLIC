@@ -2,7 +2,7 @@ import { Component, QueryList, ViewChildren } from '@angular/core';
 import { Observable                         } from 'rxjs';
 import { BaseSortableHeader, _BaseSortEvent } from 'src/app/_directives/sortable.directive';
 import { _BaseModel, SiteRole               } from 'src/app/_models/entity.model';
-import { __SearchService                    } from 'src/app/_services/searchService/__search.service';
+import { __SearchService                    } from 'src/app/_services/__Utils/SearchService/__search.service';
 
 @Component({
   selector: 'app-search-custom',

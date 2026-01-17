@@ -1,0 +1,406 @@
+/////////////////////////////////////////////
+// STRATEGY
+/////////////////////////////////////////////
+
+/////////////////////////////////////////////
+// GENERAL
+/////////////////////////////////////////////
+
+-- [_] MAIN MENU.
+-- [_] http interceptor.
+-- [_] codespaces.
+
+/////////////////////////////////////////////
+// HANOI TOWER
+/////////////////////////////////////////////
+
+-- [_] MAIN MENU.
+-- [_] .
+-- [_] .
+
+/////////////////////////////////////////////
+// SUDOKU
+/////////////////////////////////////////////
+
+--[_] sudoku from photo capture.
+
+/////////////////////////////////////////////
+
+1) show me an angular and node.js code to crreate an online tic tac toe app
+
+2) ¿Can I make an angular and node.js applicatoin which taka a photograph and recognize letters and numbers?
+
+3) ¿Can I make an angular, node.js and gemini ai applicatoin which taka a photograph and recognize letters and numbers?
+
+https://chat.openai.com/share/f383e00f-3b68-45c8-ad3f-d5bd32b9933e
+
+https://chat.openai.com/share/f383e00f-3b68-45c8-ad3f-d5bd32b9933e
+
+/////////////////////////////////////////////
+
+[EXPORT BARD ANSWERS TO GOOGLE DOCUMENTS]
+
+/////////////////////////////////////////////
+// PWA
+/////////////////////////////////////////////
+
+--[_] https://web.dev/learn/pwa/service-workers
+
+--[_] https://angular.dev/ecosystem/service-workers
+
+/////////////////////////////////////////////
+// TODO LIST
+/////////////////////////////////////////////
+
+-- [x] ngb pad instructions.   
+
+-- [x] Angular Url Query Param. 
+
+-- [x] RXJS Playground.
+
+      --[x] https://v17.angular.io/guide/observables
+
+      --[x] Replace timers with observables.
+
+--[>>] Improve Hanoi Program.
+     
+      --[>>] Hanoi RJXS
+
+      --[>>] Hanoi Game Engine.
+
+      --[>>] Hanoi RJXS - Auto 
+
+            --[>>] Merge Hanoi RJXS with Hanoi Game Engine. 
+-- [x] index.
+
+      -- [x] app routes.
+
+      -- [x] atributo adicional.
+
+      -- [x] grid.
+
+      -- [x] speech to text search.
+
+-- [_] OPEN CV
+
+      -- [_] OCR ? .
+
+      -- [_] CV / BASIC SHAPES RECOGNITION.
+
+      -- [_] CV / COLORED SHAPES RECOGNITION.
+
+      -- [_] C++ Builder. 
+
+-- [_] amigo secreto.
+
+      -- [_] SMTP CLIENT / node.js.
+
+      -- [_] excel list with open fields.
+
+      -- [_] https://gemini.google.com/app/ebedc87978d91d09.
+
+
+-- [_] miscelaneous.
+
+      -- [X] move a.i. prompts from ENV_LANDING.
+
+      -- [X] SPLIT "STABLE RELEASES" FROM "DEV".
+
+      -- [x] BACK TO HOME LINK ON FOOTER.
+
+      -- [>] read config from database.
+
+-- [_] file generation zip / xls | zip / csv.      
+
+-- [_] show me a practial example of tensorflow.js and angular
+
+      -- [_]  https://claude.ai/chat/1fbb12fc-eab0-44da-b2a8-764005708a35     
+
+-- [_] django python backend.
+
+        -- [_] https://code.visualstudio.com/docs/python/tutorial-fastapi
+
+-- [_] A.I. Prompts API QUERY EXAMPLE.
+
+      -- [_] djuango backend.
+      
+      -- [_] node.js backend.
+      
+-- [x] A.I. Prompts.            
+
+        -- [x] page list from json file.
+
+        <li><a href="https://gemini.google.com/" target="_blank">Google Gemini.</a></li>
+        <li><a href="https://chatgpt.com/"       target="_blank">Chat GTP.</a></li>
+        <li><a href="https://claude.ai/new"      target="_blank">Arthropic - Claude.</a></li>
+        <li><a href="https://groq.com/"          target="_blank">Groq</a></li>
+        <li><a href="https://pi.ai/talk"         target="_blank">Inflection - PI</a></li>
+        <li><a href="https://www.meta.ai/"       target="_blank">Meta - A.I.</a></li>
+        <li><a href="https://venice.ai/"         target="_blank">Venice</a></li>
+        <li><a href="https://x.com/i/grok?focus=1" target="_blank">xAI</a></li>
+
+
+-- [_] scm.            
+
+        -- [_] ngb grid component.
+
+            -- [_] AI_PROMPTS.
+
+            -- [_] AI_DEV.
+
+            -- [_] DEV_ENVS.
+
+            -- [_] HOSTINGS.
+
+            -- [_] DB.
+
+ -- [_] HOME
+  
+      -- [_] ICON QUERY URL TO INDEX.
+
+-- [_] TOPICS
+  
+      -- [_] LINK TO ENV_LANDING.
+
+-- [_] ENV_PUBLIC  / ACERCA DE / TECHNICAL SPECS (WEB):
+
+      -- [_] TECHNICAL SPECS (DETAIL) :
+
+            -- [_] json external list.
+
+      -- [_] SCM:
+
+             -- [_] ngb grid.
+
+                  -- [_] span row.
+             
+            -- [_] json external list.
+     
+      -- [_] LLM.
+
+   -- [_] scm             
+
+        -- [_] row detail grid.
+
+        -- [_] ngb grid component.
+
+        -- [_] AI_PROMPTS.
+
+        -- [_] AI_DEV.
+
+        -- [_] DEV_ENVS.
+
+        -- [_] HOSTINGS.
+
+        -- [_] DB.
+
+-- [_] complete header references.
+
+-- [_] download csv / xls /pdf file as zip.
+
+-- [_] CORRECT HANOI 3D POSITION.
+
+-- [_] join chart / xls / csv.
+
+-- [_] opencv.
+
+      -- [_] opencv.js typescript.
+
+      -- [_] python.
+
+      -- [_] c++.
+
+      -- [_] java.
+
+-- [_] tensorflow.
+
+      -- [_] django python backend.
+
+            -- [_] https://code.visualstudio.com/docs/python/tutorial-django
+
+      -- [_] tensorflow.js typescript.
+
+      -- [_] python.
+
+      -- [_] c++.
+
+      -- [_] java.
+
+
+-- [_] sites destination.
+
+        -- [_] env_landing -> marketing.
+
+        -- [_] env_public  -> programming demo.
+
+        -- [_] env_dev     -> tensorflow.
+
+        -- [_] env_prod    -> contact form.
+
+-- [_] git hub source.        
+
+      -- [_] aperezNWO      -> PRIVATE.        
+
+      -- [_] aperezNWOGmail -> PUBLIC.        
+
+      -- [_] EXAM486        -> PUBLIC.        
+
+-- [_] contact form.
+
+      -- [_] oAuth.
+
+            -- [_] Facebook.
+
+                  -- [_] Facebook LOGIN BUTTON.
+
+            -- [_] Gmail.
+     
+      -- [_] Dynamic form.
+
+      -- [_] email notification.
+      
+      -- [_] log.
+
+      -- [_] LLM -> secure tips.
+      
+      -- [_] isolated url / LANDING_PAGE.
+
+      -- [_] Microsoft Fornm.
+  
+      -- [_] Angular / Features.
+
+      -- [_] ENV_XXX 
+            
+            -- [_] env_TEST    => TEST env .
+
+            -- [_] env_DEV     => FREECODECAMP.
+            
+            -- [_] env_prod    => production env.
+
+            -- [_] env_PUBLIC  => CONTACT FORM / DELETE ROUTES.
+
+            -- [_] env_LANDING => MARKETING.
+
+/////////////////////////////////////////////
+
+
+-- [_] CONTACT FORM.
+
+      -- [_]  ADMIN WEB SITE.
+
+            -- [_]  CHANGE LANDING FOR ADMIN.
+
+            -- [_]  ADD CONTACT FORM LOG GRID.
+ 
+      -- [_]  CONTACT FORM.
+
+            -- [_]  RENEW TEST ENV.
+
+            -- [_]  CHANGE / ADD DEV ENV FOR CONTACT ENV.
+
+            -- [_]  ADD FORM "ContacFormoAuth" to CONTACT ENV ( as test).
+
+            -- [_]  LEAVE FORM "ContacFormo" to CONTACT ENV ( as PUBLIC / PROD).
+
+-- [_] PEDING FRECODECAMP ENV (ML / TENSORFLOW / ETC) -> env_dev.
+
+/////////////////////////////////////////////
+// QUESTIONS
+/////////////////////////////////////////////
+
+-- [_] MACHINE LEARNING PENSUM QUESIION
+
+      -- [_] I had a c++ code which showcase the usage of a neural network with a tic tac toe autoplay. Also I have a c++ code which showcase the usage of genetic algorithms with a tetris autoplay. Both does not rely on prebuilt a.i. or g.a. libraries but on pure math logic. Despite of the existance of prebuilt libraries for machine learning, can you advise me on one or several excersices the simplest as possible to showcase the fundamentals of mschine learning using the same aproach (no prebuilt libraries, just pure math and c++ logic)?
+
+             -- [_]  https://chat.qwen.ai/c/3c97ae50-2025-4f2e-b0c2-efd593fdc486
+
+             -- [_]  https://chat.deepseek.com/a/chat/s/f8d02370-7df9-485b-8af3-61b304e07eff
+
+             -- [_]  https://www.kimi.com/chat/19a86777-c912-8a5c-8000-09290ff1597e
+
+ -- [_] MACHINE LEARNING PENSUM
+
+      Core Machine Learning Topics
+
+            1. Fundamentals & Core Concepts:
+
+                  What is Machine Learning? (Supervised, Unsupervised, Reinforcement Learning)
+                  Types of Problems: Classification, Regression, Clustering
+                  Training, Validation, Test Sets
+                  Overfitting and Underfitting
+                  Bias-Variance Tradeoff
+                  Feature Engineering & Data Preprocessing: Scaling, encoding, handling missing data, creating features
+                  Model Evaluation:
+                  Metrics: Accuracy, Precision, Recall, F1-Score, Confusion Matrix, ROC-AUC (Classification); MSE, MAE, R-squared (Regression)
+                  Cross-Validation
+
+            2. Essential Mathematical Background:
+
+                  Linear Algebra: Vectors, Matrices, Matrix Multiplication, Eigenvalues/Eigenvectors (used everywhere)
+                  Calculus: Derivatives (for optimization like gradient descent), Partial Derivatives, Gradients
+                  Probability & Statistics: Distributions, Bayes' Theorem, Expectation, Variance, Correlation
+
+            3. Supervised Learning Algorithms:
+
+                  Linear Regression (Your Book)
+                  Logistic Regression (Often presented as an extension of Linear Regression for classification)
+                  Naive Bayes Classification (Your Book)
+                  k-Nearest Neighbors (k-NN)
+                  Decision Trees
+                  Ensemble Methods:
+                  Random Forest
+                  Gradient Boosting (e.g., XGBoost, LightGBM, CatBoost)
+                  Support Vector Machines (SVMs) (Your Book)
+
+            4. Unsupervised Learning Algorithms:
+
+                  Clustering:
+                  K-Means (Your Book - via Genetic Algorithms example, but a core unsupervised method)
+                  Hierarchical Clustering
+                  DBSCAN
+                  Dimensionality Reduction:
+                  Principal Component Analysis (PCA)
+                  t-SNE (for visualization)
+
+            5. Neural Networks & Deep Learning:
+
+                  Neural Networks (Perceptrons, Multi-Layer Perceptrons) (Your Book)
+                  Forward Propagation & Backpropagation
+                  Activation Functions: ReLU, Sigmoid, Tanh
+                  Loss Functions: MSE, Cross-Entropy
+                  Optimization: Gradient Descent, Stochastic Gradient Descent (SGD), Adam, RMSprop
+                  Convolutional Neural Networks (CNNs) (For Image Processing)
+                  Recurrent Neural Networks (RNNs), LSTMs, GRUs (For Sequence Data)
+                  Introduction to Transformers (For NLP and other tasks)
+
+            6. Reinforcement Learning (RL):
+
+                  Basic Concepts: Agent, Environment, State, Action, Reward, Policy, Value Function
+                  Core Algorithms: Q-Learning, Deep Q-Networks (DQN) (As discussed for Tetris/Tic Tac Toe)
+
+            7. Optimization & Search Algorithms:
+
+                  Gradient Descent Variants (Already mentioned under NNs)
+                  Genetic Algorithms (Your Book)
+                  Monte Carlo Methods (Your Book) (Also used in RL, e.g., Monte Carlo Tree Search)
+
+            8. Software & Tools (Concepts & Practice):
+
+                  Python Programming (NumPy, Pandas, Matplotlib/Seaborn)
+                  ML Libraries: Scikit-learn (for classical algorithms)
+                  Deep Learning Libraries: TensorFlow/Keras, PyTorch
+                  Data Handling: Working with datasets, cleaning, exploration (using Pandas, NumPy).
+                  
+ -- [_] MACHINE LEARNING APPROACH
+
+      -- [_] CONCEPT.
+          
+	      -- [_] C++ CODE.
+	          
+	      -- [_] TENSORFLOW FOR PYTHON CODE.
+	
+	      -- [_] HISTORY OF THE ALGORITHM.
+	      
+	      -- [_] REAL WORLD SOLUTION (language, models and infrastructure may vary).
+
+/////////////////////////////////////////////

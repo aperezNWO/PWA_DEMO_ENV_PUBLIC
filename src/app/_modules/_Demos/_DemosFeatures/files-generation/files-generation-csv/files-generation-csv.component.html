@@ -1,90 +1,65 @@
 <div class="content">
-  <div align="center" style="padding-top:10px;">
-    <h4>{{pageTitle}}</h4>
-  </div>  
-  <hr> 
-  <div class="reference" align="right">
-    <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
-    <ul *ngIf="isListVisible" align="left" widdth="10px">
-        <li> [Frontend]
-          <ul>
-            <li><a routerLink="/GridParam" [queryParams]="{ searchTerm: 'c8981879-7457-4534-b660-b2e8c8eb9c83' , pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT' }">[Angular]</a></li>
-          </ul>
-        </li>
-        <li>[Backend]
-          <ul>
-            <li><a routerLink="/GridParam"       [queryParams]="{ searchTerm: 'ea0a96ee-2278-48c2-9ac6-8ea29c77f925' , pageName : 'PAGE_DEMOS_NETCORE_CSHARP'    }">[.net core/c#]</a></li>
-            <li><a routerLink="/GridParam"       [queryParams]="{ searchTerm: 'f58efe4e-fc26-4f9c-b11b-0e148b3ffb2e' , pageName : 'PAGE_DEMOS_NODEJS_JAVASCRIPT' }">[Node.Js/Javascript]</a></li>
-            <li><a routerLink="/GridParam"       [queryParams]="{ searchTerm: 'b9d33b9d-4f94-4f95-a437-b4544ff478ca' , pageName : 'PAGE_DEMOS_SPRING_BOOT_JAVA'  }">[SpringBoot/Java]</a></li>
-            <li><a routerLink="/GridParam"       [queryParams]="{ searchTerm: '882904a3-efd8-4ed7-bf4c-ccae59b995ce' , pageName : 'PAGE_DEMOS_DJANGO_PYTHON'     }">[Django/Python]</a></li>
-          </ul>
-        </li>
-        <li>[Libraries]
-            <ul>
-              <li><a href="https://material.angular.io/" target="_blank">[Angular Material]</a></li>
-            </ul>
-        </li>
-    </ul>
-  </div>   
+  <app-base-reference></app-base-reference>
   <hr>
   <div>
-      <!-- PANEL BUSQUEDA / INICIO -->
-      <form class="searchPanel" [formGroup]="rf_searchForm">
+    <!-- PANEL BUSQUEDA / INICIO -->
+    <form class="searchPanel" [formGroup]="rf_searchForm">
         <!--BACKEND -->
         <div class="form-group" align="right" id="LangListDiv" >
-          <label for="LangList">{{this.tituloListadoLenguajes}}</label>
-          <select   id="LanguageList"
-                name="LanguajeList"
-                style="width:auto;"
-                #_languajeList>
-                <option *ngFor="let _languageName of __languajeList" 
-                      [value]   ="_languageName._index"
-                      [selected]="_languageName._selected">{{_languageName._value}}
-                </option>
-          </select>
+            <app-files-generation-base></app-files-generation-base>
+            <label for="LangList">{{this.tituloListadoLenguajes}}</label>   
+            <select   id="LanguageList"
+                            name="LanguajeList"
+                            style="width:auto;"
+                            #_languajeList>
+                            <option *ngFor="let _languageName of __languajeList" 
+                                  [value]   ="_languageName._index"
+                                  [selected]="_languageName._selected">{{_languageName._value}}
+                            </option>
+            </select>
         </div>
         <!--P_ROW_NUM-->
         <div class="form-group" align="right">
           <label for="_P_ROW_NUM">
-            # de Registros :
+            # of records:
           </label>
           <input id="_P_ROW_NUM" type="text" formControlName="_P_ROW_NUM">
         </div>
         <!--P_FECHA_INICIO-->
         <div class="form-group" align="right">
           <label for="_P_FECHA_INICIO">
-            Fecha Inicial :
+            Initial Date:
           </label>
           <input id="_P_FECHA_INICIO" type="date" formControlName="_P_FECHA_INICIO">
         </div>
         <!--P_FECHA_FIN-->
         <div class="form-group" align="right">
           <label for="_P_FECHA_FIN">
-            Fecha Final :
+            Final Date:
           </label>
           <input id="_P_FECHA_FIN" type="date" formControlName="_P_FECHA_FIN">
         </div>
         <!-- INICIO BUTTONS PANEL        -->
         <div class="form-group" align="right" style="display: block;" >
-          <button class="btn btn-primary"     type="button" (click)="rf_onSubmit()" [disabled]="(this.rf_buttonCaption != '[Buscar]')">{{this.rf_buttonCaption}}</button>
+          <button class="btn btn-primary"     type="button" (click)="rf_onSubmit()" [disabled]="(this.rf_buttonCaption != '[Search]')">{{this.rf_buttonCaption}}</button>
           |
-          <button class="btn btn-primary"     type="button" (click)="this.rf_newSearch()">[Nueva]</button>
+          <button class="btn btn-primary"     type="button" (click)="this.rf_newSearch()">[New]</button>
           |
-          <button class="btn btn-success"     type="button" (click)="SetCSVLink()" [disabled]="(this.rf_buttonCaption_csv != '[Generar CSV]')">{{this.rf_buttonCaption_csv}}</button>
+          <button class="btn btn-success"     type="button" (click)="SetCSVLink()" [disabled]="(this.rf_buttonCaption_csv != '[Generate CSV]')">{{this.rf_buttonCaption_csv}}</button>
         </div> 
         <!-- FIN BUTTONS PANEL                     -->
         <!-- INICIO MENSAJES VALIDACION (REACTIVE) -->
         <div *ngIf="(this.rf_searchForm.invalid)" class="form-group" align="right">
           <ul class="alert alert-danger">
-                <p>Favor revise los datos del formulario</p>
-                <li *ngIf="((this.rf_searchForm.value['_P_ROW_NUM'] == null) ||  (this.rf_searchForm.value['_P_ROW_NUM'] == '') || (this.rf_searchForm.value['_P_ROW_NUM'] == '0'))" class="alert alert-danger">
-                  El campo '# de Registros' es requerido.
+                <p>Please check form data</p>
+                <li *ngIf="((this.rf_searchForm.value['_P_ROW_NUM'] == null)        ||  (this.rf_searchForm.value['_P_ROW_NUM'] == '') || (this.rf_searchForm.value['_P_ROW_NUM'] == '0'))" class="alert alert-danger">
+                  '# of records' field is required.
                 </li>
                 <li *ngIf="(((this.rf_searchForm.value['_P_FECHA_INICIO'] == null)  || (this.rf_searchForm.value['_P_FECHA_INICIO'] == '') ) )" class="alert alert-danger">
-                  El campo 'Fecha Inicial' es requerido.
+                  'Initial Date'  field is required.
                 </li>
                 <li *ngIf="(((this.rf_searchForm.value['_P_FECHA_FIN'] == null)     || (this.rf_searchForm.value['_P_FECHA_FIN'] == '') ) )" class="alert alert-danger">
-                  El campo 'Fecha Final ' es requerido.
+                 'Final Date' field is required.
                 </li>
           </ul>
         </div>
@@ -92,7 +67,7 @@
         <!-- INICIO STATUS BUSQUEDA      -->
         <div class="form-group" align="center">
           @if (this._loading | async) {
-            <span id="loadingStatus" name="loadingStatus" class="searchStatus">[Cargando...]</span>
+            <span id="loadingStatus" name="loadingStatus" class="searchStatus">[Loading...]</span>
           } 
           @else 
           {
@@ -142,6 +117,6 @@
   </div>
   <hr>
     <div align="right">
-        <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_FILE_GENREATION_INDEX'}" >[Volver al Menu]</a>
+        <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_FILE_GENREATION_INDEX'}" >[Back to Menu]</a>
     </div>
 </div>

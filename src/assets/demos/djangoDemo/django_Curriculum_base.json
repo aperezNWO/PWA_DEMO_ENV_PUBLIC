@@ -2,13 +2,25 @@
 	{
 		"id"               : 1,
         "done"             : true,
-        "name"             : "",
-        "description"      : "",
-        "field_1"          : "",
-        "field_2"          : "",
-        "field_3"          : "",
-        "field_4"          : "",
-        "field_5"          : "",
-        "field_10"         : ""   
+        "name"             : "Django Reference",
+        "description"      : "Django Reference",
+        "field_1"          : "Django Reference",
+        "field_2"          : "javascript:void(0);",
+        "field_3"          : "./#/GridParam?pageName=PAGE_DEMOS_DJANGO_PYTHON",
+        "field_4"          : "./#/GridParam?pageName=PAGE_DEMOS_DJANGO_PYTHON",
+        "field_6"          : "https://docs.djangoproject.com/en/5.2/",
+        "field_10"         : "5d1d696f-9f7d-4030-b1a0-474313b14139"   
+    },
+    {
+		"id"               : 2,
+        "done"             : true,
+        "name"             : "Python Reference",
+        "description"      : "Python Reference",
+        "field_1"          : "Python Reference",
+        "field_2"          : "javascript:void(0);",
+        "field_3"          : "./#/GridParam?pageName=PAGE_DEMOS_DJANGO_PYTHON",
+        "field_4"          : "./#/GridParam?pageName=PAGE_DEMOS_DJANGO_PYTHON",
+        "field_6"          : "https://docs.python.org/3/reference/index.html",
+        "field_10"         : "747a5941-8732-4e1f-bdda-2f77b2fd0913"   
     }
 ]

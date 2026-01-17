@@ -6,7 +6,7 @@
 </div>
 <div>
     @if ((this.speechService.isListening) && (!this.speechService.error))  {
-        <span class="col col-form-label">[Escuchando...]</span>
+        <span class="col col-form-label">[Listening...]</span>
     }
     <span class="col col-form-label" *ngIf="this.speechService.error" class="error">
     <p>Error: {{ this.speechService.error }}</p>

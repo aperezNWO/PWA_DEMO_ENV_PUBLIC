@@ -1,39 +1,7 @@
     <div class="content">
-        <div align="center"><h1>{{this.pageTitle}}</h1></div>
+        <app-base-reference></app-base-reference>
         <hr>
-        <div class="reference" align="right">
-            <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
-            <ul *ngIf="isListVisible" align="left" width="10px">
-                <li> [Frontend]
-                  <ul>
-                    <li><a routerLink="/GridParam" [queryParams]="{ searchTerm: '756e8939-bca0-45f7-b581-63e417b6a2d5' , pageName: 'PAGE_DEMOS_ANGULAR_JAVASCRIPT'  }">[Angular]</a></li>
-                  </ul>
-                </li>
-                <li>[Backend]
-                  <ul>
-                    <li><a routerLink="/GridParam"         [queryParams]="{ searchTerm: '2c8741f0-d7b9-4cef-8aae-e5b2aa4cc0e4' , pageName : 'PAGE_DEMOS_NETCORE_CSHARP' }">[.netcore/c#]</a></li>
-                    <li><a routerLink="/GridParam"         [queryParams]="{ searchTerm: '82ffb387-0aee-4849-9594-75fc2898cf1e' , pageName : 'PAGE_DEMOS_NETCORE_CPP'    }">[c++ / dll source]</a></li>
-                    <li><a routerLink="/GridParam"         [queryParams]="{ searchTerm: '830faf00-71cb-45a0-babd-5bcf5dbf9ccd' , pageName : 'PAGE_DEMOS_NETCORE_CPP'    }">[c++ / .net core endpoint]</a></li>
-                </ul>
-                </li>
-                <li>[Librerias]
-                    <ul>
-                        <li>
-                            <p><a href="javascript: void window.open('https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex?view=net-5.0')">[Clase "RegEx"]</a></p>
-                         </li>
-                    </ul>
-                </li>
-                <li>[Temática]
-                    <ul>
-                        <li>
-                            <a href="javascript: void window.open('https://en.wikipedia.org/wiki/Regular_expression')">[Regular Expressions]</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>   
-        <hr>
-        <p>[CONTENIDO A BUSCAR]</p>
+        <p>[CONTENT TO SEARCH]</p>
         <div id="XmlContent">
             <div id="global">
                 <div id="mensajes" #mensajes>
@@ -54,9 +22,9 @@
                 </select>
             </div>
             <div class="form-group" align="left">
-                <label for="tagSearch">ELEMENTO A BUSCAR : </label>
+                <label for="tagSearch">ELEMENT TO SEARCH : </label>
                 <select id="tagSearch" #tagSearch class="fieldSetRegex">
-                    <option value="0">[SELECCIONE_OPCION]</option>
+                    <option value="0">(CHOOSE OPTION ...)</option>
                     <option value="title">title</option>
                     <option value="artist">artist</option>
                     <option value="country">country</option>
@@ -66,11 +34,11 @@
                 </select>
             </div>
             <div class="form-group" align="left">
-                <label for="textSearch">CONTENIDO : </label>
+                <label for="textSearch">CONTENT : </label>
                 <input type="text" id="textSearch"  #textSearch  class="fieldSetRegex" value="">
             </div>
             <div class="form-group" align="left">       
-                <label for="regExSearch">EXPRESION REGULAR : </label>
+                <label for="regExSearch">REGULAR EXPRESSION : </label>
                 <input type="text" id="regExSearch" #regExSearch class="fieldSetRegex" value="{{this.pattern}}" style="background-color:#cccccc;" readonly="readonly">
             </div>
             <!--STATUS / INICIO   -->
@@ -80,14 +48,14 @@
             <!-- STATUS / FIN     -->
             <!-- BOTONES / INICIO -->
             <div class="form-group" align="left">
-                <input class="btn btn-primary"   id="GetRegex"  type="button" title="[BUSCAR]"    value="[BUSCAR]"    (click)="this.GetRegex()">
+                <input class="btn btn-primary"   id="GetRegex"  type="button" title="[SEARCH]"    value="[SEARCH]"    (click)="this.GetRegex()">
                 |
-                <input class="btn btn-success"   id="newSearch" type="button" title="[REINICIAR]" value="[REINICIAR]" (click)="this._GetXMLData()">
+                <input class="btn btn-success"   id="newSearch" type="button" title="[RESTART]"   value="[RESTART]"   (click)="this._GetXMLData()">
             </div>
             <!-- BOTONES / FIN   -->
         </form>
         <hr>
         <div align="right">
-            <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_ALGORITMOS_INDEX'}" >[Volver al Menu]</a>
+            <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_ALGORITMOS_INDEX'}" >[Back to Menu]</a>
         </div>
     </div>

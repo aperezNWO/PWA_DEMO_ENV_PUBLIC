@@ -1,0 +1,27 @@
+<div align="center" class="animate">
+    <span *ngFor="let page of this._pages_nested" >
+            <!-- WARNING : ROOT MUST NOT HAVE "./#/" STYLE -->
+            @if (page.queryParams)
+            {
+                <a [routerLink]="[page.routerLink]"  [queryParams]="{pageName: page.queryParams}">
+                    <img
+                    [src]="[page.text]"
+                    [alt]="'Logo'"
+                    class="me-1"
+                    style="width: 45px"
+                    />
+                </a>
+            } 
+            @else 
+            {            
+                <a [routerLink]="[page.url]">
+                    <img
+                    [src]="[page.text]"
+                    [alt]="'Logo'"
+                    class="me-1"
+                    style="width: 45px"
+                    />
+                </a>
+            }
+    </span>
+</div>

@@ -1,128 +1,93 @@
 import { Component, OnInit, ViewChild, signal, effect  } from '@angular/core';
 import { FormBuilder, Validators                       } from '@angular/forms';
+import { ActivatedRoute                                } from '@angular/router';
 import { MatTableDataSource                            } from '@angular/material/table';
 import { MatPaginator                                  } from '@angular/material/paginator';
+import { BehaviorSubject, Observable                                    } from 'rxjs';
 import { UtilManager                                   } from 'src/app/_engines/util.engine';
-import { BehaviorSubject, Observable                   } from 'rxjs';
 import { LogEntry, SearchCriteria, _languageName       } from 'src/app/_models/entity.model';
 import { BackendService                                } from 'src/app/_services/BackendService/backend.service';
-import { ActivatedRoute                                } from '@angular/router';
-import { SpeechService                                 } from 'src/app/_services/speechService/speech.service';
-import { BaseComponent                                 } from 'src/app/_components/base/base.component';
-import { ConfigService                                 } from 'src/app/_services/ConfigService/config.service';
-import { PAGE_FILE_GENERATION_XLS                      } from 'src/app/_models/common';
+import { SpeechService                                 } from 'src/app/_services/__Utils/SpeechService/speech.service';
+import { ConfigService                                 } from 'src/app/_services/__Utils/ConfigService/config.service';
+import { PAGE_TITLE_LOG,PAGE_FILE_GENERATION_XLS, PAGE_TITLE_NO_SOUND       } from 'src/app/_models/common';
+import { CustomErrorHandler                                                 } from 'src/app/app.component';
+import { BaseReferenceComponent                                             } from 'src/app/_components/base-reference/base-reference.component';
 //
 @Component({
   selector     : 'app-files-generation-xls',
   templateUrl  : './files-generation-xls.component.html',
-  styleUrls    : ['./files-generation-xls.component.css']
+  styleUrls    : ['./files-generation-xls.component.css'],
+  providers    : [
+          { 
+            provide : PAGE_TITLE_LOG, 
+            useValue: PAGE_FILE_GENERATION_XLS 
+          },
+  ]
 })
 //
-export class FilesGenerationXLSComponent extends BaseComponent implements OnInit {
+export class FilesGenerationXLSComponent extends BaseReferenceComponent implements OnInit {
     //--------------------------------------------------------------------------
-    // PROPIEADES - REACTIVE FORMS
+    // PROPERTIES - COMMON
     //--------------------------------------------------------------------------
     //
-    rf_textStatus                      = signal<string>("");
+    public _loading                                     = new BehaviorSubject<boolean>(false);
     //
-    rf_buttonCaption                   : string = "[Buscar]";
-    //
-    rf_formSubmit                      : boolean = false;
-    //
-    rf_ExcelDownloadLink               : string  = "";
-    //
-    rf_buttonCaption_xls               : string  = "";
-    //
-    rf_textStatus_xls                  = signal<string>("");
-    //
-    rf_dataSource                      = new MatTableDataSource<LogEntry>();
-    // 
-    rf_displayedColumns                : string[] = ['id_Column', 'pageName', 'accessDate', 'ipValue'];
-    //
-    rf_model                           = new SearchCriteria( "1"
-                                            ,"1"
-                                            ,"999"
-                                            ,"2023-01-01"
-                                            ,"2023-12-31"
-                                            ,""
-                                            ,"");
-    //
-    @ViewChild("rf_paginator" ,{read:MatPaginator}) rf_paginator!:  MatPaginator;
+    public __languajeList                              : any;
+    protected tituloListadoLenguajes                   : string = "[Backend] :";
     //
     rf_searchForm   = this.formBuilder.group({
       _P_ROW_NUM          : ["999"         , Validators.required],
       _P_FECHA_INICIO     : ["2023-01-01"  , Validators.required],
       _P_FECHA_FIN        : ["2022-12-31"  , Validators.required],
     });
+    //
+    _model                           = new SearchCriteria( 
+      "1"
+      ,"1"
+      ,"999"
+      ,"2022-09-01"
+      ,"2022-09-30"
+      ,""
+      ,"");
+    //
+    @ViewChild('_languajeList')    _languajeList       : any;
     //--------------------------------------------------------------------------
     // PROPIEADES - TEMPLATE FORMS
     //--------------------------------------------------------------------------
     //
-    td_textStatus                      = signal<string>("");
-    //
     td_formSubmit                      : boolean = false;
     //
-    td_buttonCaption                   : string  = "[Buscar]";
+    td_buttonCaption                   : string  = "[Search]";
     //
-    td_buttonCaption_xls               : string  = "[Generar Excel]";
+    td_buttonCaption_xls               : string  = "[Generate XLS]";
     //
     td_textStatus_xls                  : string  = "";
     //
     td_ExcelDownloadLink               : string  = "#";
     //
     td_dataSource                      = new MatTableDataSource<LogEntry>();
-    //
-    td_model                           = new SearchCriteria( 
-      "1"
-     ,"1"
-     ,"999"
-     ,"2022-09-01"
-     ,"2022-09-30"
-     ,""
-     ,"");
+    // 
+    rf_displayedColumns                : string[] = ['id_Column', 'pageName', 'accessDate', 'ipValue'];
     //
     @ViewChild("td_paginator" ,{read:MatPaginator}) td_paginator!:  MatPaginator;
-    //
-    @ViewChild('_languajeList')    _languajeList       : any;
-    //
-    public __languajeList                              : any;
-    protected tituloListadoLenguajes                   : string = "[Backend] :";
-    //
-    public _loading                                    = new BehaviorSubject<boolean>(false);
     //--------------------------------------------------------------------------
     // EVENT HANDLERS FORMIULARIO 
     //--------------------------------------------------------------------------
+    //
     constructor(
-                public          formBuilder         : FormBuilder,
-                public override configService       : ConfigService,
-                public override backendService      : BackendService, 
-                public override route               : ActivatedRoute,
-                public override speechService       : SpeechService,
-    ) 
+                   public formBuilder          : FormBuilder, 
+                   public customErrorHandler            : CustomErrorHandler,
+                   public override configService        : ConfigService,
+                   public override backendService       : BackendService, 
+                   public override route                : ActivatedRoute,
+                   public override speechService        : SpeechService) 
     {
-        //
-        super(configService,
-              backendService,
-              route,
-              speechService,
-              PAGE_FILE_GENERATION_XLS
-        )
-        // Define an effect to react to changes in the signal
-        effect(() => {
-          if (this.rf_textStatus())
-              this.speechService.speakTextCustom(this.rf_textStatus());
-        });
-        // Define an effect to react to changes in the signal
-        effect(() => {
-          if (this.rf_textStatus_xls())
-              this.speechService.speakTextCustom(this.rf_textStatus_xls());
-          //console.log('Signal value changed:', this.status_message());
-        });
-        // Define an effect to react to changes in the signal
-        effect(() => {
-          if (this.td_textStatus())
-              this.speechService.speakTextCustom(this.td_textStatus());
-        });
+             super(configService,
+                   backendService,
+                   route,
+                   speechService,
+                   PAGE_TITLE_NO_SOUND
+             )
     }
     //
     ngOnInit(): void {
@@ -131,232 +96,19 @@ export class FilesGenerationXLSComponent extends BaseComponent implements OnInit
         //
         this.queryParams();
         //
-        this.rf_newSearch();
+        //this.rf_newSearch();
         this.td_newSearch();
     }
     //--------------------------------------------------------------------------
-    // METODOS COMUNES 
-    //--------------------------------------------------------------------------
-    //
-    queryParams():void{
-      //
-      this.route.queryParams.subscribe(params => {
-        //-----------------------------------------------------------------------------
-        // LENGUAJES DE PROGRAMACION
-        //-----------------------------------------------------------------------------
-        this.__languajeList = new Array();
-        //
-        this.__languajeList.push(
-          new _languageName(0, '(SELECCIONE OPCION..)', false,""),
-        );
-        //
-        this.__languajeList.push(new _languageName(1, '(.Net Core   / C#)'             , false ,"CS"   ));
-        this.__languajeList.push(new _languageName(2, '(Node.js     / JavaScript)'     , false ,"JS"   ));
-        this.__languajeList.push(new _languageName(3, '(SpringBoot  / Java)'           , false ,"JAVA" ));
-        this.__languajeList.push(new _languageName(4, '(Django      / Pytnon)'         , false ,"PY"   ));
-        //
-        let langName = params['langName'] ? params['langName'] : "" ;
-        //
-        if (langName !== '')
-        {   
-            //
-            //console.log("search langName :" + langName );
-            //
-            for (var index = 1; index < this.__languajeList.length; index++) {
-                //
-                if (this.__languajeList[index]._shortName  == langName)
-                  this.__languajeList[index]._selected = true;        
-            }
-
-        } else {
-          //
-          this.__languajeList[1]._selected = true; // C#
-        }
-      });
-    }
-    //
-    GetFormattedDate(p_date : /*Date*/ string, order : number) {
-      //
-      var today = '';
-      switch (order) {
-          case 0:  // FECHA COMPLATIBLE CON RDBMS
-              var p_dates = p_date.toString().split('-'); // P_DATE   = 2022-04-09
-              var day     = p_dates[2];
-              var month   = p_dates[1];
-              var year    = p_dates[0];
-              today       = day + "/" + month + "/" + year;
-              //
-              break;
-      }
-      //
-      return today;
-    } 
-    //--------------------------------------------------------------------------
-    // METODOS REACTIVE FORMS 
-    //--------------------------------------------------------------------------
-    //
-    rf_newSearch()
-    {
-        //
-        console.warn("(NEW SEARCH RF)");
-        //
-        this.rf_dataSource           = new MatTableDataSource<LogEntry>();
-        this.rf_dataSource.paginator = this.rf_paginator;
-        //
-        this.rf_searchForm   = this.formBuilder.group({
-          _P_ROW_NUM          : ["999"         , Validators.required],
-          _P_FECHA_INICIO     : ["2023-01-01"  , Validators.required],
-          _P_FECHA_FIN        : ["2023-12-31"  , Validators.required],
-        });
-        //
-        this.rf_buttonCaption     = "[Buscar]";
-        //
-        this.rf_formSubmit        = false;
-        //
-        this.rf_textStatus.set("");
-        //
-        this.rf_buttonCaption_xls               = "[Generar Excel]";
-        //
-        this.rf_textStatus_xls.set("");
-        //
-        this.rf_ExcelDownloadLink               = "#";
-    }
-    //
-    rf_onSubmit() 
-    {
-        //
-        console.warn("(SUBMIT 1)");
-        //
-        let _P_DATA_SOURCE_ID  : string = ""/*this.searchForm.value["_P_DATA_SOURCE_ID"] || ""*/;
-        let _P_ID_TIPO_LOG     : string = ""/*this.searchForm.value["_P_ID_TIPO_LOG"]    || ""*/;
-        let _P_ROW_NUM         : string = this.rf_searchForm.value["_P_ROW_NUM"]        || "";
-        let _P_FECHA_INICIO    : string = this.rf_searchForm.value["_P_FECHA_INICIO"]   || "";      
-        let _P_FECHA_FIN       : string = this.rf_searchForm.value["_P_FECHA_FIN"]      || "";
-
-        //
-        let _model  = new SearchCriteria( 
-                                _P_DATA_SOURCE_ID
-                              , _P_ID_TIPO_LOG
-                              , _P_ROW_NUM
-                              , _P_FECHA_INICIO
-                              , _P_FECHA_FIN
-                              , "","");
-        //
-        this.rf_formSubmit        = true;
-        //
-        this.rf_textStatus.set("");
-        //
-        if ((this.rf_searchForm.valid == true))
-            this.rf_update(_model);
-    }
-    //
-    rf_update(_searchCriteria : SearchCriteria):void {
-      //
-      this.rf_buttonCaption     = "[Buscando por favor espere]";
-      //
-      this.rf_formSubmit        = true;
-      //
-      let rf_informeLogRemoto!  : Observable<LogEntry[]>;
-      //
-      rf_informeLogRemoto       = this.backendService.getLogRemoto(_searchCriteria);
-      //
-      const logSearchObserver   = {
-        //
-        next: (p_logEntry: LogEntry[])     => { 
-          //
-          let recordCount : number  = p_logEntry.length;
-          //
-          this.rf_textStatus.set("Se encontraton [" + recordCount  + "] registros");
-          //
-          this.rf_dataSource           = new MatTableDataSource<LogEntry>(p_logEntry);
-          this.rf_dataSource.paginator = this.rf_paginator;
-          //
-        },
-        error: (err: Error) => {
-          //
-          console.error('Observer got an error: ' + err);
-          //
-          this.rf_textStatus.set("Ha ocurrido un error");
-          //
-          this.rf_buttonCaption     = "[Buscar]";
-          //
-          this.rf_formSubmit        = false;
-        },       
-        complete: ()        => {
-          //
-          //console.log('Observer got a complete notification');
-          //
-          this.rf_buttonCaption     = "[Buscar]";
-          //
-          this.rf_formSubmit        = false;
-        },
-      };
-      //
-      rf_informeLogRemoto
-      .subscribe(logSearchObserver);
-    }
-    //
-    rf_GenerarInformeXLSValidate():void{
-      //
-      this.rf_GenerarInformeXLSPost();
-    };
-    //
-    rf_GenerarInformeXLSPost():void  {
-      //
-      //console.log("GENERAR EXCEL (RF) - POST");
-      //
-      let rf_excelFileName!                   : Observable<string>;
-      //
-      rf_excelFileName                        = this.backendService.getInformeExcel(this.rf_model);
-      //
-      this.rf_ExcelDownloadLink               = "#";
-      //
-      this.rf_buttonCaption_xls               = "[Generando por favor espere...]";
-      //
-      this.rf_textStatus_xls.set("Generando por favor espere");
-      //
-      const xlsObserver                       = {
-        //
-        next: (_excelFileName: string) => { 
-          //
-          //
-          let urlFile                = UtilManager.DebugHostingContent(_excelFileName);
-          //
-          this.rf_ExcelDownloadLink  = `${this.backendService._baseUrlNetCore}/wwwroot/xlsx/${urlFile}`;
-          //
-          this.rf_textStatus_xls.set("[Descargar Excel]");
-        },
-        error   : (err: Error)  => {
-          //
-          console.error('Observer got an error: ' + err.cause);
-          //
-          console.error('Observer got an error: ' + err.message);
-          //
-          this.rf_buttonCaption_xls  = "[Ha ocurrido un error]";
-          //
-          this.rf_textStatus_xls.set("[Ha ocurrido un error]");
-        },
-        complete: () => {
-          //
-          this.rf_buttonCaption_xls  = "[Generar Excel]";
-        },
-      };
-      //
-      rf_excelFileName
-      .subscribe(xlsObserver);
-    }
-    //--------------------------------------------------------------------------
-    // METODOS REACTIVE FORMS 
+    // METODOS TEMÑLEATE BASED FORMS 
     //--------------------------------------------------------------------------
     //
     td_newSearch() : void {
       //
-      console.warn("(NEW SEARCH TD)");
-      //
       this.td_dataSource           = new MatTableDataSource<LogEntry>();
-      this.td_dataSource.paginator = this.rf_paginator;
+      this.td_dataSource.paginator = this.td_paginator;
       //
-      this.td_model                  = new SearchCriteria( 
+      this._model                  = new SearchCriteria( 
           "1"
          ,"1"
          ,"999"
@@ -365,13 +117,13 @@ export class FilesGenerationXLSComponent extends BaseComponent implements OnInit
          ,""
          ,"");
       //
-      this.td_buttonCaption     = "[Buscar]";
+      this.td_buttonCaption     = "[Search]";
       //
       this.td_formSubmit        = false;
       //
-      this.td_textStatus.set("");
+      this.status_message.set("");
       //
-      this.td_buttonCaption_xls               = "[Generar Excel]";
+      this.td_buttonCaption_xls               = "[Generate XLS]";
       //
       this.td_textStatus_xls                  = "";
       //
@@ -380,9 +132,9 @@ export class FilesGenerationXLSComponent extends BaseComponent implements OnInit
     //
     td_valid_form() : boolean {
       return (     
-             ( ( this.td_model.P_ROW_NUM        != "" ) && (this.td_model.P_ROW_NUM       !=  null) && (this.td_model.P_ROW_NUM      != "0") ) 
-          && ( ( this.td_model.P_FECHA_INICIO   != "" ) && (this.td_model.P_FECHA_INICIO  !=  null) ) 
-          && ( ( this.td_model.P_FECHA_FIN      != "" ) && (this.td_model.P_FECHA_FIN     !=  null) ) 
+             ( ( this._model.P_ROW_NUM        != "" ) && (this._model.P_ROW_NUM       !=  null) && (this._model.P_ROW_NUM      != "0") ) 
+          && ( ( this._model.P_FECHA_INICIO   != "" ) && (this._model.P_FECHA_INICIO  !=  null) ) 
+          && ( ( this._model.P_FECHA_FIN      != "" ) && (this._model.P_FECHA_FIN     !=  null) ) 
       );  
     }
     //
@@ -396,7 +148,7 @@ export class FilesGenerationXLSComponent extends BaseComponent implements OnInit
         this.td_formSubmit    = true;
         //
         if (this.td_valid_form())
-            this.td_update(this.td_model);
+            this.td_update(this._model);
     }
     //
     td_update(td_searchCriteria : SearchCriteria):void {
@@ -409,9 +161,9 @@ export class FilesGenerationXLSComponent extends BaseComponent implements OnInit
       switch (selectedIndex) {
         case 1: // C#
               //
-              this.td_buttonCaption = "[Favor espere...]";
+              this.td_buttonCaption = "[Please wait...]";
               //
-              this.td_textStatus.set("Favor espere...");
+              this.status_message.set("[Please wait...]");
               // 
               let td_informeLogRemoto!                 : Observable<LogEntry[]>;
               //      
@@ -423,21 +175,21 @@ export class FilesGenerationXLSComponent extends BaseComponent implements OnInit
                   this.td_dataSource           = new MatTableDataSource<LogEntry>(td_logEntry);
                   this.td_dataSource.paginator = this.td_paginator;
                   //
-                  this.td_textStatus.set("Se encontraron [" + td_logEntry.length + "] registros ");
+                  this.status_message.set("[" + td_logEntry.length + "] records found ");
                   this.td_formSubmit           = false;
                 },
                 error           : (err: Error)      => {
                   //
                   console.error('TEMPLATE DRIVEN - (ERROR) : ' + JSON.stringify(err.message));
                   //
-                  this.td_textStatus.set("Ha ocurrido un error. Favor intente de nuevo");
+                  this.status_message.set("An error ocurred. Please try again");
                   this.td_formSubmit           = false;
-                  this.td_buttonCaption        = "[Buscar]";
+                  this.td_buttonCaption        = "[Search]";
                 },
                 complete        : ()                => {
                   //
                   this.td_formSubmit           = false;
-                  this.td_buttonCaption        = "[Buscar]";
+                  this.td_buttonCaption        = "[Search]";
                 },
               }; 
               //
@@ -446,9 +198,9 @@ export class FilesGenerationXLSComponent extends BaseComponent implements OnInit
           break;
         case 2: // NODE.JS
               //
-              this.td_buttonCaption = "[Favor espere...]";
+              this.td_buttonCaption = "[Please wait...]";
               //
-              this.td_textStatus.set("Favor espere");
+              this.status_message.set("[Please wait...]");
               // 
               let td_informeLogRemoto_NodeJs!   : Observable<string>;
               // 
@@ -462,21 +214,21 @@ export class FilesGenerationXLSComponent extends BaseComponent implements OnInit
                   this.td_dataSource           = new MatTableDataSource<LogEntry>(td_logEntry_node_js_json);
                   this.td_dataSource.paginator = this.td_paginator;
                   //
-                  this.td_textStatus.set("Se encontraron [" + td_logEntry_node_js_json.length + "] registros ");
+                  this.status_message.set("[" + td_logEntry_node_js_json.length + "] records found ");
                   this.td_formSubmit           = false;
                 },
                 error           : (err: Error)      => {
                   //
                   console.error('TEMPLATE DRIVEN - NODE.JS - (ERROR) : ' + JSON.stringify(err.message));
                   //
-                  this.td_textStatus.set("Ha ocurrido un error. Favor intente de nuevo");
+                  this.status_message.set("An error ocurred. Please try again");
                   this.td_formSubmit           = false;
-                  this.td_buttonCaption        = "[Buscar]";
+                  this.td_buttonCaption        = "[Search]";
                 },
                 complete        : ()                => {
                   //
                   this.td_formSubmit           = false;
-                  this.td_buttonCaption        = "[Buscar]";
+                  this.td_buttonCaption        = "[Search]";
                 },
               }; 
               //
@@ -485,9 +237,9 @@ export class FilesGenerationXLSComponent extends BaseComponent implements OnInit
           break;
         case 3: // SPRINGBOOT / JAVA
               //
-              this.td_buttonCaption = "[Favor espere...]";
+              this.td_buttonCaption = "[Please wait...]";
               //
-              this.td_textStatus.set("Favor espere");
+              this.status_message.set("[Please wait...]");
               // 
               let td_informeLogRemoto_SprinbBootJava!   : Observable<string>;
               // 
@@ -503,21 +255,21 @@ export class FilesGenerationXLSComponent extends BaseComponent implements OnInit
                   this.td_dataSource           = new MatTableDataSource<LogEntry>(td_logEntry_springboot_java_json);
                   this.td_dataSource.paginator = this.td_paginator;
                   //
-                  this.td_textStatus.set("Se encontraron [" + td_logEntry_springboot_java_json.length + "] registros ");
+                  this.status_message.set("[" + td_logEntry_springboot_java_json.length + "] records found ");
                   this.td_formSubmit           = false;
                 },
                 error           : (err: Error)      => {
                   //
                   console.error('TEMPLATE DRIVEN - sprigboot/Java - (ERROR) : ' + JSON.stringify(err.message));
                   //
-                  this.td_textStatus.set("Ha ocurrido un error. Favor intente de nuevo");
+                  this.status_message.set("An error ocurred. Please try again");
                   this.td_formSubmit           = false;
-                  this.td_buttonCaption        = "[Buscar]";
+                  this.td_buttonCaption        = "[Search]";
                 },
                 complete        : ()                => {
                   //
                   this.td_formSubmit           = false;
-                  this.td_buttonCaption        = "[Buscar]";
+                  this.td_buttonCaption        = "[Search]";
                 },
               }; 
               //
@@ -526,9 +278,9 @@ export class FilesGenerationXLSComponent extends BaseComponent implements OnInit
           break;
         case 4: // DJANGO     / PYTHON
           //
-          this.td_buttonCaption = "[Favor espere...]";
+          this.td_buttonCaption = "[Please wait...]";
           //
-          this.td_textStatus.set("Favor espere");
+          this.status_message.set("[Please wait...]");
           // 
           let td_informeLogRemoto_PythonDjango!   : Observable<string>;
           // 
@@ -542,21 +294,21 @@ export class FilesGenerationXLSComponent extends BaseComponent implements OnInit
               this.td_dataSource           = new MatTableDataSource<LogEntry>(td_logEntry_python_django_json);
               this.td_dataSource.paginator = this.td_paginator;
               //
-              this.td_textStatus.set("Se encontraron [" + td_logEntry_python_django_json.length + "] registros ");
+              this.status_message.set("[" + td_logEntry_python_django_json.length + "] records found ");
               this.td_formSubmit           = false;
             },
             error           : (err: Error)      => {
               //
               console.error('TEMPLATE DRIVEN - python/django - (ERROR) : ' + JSON.stringify(err.message));
               //
-              this.td_textStatus.set("Ha ocurrido un error. Favor intente de nuevo");
+              this.status_message.set("An error ocurred. Please try again");
               this.td_formSubmit           = false;
-              this.td_buttonCaption        = "[Buscar]";
+              this.td_buttonCaption        = "[Search]";
             },
             complete        : ()                => {
               //
               this.td_formSubmit           = false;
-              this.td_buttonCaption        = "[Buscar]";
+              this.td_buttonCaption        = "[Search]";
             },
           }; 
           //
@@ -570,20 +322,21 @@ export class FilesGenerationXLSComponent extends BaseComponent implements OnInit
     //
     td_GenerarInformeXLSValidate():void
     {
-        this.td_GenerarInformeXLS(this.td_model);
+        this.td_GenerarInformeXLS(this._model);
     }
+    //
     td_GenerarInformeXLS(_searchCriteria : SearchCriteria)
     {
       //
       let td_excelFileName!                   : Observable<string>;
       //
-      td_excelFileName                        = this.backendService.getInformeExcel(this.rf_model);
+      td_excelFileName                        = this.backendService.getInformeExcel(this._model);
       //
       this.td_ExcelDownloadLink               = "#";
       //
-      this.td_buttonCaption_xls               = "[Generando por favor espere...]";
+      this.td_buttonCaption_xls               = "[Generating please wait ...]";
       //
-      this.td_textStatus.set("Generando por favor espere.");
+      this.status_message.set("[Generating please wait ...]");
       //
       const xlsObserver                       = {
         //
@@ -591,11 +344,11 @@ export class FilesGenerationXLSComponent extends BaseComponent implements OnInit
           //
           let urlFile                = UtilManager.DebugHostingContent(_excelFileName); 
           //
-          this.td_ExcelDownloadLink  = `${this.backendService._baseUrlNetCore}/wwwroot/xlsx/${urlFile}`;
+          this.td_ExcelDownloadLink  = `${this.configService.getConfigValue('baseUrlNetCore')}/wwwroot/xlsx/${urlFile}`;
           //
-          this.td_textStatus.set("Se generó el archivo XLS correctamente");
+          this.status_message.set("[XLS file generated correctly]");
           //
-          this.td_textStatus_xls = "[Descargar Excel]";
+          this.td_textStatus_xls = "[Download XLS File]";
         },
         error   : (err: Error)  => {
           //
@@ -603,21 +356,79 @@ export class FilesGenerationXLSComponent extends BaseComponent implements OnInit
           //
           console.error('Observer got an error: ' + err.message);
           //
-          this.td_buttonCaption_xls  = "[Ha ocurrido un error]";
+          this.td_buttonCaption_xls  = "[An error ocurred]";
           //
-          this.td_textStatus_xls = "[Ha ocurrido un error]";
+          this.td_textStatus_xls = "[An error ocurred]";
           //
-          this.td_textStatus.set("Ha ocurrido un error")
+          this.status_message.set("[An error ocurred]")
         },
         complete: () => {
           //
-          this.td_buttonCaption_xls  = "[Generar Excel]";
+          this.td_buttonCaption_xls  = "[Generate XLS]";
         },
       };
       //
       td_excelFileName
       .subscribe(xlsObserver);
     }
+     //--------------------------------------------------------------------------
+    // METODOS COMUNES 
+    //--------------------------------------------------------------------------
+    //
+    queryParams():void{
+      //
+      this.route.queryParams.subscribe(params => {
+        //-----------------------------------------------------------------------------
+        // LENGUAJES DE PROGRAMACION
+        //-----------------------------------------------------------------------------
+        this.__languajeList = new Array();
+        //
+        this.__languajeList.push(
+          new _languageName(0, '(CHOOSE OPTION...)', false,""),
+        );
+        //
+        this.__languajeList.push(new _languageName(1, '(.Net Core   / C#)'             , false ,"CS"   ));
+        this.__languajeList.push(new _languageName(2, '(Node.js     / JavaScript)'     , false ,"JS"   ));
+        this.__languajeList.push(new _languageName(3, '(SpringBoot  / Java)'           , false ,"JAVA" ));
+        this.__languajeList.push(new _languageName(4, '(Django      / Pytnon)'         , false ,"PY"   ));
+        //
+        let langName = params['langName'] ? params['langName'] : "" ;
+        //
+        if (langName !== '')
+        {   
+            //
+            for (var index = 1; index < this.__languajeList.length; index++) {
+                //
+                if (this.__languajeList[index]._shortName  == langName)
+                  this.__languajeList[index]._selected = true;        
+            }
+
+        } else {
+          //
+          this.__languajeList[1]._selected = true; // C#
+        }
+
+        //
+        console.warn(`QUERY PARAMS... ${this.__languajeList.length}`);
+      });
+    }
+    //
+    GetFormattedDate(p_date : /*Date*/ string, order : number) {
+        //
+        var today = '';
+        switch (order) {
+            case 0:  // FECHA COMPLATIBLE CON RDBMS
+                var p_dates = p_date.toString().split('-'); // P_DATE   = 2022-04-09
+                var day     = p_dates[2];
+                var month   = p_dates[1];
+                var year    = p_dates[0];
+                today       = day + "/" + month + "/" + year;
+                //
+                break;
+        }
+        //
+        return today;
+    }  
 }
 
 

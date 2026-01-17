@@ -1,29 +1,6 @@
 <div align="center">
-    <!-- ENCABEZADO / INICIO  -->  
-    <div align="center">
-      <h1>{{  this.pageTitle }}</h1>
-    </div>
-    <hr> 
-    <div class="reference" align="right">
-   <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
-   <ul *ngIf="isListVisible" align="left" widdth="10px">
-      <li> [Frontend]
-          <ul>
-              <li><a routerLink="/GridParam" [queryParams]="{ searchTerm: '67431c50-5240-4889-81df-84270075fed8' , pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT' }">[Angular]</a></li>
-          </ul>
-      </li>
-      <li>[Librerias]
-          <ul>
-              <li><a href="https://v17.angular.io/guide/observables" target="_blank">[Observable]</a></li>
-          </ul>
-      </li>
-      <li>[Temas]
-          <ul>
-              <li><a href="https://en.wikipedia.org/wiki/Tetris" target="_blank">[Tetris]</a></li>
-          </ul>
-      </li>
-   </ul>
-    </div>  
+    <!-- ENCABEZADO / INICIO  --> 
+    <app-base-reference></app-base-reference>  
     <!-- ENCABEZADO / FIN -->  
     <hr>
     <div class="game-container" [class.game-over]="gameOver">
@@ -54,7 +31,7 @@
   <button (click)="restart()">[RESTART]</button>
   <hr />
   <div align="right">
-      <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_GAMES_INDEX'}" >[Volver al Menu]</a>
+      <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_GAMES_INDEX'}" >[Back to Menu]</a>
   </div>
 </div>  
 

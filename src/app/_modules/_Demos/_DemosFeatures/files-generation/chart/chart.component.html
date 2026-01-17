@@ -1,28 +1,19 @@
 <div class="content">
-    <div align="center">
-            <h1>{{this.pageTitle}}</h1>
-    </div>
+    <app-base-reference></app-base-reference>
+    <!--
     <hr>
     <div class="reference" align="right">
         <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
         <ul *ngIf="isListVisible" align="left" widdth="10px">
-            <li> [Frontend]
-            <ul>
-                <li><a routerLink="/GridParam"     [queryParams]="{ searchTerm: '483973b3-b8f6-478b-a702-de3fbab225a4' , pageName: 'PAGE_DEMOS_ANGULAR_JAVASCRIPT' }">[Angular]</a></li>
-            </ul>
-            </li>
-            <li>[Backend]
-            <ul>
-                <li><a routerLink="/GridParam"     [queryParams]="{ searchTerm: '0b0b083f-bda7-44b8-9922-2365317ee934' , pageName : 'PAGE_DEMOS_NETCORE_CSHARP'}">[.net core/c#]</a></li>
-            </ul>
             </li>
             <li>[Libraries]
                 <ul>
-                <li><a href="https://www.chartjs.org/" target="_blank">[chart.js]</a></li>
+                <li><a href="" target="_blank"></a></li>
                 </ul>
             </li>
         </ul>
     </div>   
+    -->
     <hr/>
     <mat-tab-group>
         <mat-tab label="[PIE CHART]" (click)="this.pdf_message_csv.set('PIE CHART')">
@@ -37,7 +28,7 @@
                 <hr />
                 <!-- GENERAR PDF / INICIO    -->
                 <div id="divdescargapdf" style="display: block" align="right">
-                    <input class="btn btn-success" id="GetPDF" type="button" title="[GENERAR PDF]" value="[GENERAR PDF]" (click)="GetPDF('[PIE CHART]')" [disabled]="(this.pdf_message_csv.toString() == '[...Generando PDF...]')">           
+                    <input class="btn btn-success" id="GetPDF" type="button" title="[GENERATE PDF]" value="[GENERATE PDF]" (click)="GetPDF('[PIE CHART]')" [disabled]="(this.pdf_message_csv.toString() == '[...Generando PDF...]')">           
                 </div>
                 <hr />
                 <!-- GENERAR PDF / FIN    -->
@@ -60,7 +51,7 @@
                 <hr />
                 <!-- GENERAR PDF / INICIO    -->
                 <div id="divdescargapdf" style="display: block" align="right">
-                    <input class="btn btn-success" id="GetPDF" type="button" title="[GENERAR PDF]" value="[GENERAR PDF]" (click)="this.GetPDF('[BAR CHART]')" [disabled]="(this.pdf_message_xls.toString() == '[...Generando PDF...]')">           
+                    <input class="btn btn-success" id="GetPDF" type="button" title="[GENERATE PDF]" value="[GENERATE PDF]" (click)="this.GetPDF('[BAR CHART]')" [disabled]="(this.pdf_message_xls.toString() == '[...Generando PDF...]')">           
                 </div>
                 <!-- GENERAR PDF / FIN    -->
                 <hr />
@@ -74,6 +65,6 @@
     </mat-tab-group>
     <hr/>
     <div align="right">
-        <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_FILE_GENREATION_INDEX'}" >[Volver al Menu]</a>
+        <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_FILE_GENREATION_INDEX'}" >[Back to Menu]</a>
     </div>
 </div>

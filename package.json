@@ -1,17 +1,16 @@
 {
   "name": "sandbox",
   "version": "0.0.0",
-  
   "scripts": {
     "ng": "ng",
     "start": "ng serve --disable-host-check",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "_package": "ng build --c=production --base-href=\"/PWA_DEMO_ENV_PUBLIC/\"",
-    "_publish" : "npx angular-cli-ghpages --dir=dist/PWA_DEMO_ENV_PUBLIC",
-    "package-and-publish": "ng build --c=production --base-href=\"/PWA_DEMO_ENV_PUBLIC/\" && npx ngh --dir=dist\\PWA_DEMO_ENV_PUBLIC",
-    "git-update": "git add . && git commit -m \"strategy update\" -a && git push && git pull"
+    "_package": "ng build --c=production --base-href=\"/PWA_DEMO_ENV_PROD/\"",
+    "_publish": "npx ngh --dir=dist\\PWA_DEMO_ENV_PROD",
+    "package-and-publish": "ng build --c=production --base-href=\"/PWA_DEMO_ENV_PROD/\" && npx ngh --dir=dist\\PWA_DEMO_ENV_PROD",
+    "git-update-strategy": "git add * && git commit -m \"strategy update\" -a && git push && git pull"
   },
   "private": true,
   "dependencies": {
@@ -29,13 +28,16 @@
     "@eve-sama/ngx-signature-pad": "^16.0.0",
     "@ng-bootstrap/ng-bootstrap": "^16.0.0",
     "@popperjs/core": "^2.11.8",
+    "@tweenjs/tween.js": "^25.0.0",
     "bootstrap": "^5.3.2",
-    "chart.js": "^4.4.1",
+    "chart.js": "^3.9.1",
     "html2canvas": "^1.4.1",
     "jspdf": "^2.5.1",
     "mathjs": "^14.0.1",
+    "ng2-charts": "^3.1.2",
     "rxjs": "~7.8.0",
     "socket.io": "^4.7.4",
+    "socket.io-client": "^4.8.1",
     "three": "^0.172.0",
     "tslib": "^2.6.2",
     "tween": "^0.9.0",

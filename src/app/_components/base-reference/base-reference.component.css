@@ -1,0 +1,12 @@
+ .reference_base {
+
+   ul, li, a, a:visited, a:hover, a:active {
+      color: #000; 
+   };
+
+   font-size:xx-small;
+
+   background-color:gray;
+   
+   padding: 1em;
+ }

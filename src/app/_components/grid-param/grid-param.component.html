@@ -7,7 +7,7 @@
     <hr>
 	<form>
 		<div class="mb-3 row">
-			<label for="table-complete-search" class="col-xs-3 col-sm-auto col-form-label">Busqueda de Texto Completo:</label>
+			<label for="table-complete-search" class="col-xs-3 col-sm-auto col-form-label">Full Text Search:</label>
 			<div class="col-xs-3 col-sm-auto">
 				<input
 					id="table-complete-search"
@@ -26,7 +26,7 @@
 					</div>
 			</span>
 			@if (this.searchService.loading | async) {
-				<span class="col col-form-label">[Cargando...]</span>
+				<span class="col col-form-label">[Loading...]</span>
 			}
 		</div>
 
@@ -34,13 +34,13 @@
 			<thead>
 				<tr>
 					<th scope="col" sortable="id"             (sortevent)="onSort($event)"  >#</th>
-					<th scope="col" sortable="name"           (sortevent)="onSort($event)" >Nombre</th>
+					<th scope="col" sortable="name"           (sortevent)="onSort($event)"  >Name</th>
 					<th scope="col" sortable="field_2"        (sortevent)="onSort($event)"  >Demo</th>
 					<th scope="col" sortable="field_3"        (sortevent)="onSort($event)"  >Repo</th>
 					<th scope="col" sortable="field_4"        (sortevent)="onSort($event)"  >EndPoint</th>
-					<th scope="col" sortable="field_6"        (sortevent)="onSort($event)"  >Tema</th>
-					<th scope="col" sortable="field_1"        (sortevent)="onSort($event)"  >P. Clave</th>
-					<th scope="col" sortable="description"    (sortevent)="onSort($event)"  >Descripción</th>
+					<th scope="col" sortable="field_6"        (sortevent)="onSort($event)"  >Topic</th>
+					<th scope="col" sortable="field_1"        (sortevent)="onSort($event)"  >Keyword</th>
+					<th scope="col" sortable="description"    (sortevent)="onSort($event)"  >Description</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -69,7 +69,7 @@
 						</td>
 						<td>
 							<a ngb-highlight [href]="featurePage.field_6" target="_blank">
-								[Tema]
+								[Topic]
 							</a>
 						</td>
 						<td><ngb-highlight [result]="featurePage.field_1"               [term]="this.searchService.searchTerm" /></td>
@@ -97,5 +97,6 @@
 	<hr>
 </div>
 <div align="right">
-    <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_LENGUAJES_INDEX'}" >[Volver al Menu]</a>
+    <!--<a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_LENGUAJES_INDEX'}" >[Back to Menu]</a>-->
+    <a [routerLink]="'/'" [queryParams]="{pageName : ''}" >[Back to Menu]</a>
 </div>

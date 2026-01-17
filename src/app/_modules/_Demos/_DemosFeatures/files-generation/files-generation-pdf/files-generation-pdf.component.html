@@ -1,31 +1,8 @@
 <div id="content-body">
-    <div align="center" style="padding-top:10px;">
-        <h4>{{pageTitle}}</h4>
-    </div>
-    <hr>
-    <div class="reference" align="right">
-        <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
-        <ul *ngIf="isListVisible" align="left" widdth="10px">
-            <li> [Frontend]
-              <ul>
-                <li><a routerLink="/GridParam"      [queryParams]="{ searchTerm: '179c6e7c-6dad-4aea-a515-d45d09641a76' , pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT' }">[Angular]</a></li>
-              </ul>
-            </li>
-            <li>[Backend]
-              <ul>
-                <li><a routerLink="/GridParam"     [queryParams]="{ searchTerm: '0cd41eee-f54c-44be-b03a-422769b1a8f2' , pageName : 'PAGE_DEMOS_NETCORE_CSHARP'     }">[.net core/c#]</a></li>
-               </ul>
-            </li>
-            <li>[Libraries]
-                <ul>
-                    <a href="javascript: void window.open('https://www.nuget.org/packages/iTextSharp/')">[ITextSharp v5.5.13.2]</a>
-                </ul>
-            </li>
-        </ul>
-      </div>   
+    <app-base-reference></app-base-reference>
     <hr>
     <div>
-        NOMBRE COMPLETO : <input type="text" class="inputPDF" id="subjectName" #subjectName>
+        FULL NAME : <input type="text" class="inputPDF" id="subjectName" #subjectName>
     </div>
     <hr>
     <div *ngIf="this.DownloadLink">
@@ -45,17 +22,17 @@
         <!-- STATUS / FIN   -->
     </div> 
     <hr>
-    <input id="GetPdf" class="btn btn-success"  type="button" title="[OBTENER PDF]" value="[OBTENER PDF]" (click)="this.onSubmit()" [hidden]="(this.DownloadLink != '')">
+    <input id="GetPdf" class="btn btn-success"  type="button" title="[GET PDF]" value="[GET PDF]" (click)="this.onSubmit()" [hidden]="(this.DownloadLink != '')">
     &nbsp;
     <!-- ENLACE DESCARGA / INICIO -->
     <a [href]="this.DownloadLink" target="_blank" [download]="this.pdfFileName" id="DownloadFile" [hidden]="(this.DownloadLink == '')">{{ this.downloadCaption }}</a>
     <!-- ENLACE DESCARGA FIN       -->
     &nbsp;
-    <input id="NewPdf"  class="btn btn-primary" type="button" title="[NUEVO PDF]"   value="[NUEVO PDF]"   (click)="this.onNewPdf()" [hidden]="(this.DownloadLink == '')">
+    <input id="NewPdf"  class="btn btn-primary" type="button" title="[NEW PDF]"   value="[NEW PDF]"   (click)="this.onNewPdf()" [hidden]="(this.DownloadLink == '')">
     <hr>
     <div *ngIf="this.status_message()" class="alert alert-secondary" role="alert">{{ this.status_message() }}</div>
     <hr>
     <div align="right">
-        <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_FILE_GENREATION_INDEX'}" >[Volver al Menu]</a>
+        <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_FILE_GENREATION_INDEX'}" >[Back to Menu]</a>
     </div>
 </div>

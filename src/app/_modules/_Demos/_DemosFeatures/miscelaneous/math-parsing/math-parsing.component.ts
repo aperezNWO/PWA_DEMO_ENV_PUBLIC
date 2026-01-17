@@ -1,18 +1,24 @@
-import { Component      } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import * as math from 'mathjs';
-import { BaseComponent   } from 'src/app/_components/base/base.component';
-import { PAGE_MISCELANEOUS_MATH_PARSING } from 'src/app/_models/common';
-import { BackendService  } from 'src/app/_services/BackendService/backend.service';
-import { ConfigService   } from 'src/app/_services/ConfigService/config.service';
-import { SpeechService   } from 'src/app/_services/speechService/speech.service';
+import { Component                                      } from '@angular/core';
+import { ActivatedRoute                                 } from '@angular/router';
+import { PAGE_MISCELANEOUS_MATH_PARSING, PAGE_TITLE_LOG, PAGE_TITLE_NO_SOUND } from 'src/app/_models/common';
+import { BackendService                                 } from 'src/app/_services/BackendService/backend.service';
+import { ConfigService                                  } from 'src/app/_services/__Utils/ConfigService/config.service';
+import { SpeechService                                  } from 'src/app/_services/__Utils/SpeechService/speech.service';
+import * as math                                          from 'mathjs';
+import { BaseReferenceComponent                         } from 'src/app/_components/base-reference/base-reference.component';
 
 @Component({
   selector: 'app-math-parsing',
   templateUrl: './math-parsing.component.html',
-  styleUrl: './math-parsing.component.css'
+  styleUrl: './math-parsing.component.css',
+  providers   : [
+    { 
+      provide : PAGE_TITLE_LOG, 
+      useValue: PAGE_MISCELANEOUS_MATH_PARSING 
+    },
+  ]
 })
-export class MathParsingComponent extends BaseComponent {
+export class MathParsingComponent extends BaseReferenceComponent {
   ///////////////////////////////////////////////////////////////
   //  PROPIEDADES
   ///////////////////////////////////////////////////////////////
@@ -57,7 +63,7 @@ export class MathParsingComponent extends BaseComponent {
             backendService,
             route,
             speechService,
-            PAGE_MISCELANEOUS_MATH_PARSING);
+            PAGE_TITLE_NO_SOUND);
   }
   ///////////////////////////////////////////////////////////////
   //  METODOS COMUNES

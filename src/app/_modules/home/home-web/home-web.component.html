@@ -1,54 +1,8 @@
 <div align="center" class="animate">
     <h4>{{this._appBrand}}!</h4>
     <hr>
-    <a [routerLink]="'/GridParam'" [queryParams]="{ pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT'}">
-        <img
-        [src]="'./assets/images/logos/Angular_full_color_logo.svg.png'"
-        [alt]="'Angular Logo'"
-        class="me-1"
-        style="width: 50px"
-        />
-    </a>
-    <a [routerLink]="'/GridParam'" [queryParams]="{ pageName : 'PAGE_DEMOS_NODEJS_JAVASCRIPT'}">
-        <img
-        [src]="'./assets/images/logos/Node.js_logo.svg.png'"
-        [alt]="'NodeJs Logo'"
-        class="me-1"
-        style="width: 50px"
-        />
-    </a>
-    <a [routerLink]="'/GridParam'" [queryParams] = "{ pageName : 'PAGE_DEMOS_NETCORE_CSHARP' }" >
-        <img
-        [src]="'./assets/images/logos/C_Sharp_Logo_2023.svg'"
-        [alt]="'C# Logo'"
-        class="me-1"
-        style="width: 50px"
-        />
-    </a>
-    <a [routerLink]="'/GridParam'" [queryParams] = "{ pageName : 'PAGE_DEMOS_NETCORE_CPP'  }">
-        <img
-        [src]="'./assets/images/logos/ISO_C%2B%2B_Logo.svg.png'"
-        [alt]="'C++ Logo'"
-        class="me-1"
-        style="width: 50px"
-        />
-    </a>
-    <a [routerLink]="'/GridParam'" [queryParams]="{ pageName : 'PAGE_DEMOS_SPRING_BOOT_JAVA'}">
-        <img
-        [src]="'./assets/images/logos/Microsoft.VisualStudio.Services.Icons.Default'"
-        [alt]="'SPRING BOOT Logo'"
-        class="me-1"
-        style="width: 50px"
-        />
-    </a>
-    <a [routerLink]="'/GridParam'" [queryParams]="{ pageName : 'PAGE_DEMOS_DJANGO_PYTHON' }">
-        <img
-        [src]="'./assets/images/logos/Python-logo-notext.svg'"
-        [alt]="'python Logo'"
-        class="me-1"
-        style="width: 50px"
-        />
-    </a>
+    <app-landing [LandingPage]="this.selectedLandingPage">
+    </app-landing>
     <hr>
     <span *ngFor="let page of this._pages">
         <span *ngIf="page" style="padding:5px;">

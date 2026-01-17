@@ -53,11 +53,11 @@ export class TicTacToeEngine
     {
         if (whoseTurn == this.COMPUTER) 
         {
-            this.message.set("[ganó COMPUTADOR]");
+            this.message.set("[COMPUTER WON]");
             this.winner  = this.COMPUTERMOVE;
         }
         else {
-            this.message.set("[ganó HUMANO]");
+            this.message.set("[PLAYER WON]");
             this.winner  = this.HUMANMOVE;
         }
     }
@@ -227,7 +227,7 @@ export class TicTacToeEngine
       //
       if (gameRunning && this.moveIndex == this.boardSurface){
           //
-          this.message.set("[EMPATE]");
+          this.message.set("[DRAW]");
           this.winner  = null;
       }
 	  else

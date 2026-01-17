@@ -1,11 +1,16 @@
 import { Component, signal, VERSION        } from '@angular/core';
-import { BackendService                    } from '../../../../_services/BackendService/backend.service';
-import { ConfigService                     } from 'src/app/_services/ConfigService/config.service';
-import { Observable                        } from 'rxjs';
-import { BaseComponent                     } from 'src/app/_components/base/base.component';
 import { ActivatedRoute                    } from '@angular/router';
-import { SpeechService                     } from 'src/app/_services/speechService/speech.service';
+import { Observable                        } from 'rxjs';
+import { ConfigService                     } from 'src/app/_services/__Utils/ConfigService/config.service';
+import { BaseComponent                     } from 'src/app/_components/base/base.component';
+import { SpeechService                     } from 'src/app/_services/__Utils/SpeechService/speech.service';
 import { PAGE_ABOUT_TECHNICAL_SPECS        } from 'src/app/_models/common';
+import { OCRService                        } from 'src/app/_services/__AI/OCRService/ocr.service';
+import { ComputerVisionService             } from 'src/app/_services/__AI/ComputerVisionService/Computer-Vision.service';
+import { AlgorithmService                  } from 'src/app/_services/AlgorithmService/algorithm.service';
+import { BackendService                    } from '../../../../_services/BackendService/backend.service';
+import { TensorFlowService                 } from '../../../../_services/__AI/TensorflowService/tensor-flow.service';
+
 //
 @Component({
   selector: 'app-technical-specs',
@@ -77,10 +82,15 @@ export class TechnicalSpecsComponent extends BaseComponent {
     // [EVENT HANDLERS]
     ////////////////////////////////////////////////////////////////  
     constructor(
-           public override configService      : ConfigService,
-           public override backendService     : BackendService,
-           public override route              : ActivatedRoute,
-           public override speechService      : SpeechService,
+           public override configService         : ConfigService,
+           public override backendService        : BackendService,
+           public override route                 : ActivatedRoute,
+           public override speechService         : SpeechService,
+           public          ocrService            : OCRService,
+           public          computervisionService : ComputerVisionService,
+           public          tensorflowService     : TensorFlowService,
+           public          algorithmService      : AlgorithmService,
+
     )
     {
       //
@@ -163,8 +173,6 @@ export class TechnicalSpecsComponent extends BaseComponent {
           //console.log('_GetAppVersion - (return): ' + jsondata);
           //
           this._webApiAppVersion = jsondata;
-          //
-          //console.log(this.pageTitle + "- [webApiVersion] - " + this._webApiAppVersion);
         },
         error           : (err: Error)      => {
 
@@ -173,7 +181,6 @@ export class TechnicalSpecsComponent extends BaseComponent {
         },
         complete        : ()                => {
           //
-          //console.log('_GetAppVersion -  (COMPLETE)');
         },
       };
       //
@@ -184,7 +191,7 @@ export class TechnicalSpecsComponent extends BaseComponent {
     //
     private _GetAlgorithmAppVersion() {
       //
-      let cppBackendObservable : Observable<string> = this.backendService._GetAlgothmAppVersion();
+      let cppBackendObservable : Observable<string> = this.algorithmService._Algorithm_GetAppVersion();
       //
       const cppBackendObserver       = {
         next: (jsondata: string)     => { 
@@ -213,7 +220,7 @@ export class TechnicalSpecsComponent extends BaseComponent {
     //
     private _GetAlgorithmCPPSTDVersion() {
       //
-      let cppBackendObservable : Observable<string> = this.backendService._Algorithm_GetCPPSTDVersion();
+      let cppBackendObservable : Observable<string> = this.algorithmService._Algorithm_GetCPPSTDVersion();
       //
       const cppBackendObserver       = {
         next: (jsondata: string)     => { 
@@ -271,25 +278,19 @@ export class TechnicalSpecsComponent extends BaseComponent {
     //
     private _GetTesseractAppVersion() {
       //
-      let cppBackendObservable : Observable<string> = this.backendService._GetTesseractAppVersion();
+      let cppBackendObservable : Observable<string> = this.ocrService._GetTesseract_AppVersion();
       //
       const cppBackendObserver       = {
         next: (jsondata: string)     => { 
           //
-          //console.log('_GetAppVersion - (return): ' + jsondata);
-          //
           this._tesseractAppVersion = jsondata;
-          //
-          //console.log(this.pageTitle + "- [webApiVersion] - " + this._webApiAppVersion);
         },
         error           : (err: Error)      => {
-
           //
           console.error('_GetTesseractAppVersion- (ERROR) : ' + JSON.stringify(err.message));
         },
         complete        : ()                => {
           //
-          //console.log('_GetAppVersion -  (COMPLETE)');
         },
       };
       //
@@ -299,26 +300,20 @@ export class TechnicalSpecsComponent extends BaseComponent {
     }
     //
     private _GetTesseractAPIVersion() {
-    //
-      let cppBackendObservable : Observable<string> = this.backendService._GetTesseractAPIVersion();
+      //
+      let cppBackendObservable : Observable<string> = this.ocrService._GetTesseract_APIVersion();
       //
       const cppBackendObserver       = {
         next: (jsondata: string)     => { 
           //
-          //console.log('_GetAppVersion - (return): ' + jsondata);
-          //
           this._tesseractAPIVersion = jsondata;
-          //
-          //console.log(this.pageTitle + "- [webApiVersion] - " + this._webApiAppVersion);
         },
         error           : (err: Error)      => {
-
           //
           console.error('_GetTesseractAppVersion- (ERROR) : ' + JSON.stringify(err.message));
         },
         complete        : ()                => {
           //
-          //console.log('_GetAppVersion -  (COMPLETE)');
         },
       };
       //
@@ -328,26 +323,20 @@ export class TechnicalSpecsComponent extends BaseComponent {
     }
     //
     private _GetTesseract_CPPSTDVersion() {
-    //
-      let cppBackendObservable : Observable<string> = this.backendService._GetTesseract_CPPSTDVersion();
+      //
+      let cppBackendObservable : Observable<string> = this.ocrService._GetTesseract_CPPSTDVersion();
       //
       const cppBackendObserver       = {
         next: (jsondata: string)     => { 
           //
-          //console.log('_GetAppVersion - (return): ' + jsondata);
-          //
           this._tesseractCPPSTDVersion = jsondata;
-          //
-          //console.log(this.pageTitle + "- [webApiVersion] - " + this._webApiAppVersion);
         },
         error           : (err: Error)      => {
-
           //
           console.error('_GetTesseract_CPPSTDVersion- (ERROR) : ' + JSON.stringify(err.message));
         },
         complete        : ()                => {
           //
-          //console.log('_GetAppVersion -  (COMPLETE)');
         },
       };
       //
@@ -358,16 +347,14 @@ export class TechnicalSpecsComponent extends BaseComponent {
     //
     private _GetOpenCvAppVersion() {
       //
-      let cppBackendObservable : Observable<string> = this.backendService._GetOpenCvAppVersion();
+      let cppBackendObservable : Observable<string> = this.computervisionService._OpenCv_GetAppVersion();
       //
       const cppBackendObserver       = {
         next: (jsondata: string)     => { 
-          //
+          //  
           //console.log('_GetAppVersion - (return): ' + jsondata);
           //
           this._OpenCvAppVersion = jsondata;
-          //
-          //console.log(this.pageTitle + "- [webApiVersion] - " + this._webApiAppVersion);
         },
         error           : (err: Error)      => {
 
@@ -376,7 +363,6 @@ export class TechnicalSpecsComponent extends BaseComponent {
         },
         complete        : ()                => {
           //
-          //console.log('_GetAppVersion -  (COMPLETE)');
         },
       };
       //
@@ -387,25 +373,20 @@ export class TechnicalSpecsComponent extends BaseComponent {
     //
     private _GetOpenCVAPIVersion(){
       //
-      let cppBackendObservable : Observable<string> = this.backendService._GetOpenCvAPIVersion();
+      let cppBackendObservable : Observable<string> = this.computervisionService._OpenCv_GetAPIVersion();
       //
       const cppBackendObserver       = {
         next: (jsondata: string)     => { 
           //
-          //console.log('_GetAppVersion - (return): ' + jsondata);
-          //
           this._OpenCvAPIVersion = jsondata;
-          //
-          //console.log(this.pageTitle + "- [webApiVersion] - " + this._webApiAppVersion);
         },
         error           : (err: Error)      => {
-
           //
           console.error('_GetOpenCvAppVersion- (ERROR) : ' + JSON.stringify(err.message));
         },
         complete        : ()                => {
           //
-          //console.log('_GetAppVersion -  (COMPLETE)');
+
         },
       };
       //
@@ -416,16 +397,12 @@ export class TechnicalSpecsComponent extends BaseComponent {
     //
     private _GetOpenCV_CPPSTDVersion(){
       //
-      let cppBackendObservable : Observable<string> = this.backendService._GetOpenCv_CPPSTDVersion();
+      let cppBackendObservable : Observable<string> = this.computervisionService._OpenCv_GetCPPSTDVersion();
       //
       const cppBackendObserver       = {
         next: (jsondata: string)     => { 
           //
-          //console.log('_GetAppVersion - (return): ' + jsondata);
-          //
           this._OpenCvCPPSTDVersion = jsondata;
-          //
-          //console.log(this.pageTitle + "- [webApiVersion] - " + this._webApiAppVersion);
         },
         error           : (err: Error)      => {
 
@@ -445,7 +422,7 @@ export class TechnicalSpecsComponent extends BaseComponent {
     //
     private _GetTensorflowAPIVersion(){
       //
-      let cppBackendObservable : Observable<string> = this.backendService._GetTensorFlowAPIVersion();
+      let cppBackendObservable : Observable<string> = this.tensorflowService._GetTensorFlowAPIVersion();
       //
       const cppBackendObserver       = {
         next: (jsondata: string)     => { 
@@ -468,7 +445,7 @@ export class TechnicalSpecsComponent extends BaseComponent {
     //
     private _GetTensorflowAPPVersion(){
       //
-      let cppBackendObservable : Observable<string> = this.backendService._GetTensorFlowAPPVersion();
+      let cppBackendObservable : Observable<string> = this.tensorflowService._GetTensorFlowAPPVersion();
       //
       const cppBackendObserver       = {
         next: (jsondata: string)     => { 
@@ -491,7 +468,7 @@ export class TechnicalSpecsComponent extends BaseComponent {
     //
     private _GetTensorflowcCPPSTDVersion(){
       //
-      let cppBackendObservable : Observable<string> = this.backendService._TensorFlow_GetCPPSTDVersion();
+      let cppBackendObservable : Observable<string> = this.tensorflowService._TensorFlow_GetCPPSTDVersion();
       //
       const cppBackendObserver       = {
         next: (jsondata: string)     => { 

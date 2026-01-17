@@ -1,31 +1,8 @@
 <div class="content">    
       <!-- ENCABEZADO / INICIO  -->  
-      <div align="center">
-            <h1>{{  this.pageTitle }}</h1>
-       </div>
-       <hr>
-       <div class="reference" align="right">
-            <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
-            <ul *ngIf="isListVisible" align="left" widdth="10px">
-            <li>[Frontend]
-                <ul>
-                    <li><a routerLink="/GridParam" [queryParams]="{ searchTerm: 'e9ee9d64-65ad-49a3-8595-5479300b4264'  , pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT' }">[Angular]</a></li>
-                    <li><a routerLink="/GridParam" [queryParams]="{ searchTerm: '84b09d01-71ef-47e6-acd8-f0719d1a8949'  , pageName : 'PAGE_DEMOS_DJANGO_PYTHON'      }">[Python]</a></li>
-                    <li><a routerLink="/GridParam" [queryParams]="{ searchTerm: 'ca7ac509-59bc-4a9b-b1e1-24362db33e17'  , pageName : 'PAGE_DEMOS_NETCORE_CPP'        }">[C++ .Net Core /  DLLImport]</a></li>
-                    <li><a routerLink="/GridParam" [queryParams]="{ searchTerm: 'b3ef5370-9841-46da-86bb-664c7880be6a'  , pageName : 'PAGE_DEMOS_NETCORE_CPP'        }">[C++ DLL]</a></li>
-                </ul>
-            </li>
-            <li>[Temas]            
-                    <ul>
-                        <li><a href="https://en.wikipedia.org/wiki/Tic-tac-toe" target="_blank">[Tic Tac Toe]</a></li>
-                        <li><a href="https://en.wikipedia.org/wiki/Neural_network_(machine_learning)" target="_blank">[Neural Networks]</a></li>
-                        <li><a href="https://www.tensorflow.org/?hl=es-419" target=_blank>[Tensorflow]</a></li>
-                    </ul>
-            </li>
-            </ul>
-       </div>
-       <hr>
+      <app-base-reference></app-base-reference> 
       <!-- ENCABEZADO / FIN -->  
+      <hr>
       <!-- TABLERO / INICIO -->
       <div class="game-container">
             <!-- Controls -->
@@ -43,7 +20,7 @@
                         </option>
                 </select>
                 </label>
-
+                <br>    
                 <!-- Temperature Slider -->
                 <label *ngIf="aiMode === 1">
                 Creativity:
@@ -55,23 +32,20 @@
                 >
                 {{ temperature.toFixed(1) }}
                 </label>
-                
+                <br>
                 <!-- Ensure it's loadGame(), not playGame -->
                 <button class="button_tictactoe" (click)="loadGame()" [disabled]="loading">
                 {{ loading ? 'Loading...' : '🔁 Replay Game' }}
                 </button>
-
             </div>        
             <!-- Error -->
             <div class="error" *ngIf="error">
                 ⚠️ {{ error }}
             </div>
-
             <!-- Loading -->
             <div class="loading" *ngIf="loading">
                 🧠 AI is generating a game...
             </div>
-
             <!-- Board -->
             <div align="center" class="board" *ngIf="!loading && !error">
                 <div *ngFor="let cell of gameHistory[currentStep]; let i = index"
@@ -83,13 +57,13 @@
             <!-- Game Info -->
             <div class="game-info" *ngIf="!loading && gameHistory.length > 0">
                 <p><strong>Step {{ currentStep }} / {{ gameHistory.length - 1 }}</strong></p>
-                <p>Winner: <strong>{{ getCurrentWinner() }}</strong></p>
+                <p><strong>{{ this.winner }}</strong></p>
             </div>
       </div>
        <!-- TABLERO / FIN    -->
       <hr />
       <div align="right">
-          <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_GAMES_INDEX'}" >[Volver al Menu]</a>
+          <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_GAMES_INDEX'}" >[Back to Menu]</a>
       </div>
 </div>      
 

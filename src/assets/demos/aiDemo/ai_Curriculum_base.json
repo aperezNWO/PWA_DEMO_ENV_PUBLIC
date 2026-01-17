@@ -1,0 +1,38 @@
+[
+    	{
+		"id"               : 1,
+        "done"             : true,
+        "name"             : "Neural Network",
+        "description"      : "Neural Network",
+        "field_1"          : "Neural Network",
+        "field_2"          : "./#/GamesTicTacToeAI?langName=CPP",
+        "field_3"          : "https://github.com/aperezNWO/CPP_GCC_TENSORFLOW/blob/88562d65d2797daf55bce4ce6ba7606c46985614/src/_tensorflow_cpp/include/tictactoe.h#L686",
+        "field_4"          : "{{baseUrlNetCoreCPPEntry}}api/tictactoe/play?aiMode=1",
+        "field_6"          : "https://en.wikipedia.org/wiki/Neural_network_(machine_learning)",
+        "field_10"         : "fd6d21e0-e6b8-422c-93fd-67bf2e5c1094"   
+    },
+	{
+		"id"               : 2,
+        "done"             : true,
+        "name"             : "Genetic Algorithm",
+        "description"      : "Genetic Algorithm",
+        "field_1"          : "Genetic Algorithm",
+        "field_2"          : "./#/GamesTetrisAI",
+        "field_3"          : "https://github.com/aperezNWO/CPP_GCC_TENSORFLOW/blob/d69cb8942b8c6548098f93ad79cc69df9717f958/src/_tensorflow_cpp/_tensorflow/tensorFlowApp.cpp#L141",
+        "field_4"          : "{{baseUrlNetCoreCPPEntry}}api/tetris/health",
+        "field_6"          : "https://en.wikipedia.org/wiki/Genetic_algorithm",
+        "field_10"         : "06f33ccf-68be-4fbe-b9af-4ba5cc9535f2"   
+    },
+    {
+		"id"               : 3,
+        "done"             : false,
+        "name"             : "Linear Regression",
+        "description"      : "Linear Regression",
+        "field_1"          : "Linear Regression",
+        "field_2"          : "./#/LinearRegression",
+        "field_3"          : "https://github.com/aperezNWO/CPP_GCC_TENSORFLOW/blob/ca60dd4427167e74d05ec1e03a76df39bc03f099/src/_tensorflow_cpp/_tensorflow/tensorFlowApp.cpp#L100",
+        "field_4"          : "{{baseUrlNetCoreCPPEntry}}api/linearregression/predict?missionNumberToPredict=18",
+        "field_6"          : "https://en.wikipedia.org/wiki/Linear_regression",
+        "field_10"         : "eebbaca8-9d69-4a10-8fb3-514912a832ba"   
+    }
+]

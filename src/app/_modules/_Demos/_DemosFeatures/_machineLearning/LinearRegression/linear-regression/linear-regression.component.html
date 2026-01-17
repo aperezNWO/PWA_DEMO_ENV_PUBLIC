@@ -1,0 +1,67 @@
+<div align="center">
+    <!-- ENCABEZADO / INICIO  --> 
+    <!-- referencias INICIO   -->
+    <app-base-reference></app-base-reference>
+    <!-- referencias fin  -->
+    <!-- ENCABEZADO / FIN -->  
+    <hr>
+    <!-- INIT CONTENT -->
+    <div class="container">
+                  <!-- Controls -->
+            <div class="controls">
+                <!-- AI Style Dropdown -->
+                <label>
+                Engine:
+                <select id="LanguageList"
+                        name="LanguajeList"
+                        (change)="onLinearRegressionEngineChange($event)"
+                        #_languajeList>
+                        <option *ngFor="let _languageName of __languajeList" 
+                                [value]   ="_languageName._index"
+                                [selected]="_languageName._selected">{{_languageName._value}}
+                        </option>
+                </select>
+                </label>
+        </div>
+        <div class="input-section">
+          <label for="missionNumber">Enter Mission Number to Predict:</label>
+          <input
+            type="number"
+            id="missionNumber"
+            [(ngModel)]="inputMissionNumber"
+            placeholder="e.g., 18"
+            [disabled]="isLoading"
+          />
+          <button (click)="predict()" [disabled]="isLoading || inputMissionNumber === null || inputMissionNumber < 1">
+            {{ isLoading ? 'Predicting...' : 'Predict Time' }}
+          </button>
+        </div>
+
+        <div *ngIf="errorMessage" class="error">
+          {{ errorMessage }}
+        </div>
+
+        <div *ngIf="predictionResult" class="result">
+          <h3>Prediction Result:</h3>
+          <p><strong>Input Mission Number:</strong> {{ predictionResult.input_mission_number }}</p>
+          <p><strong>Predicted Total Time:</strong> {{ predictionResult.predicted_total_time_hours | number:'1.2-2' }} hours</p>
+          <p><strong>Predicted Duration:</strong> {{ predictionResult.predicted_duration_days | number:'1.2-2' }} days</p>
+        </div>
+
+        <div class="chart-container">
+       
+          <canvas baseChart
+            [data]="chartData"
+            [options]="chartOptions"
+            [type]="chartType">
+          </canvas>
+
+        </div>
+    </div>
+    <!-- END  CONTENT -->
+    <!-- RETURN TO HOME PAGE - INIT -->
+     <div align="right">
+         <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_MACHINE_LEARNING_INDEX'}" >[Back to Menu]</a>
+     </div>
+    <!-- RETURN TO HOME PAGE - END   -->  
+</div>    

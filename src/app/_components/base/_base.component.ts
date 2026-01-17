@@ -1,8 +1,8 @@
 import { Component, effect, signal ,OnInit          } from '@angular/core';
 import { ActivatedRoute                             } from '@angular/router';
 import { BackendService                             } from 'src/app/_services/BackendService/backend.service';
-import { ConfigService                              } from 'src/app/_services/ConfigService/config.service';
-import { SpeechService                              } from 'src/app/_services/speechService/speech.service';
+import { ConfigService                              } from 'src/app/_services/__Utils/ConfigService/config.service';
+import { SpeechService                              } from 'src/app/_services/__Utils/SpeechService/speech.service';
 import { _environment                               } from 'src/environments/environment';
 
 @Component({
@@ -24,7 +24,7 @@ export class _BaseComponent implements OnInit {
   private _pageTitle       : string = "";
   //
   public isListVisible            = false; // Initially hidden
-  public toogleLisCaption: string = "[Ver Referencias]";
+  public toogleLisCaption: string = "[See references]";
   //
   public status_message           = signal<string>('');
   //
@@ -54,7 +54,7 @@ export class _BaseComponent implements OnInit {
     // Subscribe to query param changes
     this.route.queryParams.subscribe(params => {
       //
-      const pageName = params['pageName'];
+      const pageName =  params['pageName']? params['pageName'] : '';
       //
       if (!pageName) {
         console.warn('No pageName provided in query params');
@@ -110,9 +110,9 @@ export class _BaseComponent implements OnInit {
   toggleList() {
     //
     this.isListVisible     = !this.isListVisible; // Toggle visibility
-    this.toogleLisCaption  = !(this.isListVisible)? "[Ver Referencias]" : "[Ocultar Referencias]";
+    this.toogleLisCaption  = !(this.isListVisible)? "[See references]" : "[Hide references]";
     //
     if (this.isListVisible)
-      this.speechService.speakTextCustom("Ver Referncias");
+      this.speechService.speakTextCustom("See references");
   }
 }

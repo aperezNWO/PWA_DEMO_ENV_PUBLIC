@@ -3,7 +3,7 @@
 	<hr>
 	<form>
     <div class="mb-3 row">
-		<label for="table-complete-search" class="col-xs-3 col-sm-auto col-form-label">Busqueda de Texto Completo:</label>
+		<label for="table-complete-search" class="col-xs-3 col-sm-auto col-form-label">Full Text Search:</label>
 		<div class="col-xs-3 col-sm-auto">
 			<input
 				id="table-complete-search"
@@ -22,7 +22,7 @@
 			</div>
 		</span>
 		@if (loading | async) {
-			<span class="col col-form-label">[Cargando...]</span>
+			<span class="col col-form-label">[Loading...]</span>
 		}
 	</div>
 	<table class="table table-striped table-dark">
@@ -64,7 +64,7 @@
 </div>
 <hr>
 <div align="right">
-  <a routerLink="/Home">[Volver al Inicio]</a>
+  <a routerLink="/Home">[Home]</a>
 </div>
 
 

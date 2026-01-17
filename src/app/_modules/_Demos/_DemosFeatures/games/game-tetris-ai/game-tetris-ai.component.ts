@@ -1,264 +1,206 @@
-import { ChangeDetectorRef, Component, ElementRef, OnInit, signal, ViewChild                         } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit,     } from '@angular/core';
 import { ActivatedRoute                            } from '@angular/router';
-import { BaseComponent                             } from 'src/app/_components/base/base.component';
+import { HttpClient                                } from '@angular/common/http';
+import { BaseReferenceComponent                    } from 'src/app/_components/base-reference/base-reference.component';
 import { BackendService                            } from 'src/app/_services/BackendService/backend.service';
-import { ConfigService                             } from 'src/app/_services/ConfigService/config.service';
-import { SpeechService                             } from 'src/app/_services/speechService/speech.service';
-import { PAGE_GAMES_TETRIS_AI                      } from 'src/app/_models/common';
-import { HttpClient, HttpHeaders                   } from '@angular/common/http';
-import { Observable } from 'rxjs';
-
-export interface AIMove {
-  action: number;
-  action_name: string;
-  q_values: number[];
-  success: boolean;
-}
-
+import { ConfigService                             } from 'src/app/_services/__Utils/ConfigService/config.service';
+import { SpeechService                             } from 'src/app/_services/__Utils/SpeechService/speech.service';
+import { TetrisState,  AIWeights                   } from "src/app/_models/entity.model";
+import { TetrisService                             } from "src/app/_services/__Games/TetrisService/tetris.service";
+import { interval,  Subscription                   } from 'rxjs';
+import { catchError, tap                           } from 'rxjs/operators';
+import { PAGE_GAMES_TETRIS_AI, PAGE_TITLE_LOG, PAGE_TITLE_NO_SOUND } from 'src/app/_models/common';
 
 @Component({
   selector: 'app-game-tetris-ai',
   templateUrl: './game-tetris-ai.component.html',
-  styleUrl: './game-tetris-ai.component.css'
+  styleUrl: './game-tetris-ai.component.css',
+  providers   : [
+    { 
+      provide : PAGE_TITLE_LOG, 
+      useValue: PAGE_GAMES_TETRIS_AI 
+    },
+  ]
 })
-export class GameTetrisAIComponent  extends BaseComponent implements OnInit {
+export class GameTetrisAIComponent  extends BaseReferenceComponent implements OnInit {
   
-  BOARD_HEIGHT = 20;
-  BOARD_WIDTH = 10;
+ state: TetrisState = {
+    score: 0,
+    lines: 0,
+    level: 1,
+    nextPiece: 0,
+    gameOver: false,
+    boardMatrix: Array(20).fill(null).map(() => Array(10).fill(0))
+  };
 
-  board: number[][] = [];
-  gameOver = false;
-  score = 0;
-
-  aiSuggestion: AIMove | null = null;
-  aiLoading = false;
-
-  // 🔗 URL de tu backend
-  private apiUrl = 'https://6rtfk8-8000.csb.app/tetris_ai_move';
-
-  // Pieza activa
-  currentPieceX = 5;
-  currentPieceY = 0;
-  currentPieceShape: number[][] = [[1, 1], [1, 1]];
-  pieceTypes = [
-    [[1, 1, 1, 1]],                           // I
-    [[1, 1], [1, 1]],                         // O
-    [[0, 1, 0], [1, 1, 1]],                  // T
-    [[0, 1, 1], [1, 1, 0]],                  // S
-    [[1, 1, 0], [0, 1, 1]],                  // Z
-    [[1, 0, 0], [1, 1, 1]],                  // J
-    [[0, 0, 1], [1, 1, 1]]                   // L
-  ];
+  aiWeights: AIWeights = { linesWeight: 0, heightWeight: 0, holesWeight: 0, bumpinessWeight: 0 };
+  private statePolling: Subscription | null = null;
+  public  initializationAttempted = false;
 
   constructor(    private http: HttpClient, 
                   private cd: ChangeDetectorRef,
                   public  override configService    : ConfigService,
                   public  override route            : ActivatedRoute,
                   public  override speechService    : SpeechService,
-                  public  override backendService   : BackendService,) 
+                  public  override backendService   : BackendService,
+                  public  tetrisService: TetrisService) 
   { 
       //
       super(configService,
             backendService,
             route,
             speechService,
-            PAGE_GAMES_TETRIS_AI
+            PAGE_TITLE_NO_SOUND,
       )
   }
+  //
+  ngOnInit(): void {
+    this.initializeGame();
+  }
+
+  ngOnDestroy(): void {
+    this.stopPolling();
+    this.tetrisService.stopAutoPlay();
+    if (this.tetrisService.isGameCreated()) {
+      this.tetrisService.destroyGame().subscribe();
+    }
+  }
+
+  initializeGame(): void {
+    if (this.initializationAttempted) return;
+    this.initializationAttempted = true;
+
+    this.tetrisService.reset().subscribe({ 
+        next : value => {
+        
+                console.log('🎮 Initializing Tetris game...');
+            
+                this.tetrisService.createGame().pipe(
+                  tap(() => {
+                    console.log('✅ Game created, starting state polling');
+                    this.startPolling();
+                    this.loadAIWeights();
+                  }),
+                  catchError(err => {
+                    console.error('❌ Failed to create game:', err);
+                    alert(`Failed to initialize game: ${err.message}. Check console (F12) and ensure DLL is in the API directory.`);
+                    return [];
+                  })
+                ).subscribe();
+                
+            },
+            error: err   => console.error('Reset failed:', err), 
+        });
+  }
+
+  // Alternative: Show preview only between steps
+  private showPreviewBeforeDrop(): void {
+    // Get preview state
+    this.tetrisService.getStateWithPreview().subscribe(previewState => {
+      if (previewState) {
+        this.state = previewState;
+        this.cd.detectChanges();
+        
+        // Wait 500ms then trigger actual drop
+        setTimeout(() => {
+          this.tetrisService.step().subscribe(() => {
+            // After drop, get final state
+            this.tetrisService.getState().subscribe(finalState => {
+              if (finalState) this.state = finalState;
+            });
+          });
+        }, 500);
+      }
+    });
+  }
+
   
-ngOnInit(): void {
-    console.log('🎮 Tetris AI: Iniciando modo autoplay...');
-    this.initBoard();
-    this.spawnPiece();
-    this.redraw();
-    this.startAutoPlay();
-  }
-
-  initBoard(): void {
-    this.board = Array(this.BOARD_HEIGHT).fill(0).map(() => Array(this.BOARD_WIDTH).fill(0));
-  }
-
-  spawnPiece(): void {
-    this.currentPieceShape = this.pieceTypes[Math.floor(Math.random() * this.pieceTypes.length)];
-    const width = this.currentPieceShape[0].length;
-    this.currentPieceX = Math.max(0, Math.min(this.BOARD_WIDTH - width, 5));
-    this.currentPieceY = 0;
-
-    if (this.wouldCollide()) {
-      console.warn('⚠️ Colisión al spawnear pieza → Juego terminado');
-      this.gameOver = true;
-    }
-  }
-
-  wouldCollide(dx = 0, dy = 0): boolean {
-    for (let y = 0; y < this.currentPieceShape.length; y++) {
-      for (let x = 0; x < this.currentPieceShape[y].length; x++) {
-        if (this.currentPieceShape[y][x]) {
-          const px = this.currentPieceX + x + dx;
-          const py = this.currentPieceY + y + dy;
-          if (px < 0 || px >= this.BOARD_WIDTH || py >= this.BOARD_HEIGHT) return true;
-          if (py >= 0 && this.board[py][px] === 1) return true;
-        }
-      }
-    }
-    return false;
-  }
-
-  move(dx: number, dy: number): void {
-    if (!this.wouldCollide(dx, dy)) {
-      this.currentPieceX += dx;
-      this.currentPieceY += dy;
-    } else if (dy > 0) {
-      this.lockPiece();
-      this.clearLines();
-      this.spawnPiece();
-    }
-    this.redraw();
-  }
-
-  rotatePiece(): void {
-    const rotated = this.rotateMatrix(this.currentPieceShape);
-    const oldShape = this.currentPieceShape;
-    this.currentPieceShape = rotated;
-    if (this.wouldCollide()) this.currentPieceShape = oldShape;
-    this.redraw();
-  }
-
-  hardDrop(): void {
-    while (!this.wouldCollide(0, 1)) {
-      this.currentPieceY++;
-    }
-    this.currentPieceY--;
-    this.lockPiece();
-    this.clearLines();
-    this.spawnPiece();
-    this.redraw();
-  }
-
-  lockPiece(): void {
-    for (let y = 0; y < this.currentPieceShape.length; y++) {
-      for (let x = 0; x < this.currentPieceShape[y].length; x++) {
-        if (this.currentPieceShape[y][x]) {
-          const py = this.currentPieceY + y;
-          const px = this.currentPieceX + x;
-          if (py >= 0 && py < this.BOARD_HEIGHT && px >= 0 && px < this.BOARD_WIDTH) {
-            this.board[py][px] = 1;
+  private startPolling(): void {
+    if (this.statePolling) return;
+    
+    this.statePolling = interval(100).subscribe(() => {
+      this.tetrisService.getStateWithPreview().pipe(
+        tap(state => {
+          // Debug log
+          if (state) {
+            console.log('📊 State received:', {
+              score: state.score,
+              lines: state.lines,
+              boardHeight: state.boardMatrix.length,
+              boardWidth: state.boardMatrix[0]?.length,
+              sampleValue: state.boardMatrix[0]?.[0],
+              nextPiece: state.nextPiece
+            });
           }
-        }
-      }
-    }
-  }
-
-  clearLines(): void {
-    let linesCleared = 0;
-    for (let y = this.BOARD_HEIGHT - 1; y >= 0; y--) {
-      if (this.board[y].every(cell => cell === 1)) {
-        linesCleared++;
-        for (let yy = y; yy > 0; yy--) {
-          this.board[yy] = [...this.board[yy - 1]];
-        }
-        this.board[0] = Array(this.BOARD_WIDTH).fill(0);
-        y++;
-      }
-    }
-    if (linesCleared > 0) {
-      this.score += [0, 100, 300, 500, 800][linesCleared];
-    }
-  }
-
-  redraw(): void {
-    this.initBoard();
-    this.lockPiece();
-    this.board = this.board.map(row => [...row]);
-    this.cd.detectChanges(); // 🔥 Fuerza actualización visual
-  }
-
-  // === Autoplay: Bucle infinito seguro ===
-  startAutoPlay(): void {
-    console.log('▶️ Autoplay iniciado');
-    this.autoPlayLoop();
-  }
-
-  autoPlayLoop(): void {
-    if (this.gameOver) {
-      console.log('💀 Juego terminado. Deteniendo autoplay.');
-      return;
-    }
-
-    this.aiLoading = true;
-
-    this.http.post<AIMove>(this.apiUrl, { board: this.board })
-      .subscribe({
-        next: (response) => {
-          console.log('✅ Respuesta del modelo:', response);
-
-          if (typeof response?.action === 'number') {
-            this.aiSuggestion = response;
-            this.applyAction(response.action);
-          } else {
-            console.warn('⚠️ Respuesta inválida, omitiendo...', response);
-          }
-        },
-        error: (err) => {
-          console.error('❌ Error al contactar con IA:', err);
-        },
-        complete: () => {
-          this.aiLoading = false;
-          // Programar siguiente movimiento SIEMPRE
-          this.scheduleNextMove();
+        })
+      ).subscribe(state => {
+        if (state && state.boardMatrix && state.boardMatrix.length > 0) {
+          this.state = state;
         }
       });
+    });
   }
 
-  private scheduleNextMove(): void {
-    setTimeout(() => {
-      if (!this.gameOver) {
-        this.autoPlayLoop(); // 🔁 Siguiente iteración
-      }
-    }, 600); // Ajusta velocidad aquí (ms entre movimientos)
-  }
-
-  applyAction(action: number): void {
-    console.log('🔧 Aplicando acción:', action);
-
-    switch (action) {
-      case 0: this.move(-1, 0); break;  // ← Izquierda
-      case 1: this.move(1, 0); break;   // → Derecha
-      case 2: this.rotatePiece(); break; // ↻ Rotar
-      case 3: this.hardDrop(); break;   // ↓ Bajar rápido
-      case 4: this.move(0, 1); break;   // No hacer nada (bajar)
-      default:
-        console.warn('⚠️ Acción desconocida:', action);
-        this.move(0, 1);
+  private stopPolling(): void {
+    if (this.statePolling) {
+      this.statePolling.unsubscribe();
+      this.statePolling = null;
     }
   }
 
-  resetGame(): void {
-    console.log('🔄 Reiniciando juego...');
-    this.gameOver = false;
-    this.score = 0;
-    this.aiSuggestion = null;
-    this.initBoard();
-    this.spawnPiece();
-    this.redraw();
-    this.startAutoPlay();
+  // UI Actions
+  step(): void {
+    this.tetrisService.step().subscribe({ error: err => console.error('Step failed:', err) });
   }
 
-  get qValuesFormatted(): string {
-    const q = this.aiSuggestion?.q_values;
-    if (!Array.isArray(q)) return '---';
-    return q.map(v => v.toFixed(2)).join(', ');
+  reset(): void {
+    this.tetrisService.reset().subscribe({ error: err => console.error('Reset failed:', err) });
   }
 
-  private rotateMatrix(matrix: number[][]): number[][] {
-    const N = matrix.length;
-    const M = matrix[0].length;
-    const result = Array(M).fill(0).map(() => Array(N).fill(0));
-    for (let y = 0; y < N; y++) {
-      for (let x = 0; x < M; x++) {
-        result[x][N - 1 - y] = matrix[y][x];
-      }
+  toggleAutoPlay(): void {
+    if (!this.tetrisService.isGameCreated()) {
+      alert('Game not initialized. Please wait...');
+      return;
     }
-    return result;
+    if (this.tetrisService.isAutoPlaying()) {
+      this.tetrisService.stopAutoPlay();
+    } else {
+      this.tetrisService.startAutoPlay();
+    }
+  }
+
+  trainAI(): void {
+    console.log('🤖 Starting AI training...');
+    this.tetrisService.trainAI().subscribe(() => {
+      alert('✅ AI training completed!');
+      this.loadAIWeights();
+    });
+  }
+
+  loadAIWeights(): void {
+    this.tetrisService.getAIWeights().subscribe(weights => {
+      this.aiWeights = weights;
+      console.log('📊 AI weights loaded:', weights);
+    });
+  }
+
+  updateAIWeights(): void {
+    this.tetrisService.setAIWeights(this.aiWeights).subscribe(() => {
+      console.log('✅ Weights updated');
+    });
+  }
+
+  getCellClass(value: number): string {
+    if (value === 0) return 'empty';
+    return `occupied piece-${value}`;
+  }
+
+  getPieceName(id: number): string {
+    const names = ['', 'I', 'O', 'T', 'S', 'Z', 'J', 'L'];
+    return names[id] || '?';
+  }
+
+  isGameReady(): boolean {
+    return this.tetrisService.isGameCreated() && this.state.boardMatrix.length > 0;
   }
 }  

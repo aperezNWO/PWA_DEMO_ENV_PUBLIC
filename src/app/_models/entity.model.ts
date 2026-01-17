@@ -1,3 +1,5 @@
+import {  Params                    } from '@angular/router';
+
 ////////////////////////////////////////////////////////////////////////////
 
 export enum LogType {
@@ -158,24 +160,54 @@ export interface PageSettingDictionary {
 //
 export interface PageInfo
 {
-    id           : number;
-    url          : string;
-    text         : string;
-    queryParams  : string;
+    id             : number;
+    url            : string;
+    text           : string;
+    queryParams    : string;
+    queryParamsObj : Params;
+    routerLink     : string;
 }
 export interface MainPage {
-    log_name    : string;
-    page_name   : string;
-    pages       : PageInfo[];
+    log_name     : string;
+    page_name    : string;
+    pages        : PageInfo[];
+    pages_nested : PageInfo[];
 }
-/*
-export interface MainPagesResponse {
-    mainpages: mainpage[];
-}*/
-
 //
 export interface MainPageSettingDictionary {
     [key: string]: MainPage;
+}
+//
+export interface PageInfoSettingDictionary {
+    [key: string]: PageInfo;
+}
+////////////////////////////////////////////////////////////////////////////
+// TETRIS MODELS
+////////////////////////////////////////////////////////////////////////////
+
+export interface TetrisState {
+  score: number;
+  lines: number;
+  level: number;
+  nextPiece: number;
+  gameOver: boolean;
+  boardMatrix: number[][]; // Jagged array
+}
+
+export interface AIWeights {
+  linesWeight: number;
+  heightWeight: number;
+  holesWeight: number;
+  bumpinessWeight: number;
+}
+
+export interface TrainRequest {
+  weightsFile: string;
+  generations: number;
+}
+
+export interface LoadAIRequest {
+  weightsFile: string;
 }
 
 ////////////////////////////////////////////////////////////////////////////

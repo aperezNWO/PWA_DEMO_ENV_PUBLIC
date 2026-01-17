@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output, Input     } from '@angular/core';
-import { SpeechService                              } from 'src/app/_services/speechService/speech.service';
+import { SpeechService                              } from 'src/app/_services/__Utils/SpeechService/speech.service';
 
 @Component({
   selector: 'app-speech-panel',

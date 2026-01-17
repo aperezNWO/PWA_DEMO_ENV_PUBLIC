@@ -1,20 +1,27 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild    } from '@angular/core';
-import { BackendService           } from 'src/app/_services/BackendService/backend.service';
-import { _languageName            } from 'src/app/_models/entity.model';
-import { BaseComponent            } from 'src/app/_components/base/base.component';
-import { NgxSignaturePadComponent } from '@eve-sama/ngx-signature-pad/lib/ngx-signature-pad.component';
-import { NgxSignatureOptions      } from '@eve-sama/ngx-signature-pad/lib/types/ngx-signature-pad';
-import { ActivatedRoute           } from '@angular/router';
-import { SpeechService            } from 'src/app/_services/speechService/speech.service';
-import { ConfigService            } from 'src/app/_services/ConfigService/config.service';
-import { PAGE_MISCELANEOUS_OCR    } from 'src/app/_models/common';
+import { ActivatedRoute                                             } from '@angular/router';
+import { BackendService                                             } from 'src/app/_services/BackendService/backend.service';
+import { _languageName                                              } from 'src/app/_models/entity.model';
+import { BaseReferenceComponent                                     } from 'src/app/_components/base-reference/base-reference.component';
+import { SpeechService                                              } from 'src/app/_services/__Utils/SpeechService/speech.service';
+import { ConfigService                                              } from 'src/app/_services/__Utils/ConfigService/config.service';
+import { PAGE_MISCELANEOUS_OCR, PAGE_TITLE_LOG, PAGE_TITLE_NO_SOUND } from 'src/app/_models/common';
+import { OCRService                                                 } from 'src/app/_services/__AI/OCRService/ocr.service';
+import { NgxSignaturePadComponent                                   } from '@eve-sama/ngx-signature-pad/lib/ngx-signature-pad.component';
+import { NgxSignatureOptions                                        } from '@eve-sama/ngx-signature-pad/lib/types/ngx-signature-pad';
 
 @Component({
-  selector: 'app-ocr-photo-capture',
-  templateUrl: './ocr-photo-capture.component.html',
-  styleUrl: './ocr-photo-capture.component.css'
+  selector    : 'app-ocr-photo-capture',
+  templateUrl : './ocr-photo-capture.component.html',
+  styleUrl    : './ocr-photo-capture.component.css',
+  providers   : [
+    { 
+      provide : PAGE_TITLE_LOG, 
+      useValue: PAGE_MISCELANEOUS_OCR 
+    },
+  ]
 })
-export class OcrPhotoCaptureComponent extends BaseComponent implements AfterViewInit , OnInit {
+export class OcrPhotoCaptureComponent extends BaseReferenceComponent implements AfterViewInit , OnInit {
   /** Catch object, call functions via instance object */
   @ViewChild('signature') signature: NgxSignaturePadComponent | undefined;
   /** You can see more introduction in the below about NgxSignatureOptions */
@@ -43,7 +50,7 @@ export class OcrPhotoCaptureComponent extends BaseComponent implements AfterView
   private isFrontCamera                              : boolean = true;
   //
   capturedImage           : string | null = null;
-  tituloListadOrigen      : string | null = "[ORIGEN CAPTURA]";
+  tituloListadOrigen      : string | null = "[CAPTURE ORIGIN]";
   titleEngineList         : string | null = "[OCR ENGINES]";;
   hiddenCanvasContainer   : boolean = false;
   hiddenCameraContainer   : boolean = false;
@@ -51,14 +58,15 @@ export class OcrPhotoCaptureComponent extends BaseComponent implements AfterView
   capturedImageHidden     : boolean = true;
   captureButtonDisabled   : boolean = false;
   saveImageButtonDisabled : boolean = true;
-  selectedIndex           : number  = 0;
-  selectedIndexEngines    : number  = 0;
+  selectedIndex           : number  = 1;
+  selectedIndexEngines    : number  = 1;
   
   //
   constructor(public override configService  : ConfigService,
               public override backendService : BackendService,
               public override route          : ActivatedRoute,
               public override speechService  : SpeechService,
+              public          ocrService     : OCRService,
   )
   {
       //
@@ -66,7 +74,7 @@ export class OcrPhotoCaptureComponent extends BaseComponent implements AfterView
             backendService,
             route,
             speechService,
-            PAGE_MISCELANEOUS_OCR)
+            PAGE_TITLE_NO_SOUND)
   }
   //
   ngOnInit(): void {
@@ -92,12 +100,12 @@ export class OcrPhotoCaptureComponent extends BaseComponent implements AfterView
     this.route.queryParams.subscribe(params => {
     //-----------------------------------------------------------------------------
     this.__sourceList = new Array();
-    this.__sourceList.push( new _languageName(0,"(SELECCIONE OPCION..)" ,false,""));        
-    this.__sourceList.push( new _languageName(1,"(DESDE CANVAS)"        ,true ,""));        
-    this.__sourceList.push( new _languageName(2,"(DESDE CAMARA)"        ,false,""));        
+    this.__sourceList.push( new _languageName(0,"(CHOOSE OPTION...)"   ,false,""));        
+    this.__sourceList.push( new _languageName(1,"(FROM CANVAS)"        ,true ,""));        
+    this.__sourceList.push( new _languageName(2,"(FROM CAMERA)"        ,false,""));        
     //-----------------------------------------------------------------------------
     this.__engineList = new Array();
-    this.__engineList.push( new _languageName(0,"(SELECCIONE OPCION..)"                        ,false,  ""   ));        
+    this.__engineList.push( new _languageName(0,"(CHOOSE OPCION...)"                           ,false,  ""   ));        
     this.__engineList.push( new _languageName(1,"(TESSERACT / javascript)"                     ,true,   "JS" ));        
     this.__engineList.push( new _languageName(2,"(TESSERACT / C++) "                           ,false,  "CPP"));  
         //
@@ -137,7 +145,6 @@ export class OcrPhotoCaptureComponent extends BaseComponent implements AfterView
     //
     this.status_message.set("");
     //
-    //console.log(`Selected Source : ${this.selectedIndex}`);
   }
   selectionChangeEngines() {
     //
@@ -150,8 +157,14 @@ export class OcrPhotoCaptureComponent extends BaseComponent implements AfterView
   onEndSign(): void { }
   //
   saveSignature():void {
+
      //
-     //console.log("Saving signature...");
+     if (this.selectedIndex == 0) {
+            this.status_message.set("Please choose the option    [CAPTURE ORIGIN]");
+            return;
+     }
+
+     //
      this.status_message.set("[...parsing...]");
      //
      let base64ImageString : string  = this.signature?.toDataURL()!;
@@ -171,7 +184,7 @@ export class OcrPhotoCaptureComponent extends BaseComponent implements AfterView
         break;      
         default:
           //
-          this.status_message.set("Favor seleccione la opción [ENGINE]");
+          this.status_message.set("Please choose the option [OCR ENGINE]");
         break;
      }
   }
@@ -198,10 +211,10 @@ export class OcrPhotoCaptureComponent extends BaseComponent implements AfterView
     this.saveImageButtonDisabled = true;
 
     //
-    this.backendService.uploadBase64ImageNodeJs(base64ImageString).subscribe(
+    this.ocrService.uploadBase64ImageNodeJs(base64ImageString).subscribe(
       (response) => {
         //
-        //console.log('Image uploaded successfully:', response);
+        //console.log('Image uploaded correctly:', response);
         this.status_message.set(JSON.parse(JSON.stringify(response))['message']);
         //
         this.statusButton            = '[save]';
@@ -232,10 +245,10 @@ export class OcrPhotoCaptureComponent extends BaseComponent implements AfterView
     this.saveImageButtonDisabled = true;
 
     //
-    this.backendService.uploadBase64ImageCPP(base64ImageString).subscribe(
+    this.ocrService.uploadBase64ImageCPP(base64ImageString).subscribe(
       (response) => {
         //
-        //console.log('Image uploaded successfully:', response);
+        //console.log('Image uploaded correctly:', response);
         this.status_message.set(JSON.parse(JSON.stringify(response))['message']);
         //
         this.statusButton            = '[save]';
@@ -244,7 +257,7 @@ export class OcrPhotoCaptureComponent extends BaseComponent implements AfterView
         this.captureButtonDisabled   = false;
         this.saveImageButtonDisabled = true;
       },
-      (error) => {
+      (error: string) => {
         //
         console.error('Error uploading image:', error);
         //
@@ -309,6 +322,11 @@ export class OcrPhotoCaptureComponent extends BaseComponent implements AfterView
   //
   saveImage() {
        //
+       if (this.selectedIndex == 0) {
+                this.status_message.set("Please choose the option [CAPTURE ORIGIN]");
+                return;
+       }
+       //
        this.status_message.set("[..parsing...]");
        //
        this.selectionChangeEngines();
@@ -328,7 +346,7 @@ export class OcrPhotoCaptureComponent extends BaseComponent implements AfterView
               }        
           break;
           default : //
-              this.status_message.set("Favor seleccione la opción [ENGINE]");
+              this.status_message.set("Pleae choose the option [OCR ENGINE]");
           break;
        }
   }
@@ -336,7 +354,7 @@ export class OcrPhotoCaptureComponent extends BaseComponent implements AfterView
   dataURLToBlob(dataURL: string): Blob {
     const byteString = atob(dataURL.split(',')[1]);
     const mimeString = dataURL.split(',')[0].split(':')[1].split(';')[0];
-    const byteArray = new Uint8Array(byteString.length);
+    const byteArray  = new Uint8Array(byteString.length);
 
     for (let i = 0; i < byteString.length; i++) {
       byteArray[i] = byteString.charCodeAt(i);

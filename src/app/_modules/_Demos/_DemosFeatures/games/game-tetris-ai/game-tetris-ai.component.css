@@ -1,69 +1,145 @@
-/* src/app/tetris/tetris.component.css */
+* {
+  box-sizing: border-box;
+}
+
 .tetris-container {
-  max-width: 600px;
-  margin: 20px auto;
+  display: flex;
+  gap: 30px;
   padding: 20px;
-  font-family: 'Segoe UI', sans-serif;
-  background: #f0f2f5;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  text-align: center;
+  font-family: 'Courier New', monospace;
+  min-height: 100vh;
+  background: #1a1a1a;
+  color: #0ff;
 }
 
-.board {
-  display: inline-grid;
-  grid-template-rows: repeat(20, 15px);
-  grid-template-columns: repeat(10, 15px);
-  gap: 1px;
-  background-color: #999;
-  border: 2px solid #333;
-  margin: 15px auto;
-  border-radius: 6px;
+.board-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.row {
-  display: contents;
+/* PREVIEW ROW STYLES - Critical for top visualization */
+.preview-row {
+  display: flex;
+  height: 20px;
+  margin-bottom: 5px;
+  border: 2px dashed #0ff;
+  background: rgba(0, 255, 255, 0.1);
+  padding: 2px;
 }
 
-.cell {
-  width: 15px;
-  height: 15px;
-  background-color: white;
+.cell.preview {
+  width: 20px;
+  height: 20px;
+  border: 1px dashed #333;
+  background: transparent;
+  transition: background-color 0.15s ease;
+}
+
+.preview-piece {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  width: 100%;
+  height: 100%;
+  animation: pulse 1s infinite;
   border-radius: 2px;
 }
 
-.cell.filled {
-  background: linear-gradient(135deg, #0d6efd, #0b5ed7);
-  border: 1px solid #0a58ca;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1); }
 }
 
-.ai-info {
-  background: #e3f2fd;
-  border: 1px solid #bbdefb;
-  padding: 10px;
-  border-radius: 6px;
+/* BOARD STYLES */
+.board {
+  border: 3px solid #444;
+  padding: 5px;
+  background: #000;
+  display: inline-block;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  min-width: 210px;
+  min-height: 420px;
+}
+
+.row {
+  display: flex;
+  height: 20px;
+  min-height: 20px;
+}
+
+.cell {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  border: 1px solid #222;
+  flex-shrink: 0;
+  display: block;
+}
+
+/* Piece colors */
+.empty { background-color: #111 !important; }
+.piece-1 { background-color: #0ff !important; } /* I - Cyan */
+.piece-2 { background-color: #ff0 !important; } /* O - Yellow */
+.piece-3 { background-color: #f0f !important; } /* T - Purple */
+.piece-4 { background-color: #0f0 !important; } /* S - Green */
+.piece-5 { background-color: #f00 !important; } /* Z - Red */
+.piece-6 { background-color: #00f !important; } /* J - Blue */
+.piece-7 { background-color: #f90 !important; } /* L - Orange */
+
+/* Rest of your existing styles... */
+.controls { margin-top: 30px; display: flex; gap: 10px; }
+.controls button { padding: 10px 20px; font-size: 16px; font-weight: bold; background: #333; color: #0ff; border: 2px solid #0ff; cursor: pointer; transition: all 0.3s; }
+.controls button:hover { background: #0ff; color: #000; }
+.info { margin-top: 20px; background: #222; padding: 15px; border-radius: 5px; min-width: 200px; }
+.info h3 { margin: 5px 0; color: #0ff; }
+.game-over { color: #f00 !important; font-size: 24px; margin-top: 20px !important; animation: blink 1s infinite; }
+@keyframes blink { 50% { opacity: 0.5; } }
+
+.ai-section {
+  display: none !important;
+  border-left: 2px solid #444;
+  padding-left: 30px;
+  color: #0f0;
+}
+
+.ai-section h3 {
+  margin-top: 0;
+}
+
+.weights {
+  margin-top: 20px;
+}
+
+.weights label {
+  display: block;
   margin: 10px 0;
-  font-size: 14px;
+  color: #0ff;
 }
 
-.status {
-  margin: 15px 0;
-  font-size: 1.1em;
+.weights input {
+  width: 80px;
+  margin-left: 10px;
+  background: #111;
+  color: #0ff;
+  border: 1px solid #0ff;
+  padding: 5px;
 }
 
-.game-over {
-  color: #c82333;
-  font-weight: bold;
+/* Loading spinner */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
-.reset-btn {
-  background: #ffc107;
-  border: none;
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  margin: 10px 0;
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #333;
+  border-top-color: #0ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
 }
