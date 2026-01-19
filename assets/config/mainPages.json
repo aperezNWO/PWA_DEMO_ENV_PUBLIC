@@ -57,12 +57,12 @@
         "page_name"  : "[DEMOS - LIBRARIES / FRAMEWORKS]",
         "pages"      : [
             { "id": 1, "url" : "/GridParam"           , "text": "[LIBRARIES - ANGULAR    / TYPESCRIPT]"        , "queryParams" : "{ pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT'}"    },
-            { "id": 2, "url" : "/LinearRegression"    , "text": "[LIBRARIES - TENSORFLOW / MACHINE LEARNING]"  , "queryParams" : ""                                 },
-            { "id": 3, "url" : "/ComputerVision"      , "text": "[LIBRARIES - OPEN CV    / COMPUTER VISION]"   , "queryParams" : ""                                 },
-            { "id": 4, "url" : "/OcrPhotoCapture"     , "text": "[LIBRARIES - TESSERACT  / OCR]"               , "queryParams" : ""                                 },
-            { "id": 5, "url" : "/FilesGenerationXLS"  , "text": "[LIBRARIES - EXCEL      / EPP PLUS]"          , "queryParams" : ""                                 },
-            { "id": 6, "url" : "/FilesGenerationPDF"  , "text": "[LIBRARIES - PDF        / iTextSharp]"        , "queryParams" : ""                                 },
-            { "id": 7, "url" : "/Chart"               , "text": "[LIBRARIES - CHART      / Chart.js ]"         , "queryParams" : ""                                 }
+            { "id": 2, "url" : "/LinearRegression"    , "text": "[LIBRARIES - TENSORFLOW / MACHINE LEARNING]"  , "queryParams" : "{ langName : 'PY'  }"                             },
+            { "id": 3, "url" : "/ComputerVision"      , "text": "[LIBRARIES - OPEN CV    / COMPUTER VISION]"   , "queryParams" : "{ langName : 'CPP' }"                             },
+            { "id": 4, "url" : "/OcrPhotoCapture"     , "text": "[LIBRARIES - TESSERACT  / OCR]"               , "queryParams" : "{ langName : 'CPP' }"                             },
+            { "id": 5, "url" : "/FilesGenerationXLS"  , "text": "[LIBRARIES - EXCEL      / EPP PLUS]"          , "queryParams" : ""                                                 },
+            { "id": 6, "url" : "/FilesGenerationPDF"  , "text": "[LIBRARIES - PDF        / iTextSharp]"        , "queryParams" : ""                                                 },
+            { "id": 7, "url" : "/Chart"               , "text": "[LIBRARIES - CHART      / Chart.js ]"         , "queryParams" : ""                                                 }
         ],
         "comment_2"        : "'page_nested' values for  dynamic landing. No queryParam explicit 'pageName' param requiered for /Gridparam.",
         "pages_nested"     : [
