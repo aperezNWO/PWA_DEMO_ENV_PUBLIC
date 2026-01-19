@@ -225,8 +225,18 @@ export class _SearchService  {
 	{
 		 this.searchTerm = "";
 	}
-		//
+	//
 	public fixBackend(field_4_input: string): string {
+		// Comprehensive validation
+		if (typeof field_4_input !== 'string' || !field_4_input.trim()) {
+			console.debug('field_4_input: Invalid input', { input: field_4_input });
+			return '';
+		}
+		// Comprehensive validation
+		if (typeof field_4_input !== 'string' || !field_4_input.trim()) {
+			console.debug('field_4_input: Invalid input', { input: field_4_input });
+			return '';
+		}
 		// Regex to match {{anything}} (non-greedy)
 		const regex = /\{\{(.+?)\}\}/g;
 

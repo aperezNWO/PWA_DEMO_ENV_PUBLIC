@@ -4,10 +4,10 @@
         "log_name"   : "PAGE_ANGULAR_DEMO_INDEX",
         "page_name"  : "[DEMOS]",
         "pages"      : [
-          { "id": 1, "url" : "/PageUrlList"                                               , "text": "[FEATURES]"        , "queryParams" : "PAGE_DEMOS_CARACTERISTICAS_INDEX"     },
-          { "id": 2, "url" : "/PageUrlList"                                               , "text": "[LANGUAGES]"       , "queryParams" : "PAGE_DEMOS_LENGUAJES_INDEX"           },
-          { "id": 3, "url" : "/PageUrlList"                                               , "text": "[LIBRARIES]"       , "queryParams" : "PAGE_DEMOS_LIBRARIES_INDEX"           },
-          { "id": 4, "url" : "/PageUrlList"                                               , "text": "[CURRICULUM]"      , "queryParams" : "PAGE_DEMOS_CURRICULUM_INDEX"          }
+          { "id": 1, "url" : "/PageUrlList"                                               , "text": "[FEATURES]"        , "queryParams" : "{ pageName : 'PAGE_DEMOS_CARACTERISTICAS_INDEX'}"     },
+          { "id": 2, "url" : "/PageUrlList"                                               , "text": "[LANGUAGES]"       , "queryParams" : "{ pageName : 'PAGE_DEMOS_LENGUAJES_INDEX'}"           },
+          { "id": 3, "url" : "/PageUrlList"                                               , "text": "[LIBRARIES]"       , "queryParams" : "{ pageName : 'PAGE_DEMOS_LIBRARIES_INDEX'}"           },
+          { "id": 4, "url" : "/PageUrlList"                                               , "text": "[CURRICULUM]"      , "queryParams" : "{ pageName : 'PAGE_DEMOS_CURRICULUM_INDEX'}"          }
         ],
         "pages_nested" : [
 
@@ -30,33 +30,33 @@
         "pages"      : []
       },
      {
-        "comment_1"  : "'pages' values for  'PageUrlList' component ",
+        "comment_1"  : "'pages' values for  'PageUrlList' component. queryParam explicit 'pageName' param **requiered** for /Gridparam ",
         "log_name"   : "PAGE_DEMOS_LENGUAJES_INDEX",
         "page_name"  : "[DEMOS - LANGUAGES]",
         "pages"      : [
-          { "id": 1, "url" : "/GridParam"         , "text": "[ANGULAR / TYPESCRIPT]"   , "queryParams" : "PAGE_DEMOS_ANGULAR_JAVASCRIPT"    },
-          { "id": 2, "url" : "/GridParam"         , "text": "[NODE.JS / JAVASCRIPT]"   , "queryParams" : "PAGE_DEMOS_NODEJS_JAVASCRIPT"     },
-          { "id": 3, "url" : "/GridParam"         , "text": "[.NET CORE / C#]"         , "queryParams" : "PAGE_DEMOS_NETCORE_CSHARP"        },
-          { "id": 4, "url" : "/GridParam"         , "text": "[.NET CORE / C++]"        , "queryParams" : "PAGE_DEMOS_NETCORE_CPP"           },
-          { "id": 5, "url" : "/GridParam"         , "text": "[SPRING BOOT / JAVA]"     , "queryParams" : "PAGE_DEMOS_SPRING_BOOT_JAVA"      },
-          { "id": 6, "url" : "/GridParam"         , "text": "[PYTHON / DJANGO]"        , "queryParams" : "PAGE_DEMOS_DJANGO_PYTHON"         }
+          { "id": 1, "url" : "/GridParam"         , "text": "[ANGULAR / TYPESCRIPT]"   , "queryParams" : "{ pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT'}"    },
+          { "id": 2, "url" : "/GridParam"         , "text": "[NODE.JS / JAVASCRIPT]"   , "queryParams" : "{ pageName : 'PAGE_DEMOS_NODEJS_JAVASCRIPT'}"     },
+          { "id": 3, "url" : "/GridParam"         , "text": "[.NET CORE / C#]"         , "queryParams" : "{ pageName : 'PAGE_DEMOS_NETCORE_CSHARP'}"        },
+          { "id": 4, "url" : "/GridParam"         , "text": "[.NET CORE / C++]"        , "queryParams" : "{ pageName : 'PAGE_DEMOS_NETCORE_CPP'}"           },
+          { "id": 5, "url" : "/GridParam"         , "text": "[SPRING BOOT / JAVA]"     , "queryParams" : "{ pageName : 'PAGE_DEMOS_SPRING_BOOT_JAVA'}"      },
+          { "id": 6, "url" : "/GridParam"         , "text": "[PYTHON / DJANGO]"        , "queryParams" : "{ pageName : 'PAGE_DEMOS_DJANGO_PYTHON'}"         }
         ],
-      "comment_2"        : "'page_nested' values for  dynamic landing'",
+      "comment_2"        : "'page_nested' values for  dynamic landing. queryParam explicit 'pageName' param requiered for /Gridparam.",
       "pages_nested"     : [
-          { "id": 1, "url" : "", "text": "./assets/images/logos/Angular_full_color_logo.svg.png"                , "routerLink" : "/GridParam"                 , "queryParams" : "PAGE_DEMOS_ANGULAR_JAVASCRIPT"    },
-          { "id": 2, "url" : "", "text": "./assets/images/logos/Node.js_logo.svg.png"                           , "routerLink" : "/GridParam"                 , "queryParams" : "PAGE_DEMOS_NODEJS_JAVASCRIPT"     },
-          { "id": 3, "url" : "", "text": "./assets/images/logos/C_Sharp_Logo_2023.svg"                          , "routerLink" : "/GridParam"                 , "queryParams" : "PAGE_DEMOS_NETCORE_CSHARP"        },
-          { "id": 4, "url" : "", "text": "./assets/images/logos/ISO_C%2B%2B_Logo.svg.png"                       , "routerLink" : "/GridParam"                 , "queryParams" : "PAGE_DEMOS_NETCORE_CPP"           },
-          { "id": 5, "url" : "", "text": "./assets/images/logos/Microsoft.VisualStudio.Services.Icons.Default"  , "routerLink" : "/GridParam"                 , "queryParams" : "PAGE_DEMOS_SPRING_BOOT_JAVA"      },
-          { "id": 6, "url" : "", "text": "./assets/images/logos/Python-logo-notext.svg"                         , "routerLink" : "/GridParam"                 , "queryParams" : "PAGE_DEMOS_DJANGO_PYTHON"         }
+          { "id": 1, "url" : "", "text": "./assets/images/logos/Angular_full_color_logo.svg.png"                , "routerLink" : "/GridParam"                 , "queryParams" : "{ pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT'}"    },
+          { "id": 2, "url" : "", "text": "./assets/images/logos/Node.js_logo.svg.png"                           , "routerLink" : "/GridParam"                 , "queryParams" : "{ pageName : 'PAGE_DEMOS_NODEJS_JAVASCRIPT'}"     },
+          { "id": 3, "url" : "", "text": "./assets/images/logos/C_Sharp_Logo_2023.svg"                          , "routerLink" : "/GridParam"                 , "queryParams" : "{ pageName : 'PAGE_DEMOS_NETCORE_CSHARP'}"        },
+          { "id": 4, "url" : "", "text": "./assets/images/logos/ISO_C%2B%2B_Logo.svg.png"                       , "routerLink" : "/GridParam"                 , "queryParams" : "{ pageName : 'PAGE_DEMOS_NETCORE_CPP'}"           },
+          { "id": 5, "url" : "", "text": "./assets/images/logos/Microsoft.VisualStudio.Services.Icons.Default"  , "routerLink" : "/GridParam"                 , "queryParams" : "{ pageName : 'PAGE_DEMOS_SPRING_BOOT_JAVA'}"      },
+          { "id": 6, "url" : "", "text": "./assets/images/logos/Python-logo-notext.svg"                         , "routerLink" : "/GridParam"                 , "queryParams" : "{ pageName : 'PAGE_DEMOS_DJANGO_PYTHON'}"         }
         ]
       },
       {
-        "comment_1"  : "'pages' values for  'PageUrlList' component ",
+        "comment_1"  : "'pages' values for  'PageUrlList' component. queryParam explicit 'pageName' param **requiered** for /Gridparam.",
         "log_name"   : "PAGE_DEMOS_LIBRARIES_INDEX",
         "page_name"  : "[DEMOS - LIBRARIES / FRAMEWORKS]",
         "pages"      : [
-            { "id": 1, "url" : "/GridParam"           , "text": "[LIBRARIES - ANGULAR    / TYPESCRIPT]"        , "queryParams" : "PAGE_DEMOS_ANGULAR_JAVASCRIPT"    },
+            { "id": 1, "url" : "/GridParam"           , "text": "[LIBRARIES - ANGULAR    / TYPESCRIPT]"        , "queryParams" : "{ pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT'}"    },
             { "id": 2, "url" : "/LinearRegression"    , "text": "[LIBRARIES - TENSORFLOW / MACHINE LEARNING]"  , "queryParams" : ""                                 },
             { "id": 3, "url" : "/ComputerVision"      , "text": "[LIBRARIES - OPEN CV    / COMPUTER VISION]"   , "queryParams" : ""                                 },
             { "id": 4, "url" : "/OcrPhotoCapture"     , "text": "[LIBRARIES - TESSERACT  / OCR]"               , "queryParams" : ""                                 },
@@ -64,28 +64,29 @@
             { "id": 6, "url" : "/FilesGenerationPDF"  , "text": "[LIBRARIES - PDF        / iTextSharp]"        , "queryParams" : ""                                 },
             { "id": 7, "url" : "/Chart"               , "text": "[LIBRARIES - CHART      / Chart.js ]"         , "queryParams" : ""                                 }
         ],
-        "comment_2"        : "'page_nested' values for  dynamic landing'",
+        "comment_2"        : "'page_nested' values for  dynamic landing. No queryParam explicit 'pageName' param requiered for /Gridparam.",
         "pages_nested"     : [
-            { "id": 1, "url" : ""                     , "text": "./assets/images/logos/Angular_full_color_logo.svg.png"               , "routerLink" : "/GridParam", "queryParams" : "PAGE_DEMOS_ANGULAR_JAVASCRIPT"    },
-            { "id": 2, "url" : "/LinearRegression"    , "text": "./assets/images/logos/Tensorflow_logo.svg"                           , "queryParams" : ""                                 },
-            { "id": 3, "url" : "/ComputerVision"      , "text": "./assets/images/logos/OpenCV_logo_black.svg"                         , "queryParams" : ""                                 },
-            { "id": 4, "url" : "/OcrPhotoCapture"     , "text": "./assets/images/logos/tesseract-icon.webp"                           , "routerLink" : ""          , "queryParams" : ""                                 },
+            { "id": 1, "url" : ""                     , "text": "./assets/images/logos/Angular_full_color_logo.svg.png"               , "routerLink"  : "/GridParam"        , "queryParams" : "{ pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT'}"    },
+            { "id": 2, "url" : ""                     , "text": "./assets/images/logos/Tensorflow_logo.svg"                           , "routerLink"  : "/LinearRegression",  "queryParams" : "{ langName : 'PY'}"                               },
+            { "id": 3, "url" : ""                     , "text": "./assets/images/logos/OpenCV_logo_black.svg"                         , "routerLink"  : "/ComputerVision",    "queryParams" : "{ langName : 'CPP'}"                              },
+            { "id": 4, "url" : ""                     , "text": "./assets/images/logos/tesseract-icon.webp"                           , "routerLink"  : "/OcrPhotoCapture",   "queryParams" : "{ langName : 'CPP'}"                              },
             { "id": 5, "url" : "/FilesGenerationXLS"  , "text": "./assets/images/logos/Microsoft_Office_Excel_(2019–2025).svg"        , "queryParams" : ""                                 },
             { "id": 6, "url" : "/FilesGenerationPDF"  , "text": "./assets/images/logos/PDF_file_icon.svg"                             , "queryParams" : ""                                 },
             { "id": 7, "url" : "/Chart"               , "text": "./assets/images/logos/Chart.js_logo.svg.png"                         , "queryParams" : ""                                 }
         ]
       },
       {
+        "comment_1"  : "'pages' values for  'PageUrlList' component. queryParam explicit 'pageName' param **requiered** for /Gridparam.",
         "log_name"   : "PAGE_DEMOS_CURRICULUM_INDEX",
         "page_name"  : "[DEMOS - CURRICULUM]",
         "pages"      : [
-            { "id": 0, "url" : "/GridParam"               , "text": "[Curriculum - A.I.       / Machine Learning]"             , "queryParams" : "PAGE_CURRICULUM_AI"               },
-            { "id": 1, "url" : "/CurriculumAngular"       , "text": "[Curriculum - Angular    / TypeScript      ]"             , "queryParams" : "PAGE_CURRICULUM_ANGULAR"          },
-            { "id": 2, "url" : "/GridParam"               , "text": "[Curriculum - C++                          ]"             , "queryParams" : "PAGE_CURRICULUM_CPP"              },
-            { "id": 3, "url" : "/GridParam"               , "text": "[Curriculum - Django     / Python]"                       , "queryParams" : "PAGE_CURRICULUM_DJANGO_PYTHON"    },
-            { "id": 4, "url" : "/GridParam"               , "text": "[Curriculum - SpringBoot / Java]"                         , "queryParams" : "PAGE_CURRICULUM_SPRING_BOOT_JAVA" },
-            { "id": 5, "url" : "/GridParam"               , "text": "[Curriculum - Node.js    / Javascript]"                   , "queryParams" : "PAGE_CURRICULUM_NODE_JS"          },
-            { "id": 6, "url" : "/GridParam"               , "text": "[Curriculum - .Net core  / C#]"                           , "queryParams" : "PAGE_CURRICULUM_NET_CORE"         }   
+            { "id": 0, "url" : "/GridParam"               , "text": "[Curriculum - A.I.       / Machine Learning]"             , "queryParams" : "{pageName : 'PAGE_CURRICULUM_AI'}"               },
+            { "id": 1, "url" : "/CurriculumAngular"       , "text": "[Curriculum - Angular    / TypeScript      ]"             , "queryParams" : "{pageName : 'PAGE_CURRICULUM_ANGULAR'}"          },
+            { "id": 2, "url" : "/GridParam"               , "text": "[Curriculum - C++                          ]"             , "queryParams" : "{pageName : 'PAGE_CURRICULUM_CPP'}"              },
+            { "id": 3, "url" : "/GridParam"               , "text": "[Curriculum - Django     / Python]"                       , "queryParams" : "{pageName : 'PAGE_CURRICULUM_DJANGO_PYTHON'}"    },
+            { "id": 4, "url" : "/GridParam"               , "text": "[Curriculum - SpringBoot / Java]"                         , "queryParams" : "{pageName : 'PAGE_CURRICULUM_SPRING_BOOT_JAVA'}" },
+            { "id": 5, "url" : "/GridParam"               , "text": "[Curriculum - Node.js    / Javascript]"                   , "queryParams" : "{pageName : 'PAGE_CURRICULUM_NODE_JS'}"          },
+            { "id": 6, "url" : "/GridParam"               , "text": "[Curriculum - .Net core  / C#]"                           , "queryParams" : "{pageName : 'PAGE_CURRICULUM_NET_CORE'}"         }   
           ]
       },
       {
@@ -416,11 +417,11 @@
           { "id": 4, "url" : "/#/"           , "text": "[Topics]"      }     
         ],
         "pages_nested" : [
-          { "id" : 1, "url": "about:blank"                                                                                    , "text" : "[Angular]"                       , "routerLink" : "/GridParam"  , "queryParams" : "{ searchTerm: 'c8981879-7457-4534-b660-b2e8c8eb9c83' , pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT'     }"},
-          { "id" : 2, "url": "about:blank"                                                                                    , "text" : "[C# / .NET  Core]"               , "routerLink" : "/GridParam"  , "queryParams" : "{ searchTerm: 'ea0a96ee-2278-48c2-9ac6-8ea29c77f925  , pageName  : 'PAGE_DEMOS_NETCORE_CSHARP'        }"},
-          { "id" : 2, "url": "about:blank"                                                                                    , "text" : "[Node.Js/Javascript]"            , "routerLink" : "/GridParam"  , "queryParams" : "{ searchTerm: 'f58efe4e-fc26-4f9c-b11b-0e148b3ffb2e' , pageName  : 'PAGE_DEMOS_NODEJS_JAVASCRIPT'     }"},
-          { "id" : 2, "url": "about:blank"                                                                                    , "text" : "[SpringBoot/Java]"               , "routerLink" : "/GridParam"  , "queryParams" : "{ searchTerm: 'b9d33b9d-4f94-4f95-a437-b4544ff478ca' , pageName  : 'PAGE_DEMOS_SPRING_BOOT_JAVA'     }"},
-          { "id" : 2, "url": "about:blank"                                                                                    , "text" : "[Django/Python]"                 , "routerLink" : "/GridParam"  , "queryParams" : "{ searchTerm: '882904a3-efd8-4ed7-bf4c-ccae59b995ce' , pageName  : 'PAGE_DEMOS_DJANGO_PYTHON'     }"},
+          { "id" : 1, "url": "about:blank"                                                                                    , "text" : "[Angular]"                       , "routerLink" : "/GridParam"  , "queryParams" : "{ searchTerm: 'c8981879-7457-4534-b660-b2e8c8eb9c83' , pageName  : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT'     }"},
+          { "id" : 2, "url": "about:blank"                                                                                    , "text" : "[C# / .NET  Core]"               , "routerLink" : "/GridParam"  , "queryParams" : "{ searchTerm: 'ea0a96ee-2278-48c2-9ac6-8ea29c77f925  , pageName  : 'PAGE_DEMOS_NETCORE_CSHARP'         }"},
+          { "id" : 2, "url": "about:blank"                                                                                    , "text" : "[Node.Js/Javascript]"            , "routerLink" : "/GridParam"  , "queryParams" : "{ searchTerm: 'f58efe4e-fc26-4f9c-b11b-0e148b3ffb2e' , pageName  : 'PAGE_DEMOS_NODEJS_JAVASCRIPT'      }"},
+          { "id" : 2, "url": "about:blank"                                                                                    , "text" : "[SpringBoot/Java]"               , "routerLink" : "/GridParam"  , "queryParams" : "{ searchTerm: 'b9d33b9d-4f94-4f95-a437-b4544ff478ca' , pageName  : 'PAGE_DEMOS_SPRING_BOOT_JAVA'       }"},
+          { "id" : 2, "url": "about:blank"                                                                                    , "text" : "[Django/Python]"                 , "routerLink" : "/GridParam"  , "queryParams" : "{ searchTerm: '882904a3-efd8-4ed7-bf4c-ccae59b995ce' , pageName  : 'PAGE_DEMOS_DJANGO_PYTHON'          }"},
           { "id" : 3, "url": "https://material.angular.io/"                                                                   , "text" : "[Angular Material]"              , "routerLink" : "about:blank" , "queryParams" : ""},
           { "id" : 4, "url": "https://en.wikipedia.org/wiki/REST"                                                             , "text" : "[REST (Architecture)]"           , "routerLink" : "about:blank" , "queryParams" : ""},
           { "id" : 4, "url": "https://v17.angular.io/guide/reactive-forms"                                                    , "text" : "[Angular v17 reactive forms]"    , "routerLink" : "about:blank" , "queryParams" : ""}
@@ -563,11 +564,11 @@
         "log_name"   : "PAGE_DEMOS_CARACTERISTICAS_INDEX",
         "page_name"  : "[DEMOS - FEATURES]",
         "pages"      : [
-          { "id": 1, "url" : "/PageUrlList"             , "text": "[MISCELLANEOUS]"                   , "queryParams" : "PAGE_DEMOS_MISCELLANEOUS_INDEX"    },
-          { "id": 2, "url" : "/PageUrlList"             , "text": "[GAMES]"                           , "queryParams" : "PAGE_DEMOS_GAMES_INDEX"            },
-          { "id": 3, "url" : "/PageUrlList"             , "text": "[ALGORITHMS]"                      , "queryParams" : "PAGE_ALGORITMOS_INDEX"             },
-          { "id": 4, "url" : "/PageUrlList"             , "text": "[FILE GENERATION]"                 , "queryParams" : "PAGE_DEMOS_FILE_GENREATION_INDEX"  },     
-          { "id": 5, "url" : "/PageUrlList"             , "text": "[MACHINE LEARNING]"                , "queryParams" : "PAGE_DEMOS_MACHINE_LEARNING_INDEX" }     
+          { "id": 1, "url" : "/PageUrlList"             , "text": "[MISCELLANEOUS]"                   , "queryParams" : "{ pageName : 'PAGE_DEMOS_MISCELLANEOUS_INDEX'} "   },
+          { "id": 2, "url" : "/PageUrlList"             , "text": "[GAMES]"                           , "queryParams" : "{ pageName : 'PAGE_DEMOS_GAMES_INDEX'}"            },
+          { "id": 3, "url" : "/PageUrlList"             , "text": "[ALGORITHMS]"                      , "queryParams" : "{ pageName : 'PAGE_ALGORITMOS_INDEX'}"             },
+          { "id": 4, "url" : "/PageUrlList"             , "text": "[FILE GENERATION]"                 , "queryParams" : "{ pageName : 'PAGE_DEMOS_FILE_GENREATION_INDEX'}"  },     
+          { "id": 5, "url" : "/PageUrlList"             , "text": "[MACHINE LEARNING]"                , "queryParams" : "{ pageName : 'PAGE_DEMOS_MACHINE_LEARNING_INDEX'}" }     
         ]
       },
       {
@@ -618,14 +619,10 @@
         "pages"      : [
           { "id": 1, "url" : "/TechnicalSpecs"                                           , "text": "[TECHNICAL SPECS.]"                        },
           { "id": 2, "url" : "/SCM"                                                      , "text": "[SOFTWARE CONFIGURATION MANAGEMENT]"       },
-          { "id": 3, "url" : "/PageUrlList"                                              , "text": "[LARGE LANGUAGE MODELS LIST]"                , "queryParams" : "PAGE_ABOUT_LLM_LIST"     },
-          { "id": 4, "url" : "/PageUrlList"                                              , "text": "[EDUCATIONAL RESOURCES]"                     , "queryParams" : "PAGE_ABOUT_EDU_RESC"     },
+          { "id": 3, "url" : "/PageUrlList"                                              , "text": "[LARGE LANGUAGE MODELS LIST]"                , "queryParams" : "{ pageName : 'PAGE_ABOUT_LLM_LIST'}"     },
+          { "id": 4, "url" : "/PageUrlList"                                              , "text": "[EDUCATIONAL RESOURCES]"                     , "queryParams" : "{ pageName : 'PAGE_ABOUT_EDU_RESC'}"     },
           { "id": 5, "url" : "/ContactForm"                                              , "text": "[CONTACT FORM]"                            },
           { "id": 6, "url" : "/Index"                                                    , "text": "[INDEX]"                                   }
-        ],
-        "_pages"      : [
-          { "id": 1, "url" : "/LLMList"                                                  , "text": "[LARGE LANGUAGE MODELS LIST]"              },
-          { "id": 4, "url" : "/EduResources"                                             , "text": "[EDUCATIONAL RESOURCES]"                   }
         ]
       },
       {

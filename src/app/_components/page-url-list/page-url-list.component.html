@@ -7,7 +7,7 @@
             <!-- WARNING : ROOT MUST NOT HAVE "./#/" STYLE -->
             @if (page.queryParams)
             {
-                <a [routerLink]="[page.url]"  [queryParams]="{pageName: page.queryParams}">{{page.text}}</a>
+                <a [routerLink]="[page.url]"  [queryParams]="page.queryParamsObj">{{page.text}}</a>
             } 
             @else 
             {            

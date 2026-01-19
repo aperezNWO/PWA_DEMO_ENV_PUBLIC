@@ -1,5 +1,5 @@
 import { Component, effect, signal ,OnInit          } from '@angular/core';
-import { ActivatedRoute                             } from '@angular/router';
+import { ActivatedRoute, Params                     } from '@angular/router';
 import { BackendService                             } from 'src/app/_services/BackendService/backend.service';
 import { ConfigService                              } from 'src/app/_services/__Utils/ConfigService/config.service';
 import { SpeechService                              } from 'src/app/_services/__Utils/SpeechService/speech.service';
@@ -89,7 +89,14 @@ export class _BaseComponent implements OnInit {
         //  
         if (_environment.mainPageListDictionary[pageName].pages) 
         {
+          //
           this._pages = _environment.mainPageListDictionary[pageName].pages;
+
+          // Convert all query strings to proper objects
+          this._pages = this._pages.map(page => ({
+                ...page,
+                queryParamsObj: (page.queryParams && typeof page.queryParams === 'string')? this.parseQueryParams(page.queryParams) : page.queryParamsObj
+          }));
         }
       } 
       else 
@@ -115,4 +122,27 @@ export class _BaseComponent implements OnInit {
     if (this.isListVisible)
       this.speechService.speakTextCustom("See references");
   }
+  // 
+  parseQueryParams(str: string): Params {
+      // Comprehensive validation
+      if (typeof str !== 'string' || !str.trim()) {
+        console.debug('parseQueryParams: Invalid input', { input: str });
+        return {};
+      }
+      // Clean the string (remove curly braces, quotes, extra spaces)
+      const cleanStr = str
+        .replace(/{|}/g, '')
+        .replace(/['"]/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+      
+      // Split into key-value pairs
+      return cleanStr.split(',').reduce((params, pair) => {
+        const [key, value] = pair.split(':').map(s => s.trim());
+        if (key && value) {
+          params[key] = value;
+        }
+        return params;
+      }, {} as Params);
+    }
 }

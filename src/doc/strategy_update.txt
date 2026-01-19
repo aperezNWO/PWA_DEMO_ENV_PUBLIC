@@ -632,17 +632,17 @@
         -- [_] django self playing tictactoe.
 
 
- -- [_] check error install TWEEN module.   
+ -- [_] check errors (section).   
 
- -- [_] Check logic TETRIS -- A.I.   
+     -- [_] validate empty image on ocr / opencv.
 
- -- [_] architecture overhauling.
+     -- [_] chat demo exception handling.
 
-        -- [_] jwt and security.
+     -- [_] check error install TWEEN module.   
 
-        -- [_] angular solid principles.
- 
--- [_] chat demo exception handling.
+     -- [_] Check logic TETRIS -- A.I.   
+
+     -- [_] References alignment on firerox.   
 
 -- [_] curriculum update.
 
@@ -696,6 +696,9 @@
 
                 -- [_]  END POINT RESTFUL VERSIONS.       
 
+                -- [_]  CACHING TECHNICAL SPECS INFO AT START.       
+
+
         -- [_] Algorithm, FileManager .NET core Controllers.  
 
         -- [_] move somee.com to monsterasp.net. leave dbs only. 
@@ -713,12 +716,22 @@
                 -- [_] google idx / firebase.
 
 
--- [_] caching STRATEGY
 
-        -- [_] diagnose internet connection.
+ -- [_] architecture overhauling.
 
-        -- [_] caching objects.
+        -- [_] jwt and security.
 
+        -- [_] angular solid principles.
+
+        -- [_] caching STRATEGY
+
+                -- [_] diagnose internet connection.
+
+                -- [_] caching objects.
+
+-- [_] PageUrlList component
+
+        -- [_] improve queryParams parsing.
 
 -- [_] TRANSLATE FORMS TO ENGLISH.  
 

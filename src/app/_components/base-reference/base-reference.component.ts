@@ -69,8 +69,18 @@ export class BaseReferenceComponent {
 
                 //
                 if (_environment.mainPageListDictionary[PAGE_TITLE_LOG].pages !== null){
+                    // Convert all query strings to proper objects
+                    _environment.mainPageListDictionary[PAGE_TITLE_LOG].pages          = _environment.mainPageListDictionary[PAGE_TITLE_LOG].pages.map(page => ({
+                        ...page,
+                        queryParamsObj: this.parseQueryParams(page.queryParams)
+                    }));
                     //
                     this._pages          = _environment.mainPageListDictionary[PAGE_TITLE_LOG].pages;
+                    // Convert all query strings to proper objects
+                    this._pages          = this._pages.map(page => ({
+                        ...page,
+                        queryParamsObj: (page.queryParams && typeof page.queryParams === 'string')? this.parseQueryParams(page.queryParams) : page.queryParamsObj
+                    }));
                 }
                 //
                 if (_environment.mainPageListDictionary[PAGE_TITLE_LOG].pages_nested !== null){
@@ -115,6 +125,11 @@ export class BaseReferenceComponent {
   }
   // 
   parseQueryParams(str: string): Params {
+      // Comprehensive validation
+      if (typeof str !== 'string' || !str.trim()) {
+        console.debug('parseQueryParams: Invalid input', { input: str });
+        return {};
+      }
       // Clean the string (remove curly braces, quotes, extra spaces)
       const cleanStr = str
         .replace(/{|}/g, '')

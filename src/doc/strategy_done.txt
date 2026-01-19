@@ -840,19 +840,19 @@
 
                         --  [x]  command line and toolchain on header ->  -> C:\msys64\ucrt64\bin.
 
-                        --  [_]  dist files.
+                        --  [x]  dist files.
 
                 --  [x]  CPP_GCC_ALGORITHM.
 
                         --  [x]  command line and toolchain on header -> C:\msys64\ucrt64\bin.
 
-                        --  [_]  dist files.
+                        --  [x]  dist files.
 
                 --  [x]  CPP_GCC_TENSORFLOW.
 
                         --  [X]  command line and toolchain on header ->  TOOLCHAIN : C:\msys64\ucrt64\bin.
 
-                        --  [_]  dist files.
+                        --  [x]  dist files.
 
  -- [X]  c++ -> OOP -> inheritance -> ReadConfigFile();
 

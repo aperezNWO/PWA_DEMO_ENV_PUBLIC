@@ -3,7 +3,7 @@
             <!-- WARNING : ROOT MUST NOT HAVE "./#/" STYLE -->
             @if (page.queryParams)
             {
-                <a [routerLink]="[page.routerLink]"  [queryParams]="{pageName: page.queryParams}">
+                <a [routerLink]="[page.routerLink]"  [queryParams]="page.queryParamsObj">
                     <img
                     [src]="[page.text]"
                     [alt]="'Logo'"
