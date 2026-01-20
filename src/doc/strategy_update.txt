@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////////////////////////////
--- STRATEGY UPDATE
+                        -- STRATEGY UPDATE --
 ////////////////////////////////////////////////////////////////////////////////
 
  ////////////////////////////////////////////////////////////////////////////////
@@ -28,120 +28,9 @@
 
         -- [_] Replicate to docs and social media. 
 
- -- [_] ANGULAR CURRICULUM.
-
-        --[_] ng generate enum.
-
-        -- [_] scss.
-
-        -- [_] @Input, @Eventemitter.
-        
-        -- [_] i18n.
-        
-        -- [_] Dynamic Forms.
-
-        -- [_] Module federation.
-
-        --  [_] ANGULAR LOG HANDLING BEST PRACTICES.
-
-        --  [_] ANGULAR ERROR HANDLING BEST PRACTICES.
-
-        --  [_] Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering).
-
-        --  [_] Angular Unit Testing.
-
-        -- [_] PWA / SPA.
-
-        --  [_] Tetris engine.
-
-        -- [_] Angular CDN.
-
- -- [_] c# sql curriculum.
-
-         --  [_]  (freecodecamp) c# certification.
-
-         --  [_] sql.
-
-         --  [_] stored procedures.
-
-              --  [_] delete "page_index"... from log entries.
-
- -- [_] c++ curriculum.
-
-         -- [_]  Smart Pointers.
- 
-        -- [_] TESSERACT.      
-
-                -- [_]  ONLINE TRANSLATION.
-
-        -- [_] OPEN CV.
-
-                -- [_]  EXPLORE API.
-
-        -- [_] TENSORFLOW 
-
-                -- [_]  EXPLORE API.
-
-                -- [_]  https://www.freecodecamp.org/news/tag/tensorflow/
-
-                -- [_]  WORD CLASIFICATION
-
-                        -- [_] https://chat.qwen.ai/c/c70ffaa5-78dc-4eeb-87db-3b8f7879fd77
-
-                -- [_]  MACHINE LEARNING, ARTIFICIAL INTELLIGENCE, NEURAL NETWORKS CONCEPTS.
-
-                        -- [_]  https://chat.qwen.ai/c/2370354d-1564-4778-b141-ca63c678014a
-
-                -- [_]  LICENSE PLATE RECOGNITION
-
-                        -- [_] https://chat.qwen.ai/c/1bd6717f-364c-450d-909d-e67e58088c5c
-
-                        -- [_] https://chat.qwen.ai/c/0ad6b5a1-5d93-4b70-ac12-7067ffaebf9b
-                        
-                        -- [_]  https://chat.qwen.ai/c/c127093a-9ae5-4fcb-8e6e-95b02e739f9c
-
-                --  [_]  Tensorflow Update Log.
-
-                        --  [_]  https://chat.qwen.ai/c/5ebb0c4c-fc7a-4883-8d27-cdcba22e3afb
-                        
-                        --  [_]  Somee admits x32 only arch. for c and c++.
-
-                        --  [_]  TryAsp.net admits both x32 and x64.
-
-                        --  [_]  TryAsp.net admit c++ compiled code using basic c++ libraries.
-
-                        --  [_]  TryAsp.net doen't admit c++ compiled code including tensorflow.
-
-                        --  [_]  TryAsp.net admit c generated code for tensorflow x64.
-
-                        --  [_]  TryAsp.net c genrerated Tensorflow code expects *.PB model file.
-                
-                        --  [_]  *.pb model files are generated mostly on Python.        
-
-
-
- -- [_] node.js curriculum 
- 
-        -- [_] smtp sample / contact form.       
-
- -- [_] DJANGO / Python
-
-        --  [_]  (freecodecamp) Datascience.    
-
-        --  [_]  how can I use qwen and python to ask for any list and generate an output in excel?    
-
-        --  [_] djanto setup windows  : listado xls / csv
-                https://codesandbox.io/p/github/aperezNWO/django_setup_windows/main
-
-
-        -- [_] djanto setup linux    : freecode camp curso de ciencia de datos.
-                https://codesandbox.io/p/github/aperezNWO/django_setup_linux/main
-                
-        -- [_] MACHINGE LEARNING / neural networks -> curriculum.
-
-        -- [_]  https://www.freecodecamp.org/learn/machine-learning-with-python/#machine-learning-with-python-projects
-        
- -- [_] datascience curriculum.
+ ////////////////////////////////////////////////////////////////////////////////
+ // CURRICULUM
+ ////////////////////////////////////////////////////////////////////////////////
 
  -- [_] ALGOITHM curriculum.
  
@@ -166,10 +55,6 @@
 
          --  [_]   PWA.
 
- ////////////////////////////////////////////////////////////////////////////////
- // TODO LIST
- ////////////////////////////////////////////////////////////////////////////////
-
  -- [_] LANGUAGES curriculum.
 
          -- [_] UNIFY curriculum  -> GRIDPARAM.
@@ -190,8 +75,6 @@
 
          -- [_] Grid Index empty rows error.
          
--- [_] programa omar -> owasp.
-
 
 -- [_] CMS 
 
@@ -309,8 +192,6 @@
         -- [_] to log.
         -- [_] debug console messages.
         -- [_] asp.net core enable trace.
-
--- [_] paypal button.
 
 -- [_] Games
 
@@ -430,18 +311,6 @@
                 --  [_] Chess.
 
 
- -- [x] TIC-TAC-TOE DEMO.
- 
-        --  [x] c++ neural network which learns to play tictactoe against itself.
-
-                --  [x] https://chat.qwen.ai/c/7d46d2ce-70a5-4c9f-ba4c-d7ce475527ed
-
-        -- [x] param link to specific lang.        
-
--- [x] TETRIS DEMO
-
-        -- [x]  https://github.com/nuno-faria/tetris-ai
-
  -- [_] OPENCV DEMO.
         
          -- [_] WITH TENSORFLOW.
@@ -456,9 +325,7 @@
 
          -- [_] WITH PYTORCH.
 
- -- [x] fix json pages.
-
- -- [_] DOCKER.
+  -- [_] DOCKER.
 
         -- [_] PYTHON. 
         
@@ -536,115 +403,80 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
--- [_] ENGLISH LANGUAGE.
+-- [_] TODO LIST.
 
 ////////////////////////////////////////////////////////////////////////////////
 
-  -- [x] landing component
+ -- [_] programa omar -> owasp.
 
-        -- [x] dymamic intro / .
+ -- [_] curriculum update.
 
-                -- [x] by language.
+        -- [_] c++ curriculum.
 
-                -- [x] by libraries.
+                -- [_]  Smart Pointers.
+        
+                -- [_] TESSERACT.      
 
-                -- [x] both includes Angular.
+                        -- [_]  ONLINE TRANSLATION.
 
-        -- [x] libraries intro.
+                -- [_] OPEN CV.
 
-                -- [x] opencv demo.
+                        -- [_]  EXPLORE API.
+
+                -- [_] TENSORFLOW 
+
+                        -- [_]  EXPLORE API.
+
+                        -- [_]  https://www.freecodecamp.org/news/tag/tensorflow/
+
+                        -- [_]  WORD CLASIFICATION
+
+                                -- [_] https://chat.qwen.ai/c/c70ffaa5-78dc-4eeb-87db-3b8f7879fd77
+
+                        -- [_]  MACHINE LEARNING, ARTIFICIAL INTELLIGENCE, NEURAL NETWORKS CONCEPTS.
+
+                                -- [_]  https://chat.qwen.ai/c/2370354d-1564-4778-b141-ca63c678014a
+
+                        -- [_]  LICENSE PLATE RECOGNITION
+
+                                -- [_] https://chat.qwen.ai/c/1bd6717f-364c-450d-909d-e67e58088c5c
+
+                                -- [_] https://chat.qwen.ai/c/0ad6b5a1-5d93-4b70-ac12-7067ffaebf9b
+                                
+                                -- [_]  https://chat.qwen.ai/c/c127093a-9ae5-4fcb-8e6e-95b02e739f9c
+
+                        --  [_]  Tensorflow Update Log.
+
+                                --  [_]  https://chat.qwen.ai/c/5ebb0c4c-fc7a-4883-8d27-cdcba22e3afb
+                                
+                                --  [_]  Somee admits x32 only arch. for c and c++.
+
+                                --  [_]  TryAsp.net admits both x32 and x64.
+
+                                --  [_]  TryAsp.net admit c++ compiled code using basic c++ libraries.
+
+                                --  [_]  TryAsp.net doen't admit c++ compiled code including tensorflow.
+
+                                --  [_]  TryAsp.net admit c generated code for tensorflow x64.
+
+                                --  [_]  TryAsp.net c genrerated Tensorflow code expects *.PB model file.
+                        
+                                --  [_]  *.pb model files are generated mostly on Python.      
                 
-                -- [x] tesseract demo.
-
-                -- [x] tensorflow demo.
-
-                -- [x] Pdf, xls, chart demo
+                        -- [_] main feature by std release.
 
 
-        -- [x] root bottom menu items -> libraries.
+        -- [_] c# sql curriculum.
 
-        -- [x] narrow market -> offer by library (additional to languages).
+                --  [_]  (freecodecamp) c# certification.
 
-  -- [x] SCM (SECTION).
+                --  [_] sql.
 
-        -- [x] fractal demo repo path fix.
+                --  [_] stored procedures.
 
-        -- [x] Delete Tailwind.
+                --  [_] delete "page_index"... from log entries.
 
-        -- [x] https://apereznwo.github.io/PWA_DEMO_ENV_PROD/#/PageUrlList?pageName=PAGE_DEMOS_MACHINE_LEARNING_INDEX
-
-                -- [x] Add m.l. pending items. 
-                
-                -- [x] TOPICS -> FREECODECAMP. 
-
-        -- [X] Somee list.    
-
-        -- [X] DB LIST.
-
-        -- [X] Fix codesandbox data. Put 3 codesandbox accounts + root account.
-
-        -- [X] ENV_ONLINE_HOSTING -> ENV_ONLINE_BACKEND.  
-
-        -- [>] SCM TRANSLATE TO ENGLISH.  
-
-        -- [x] Azure devops list.
-
-        -- [X] Monster ASP.NET list.   
-
- -- [x] base component.
-
-        -- [x] title.
-
-        -- [x] error: double sound on title.
- 
-        -- [x] reference list.
-
--- [>]  TypeError: Cannot read properties of undefined (reading 'page_name')   : BaseComponent : csv generation.
-
--- [x] OCR DEMO.
-
-        -- [x] VOICE IN ENGLISH.
-
-        -- [x] ASP.NET CORE SPLIT CONTROLLERS.
-
-        -- [x] VALIDATIONS.
-
-        -- [x] OCR SERVICE.
-
--- [x] CV DEMO.
-
-        -- [x] Service.
-
-        -- [x] ENG LANGUAGE.
-
-        -- [x] Fractal Demo Path.
-
--- [x] TENSORFLOW DEMO.
-
-        -- [x] Base Service.
-
-        -- [x] check repeated sound on title.
-
-        -- [x] tensorflow controller.
-
-        -- [_] springboot self playing tictactoe.
-
-        -- [_] django self playing tictactoe.
-
-
- -- [_] check errors (section).   
-
-     -- [_] validate empty image on ocr / opencv.
-
-     -- [_] chat demo exception handling.
-
-     -- [_] check error install TWEEN module.   
-
-     -- [_] Check logic TETRIS -- A.I.   
-
-     -- [_] References alignment on firerox.   
-
--- [_] curriculum update.
+                -- [_] .NET dllimport.
 
         -- [_] Angular.
 
@@ -667,26 +499,82 @@
                 -- [_] Split content by topics.
 
                 -- [_] @INPUT / @OUTPUT.
+
+                --[_] ng generate enum.
+
+                -- [_] scss.
+
+                -- [_] @Input, @Eventemitter.
+                
+                -- [_] i18n.
+                
+                -- [_] Dynamic Forms.
+
+                -- [_] Module federation.
+
+                --  [_] ANGULAR LOG HANDLING BEST PRACTICES.
+
+                --  [_] ANGULAR ERROR HANDLING BEST PRACTICES.
+
+                --  [_] Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering).
+
+                --  [_] Angular Unit Testing.
+
+                -- [_] PWA / SPA.
+
+                --  [_] Tetris engine.
+
+                -- [_] Angular CDN.
                                         
-        -- [_] backend->create sql query.
+        -- [_] DJANGO / Python
+
+                --  [_]  (freecodecamp) Datascience.    
+
+                --  [_]  how can I use qwen and python to ask for any list and generate an output in excel?    
+
+                --  [_] djanto setup windows  : listado xls / csv
+                        https://codesandbox.io/p/github/aperezNWO/django_setup_windows/main
+
+
+                -- [_] djanto setup linux    : freecode camp curso de ciencia de datos.
+                        https://codesandbox.io/p/github/aperezNWO/django_setup_linux/main
+                        
+                -- [_] MACHINGE LEARNING / neural networks -> curriculum.
+
+                -- [_]  https://www.freecodecamp.org/learn/machine-learning-with-python/#machine-learning-with-python-projects
+                
+                -- [_] datascience curriculum.
+                
+                -- [_] python tensorflow create/train model.
         
-        -- [_] backend->create restful point.
-
-        -- [_] python tensorflow create/train model.
-        
-        -- [_] node.js smpt.
-
-        -- [_] .NET dllimport.
-
-        -- [_] c++ .
-
-                -- [_] main feature by std release.
+         -- [_] node.js curriculum      
  
- -- [_] TRANSLATE DATABASE FIELDS TO ENGLISH.      
+                -- [_] smtp sample / contact form.     
+                
+                -- [_] node.js smpt.
+
+                -- [_] backend->create sql query.
+        
+                -- [_] backend->create restful point.
+
+ 
+ -- [_] check errors / improvements (section).   
+
+     -- [_] validate empty image on ocr / opencv.
+
+     -- [_] chat demo exception handling.
+
+     -- [_] check error install TWEEN module.   
+
+     -- [_] Check logic TETRIS -- A.I.   
+
+     -- [_] References alignment on firerox.   
+
+     -- [_] Fractal Demo. change text with gauges (tictactoe-ai example).  
+
+     -- [_] TRANSLATE DATABASE FIELDS TO ENGLISH.      
  
  -- [_] Go lang / rust demo.
- 
- -- [_] Fractal Demo. change text with gauges (tictactoe-ai example).  
 
  -- [_] backend url standarization / .net controller standarization. 
 
@@ -698,8 +586,11 @@
 
                 -- [_]  CACHING TECHNICAL SPECS INFO AT START.       
 
+        -- [_]  .NET core Controllers.  
 
-        -- [_] Algorithm, FileManager .NET core Controllers.  
+                 -- [_] Algorithm, FileManager 
+
+                 -- [_] .zip demo.
 
         -- [_] move somee.com to monsterasp.net. leave dbs only. 
 
@@ -715,8 +606,6 @@
 
                 -- [_] google idx / firebase.
 
-
-
  -- [_] architecture overhauling.
 
         -- [_] jwt and security.
@@ -729,32 +618,15 @@
 
                 -- [_] caching objects.
 
--- [_] PageUrlList component
+        -- [_] deployment doc.
 
-        -- [_] improve queryParams parsing.
+                        -- [_] BY CONTAINER / LANGUAGE.
+
+                        -- [_] GIT HUB README.
+
+-- [>] PUBLISH ENV_PROD.  
 
 -- [_] TRANSLATE FORMS TO ENGLISH.  
-
-
-         -- [x] correct text "miscellaneous","manus","tictactoe".
-
-         -- [x] chart pdf wait message.
-
-         -- [x] dijkstra uber reference.      
-
-         -- [x] DISABLE CONTROLS.    
-
-                 -- [x] DIJKSTRA.    
-
-                 -- [x] FRACTAL.    
-
-         -- [x] base reference component implementation.
-
-                  -- [x] check grid .config links.
-
-         -- [_] missing status messages.
-
-         -- [_] .zip demo.
 
          -- [_] pdf demo.
 
@@ -771,12 +643,6 @@
 
                 -- [x] Codesandbox list.  
                 
-                -- [_] deployment doc.
-
-                        -- [_] BY CONTAINER / LANGUAGE.
-
-                -- [_] GIT HUB README.
-
                 -- [_] Grid modifications.    
 
                         -- [x] restart grid numbers at start.
@@ -787,22 +653,10 @@
 
                         -- [_] datagrids row master / detail.     
 
-         -- [>] LANDING COMPONENT (see section).
+--[_] https://apereznwo.github.io/NG_BOOTSTRAP_DEMO_ENV_DEV/#/Home -> PWA_DEMO_ENV_TF
 
-                -- [x] languages bottom menu.
+--[_] https://apereznwo.github.io/PWA_DEMO_ENV_DEV/#/              -> PWA_DEMO_ENV_OPEN_CV 
 
-                -- [x] LANDING PAGE AS QUERY PARAM (for email market).
-
-                        -- [_] DEMOS LIBRARIES.
-
-                                -- [_] tensorflow section as datagrid.
-
-                                -- [_] pdf demo as datagrid (both jsPDF and iTextSharp).
-
-                -- [_] publish single codebase (param by dymamic intro) on multiple hosting.
-
-                -- [_] Offer to communities
-
--- [_] PUBLISH ENV_PROD.  
+-- [_] paypal button.
 
 ////////////////////////////////////////////////////////////////////////////////

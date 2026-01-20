@@ -856,5 +856,147 @@
 
  -- [X]  c++ -> OOP -> inheritance -> ReadConfigFile();
 
+  -- [x] PageUrlList component
+
+        -- [x] improve queryParams parsing.
+
+
+  -- [x] landing component
+
+        -- [x] dymamic intro / .
+
+                -- [x] by language.
+
+                -- [x] by libraries.
+
+                -- [x] both includes Angular.
+
+        -- [x] libraries intro.
+
+                -- [x] opencv demo.
+                
+                -- [x] tesseract demo.
+
+                -- [x] tensorflow demo.
+
+                -- [x] Pdf, xls, chart demo
+
+
+        -- [x] root bottom menu items -> libraries.
+
+        -- [x] narrow market -> offer by library (additional to languages).
+
+  -- [x] SCM (SECTION).
+
+        -- [x] fractal demo repo path fix.
+
+        -- [x] Delete Tailwind.
+
+        -- [x] https://apereznwo.github.io/PWA_DEMO_ENV_PROD/#/PageUrlList?pageName=PAGE_DEMOS_MACHINE_LEARNING_INDEX
+
+                -- [x] Add m.l. pending items. 
+                
+                -- [x] TOPICS -> FREECODECAMP. 
+
+        -- [X] Somee list.    
+
+        -- [X] DB LIST.
+
+        -- [X] Fix codesandbox data. Put 3 codesandbox accounts + root account.
+
+        -- [X] ENV_ONLINE_HOSTING -> ENV_ONLINE_BACKEND.  
+
+        -- [>] SCM TRANSLATE TO ENGLISH.  
+
+        -- [x] Azure devops list.
+
+        -- [X] Monster ASP.NET list.   
+
+ -- [x] base component.
+
+        -- [x] title.
+
+        -- [x] error: double sound on title.
  
+        -- [x] reference list.
+
+-- [>]  TypeError: Cannot read properties of undefined (reading 'page_name')   : BaseComponent : csv generation.
+
+-- [x] OCR DEMO.
+
+        -- [x] VOICE IN ENGLISH.
+
+        -- [x] ASP.NET CORE SPLIT CONTROLLERS.
+
+        -- [x] VALIDATIONS.
+
+        -- [x] OCR SERVICE.
+
+-- [x] CV DEMO.
+
+        -- [x] Service.
+
+        -- [x] ENG LANGUAGE.
+
+        -- [x] Fractal Demo Path.
+
+
+-- [x] TENSORFLOW DEMO.
+
+        -- [x] Base Service.
+
+        -- [x] check repeated sound on title.
+
+        -- [x] tensorflow controller.
+
+        -- [x] springboot self playing tictactoe.
+
+        -- [x] django self playing tictactoe.
+
+ -- [>] LANDING COMPONENT (see section).
+
+        -- [x] languages bottom menu.
+
+        -- [x] LANDING PAGE AS QUERY PARAM (for email market).
+
+                -- [_] DEMOS LIBRARIES.
+
+                        -- [_] tensorflow section as datagrid.
+
+                        -- [_] pdf demo as datagrid (both jsPDF and iTextSharp).
+
+        -- [x] publish single codebase (param by dymamic intro) on multiple hosting.
+
+ -- [x] fix json pages.
+
+ -- [x] TIC-TAC-TOE DEMO.
+ 
+        --  [x] c++ neural network which learns to play tictactoe against itself.
+
+                --  [x] https://chat.qwen.ai/c/7d46d2ce-70a5-4c9f-ba4c-d7ce475527ed
+
+        -- [x] param link to specific lang.        
+
+-- [x] TETRIS DEMO
+
+        -- [x]  https://github.com/nuno-faria/tetris-ai
+
+-- [x] correct text "miscellaneous","manus","tictactoe".
+
+-- [x] chart pdf wait message.
+
+-- [x] dijkstra uber reference.      
+
+-- [x] DISABLE CONTROLS.    
+
+        -- [x] DIJKSTRA.    
+
+        -- [x] FRACTAL.    
+
+-- [x] base reference component implementation.
+
+        -- [x] check grid .config links.
+
+-- [x] missing status messages.
+
 /////////////////////////////////////////////////////////////////

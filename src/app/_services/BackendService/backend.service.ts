@@ -1,6 +1,5 @@
 import { Injectable, OnInit                                      } from '@angular/core';
 import { HttpClient, HttpEvent, HttpHeaders                      } from '@angular/common/http';
-import { HttpRequest                                             } from '@angular/common/http';
 import { Observable                                              } from 'rxjs';
 import { LogEntry, LogType, SearchCriteria                       } from '../../_models/entity.model';
 import { ConfigService                                           } from '../__Utils/ConfigService/config.service';
@@ -33,7 +32,7 @@ export class BackendService extends BaseService implements OnInit  {
     _GetWebApiAppVersion(): Observable<string>
     {
       //
-      let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCore')}demos/_GetAppVersion`;
+      let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCore')}api/Demos/_GetAppVersion`;
       //
       let appVersion    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //
@@ -57,7 +56,7 @@ export class BackendService extends BaseService implements OnInit  {
       //
       let logInfo!  : Observable<string>;
       //
-      let p_url     = `${this._configService.getConfigValue('baseUrlNetCore')}demos/_SetLog?p_logMsg=${p_logMsg}&logType=${logType.toString()}`;
+      let p_url     = `${this._configService.getConfigValue('baseUrlNetCore')}api/Demos/_SetLog?p_logMsg=${p_logMsg}&logType=${logType.toString()}`;
       //
       logInfo       = this.http.get<string>(p_url, this.HTTPOptions_Text);
       //
@@ -84,7 +83,7 @@ export class BackendService extends BaseService implements OnInit  {
     ////////////////////////////////////////////////////////////////  
     getCSVLinkGET(): Observable<string> {
       //
-      let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}demos/_GetCSVLinkJsonGET`;
+      let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/FileManager/_GetCSVLinkJsonGET`;
       //
       let csvLink : Observable<string> =  this.http.get<string>(p_url);
       //
@@ -93,7 +92,7 @@ export class BackendService extends BaseService implements OnInit  {
     //
     getCSVLink(): Observable<string> {
       //
-      let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}demos/_GetCSVLinkJson`;
+      let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/FileManager/_GetCSVLinkJson`;
       //
       let csvLink : Observable<string> =  this.http.post<string>(p_url,this.HTTPOptions_Text);
       //
@@ -102,7 +101,7 @@ export class BackendService extends BaseService implements OnInit  {
     //    
     getInformeRemotoCSV(): Observable<string> {
       //
-      let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}demos/GenerarInformeCSVJson`;
+      let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/FileManager/GenerarInformeCSVJson`;
       //
       let jsonCSVData : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //
@@ -111,7 +110,7 @@ export class BackendService extends BaseService implements OnInit  {
     //
     getInformeRemotoCSV_STAT():Observable<string> {
         //
-        let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}demos/GenerarInformeCSVJsonSTAT`;
+        let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/FileManager/GenerarInformeCSVJsonSTAT`;
         //
         let jsonCSVData : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
         //
@@ -120,7 +119,7 @@ export class BackendService extends BaseService implements OnInit  {
     //
     _SetSTATPieCache(_prefix : string | undefined):void{
       //
-      let p_url    =  `${_prefix}demos/_SetSTATPieCache`;
+      let p_url    =  `${_prefix}api/FileManager/_SetSTATPieCache`;
       //
       let jsonCSVData : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //
@@ -162,7 +161,7 @@ export class BackendService extends BaseService implements OnInit  {
     //
     getLogRemoto(_searchCriteria : SearchCriteria) {
           //
-          let url    = `${this._configService.getConfigValue('baseUrlNetCore')}demos/generarinformejson`;
+          let url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/FileManager/generarinformejson`;
           //    
           return this.http.get<LogEntry[]>(url);
       }
@@ -218,7 +217,7 @@ export class BackendService extends BaseService implements OnInit  {
     //
     getInformeExcel(_searchCriteria : SearchCriteria){
           //
-          let p_url  = `${this._configService.getConfigValue('baseUrlNetCore')}demos/generarinformexls`;
+          let p_url  = `${this._configService.getConfigValue('baseUrlNetCore')}api/FileManager/generarinformexls`;
           //
           let excelFileName : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
           //
@@ -239,14 +238,14 @@ export class BackendService extends BaseService implements OnInit  {
     //
     getLogStatPOST() {
       //
-      let url    = `${this._configService.getConfigValue('baseUrlNetCore')}demos/GetConsultaLogStatPost`;
+      let url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/FileManager/GetConsultaLogStatPost`;
       //
       return this.http.post<string>(url,this.HTTPOptions_JSON);   
     }    
     //
     getLogStatGET() {
       //
-      let url    = `${this._configService.getConfigValue('baseUrlNetCore')}demos/GetConsultaLogStatGet`;
+      let url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/FileManager/GetConsultaLogStatGet`;
       //
       return this.http.get<LogEntry[]>(url);   
     } 

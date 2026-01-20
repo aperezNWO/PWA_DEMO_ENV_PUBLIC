@@ -56,7 +56,7 @@ export class PdfService extends BaseService {
   ////////////////////////////////////////////////////////////////
   public GetPDF(subjectName: string | undefined): Observable<HttpEvent<any>> {
       //
-      let p_url   = `${this._configService.getConfigValue('baseUrlNetCore')}demos/_GetPdf?subjectName=${subjectName}`;
+      let p_url   = `${this._configService.getConfigValue('baseUrlNetCore')}api/FileManager/_GetPdf?subjectName=${subjectName}`;
       //
       // USAR REQUEST PARA OBTENER PORCENTAJE DE STATUS
       const req = new HttpRequest('GET', p_url, {
