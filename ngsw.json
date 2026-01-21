@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1768973243424,
+  "timestamp": 1769028119369,
   "index": "/PWA_DEMO_ENV_PUBLIC/index.html",
   "assetGroups": [
     {
@@ -15,7 +15,7 @@
         "/PWA_DEMO_ENV_PUBLIC/973.316ac4d5fee2f217.js",
         "/PWA_DEMO_ENV_PUBLIC/favicon.ico",
         "/PWA_DEMO_ENV_PUBLIC/index.html",
-        "/PWA_DEMO_ENV_PUBLIC/main.b7aa5251f4974b69.js",
+        "/PWA_DEMO_ENV_PUBLIC/main.0439f36301fda94f.js",
         "/PWA_DEMO_ENV_PUBLIC/manifest.webmanifest",
         "/PWA_DEMO_ENV_PUBLIC/polyfills.d4aa8125b65d4528.js",
         "/PWA_DEMO_ENV_PUBLIC/runtime.6b36bf15ef5b739f.js",
@@ -82,9 +82,9 @@
   "hashTable": {
     "/PWA_DEMO_ENV_PUBLIC/687.4e557ff9894def18.js": "b329291b5187d9b9da5d99be249548cca48a08fe",
     "/PWA_DEMO_ENV_PUBLIC/973.316ac4d5fee2f217.js": "fea8414d15f033ec1561c7706d1902fe8f5f3632",
-    "/PWA_DEMO_ENV_PUBLIC/assets/config/config.json": "925488a171bf4c65beddc3f1bd62db73144575ae",
-    "/PWA_DEMO_ENV_PUBLIC/assets/config/mainPages.json": "55247b55e04d6392547da1ab1b19b034b711a9f2",
-    "/PWA_DEMO_ENV_PUBLIC/assets/config/scm.json": "fa553ed7619253bb5acbb1739c66208548033220",
+    "/PWA_DEMO_ENV_PUBLIC/assets/config/config.json": "1a8005fc97952d430347a9f3e8333a84fb76d17e",
+    "/PWA_DEMO_ENV_PUBLIC/assets/config/mainPages.json": "ba480f9df688fe9d1ba0e33723c72e89a141aa81",
+    "/PWA_DEMO_ENV_PUBLIC/assets/config/scm.json": "cd25087224a2b1312cda60d8d1695a200ebd3e26",
     "/PWA_DEMO_ENV_PUBLIC/assets/demos/aiDemo/ai_Curriculum_base.json": "35fc4abfab3b6513cfbe59156d384aeda355eafc",
     "/PWA_DEMO_ENV_PUBLIC/assets/demos/angularDemo/angular_Curriculum_base.json": "930b1bb67aacd91a98c1613ff7fb92cce7367553",
     "/PWA_DEMO_ENV_PUBLIC/assets/demos/angularDemo/angular_Demos_base.json": "6f681cc3f8573857ea629bc7b5f25572e689b615",
@@ -126,8 +126,8 @@
     "/PWA_DEMO_ENV_PUBLIC/assets/opencv.js": "9c25f0d869689b62b0834b7f938896a4ecfae698",
     "/PWA_DEMO_ENV_PUBLIC/assets/sudoku.txt": "a11677cdf143c6ab92080e8a4247c50083c14e71",
     "/PWA_DEMO_ENV_PUBLIC/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/PWA_DEMO_ENV_PUBLIC/index.html": "182e94e58d5d8a618aa9c7ef97a06c8333538790",
-    "/PWA_DEMO_ENV_PUBLIC/main.b7aa5251f4974b69.js": "8180428cf8f913480a93262b64e5e050ebed9d40",
+    "/PWA_DEMO_ENV_PUBLIC/index.html": "c90eee27a9fc3e21b9bb383e8bf05cfcb0299c2b",
+    "/PWA_DEMO_ENV_PUBLIC/main.0439f36301fda94f.js": "74ca5d99fe8303602a0d56e006910b24a8f26bf7",
     "/PWA_DEMO_ENV_PUBLIC/manifest.webmanifest": "4c4fda145c554fe9a7ed086f63fa914267022e67",
     "/PWA_DEMO_ENV_PUBLIC/polyfills.d4aa8125b65d4528.js": "a063506f957de345af77eb04df62e5280a953eb1",
     "/PWA_DEMO_ENV_PUBLIC/runtime.6b36bf15ef5b739f.js": "3780f6202bd8849dcd78caff49b6a84ddb47a402",

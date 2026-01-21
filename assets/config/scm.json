@@ -319,22 +319,8 @@
         "field_4"     : "[Hosting]",
         "field_5"     : "https://www.somee.com",
         "field_6"     : "[End Point]",
-        "field_7"     : "{{baseUrlNetCore}}api/FileManager/GenerarInformeCSVJson",
-        "field_8"     : "8ea97dcf-2138-42ed-b1dc-5e75ef483a2e"
-    },
-    {
-        "id"          : 0,
-        "done"        : true,
-        "name"        : "[SOMEE.COM - (.NET CORE / C#) - {SWAGGER}] - (alejandro.perez.acosta@hotmail.com)",
-        "description" : "ENV_ONLINE_HOSTING",
-        "field_1"     : "https://apereznwo.github.io/PWA_DEMO_ENV_PUBLIC/",
-        "field_2"     : "[Repo]",
-        "field_3"     : "https://github.com/aperezNWO/ASP_NET_CORE_CSHARP_DEMO/",
-        "field_4"     : "[Hosting]",
-        "field_5"     : "https://www.somee.com",
-        "field_6"     : "[End Point]",
         "field_7"     : "{{baseUrlNetCore}}swagger",
-        "field_8"     : "d92728a1-1af7-42a2-91f0-bb2a0de8f2ba"
+        "field_8"     : "8ea97dcf-2138-42ed-b1dc-5e75ef483a2e"
     },
     {
         "id"          : 0,
