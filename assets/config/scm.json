@@ -319,7 +319,7 @@
         "field_4"     : "[Hosting]",
         "field_5"     : "https://www.somee.com",
         "field_6"     : "[End Point]",
-        "field_7"     : "{{baseUrlNetCore}}demos/GenerarInformeCSVJson",
+        "field_7"     : "{{baseUrlNetCore}}api/FileManager/GenerarInformeCSVJson",
         "field_8"     : "8ea97dcf-2138-42ed-b1dc-5e75ef483a2e"
     },
     {
