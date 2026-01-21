@@ -329,12 +329,12 @@
         "description" : "ENV_ONLINE_HOSTING_DB",
         "comment_1"   : "[webapiandgulardemo]",
         "field_1"     : "[N/A]",
-        "field_2"     : "[Repo]",
-        "field_3"     : "[N/A]",
+        "field_2"     : "[N/A]",
+        "field_3"     : "http://about:blank",
         "field_4"     : "[Hosting]",
         "field_5"     : "https://www.somee.com",
-        "field_6"     : "[End Point]",
-        "field_7"     : "[N/A]",
+        "field_6"     : "[N/A]",
+        "field_7"     : "http://about:blank",
         "field_8"     : "937c1013-9cd9-40c8-937b-7b9a405b1c33"
     },
     {
@@ -344,12 +344,12 @@
         "description" : "ENV_ONLINE_HOSTING_DB",
         "comment_1"   : "siga_ffmm",
         "field_1"     : "[n/a]",
-        "field_2"     : "[Repo]",
-        "field_3"     : "[N/A]",
+        "field_2"     : "[N/A]",
+        "field_3"     : "http://about:blank",
         "field_4"     : "[Hosting]",
         "field_5"     : "https://www.somee.com",
-        "field_6"     : "[End Point]",
-        "field_7"     : "[N/A]",
+        "field_6"     : "[N/A]",
+        "field_7"     : "http://about:blank",
         "field_8"     : "267ce0ec-d4a8-4e47-aebd-2aeaab6d954a"
     },
     {
