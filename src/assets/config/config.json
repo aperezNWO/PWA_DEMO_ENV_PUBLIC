@@ -1,7 +1,7 @@
 {
     "appBrand"                                     : "[ANGULAR DEMO]",
     "appEnv"                                       : "[ENV_PUBLIC]",
-    "appVersion"                                   : "3.1.9",
+    "appVersion"                                   : "3.1.10",
     "baseUrlNetCoreCPPEntry_local"                 : "http://localhost:83/",
     "baseUrlNetCoreCPPEntry_remote"                : "https://tensorflownetcore64.tryasp.net/",
     "baseUrlNetCoreCPPEntry"                       : "https://tensorflownetcore64.tryasp.net/",
@@ -42,3 +42,4 @@
     "baseUrlDjangoPythonTF_df149032"               : "https://v3zz8t-8000.csb.app/",
     "baseUrlDjangoPythonTF"                        : "https://kj3zmt-8000.csb.app/"
 }
+  
