@@ -252,7 +252,7 @@ export class BackendService extends BaseService implements OnInit  {
     //
     _SetSTATBarCache(_prefix : string | undefined) : void {
       //
-      let p_url    = `${_prefix}demos/_SetSTATBarCache`;
+      let p_url    = `${_prefix}api/FileManager/_SetSTATBarCache`;
       //
       let jsonDataObservable : Observable<string> = this.http.get<string>(p_url,this.HTTPOptions_Text);   
       //

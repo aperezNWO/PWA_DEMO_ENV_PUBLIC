@@ -653,9 +653,11 @@
 
                         -- [_] datagrids row master / detail.     
 
---[_] https://apereznwo.github.io/NG_BOOTSTRAP_DEMO_ENV_DEV/#/Home -> PWA_DEMO_ENV_TF
+--[_] git hub pages
 
---[_] https://apereznwo.github.io/PWA_DEMO_ENV_DEV/#/              -> PWA_DEMO_ENV_OPEN_CV 
+        --[_] https://apereznwo.github.io/NG_BOOTSTRAP_DEMO_ENV_DEV/#/Home -> PWA_DEMO_ENV_TF
+
+        --[_] https://apereznwo.github.io/PWA_DEMO_ENV_DEV/#/              -> PWA_DEMO_ENV_OPEN_CV 
 
 --[_] paypal button.
 
