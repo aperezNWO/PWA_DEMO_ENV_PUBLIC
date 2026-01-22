@@ -18,7 +18,7 @@
         "description"      : "Sudoku Game / .net core endpoint",
         "field_1"          : "Sudoku Game, C++, .net core, dllimport",
         "field_2"          : "./#/GamesSudoku?langName=CPP",
-        "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/8a465f7d3c40159b1d75c528291da7dcf764868a/ASP_NET_CORE_CPP_ENTRY/Controllers/HomeController.cs#L658",
+        "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/4730e7d045f0153b4ff9d33aa4c8c477a914e009/ASP_NET_CORE_CPP_ENTRY/Controllers/AlgorothmController.cs#L149",
         "field_4"          : "{{baseUrlNetCoreCPPEntry}}api/Algorithm/Sudoku_Solve_CPP?p_matrix=[{7,3,9,1,4,2,0,6,8},{0,4,0,3,8,5,7,9,1},{1,8,0,6,9,7,3,2,4},{2,0,3,5,7,8,4,0,6},{0,1,0,9,3,6,2,8,5},{8,0,0,4,2,1,0,7,3},{0,0,0,0,5,4,0,3,7},{3,7,4,8,1,9,6,0,2},{0,2,1,0,0,3,8,4,9" ,
         "field_6"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
         "field_10"         : "945b42ca-17b7-44a0-a1c4-2cfec480ef2a"  
@@ -42,7 +42,7 @@
         "description"      : "Sort Algorithm / .net core endpoint ",
         "field_1"          : "Sort Algorithm, Bubble Sort, Quick Sort",
         "field_2"          : "./#/AlgorithmSort?langName=CPP",
-        "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/8a465f7d3c40159b1d75c528291da7dcf764868a/ASP_NET_CORE_CPP_ENTRY/Controllers/HomeController.cs#L558",
+        "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/4730e7d045f0153b4ff9d33aa4c8c477a914e009/ASP_NET_CORE_CPP_ENTRY/Controllers/AlgorothmController.cs#L65",
         "field_4"          : "{{baseUrlNetCoreCPPEntry}}api/Algorithm/_GetSort_CPP?p_sortAlgoritm=2&p_unsortedList=10|5|1|23|2|19|13|14|3|0|8|22|18|9|17|7|16|12|11|4|21|24|6|20|15",
         "field_6"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
         "field_10"         : "b48fc53c-e37a-433c-9ece-773500c5f72f"   
@@ -66,7 +66,7 @@
         "description"      : "Shortest Path Algorithm / .net core endpoint",
         "field_1"          : "Shortest Path, Graph, Dijkstra",
         "field_2"          : "./#/AlgorithmDijkstra?langName=CPP",
-        "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/8a465f7d3c40159b1d75c528291da7dcf764868a/ASP_NET_CORE_CPP_ENTRY/Controllers/HomeController.cs#L531",
+        "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/4730e7d045f0153b4ff9d33aa4c8c477a914e009/ASP_NET_CORE_CPP_ENTRY/Controllers/AlgorothmController.cs#L32",
         "field_4"          : "{{baseUrlNetCoreCPPEntry}}api/Algorithm/GenerateRandomVertex_CPP?p_vertexSize=9&p_sourcePoint=0",
         "field_6"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
         "field_10"         : "45feb969-2879-4f5f-8d2b-adccb9b187b5"  
@@ -90,7 +90,7 @@
         "description"      : "Regex Demo / .net core endpoint",
         "field_1"          : "Regular Expressions, c++, dllimport",
         "field_2"          : "./#/AlgorithmRegEx?langName=CPP",
-        "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/8a465f7d3c40159b1d75c528291da7dcf764868a/ASP_NET_CORE_CPP_ENTRY/Controllers/HomeController.cs#L626",
+        "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/4730e7d045f0153b4ff9d33aa4c8c477a914e009/ASP_NET_CORE_CPP_ENTRY/Controllers/AlgorothmController.cs#L122",
         "field_4"          : "{{baseUrlNetCoreCPPEntry}}api/Algorithm/_RegExEval_CPP?p_tagSearch=company&p_textSearch=bmg",
         "field_6"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
         "field_10"         : "830faf00-71cb-45a0-babd-5bcf5dbf9ccd"  
@@ -114,7 +114,7 @@
         "description"      : "OCR Demo / .net core endpoint",
         "field_1"          : "OCR, Tesseract, C++, .net core, DLLImport",
         "field_2"          : "./#/OcrPhotoCapture?langName=CPP",
-        "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/8a465f7d3c40159b1d75c528291da7dcf764868a/ASP_NET_CORE_CPP_ENTRY/Controllers/HomeController.cs#L166",
+        "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/4730e7d045f0153b4ff9d33aa4c8c477a914e009/ASP_NET_CORE_CPP_ENTRY/Controllers/OcrController.cs#L185",
         "field_4"          : "{{baseUrlNetCoreCPPEntry}}api/ocr/GetTesseractOcrOutput",
         "field_6"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
         "field_10"         : "9d7836ed-cd9b-4152-b298-18be6ed9b437"  
@@ -138,7 +138,7 @@
         "description"      : "OPEN CV Demo / .net core endpoint",
         "field_1"          : "Computer Vision, OPEN CV, .net core",
         "field_2"          : "./#/ComputerVision?langName=CPP",
-        "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/8a465f7d3c40159b1d75c528291da7dcf764868a/ASP_NET_CORE_CPP_ENTRY/Controllers/HomeController.cs#L307",
+        "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/4730e7d045f0153b4ff9d33aa4c8c477a914e009/ASP_NET_CORE_CPP_ENTRY/Controllers/ComputerVisionController.cs#L173",
         "field_4"          : "{{baseUrlNetCoreCPPEntry}}api/computervision/OpenCvReadImage",
         "field_6"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
         "field_10"         : "ae1c7a78-3fd5-4e41-965f-0bfd091c4a1d"  
@@ -186,7 +186,7 @@
         "description"      : "Tic-Tac-Toe Game A.I. / .net core endpoint",
         "field_1"          : "Tic-Tac-Toe Game, A.I., C++, .net core, dllimport",
         "field_2"          : "./#/GamesTicTacToeAI?langName=CPP",
-        "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/3fdd99e8a8c670c16718b428f746984e99dcdc56/ASP_NET_CORE_CPP_ENTRY/Controllers/TicTacToeController.cs#L17",
+        "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CPP_ENTRY/blob/4730e7d045f0153b4ff9d33aa4c8c477a914e009/ASP_NET_CORE_CPP_ENTRY/Controllers/TicTacToeController.cs#L21",
         "field_4"          : "{{baseUrlNetCoreCPPEntry}}api/tictactoe/play?aiMode=1" ,
         "field_6"          : "https://learn.microsoft.com/es-es/dotnet/api/system.runtime.interopservices.dllimportattribute?view=net-9.0",
         "field_10"         : "924c1431-2c6e-40a2-9664-f8191235d8a6"  
