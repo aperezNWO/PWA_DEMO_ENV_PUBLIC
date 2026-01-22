@@ -41,7 +41,7 @@ export class BackendService extends BaseService implements OnInit  {
     //
     _GetASPNETCoreCppVersion(): Observable<string> {
       //
-      let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}_GetAppVersion`;
+      let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}api/EntryPoint/_GetAppVersion`;
       //
       let appVersion    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //

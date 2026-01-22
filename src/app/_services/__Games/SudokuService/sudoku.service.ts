@@ -37,7 +37,7 @@ export class SudokuService extends BaseService {
   _GetSudoku_CPP(): Observable<string>
   {
     // 
-    let p_url              : string  =  `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}Sudoku_Generate_CPP`;
+    let p_url              : string  =  `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}api/Algorithm/Sudoku_Generate_CPP`;
     //
     let sudokuGenerated    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
     //
@@ -47,7 +47,7 @@ export class SudokuService extends BaseService {
   _SolveSudoku_CPP(p_matrix : string): Observable<string>
   {
     // 
-    let p_url               : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}Sudoku_Solve_CPP?p_matrix=${p_matrix}`
+    let p_url               : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}api/Algorithm/Sudoku_Solve_CPP?p_matrix=${p_matrix}`
     //
     let sudokuSolved        : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
     //

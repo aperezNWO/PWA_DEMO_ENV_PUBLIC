@@ -58,7 +58,7 @@ export class TensorFlowService extends BaseService {
   //
   _GetTensorFlowAPIVersion(): Observable<string> {
         //
-        let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}GetTensorFlowAPIVersion`;
+        let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}api/TicTacToe/GetTensorFlowAPIVersion`;
         //
         let appVersion    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
         //
@@ -67,7 +67,7 @@ export class TensorFlowService extends BaseService {
    //
    _GetTensorFlowAPPVersion(): Observable<string> {
         //
-        let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}GetTensorFlowAPPVersion`;
+        let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}api/TicTacToe/GetTensorFlowAPPVersion`;
         //
         let appVersion    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
         //
@@ -76,7 +76,7 @@ export class TensorFlowService extends BaseService {
    //
    _TensorFlow_GetCPPSTDVersion(): Observable<string> {
         //
-        let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}TensorFlow_GetCPPSTDVersion`;
+        let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}api/TicTacToe/TensorFlow_GetCPPSTDVersion`;
         //
         let appVersion    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
         //
