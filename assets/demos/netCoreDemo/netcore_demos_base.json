@@ -43,7 +43,7 @@
         "field_1"          : ".net core, sql server, api rest, QuickSort, Bubble Sort",
         "field_2"          : "./#/AlgorithmSort?langName=CS",
         "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CSHARP_DEMO/blob/c82bc7d07a491f3292161be872da3d7ea0433830/mcsd.Core.Library/Managers/AlgorithmManager.cs#L179",
-        "field_4"          : "{{baseUrlNetCore}}api/Algorithm/_GetSort?p_sortAlgoritm=2&p_unsortedList=16|1|20|15|12|8|19|6|11|14|23|5|2|10|9|13|24|7|22|18|0|17|3|21|4",
+        "field_4"          : "{{baseUrlNetCore}}api/Algorithm/GetSort?p_sortAlgoritm=2&p_unsortedList=16|1|20|15|12|8|19|6|11|14|23|5|2|10|9|13|24|7|22|18|0|17|3|21|4",
         "field_6"          : "https://www.geeksforgeeks.org/quick-sort-algorithm/",
         "field_10"         : "2f631080-b28c-4973-add6-0d26cb30e2c1"
 	},
@@ -55,7 +55,7 @@
         "field_1"          : ".net core, api rest, Dijkstra, Shortest Path",
         "field_2"          : "./#/AlgorithmDijkstra?langMame=CS",
         "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CSHARP_DEMO/blob/c82bc7d07a491f3292161be872da3d7ea0433830/mcsd.Core.Library/Managers/AlgorithmManager.cs#L349",
-        "field_4"          : "{{baseUrlNetCore}}api/Algorithm/GenerateRandomVertex?p_vertexSize=9&p_sourcePoint=0",
+        "field_4"          : "{{baseUrlNetCore}}api/Dijkstra/GenerateRandomVertex?p_vertexSize=9&p_sourcePoint=0",
         "field_6"          : "https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/",
         "field_10"         : "292ed965-b158-45a6-900e-78a5dc8ed1bd"
 	},
@@ -67,7 +67,7 @@
         "field_1"          : ".net core, Regular Expresions",
         "field_2"          : "./#/AlgorithmRegEx?langName=CS",
         "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CSHARP_DEMO/blob/c82bc7d07a491f3292161be872da3d7ea0433830/mcsd.Core.Library/Managers/RegExManager.cs#L43",
-        "field_4"          : "{{baseUrlNetCore}}api/Algorithm/_RegExEval?p_tagSearch=company&p_textSearch=bmg",
+        "field_4"          : "{{baseUrlNetCore}}api/RegExManager/RegExEval?p_tagSearch=company&p_textSearch=bmg",
         "field_6"          : "https://en.wikipedia.org/wiki/Regular_expression",
         "field_10"         : "2c8741f0-d7b9-4cef-8aae-e5b2aa4cc0e4"
 	},
