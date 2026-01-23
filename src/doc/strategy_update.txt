@@ -679,6 +679,6 @@
 
 --[_] UIX IMPROVEMENT (BASED UP ON SWAGGER UIX).
 
---[_] host 'ASP_NET_CORE_CSHARP_DEMO' on MONSTER.ASP
+--[_] host 'ASP_NET_CORE_CSHARP_DEMO' on MONSTER.ASP.NET.
 
 ////////////////////////////////////////////////////////////////////////////////
