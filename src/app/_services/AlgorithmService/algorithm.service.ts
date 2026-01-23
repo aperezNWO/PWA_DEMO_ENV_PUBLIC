@@ -69,20 +69,20 @@ export class AlgorithmService extends BaseService {
     ////////////////////////////////////////////////////////////////  
     // METODOS - [ALGORITMOS - ORDENAMIENTO]
     ////////////////////////////////////////////////////////////////     
-    getNewSort():Observable<string>
+    SortBenchMark_getNewSort_C_Sharp():Observable<string>
     {
       //
-      let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/Algorithm/NewSort`;
+      let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/SortBenchMark/NewSort`;
       //
       let newSortData : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //
       return newSortData; 
     }
     //    
-    getSort(p_sortAlgoritm: number, p_unsortedList: string):Observable<string>
+    SortBenchMark_getSort_C_Sharp(p_sortAlgoritm: number, p_unsortedList: string):Observable<string>
     {
       //
-      let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/Algorithm/GetSort?p_sortAlgoritm=${p_sortAlgoritm}&p_unsortedList=${p_unsortedList}`;
+      let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/SortBenchMark/GetSort?p_sortAlgoritm=${p_sortAlgoritm}&p_unsortedList=${p_unsortedList}`;
       //
       let newSortData : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //

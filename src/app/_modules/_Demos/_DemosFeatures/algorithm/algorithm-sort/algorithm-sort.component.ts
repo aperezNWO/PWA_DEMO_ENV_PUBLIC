@@ -152,7 +152,7 @@ export class AlgorithmSortComponent extends BaseReferenceComponent implements On
             break;
             case 1 : // C#
                 //
-                GetSortInfo           = this.algorithmService.getSort(p_sortAlgorith, p_unsortedList);            
+                GetSortInfo           = this.algorithmService.SortBenchMark_getSort_C_Sharp(p_sortAlgorith, p_unsortedList);            
             break;
             case 2: // C++
                 //
@@ -230,7 +230,7 @@ export class AlgorithmSortComponent extends BaseReferenceComponent implements On
         //
         let randomVertexInfo!          : Observable<string>;
         //
-        randomVertexInfo               = this.algorithmService.getNewSort();
+        randomVertexInfo               = this.algorithmService.SortBenchMark_getNewSort_C_Sharp();
         //
         const randomVertexObserver     = {
             //

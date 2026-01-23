@@ -81,18 +81,10 @@ export class BackendService extends BaseService implements OnInit  {
     ////////////////////////////////////////////////////////////////  
     // METODOS - [GENERAR ARCHIVO CSV] / CHARTS 
     ////////////////////////////////////////////////////////////////  
-    getCSVLinkGET(): Observable<string> {
-      //
-      let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/FileManager/_GetCSVLinkJsonGET`;
-      //
-      let csvLink : Observable<string> =  this.http.get<string>(p_url);
-      //
-      return csvLink; 
-    }
     //
     getCSVLink(): Observable<string> {
       //
-      let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/FileManager/_GetCSVLinkJson`;
+      let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/CSVManager/GetCSVLinkJson`;
       //
       let csvLink : Observable<string> =  this.http.post<string>(p_url,this.HTTPOptions_Text);
       //
@@ -101,7 +93,7 @@ export class BackendService extends BaseService implements OnInit  {
     //    
     getInformeRemotoCSV(): Observable<string> {
       //
-      let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/FileManager/GenerarInformeCSVJson`;
+      let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/CSVManager/GenerarInformeCSVJson`;
       //
       let jsonCSVData : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //
@@ -110,7 +102,7 @@ export class BackendService extends BaseService implements OnInit  {
     //
     getInformeRemotoCSV_STAT():Observable<string> {
         //
-        let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/FileManager/GenerarInformeCSVJsonSTAT`;
+        let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/CacheManager/GenerarInformeCSVJsonSTAT`;
         //
         let jsonCSVData : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
         //
@@ -119,7 +111,7 @@ export class BackendService extends BaseService implements OnInit  {
     //
     _SetSTATPieCache(_prefix : string | undefined):void{
       //
-      let p_url    =  `${_prefix}api/FileManager/_SetSTATPieCache`;
+      let p_url    =  `${_prefix}api/CacheManager/SetSTATPieCache`;
       //
       let jsonCSVData : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //
@@ -238,14 +230,14 @@ export class BackendService extends BaseService implements OnInit  {
     //
     getLogStatGET() {
       //
-      let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/FileManager/GetConsultaLogStatGet`;
+      let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/CacheManager/GetConsultaLogStatGet`;
       //
       return this.http.get<string>(p_url,this.HTTPOptions_JSON);   
     } 
     //
     _SetSTATBarCache(_prefix : string | undefined) : void {
       //
-      let p_url    = `${_prefix}api/FileManager/_SetSTATBarCache`;
+      let p_url    = `${_prefix}api/CacheManager/SetSTATBarCache`;
       //
       let jsonDataObservable : Observable<string> = this.http.get<string>(p_url,this.HTTPOptions_Text);   
       //

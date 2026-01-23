@@ -665,11 +665,15 @@
 
         --[_] INative.
 
+        --[_] ABOUT / TECHNICAL SPECES SECTION.
+        
 --[_] ASP_MET_CORE_CPP_DEMO  swagger.
 
         --[_] INative.
 
         --[_] Controller Overhauling.
+
+        --[_] ABOUT / TECHNICAL SPECES SECTION.
 
 --[_] paypal button.
 
@@ -679,6 +683,10 @@
 
 --[_] UIX IMPROVEMENT (BASED UP ON SWAGGER UIX).
 
---[_] host 'ASP_NET_CORE_CSHARP_DEMO' on MONSTER.ASP.NET.
+--[_] host 'ASP_NET_CORE_CSHARP_DEMO' on MONSTER.ASP
+
+--[_] codesandbox gmail smtp change email body.
+
+--[_] PWA_DEMO_ENV_ADMIN change codesandbox origin from list.
 
 ////////////////////////////////////////////////////////////////////////////////
