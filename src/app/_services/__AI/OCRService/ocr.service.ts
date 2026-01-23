@@ -21,7 +21,7 @@ export class OCRService extends BaseService {
   //
   _GetTesseract_CPPSTDVersion(): Observable<string> {
     //
-    let p_url                   : string  = `${this.__baseUrlTesseract}GetTesseract_CPPSTDVersion`;
+    let p_url                   : string  = `${this.__baseUrlTesseract}GetCPPSTDVersion`;
     //
     let appVersion              : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
     //
@@ -30,7 +30,7 @@ export class OCRService extends BaseService {
   //
   _GetTesseract_AppVersion(): Observable<string> {
     //
-    let p_url                   : string  = `${this.__baseUrlTesseract}GetTesseractAppVersion`;
+    let p_url                   : string  = `${this.__baseUrlTesseract}GetAppVersion`;
     //
     let appVersion              : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
     //
@@ -39,7 +39,7 @@ export class OCRService extends BaseService {
   //
   _GetTesseract_APIVersion(): Observable<string> {
     //
-    let p_url                   : string  = `${this.__baseUrlTesseract}GetTesseractVersion`;
+    let p_url                   : string  = `${this.__baseUrlTesseract}GetAPIVersion`;
     //
     let appVersion              : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
     //

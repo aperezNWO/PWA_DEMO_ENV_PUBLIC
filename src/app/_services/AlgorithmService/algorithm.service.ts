@@ -19,7 +19,7 @@ export class AlgorithmService extends BaseService {
     //
     _Algorithm_GetAppVersion(): Observable<string> {
       //
-      let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}api/Algorithm/GetDLLVersion`;
+      let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}api/Algorithm/GetAppVersion`;
       //
       let appVersion    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //
@@ -28,7 +28,7 @@ export class AlgorithmService extends BaseService {
     // 
     _Algorithm_GetCPPSTDVersion(): Observable<string> {
       //
-      let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}api/Algorithm/Algorithm_GetCPPSTDVersion`;
+      let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}api/Algorithm/GetCPPSTDVersion`;
       //
       let appVersion    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //
@@ -41,7 +41,7 @@ export class AlgorithmService extends BaseService {
     //    
     getRandomVertex(vertexSize : Number,sourcePoint : Number): Observable<string> {
       //
-      let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/Algorithm/GenerateRandomVertex?p_vertexSize=${vertexSize}&p_sourcePoint=${sourcePoint}`;
+      let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/Dijkstra/GenerateRandomVertex?p_vertexSize=${vertexSize}&p_sourcePoint=${sourcePoint}`;
       //
       let dijkstraData : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //
@@ -72,7 +72,7 @@ export class AlgorithmService extends BaseService {
     getNewSort():Observable<string>
     {
       //
-      let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/Algorithm/_NewSort`;
+      let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/Algorithm/NewSort`;
       //
       let newSortData : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //
@@ -82,7 +82,7 @@ export class AlgorithmService extends BaseService {
     getSort(p_sortAlgoritm: number, p_unsortedList: string):Observable<string>
     {
       //
-      let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/Algorithm/_GetSort?p_sortAlgoritm=${p_sortAlgoritm}&p_unsortedList=${p_unsortedList}`;
+      let p_url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/Algorithm/GetSort?p_sortAlgoritm=${p_sortAlgoritm}&p_unsortedList=${p_unsortedList}`;
       //
       let newSortData : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //
@@ -105,7 +105,7 @@ export class AlgorithmService extends BaseService {
     _GetXmlData():Observable<string>
     {
       //
-      let p_url  : string  = `${this._configService.getConfigValue('baseUrlNetCore')}api/Algorithm/_GetXmlData`;
+      let p_url  : string  = `${this._configService.getConfigValue('baseUrlNetCore')}api/RegExManager/GetXmlData`;
       //
       let xmlData : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //
@@ -115,7 +115,7 @@ export class AlgorithmService extends BaseService {
     _SetXmlDataToCache(_prefix : string | undefined):void
     {
       //
-      let p_url   : string  = `${_prefix}api/Algorithm/_SetXmlDataToCache`;
+      let p_url   : string  = `${_prefix}api/RegExManager/SetXmlDataToCache`;
       //
       ////console.log("Setting XML data to cache :  " + p_url)
       //
@@ -143,7 +143,7 @@ export class AlgorithmService extends BaseService {
     public _RegExEval(tagSearchIndex: number, textSearchValue: string): Observable<string>
     {
       //
-      let p_url    : string = `${this._configService.getConfigValue('baseUrlNetCore')}api/Algorithm/_RegExEval?p_tagSearch=${tagSearchIndex}&p_textSearch=${textSearchValue}`;
+      let p_url    : string = `${this._configService.getConfigValue('baseUrlNetCore')}api/RegExManager/RegExEval?p_tagSearch=${tagSearchIndex}&p_textSearch=${textSearchValue}`;
       //
       let regExData : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
       //

@@ -28,7 +28,8 @@
             <select id="SourceList"
                     name="SourceList"
                     #_SourceList
-                    (change)="this._fileUploadDivHiddenChanged()">
+                    (change)="this._fileUploadDivHiddenChanged()"
+                    disabled="disabled">
                     <option *ngFor="let _SourceName of __generateSourceList" 
                             [value]   ="_SourceName._index"
                             [selected]="_SourceName._selected">{{_SourceName._value}}

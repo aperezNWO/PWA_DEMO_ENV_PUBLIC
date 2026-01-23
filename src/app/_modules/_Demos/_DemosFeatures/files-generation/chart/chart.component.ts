@@ -188,16 +188,20 @@ export class ChartComponent extends BaseReferenceComponent implements OnInit  {
       const statBackgroundColor : string[]          = [];
       // 
       let td_informeLogStat!                 : Observable<string>;
-      td_informeLogStat                      = this.backendService.getLogStatPOST();
+      td_informeLogStat                      = this.backendService.getLogStatGET();
       //
       const td_observer = {
-        next: (td_logEntry: string)     => { 
+        next: (rawData: string)     => { 
           //
-          let jsondata     = JSON.parse(JSON.stringify(td_logEntry));
+          let jsondata       = JSON.parse(rawData);
           //
-          let recordNumber = jsondata.length;
+          //let recordNumber  = jsondata.length;
           //
-          //console.log('ESTADISTICA - (return): ' + recordNumber);
+          //console.log('ESTADISTICA - (raw)       :   ' + rawData);
+          //
+          //console.log('ESTADISTICA - (#RECORDS)  :   ' + recordNumber);
+          //
+          //console.log('ESTADISTICA - (JSON)      :   ' + jsondata);
           //
           jsondata.forEach((element: JSON, index : number) => {
                 //

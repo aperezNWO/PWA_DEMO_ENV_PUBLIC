@@ -58,7 +58,7 @@ export class TensorFlowService extends BaseService {
   //
   _GetTensorFlowAPIVersion(): Observable<string> {
         //
-        let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}api/Tensorflow/GetTensorFlowAPIVersion`;
+        let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}api/Tensorflow/GetAPIVersion`;
         //
         let appVersion    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
         //
@@ -67,7 +67,7 @@ export class TensorFlowService extends BaseService {
    //
    _GetTensorFlowAPPVersion(): Observable<string> {
         //
-        let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}api/Tensorflow/GetTensorFlowAPPVersion`;
+        let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}api/Tensorflow/GetAPPVersion`;
         //
         let appVersion    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
         //
@@ -76,7 +76,7 @@ export class TensorFlowService extends BaseService {
    //
    _TensorFlow_GetCPPSTDVersion(): Observable<string> {
         //
-        let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}api/Tensorflow/TensorFlow_GetCPPSTDVersion`;
+        let p_url         : string  = `${this._configService.getConfigValue('baseUrlNetCoreCPPEntry')}api/Tensorflow/GetCPPSTDVersion`;
         //
         let appVersion    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
         //

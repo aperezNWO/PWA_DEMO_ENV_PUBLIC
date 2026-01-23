@@ -92,7 +92,7 @@ export class ComputerVisionService extends BaseService {
   //
   _OpenCv_GetAppVersion(): Observable<string> {
         //
-        let p_url         : string  = `${this.__baseUrlComputerVision}GetOpenCvAppVersion`;
+        let p_url         : string  = `${this.__baseUrlComputerVision}GetAppVersion`;
         //
         let appVersion    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
         //
@@ -101,7 +101,7 @@ export class ComputerVisionService extends BaseService {
    //
    _OpenCv_GetAPIVersion(): Observable<string> {
         //
-        let p_url         : string  = `${this.__baseUrlComputerVision}GetOpenCvAPIVersion`;
+        let p_url         : string  = `${this.__baseUrlComputerVision}GetAPIVersion`;
         //
         let appVersion    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
         //
@@ -110,7 +110,7 @@ export class ComputerVisionService extends BaseService {
    //
    _OpenCv_GetCPPSTDVersion(): Observable<string> {
         //
-        let p_url         : string             = `${this.__baseUrlComputerVision}OpenCv_GetCPPSTDVersion`;
+        let p_url         : string             = `${this.__baseUrlComputerVision}GetCPPSTDVersion`;
         //
         let appVersion    : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
         //

@@ -74,7 +74,7 @@ export class SudokuService extends BaseService {
     //
     formData.append('file', file);
     //
-    let url = `${this._configService.getConfigValue('baseUrlNetCore')}demos/Sudoku_Upload_File`;
+    let url = `${this._configService.getConfigValue('baseUrlNetCore')}api/Algorithm/Sudoku_Upload_File`;
     //
     const req = new HttpRequest('POST', url, formData, {
       reportProgress: true,

@@ -287,7 +287,7 @@ export class TechnicalSpecsComponent extends BaseComponent {
         },
         error           : (err: Error)      => {
           //
-          console.error('_GetTesseractAppVersion- (ERROR) : ' + JSON.stringify(err.message));
+          console.error('_GetAppVersion- (ERROR) : ' + JSON.stringify(err.message));
         },
         complete        : ()                => {
           //
@@ -310,7 +310,7 @@ export class TechnicalSpecsComponent extends BaseComponent {
         },
         error           : (err: Error)      => {
           //
-          console.error('_GetTesseractAppVersion- (ERROR) : ' + JSON.stringify(err.message));
+          console.error('_GetAppVersion- (ERROR) : ' + JSON.stringify(err.message));
         },
         complete        : ()                => {
           //
@@ -333,7 +333,7 @@ export class TechnicalSpecsComponent extends BaseComponent {
         },
         error           : (err: Error)      => {
           //
-          console.error('_GetTesseract_CPPSTDVersion- (ERROR) : ' + JSON.stringify(err.message));
+          console.error('_GetCPPSTDVersion- (ERROR) : ' + JSON.stringify(err.message));
         },
         complete        : ()                => {
           //

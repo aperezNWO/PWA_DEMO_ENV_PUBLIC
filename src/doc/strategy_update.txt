@@ -560,6 +560,8 @@
  
  -- [_] check errors / improvements (section).   
 
+     -- [_] chheck method "sudoku_upload_file". or block the option.
+
      -- [_] validate empty image on ocr / opencv.
 
      -- [_] chat demo exception handling.
@@ -653,7 +655,7 @@
 
                         -- [_] datagrids row master / detail.     
 
---[_] git hub pages
+--[_] git hub pages (single code base, different landing page)
 
         --[_] https://apereznwo.github.io/NG_BOOTSTRAP_DEMO_ENV_DEV/#/Home -> PWA_DEMO_ENV_TF
 
@@ -661,10 +663,22 @@
 
 --[_] ASP_MET_CORE_CPP_ENTRY swagger.
 
+        --[_] INative.
+
+--[_] ASP_MET_CORE_CPP_DEMO  swagger.
+
+        --[_] INative.
+
+        --[_] Controller Overhauling.
+
 --[_] paypal button.
 
 --[_] CSV ASYNC REFERENCE.
 
 --[_] ALGORITHM BIG O NOTATION.
+
+--[_] UIX IMPROVEMENT (BASED UP ON SWAGGER UIX).
+
+--[_] host 'ASP_NET_CORE_CSHARP_DEMO' on MONSTER.ASP
 
 ////////////////////////////////////////////////////////////////////////////////
