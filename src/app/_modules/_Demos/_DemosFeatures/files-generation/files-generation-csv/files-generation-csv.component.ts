@@ -348,7 +348,9 @@ export class FilesGenerationCSVComponent extends BaseReferenceComponent implemen
         //
         this.status_message.set("");
         //
-        if ((this.rf_searchForm.valid == true))
+        console.log('SEARCHING. VALID FORM: ' + this.rf_searchForm.valid);
+        //
+        //if ((this.rf_searchForm.valid == true))
             this.rf_update(this._model);
     }
     //
