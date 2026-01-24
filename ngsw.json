@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1769205039176,
+  "timestamp": 1769225932542,
   "index": "/PWA_DEMO_ENV_PUBLIC/index.html",
   "assetGroups": [
     {
@@ -15,7 +15,7 @@
         "/PWA_DEMO_ENV_PUBLIC/973.316ac4d5fee2f217.js",
         "/PWA_DEMO_ENV_PUBLIC/favicon.ico",
         "/PWA_DEMO_ENV_PUBLIC/index.html",
-        "/PWA_DEMO_ENV_PUBLIC/main.26a47477371ce289.js",
+        "/PWA_DEMO_ENV_PUBLIC/main.dba6430331846236.js",
         "/PWA_DEMO_ENV_PUBLIC/manifest.webmanifest",
         "/PWA_DEMO_ENV_PUBLIC/polyfills.d4aa8125b65d4528.js",
         "/PWA_DEMO_ENV_PUBLIC/runtime.6b36bf15ef5b739f.js",
@@ -82,7 +82,7 @@
   "hashTable": {
     "/PWA_DEMO_ENV_PUBLIC/687.4e557ff9894def18.js": "b329291b5187d9b9da5d99be249548cca48a08fe",
     "/PWA_DEMO_ENV_PUBLIC/973.316ac4d5fee2f217.js": "fea8414d15f033ec1561c7706d1902fe8f5f3632",
-    "/PWA_DEMO_ENV_PUBLIC/assets/config/config.json": "5e3d2b039a50a6b11462dedd4bd32ba143b48314",
+    "/PWA_DEMO_ENV_PUBLIC/assets/config/config.json": "f62cb1760043a5b9c5b3d795504ee5cbe83399be",
     "/PWA_DEMO_ENV_PUBLIC/assets/config/mainPages.json": "ba480f9df688fe9d1ba0e33723c72e89a141aa81",
     "/PWA_DEMO_ENV_PUBLIC/assets/config/scm.json": "d538ea9229f3e55708ecc0e3c403488037568f64",
     "/PWA_DEMO_ENV_PUBLIC/assets/demos/aiDemo/ai_Curriculum_base.json": "35fc4abfab3b6513cfbe59156d384aeda355eafc",
@@ -93,7 +93,7 @@
     "/PWA_DEMO_ENV_PUBLIC/assets/demos/djangoDemo/django_Curriculum_base.json": "c5cb47a936b0f9bc39bd5fcebfaf615e8cf8c497",
     "/PWA_DEMO_ENV_PUBLIC/assets/demos/djangoDemo/django_Demos_base.json": "185162b4a94ee641c3dc7661c80db1cfcb5fa766",
     "/PWA_DEMO_ENV_PUBLIC/assets/demos/netCoreDemo/netcore_Curriculum_base.json": "989628b99da2028ff7ee8b8407d82420bf6b108a",
-    "/PWA_DEMO_ENV_PUBLIC/assets/demos/netCoreDemo/netcore_demos_base.json": "2d97d43e6c367938aee9257988072d502a124061",
+    "/PWA_DEMO_ENV_PUBLIC/assets/demos/netCoreDemo/netcore_demos_base.json": "bb2fbbaf736d5960323712e8c5cc8ddecbafbdb3",
     "/PWA_DEMO_ENV_PUBLIC/assets/demos/nodejsDemo/nodejs_Curriculum_base.json": "d9a5f04e6eb21310eab505a8c000ac28a6b050bb",
     "/PWA_DEMO_ENV_PUBLIC/assets/demos/nodejsDemo/nodejs_Demos_base.json": "e03619308f6af1caea6285d12c2411b3583ffcfc",
     "/PWA_DEMO_ENV_PUBLIC/assets/demos/springBootDemo/springBoot_Curriculum_base.json": "41a5121544c5c4227848ec6d2f60dbb8e2dfa5c2",
@@ -126,8 +126,8 @@
     "/PWA_DEMO_ENV_PUBLIC/assets/opencv.js": "9c25f0d869689b62b0834b7f938896a4ecfae698",
     "/PWA_DEMO_ENV_PUBLIC/assets/sudoku.txt": "a11677cdf143c6ab92080e8a4247c50083c14e71",
     "/PWA_DEMO_ENV_PUBLIC/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/PWA_DEMO_ENV_PUBLIC/index.html": "3cc04ae85777e9fb58402f50a0208c97d870b18e",
-    "/PWA_DEMO_ENV_PUBLIC/main.26a47477371ce289.js": "e4e3b6ee3d4faf52fde03baa35f72bc356eef969",
+    "/PWA_DEMO_ENV_PUBLIC/index.html": "1fb2ff72ee779fa6c26163a15e040f3af3d361b2",
+    "/PWA_DEMO_ENV_PUBLIC/main.dba6430331846236.js": "b9a9fe60a7937bfc870ee14f4fe6614b29bf2259",
     "/PWA_DEMO_ENV_PUBLIC/manifest.webmanifest": "4c4fda145c554fe9a7ed086f63fa914267022e67",
     "/PWA_DEMO_ENV_PUBLIC/polyfills.d4aa8125b65d4528.js": "a063506f957de345af77eb04df62e5280a953eb1",
     "/PWA_DEMO_ENV_PUBLIC/runtime.6b36bf15ef5b739f.js": "3780f6202bd8849dcd78caff49b6a84ddb47a402",

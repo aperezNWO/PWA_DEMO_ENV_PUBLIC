@@ -19,7 +19,7 @@
         "field_1"          : ".net core, sql server, api rest, XLS",
         "field_2"          : "./#/FilesGenerationXLS?langName=CS",
         "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CSHARP_DEMO/blob/main/mcsd.Core.Library/Managers/XlsManager.cs#L70",
-        "field_4"          : "{{baseUrlNetCore}}api/FileManager/generarinformejson",
+        "field_4"          : "{{baseUrlNetCore}}api/XLSManager/generarinformejson",
         "field_6"          : "https://www.epplussoftware.com/",
         "field_10"         : "75310400-5648-43c1-8bdd-bc3f5cf75e82"
 	},
@@ -31,7 +31,7 @@
         "field_1"          : ".net core, sql server, api rest, EPPPlus",
         "field_2"          : "./#/FilesGenerationPDF/",
         "field_3"          : "https://github.com/aperezNWO/ASP_NET_CORE_CSHARP_DEMO/blob/c82bc7d07a491f3292161be872da3d7ea0433830/mcsd.Core.Library/Managers/PDFManager.cs#L31",
-        "field_4"          : "{{baseUrlNetCore}}api/FileManager/_GetPdf?subjectName=taty",
+        "field_4"          : "{{baseUrlNetCore}}api/PDFManager/GetPdf?subjectName=taty",
         "field_6"          : "https://itextpdf.com/products/itextsharp",
         "field_10"         : "0cd41eee-f54c-44be-b03a-422769b1a8f2"
 	},
