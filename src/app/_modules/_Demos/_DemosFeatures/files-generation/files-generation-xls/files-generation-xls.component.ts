@@ -3,7 +3,7 @@ import { FormBuilder, Validators                       } from '@angular/forms';
 import { ActivatedRoute                                } from '@angular/router';
 import { MatTableDataSource                            } from '@angular/material/table';
 import { MatPaginator                                  } from '@angular/material/paginator';
-import { BehaviorSubject, Observable                                    } from 'rxjs';
+import { BehaviorSubject, Observable                   } from 'rxjs';
 import { UtilManager                                   } from 'src/app/_engines/util.engine';
 import { LogEntry, SearchCriteria, _languageName       } from 'src/app/_models/entity.model';
 import { BackendService                                } from 'src/app/_services/BackendService/backend.service';

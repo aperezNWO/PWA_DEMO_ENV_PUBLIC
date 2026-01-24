@@ -685,8 +685,10 @@
 
 --[_] host 'ASP_NET_CORE_CSHARP_DEMO' on MONSTER.ASP
 
---[_] codesandbox gmail smtp change email body.
+--[_] codesandbox gmail smtp change email body. Whatsapp contact.
 
---[_] PWA_DEMO_ENV_ADMIN change codesandbox origin from list.
+--[_] block text box controls from forms.
+
+--[_] PWA_DEMO_ENV_ADMIN change codesandbox origin from list. getallcontacforms update.
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -26,7 +26,7 @@
                   required
                   [(ngModel)]="this._model.P_ROW_NUM" 
                   name="P_ROW_NUM"
-                  #P_ROW_NUM="ngModel">
+                  #P_ROW_NUM="ngModel" [disabled]="true">
         </div>
         <!-- [_] P_FECHA_INICIO -->
         <div class="form-group" align="left">
@@ -37,7 +37,7 @@
                   required
                   [(ngModel)]="this._model.P_FECHA_INICIO" 
                   name="P_FECHA_INICIO"
-                  #P_FECHA_INICIO="ngModel">
+                  #P_FECHA_INICIO="ngModel" [disabled]="true">
         </div>
         <!-- [_] P_FECHA_FIN -->
         <div class="form-group" align="left">
@@ -48,7 +48,7 @@
                   required
                   [(ngModel)]="this._model.P_FECHA_FIN" 
                   name="P_FECHA_FIN"
-                  #P_FECHA_FIN="ngModel">
+                  #P_FECHA_FIN="ngModel" [disabled]="true">
         </div>
         <!-- INICIO PANEL DE BOTONES    -->
         <div class="form-group" align="right" style="display: block;">

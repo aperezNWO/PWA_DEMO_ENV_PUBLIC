@@ -30,7 +30,7 @@
             id="missionNumber"
             [(ngModel)]="inputMissionNumber"
             placeholder="e.g., 18"
-            [disabled]="isLoading"
+            [disabled]="true"
           />
           <button (click)="predict()" [disabled]="isLoading || inputMissionNumber === null || inputMissionNumber < 1">
             {{ isLoading ? 'Predicting...' : 'Predict Time' }}

@@ -30,15 +30,22 @@ export class FilesGenerationCSVComponent extends BaseReferenceComponent implemen
     //
     public __languajeList                              : any;
     protected tituloListadoLenguajes                   : string = "[Backend] :";
+    /*
+      // Specify the `disabled` property at control creation time:
+      form = new FormGroup({
+        first: new FormControl({value: 'Nancy', disabled: true}, Validators.required),
+        last: new FormControl('Drew', Validators.required)
+      });
+    */
     //
     rf_searchForm   = this.formBuilder.group({
-      _P_ROW_NUM          : ["999"         , Validators.required],
-      _P_FECHA_INICIO     : ["2023-01-01"  , Validators.required],
-      _P_FECHA_FIN        : ["2022-12-31"  , Validators.required],
+      _P_ROW_NUM          : [{value : '999'        ,  disabled : true }  , Validators.required],
+      _P_FECHA_INICIO     : [{value : '2023-01-01' ,  disabled : true }  , Validators.required],
+      _P_FECHA_FIN        : [{value : '2022-12-31' ,  disabled : true }  , Validators.required],
     });
     //
     _model                           = new SearchCriteria( 
-      "1"
+       "1"
       ,"1"
       ,"999"
       ,"2022-09-01"
@@ -295,9 +302,9 @@ export class FilesGenerationCSVComponent extends BaseReferenceComponent implemen
         console.warn("(NEW SEARCH RF)");
         //
         this.rf_searchForm   = this.formBuilder.group({
-          _P_ROW_NUM          : ["999"         , Validators.required],
-          _P_FECHA_INICIO     : ["2023-01-01"  , Validators.required],
-          _P_FECHA_FIN        : ["2023-12-31"  , Validators.required],
+          _P_ROW_NUM          : [{value : '999'        ,  disabled : true }  , Validators.required],
+          _P_FECHA_INICIO     : [{value : '2023-01-01' ,  disabled : true }  , Validators.required],
+          _P_FECHA_FIN        : [{value : '2022-12-31' ,  disabled : true }  , Validators.required],
         });
         //
         this.rf_buttonCaption       = "[Search]";

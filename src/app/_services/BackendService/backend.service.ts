@@ -153,7 +153,7 @@ export class BackendService extends BaseService implements OnInit  {
     //
     getLogRemoto(_searchCriteria : SearchCriteria) {
           //
-          let url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/FileManager/generarinformejson`;
+          let url    = `${this._configService.getConfigValue('baseUrlNetCore')}api/XLSManager/generarinformejson`;
           //    
           return this.http.get<LogEntry[]>(url);
       }
@@ -209,7 +209,7 @@ export class BackendService extends BaseService implements OnInit  {
     //
     getInformeExcel(_searchCriteria : SearchCriteria){
           //
-          let p_url  = `${this._configService.getConfigValue('baseUrlNetCore')}api/FileManager/generarinformexls`;
+          let p_url  = `${this._configService.getConfigValue('baseUrlNetCore')}api/XLSManager/generarinformexls`;
           //
           let excelFileName : Observable<string> =  this.http.get<string>(p_url,this.HTTPOptions_Text);
           //
