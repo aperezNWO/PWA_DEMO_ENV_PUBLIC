@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1770657462651,
+  "timestamp": 1770660666152,
   "index": "/PWA_DEMO_ENV_PUBLIC/index.html",
   "assetGroups": [
     {
@@ -19,7 +19,7 @@
         "/PWA_DEMO_ENV_PUBLIC/chunk-WIELM4ZQ.js",
         "/PWA_DEMO_ENV_PUBLIC/favicon.ico",
         "/PWA_DEMO_ENV_PUBLIC/index.html",
-        "/PWA_DEMO_ENV_PUBLIC/main-53G6HSJQ.js",
+        "/PWA_DEMO_ENV_PUBLIC/main-U4PXQMWQ.js",
         "/PWA_DEMO_ENV_PUBLIC/manifest.webmanifest",
         "/PWA_DEMO_ENV_PUBLIC/polyfills-MH2GNY63.js",
         "/PWA_DEMO_ENV_PUBLIC/styles-3GTZKBW4.css"
@@ -85,7 +85,7 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/PWA_DEMO_ENV_PUBLIC/assets/config/config.json": "08bd9b28e9a2929e3ef910cf7e7f1a279146d75e",
+    "/PWA_DEMO_ENV_PUBLIC/assets/config/config.json": "3e2e17b545f666c797714cb772f60c72a6732532",
     "/PWA_DEMO_ENV_PUBLIC/assets/config/mainPages.json": "4885e352971c0938ab3ac8e67fd22d2f296858bf",
     "/PWA_DEMO_ENV_PUBLIC/assets/config/scm.json": "322e77aa4398525af8feafcc43878bc6855315ac",
     "/PWA_DEMO_ENV_PUBLIC/assets/demos/aiDemo/ai_Curriculum_base.json": "35fc4abfab3b6513cfbe59156d384aeda355eafc",
@@ -137,8 +137,8 @@
     "/PWA_DEMO_ENV_PUBLIC/chunk-VU7IBUSQ.js": "e6fd467b9fb503aba1ddd6bcbe799631bd1d549d",
     "/PWA_DEMO_ENV_PUBLIC/chunk-WIELM4ZQ.js": "2b09b18be43f29e3b8dac870beb4ed731a4ceafc",
     "/PWA_DEMO_ENV_PUBLIC/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/PWA_DEMO_ENV_PUBLIC/index.html": "6afffcd17398d863ae7c3d544d408862c4fd5149",
-    "/PWA_DEMO_ENV_PUBLIC/main-53G6HSJQ.js": "179188210c47ad410a8709534c7564f37b9ef61e",
+    "/PWA_DEMO_ENV_PUBLIC/index.html": "45f4bc257fed7618667d40a1afaa56baaf46f02c",
+    "/PWA_DEMO_ENV_PUBLIC/main-U4PXQMWQ.js": "864b6e1e2c3fe938051b02f1384494d8fb4edad3",
     "/PWA_DEMO_ENV_PUBLIC/manifest.webmanifest": "4c4fda145c554fe9a7ed086f63fa914267022e67",
     "/PWA_DEMO_ENV_PUBLIC/polyfills-MH2GNY63.js": "3c45a12b17fda69e5b6ed63ba5d8cc13f85d5dd1",
     "/PWA_DEMO_ENV_PUBLIC/styles-3GTZKBW4.css": "8549c6c73a4050a9000c386745819df13db24fbf"
