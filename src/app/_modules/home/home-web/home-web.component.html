@@ -1,0 +1,12 @@
+<div align="center" class="animate">
+    <h4>{{this._appBrand}}!</h4>
+    <hr>
+    <app-landing [LandingPage]="this.selectedLandingPage">
+    </app-landing>
+    <hr>
+    <span *ngFor="let page of this._pages">
+        <span *ngIf="page" style="padding:5px;">
+            <a [routerLink]="page.url" [queryParams]="page.queryParamsObj"><span align="left">{{page.text}}</span></a>
+        </span>
+    </span>
+</div>

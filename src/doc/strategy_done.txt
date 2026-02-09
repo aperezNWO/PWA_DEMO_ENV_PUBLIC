@@ -1,0 +1,1042 @@
+/////////////////////////////////////////////////////////////////
+// STRATEGY DONE 
+/////////////////////////////////////////////////////////////////
+
+
+--[X] Bootstrap Mobile / Desktop.
+--[X] Referencia c++ Regex / Geek for geeks.
+--[X] Sudoku split board -> Generated / Solved.
+--[x] Plaground env -> source.
+--[x] CSV / XLS / ZIP Option.
+--[x] c# accord.
+--[x] Hanoid 3d.
+--[x] Angular.dev / Certification / Community.
+--[x] mongodb demo / backend source.
+--[x] django  demo / backend source.
+--[x] chatgtp / xls demo / node.js.  
+--[x]  ofrecer directamente a angular community.
+--[x] Angular Job Alert / Social.
+--[x] Paypal link button.
+--[x] node.js gemini.
+--[x] PWA / ANGULAR.DEV / WEB.DEV / MDN / W3C.
+--[x] Select your language.
+--[x] Topics end point.
+
+-- [X] HOSTING  
+
+        -- [X] [somee.com]
+         
+                -- [X] [HELP]
+                        https://somee.com/doka/Help/Article/106/How_to_deploy_Web_project_from_Visual_Studio
+
+                -- [X] [mcsd/angulardemo/webapidemo]
+                -- [X] [db].
+                       -- [_] reset log db #1 / debug content.
+                       -- [_] enbable   db #2 / (CSV DEMO).
+                -- [X] check disabled accounts.
+                       -- [x] https://www.angulardemo.somee.com.
+                       
+-- [x] [CPP DEMO]
+
+    -- [x] performance benchmark [c# / typescript / c++].
+
+
+-- [X] SOURCE github.com        
+
+        -- [X] PUBLIC SOURCES.                        
+                -- [x] [mcsdWebApíTFS] (tff)      -->  (github) "mcsd_public".
+                -- [x] [AngularMCSD]   (github)   -->  (github) "AngularMCSD_public".
+                -- [>] Update sources.
+
+-- [X] [alternativas]
+
+        -- [X] https://xranks.com/es/somee.com
+        
+-- [X] REDUCE FILE SIZE.
+        
+        -- [X] check disable email from "somee.com".
+
+-- [x] DIRECT EMAIL
+
+-- [x] JOB SEARCH MODULE.
+
+-- [X] FREELANCE WEB SITES
+
+                -- [X] WORKANA.
+                -- [X] FIVERR.
+                -- [X] UPWORK.
+
+-- [X] MENU PRINIPAL
+
+        --[X] NAVEGACION.
+
+                --[X] LOGIN / OAUTH.
+
+                --[X] TEMARIO.
+
+                --[X] PAGINAS.
+
+-- [X] LISTADO DE URLS
+
+-- [X] Config Module.
+
+--[X] RESTRINGIR ACCESO A REGISTROS VIA ROLES / OAUTH. 
+
+--[x] NG BOOTRSRAP ** SAMPLE ** .
+
+--[X] NG BOOTRSRAP TABLE
+
+        --[x] _sevices, _modules,_models.
+
+        --[X] Tipo de registro "Enlace / Link".
+
+                --[X] descripcion.
+
+                --[X] url.
+
+                --[X] nivel de encabezado.
+
+        --[X] leer archivo externo de paginas .json (HOW TO PUBLISH A SINGLE ELEMNT VIA NPX NGH).
+
+        --[X] Estrategia de Duplicacion.
+
+                --[X] utilzar herencia.
+
+                --[X] Duplicar objetos .ts.
+        
+                --[X] Cambiar referencia a objetos .ts.
+
+-- [X] LEER ARCHIVO CONFIG / VERSION.
+
+-- [X] codedandbox contingency.
+
+      -- [X] check df149032@outlook.com.
+
+      -- [X] set github account
+
+      -- [X] upload node.js source code.
+
+      -- [X] set codesandbox account.
+
+-- [X] promise exception handling.    
+
+-- [X] ngb grid on public csv query.
+
+-- [X] Angular curriculum re-order.
+
+-- [X] ngb grid login link on repo column.
+
+-- [X] MARKETING GRID CRUD.
+
+-- [X] JWT.
+
+-- [X] OWASP.
+
+-- [x] Small Icon on NAV MENU. 
+
+-- [x] Fix Menu behaviour.
+
+-- [x] fron icon as link.
+
+-- [x] nodejs demo, backend url demo.
+
+-- [x] page not found triggers logout. 
+
+-- [x] sortirection dictionary;
+
+-- [x] Datagrid row detail / relacion unos a muchos json.
+
+-- [x] OAUTH. 
+
+-- [x] Edu link group.
+
+      -- [x] Database.
+
+      -- [x] Programming References.
+
+      -- [x] Patterns.
+      
+      -- [x] SOLID.
+
+-- [x] php mdemo.
+
+-- [x] datagrid record number.  
+
+ -- [x] Angular curriculum.
+
+ -- [x] Contact Form 
+ 
+       -- [x] Dynamic Form.  
+
+       -- [x] Read json pages from somee.com / database.
+
+  -- [x] RXJS
+
+       -- [x]  https://v17.angular.io/guide/rx-library      
+
+
+-- [x] NBX GRID.      
+
+      -- [x] fix onload data.      
+
+            -- [x] basarse en concacform admin grid.      
+
+      -- [x] fix onsort.      
+
+-- [x] SpeechService as Service onLoad.    
+
+-- [x] scm list.     
+
+      -- [x] scm list data from database.     
+
+      -- [x] modify tesch specs list.
+
+-- [x] merge demos_lang with env_prod.     
+
+      -- [x] end_prod add submenu demos_lang.          
+
+      -- [x] end_prod add submenu demos_feature.
+ 
+      -- [x] end_prod add submenu demos_curriculum.
+  
+      -- [x] end_prod add contact form.
+
+      -- [x] end_prod modify tesch specs list.
+
+-- [X] architectural changes.
+
+-- [X] General Error Handling.
+
+-- [X] Service Architecture.
+
+-- [X] uv_apidigitacion / [nuevo ruv].
+
+-- [x] Referencia Template Driven/Reactive.
+
+-- [x] A.I. Apps
+        -- [x] C# Accord
+        -- [x] C++ OpenCV
+        -- [x] Machine Learning
+
+-- [x] Backend
+        -- [x] C#
+        -- [x] C++
+        -- [x] Node Js
+        -- [x] Python
+
+-- [x] Environments
+        -- [x] CodeSandbox
+        -- [x] Git Hub CodeSpaces
+        -- [x] Docker
+
+-- [x] Games
+        -- [x] tic tac toe
+        -- [x] hanoi towers
+        -- [x] sudoku
+
+-- [x] UIX --> check.
+
+     -- [x] [GENERAR ARCHIVO]
+ 
+     -- [x] [ACERCA DE]
+    
+        -- [x] [contacto]
+        -- [x] [technical specs]
+        -- [x] [job search]  
+            -- [x] oauth.        
+        -- [x] [seccion comentarios]
+            -- [x] oauth.
+  
+-- [x] angular interceptors.
+
+-- [x] uix --> general.
+
+
+        -- [x] check uix color/usability.
+        -- [x] menu collapse on page entry.
+        -- [x] metronic.
+        -- [x] [daniel sevilla]         https://primeng.org/installation.
+        
+-- [x] ANGULAR TOPICS.
+
+    -- [x] https://angular.io/docs
+
+-- [x] CORREGIR UIX.
+
+       -- [x] uncontrasted font colors.
+
+-- [x] [CPP DEMO]
+
+    -- [x] performance benchmark [c# / typescript / c++].
+
+-- [x] CHAT GTP.
+
+    -- [x]  https://www.businessinsider.es/chatgpt-codigos-impresionantes-prompts-debes-usar-expertos-1288236
+
+-- [x] Use custom login.
+
+        -- [x] DYNAMIC FORM.
+        -- [x] DB MODEL.
+
+-- [x] node.js.
+
+       -- [x] As backend of sandbox demo.
+       -- [x] As standalone demo with index.
+       -- [x] Angular Hosting.
+
+    -- [x] [LOGIN]            
+         
+            -- [x] CUSTOM.
+            -- [x] oauth.
+            -- [x] DYNAMIC FORM.
+
+    -- [x] [AI/ NEURAL NETWORK DEMO]
+
+           -- [x] [TIC/TAC/TOE] --> [min/max algorthm].
+
+                  -- [x] https://www.geeksforgeeks.org/implementation-of-tic-tac-toe-game/
+
+    -- [x] UDEMY / ANGULAR.
+        
+        -- [x] https://www.udemy.com/topic/angular/free/
+
+-- [x] Use custom login.
+
+        -- [x] DYNAMIC FORM.
+        -- [x] DB MODEL.
+
+
+-- [x] MISCELANEOUS.
+
+     -- [x] bootstrap menu plegar en entrada a modulo.
+     -- [x] Angular Topics.
+     -- [x] Renovar https somme.com.
+     
+-- [x] OBSERVABLE.
+
+       -- [x] https://v17.angular.io/guide/observables.
+       -- [x] "Loading component" (from ngbgrid).
+       -- [x] Curruculum entry.
+
+-- [x] ngb grids.
+
+-- [x] install bootstrap.
+-- [x] Bootstrap menu navigation (from .NET CORE).
+-- [x] implement menu.
+
+-- [x] CORREGIR UIX.
+
+        -- [x] uncontrasted font colors.
+
+-- [>] webapidemo / service.
+
+       -- [x] remove demo views/controllers.
+       -- [x] enable domain "WebApiDemo".
+       -- [x] mcsdWebApíTFS.
+       -- [x] mcsdBackup.
+
+                -- [x] BACKUP /DELETE BOOK "DELORME".  
+                -- [x] BACKUP /DELETE folder "_angular".  
+                -- [x] turn off domain "mcsdBackup".
+                -- [x] change tfs/github name "mcsdNet48TFS" / "mcsdNet48GitHub".
+                -- [x] change tfs/github name "mcsd" por "mcsdNetCoreBackup".
+
+
+-- [x]  Access to XMLHttpRequest at 'https://mcsd.somee.com/demos/GetConsultaLogStatGet' 
+        from origin 'https://mcsdbackup.somee.com' has been blocked by CORS policy:
+        No 'Access-Control-Allow-Origin' header is present on the requested resource.
+
+-- [x]  Access to XMLHttpRequest at 'https://mcsd.somee.com/demos/GenerarInformeCSVJsonSTAT' 
+        from origin 'https://mcsdbackup.somee.com' has been blocked by CORS policy: 
+        No 'Access-Control-Allow-Origin' header is present on the requested resource.
+
+-- [x] read pages from json file.
+
+-- [x] Pasar contenido por tema a pagina principal.
+
+-- [x] Angular End Points / Param Url.
+
+-- [x] Change DEV_DEMO por SE_DEMO.
+
+-- [x] datagrid theming.
+
+-- [x] Table Check field.
+
+-- [x] Pending OnSort.
+
+-- [x] Angular Submeno.
+
+-- [x] Marketing strategy table. 
+
+-- [x] Angular Directives. 
+
+-- [x] hide repo links from demo info.  
+
+-- [x] inheritance / interfaces.
+
+        -- [x] ng grid service
+
+        -- [x] Models.
+
+
+-- [x] Enum Angular.
+
+-- [x] About Module.
+
+-- [x] export type _NodeJsFeatureSortColumn    = keyof <FatherClass>      | ''; (inheritance)
+
+
+ -- [x] load config as dictionary. 
+
+      -- [x] function appModule.ts LoadxxxData() as single function.
+
+      -- [x] load dictionary from external list.
+
+ -- [x] Implement base service.
+
+      -- [x] Eliminate services.
+
+      -- [x] Eliminate directives.
+
+      -- [x] Eliminate models.
+
+
+ -- [x] Sotable Grid Inheritance.      
+
+ -- [x] Sotable Grid Component.      
+
+-- [x] clear base service cache.  
+
+-- [x] load grid info at request.  
+
+-- [x] about info
+
+       -- [x] A.I. PROMT LIST.  
+
+-- [x] spring boot menu entry.
+
+-- [x] MENSAJE DE ESPERA EN BOTON DE ALGORITMO DE DISTANCIA CORTA.
+
+-- [X] OCR PHOTO CAPTURE.
+
+-- [x] material grid theme.
+
+-- [x] delete word mcsd.
+
+-- [x] opencv.js basic shape recognition.
+
+-- [x] miscelaneous file genration - chart.
+
+-- [x] ngb pad instructions.
+
+-- [x] Agular / Features.       
+
+-- [x] angular pensum.
+
+-- [x] Speech Panel component. 
+ 
+-- [x] Fix sort functionality.  
+
+-- [x] Implement grid component / service. 
+
+-- [x] random guid generator.
+
+-- [x] LANG LIST UL/LI.
+
+-- [x] ////console.log replace
+
+-- [x] revisión general.
+
+        -- [x] main page menu.
+
+                -- [x] PWA_DEMO / ANGULAR LINK.
+
+                -- [x] menu items.
+
+                -- [x] hover animation.
+
+-- [x] replace topics with index.
+
+        -- [x] router fields : id, source code, topic, feature. 
+
+        -- [x] router from external file. 
+
+        -- [x] master detail field. 
+
+-- [x] programming languages links to index.
+
+        -- [x] query url.
+
+--  [x] json pages with multiple schemas / read on demand.   
+
+--  [x] global signal.
+      
+--  [x]  Split servivces for languages.
+
+-- [X] fancy home background.
+
+        -- [_] corregir fireworks.
+
+-- [X] download csv / xls /pdf file as zip.
+
+-- [X] complete header references.
+
+-- [X] join chart / xls / csv.
+               
+-- [X] scmlist, llmlist to new ngbgrid schema.
+
+-- [X] merghe math demo with collision demo.
+
+-- [X] fix ngbgrid sort.
+
+-- [X] ngbgrid with voice search.
+
+-- [X] opencv.
+
+      -- [X] opencv.js typescript.
+
+      -- [X] python.
+
+      -- [X] c++.
+
+      -- [X] java.      
+
+-- [X] tensorflow.
+
+      -- [X] django python backend.
+
+              -- [_] https://code.visualstudio.com/docs/python/tutorial-django
+
+      -- [X] tensorflow.js typescript.
+
+      -- [X] python.
+
+      -- [X] c++.
+
+-- [x] computer vision
+
+       -- [x] https://opencv.org/
+
+        -- [x] OPEN CV / JAVASCRIPT.   
+
+        -- [x] OPEN CV / c++ builder.
+
+        -- [x] TESSERACT / JAVASCRIPT / C++ .   
+
+-- [x] MACHINE LEARNING.
+
+        -- [x] OPEN CV / JAVASCRIPT.   
+
+        -- [x] OPEN CV / c++ builder.
+
+        -- [x] TENSORFLOW / JAVASCRIPT.  
+
+-- [x] TOPICS.        
+
+        -- [x] index aditional fields.
+
+        -- [x] ngb grid.
+
+                -- [x] voice search.
+
+        -- [x] angular - topics.
+
+                        -- [x] route attribute.
+
+        -- [x] angular - features.
+
+                        -- [x] route attribute.        
+
+-- [x] speech service.
+
+ -- [X] change domain PWA_DEMO for ANGULAR_DEMO.    
+
+ -- [X] asp.net core demo.           
+
+-- [X] Page icons.  
+
+-- [X] Promise<<type>>.
+
+-- [X] main page / global search.
+
+-- [X] relative path.
+
+-- [X] references component.       
+
+-- [X] ENV_LIBRARY
+
+-- [X] source code header comments for github.  
+
+-- [X] trends page. 
+  
+        -- [X] Machine Learning. 
+    
+        -- [X] Computer Vision. 
+  
+        -- [X] Data Science. 
+
+  --  [X] canvas component.
+
+ --  [X] ROOT PAGES WITH JSON PAGES LIST.
+
+    --  [X] Merge isolated lists.
+
+    --  [X] check nested lists.
+
+   --  [X] LANDING PAGES WITH JSON PAGES LIST.
+
+   --  [X] PAGES LIST BASE COMPONENT.
+
+   -- [X] base component.    
+     
+        -- [X] signal status message.    
+
+        -- [X] effect.
+ 
+        -- [X] backend page log.
+
+        -- [X] <base.component><base-compoent>.
+
+        -- [X] json pages list.
+
+-- [X] fix angular curiculum <---> angular reference.    
+
+ -- [X] disable sound button.    
+     
+ -- [X] github permalink.
+
+ --  [X] page Number param grid.
+
+ --  [X] base component inheritance.
+
+   -- [X] rust samples.
+
+   -- [X] ENV_DB
+
+   -- [x] sudoku button.
+       
+   -- [x] routers caption text correction.
+
+   -- [X] menu items.
+
+              -- [X] computer vision.
+
+              -- [X] amigo secreto.
+
+  -- [X] scm             
+
+        -- [X] row detail grid.
+
+        -- [X] ngb grid component.
+
+        -- [X] AI_PROMPTS.
+
+        -- [X] AI_DEV.
+
+        -- [X] DEV_ENVS.
+
+        -- [X] HOSTINGS.
+
+        -- [X] DB.
+
+  -- [x] tag effect list .    
+
+        -- [x] references.    
+
+        -- [x] language.    
+
+  --  [X] angular deme welcome speech
+
+  --  [x]  uix library implementation : https://ng-bootstrap.github.io/#/components/table/examples#basic   
+
+  --  [X]  ¿Can you please show me a code exaple of creating a dll using Embarcadero C++ builder and tensorflow OCR capabilities ?
+ 
+           --  [X] https://www.tensorflow.org/install/lang_c?spm=a2ty_o01.29997173.0.0.3f3dc921kZ4Z3g&hl=es-419
+
+-- [X] Revision general de funcionalidad.  
+
+        -- [x] mensaje de espera --> signals.  
+
+        -- [x] Error en Index / Games.  
+
+        -- [x] Ver Referencia [Tema].
+
+-- [X] both ways reference.    
+
+        -- [x] ngb grid  => searchTerm?<search_Term>.    
+
+                -- [_] ngbgrid searchTerm param.
+
+        -- [x] demo page => langName?<lang>.  
+
+                -- [>] SCM ENV_LIBRARY.
+
+-- [x]  Add current contact form.        
+
+-- [x]  node js typescript.  
+
+-- [x]  ADD JAVA / SPRINGBOOT SAMPLES.  
+
+-- [x]  programming samples / DEMOS :      
+
+        -- [x]  by features.        
+
+        -- [x]  by language.        
+
+        -- [x]  curriculum.      
+
+-- [x] grid lang cache error :          
+
+-- [x] PAGE_<FEATURE>_DEMO --> setLog().
+ 
+-- [x] demos with query params.  
+
+-- [x] Precargar Imagenes Portada.  
+
+-- [x] v[1.5.1]. implementar ngb grid.   
+
+        -- [x] name column witout link _blank.  
+
+        -- [x] delete [done] column, replace with [endPoint] column.  
+
+        -- [x] add [tema] column.        
+
+-- [x] book / resources.
+
+        -- [x] w3c.
+
+        -- [x] freecodecamp.
+
+        -- [x] mdn.
+
+        -- [x] the art opute programming.
+
+        -- [x] angular.dev.
+
+        -- [x] owasp.
+
+        -- [x] deeplearning.ai.
+
+        -- [x] coursera - algorithms.
+
+-- [x] home menu items.
+
+        -- [x] programming languages / backend.
+
+        -- [x] uix libraries.
+
+               -- [x] 2d / 3d.
+
+               -- [x] material.
+
+               -- [x] ng bootstrap.
+               
+        -- [x] export  libraries
+
+               -- [x] epp plus.
+
+               -- [x] jsPdf / iTextSharp.
+
+               -- [x] char js.
+
+        -- [x] miscelaneous
+
+               -- [x] math parsing.
+
+               -- [x] ngb pad.
+ 
+        -- [_] computer visions / machine learning
+
+                -- [x] tesseract.
+
+                -- [x] tensorflow.
+   
+                -- [x] opencv.
+                
+-- [x] TESSERACT
+ 
+           --  [x] Get Tesseract Version from C++ Builder Wrapper dll / asp.net core end pont.
+
+           --  [x] Angular Integration.
+
+    --  [x]  Unify C++ Backend / ASP.NET CORE.
+
+                --  [x]  ASP_NET_CORE_CSHARP_DEMO.
+
+                          --  [_]  REMOVE C++ DLL FUNCIONALITY.
+
+                --  [x]  ASP_NET_CORE_CPP_ENTRY.
+
+                          --  [x]  SWAGGER.
+
+                          --  [x]  REDUCE CODE.
+
+                --  [x]  ASP_NET_CORE_EF_SAMPLE.
+                
+         --  [x]  REFERENCES : 
+        
+                --  [x]  c++ library        -> update version
+
+                --  [x]  ASP.NET end point  -> update version
+
+ -- [x] LINK DEMOS|LENGUAGES --> <-- LENGUAES| CURRICULUM
+
+ -- [x]  C++ DEMOS -> ALGORITHM.
+        
+        -- [x] SORT BENCHMARK OUTPUT AS JSON.
+
+ -- [x] botones "Ir a Demo" , "ir a Curriculum".
+
+ -- [x]  asp.net core swagger.
+
+ -- [x]  FRACTAL DEMO.
+
+        -- [x]  PDF EXPORT.
+
+        -- [x]  URL:
+
+                https://tensorflownetcore64.tryasp.net/generatejuliaparams/?maxIterations=500&realPart=-0.4&imagPart=0.6
+
+ -- [x]  C++ STANDARD VERSION FUNCTION.
+
+ -- [x]  C++ DEMOS -> OPEN CV.
+
+        -- [x]  CPP DEMOS ENTRY OPENCV / OCR.
+
+        -- [x]  FIX REFERENCES.
+
+        -- [x]  OOP INHERITANCE THROUGH ALGORITHM.DLL PARENT CLASS 
+
+               -- [_] https://chat.qwen.ai/c/98e5e0ec-6031-46b6-adb0-d7a2ef535c5b
+
+                (A). Read/Write  file parent method.
+                (B). Read Config file parent method.
+        
+-- [x] ASP.NET CORE c++ ENTRY POINT source code link.
+
+        -- [x] swagger for ASP.NET CORE c++ ENTRY POINT.
+
+        -- [x] ASP.NET CORE TECHNICAL SPECIFICATIONS / LIBRARY -> DLL.
+
+--  [x]  Disable C++ BUILDER.
+
+        --  [x]  uninstall.
+        
+        --  [x]  Compatible Toolchain.
+   
+-- [x] Sound init workaround.  
+
+-- [x] button copy to clipborad guid.
+
+-- [x]  Unify C++ Backend / DLLs.
+
+                --  [x]  CPP_CBUILDER_ALGORITHM.
+
+                --  [x]  CPP_CBUILDER_TESSERACT.
+                
+                --  [x]  Split Tesseract / Tensorflow.
+
+                --  [x]  CPP_GCC_TESSERACT.
+
+                        --  [x]  command line and toolchain on header ->  -> C:\msys64\ucrt64\bin.
+
+                        --  [x]  dist files.
+
+                --  [x]  CPP_GCC_ALGORITHM.
+
+                        --  [x]  command line and toolchain on header -> C:\msys64\ucrt64\bin.
+
+                        --  [x]  dist files.
+
+                --  [x]  CPP_GCC_TENSORFLOW.
+
+                        --  [X]  command line and toolchain on header ->  TOOLCHAIN : C:\msys64\ucrt64\bin.
+
+                        --  [x]  dist files.
+
+ -- [X]  c++ -> OOP -> inheritance -> ReadConfigFile();
+
+  -- [x] PageUrlList component
+
+        -- [x] improve queryParams parsing.
+
+
+  -- [x] landing component
+
+        -- [x] dymamic intro / .
+
+                -- [x] by language.
+
+                -- [x] by libraries.
+
+                -- [x] both includes Angular.
+
+        -- [x] libraries intro.
+
+                -- [x] opencv demo.
+                
+                -- [x] tesseract demo.
+
+                -- [x] tensorflow demo.
+
+                -- [x] Pdf, xls, chart demo
+
+
+        -- [x] root bottom menu items -> libraries.
+
+        -- [x] narrow market -> offer by library (additional to languages).
+
+  -- [x] SCM (SECTION).
+
+        -- [x] fractal demo repo path fix.
+
+        -- [x] Delete Tailwind.
+
+        -- [x] https://apereznwo.github.io/PWA_DEMO_ENV_PROD/#/PageUrlList?pageName=PAGE_DEMOS_MACHINE_LEARNING_INDEX
+
+                -- [x] Add m.l. pending items. 
+                
+                -- [x] TOPICS -> FREECODECAMP. 
+
+        -- [X] Somee list.    
+
+        -- [X] DB LIST.
+
+        -- [X] Fix codesandbox data. Put 3 codesandbox accounts + root account.
+
+        -- [X] ENV_ONLINE_HOSTING -> ENV_ONLINE_BACKEND.  
+
+        -- [>] SCM TRANSLATE TO ENGLISH.  
+
+        -- [x] Azure devops list.
+
+        -- [X] Monster ASP.NET list.   
+
+ -- [x] base component.
+
+        -- [x] title.
+
+        -- [x] error: double sound on title.
+ 
+        -- [x] reference list.
+
+-- [>]  TypeError: Cannot read properties of undefined (reading 'page_name')   : BaseComponent : csv generation.
+
+-- [x] OCR DEMO.
+
+        -- [x] VOICE IN ENGLISH.
+
+        -- [x] ASP.NET CORE SPLIT CONTROLLERS.
+
+        -- [x] VALIDATIONS.
+
+        -- [x] OCR SERVICE.
+
+-- [x] CV DEMO.
+
+        -- [x] Service.
+
+        -- [x] ENG LANGUAGE.
+
+        -- [x] Fractal Demo Path.
+
+
+-- [x] TENSORFLOW DEMO.
+
+        -- [x] Base Service.
+
+        -- [x] check repeated sound on title.
+
+        -- [x] tensorflow controller.
+
+        -- [x] springboot self playing tictactoe.
+
+        -- [x] django self playing tictactoe.
+
+ -- [>] LANDING COMPONENT (see section).
+
+        -- [x] languages bottom menu.
+
+        -- [x] LANDING PAGE AS QUERY PARAM (for email market).
+
+                -- [_] DEMOS LIBRARIES.
+
+                        -- [_] tensorflow section as datagrid.
+
+                        -- [_] pdf demo as datagrid (both jsPDF and iTextSharp).
+
+        -- [x] publish single codebase (param by dymamic intro) on multiple hosting.
+
+ -- [x] fix json pages.
+
+ -- [x] TIC-TAC-TOE DEMO.
+ 
+        --  [x] c++ neural network which learns to play tictactoe against itself.
+
+                --  [x] https://chat.qwen.ai/c/7d46d2ce-70a5-4c9f-ba4c-d7ce475527ed
+
+        -- [x] param link to specific lang.        
+
+-- [x] TETRIS DEMO
+
+        -- [x]  https://github.com/nuno-faria/tetris-ai
+
+-- [x] correct text "miscellaneous","manus","tictactoe".
+
+-- [x] chart pdf wait message.
+
+-- [x] dijkstra uber reference.      
+
+-- [x] DISABLE CONTROLS.    
+
+        -- [x] DIJKSTRA.    
+
+        -- [x] FRACTAL.    
+
+-- [x] base reference component implementation.
+
+        -- [x] check grid .config links.
+
+-- [x] missing status messages.
+
+ --  [x]  Tensorflow Update Log.
+
+        --  [x]  https://chat.qwen.ai/c/5ebb0c4c-fc7a-4883-8d27-cdcba22e3afb
+        
+        --  [x]  Somee admits x32 only arch. for c and c++.
+
+        --  [x]  TryAsp.net admits both x32 and x64.
+
+        --  [x]  TryAsp.net admit c++ compiled code using basic c++ libraries.
+
+        --  [x]  TryAsp.net doen't admit c++ compiled code including tensorflow.
+
+        --  [x]  TryAsp.net admit c generated code for tensorflow x64.
+
+        --  [x]  TryAsp.net c genrerated Tensorflow code expects *.PB model file.
+
+        --  [x]  *.pb model files are generated mostly on Python.      
+                
+ --[x] move somee.com to monsterasp.net. leave dbs only. 
+
+ --[x] complete scm config info (see section).
+
+ --[x] Codesandbox list.  
+
+ --[X] TRANSLATE FORMS TO ENGLISH.  
+
+ --[x] CSV ASYNC REFERENCE.
+
+ --[X] codesandbox gmail smtp change email body. Whatsapp contact.
+
+ --[x] block text box controls from forms.
+ 
+ --[X] PWA_DEMO_ENV_ADMIN change codesandbox origin from list. getallcontacforms update.
+
+ --[X] https://stackblitz.com/edit/angular-66sddqgy?file=src%2Fmain.ts
+
+ --[x] (unable) host 'ASP_NET_CORE_CSHARP_DEMO' on MONSTER.ASP
+
+ --[x] (unable) host 'https://tensorflownetcore64.tryasp.net/' rename to 'ASP_NET_CORE_CPP_ENTRY' on MONSTER.ASP
+
+/////////////////////////////////////////////////////////////////

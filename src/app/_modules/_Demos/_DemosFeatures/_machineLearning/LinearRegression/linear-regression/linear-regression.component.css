@@ -1,0 +1,57 @@
+/* src/app/app.component.css */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.input-section {
+  margin-bottom: 20px;
+}
+
+.input-section label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-section input {
+  width: 100px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.input-section button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  margin: 10px 0;
+}
+
+.result {
+  background-color: #f0f8ff; /* Light blue background */
+  padding: 15px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.chart-container {
+  margin-top: 20px;
+  width: 100%; /* Responsive width */
+  height: 400px; /* Fixed height, or use percentage like 50vh */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}

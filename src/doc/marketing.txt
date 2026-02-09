@@ -1,0 +1,39 @@
+//////////////////////////////////////////////////
+
+-- [_]  facebook offer:
+
+        -- [_]  https://github.com/aperezNWO/PWA_DEMO_ENV_ADMIN/blob/main/doc/marketing.txt
+
+-- [_]  admin url:
+ 
+        -- [_]  https://apereznwo.github.io/PWA_DEMO_ENV_ADMIN/
+
+        -- [_]  USER : marketing
+
+        -- [_]  PWD  : marketing
+
+        -- [_]  FORM : [MAKERING > CONTACT FORM ADMIN]
+
+                -- [_]  https://apereznwo.github.io/PWA_DEMO_ENV_ADMIN/MarketingWeb
+
+-- [_]  facebook offer:
+
+Ofrezco asesoría en programación Angular v17 (C#,C++,Python,Node.js)
+
+Contacto :  https://shorturl.at/2vr3t
+
+-- [_] Offer to dev communities.
+
+-- [_] Offer to companies, individuals (ON SITE VISIT).
+
+-- [_] publish to angular community ENG for feedback.
+
+-- [_] Free Angular Lesson.
+
+-- [_] The Odin Project.
+
+-- [_] UpWork, Workana, Fiverr.
+
+-- [_] Slack.
+
+//////////////////////////////////////////////////

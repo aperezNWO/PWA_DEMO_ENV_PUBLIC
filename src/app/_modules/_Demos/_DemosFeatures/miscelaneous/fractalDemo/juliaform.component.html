@@ -1,0 +1,85 @@
+<div class="content" align="center">
+    <!-- REFERENCIAS INICIO -->
+    <app-base-reference></app-base-reference>
+    <!-- REFERENCIAS FIN -->
+    
+    <!-- FORMULARIO INICIO -->
+    <hr>
+    <div class="form-container">
+        <h2>Fractal Parameters</h2>
+        <form (ngSubmit)="onSubmit()">
+            
+            <!-- Max Iterations -->
+            <div class="form-group">
+                <label for="maxIterations">Max Iterations: {{maxIterations}}</label>
+                <input type="range" id="maxIterations" name="maxIterations" 
+                       [(ngModel)]="maxIterations" 
+                       [min]="100" [max]="2000" [step]="50"
+                       required class="slider">
+            </div>
+            
+            <!-- Real Part -->
+            <div class="form-group">
+                <label for="realPart">Real Part: {{realPart.toFixed(3)}}</label>
+                <input type="range" id="realPart" name="realPart" 
+                       [(ngModel)]="realPart" 
+                       [min]="-2.0" [max]="2.0" [step]="0.01"
+                       required class="slider">
+            </div>
+            
+            <!-- Imaginary Part -->
+            <div class="form-group">
+                <label for="imagPart">Imaginary Part: {{imagPart.toFixed(3)}}</label>
+                <input type="range" id="imagPart" name="imagPart" 
+                       [(ngModel)]="imagPart" 
+                       [min]="-2.0" [max]="2.0" [step]="0.01"
+                       required class="slider">
+            </div>
+            
+            <!-- CONTROLS -->
+            <button type="submit" class="btn btn-primary" 
+                    [disabled]="status_message() === '[...Generating please wait...]'" >
+                {{submitTitle}}
+            </button>
+            
+            <button type="button" class="btn btn-secondary" 
+                    [disabled]="status_message() === '[...Generating PDF...]'" 
+                    *ngIf="imageUrl" (click)="GeneratePDF()">
+                {{pdfButtonCaption}}
+            </button>
+            
+            <!-- RESET BUTTON -->
+            <button type="button" class="btn btn-outline-danger" 
+                    (click)="resetToDefaults()">
+                Reset to Defaults
+            </button>
+            
+            <hr>
+            
+            <!-- STATUS MESSAGE -->
+            <div *ngIf="status_message()" class="alert alert-secondary" role="alert" align="center">
+                {{ status_message() }}
+            </div>
+            
+        </form>
+        
+        <hr>
+        
+        <!-- GENERATED IMAGE -->
+        <div *ngIf="imageUrl" #_fractal_image>
+            <h3>Generated Fractal Image:</h3>
+            <img [src]="imageUrl" alt="Julia Fractal" width="350px" height="350px"/>
+        </div>
+        
+    </div>
+    
+    <hr>
+    
+    <!-- NAVIGATION -->
+    <div align="right">
+        <a [routerLink]="'/PageUrlList'" 
+           [queryParams]="{pageName: 'PAGE_DEMOS_MISCELLANEOUS_INDEX'}">
+           [Back to Menu]
+        </a>
+    </div>
+</div>

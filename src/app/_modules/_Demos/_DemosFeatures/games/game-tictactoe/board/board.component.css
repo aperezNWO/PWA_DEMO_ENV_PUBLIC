@@ -1,0 +1,8 @@
+.tictactoe-board {
+    /*display: flex;
+    flex-wrap: wrap;*/
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+  }
+  

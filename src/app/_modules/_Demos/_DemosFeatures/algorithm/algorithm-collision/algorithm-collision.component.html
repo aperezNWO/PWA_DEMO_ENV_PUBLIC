@@ -1,0 +1,150 @@
+<div class="container">
+    <app-base-reference></app-base-reference>
+    <hr>
+    
+    <!-- POSITION SLIDERS -->
+    <div class="position-controls">
+        <div class="control-group">
+            <label for="xPosition">
+                <span class="label-text">X Position:</span>
+                <span class="label-value">{{ xPosition }}</span>
+            </label>
+            <input type="range" id="xPosition" [(ngModel)]="xPosition" 
+                   [min]="ball.radius" [max]="canvasWidth - ball.radius"
+                   step="1" class="slider touch-friendly" (input)="updatePosition()">
+        </div>
+        
+        <div class="control-group">
+            <label for="yPosition">
+                <span class="label-text">Y Position:</span>
+                <span class="label-value">{{ yPosition }}</span>
+            </label>
+            <input type="range" id="yPosition" [(ngModel)]="yPosition" 
+                   [min]="ball.radius" [max]="canvasHeight - ball.radius"
+                   step="1" class="slider touch-friendly" (input)="updatePosition()">
+        </div>
+    </div>
+    
+    <!-- SIMULATION LAYOUT -->
+    <div class="simulation-wrapper">
+        
+        <!-- CANVAS -->
+        <div class="canvas-container">
+            <div class="canvas-wrapper" [style.width.px]="canvasWidth" [style.height.px]="canvasHeight">
+                <canvas #ballCanvas [width]="canvasWidth" [height]="canvasHeight"
+                        style="width: 100%; height: 100%;"></canvas>
+            </div>
+        </div>
+
+        <!-- CONTROLS -->
+        <div class="controls-container">
+            <button *ngIf="!isPlaying" (click)="startSimulation()" class="btn btn-success" type="button">
+                <span class="btn-text">Start</span>
+                <span class="btn-icon">▶</span>
+            </button>
+            <button *ngIf="isPlaying && !isPaused" (click)="pauseSimulation()" class="btn btn-warning" type="button">
+                <span class="btn-text">Pause</span>
+                <span class="btn-icon">⏸</span>
+            </button>
+            <button *ngIf="isPlaying && isPaused" (click)="resumeSimulation()" class="btn btn-info" type="button">
+                <span class="btn-text">Resume</span>
+                <span class="btn-icon">▶</span>
+            </button>
+            <button (click)="resetSimulation()" class="btn btn-danger" type="button">
+                <span class="btn-text">Reset</span>
+                <span class="btn-icon">↺</span>
+            </button>
+        </div>
+
+        <!-- PHYSICS DATA PANEL WITH FORMULAS -->
+        <div class="calculation-panel">
+            <div class="panel-header" (click)="togglePanel()" [class.collapsed]="isPanelCollapsed">
+                <h4>Physics Data</h4>
+                <span class="toggle-icon">{{ isPanelCollapsed ? '▼' : '▲' }}</span>
+            </div>
+            
+            <div class="panel-content" [class.hidden]="isPanelCollapsed">
+                
+                <!-- Position -->
+                <div class="calc-item">
+                    <div class="calc-header">
+                        <span class="calc-label">Position</span>
+                        <span class="calc-unit">(x, y)</span>
+                    </div>
+                    <div class="calc-solution">({{ currentX.toFixed(0) }}, {{ currentY.toFixed(0) }}) px</div>
+                </div>
+
+                <!-- Velocity -->
+                <div class="calc-item">
+                    <div class="calc-header">
+                        <span class="calc-label">Velocity</span>
+                        <span class="calc-unit">v = (vx, vy)</span>
+                    </div>
+                    <div class="calc-solution">{{ velocityFormula }} px/s</div>
+                </div>
+
+                <!-- Speed -->
+                <div class="calc-item">
+                    <div class="calc-header">
+                        <span class="calc-label">Speed</span>
+                        <span class="calc-unit">√(vx²+vy²)</span>
+                    </div>
+                    <div class="calc-solution">{{ speedFormula }} px/s</div>
+                </div>
+
+                <!-- Kinetic Energy -->
+                <div class="calc-item">
+                    <div class="calc-header">
+                        <span class="calc-label">Kinetic Energy</span>
+                        <span class="calc-unit">½mv²</span>
+                    </div>
+                    <div class="calc-solution">{{ keFormula }} J</div>
+                </div>
+
+                <!-- Potential Energy -->
+                <div class="calc-item">
+                    <div class="calc-header">
+                        <span class="calc-label">Potential Energy</span>
+                        <span class="calc-unit">mgh</span>
+                    </div>
+                    <div class="calc-solution">{{ peFormula }} J</div>
+                </div>
+
+                <!-- Total Energy -->
+                <div class="calc-item">
+                    <div class="calc-header">
+                        <span class="calc-label">Total Energy</span>
+                        <span class="calc-unit">KE+PE</span>
+                    </div>
+                    <div class="calc-solution">{{ totalFormula }} J</div>
+                </div>
+
+                <!-- Momentum -->
+                <div class="calc-item">
+                    <div class="calc-header">
+                        <span class="calc-label">Momentum</span>
+                        <span class="calc-unit">p = mv</span>
+                    </div>
+                    <div class="calc-solution">{{ momentumFormula }} kg·px/s</div>
+                </div>
+
+                <!-- Collisions -->
+                <div class="calc-item">
+                    <div class="calc-header">
+                        <span class="calc-label">Collisions</span>
+                        <span class="calc-unit">count</span>
+                    </div>
+                    <div class="calc-solution count">{{ collisionCount }}</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+   
+    <hr>
+    <div class="navigation" align="right" >
+        <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_ALGORITMOS_INDEX'}" class="back-link">
+            ← Back to Menu
+        </a>
+    </div>
+</div>

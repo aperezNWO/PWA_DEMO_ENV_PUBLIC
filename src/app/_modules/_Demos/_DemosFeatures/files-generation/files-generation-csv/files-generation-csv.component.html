@@ -1,0 +1,122 @@
+<div class="content">
+  <app-base-reference></app-base-reference>
+  <hr>
+  <div>
+    <!-- PANEL BUSQUEDA / INICIO -->
+    <form class="searchPanel" [formGroup]="rf_searchForm">
+        <!--BACKEND -->
+        <div class="form-group" align="right" id="LangListDiv" >
+            <app-files-generation-base></app-files-generation-base>
+            <label for="LangList">{{this.tituloListadoLenguajes}}</label>   
+            <select   id="LanguageList"
+                            name="LanguajeList"
+                            style="width:auto;"
+                            #_languajeList>
+                            <option *ngFor="let _languageName of __languajeList" 
+                                  [value]   ="_languageName._index"
+                                  [selected]="_languageName._selected">{{_languageName._value}}
+                            </option>
+            </select>
+        </div>
+        <!--P_ROW_NUM-->
+        <div class="form-group" align="right">
+          <label for="_P_ROW_NUM">
+            # of records:
+          </label>
+          <input id="_P_ROW_NUM" type="text" formControlName="_P_ROW_NUM">
+        </div>
+        <!--P_FECHA_INICIO-->
+        <div class="form-group" align="right">
+          <label for="_P_FECHA_INICIO">
+            Initial Date:
+          </label>
+          <input id="_P_FECHA_INICIO" type="date" formControlName="_P_FECHA_INICIO">
+        </div>
+        <!--P_FECHA_FIN-->
+        <div class="form-group" align="right">
+          <label for="_P_FECHA_FIN">
+            Final Date:
+          </label>
+          <input id="_P_FECHA_FIN" type="date" formControlName="_P_FECHA_FIN">
+        </div>
+        <!-- INICIO BUTTONS PANEL        -->
+        <div class="form-group" align="right" style="display: block;" >
+          <button class="btn btn-primary"     type="button" (click)="rf_onSubmit()" [disabled]="(this.rf_buttonCaption != '[Search]')">{{this.rf_buttonCaption}}</button>
+          |
+          <button class="btn btn-primary"     type="button" (click)="this.rf_newSearch()">[New]</button>
+          |
+          <button class="btn btn-success"     type="button" (click)="SetCSVLink()" [disabled]="(this.rf_buttonCaption_csv != '[Generate CSV]')">{{this.rf_buttonCaption_csv}}</button>
+        </div> 
+        <!-- FIN BUTTONS PANEL                     -->
+        <!-- INICIO MENSAJES VALIDACION (REACTIVE) -->
+        <div *ngIf="(this.rf_searchForm.invalid)" class="form-group" align="right">
+          <ul class="alert alert-danger">
+                <p>Please check form data</p>
+                <li *ngIf="((this.rf_searchForm.value['_P_ROW_NUM'] == null)        ||  (this.rf_searchForm.value['_P_ROW_NUM'] == '') || (this.rf_searchForm.value['_P_ROW_NUM'] == '0'))" class="alert alert-danger">
+                  '# of records' field is required.
+                </li>
+                <li *ngIf="(((this.rf_searchForm.value['_P_FECHA_INICIO'] == null)  || (this.rf_searchForm.value['_P_FECHA_INICIO'] == '') ) )" class="alert alert-danger">
+                  'Initial Date'  field is required.
+                </li>
+                <li *ngIf="(((this.rf_searchForm.value['_P_FECHA_FIN'] == null)     || (this.rf_searchForm.value['_P_FECHA_FIN'] == '') ) )" class="alert alert-danger">
+                 'Final Date' field is required.
+                </li>
+          </ul>
+        </div>
+        <!-- FIN MENSAJES DE VALIDACION (REACTIVE)-->
+        <!-- INICIO STATUS BUSQUEDA      -->
+        <div class="form-group" align="center">
+          @if (this._loading | async) {
+            <span id="loadingStatus" name="loadingStatus" class="searchStatus">[Loading...]</span>
+          } 
+          @else 
+          {
+            <span id="searchStatus"  name="searchStatus" class="searchStatus" >{{this.status_message() }}</span>
+          }
+        </div>
+        <!-- FIN    / STATUS BUSQUEDA      -->
+        <!-- INICIO / DESCARGA EXCEL       -->
+        <!-- ENLACE DESCARGA / INICIO -->
+        <div *ngIf="this.downloadLink"  class="form-group" align="right" style="display: block;" id="divdescargacsv" >
+          <a [href]="this.downloadLink" id="DownloadFile" target="_blank">{{ this.downloadCaption }}</a>
+        </div> 
+        <!-- ENLACE DESCARGA / FIN    -->
+        <!-- FIN / DESCARGA EXCEL          -->
+      </form>
+      <!-- PANEL BUSQUEDA / FIN            -->
+      <hr>  
+      <!-- TABLE  / INICIO -->
+      <div class="mat-elevation-z8" align="center">
+        <table  mat-table  [dataSource]="csv_dataSource"  class="mat-elevation-z8  dark-theme-table" aria-label="rf_paginator">
+            <ng-container matColumnDef="id_Column">
+              <th class="mat-header-cell" mat-header-cell mat-header-cell *matHeaderCellDef>id_Column</th>
+              <td class="mat-cell"        mat-cell *matCellDef="let element">{{ element.id_Column}}</td>
+            </ng-container>
+            <ng-container matColumnDef="ciudad">
+              <th class="mat-header-cell" mat-header-cell *matHeaderCellDef>ciudad</th>
+              <td class="mat-cell"        mat-cell *matCellDef="let element">{{ element.ciudad }}</td>
+            </ng-container>
+            <ng-container matColumnDef="nombreCompleto">
+                <th class="mat-header-cell" mat-header-cell *matHeaderCellDef>nombreCompleto</th>
+                <td class="mat-cell"        mat-cell *matCellDef="let element">{{ element.nombreCompleto }}</td>
+              </ng-container>
+            <tr class="mat-header-row" mat-header-row *matHeaderRowDef="this.csv_displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: this.csv_displayedColumns"></tr>
+        </table>
+          <!-- PAGINADOR / INICIO -->
+          <hr>
+          <mat-paginator #csv_paginator="matPaginator"
+              class="demo-paginator dark-theme-table" 
+              [length]=""
+              [pageSize]="5"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="csv_paginator"></mat-paginator>
+          <!-- PAGINADOR / FIN    -->                  
+      </div>
+      <!-- TABLE  / FIN    -->
+  </div>
+  <hr>
+    <div align="right">
+        <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_FILE_GENREATION_INDEX'}" >[Back to Menu]</a>
+    </div>
+</div>
