@@ -16,7 +16,7 @@
       {
         "comment"      : "DYNAMIC LANDING. 'page_name' has the selected landing page",
         "log_name"     : "PAGE_ANGULAR_DEMO_LANDING",
-        "page_name"    : "PAGE_DEMOS_LENGUAJES_INDEX",
+        "page_name"    : "PAGE_DEMOS_LIBRARIES_INDEX",
         "pages"        : [
 
         ],
