@@ -1,0 +1,371 @@
+////////////////////////////////////////////////////////////////////////////////
+// TODO LIST 
+////////////////////////////////////////////////////////////////////////////////
+
+ -- [_] ALGOITHM curriculum.
+ 
+     --  [_]  Kruskal / Prim algos / sedgewick / coursera.
+     
+     --  [_] TAOCP.
+
+     --  [_] neural networks.
+     
+
+ --  [_] SWEBOK
+ 
+         --  [_]   COMMENT CODE GITHUB STYLE    
+
+         --  [_]   arch doc. 
+
+         --  [_]   Software Pattern. 
+         
+         --  [_]   SOLID Principles.
+
+         --  [_]   OWASP.
+
+         --  [_]   PWA.
+
+ -- [_] LANGUAGES curriculum.
+
+         -- [_] UNIFY curriculum  -> GRIDPARAM.
+
+         -- [_] DELETE curriculum FOLDER.
+
+         -- [_] official web reference [backend]  as first  item.
+
+         -- [_] official web reference [language] as second item.
+
+         -- [_] ./#/GridParam?searchTerm=bfecb7a6-0d40-48c5-8ee4-3c7fc13ad1e0&pageName=PAGE_CURRICULUM_ANGULAR
+
+         -- [_] Link Refernces <- -> Demos.
+
+         -- [_] Link Demos     <- -> SCM (GridParam).
+
+         -- [_] Grid Param redirect error.
+
+         -- [_] Grid Index empty rows error.
+         
+
+-- [_] CMS 
+
+        -- [_] PageUrlsList. 
+
+                -- [_] modify basecomponent. if page_id == empty, get from QueryParams 
+        
+        -- [_] gridParam.
+
+        -- [_] gridCrud.
+         
+        -- [_] <appName></appName> entry.
+         
+        -- [_] routerlist name+param. 
+
+        -- [_] Dynamic Form. 
+
+                -- [_] angular curriculum. 
+
+                        -- [_] change /PWA_DEMO_ENV_PROD/ to /PWA_DEMO_ENV_PROD/ 
+
+        -- [_] last url -> back to menu. 
+
+        -- [_] data from database.
+
+        -- [_] schema from database.
+                
+        -- [_] uix list type from database .
+
+        -- [_] router list con guid id.
+
+        -- [_] PageUrlList nested navigation error.
+        
+ -- [_] CRUD.
+
+         -- [_] Editar lista exnacato.
+
+                -- [_] ngb table.
+         
+                -- [_] METRONIC.
+        
+        -- [_] oauth.
+        
+        -- [_] JSON WEB TOKEN
+
+        -- [_] Dynamic forms.
+
+ -- [_] techical specs revision.
+
+               -- [_] iterate from list.
+
+               -- [_] iterate from DATABASE.
+
+               -- [_] swagger links.
+
+               -- [_] ngb grid.
+
+               -- [_] ngb grid hover detail.
+
+-- [_] SETTINGS
+
+        -- [_] SOUND ON/OFF.
+
+        -- [_] LANG (iso code).
+
+                -- [_] json lang subfolder (iso, ej : esCO / enUS).
+
+                -- [_] paquete de idiomas/localizacion (en/us).
+           
+                -- [_] angular i18n.
+
+                -- [_] app v[2.1.x].
+
+                --  [_] main pages collection / base component.
+                
+                        --  [_] title log property.
+                        
+                        --  [_] title property.
+
+                        --  [_] title speech property.
+
+                        --  [_] title speech lang roperty.
+
+                        --  [_] site lang roperty.
+                        
+-- [_]  TECH SPECS.
+
+        -- [_] BACKEND app  v[x.x.x].
+
+        -- [_] backend lang v[x.x.x].
+
+        -- [_]  techical specs as dynamic list.
+ 
+-- [_] google translation API. 
+
+-- [_] LLM api. 
+
+-- [_] csv / xls + ZIP.
+
+        -- [_] sobre copias de funciones actuales.
+
+        -- [_] remove zip entry from index.
+
+ -- [_] [GENERAR ARCHIVO XLS]
+
+        -- [_] filtro por tipo de log.
+                --[_] Consulta Log Errores.
+        -- [_] corregir consulta y rango de fechas.
+        -- [_] CORREGIR DATOS ESTADISTICAS.
+        -- [_] depurar entradas log.
+
+-- [_] cusotm error handling.
+
+        -- [_] to interface --> [standard label status].
+        -- [_] to log.
+        -- [_] debug console messages.
+        -- [_] asp.net core enable trace.
+
+-- [_] Games
+
+        --[_] Tic Tac Toe online.
+        --[_] Sudoku OCR.
+
+--  [_] Dynamic Password / chat.
+
+--  [_] recorrido revisión funcionalidad.
+
+        -- [_] read json config files from database.
+
+        -- [_] chart sound.
+
+        -- [_] mensajes de espera / signals.
+
+        -- [_] firefox reference uix fix.
+
+        -- [_] Babilon.js / 3d collision.
+
+        -- [_] CORRECT HANOI 3D POSITION.
+
+        -- [_] dynamic title from page _Route.caption.
+
+        -- [_] config jsong file reading optimization.
+
+        -- [_] modules / engines.
+
+        -- [_] navigation menu display error.
+
+-- [_] PWA + SSR + JWT - DYNAMIC FORM
+
+        -- [_] SSR on dynamic hosting with Node.js. 
+
+        -- [_] PWA_DEMO_ENV_ADMIN. 
+
+        -- [_] PWA_DEMO_ENV_CONTACT. 
+
+--  [_] component.
+
+        -- [_] Landing Page (PageUrlList).
+
+               --  [_] back url param.       
+ 
+        -- [_] image capture component.
+
+        -- [_] dynamic form. 
+
+        -- [_] reference component. 
+
+                --  [_] base compoent pages property.
+
+                --  [_] REFERENCES AS JSON FILES.
+
+        --  [_] voice search component    
+
+                --  [_] app-speech-panel.
+
+                --  [_] ask A.I.   
+        
+        --  [_] <app-search></app-search>.
+
+        --  [_] grid component.
+
+                -- [_] ngb grid master detail.
+
+                --  [_] grid curriculum.
+
+                        --  [_] back url param.
+
+                --  [_] grid lang .
+
+                        --  [_] back url param.
+
+                        --  [_] go to curriculum -> go to demos , dynamic link.           
+
+--  [_] scm .
+
+        --  [_] git landing doc as onedrive doc.
+
+        --  [_] angular features grid entry types : TYPE_FORM (current), TYPE_COMPONENT (pending), TYPE_LIBRARY (pending).
+
+--  [_] Machine Learning and A.I.
+
+        --  [_] Dymaic Maze solving.
+
+                  --  [_] Deterministic.
+
+                  --  [_] Non-deterministic.
+
+                          --  [_] simple neural network (visualice training/learning).
+
+                          --  [_] load trained model, Tensorflow C++.
+                  
+        --  [_] Solve the curent games/algos/challenges same way.
+ 
+              --  [_] Major version v[x.x.x].
+         
+              --  [_] Machine against machine.
+
+              --  [_] load save textplain N.N. model.
+
+              --  [_] load save tensorflow model.
+
+        -- [_] APPS : 
+
+                --  [x] Tetris.
+
+                --  [x] tictactoe.
+
+                --  [_] sudoku.
+
+                --  [_] haoni.
+
+                --  [_] shortest path.
+
+ -- [_] OPENCV DEMO.
+        
+         -- [_] WITH TENSORFLOW.
+
+         -- [_] WITH PYTORCH.
+ 
+ -- [_] OCR DEMO.
+        
+         -- [_] WITH TENSORFLOW / python.
+
+         -- [_] WITH TENSORFLOW / c++.
+
+         -- [_] WITH PYTORCH.
+
+  -- [_] DOCKER.
+
+        -- [_] PYTHON. 
+        
+        -- [_] SPRINGBOOT.
+ 
+ -- [_] Artificial Inteligence curriculum.
+
+        -- [_] http://localhost:4200/#/GridParam?searchTerm=06f33ccf-68be-4fbe-b9af-4ba5cc9535f2&pageName=PAGE_CURRICULUM_AI
+
+        -- [_] articles *.md.
+
+                -- [_] ai. / ml.
+
+                -- [_] angular.
+
+        -- [_] neural network     -> tic tac toe autoplay.
+
+        -- [_] generic algorithm  -> tetris autoplay.
+
+        -- [_] Machine Learning.
+        
+                -- [_] Linear Regression.
+
+                        -- [_] I can identify that many of the linear regression applications can be to predict prizes based up on historical behaviour (taxi fees, hojuse prices, etc)
+                
+                -- [_] Clasification.
+
+                -- [_] ...
+
+ -- [_] CREATE A.I. APP.
+
+         -- [_] RYTHM.
+
+         -- [_] INTEGRATION.
+
+         -- [_] CONNECTION.
+
+ -- [_] MACHINE LEARNING APPROACH
+
+         -- [_] FREECODECAMP.
+
+                -- [_] https://www.freecodecamp.org/learn/machine-learning-with-python/#tensorflow
+
+                -- [_] https://www.freecodecamp.org/news/tag/machine-learning/
+
+                -- [_] https://www.youtube.com/watch?v=0oyDqO8PjIg
+
+                -- [_] https://www.youtube.com/watch?v=bmmQA8A-yUA
+
+      -- [_] CONCEPT.
+          
+	      -- [_] C++ CODE.
+
+                        -- [_] compile tensorflow for c++ package.
+
+                        -- [_] c++ curriculum.
+
+	      -- [_] TENSORFLOW FOR PYTHON CODE.
+	
+	      -- [_] HISTORY OF THE ALGORITHM.
+	      
+	      -- [_] REAL WORLD SOLUTION (language, models and infrastructure may vary).
+
+      -- [_] LINEAR REGRESSION.
+
+              -- [_] ANGULAR GRAPHIC.
+
+              -- [_] TENSORFLOW FOR PYTHON LOGIC.
+
+              -- [_] TENSORFLOW FOR PYTHON BACKEND.
+
+              -- [_] C++ LOGIC.
+
+              -- [_] C++ / NET CORE BACKEND.          
+
+/////////////////////////////////////////////////////////

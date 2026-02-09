@@ -1,0 +1,135 @@
+<div class="content">
+    <app-base-reference></app-base-reference>
+    <hr>
+      <!-- INIT SEARCH PANEL -->
+      <form (ngSubmit)="td_onSubmit()" #td_searchForm="ngForm">
+        <!-- BACKEND -->
+        <div class="form-group" align="left" id="LangListDiv">
+            <app-files-generation-base></app-files-generation-base>
+            <label for="LangList">{{this.tituloListadoLenguajes}}</label>    
+            <select   id="LanguageList"
+                            name="LanguajeList"
+                            style="width:auto;"
+                            #_languajeList>
+                            <option *ngFor="let _languageName of __languajeList" 
+                                  [value]   ="_languageName._index"
+                                  [selected]="_languageName._selected">{{_languageName._value}}
+                            </option>
+            </select>
+        </div>
+        <!-- [_] P_ROW_NUM -->
+        <div class="form-group" align="left">
+          <label for="P_ROW_NUM" style="width:100px;"># of records : </label>
+          <input class="form-control" 
+                  id="P_ROW_NUM"
+                  type="number"
+                  required
+                  [(ngModel)]="this._model.P_ROW_NUM" 
+                  name="P_ROW_NUM"
+                  #P_ROW_NUM="ngModel" [disabled]="true">
+        </div>
+        <!-- [_] P_FECHA_INICIO -->
+        <div class="form-group" align="left">
+          <label for="P_FECHA_INICIO" style="width:100px;">Initial Date : </label>
+          <input class="form-control" 
+                  id="P_FECHA_INICIO"
+                  type="date"
+                  required
+                  [(ngModel)]="this._model.P_FECHA_INICIO" 
+                  name="P_FECHA_INICIO"
+                  #P_FECHA_INICIO="ngModel" [disabled]="true">
+        </div>
+        <!-- [_] P_FECHA_FIN -->
+        <div class="form-group" align="left">
+          <label for="P_FECHA_FIN" style="width:100px;">Final Date : </label>
+          <input class="form-control" 
+                  id="P_FECHA_FIN"
+                  type="date"
+                  required
+                  [(ngModel)]="this._model.P_FECHA_FIN" 
+                  name="P_FECHA_FIN"
+                  #P_FECHA_FIN="ngModel" [disabled]="true">
+        </div>
+        <!-- INICIO PANEL DE BOTONES    -->
+        <div class="form-group" align="right" style="display: block;">
+          <button class="btn btn-primary"    type="submit" [disabled]="(this.td_buttonCaption != '[Search]')">{{this.td_buttonCaption}}</button>
+          |
+          <button class="btn btn-primary"    type="button" (click)="td_newSearch()">[New]</button>
+          |
+          <button class="btn btn-success"    type="button" (click)="td_GenerarInformeXLSValidate()" [disabled]="(this.td_buttonCaption_xls != '[Generate XLS]')">{{this.td_buttonCaption_xls}}</button>
+        </div>
+        <!-- FIN    PANEL DE BOTONES    -->
+        <!-- INICIO MENSAJES DE VALIDACION -->
+        <div *ngIf="((!this.td_valid_form()) && (this.td_formSubmit))" class="form-group" align="left">
+          <ul>
+            <p>Please check form data</p>
+            <li *ngIf="((this._model.P_ROW_NUM       == '0') || (this._model.P_ROW_NUM       == '') || (this._model.P_ROW_NUM  == null))" class="alert alert-danger">
+              '# of records' field required
+            </li>
+            <li *ngIf="((this._model.P_FECHA_INICIO  == '')  || (this._model.P_FECHA_INICIO  == null))"                                     class="alert alert-danger">
+              'Initial Date' field required
+            </li>
+            <li *ngIf="((this._model.P_FECHA_FIN     == '')  || (this._model.P_FECHA_FIN     == null))"                                     class="alert alert-danger">
+              'Final Date' field required
+            </li> 
+          </ul>
+        </div>
+        <!-- FIN    MENSAJES VALIDACION      -->
+        <!-- INICIO STATUS BUSQUEDA -->
+        <div class="form-group" align="center">
+          @if (this._loading | async) {
+            <span id="loadingStatus" name="loadingStatus" class="searchStatus">[Loading...]</span>
+          } 
+          @else 
+          {
+            <span id="td_status" name="td_searchStatus" id="td_searchStatus" class="searchStatus"  style="width:100%;">{{this.status_message()}}</span>
+          }
+        </div>
+        <!-- FIN    STATUS BUSQUEDA -->
+        <!-- INICIO DESCARGA EXCEL       -->
+        <div class="form-group" align="right" id="td_divdescargaexcel" style="display: block;">
+          <a [href]="this.td_ExcelDownloadLink" id="DownloadFile">{{this.td_textStatus_xls }}</a>
+        </div>
+        <!-- FIN DESCARGA EXCEL          -->
+      </form> 
+      <!-- END SEARCH PANEL -->
+      <hr>       
+      <div class="mat-elevation-z8">
+          <!-- INIT DATAGRID -->
+          <table  mat-table  [dataSource]="td_dataSource"  class="mat-elevation-z8 dark-theme-table" aria-label="td_paginator">
+            <ng-container matColumnDef="id_Column">
+              <th class= "mat-header-cell" mat-header-cell *matHeaderCellDef>id_Column</th>
+              <td class="mat-cell"         mat-cell *matCellDef="let element">{{ element.id_Column}}</td>
+            </ng-container>
+            <ng-container matColumnDef="pageName">
+              <th class="mat-header-cell" mat-header-cell *matHeaderCellDef>pageName</th>
+              <td class="mat-cell"         mat-cell *matCellDef="let element">{{ element.pageName }}</td>
+            </ng-container>
+            <ng-container matColumnDef="accessDate">
+              <th class="mat-header-cell" mat-header-cell *matHeaderCellDef>accessDate</th>
+              <td class="mat-cell"         mat-cell        *matCellDef="let element">{{ element.accessDate | date: 'dd/MM/yyyy HH:mm a' }}</td>
+            </ng-container>
+            <ng-container matColumnDef="ipValue">
+              <th class="mat-header-cell" mat-header-cell *matHeaderCellDef>ipValue</th>
+              <td class="mat-cell"         mat-cell        *matCellDef="let element">{{ element.ipValue }}</td>
+            </ng-container>
+            <tr class="mat-header-row" mat-header-row *matHeaderRowDef="rf_displayedColumns"></tr>
+            <tr class="mat-row"        mat-row        *matRowDef="let row; columns: rf_displayedColumns"></tr>
+          </table>
+          <!-- END DATAGRID -->
+          <!-- INIT PAGINATOR -->
+          <hr>
+          <mat-paginator #td_paginator="matPaginator"
+              class="demo-paginator dark-theme-table mat-option"
+              [length]=""
+              [pageSize]="5"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="td_paginator"></mat-paginator>
+          <!-- END  PAGINATOR -->  
+      </div>
+    <hr>
+    <div align="right">
+        <a [routerLink]="'/PageUrlList'" [queryParams]="{pageName : 'PAGE_DEMOS_FILE_GENREATION_INDEX'}" >[Back to Menu]</a>
+    </div>
+</div>
+

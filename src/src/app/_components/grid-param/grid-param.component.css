@@ -1,0 +1,24 @@
+
+  /* Unvisited link */
+  a:link {
+      color: rgb(0, 255, 64);
+    }
+    
+    /* Visited link */
+    a:visited {
+      color: green;
+    }
+    
+    /* Link on hover */
+    a:hover {
+      text-decoration: underline;
+      background-color: lightblue;
+    }
+  
+    input[type="checkbox"]
+    {
+      outline:1px solid rgb(0, 17, 255); 
+      color: blueviolet;
+      pointer-events: none;
+    }
+    

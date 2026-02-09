@@ -1,0 +1,27 @@
+<div align="center">
+     <h1>{{this.pageTitle}}</h1>
+</div>
+<hr>
+<div align="right" style="padding:1em;">
+        <button class="btn btn-primary" (click)="this.toggleList()">{{this.toogleLisCaption}}</button>
+        <ul *ngIf="isListVisible" align="left" widdth="10px" class="reference_base">
+            <li *ngFor="let _page of this._pages">{{_page.text}}
+                <ul *ngIf="(this._pages_nested !== null)">
+                  <div *ngFor="let ___page of pagesByGroupId[_page.id]">
+                    <li *ngIf="___page.routerLink !== 'about:blank'">
+                        <a [routerLink]="___page.routerLink" 
+                          [queryParams]="___page.queryParamsObj">
+                          {{ ___page.text }}
+                        </a>
+                    </li> 
+                    <li *ngIf="___page.url        !== 'about:blank'">
+                        <a [href]="___page.url" target="_blank">
+                              {{ ___page.text }}
+                        </a>
+                    </li>
+                  </div>
+                </ul>
+            </li>
+        </ul>
+</div>   
+
