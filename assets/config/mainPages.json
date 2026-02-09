@@ -43,7 +43,7 @@
         ],
       "comment_2"        : "'page_nested' values for  dynamic landing. queryParam explicit 'pageName' param requiered for /Gridparam.",
       "pages_nested"     : [
-          { "id": 1, "url" : "", "text": "./assets/images/logos/Angular_gradient_logo.png"                     , "routerLink" : "/GridParam"                 , "queryParams" : "{ pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT'}"    },
+          { "id": 1, "url" : "", "text": "./assets/images/logos/Angular_gradient_logo.png"                      , "routerLink" : "/GridParam"                 , "queryParams" : "{ pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT'}"    },
           { "id": 2, "url" : "", "text": "./assets/images/logos/Node.js_logo.svg.png"                           , "routerLink" : "/GridParam"                 , "queryParams" : "{ pageName : 'PAGE_DEMOS_NODEJS_JAVASCRIPT'}"     },
           { "id": 3, "url" : "", "text": "./assets/images/logos/C_Sharp_Logo_2023.svg"                          , "routerLink" : "/GridParam"                 , "queryParams" : "{ pageName : 'PAGE_DEMOS_NETCORE_CSHARP'}"        },
           { "id": 4, "url" : "", "text": "./assets/images/logos/ISO_C%2B%2B_Logo.svg.png"                       , "routerLink" : "/GridParam"                 , "queryParams" : "{ pageName : 'PAGE_DEMOS_NETCORE_CPP'}"           },
@@ -66,7 +66,7 @@
         ],
         "comment_2"        : "'page_nested' values for  dynamic landing. No queryParam explicit 'pageName' param requiered for /Gridparam.",
         "pages_nested"     : [
-            { "id": 1, "url" : ""                     , "text": "./assets/images/logos/AAngular_gradient_logo.png"                    , "routerLink"  : "/GridParam"        , "queryParams" : "{ pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT'}"    },
+            { "id": 1, "url" : ""                     , "text": "./assets/images/logos/Angular_gradient_logo.png"                      , "routerLink" : "/GridParam"                 , "queryParams" : "{ pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT'}"    },
             { "id": 2, "url" : ""                     , "text": "./assets/images/logos/Tensorflow_logo.svg"                           , "routerLink"  : "/LinearRegression",  "queryParams" : "{ langName : 'PY'}"                               },
             { "id": 3, "url" : ""                     , "text": "./assets/images/logos/OpenCV_logo_black.svg"                         , "routerLink"  : "/ComputerVision",    "queryParams" : "{ langName : 'CPP'}"                              },
             { "id": 4, "url" : ""                     , "text": "./assets/images/logos/tesseract-icon.webp"                           , "routerLink"  : "/OcrPhotoCapture",   "queryParams" : "{ langName : 'CPP'}"                              },

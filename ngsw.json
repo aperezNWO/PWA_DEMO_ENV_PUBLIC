@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1770644061533,
+  "timestamp": 1770657096280,
   "index": "/PWA_DEMO_ENV_PUBLIC/index.html",
   "assetGroups": [
     {
@@ -11,15 +11,18 @@
         "ignoreVary": true
       },
       "urls": [
-        "/PWA_DEMO_ENV_PUBLIC/687.4e557ff9894def18.js",
-        "/PWA_DEMO_ENV_PUBLIC/973.316ac4d5fee2f217.js",
+        "/PWA_DEMO_ENV_PUBLIC/chunk-AXQQ3IHZ.js",
+        "/PWA_DEMO_ENV_PUBLIC/chunk-DZZ33C2C.js",
+        "/PWA_DEMO_ENV_PUBLIC/chunk-GAL4ENT6.js",
+        "/PWA_DEMO_ENV_PUBLIC/chunk-QKAHQ6X2.js",
+        "/PWA_DEMO_ENV_PUBLIC/chunk-VU7IBUSQ.js",
+        "/PWA_DEMO_ENV_PUBLIC/chunk-WIELM4ZQ.js",
         "/PWA_DEMO_ENV_PUBLIC/favicon.ico",
         "/PWA_DEMO_ENV_PUBLIC/index.html",
-        "/PWA_DEMO_ENV_PUBLIC/main.38568a78ae0af103.js",
+        "/PWA_DEMO_ENV_PUBLIC/main-53G6HSJQ.js",
         "/PWA_DEMO_ENV_PUBLIC/manifest.webmanifest",
-        "/PWA_DEMO_ENV_PUBLIC/polyfills.d4aa8125b65d4528.js",
-        "/PWA_DEMO_ENV_PUBLIC/runtime.6b36bf15ef5b739f.js",
-        "/PWA_DEMO_ENV_PUBLIC/styles.debe9a6d06508139.css"
+        "/PWA_DEMO_ENV_PUBLIC/polyfills-MH2GNY63.js",
+        "/PWA_DEMO_ENV_PUBLIC/styles-3GTZKBW4.css"
       ],
       "patterns": []
     },
@@ -82,10 +85,8 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/PWA_DEMO_ENV_PUBLIC/687.4e557ff9894def18.js": "b329291b5187d9b9da5d99be249548cca48a08fe",
-    "/PWA_DEMO_ENV_PUBLIC/973.316ac4d5fee2f217.js": "fea8414d15f033ec1561c7706d1902fe8f5f3632",
-    "/PWA_DEMO_ENV_PUBLIC/assets/config/config.json": "19822140129c204f75a8725cb29c1ff0a7252d80",
-    "/PWA_DEMO_ENV_PUBLIC/assets/config/mainPages.json": "ef9a3d2f07200bc1a0dcc92814c40c0cbed2dc48",
+    "/PWA_DEMO_ENV_PUBLIC/assets/config/config.json": "08bd9b28e9a2929e3ef910cf7e7f1a279146d75e",
+    "/PWA_DEMO_ENV_PUBLIC/assets/config/mainPages.json": "4885e352971c0938ab3ac8e67fd22d2f296858bf",
     "/PWA_DEMO_ENV_PUBLIC/assets/config/scm.json": "322e77aa4398525af8feafcc43878bc6855315ac",
     "/PWA_DEMO_ENV_PUBLIC/assets/demos/aiDemo/ai_Curriculum_base.json": "35fc4abfab3b6513cfbe59156d384aeda355eafc",
     "/PWA_DEMO_ENV_PUBLIC/assets/demos/angularDemo/angular_Curriculum_base.json": "930b1bb67aacd91a98c1613ff7fb92cce7367553",
@@ -116,12 +117,12 @@
     "/PWA_DEMO_ENV_PUBLIC/assets/images/logos/Chart.js_logo.svg.png": "8e8fc9fd1ca2cdaacff93c59206e54c256cc5f46",
     "/PWA_DEMO_ENV_PUBLIC/assets/images/logos/ISO_C++_Logo.svg.png": "9c76be4c7dd4bebe0bc2b74157798d0cb2880e01",
     "/PWA_DEMO_ENV_PUBLIC/assets/images/logos/Microsoft.VisualStudio.Services.Icons.Default": "cdc0bba7672b836f9c42306a17a9625524780fb2",
-    "/PWA_DEMO_ENV_PUBLIC/assets/images/logos/Microsoft_Office_Excel_(2019–2025).svg": "ef4bb45e9b940ff0c223f0e7448c7875ffa2c049",
+    "/PWA_DEMO_ENV_PUBLIC/assets/images/logos/Microsoft_Office_Excel_(2019–2025).svg": "c8d7f89f8f29ed700606b095db4e5e53dd4107ec",
     "/PWA_DEMO_ENV_PUBLIC/assets/images/logos/Node.js_logo.svg.png": "19e0495995107f4959440665de883102f1bc0741",
     "/PWA_DEMO_ENV_PUBLIC/assets/images/logos/OpenCV_logo_black.svg": "6b85bdb7d033f00f9b2af69907e980d9e78073fd",
-    "/PWA_DEMO_ENV_PUBLIC/assets/images/logos/PDF_file_icon.svg": "38a4598ba356c8e43e6a6ea2e59587ab76d26a05",
+    "/PWA_DEMO_ENV_PUBLIC/assets/images/logos/PDF_file_icon.svg": "1d67e84dd8baa7b635d88523dcd4f2c1a380a4ff",
     "/PWA_DEMO_ENV_PUBLIC/assets/images/logos/Python-logo-notext.svg": "654d0ce59f95b990cd15b311daadccb47ff22446",
-    "/PWA_DEMO_ENV_PUBLIC/assets/images/logos/Tensorflow_logo.svg": "3b42f00a782953c29b548787d62358405fb1e484",
+    "/PWA_DEMO_ENV_PUBLIC/assets/images/logos/Tensorflow_logo.svg": "062863270951490be99eb67a25ec6137b78eb8fd",
     "/PWA_DEMO_ENV_PUBLIC/assets/images/logos/tesseract-icon.webp": "d58f54fd40e6186503e330adcf743f1952b3a663",
     "/PWA_DEMO_ENV_PUBLIC/assets/images/logos/tesseract-ocr.png": "4f0ac5f5458fdbdd99a4aafe872072a6f4e27bce",
     "/PWA_DEMO_ENV_PUBLIC/assets/images/mic_off.gif": "58fb904614ab65925c51edf315b70c46d6687410",
@@ -129,13 +130,18 @@
     "/PWA_DEMO_ENV_PUBLIC/assets/images/speaker_on.gif": "52d373e9a336356e1f15b3a84d3b3cb611ab2ee0",
     "/PWA_DEMO_ENV_PUBLIC/assets/opencv.js": "9c25f0d869689b62b0834b7f938896a4ecfae698",
     "/PWA_DEMO_ENV_PUBLIC/assets/sudoku.txt": "a11677cdf143c6ab92080e8a4247c50083c14e71",
+    "/PWA_DEMO_ENV_PUBLIC/chunk-AXQQ3IHZ.js": "5f403a6eb1fd6de0d8a4f1f1425ce03fc6bb4a0d",
+    "/PWA_DEMO_ENV_PUBLIC/chunk-DZZ33C2C.js": "39bb23ba8f2a6a2fdf9b78f2ce0c3427ceafc4aa",
+    "/PWA_DEMO_ENV_PUBLIC/chunk-GAL4ENT6.js": "00d2a3914f360b8b7c866630c354154fc5765d84",
+    "/PWA_DEMO_ENV_PUBLIC/chunk-QKAHQ6X2.js": "da5e1418cf88108284d8bb78bb576b664b3d8f5c",
+    "/PWA_DEMO_ENV_PUBLIC/chunk-VU7IBUSQ.js": "e6fd467b9fb503aba1ddd6bcbe799631bd1d549d",
+    "/PWA_DEMO_ENV_PUBLIC/chunk-WIELM4ZQ.js": "2b09b18be43f29e3b8dac870beb4ed731a4ceafc",
     "/PWA_DEMO_ENV_PUBLIC/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/PWA_DEMO_ENV_PUBLIC/index.html": "8f64b6a87554179eaaa9f0503d218f0b1c6ff94e",
-    "/PWA_DEMO_ENV_PUBLIC/main.38568a78ae0af103.js": "e0aaa67f6a4d0c97d3d8fc2f5ccd8db03b45882c",
+    "/PWA_DEMO_ENV_PUBLIC/index.html": "6afffcd17398d863ae7c3d544d408862c4fd5149",
+    "/PWA_DEMO_ENV_PUBLIC/main-53G6HSJQ.js": "179188210c47ad410a8709534c7564f37b9ef61e",
     "/PWA_DEMO_ENV_PUBLIC/manifest.webmanifest": "4c4fda145c554fe9a7ed086f63fa914267022e67",
-    "/PWA_DEMO_ENV_PUBLIC/polyfills.d4aa8125b65d4528.js": "a063506f957de345af77eb04df62e5280a953eb1",
-    "/PWA_DEMO_ENV_PUBLIC/runtime.6b36bf15ef5b739f.js": "3780f6202bd8849dcd78caff49b6a84ddb47a402",
-    "/PWA_DEMO_ENV_PUBLIC/styles.debe9a6d06508139.css": "280b270fc2a8c243c81c36ec1603311f6ccdd9a1"
+    "/PWA_DEMO_ENV_PUBLIC/polyfills-MH2GNY63.js": "3c45a12b17fda69e5b6ed63ba5d8cc13f85d5dd1",
+    "/PWA_DEMO_ENV_PUBLIC/styles-3GTZKBW4.css": "8549c6c73a4050a9000c386745819df13db24fbf"
   },
   "navigationUrls": [
     {
