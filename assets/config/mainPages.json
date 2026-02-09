@@ -2,7 +2,7 @@
       {
         "comment"    : "MAIN PAGE / BOTTOM MENU",
         "log_name"   : "PAGE_ANGULAR_DEMO_INDEX",
-        "page_name"  : "[DEMOS]",
+        "page_name"  : "Welcome to [ANGULAR DEMO]!",
         "pages"      : [
           { "id": 1, "url" : "/PageUrlList"                                               , "text": "[FEATURES]"        , "queryParams" : "{ pageName : 'PAGE_DEMOS_CARACTERISTICAS_INDEX'}"     },
           { "id": 2, "url" : "/PageUrlList"                                               , "text": "[LANGUAGES]"       , "queryParams" : "{ pageName : 'PAGE_DEMOS_LENGUAJES_INDEX'}"           },
@@ -43,7 +43,7 @@
         ],
       "comment_2"        : "'page_nested' values for  dynamic landing. queryParam explicit 'pageName' param requiered for /Gridparam.",
       "pages_nested"     : [
-          { "id": 1, "url" : "", "text": "./assets/images/logos/Angular_full_color_logo.svg.png"                , "routerLink" : "/GridParam"                 , "queryParams" : "{ pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT'}"    },
+          { "id": 1, "url" : "", "text": "./assets/images/logos/Angular_gradient_logo.png"                     , "routerLink" : "/GridParam"                 , "queryParams" : "{ pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT'}"    },
           { "id": 2, "url" : "", "text": "./assets/images/logos/Node.js_logo.svg.png"                           , "routerLink" : "/GridParam"                 , "queryParams" : "{ pageName : 'PAGE_DEMOS_NODEJS_JAVASCRIPT'}"     },
           { "id": 3, "url" : "", "text": "./assets/images/logos/C_Sharp_Logo_2023.svg"                          , "routerLink" : "/GridParam"                 , "queryParams" : "{ pageName : 'PAGE_DEMOS_NETCORE_CSHARP'}"        },
           { "id": 4, "url" : "", "text": "./assets/images/logos/ISO_C%2B%2B_Logo.svg.png"                       , "routerLink" : "/GridParam"                 , "queryParams" : "{ pageName : 'PAGE_DEMOS_NETCORE_CPP'}"           },
@@ -66,7 +66,7 @@
         ],
         "comment_2"        : "'page_nested' values for  dynamic landing. No queryParam explicit 'pageName' param requiered for /Gridparam.",
         "pages_nested"     : [
-            { "id": 1, "url" : ""                     , "text": "./assets/images/logos/Angular_full_color_logo.svg.png"               , "routerLink"  : "/GridParam"        , "queryParams" : "{ pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT'}"    },
+            { "id": 1, "url" : ""                     , "text": "./assets/images/logos/AAngular_gradient_logo.png"                    , "routerLink"  : "/GridParam"        , "queryParams" : "{ pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT'}"    },
             { "id": 2, "url" : ""                     , "text": "./assets/images/logos/Tensorflow_logo.svg"                           , "routerLink"  : "/LinearRegression",  "queryParams" : "{ langName : 'PY'}"                               },
             { "id": 3, "url" : ""                     , "text": "./assets/images/logos/OpenCV_logo_black.svg"                         , "routerLink"  : "/ComputerVision",    "queryParams" : "{ langName : 'CPP'}"                              },
             { "id": 4, "url" : ""                     , "text": "./assets/images/logos/tesseract-icon.webp"                           , "routerLink"  : "/OcrPhotoCapture",   "queryParams" : "{ langName : 'CPP'}"                              },
@@ -111,6 +111,13 @@
         ]
       },
       {
+        "log_name"   : "PAGE_CURRICULUM_ANGULAR_",
+        "page_name"  : "[CURRICULUM - ANGULAR / TYPESCRIPT]",
+        "pages"      : [
+             { "id": 1, "url" : "./assets/demos/angularDemo/angular_Curriculum_base_.json"       , "text": ""    }
+        ]
+      },
+      {
         "log_name"   : "PAGE_CURRICULUM_NET_CORE",
         "page_name"  : "[CURRICULUM - .NET CORE / C#]",
         "pages"      : [
@@ -145,7 +152,6 @@
             { "id": 1, "url" : "/OcrPhotoCapture"       , "text": "[MISCELLANEOUS - OCR]"               },
             { "id": 2, "url" : "/ComputerVision"        , "text": "[MISCELLANEOUS - COMPUTER VISION]"   },
             { "id": 3, "url" : "/Chat"                  , "text": "[MISCELLANEOUS - CHAT]"              },
-            { "id": 4, "url" : "/MathParsing"           , "text": "[MISCELLANEOUS - MATH PARSING]"      },
             { "id": 5, "url" : "/FractalDemo"           , "text": "[MISCELLANEOUS - FRACTAL DEMO]"      }
           ]
       },
@@ -202,20 +208,6 @@
           { "id" : 1, "url": "about:blank"                                              , "text" : "[Angular]"                    , "routerLink" : "/GridParam"  , "queryParams" : "{ searchTerm: '415b3965-c5ef-4953-8484-080c34df691f' , pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT' }"},
           { "id" : 2, "url": "about:blank"                                              , "text" : "[Node.Js/Javascript]"         , "routerLink" : "/GridParam"  , "queryParams" : "{ searchTerm: '1996fa99-4e01-42eb-ac45-98e2918208d9' , pageName : 'PAGE_DEMOS_NODEJS_JAVASCRIPT'  }"},
           { "id" : 3, "url": "https://socket.io/get-started/chat/"                      , "text" : "[socket.io]"                  , "routerLink" : "about:blank" , "queryParams" : ""}
-        ]    
-      },
-      {
-        "log_name"   : "PAGE_MISCELANEOUS_MATH_PARSING",
-        "page_name"  : "[MISCELLANEOUS - MATH PARSING]",
-        "pages"      : [
-          { "id": 1, "url" : "/#/"           , "text": "[Frontend]"    },
-          { "id": 3, "url" : "/#/"           , "text": "[Libraries]"   },
-          { "id": 4, "url" : "/#/"           , "text": "[Topics]"      }   
-        ],
-        "pages_nested" : [
-          { "id" : 1, "url": "about:blank"                                              , "text" : "[Angular]"                    , "routerLink" : "/GridParam"  , "queryParams" : "{ searchTerm: '5efc8f87-995f-40aa-9d5b-5bdf5810dd6d' , pageName : 'PAGE_DEMOS_ANGULAR_JAVASCRIPT' }"},
-          { "id" : 3, "url": "https://mathjs.org/"                                      , "text" : "[Math Parser]"                , "routerLink" : "about:blank" , "queryParams" : ""},
-          { "id" : 4, "url": "https://en.wikipedia.org/wiki/Parsing#Parser"             , "text" : "[Parser]"                     , "routerLink" : "about:blank" , "queryParams" : ""}
         ]    
       },
       {
@@ -470,6 +462,7 @@
         "pages_nested" : [
           { "id" : 1, "url": "about:blank"                                                , "text" : "[Angular]"     , "routerLink" : "/GridParam"  , "queryParams" : "{ searchTerm: '60669d7b-0380-4756-8f71-7286a4324228' , pageName: 'PAGE_DEMOS_ANGULAR_JAVASCRIPT' }"},
           { "id" : 2, "url": "https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API", "text" : "[HTML Canvas]" , "routerLink" : "about:blank" , "queryParams" : ""},
+          { "id" : 2, "url": "https://mathjs.org/"                                        , "text" : "[Math Parser]"                , "routerLink" : "about:blank" , "queryParams" : ""},
           { "id" : 3, "url": "https://en.wikipedia.org/wiki/Collision"                    , "text" : "[Colisión]"    , "routerLink" : "about:blank" , "queryParams" : ""}
         ]
       },
@@ -807,6 +800,11 @@
                   "id"   : 16,
                   "url"  : "https://learn.microsoft.com/en-us/azure/architecture/",
                   "text" : "Microsoft Pattern and Practices"
+              },
+              {
+                  "id"   : 17,
+                  "url"  : "https://www.theodinproject.com/",
+                  "text" : "The Odin Project"
               }
          ]
       },

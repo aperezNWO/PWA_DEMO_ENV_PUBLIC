@@ -36,18 +36,6 @@
         "field_10"         : "415b3965-c5ef-4953-8484-080c34df691f"
     },
     {
-		"id"               : 4,
-        "done"             : true,
-        "name"             : "MISCELLANEOUS - Math Parser",
-        "description"      : "Math Parser",
-        "field_1"          : "v17, Math Parser, math.js",
-        "field_2"          : "./#/MathParsing",
-        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PROD/blob/main/src/app/_modules/_Demos/_DemosFeatures/miscelaneous/math-parsing/math-parsing.component.ts",
-        "field_4"          : "./#/MathParsing",
-        "field_6"          : "https://www.npmjs.com/package/mathjs"  ,
-        "field_10"         : "5efc8f87-995f-40aa-9d5b-5bdf5810dd6d"
-    },
-        {
 		"id"               : 5,
         "done"             : true,
         "name"             : "MISCELLANEOUS - Fractal Demo",
@@ -174,7 +162,7 @@
         "description"      : "Games - Tetris",
         "field_1"          : "v17, Recursion Algorithms, observable,",
         "field_2"          : "./#/GamesTetris",
-        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PROD/blob/da2b88e912f3e771735a57454834d13f74c9bee8/src/app/_modules/_Demos/_DemosFeatures/games/game-tetris/game-tetris.component.ts#L68",
+        "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PROD/blob/main/src/app/_modules/_Demos/_DemosFeatures/games/game-tetris/game-tetris.component.ts",
         "field_4"          : "./#/GamesTetris",
         "field_6"          : "https://en.wikipedia.org/wiki/Tetris" ,
         "field_10"         : "67431c50-5240-4889-81df-84270075fed8" 
@@ -232,7 +220,7 @@
         "done"             : true,
         "name"             : "Algorithm - Colission",
         "description"      : "Algorithm - Colission",
-        "field_1"          : "v17, Canvas, Collision",
+        "field_1"          : "v17, Canvas, Collision, Math.js",
         "field_2"          : "./#/AlgorithmCollision",
         "field_3"          : "https://github.com/aperezNWO/PWA_DEMO_ENV_PROD/blob/main/src/app/_modules/_Demos/_DemosFeatures/algorithm/algorithm-collision/algorithm-collision.component.ts",
         "field_4"          : "./#/AlgorithmCollision",

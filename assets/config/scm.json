@@ -2,6 +2,20 @@
     {
         "id"          : 6,
         "done"        : true,
+        "name"        : "StackBlitz",
+        "description" : "ENV_ONLINE_DEV",
+        "field_1"     : "https://stackblitz.com/",
+        "field_2"     : "[N/A]",
+        "field_3"     : "#",
+        "field_4"     : "[N/A]",
+        "field_5"     : "#",
+        "field_6"     : "[N/A]",
+        "field_7"     : "#",
+        "field_8"     : "b9a9cf1c-0045-4b1d-91b6-48084f495453"
+    },
+    {
+        "id"          : 6,
+        "done"        : true,
         "name"        : "FireBase Studio / Google IDX / Google Antigravity",
         "description" : "ENV_ONLINE_DEV",
         "field_1"     : "https://firebase.studio/",
@@ -13,7 +27,6 @@
         "field_7"     : "#",
         "field_8"     : "0bf7b698-3d88-4aec-8104-16ff85680a9c"
     },
-
     {
         "id"          : 1,
         "done"        : true,
