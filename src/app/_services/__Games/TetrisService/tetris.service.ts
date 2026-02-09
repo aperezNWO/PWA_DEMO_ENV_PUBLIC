@@ -1,5 +1,5 @@
 import { Injectable                                          } from '@angular/core';
-import { HttpClient, HttpErrorResponse                       } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, interval, Subscription, throwError, of  } from 'rxjs';
 import { catchError, tap                                     } from 'rxjs/operators';
 import { TetrisState,  AIWeights                             } from "src/app/_models/entity.model";

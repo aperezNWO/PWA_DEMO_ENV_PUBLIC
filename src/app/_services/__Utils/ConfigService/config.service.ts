@@ -1,5 +1,5 @@
 import { Injectable     } from '@angular/core';
-import { HttpClient     } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 import { _environment   } from 'src/environments/environment';
 import { MainPage       } from 'src/app/_models/entity.model';

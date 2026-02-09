@@ -1,7 +1,7 @@
 import { Component, OnInit, signal, effect } from '@angular/core';
 import { ViewChild, AfterViewInit          } from '@angular/core';
 import { FormBuilder, NgForm,              } from '@angular/forms';
-import { HttpEventType, HttpResponse       } from '@angular/common/http';
+import { HttpEventType, HttpResponse } from '@angular/common/http';
 import { ActivatedRoute                    } from '@angular/router';
 import { Observable                        } from 'rxjs';
 import { _languageName, ListItem           } from 'src/app/_models/entity.model';

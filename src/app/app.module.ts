@@ -13,7 +13,7 @@ import { MatFormFieldModule              } from '@angular/material/form-field';
 import { BrowserModule                   } from '@angular/platform-browser';
 import { BrowserAnimationsModule         } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule             } from '@angular/forms';
-import { HttpClient, HttpClientModule    } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { HttpHandler, HttpInterceptor    } from '@angular/common/http';
 import { HttpRequest, HttpResponse       } from '@angular/common/http';
 import { HTTP_INTERCEPTORS               } from '@angular/common/http';
@@ -128,8 +128,7 @@ export class CustomErrorHandler implements ErrorHandler {
     } 
 }
 //
-@NgModule({
-    declarations: [
+@NgModule({ declarations: [
         AppComponent,
         LandingComponent,
         HomeWebComponent,
@@ -171,34 +170,13 @@ export class CustomErrorHandler implements ErrorHandler {
         PageUrlListComponent
     ],
     exports: [RouterModule],
-    providers: [
-           DatePipe,
-           DecimalPipe,
-           ConfigService,  
-           BackendService,
-        {  provide: HTTP_INTERCEPTORS , useClass: LoggingInterceptor, multi: true },
-        {  provide: LocationStrategy  , useClass: HashLocationStrategy            },
-        {  provide: ErrorHandler      , useClass: CustomErrorHandler              },
-        [
-          {
-            provide   : APP_INITIALIZER,
-            useFactory: initialize,
-            deps      : [ConfigService,BackendService,HttpClient],
-            multi     : true
-          }
-        ],
-
-    ],
-    bootstrap: [AppComponent],
-    imports: [
-        NgChartsModule,
+    bootstrap: [AppComponent], imports: [NgChartsModule,
         CommonModule,
         HttpClientModule,
         FormsModule,
         BrowserModule,
         BrowserAnimationsModule,
         ReactiveFormsModule,
-        HttpClientModule,
         MatInputModule,
         MatListModule,
         MatTableModule,
@@ -207,8 +185,8 @@ export class CustomErrorHandler implements ErrorHandler {
         MatFormFieldModule,
         NgbModule,
         NgbHighlight,
-        NgbPaginationModule, 
-        NgbAlertModule,     
+        NgbPaginationModule,
+        NgbAlertModule,
         NgxSignaturePadModule,
         BoardComponent,
         SquareComponent,
@@ -216,13 +194,28 @@ export class CustomErrorHandler implements ErrorHandler {
         //RouterModule,
         //RouterModule.forRoot(routes, { useHash: true }),
         ServiceWorkerModule.register('ngsw-worker.js', {
-          enabled: !isDevMode(),
-          // Register the ServiceWorker as soon as the application is stable
-          // or after 30 seconds (whichever comes first).
-          registrationStrategy: 'registerWhenStable:30000'
-        }),
-   ]
-})
+            enabled: !isDevMode(),
+            // Register the ServiceWorker as soon as the application is stable
+            // or after 30 seconds (whichever comes first).
+            registrationStrategy: 'registerWhenStable:30000'
+        })], providers: [
+        DatePipe,
+        DecimalPipe,
+        ConfigService,
+        BackendService,
+        { provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptor, multi: true },
+        { provide: LocationStrategy, useClass: HashLocationStrategy },
+        { provide: ErrorHandler, useClass: CustomErrorHandler },
+        [
+            {
+                provide: APP_INITIALIZER,
+                useFactory: initialize,
+                deps: [ConfigService, BackendService, HttpClient],
+                multi: true
+            }
+        ],
+        provideHttpClient(withInterceptorsFromDi()),
+    ] })
 //
 export class AppModule { 
     //-----------------------------------------------------------------------------------------------------

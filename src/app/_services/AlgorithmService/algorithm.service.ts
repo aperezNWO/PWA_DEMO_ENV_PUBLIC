@@ -1,5 +1,5 @@
 import { Injectable    } from '@angular/core';
-import { HttpClient    } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable    } from 'rxjs';
 import { BaseService   } from '../__baseService/base.service';
 import { ConfigService } from '../__Utils/ConfigService/config.service';

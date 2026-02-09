@@ -1,6 +1,6 @@
 import { ActivatedRoute                       } from '@angular/router';
 import { Component, ViewChild, effect, signal } from '@angular/core';
-import { HttpEventType, HttpResponse          } from '@angular/common/http';
+import { HttpEventType, HttpResponse } from '@angular/common/http';
 import { UtilManager                          } from 'src/app/_engines/util.engine';
 import { BackendService                       } from 'src/app/_services/BackendService/backend.service';
 import { SpeechService                        } from 'src/app/_services/__Utils/SpeechService/speech.service';

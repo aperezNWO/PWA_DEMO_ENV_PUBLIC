@@ -1,5 +1,5 @@
 import { Injectable, OnInit                                      } from '@angular/core';
-import { HttpClient, HttpEvent, HttpHeaders                      } from '@angular/common/http';
+import { HttpClient, HttpEvent, HttpHeaders } from '@angular/common/http';
 import { Observable                                              } from 'rxjs';
 import { LogEntry, LogType, SearchCriteria                       } from '../../_models/entity.model';
 import { ConfigService                                           } from '../__Utils/ConfigService/config.service';

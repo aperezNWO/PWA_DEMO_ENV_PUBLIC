@@ -1,4 +1,4 @@
-import { HttpClient                     } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Component, ViewChild           } from '@angular/core';
 import { ActivatedRoute                 } from '@angular/router';
 import { PAGE_MISCELANEOUS_FRACTAL_DEMO, PAGE_TITLE_LOG, PAGE_TITLE_NO_SOUND } from 'src/app/_models/common';

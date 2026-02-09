@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit,     } from '@angular/core';
 import { ActivatedRoute                            } from '@angular/router';
-import { HttpClient                                } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { BaseReferenceComponent                    } from 'src/app/_components/base-reference/base-reference.component';
 import { BackendService                            } from 'src/app/_services/BackendService/backend.service';
 import { ConfigService                             } from 'src/app/_services/__Utils/ConfigService/config.service';
