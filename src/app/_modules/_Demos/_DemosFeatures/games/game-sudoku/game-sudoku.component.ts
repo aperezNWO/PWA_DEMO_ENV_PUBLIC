@@ -17,15 +17,16 @@ import { PAGE_GAMES_SUDOKU, PAGE_TITLE_LOG, PAGE_TITLE_NO_SOUND } from 'src/app/
 
 //
 @Component({
-  selector: 'app-sudoku',
-  templateUrl: './game-sudoku.component.html',
-  styleUrl: './game-sudoku.component.css',
-  providers   : [
-    { 
-      provide : PAGE_TITLE_LOG, 
-      useValue: PAGE_GAMES_SUDOKU 
-    },
-  ]
+    selector: 'app-sudoku',
+    templateUrl: './game-sudoku.component.html',
+    styleUrl: './game-sudoku.component.css',
+    providers: [
+        {
+            provide: PAGE_TITLE_LOG,
+            useValue: PAGE_GAMES_SUDOKU
+        },
+    ],
+    standalone: false
 })
 //
 export class SudokuComponent extends BaseReferenceComponent implements OnInit, AfterViewInit {

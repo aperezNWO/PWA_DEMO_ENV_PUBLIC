@@ -7,15 +7,16 @@ import { _SearchComponent                                               } from '
 
 //
 @Component({
-  selector: 'app-scm',
-  templateUrl: './scm.component.html',
-  styleUrls: ['./scm.component.css'],
-  providers: [
-    _SearchService,
-    { provide: PAGE_ID,     useValue: PAGE_ABOUT_SCM }, // Unique ID for this component
-    { provide: PAGE_SIZE,   useValue: 8                   },
-    { provide: SEARCH_TERM, useValue: ""                  }  
-  ]
+    selector: 'app-scm',
+    templateUrl: './scm.component.html',
+    styleUrls: ['./scm.component.css'],
+    providers: [
+        _SearchService,
+        { provide: PAGE_ID, useValue: PAGE_ABOUT_SCM }, // Unique ID for this component
+        { provide: PAGE_SIZE, useValue: 8 },
+        { provide: SEARCH_TERM, useValue: "" }
+    ],
+    standalone: false
 })
 export class SCMComponent extends _SearchComponent {
   //

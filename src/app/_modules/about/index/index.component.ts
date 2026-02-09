@@ -37,12 +37,13 @@ function matches(netcoreConfigPagelist: _Route, term: string, pipe: PipeTransfor
 
 //
 @Directive({
-  selector: 'th[sortevent]',
-  host: {
-    '[class.asc]' : 'direction === "asc"',
-    '[class.desc]': 'direction === "desc"',
-    '(click)'     : 'rotatePage()',
-  },
+    selector: 'th[sortevent]',
+    host: {
+        '[class.asc]': 'direction === "asc"',
+        '[class.desc]': 'direction === "desc"',
+        '(click)': 'rotatePage()',
+    },
+    standalone: false
 })
 class BaseSortableHeader {
   //
@@ -60,9 +61,10 @@ class BaseSortableHeader {
 }
 
 @Component({
-  selector: 'app-index',
-  templateUrl: './index.component.html',
-  styleUrl: './index.component.css'
+    selector: 'app-index',
+    templateUrl: './index.component.html',
+    styleUrl: './index.component.css',
+    standalone: false
 })
 export class IndexComponent {
   //

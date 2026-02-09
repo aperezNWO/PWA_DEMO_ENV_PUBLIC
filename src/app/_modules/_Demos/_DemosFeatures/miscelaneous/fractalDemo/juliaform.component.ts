@@ -12,15 +12,16 @@ import { BaseReferenceComponent         } from 'src/app/_components/base-referen
 
 
 @Component({
-  selector    : 'app-juliaform',
-  templateUrl : './juliaform.component.html',
-  styleUrl    : './juliaform.component.css',
-  providers   : [
-    { 
-      provide : PAGE_TITLE_LOG, 
-      useValue: PAGE_MISCELANEOUS_FRACTAL_DEMO 
-    },
-  ]
+    selector: 'app-juliaform',
+    templateUrl: './juliaform.component.html',
+    styleUrl: './juliaform.component.css',
+    providers: [
+        {
+            provide: PAGE_TITLE_LOG,
+            useValue: PAGE_MISCELANEOUS_FRACTAL_DEMO
+        },
+    ],
+    standalone: false
 })
 export class FractalDemoComponent  extends BaseReferenceComponent {
   //

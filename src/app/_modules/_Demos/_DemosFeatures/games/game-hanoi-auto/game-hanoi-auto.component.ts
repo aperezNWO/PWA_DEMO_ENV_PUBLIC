@@ -8,15 +8,16 @@ import { SpeechService          } from 'src/app/_services/__Utils/SpeechService/
 import { PAGE_GAMES_HANOI_2D, PAGE_GAMES_SUDOKU, PAGE_TITLE_LOG } from 'src/app/_models/common';
 
 @Component({
-  selector: 'app-game-hanoi-auto',
-  templateUrl: './game-hanoi-auto.component.html',
-  styleUrl: './game-hanoi-auto.component.css' ,
-  providers   : [
-    { 
-      provide : PAGE_TITLE_LOG, 
-      useValue: PAGE_GAMES_HANOI_2D 
-    },
-  ]
+    selector: 'app-game-hanoi-auto',
+    templateUrl: './game-hanoi-auto.component.html',
+    styleUrl: './game-hanoi-auto.component.css',
+    providers: [
+        {
+            provide: PAGE_TITLE_LOG,
+            useValue: PAGE_GAMES_HANOI_2D
+        },
+    ],
+    standalone: false
 })
 export class GameHanoiAutoComponent extends BaseReferenceComponent {
 

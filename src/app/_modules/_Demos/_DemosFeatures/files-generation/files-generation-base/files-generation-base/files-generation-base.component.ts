@@ -10,9 +10,10 @@ import { SpeechService                  } from 'src/app/_services/__Utils/Speech
 import { BackendService                 } from 'src/app/_services/BackendService/backend.service';
 
 @Component({
-  selector: 'app-files-generation-base',
-  templateUrl: './files-generation-base.component.html',
-  styleUrl: './files-generation-base.component.css'
+    selector: 'app-files-generation-base',
+    templateUrl: './files-generation-base.component.html',
+    styleUrl: './files-generation-base.component.css',
+    standalone: false
 })
 export class FilesGenerationBaseComponent extends BaseComponent  {
 

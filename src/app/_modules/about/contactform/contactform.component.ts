@@ -7,9 +7,10 @@ import { ConfigService                            } from 'src/app/_services/__Ut
 import { PAGE_ABOUT_CONTACT_FORM                  } from 'src/app/_models/common';
     
 @Component({
-  selector: 'app-contact-form',
-  templateUrl: './contactform.component.html',
-  styleUrl: './contactform.component.css'
+    selector: 'app-contact-form',
+    templateUrl: './contactform.component.html',
+    styleUrl: './contactform.component.css',
+    standalone: false
 })
 export class ContactformComponent extends BaseComponent {
 

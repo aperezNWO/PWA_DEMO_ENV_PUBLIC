@@ -13,15 +13,16 @@ import { DecimalPipe                              } from '@angular/common';
 
 
 @Component({
-  selector    : 'app-linear-regression',
-  templateUrl : './linear-regression.component.html',
-  styleUrl    : './linear-regression.component.css',
-  providers   : [
-    { 
-      provide : PAGE_TITLE_LOG, 
-      useValue: PAGE_MACHINE_LEARNING_LINEAR_REGRESSION 
-    },
-  ]
+    selector: 'app-linear-regression',
+    templateUrl: './linear-regression.component.html',
+    styleUrl: './linear-regression.component.css',
+    providers: [
+        {
+            provide: PAGE_TITLE_LOG,
+            useValue: PAGE_MACHINE_LEARNING_LINEAR_REGRESSION
+        },
+    ],
+    standalone: false
 })
 export class LinearRegressionComponent  extends BaseReferenceComponent implements OnInit {
      //

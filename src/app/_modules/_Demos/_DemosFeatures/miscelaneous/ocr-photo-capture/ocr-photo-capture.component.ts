@@ -11,15 +11,16 @@ import { NgxSignaturePadComponent                                   } from '@eve
 import { NgxSignatureOptions                                        } from '@eve-sama/ngx-signature-pad/lib/types/ngx-signature-pad';
 
 @Component({
-  selector    : 'app-ocr-photo-capture',
-  templateUrl : './ocr-photo-capture.component.html',
-  styleUrl    : './ocr-photo-capture.component.css',
-  providers   : [
-    { 
-      provide : PAGE_TITLE_LOG, 
-      useValue: PAGE_MISCELANEOUS_OCR 
-    },
-  ]
+    selector: 'app-ocr-photo-capture',
+    templateUrl: './ocr-photo-capture.component.html',
+    styleUrl: './ocr-photo-capture.component.css',
+    providers: [
+        {
+            provide: PAGE_TITLE_LOG,
+            useValue: PAGE_MISCELANEOUS_OCR
+        },
+    ],
+    standalone: false
 })
 export class OcrPhotoCaptureComponent extends BaseReferenceComponent implements AfterViewInit , OnInit {
   /** Catch object, call functions via instance object */

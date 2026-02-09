@@ -7,19 +7,20 @@ import { _SearchComponent                                        } from 'src/app
 
 
 @Component({
-  selector: 'app-curriculum-angular',
-  templateUrl: './curriculumAngular.component.html',
-  styleUrl: './curriculumAngular.component.css',
-  providers: [
-    ConfigService,
-    _SearchService,
-    { provide: PAGE_ID,     useValue: PAGE_CURRICULUM_ANGULAR }, // Unique ID for this component
-    { provide: PAGE_SIZE,   useValue: 8                       },
-    { provide: SEARCH_TERM  
-         ,  useFactory: (configService: ConfigService) => configService.queryUrlParams("searchTerm")                         
-         ,  deps: [ConfigService], // Dependencies required by the factory function
-    }   
-  ]
+    selector: 'app-curriculum-angular',
+    templateUrl: './curriculumAngular.component.html',
+    styleUrl: './curriculumAngular.component.css',
+    providers: [
+        ConfigService,
+        _SearchService,
+        { provide: PAGE_ID, useValue: PAGE_CURRICULUM_ANGULAR }, // Unique ID for this component
+        { provide: PAGE_SIZE, useValue: 8 },
+        { provide: SEARCH_TERM,
+            useFactory: (configService: ConfigService) => configService.queryUrlParams("searchTerm"),
+            deps: [ConfigService], // Dependencies required by the factory function
+        }
+    ],
+    standalone: false
 })
 export class CurriculumAngularComponent extends _SearchComponent  
 {

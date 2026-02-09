@@ -15,16 +15,17 @@ import { BaseReferenceComponent                                                 
 declare var cv: any; // Declare cv as a global variable
 
 //
-@Component({   
-  selector     : 'computer-vision',
-  templateUrl  : './computer-vision.component.html',
-  styleUrl     : './computer-vision.component.css',
-  providers    : [
-    { 
-      provide  : PAGE_TITLE_LOG, 
-      useValue : PAGE_MISELANEOUS_COMPUTER_VISION 
-    },
-  ]
+@Component({
+    selector: 'computer-vision',
+    templateUrl: './computer-vision.component.html',
+    styleUrl: './computer-vision.component.css',
+    providers: [
+        {
+            provide: PAGE_TITLE_LOG,
+            useValue: PAGE_MISELANEOUS_COMPUTER_VISION
+        },
+    ],
+    standalone: false
 })
 export class ComputerVisionComponent extends BaseReferenceComponent implements AfterViewInit , OnInit {
   /** Catch object, call functions via instance object */

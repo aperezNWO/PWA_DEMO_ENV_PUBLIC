@@ -1,8 +1,8 @@
 
 import { MatTableModule                               } from '@angular/material/table';
 import { MatInputModule                               } from '@angular/material/input';
-import { Injectable, NgModule                         } from '@angular/core';
-import { APP_INITIALIZER,ErrorHandler, isDevMode      } from '@angular/core';
+import { Injectable, NgModule, inject, provideAppInitializer } from '@angular/core';
+import { ErrorHandler, isDevMode } from '@angular/core';
 import { CommonModule, DatePipe, DecimalPipe          } from '@angular/common';
 import { ServiceWorkerModule             } from '@angular/service-worker';
 import { FormsModule                     } from '@angular/forms';
@@ -207,12 +207,10 @@ export class CustomErrorHandler implements ErrorHandler {
         { provide: LocationStrategy, useClass: HashLocationStrategy },
         { provide: ErrorHandler, useClass: CustomErrorHandler },
         [
-            {
-                provide: APP_INITIALIZER,
-                useFactory: initialize,
-                deps: [ConfigService, BackendService, HttpClient],
-                multi: true
-            }
+            provideAppInitializer(() => {
+        const initializerFn = (initialize)(inject(ConfigService), inject(BackendService), inject(HttpClient));
+        return initializerFn();
+      })
         ],
         provideHttpClient(withInterceptorsFromDi()),
     ] })

@@ -9,22 +9,23 @@ import { __SearchService                                               } from 's
 
 
 @Component({
-  selector: 'app-grid-param',
-  templateUrl: './grid-param.component.html',
-  styleUrl: './grid-param.component.css',
-  providers: [
-    ConfigService,    
-    __SearchService,
-    { provide: PAGE_ID
-         ,  useFactory: (configService: ConfigService) => configService.queryUrlParams("pageName")                         
-         ,  deps: [ConfigService]
-    }, // Dependencies required by the factory function
-    { provide: PAGE_SIZE,   useValue  : 8                          },
-    { provide: SEARCH_TERM  
-         ,  useFactory: (configService: ConfigService) => configService.queryUrlParams("searchTerm")                         
-         ,  deps: [ConfigService], // Dependencies required by the factory function
-    }  
-  ]
+    selector: 'app-grid-param',
+    templateUrl: './grid-param.component.html',
+    styleUrl: './grid-param.component.css',
+    providers: [
+        ConfigService,
+        __SearchService,
+        { provide: PAGE_ID,
+            useFactory: (configService: ConfigService) => configService.queryUrlParams("pageName"),
+            deps: [ConfigService]
+        }, // Dependencies required by the factory function
+        { provide: PAGE_SIZE, useValue: 8 },
+        { provide: SEARCH_TERM,
+            useFactory: (configService: ConfigService) => configService.queryUrlParams("searchTerm"),
+            deps: [ConfigService], // Dependencies required by the factory function
+        }
+    ],
+    standalone: false
 })
 export class GridParamComponent extends __SearchComponent  
 {

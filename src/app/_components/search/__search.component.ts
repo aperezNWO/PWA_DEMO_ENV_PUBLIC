@@ -5,9 +5,10 @@ import { _BaseModel, SiteRole               } from 'src/app/_models/entity.model
 import { __SearchService                    } from 'src/app/_services/__Utils/SearchService/__search.service';
 
 @Component({
-  selector: 'app-search-custom',
-  templateUrl: './search.component.html',
-  styleUrl: './search.component.css',
+    selector: 'app-search-custom',
+    templateUrl: './search.component.html',
+    styleUrl: './search.component.css',
+    standalone: false
 })
 export class __SearchComponent {
 

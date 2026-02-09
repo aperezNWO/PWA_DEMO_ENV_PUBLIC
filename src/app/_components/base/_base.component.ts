@@ -6,9 +6,10 @@ import { SpeechService                              } from 'src/app/_services/__
 import { _environment                               } from 'src/environments/environment';
 
 @Component({
-  selector: 'app-base-custom',
-  templateUrl: './base.component.html',
-  styleUrl: './base.component.css',
+    selector: 'app-base-custom',
+    templateUrl: './base.component.html',
+    styleUrl: './base.component.css',
+    standalone: false
 })
 export class _BaseComponent implements OnInit {
   /////////////////////////////////////////////////////////

@@ -6,9 +6,10 @@ import { SpeechService                            } from 'src/app/_services/__Ut
 import { _BaseComponent                           } from '../base/_base.component';
 
 @Component({
-  selector: 'app-page-url-list',
-  templateUrl: './page-url-list.component.html',
-  styleUrl: './page-url-list.component.css'
+    selector: 'app-page-url-list',
+    templateUrl: './page-url-list.component.html',
+    styleUrl: './page-url-list.component.css',
+    standalone: false
 })
 export class PageUrlListComponent extends _BaseComponent {
      constructor(

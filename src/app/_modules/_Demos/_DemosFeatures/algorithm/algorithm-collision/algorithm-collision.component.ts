@@ -8,15 +8,16 @@ import { ConfigService } from 'src/app/_services/__Utils/ConfigService/config.se
 import { SpeechService } from 'src/app/_services/__Utils/SpeechService/speech.service';
 
 @Component({
-  selector: 'app-algorithm-collision',
-  templateUrl: './algorithm-collision.component.html',
-  styleUrls: ['./algorithm-collision.component.css'],
-  providers: [
-    { 
-      provide: PAGE_TITLE_LOG, 
-      useValue: PAGE_ALGORITMOS_COLISION 
-    },
-  ]
+    selector: 'app-algorithm-collision',
+    templateUrl: './algorithm-collision.component.html',
+    styleUrls: ['./algorithm-collision.component.css'],
+    providers: [
+        {
+            provide: PAGE_TITLE_LOG,
+            useValue: PAGE_ALGORITMOS_COLISION
+        },
+    ],
+    standalone: false
 })
 export class AlgorithmCollisionComponent extends BaseReferenceComponent implements AfterViewInit, OnInit, OnDestroy {
   @ViewChild('ballCanvas', { static: false }) canvas!: ElementRef<HTMLCanvasElement> | null;

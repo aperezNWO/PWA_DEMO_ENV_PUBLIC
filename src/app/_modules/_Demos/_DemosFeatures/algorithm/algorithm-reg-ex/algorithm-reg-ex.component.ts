@@ -12,15 +12,16 @@ import { AlgorithmService                            } from 'src/app/_services/A
 
 //
 @Component({
-  selector    : 'app-algorithm-reg-ex',
-  templateUrl : './algorithm-reg-ex.component.html',
-  styleUrls   : ['./algorithm-reg-ex.component.css'],
-  providers   : [
-      { 
-        provide : PAGE_TITLE_LOG, 
-        useValue: PAGE_ALGORITMOS_REGEX 
-      },
-  ]
+    selector: 'app-algorithm-reg-ex',
+    templateUrl: './algorithm-reg-ex.component.html',
+    styleUrls: ['./algorithm-reg-ex.component.css'],
+    providers: [
+        {
+            provide: PAGE_TITLE_LOG,
+            useValue: PAGE_ALGORITMOS_REGEX
+        },
+    ],
+    standalone: false
 })
 //
 export class AlgorithmRegExComponent extends BaseComponent implements OnInit, AfterViewInit {

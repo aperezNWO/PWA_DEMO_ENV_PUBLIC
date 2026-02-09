@@ -7,9 +7,10 @@ import { _SearchService                     } from 'src/app/_services/__Utils/Se
 
 
 @Component({
-  selector: 'app-search_',
-  templateUrl: './search.component.html',
-  styleUrl: './search.component.css',
+    selector: 'app-search_',
+    templateUrl: './search.component.html',
+    styleUrl: './search.component.css',
+    standalone: false
 })
 export class _SearchComponent {
 

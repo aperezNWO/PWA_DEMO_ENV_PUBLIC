@@ -11,15 +11,16 @@ import { ConfigService                } from 'src/app/_services/__Utils/ConfigSe
 
 
 @Component({
-  selector: 'app-chart',
-  templateUrl: './chart.component.html',
-  styleUrl: './chart.component.css',
-  providers   : [
-    { 
-      provide : PAGE_TITLE_LOG, 
-      useValue: PAGE_FILE_GENERATION_CHART 
-    },
-  ]
+    selector: 'app-chart',
+    templateUrl: './chart.component.html',
+    styleUrl: './chart.component.css',
+    providers: [
+        {
+            provide: PAGE_TITLE_LOG,
+            useValue: PAGE_FILE_GENERATION_CHART
+        },
+    ],
+    standalone: false
 })
 export class ChartComponent extends BaseReferenceComponent implements OnInit  {
     //--------------------------------------------------------------------------

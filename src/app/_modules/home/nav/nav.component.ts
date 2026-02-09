@@ -5,9 +5,10 @@ import { BackendService                } from 'src/app/_services/BackendService/
 import { ConfigService                 } from 'src/app/_services/__Utils/ConfigService/config.service';
 //
 @Component({
-  selector: 'app-nav',
-  templateUrl: './nav.component.html',
-  styleUrl: './nav.component.css'
+    selector: 'app-nav',
+    templateUrl: './nav.component.html',
+    styleUrl: './nav.component.css',
+    standalone: false
 })
 //
 export class NavComponent {

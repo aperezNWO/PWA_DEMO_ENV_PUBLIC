@@ -7,9 +7,10 @@ import { SpeechService                              } from 'src/app/_services/__
 import { _environment                               } from 'src/environments/environment';
 
 @Component({
-  selector: 'app-base-reference',
-  templateUrl: './base-reference.component.html',
-  styleUrl: './base-reference.component.css'
+    selector: 'app-base-reference',
+    templateUrl: './base-reference.component.html',
+    styleUrl: './base-reference.component.css',
+    standalone: false
 })
 export class BaseReferenceComponent {
   /////////////////////////////////////////////////////////

@@ -12,15 +12,16 @@ import * as TWEEN from 'tween';
 //declare var TWEEN: any;
 
 @Component({
-  selector: 'app-game-hanoi3d',
-  templateUrl: './game-hanoi3d.component.html',
-  styleUrl: './game-hanoi3d.component.css' ,
-  providers   : [
-    { 
-      provide : PAGE_TITLE_LOG, 
-      useValue: PAGE_GAMES_HANOI_3D 
-    },
-  ]
+    selector: 'app-game-hanoi3d',
+    templateUrl: './game-hanoi3d.component.html',
+    styleUrl: './game-hanoi3d.component.css',
+    providers: [
+        {
+            provide: PAGE_TITLE_LOG,
+            useValue: PAGE_GAMES_HANOI_3D
+        },
+    ],
+    standalone: false
 })
 export class GameHanoi3dComponent extends BaseReferenceComponent implements OnInit, AfterViewInit {
   //

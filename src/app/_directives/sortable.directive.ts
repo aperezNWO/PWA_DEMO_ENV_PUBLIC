@@ -56,13 +56,14 @@ export function matches(scmList: _BaseModel, term: string, pipe: PipeTransform) 
 }
 // 4. 
 @Directive({
-  selector: 'th[sortevent]',
-  //standalone: true, // ???
-  host: {
-    '[class.asc]'  : 'direction === "asc"',
-    '[class.desc]' : 'direction === "desc"',
-    '(click)'      : 'rotatePage()',
-  },
+    selector: 'th[sortevent]',
+    //standalone: true, // ???
+    host: {
+        '[class.asc]': 'direction === "asc"',
+        '[class.desc]': 'direction === "desc"',
+        '(click)': 'rotatePage()',
+    },
+    standalone: false
 })
 export class BaseSortableHeader {
   //

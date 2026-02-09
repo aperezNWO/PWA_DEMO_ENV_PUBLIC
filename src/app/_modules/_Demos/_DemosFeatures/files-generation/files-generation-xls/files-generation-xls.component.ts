@@ -14,15 +14,16 @@ import { CustomErrorHandler                                                 } fr
 import { BaseReferenceComponent                                             } from 'src/app/_components/base-reference/base-reference.component';
 //
 @Component({
-  selector     : 'app-files-generation-xls',
-  templateUrl  : './files-generation-xls.component.html',
-  styleUrls    : ['./files-generation-xls.component.css'],
-  providers    : [
-          { 
-            provide : PAGE_TITLE_LOG, 
-            useValue: PAGE_FILE_GENERATION_XLS 
-          },
-  ]
+    selector: 'app-files-generation-xls',
+    templateUrl: './files-generation-xls.component.html',
+    styleUrls: ['./files-generation-xls.component.css'],
+    providers: [
+        {
+            provide: PAGE_TITLE_LOG,
+            useValue: PAGE_FILE_GENERATION_XLS
+        },
+    ],
+    standalone: false
 })
 //
 export class FilesGenerationXLSComponent extends BaseReferenceComponent implements OnInit {

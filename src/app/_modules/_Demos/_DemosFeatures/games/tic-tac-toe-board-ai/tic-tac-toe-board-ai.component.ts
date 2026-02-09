@@ -19,15 +19,16 @@ export interface TicTacToeResponse {
 }
 
 @Component({
-  selector: 'app-tic-tac-toe-board-ai',
-  templateUrl: './tic-tac-toe-board-ai.component.html',
-  styleUrl: './tic-tac-toe-board-ai.component.css',
-  providers   : [
-      { 
-        provide : PAGE_TITLE_LOG, 
-        useValue: PAGE_GAMES_TIC_TAC_TOE_AI 
-      },
-  ]
+    selector: 'app-tic-tac-toe-board-ai',
+    templateUrl: './tic-tac-toe-board-ai.component.html',
+    styleUrl: './tic-tac-toe-board-ai.component.css',
+    providers: [
+        {
+            provide: PAGE_TITLE_LOG,
+            useValue: PAGE_GAMES_TIC_TAC_TOE_AI
+        },
+    ],
+    standalone: false
 })
 export class TicTacToeBoardAiComponent extends BaseReferenceComponent implements OnInit {
   //

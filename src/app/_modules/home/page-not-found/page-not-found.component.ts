@@ -7,9 +7,10 @@ import { ConfigService  } from 'src/app/_services/__Utils/ConfigService/config.s
 import { SpeechService  } from 'src/app/_services/__Utils/SpeechService/speech.service';
 //
 @Component({
-  selector: 'app-page-not-found',
-  templateUrl: './page-not-found.component.html',
-  styleUrl: './page-not-found.component.css'
+    selector: 'app-page-not-found',
+    templateUrl: './page-not-found.component.html',
+    styleUrl: './page-not-found.component.css',
+    standalone: false
 })
 //
 export class PageNotFoundComponent  extends BaseComponent {

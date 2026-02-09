@@ -13,15 +13,16 @@ import { BaseReferenceComponent                                     } from 'src/
 
 
 @Component({
-  selector       : 'app-algorithm-dijkstra',
-  templateUrl    : './algorithm-dijkstra.component.html',
-  styleUrls      : ['./algorithm-dijkstra.component.css'],
-  providers   : [
-    { 
-      provide : PAGE_TITLE_LOG, 
-      useValue: PAGE_ALGORITHMS_DIJKSTRA 
-    },
-    ]
+    selector: 'app-algorithm-dijkstra',
+    templateUrl: './algorithm-dijkstra.component.html',
+    styleUrls: ['./algorithm-dijkstra.component.css'],
+    providers: [
+        {
+            provide: PAGE_TITLE_LOG,
+            useValue: PAGE_ALGORITHMS_DIJKSTRA
+        },
+    ],
+    standalone: false
 })
 //
 export class AlgorithmDijkstraComponent extends BaseReferenceComponent implements OnInit, AfterViewInit  {

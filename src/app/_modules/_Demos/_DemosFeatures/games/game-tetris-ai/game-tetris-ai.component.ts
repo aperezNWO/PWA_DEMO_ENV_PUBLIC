@@ -12,15 +12,16 @@ import { catchError, tap                           } from 'rxjs/operators';
 import { PAGE_GAMES_TETRIS_AI, PAGE_TITLE_LOG, PAGE_TITLE_NO_SOUND } from 'src/app/_models/common';
 
 @Component({
-  selector: 'app-game-tetris-ai',
-  templateUrl: './game-tetris-ai.component.html',
-  styleUrl: './game-tetris-ai.component.css',
-  providers   : [
-    { 
-      provide : PAGE_TITLE_LOG, 
-      useValue: PAGE_GAMES_TETRIS_AI 
-    },
-  ]
+    selector: 'app-game-tetris-ai',
+    templateUrl: './game-tetris-ai.component.html',
+    styleUrl: './game-tetris-ai.component.css',
+    providers: [
+        {
+            provide: PAGE_TITLE_LOG,
+            useValue: PAGE_GAMES_TETRIS_AI
+        },
+    ],
+    standalone: false
 })
 export class GameTetrisAIComponent  extends BaseReferenceComponent implements OnInit {
   

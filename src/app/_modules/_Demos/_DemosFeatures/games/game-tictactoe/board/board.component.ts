@@ -7,7 +7,6 @@ import { SpeechService                                } from 'src/app/_services/
 //
 @Component({
     selector: 'app-board',
-    standalone: true,
     templateUrl: './board.component.html',
     styleUrls: ['./board.component.css'],
     imports: [SquareComponent, CommonModule]

@@ -14,9 +14,10 @@ import { VersionBundle, VersionCacheService } from 'src/app/_services/__Utils/Ve
 
 //
 @Component({
-  selector: 'app-technical-specs',
-  templateUrl: './technical-specs.component.html',
-  styleUrls: ['./technical-specs.component.css']
+    selector: 'app-technical-specs',
+    templateUrl: './technical-specs.component.html',
+    styleUrls: ['./technical-specs.component.css'],
+    standalone: false
 })
 //
 export class TechnicalSpecsComponent extends BaseComponent {

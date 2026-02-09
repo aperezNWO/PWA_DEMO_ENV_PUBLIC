@@ -12,15 +12,16 @@ import { BaseReferenceComponent                                      } from 'src
 
 //
 @Component({
-  selector: 'app-algorithm-sort',
-  templateUrl: './algorithm-sort.component.html',
-  styleUrls: ['./algorithm-sort.component.css'],
-  providers   : [
-      { 
-        provide : PAGE_TITLE_LOG, 
-        useValue: PAGE_ALGORITMOS_SORT 
-      },
-  ]
+    selector: 'app-algorithm-sort',
+    templateUrl: './algorithm-sort.component.html',
+    styleUrls: ['./algorithm-sort.component.css'],
+    providers: [
+        {
+            provide: PAGE_TITLE_LOG,
+            useValue: PAGE_ALGORITMOS_SORT
+        },
+    ],
+    standalone: false
 })
 //
 export class AlgorithmSortComponent extends BaseReferenceComponent implements OnInit, AfterViewInit {

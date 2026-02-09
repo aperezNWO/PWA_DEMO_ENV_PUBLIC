@@ -13,15 +13,16 @@ import { PAGE_TITLE_LOG,PAGE_TITLE_NO_SOUND,PAGE_FILE_GENERATION_CSV   } from 's
 import { BaseReferenceComponent                                        } from 'src/app/_components/base-reference/base-reference.component';
 //
 @Component({
-  selector: 'app-files-generation-csv',
-  templateUrl: './files-generation-csv.component.html',
-  styleUrls: ['./files-generation-csv.component.css'],
-  providers : [
-          { 
-            provide : PAGE_TITLE_LOG, 
-            useValue: PAGE_FILE_GENERATION_CSV 
-          },
-  ]
+    selector: 'app-files-generation-csv',
+    templateUrl: './files-generation-csv.component.html',
+    styleUrls: ['./files-generation-csv.component.css'],
+    providers: [
+        {
+            provide: PAGE_TITLE_LOG,
+            useValue: PAGE_FILE_GENERATION_CSV
+        },
+    ],
+    standalone: false
 })
 //
 export class FilesGenerationCSVComponent extends BaseReferenceComponent implements OnInit, AfterViewInit {

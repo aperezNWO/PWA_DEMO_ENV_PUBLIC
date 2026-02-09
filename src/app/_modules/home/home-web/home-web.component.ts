@@ -8,9 +8,10 @@ import { BackendService                          } from '../../../_services/Back
 import { BaseReferenceComponent                  } from 'src/app/_components/base-reference/base-reference.component';
 //
 @Component({
-  selector    : 'app-home-web',
-  templateUrl : './home-web.component.html',
-  styleUrls   : ['./home-web.component.css']
+    selector: 'app-home-web',
+    templateUrl: './home-web.component.html',
+    styleUrls: ['./home-web.component.css'],
+    standalone: false
 })
 export class HomeWebComponent extends BaseReferenceComponent implements OnInit, AfterViewInit {
   //

@@ -8,15 +8,16 @@ import * as math                                          from 'mathjs';
 import { BaseReferenceComponent                         } from 'src/app/_components/base-reference/base-reference.component';
 
 @Component({
-  selector: 'app-math-parsing',
-  templateUrl: './math-parsing.component.html',
-  styleUrl: './math-parsing.component.css',
-  providers   : [
-    { 
-      provide : PAGE_TITLE_LOG, 
-      useValue: PAGE_MISCELANEOUS_MATH_PARSING 
-    },
-  ]
+    selector: 'app-math-parsing',
+    templateUrl: './math-parsing.component.html',
+    styleUrl: './math-parsing.component.css',
+    providers: [
+        {
+            provide: PAGE_TITLE_LOG,
+            useValue: PAGE_MISCELANEOUS_MATH_PARSING
+        },
+    ],
+    standalone: false
 })
 export class MathParsingComponent extends BaseReferenceComponent {
   ///////////////////////////////////////////////////////////////

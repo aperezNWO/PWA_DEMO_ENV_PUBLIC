@@ -6,9 +6,10 @@ import { Params } from '@angular/router';
 
 
 @Component({
-  selector: 'app-landing',
-  templateUrl: './landing.component.html',
-  styleUrl: './landing.component.css',
+    selector: 'app-landing',
+    templateUrl: './landing.component.html',
+    styleUrl: './landing.component.css',
+    standalone: false
 })
 export class LandingComponent implements AfterViewInit {
   //

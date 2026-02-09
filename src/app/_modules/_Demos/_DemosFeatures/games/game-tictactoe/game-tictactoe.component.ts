@@ -7,16 +7,17 @@ import { ConfigService          } from 'src/app/_services/__Utils/ConfigService/
 import { PAGE_GAMES_TIC_TAC_TOE, PAGE_TITLE_LOG, PAGE_TITLE_NO_SOUND } from 'src/app/_models/common';
 
 
-@Component({  
-  selector    : 'app-game-tictactoe',
-  templateUrl : './game-tictactoe.component.html',
-  styleUrls   : ['./game-tictactoe.component.css'],
-  providers   : [
-      { 
-        provide : PAGE_TITLE_LOG, 
-        useValue: PAGE_GAMES_TIC_TAC_TOE 
-      },
-  ]
+@Component({
+    selector: 'app-game-tictactoe',
+    templateUrl: './game-tictactoe.component.html',
+    styleUrls: ['./game-tictactoe.component.css'],
+    providers: [
+        {
+            provide: PAGE_TITLE_LOG,
+            useValue: PAGE_GAMES_TIC_TAC_TOE
+        },
+    ],
+    standalone: false
 })
 export class GameTictactoeComponent extends BaseReferenceComponent {
   //

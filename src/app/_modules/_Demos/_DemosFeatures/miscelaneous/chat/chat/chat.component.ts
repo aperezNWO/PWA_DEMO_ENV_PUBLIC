@@ -12,15 +12,16 @@ import { BaseReferenceComponent                       } from 'src/app/_component
 
 //
 @Component({
-  selector     : 'app-chat',
-  templateUrl  : './chat.component.html',
-  styleUrls    : ['./chat.component.css'],
-  providers    : [
-      { 
-        provide  : PAGE_TITLE_LOG, 
-        useValue : PAGE_MISCELANEOUS_CHAT 
-      },
-  ]
+    selector: 'app-chat',
+    templateUrl: './chat.component.html',
+    styleUrls: ['./chat.component.css'],
+    providers: [
+        {
+            provide: PAGE_TITLE_LOG,
+            useValue: PAGE_MISCELANEOUS_CHAT
+        },
+    ],
+    standalone: false
 })
 //
 export class ChatComponent extends BaseReferenceComponent implements OnInit  {

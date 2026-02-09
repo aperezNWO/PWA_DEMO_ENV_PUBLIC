@@ -2,9 +2,10 @@ import { Component, EventEmitter, Output, Input     } from '@angular/core';
 import { SpeechService                              } from 'src/app/_services/__Utils/SpeechService/speech.service';
 
 @Component({
-  selector: 'app-speech-panel',
-  templateUrl: './speech-panel.component.html',
-  styleUrl: './speech-panel.component.css'
+    selector: 'app-speech-panel',
+    templateUrl: './speech-panel.component.html',
+    styleUrl: './speech-panel.component.css',
+    standalone: false
 })
 export class SpeechPanelComponent {
     //////////////////////////////////////////////////////////

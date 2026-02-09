@@ -13,15 +13,16 @@ interface Position {
 }
 
 @Component({
-  selector: 'app-game-tetris',
-  templateUrl: './game-tetris.component.html',
-  styleUrl: './game-tetris.component.css',
-  providers: [
-    { 
-      provide: PAGE_TITLE_LOG, 
-      useValue: PAGE_GAMES_TETRIS 
-    },
-  ]
+    selector: 'app-game-tetris',
+    templateUrl: './game-tetris.component.html',
+    styleUrl: './game-tetris.component.css',
+    providers: [
+        {
+            provide: PAGE_TITLE_LOG,
+            useValue: PAGE_GAMES_TETRIS
+        },
+    ],
+    standalone: false
 })
 export class GameTetrisComponent extends BaseReferenceComponent implements OnInit, OnDestroy {
   readonly BOARD_WIDTH = 10;

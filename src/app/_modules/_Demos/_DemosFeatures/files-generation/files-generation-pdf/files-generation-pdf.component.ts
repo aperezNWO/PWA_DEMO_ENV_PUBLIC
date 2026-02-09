@@ -10,15 +10,16 @@ import { PdfService                           } from 'src/app/_services/__FileGe
 import { PAGE_FILE_GENERATION_PDF, PAGE_TITLE_NO_SOUND,PAGE_TITLE_LOG  } from 'src/app/_models/common';
 
 @Component({
-  selector: 'app-files-generation-pdf',
-  templateUrl: './files-generation-pdf.component.html',
-  styleUrls: ['./files-generation-pdf.component.css'],
-  providers   : [
-    { 
-      provide : PAGE_TITLE_LOG, 
-      useValue: PAGE_FILE_GENERATION_PDF 
-    },
-  ]
+    selector: 'app-files-generation-pdf',
+    templateUrl: './files-generation-pdf.component.html',
+    styleUrls: ['./files-generation-pdf.component.css'],
+    providers: [
+        {
+            provide: PAGE_TITLE_LOG,
+            useValue: PAGE_FILE_GENERATION_PDF
+        },
+    ],
+    standalone: false
 })
 export class FilesGenerationPDFComponent extends BaseReferenceComponent {
   ////////////////////////////////////////////////////////////////
